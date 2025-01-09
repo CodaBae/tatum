@@ -7,6 +7,7 @@ import Twitter from "../assets/svg/twitter.svg"
 
 import Apple from "../assets/png/apple-store.png"
 import Google from "../assets/png/google-play-store.png"
+import World from "../assets/png/world.png"
 
 
 
@@ -18,14 +19,23 @@ const Footer = () => {
 
   return (
     <>
-        <div className='flex bg-[#FFCC33] w-full h-[570px] flex flex-col items-center justify-center'>
+        <div 
+            style={{
+                backgroundImage: `url(${World})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover"
+            }}
+            className='flex w-full h-[470px] flex flex-col items-center justify-center'
+        >
             <div className='w-[521px] h-[232px] flex flex-col items-center gap-[32px]'>
-                <p className='font-grava text-[56px] leading-[70px] text-[#002244]'>Stay smiling, open an account today.</p>
+                <p className='font-grava text-[56px] font-medium text-center leading-[70px] text-[#002244]'>
+                    Stay smiling, open an account today.
+                </p>
                 <button
-                    className='bg-[#002244] w-[220px] h-[60px] p-3 rounded-tl-lg rounded-br-lg'
+                    className='bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg'
                     type='button'
                 >
-                    <p className='font-grava text-[#FFCC33]'>Open an Account Today</p>
+                    <p className='font-grava text-[#FFCC33] group-hover:text-[#002244]'>Open an Account Today</p>
                 </button>
             </div>
         </div>
