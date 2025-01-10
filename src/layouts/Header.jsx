@@ -27,13 +27,28 @@ const Header = () => {
         <div className='flex items-center gap-[15px]'>
           <CiSearch className='w-5 h-5 text-[#002244]'/>
           <button
-            className='bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+            className='bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-[#090540]'
+            type='button'
+            onClick={() => navigate("/")}
+          >
+            <SlLock
+              className='w-5 h-5 text-[#090540] transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33]'
+            />
+            <p
+              className='font-medium text-base font-grava text-[#090540] transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33]'
+            >
+              Internet Banking
+            </p>
+          </button>
+
+
+          {/* <button
+            className='bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:transition hover:duration-100 hover:delay-75 hover:ease-in-out hover:bg-[#090540] flex items-center justify-center'
             type='button'
           >
             <SlLock className='w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' onClick={() => navigate("/")} />
-            {/* <img src={Padlock} alt="Padlock" className='w-5 h-5' /> */}
             <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Internet Banking</p>
-          </button>
+          </button> */}
         </div>        
     </div>
   )
