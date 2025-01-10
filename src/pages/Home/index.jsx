@@ -32,6 +32,7 @@ import USSD from "../../assets/svg/ussd.svg"
 import Online from "../../assets/svg/online.svg"
 
 import "./css/CardEffect.css"
+import "./css/SliderStyles.css"
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -53,9 +54,12 @@ const Home = () => {
         setActiveIndex(index);
     };
 
+    const isTab = window.innerWidth < 1028
+    const isMobile = window.innerWidth < 768
+
     
   return (
-    <div className='w-full pt-[80px]'>
+    <div className='w-full pt-[40px]  lg:pt-[80px]'>
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
                 // dynamicHeight={true} 
@@ -69,79 +73,98 @@ const Home = () => {
                 onChange={handleSlideChange}
             >
                 <div className='h-full w-full outline-none'>
-                    <div className='bg-[#FFCC33] h-[694px] px-[70px] w-full flex md:flex-row items-center gap-0'>
-                        <div className='w-full flex flex-col items-start z-30 gap-[113px]'>
-                            <div className='flex w-full flex-col items-start gap-5'>
+                    <div 
+                        style={{
+                            backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover"
+                        }}
+                        className='h-[374px] lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex lg:flex-row items-center gap-0'
+                    >
+                        <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
+                            <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                                 <p 
-                                    className={`${activeIndex === 0 ? 'animate__animated animate__fadeInUp' : ' '} w-[450px] font-grava text-[#002244] text-left text-[75px] font-bold leading-[78px]`}
+                                    className={`${activeIndex === 0 ? 'animate__animated animate__fadeInUp' : ' '} lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
                                 >
-                                    Your Smile, <br /> <span className='font-semibold '>Our Priority</span> 
+                                    Your Smile, <br /> <span className='font-medium '>Our Priority</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__delay-2s" : ""} text-[25px] text-left text-[#002244] leading-[34px]`}
+                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                                 >
                                     Secure banking, low-interest loans, and profitable investments for everyone.
                                 </p>
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center mt-[32px] lg:mt-0 gap-3'>
                                     <button
-                                        className={`${activeIndex === 0 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
                                         type='button'
                                     >
                                         <p 
-                                            className='font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Open an account today
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 0 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} cursor-pointer outline-none border border-x-0 border-t-0`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} cursor-pointer outline-none border border-x-0 border-t-0`} 
                                         type='button'
                                     >
-                                        <p className='font-grava text-base text-[#002244] font-medium'>Learn more</p>
+                                        <p className='font-grava text-sm whitespace-nowrap lg:text-base text-[#002244] font-medium'>Learn more</p>
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start'>
-                                <p className='text-[#002244] font-grava text-base flex items-center whitespace-nowrap gap-2 '>
+                            <div className='flex items-start absolute -bottom-40'>
+                                <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
-                                    <img src={CBN} alt='CBN' className='inline-flex w-[21px] h-[28px]'/>
+                                    <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                                     Deposit insured by
-                                    <img src={NDIC} alt='NDIC' className='inline-block w-[21px] h-[28px]'/>
+                                    <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]'/>
                                 </p>
-
                             </div>
                         </div>
                         <img 
-                            src={Family} 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1736507865/file_28_1_cu7s3e.png" 
                             alt='Family' 
-                            className={`${activeIndex === 0 ? "animate__animated animate__fadeInRight animate__delay-2s" : ""} h-[750px]`} 
+                            style={{
+                                display: isTab ? "none" : "flex"
+                            }}
+                            className={`${activeIndex === 0 ? "animate__animated animate__fadeInRight " : ""} relative right-44 h-[750px]`} 
                         />
                     </div>
                 </div>
+
                 <div className='h-full w-full outline-none'>
-                    <div className='bg-[#FFCC33] h-[694px] px-[70px] w-full flex md:flex-row items-center relative gap-0'>
-                        <div className='w-full flex flex-col items-start z-30 gap-[113px]'>
-                            <div className='flex w-[692px] flex-col items-start gap-5'>
+                    <div 
+                        style={{
+                            backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : ""})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover"
+                        }}
+                        className='bg-[#FFCC33] h-[374px] lg:h-[694px]  pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                    >
+                        <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
+                            <div className='flex lg:w-[692px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
-                                    className={`${activeIndex === 1 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[75px] font-medium leading-[78px]`}
+                                    className={`${activeIndex === 1 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                                 >
-                                    Say Hello To Banking  <span className='font-semibold '>On The Go</span> 
+                                    Say Hello To Banking  <span className='font-bold '>On The Go</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} text-[25px] text-left text-[#002244] leading-[34px]`}  
+                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__slow " : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    // animate__delay-1s
                                 >
                                     Your money, your way. Experience banking that fits your lifestyle, not the other way around.
                                 </p>
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center mt-[32px] lg:mt-0 gap-3'>
                                     <button
-                                        className={`${activeIndex === 1 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
-                                        type='button'
+                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        type='button' 
+                                        //animate__delay-2s
                                     >
                                         <p 
-                                            className='font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Explore our offerings
                                         </p>
@@ -150,186 +173,214 @@ const Home = () => {
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 1 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} cursor-pointer outline-none border border-x-0 border-t-0`}
+                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                                         type='button'
+                                        //  animate__delay-2s
                                       
                                     >
                                         <p className='font-grava text-base text-[#002244] font-medium'>Download App</p>
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start'>
-                                <p className='text-[#002244] font-grava text-base flex items-center whitespace-nowrap gap-2 '>
+                            <div className='flex items-start absolute -bottom-40'>
+                                <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
-                                    <img src={CBN} alt='CBN' className='inline-flex w-[21px] h-[28px]'/>
+                                    <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                                     Deposit insured by
-                                    <img src={NDIC} alt='NDIC' className='inline-block w-[21px] h-[28px]'/>
+                                    <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]'/>
                                 </p>
-
                             </div>
                         </div>
                         <img 
-                            src={Phone} 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png" 
                             alt='Phone' 
-                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn animate__delay-2s" : ""} h-[800px] absolute`} 
+                            style={{
+                                display: isTab ? "none" : "flex"
+                            }}
+                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} h-[1000px] relative right-2/4`} 
+                            // animate__delay-2s
                         />
                     </div>
                 </div>
+
                 <div className='h-full w-full outline-none'>
-                    <div className='bg-[#FFCC33] h-[694px] px-[70px] w-full flex md:flex-row items-center relative gap-0'>
-                        <div className='w-full flex flex-col items-start z-30 gap-[113px]'>
-                            <div className='flex w-[786px] flex-col items-start gap-5'>
+                    <div 
+                        style={{
+                            backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover"
+                        }}
+                        className='bg-[#FFCC33] h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                    >
+                        <div className='w-full flex flex-col items-start z-30 gap-[64px] relative lg:gap-[113px]'>
+                            <div className='flex lg:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
-                                    className={`${activeIndex === 2 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[75px] font-medium leading-[78px]`}
+                                    className={`${activeIndex === 2 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
-                                    Smart Banking for Your  <span className='font-semibold '>Big Ideas.</span> 
+                                    Smart Banking for Your  <span className='font-bold '>Big Ideas.</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} text-[25px] w-[673px] text-left text-[#002244] leading-[34px]`}  
+                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] lg:w-[673px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Instant access to the funds, insights, and support you need to take your business further.
                                 </p>
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center mt-[12px] lg:mt-0 gap-3'>
                                     <button
-                                        className={`${activeIndex === 2 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 2 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                     >
                                         <p 
-                                            className='font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Get started with SME Banking
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start'>
-                                <p className='text-[#002244] font-grava text-base flex items-center whitespace-nowrap gap-2 '>
+                            <div className='flex items-start absolute -bottom-40'>
+                                <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
-                                    <img src={CBN} alt='CBN' className='inline-flex w-[21px] h-[28px]'/>
+                                    <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                                     Deposit insured by
-                                    <img src={NDIC} alt='NDIC' className='inline-block w-[21px] h-[28px]'/>
+                                    <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]'/>
                                 </p>
-
                             </div>
                         </div>
                         <img 
-                            src={Teach} 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png" 
                             alt='Teach' 
-                            className={`${activeIndex === 2 ? "animate__animated animate__fadeInRight animate__delay-2s" : ""} h-[800px] top-0 -right-44 absolute`} 
+                            style={{
+                                display: isTab ? "none" : "flex"
+                            }}
+                            className={`${activeIndex === 2 ? "animate__animated animate__fadeInRight animate__slow" : ""} h-[1000px] top-48 right-2/4 relative`} 
                         />
                     </div>
                 </div>
+
                 <div className='h-full w-full outline-none'>
-                    <div className='bg-[#FFCC33] h-[694px] px-[70px] w-full flex md:flex-row items-center relative gap-0'>
-                        <div className='w-full flex flex-col items-start z-30 gap-[113px]'>
-                            <div className='flex w-[786px] flex-col items-start gap-5'>
+                    <div 
+                         style={{
+                            backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover"
+                        }}
+                        className='h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                    >
+                        <div className='w-full flex flex-col items-start z-30 relative gap-[64px] lg:gap-[113px]'>
+                            <div className='flex lg:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
-                                    className={`${activeIndex === 3 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[75px] font-bold leading-[78px]`}
+                                    className={`${activeIndex === 3 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
                                     Your Wealth, <br/> <span className='font-medium '> Expertly Managed </span> 
                                 </p>
                                 <p 
-                                    className={`w-[636px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} text-[25px] text-left text-[#002244] leading-[34px]`}  
+                                    className={`lg:w-[636px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Access high-end services and exclusive investments, all in one seamless experience.
                                 </p>
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center mt-[12px] lg:mt-0 gap-3'>
                                     <button
-                                        className={`${activeIndex === 3 ? "animate__animated animate__delay-3s animate__fadeInUp" : ""} bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 3 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                     >
                                         <p 
-                                            className='font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='font-medium transition-colors duration-300 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Get exclusive access
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start'>
-                                <p className='text-[#002244] font-grava text-base flex items-center whitespace-nowrap gap-2 '>
+                            <div className='flex items-start absolute -bottom-40'>
+                                <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
-                                    <img src={CBN} alt='CBN' className='inline-flex w-[21px] h-[28px]'/>
+                                    <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                                     Deposit insured by
-                                    <img src={NDIC} alt='NDIC' className='inline-block w-[21px] h-[28px]'/>
+                                    <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]'/>
                                 </p>
-
                             </div>
                         </div>
                         <img 
-                            src={Smile} 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png" 
                             alt='Smile' 
-                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__delay-2s" : ""}  h-[900px] -right-96 absolute`} 
+                            style={{
+                                display: isTab ? "none" : "flex"
+                            }}
+                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__slow" : ""}  h-[1000px] top-20 right-1/3 relative`} 
                         />
                     </div>
                 </div>
             </LandingCarousel>
         </div>
-        <div className='bg-[#fff] h-[705px] flex items-center justify-between py-[60px] pr-[110px] pl-[86px]'>
-            <img src={Boy} alt='Boy' className='w-[571px] h-[585px]' data-aos="fade-right" />
-            <div className='flex flex-col gap-5 w-[498px]' data-aos="fade-left" >
+        <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <img src={Boy} alt='Boy' className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-right" />
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>Personal Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-[48px] leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
                 <button
-                    className='bg-[#FFCC33] w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
+            <img src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </div>
-        <div className='bg-[#F9FAFB] h-[705px] flex items-center justify-between py-[60px] pr-[110px] pl-[86px]'>
-            <div className='flex flex-col gap-5 w-[498px]' data-aos="fade-right">
+        <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>CORPORATE Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-[48px] leading-[60px]'>
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                     Streamlined services for complex business needs.
                 </p>
                 <button
-                    className='bg-[#FFCC33] w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
-            <img src={Girl} alt='Girl' className='w-[571px] h-[585px]' data-aos="fade-left"  />
+            <img src={Girl} alt='Girl' className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-left"  />
         </div>
-        <div className='bg-[#fff] h-[705px] flex items-center justify-between py-[60px] pr-[110px] pl-[86px]'>
-            <img src={Farmer} alt='Farmer' className='w-[571px] h-[585px]' data-aos="fade-right" />
-            <div className='flex flex-col gap-5 w-[498px]' data-aos="fade-left" >
+        <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <img src={Farmer} alt='Farmer' className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-right" />
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>SME Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-[48px] leading-[60px]'>Empowering small businesses with loans, tools, and expert support.</p>
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                    Empowering small businesses with loans, tools, and expert support.
+                </p>
                 <button
-                    className='bg-[#FFCC33] w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
+            <img src={Farmer} alt='Farmer' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </div>
-        <div className='bg-[#F9FAFB] h-[705px] flex items-center justify-between py-[60px] pr-[110px] pl-[86px]'>
-            <div className='flex flex-col gap-5 w-[498px]' data-aos="fade-right">
+        <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>PRIVATE Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-[48px] leading-[60px]'>
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                     Exclusive wealth management for discerning clients.
                 </p>
                 <button
-                    className='bg-[#FFCC33] w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>Get Started</p>
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#090540] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
-            <img src={SchoolGirl} alt='SchoolGirl' className='w-[571px] h-[585px]' data-aos="fade-left"  />
+            <img src={SchoolGirl} alt='SchoolGirl' className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-left"  />
         </div>
         <div 
             style={{
@@ -337,22 +388,22 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='bg-[#FFFAEB] h-[1103px] flex flex-col items-center justify-center py-[95px] gap-[76px]'
+            className='bg-[#FFFAEB] h-[627px] md:h-[900px] lg:h-[1103px] flex flex-col items-center justify-center lg:py-[95px] gap-[20px] lg:gap-[76px]'
         >
-            <div className='w-[697px] flex flex-col items-center gap-3'>
-                <p className='text-[#002244] font-medium text-[48px] leading-[60px] text-center'>
+            <div className='w-[336px] lg:w-[697px] flex flex-col items-center gap-3'>
+                <p className='text-[#002244] font-medium text-[24px] md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
                     Rewards and Benefits, Every Time You Spend.
                 </p>
-                <p className='text-xl text-[#334E69] font-grava leading-[27px] text-center'>
+                <p className='text-sm lg:text-xl text-[#334E69] font-grava leading-[20px] lg:leading-[27px] text-center'>
                     Tatum cards keep up the pace, so your money is with you everywhere you go.
                 </p>
             </div>
             <div className='flex items-center relative gap-4 group'>
-                <div className='card-wrapper group-hover:gap-8'>
-                    <img src={YellowCard} alt='YellowCard' className='card relative left-48' />
-                    <img src={BlueCard} alt='BlueCard' className='card  z-10 relative right-0' />
-                    <img src={WhiteCard} alt='WhiteCard' className='card z-20 relative right-36' />
-                    <img src={BlackCard} alt='BlackCard' className='card z-30 relative right-72' />
+                <div className='card-wrapper group-hover:gap-8 overflow-x-scroll lg:overflow-x-hidden'>
+                    <img src={YellowCard} alt='YellowCard' className='card w-[50%] lg:w-[25%] lg:relative lg:left-48' />
+                    <img src={BlueCard} alt='BlueCard' className='card  w-[50%] lg:w-[25%] z-10 lg:relative lg:right-0' />
+                    <img src={WhiteCard} alt='WhiteCard' className='card w-[50%] lg:w-[25%] z-20 lg:relative lg:right-36' />
+                    <img src={BlackCard} alt='BlackCard' className='card w-[50%] lg:w-[25%] z-30 lg:relative lg:right-72' />
                 </div>
             </div>
             {/* <div className='flex items-center relative'>
@@ -362,35 +413,35 @@ const Home = () => {
                 <img src={BlackCard} alt='BlackCard' className='w-[398px] z-30 relative right-72' />
             </div> */}
            <button
-                className='w-[246px] h-[64px] p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
+                className='transition-all duration-300 ease-in-out w-[246px] h-[64px] p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
            >
-                <p className='text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-base'>Choose your Tatum Card</p>
+                <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-base'>Choose your Tatum Card</p>
            </button>
         </div>
         <div 
-            className='bg-[#F9FAFB] flex items-center flex-col w-full gap-[40px] h-[877px] pt-[72px] pb-[112px] px-[56px]'
+            className='bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]'
         >
-            <div className='flex flex-col items-center w-[653px] h-[99px] gap-3'>
-                <p className='font-grava text-[#002244] text-[18px]'>Loan Calculator</p>
-                <p className='font-grava text-[#002244] text-[48px] font-medium '>Instant loan, instant benefits</p>
+            <div className='flex flex-col items-center w-full lg:w-[653px] h-[99px] gap-3'>
+                <p className='font-grava text-[#002244] text-sm lg:text-[18px]'>Loan Calculator</p>
+                <p className='font-grava text-[#002244] text-[24px] lg:text-[48px] font-medium '>Instant loan, instant benefits</p>
             </div>
-            <div className='flex items-start gap-5'>
-                <div className='bg-[#FFFFFF] rounded-lg flex flex-col py-[32px] px-5 gap-[40px] w-[728px]'>
+            <div className='flex flex-col lg:flex-row items-start gap-5'>
+                <div className='bg-[#FFFFFF] rounded-lg flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-auto lg:w-[728px]'>
                     <div className='flex items-center gap-3'>
-                        <div className='w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
-                            <p className='text-[#002244] font-medium font-grava text-base'>Personal</p>
+                        <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
+                            <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Personal</p>
                         </div>
-                        <div className='w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
-                            <p className='text-[#002244] font-medium font-grava text-base'>Home</p>
+                        <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
+                            <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Home</p>
                         </div>
-                        <div className='w-[75px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
-                            <p className='text-[#002244] font-medium font-grava text-base'>Car</p>
+                        <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-[75px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#002244] rounded-tl-lg rounded-br-lg  hover:bg-[#FFCC33]'>
+                            <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Car</p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-3'>
                         <div className='flex items-center justify-between'>
-                            <p className='font-semibold text-[#00224] font-grava text-[18px]'>Loan amount</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>NGN {loanAmount.toLocaleString()}</p>
+                            <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Loan amount</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>NGN {loanAmount.toLocaleString()}</p>
                         </div>
                         <Slider 
                             defaultValue={500000}
@@ -398,18 +449,18 @@ const Home = () => {
                             max={1500000}
                             step={10000}
                             onChange={handleLoanSliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33' }}
-                            handleStyle={{ borderColor: '#ffcc33' }}
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
-                            <p className='text-[18px] font-grava text-[#546B82]'>NGN 10,000</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>NGN 1,500,000</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>NGN 10,000</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>NGN 1,500,000</p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-3'>
                         <div className='flex items-center justify-between'>
-                            <p className='font-semibold text-[#00224] font-grava text-[18px]'>You want to re-pay it over</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>{repay.toLocaleString()} Months</p>
+                            <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>You want to re-pay it over</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>{repay.toLocaleString()} Months</p>
                         </div>
                         <Slider 
                             defaultValue={1}
@@ -417,18 +468,18 @@ const Home = () => {
                             max={48}
                             step={2}
                             onChange={handleRepaySliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33' }}
-                            handleStyle={{ borderColor: '#ffcc33' }} 
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
-                            <p className='text-[18px] font-grava text-[#546B82]'>3 Months</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>48 Months</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>3 Months</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>48 Months</p>
                         </div>
                     </div>
                     <div className='flex flex-col gap-3'>
                         <div className='flex items-center justify-between'>
-                            <p className='font-semibold text-[#00224] font-grava text-[18px]'>Interest Rate</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>{interest.toLocaleString()}%</p>
+                            <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Interest Rate</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>{interest.toLocaleString()}%</p>
                         </div>
                         <Slider 
                             defaultValue={1}
@@ -436,36 +487,36 @@ const Home = () => {
                             max={24}
                             step={2}
                             onChange={handleInterestSliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33' }}
-                            handleStyle={{ borderColor: '#ffcc33' }}  
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
-                            <p className='text-[18px] font-grava text-[#546B82]'>4%</p>
-                            <p className='text-[18px] font-grava text-[#546B82]'>24%</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>4%</p>
+                            <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>24%</p>
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-5 w-[580px]'>
-                    <div className='w-full bg-[#fff] rounded-lg h-[245px] px-[28px] flex justify-between items-center'>
+                <div className='flex flex-col items-center gap-5 lg:w-[580px]'>
+                    <div className='lg:w-full bg-[#fff] w-auto rounded-lg h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 lg:gap-0 lg:justify-between items-center'>
                         <div className='flex flex-col gap-4'>
-                            <p className='font-semibold text-[#00224] font-grava text-[18px]'>Monthly Payments</p>
-                            <p className='text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
+                            <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Monthly Payments</p>
+                            <p className='text-base lg:text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
                         </div>
                         <div className='w-[1px] h-[120px] bg-[#D0D5DD]'></div>
                         <div className='flex flex-col gap-4'>
-                            <p className='font-semibold text-[#00224] font-grava text-[18px]'>Total Payments</p>
-                            <p className='text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
+                            <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Total Payments</p>
+                            <p className='text-base lg:text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
                         </div>
                     </div>
-                    <div className='w-full bg-[#fff] rounded-lg gap-[56px] py-[32px] h-[300px] px-[28px] flex flex-col items-center'>
+                    <div className='w-full bg-[#fff] rounded-lg gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center'>
                         <div className='flex flex-col items-center gap-6 '>
-                            <button className='bg-[#FFCC33] w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'>
-                                <p className='font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
+                            <button className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'>
+                                <p className='transition-colors duration-300 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
                             </button>
                             <p className='text-base text-[#002244] font-grava'>Check eligibility</p>
                         </div>
                         <div className='border border-x-0 border-b-0 border-t-[#E6E9EC] pt-[32px]'>
-                            <p className='font-grava text-[#546B82] text-sm'>
+                            <p className='font-grava text-[#546B82] text-center text-sm'>
                                 Terms & conditions applied. Actual installments may differ.
                             </p>
                         </div>   
@@ -476,17 +527,18 @@ const Home = () => {
         </div>
 
         <div
-            className='bg-[#FFFFFF] flex flex-col items-center px-[55px] py-[72px] h-[996px] gap-[60px]'
+            className='bg-[#FFFFFF] flex flex-col items-center px-5 lg:px-[55px] py-[72px] lg:h-[996px] gap-[60px]'
+            data-aos="fade-up"
         >
-            <div className='flex flex-col items-center gap-3 w-[434px]'>
-                <p className='font-medium text-[#002244] font-grava text-[48px] '>Tatum Insights.</p>
-                <p className="text-[18px] text-center text-[#334E69] font-grava leading-[27px]">
+            <div className='flex flex-col items-center gap-3 w-[300px] lg:w-[434px]'>
+                <p className='font-medium text-[#002244] font-grava text-[24px] lg:text-[48px] '>Tatum Insights.</p>
+                <p className="text-sm lg:text-[18px] text-center text-[#334E69] font-grava leading-[20px] lg:leading-[27px]">
                     Stay updated with our press releases, financial insights, and resource highlights
                 </p>
             </div>
-            <div className='flex items-center gap-5'>
+            <div className='flex flex-col lg:flex-row items-center gap-5'>
                 <div
-                    className='flex flex-col w-[429px] gap-6'
+                    className='flex flex-col  lg:w-[429px] gap-3 lg:gap-6'
                 >
                     <img src={Staff} alt='Staff' className='' />
                     <div className='flex items-center justify-between'>
@@ -498,13 +550,13 @@ const Home = () => {
                     <p className='font-medium text-[#001F3E] text-xl font-grava'>
                         Tatum Bank Launches in February 2024, Redefining Digital Banking
                     </p>
-                    <p className='text-base text-[#667085] font-grava leading-[24px]'>
+                    <p className='text-sm lg:text-base text-[#667085] font-grava leading-[24px]'>
                         Tatum Bank is set to launch this February, offering a fresh approach to traditional banking with digital tools ...
                     </p>
                     <p className='text-[#546B82] font-grava cursor-pointer text-sm underline'>Learn More</p>
                 </div>
                 <div
-                    className='flex flex-col w-[429px] gap-6'
+                    className='flex flex-col lg:w-[429px] gap-3 lg:gap-6'
                 >
                     <img src={Business} alt='Business' className='' />
                     <div className='flex items-center justify-between'>
@@ -516,13 +568,13 @@ const Home = () => {
                     <p className='font-medium text-[#001F3E] text-xl font-grava'>
                         Tips for Growing Your Business in a Digital World
                     </p>
-                    <p className='text-base text-[#667085] font-grava leading-[24px]'>
+                    <p className='text-sm lg:text-base text-[#667085] font-grava leading-[24px]'>
                         Actionable insights and advice tailored for the growth of SMEs
                     </p>
                     <p className='text-[#546B82] font-grava cursor-pointer text-sm underline'>Learn More</p>
                 </div>
                 <div
-                    className='flex flex-col w-[429px] gap-6'
+                    className='flex flex-col lg:w-[429px] gap-3 lg:gap-6'
                 >
                     <img src={Ceremony} alt='Ceremony' className='' />
                     <div className='flex items-center justify-between'>
@@ -534,7 +586,7 @@ const Home = () => {
                     <p className='font-medium text-[#001F3E] text-xl font-grava'>
                         Tatum Bank celebrates grand opening with ribbon-cutting ceremony
                     </p>
-                    <p className='text-base text-[#667085] font-grava leading-[24px]'>
+                    <p className='text-sm lg:text-base text-[#667085] font-grava leading-[24px]'>
                         Tatum Bank officially opens its doors with a new branch, 
                         furthering financing inclusion in Eti Osa. Check out the...
                     </p>
@@ -542,19 +594,19 @@ const Home = () => {
                 </div>
             </div>
             <button
-                className='bg-[#FFCC33] w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                 type='button'
             >
-                <p className='font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>
+                <p className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>
                     Explore Our Resource Center
                 </p>
           </button>
 
         </div>
 
-        <div className='bg-[#F9FAFB] flex flex-col py-[80px] gap-[32px] items-center px-[88px]'>
-            <p className='font-medium text-[48px] font-grava text-[#002244]'>Find what you need instantly.</p>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
+        <div className='bg-[#F9FAFB] flex flex-col py-[80px] gap-[32px] items-center px-5 lg:px-[88px]' data-aos="fade-up">
+            <p className='font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]'>Find what you need instantly.</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div className='flex flex-col relative p-[26px] bg-[#fff] h-[356px] rounded-lg gap-[40px]'>
                     <img src={Card} alt='Card' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
@@ -562,7 +614,7 @@ const Home = () => {
                         <p className='text-base font-medium font-grava text-[#000]'>Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.</p>
                     </div>
                     <button
-                        className='bg-[#fff] w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>
@@ -578,14 +630,15 @@ const Home = () => {
                             Simply enter your location and find our closest branch on the map.
                         </p>
                     </div>
+
                     <button
-                        className='bg-[#fff] w-[356px] mx-auto absolute bottom-5 h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] mx-auto absolute bottom-5 h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>
                             Check the nearest ATM branch
                         </p>
-                    </button>
+                    </button> 
                 </div>
                 <div className='flex flex-col p-[26px] bg-[#fff] h-[356px] relative rounded-lg gap-[40px]'>
                     <img src={Online} alt='Online' className='w-[43px] h-[35px]' />
@@ -597,7 +650,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='bg-[#fff] w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>
@@ -615,7 +668,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='bg-[#fff] w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>
@@ -632,7 +685,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='bg-[#fff] w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>
@@ -650,7 +703,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='bg-[#fff] w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
                         type='button'
                     >
                         <p className='font-medium text-base font-grava text-[#002244]'>

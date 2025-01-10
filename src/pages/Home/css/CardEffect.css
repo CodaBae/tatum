@@ -5,7 +5,6 @@
 }
 
 .card {
-    width: 398px;
     transition: transform 0.3s ease, margin 0.3s ease;
     transform: scale(1); /* Default scale */
     cursor: pointer;

@@ -25,10 +25,10 @@ const Footer = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='flex w-full h-[470px] flex flex-col items-center justify-center'
+            className='flex w-full h-[270px] lg:h-[470px] flex flex-col items-center justify-center'
         >
-            <div className='w-[521px] h-[232px] flex flex-col items-center gap-[32px]'>
-                <p className='font-grava text-[56px] font-medium text-center leading-[70px] text-[#002244]'>
+            <div className='lg:w-[521px] lg:h-[232px] flex flex-col items-center gap-[32px]'>
+                <p className='font-grava text-[28px] lg:text-[56px] font-medium text-center leading-[35px] lg:leading-[70px] text-[#002244]'>
                     Stay smiling, open an account today.
                 </p>
                 <button
@@ -39,9 +39,9 @@ const Footer = () => {
                 </button>
             </div>
         </div>
-        <div className='bg-[#fff] w-full pl-[55px] pr-[67px] pt-[61px] pb-[45px] flex flex-col gap-[48px] items-center'>
-            <div className='flex gap-[94px]'>
-                <div className='flex flex-col items-start gap-6 w-3/12'>
+        <div className='bg-[#fff] w-full px-5 lg:pl-[55px] lg:pr-[67px] pt-[61px] lg:pb-[45px] flex flex-col gap-[48px] lg:items-center'>
+            <div className='flex flex-col lg:flex-row gap-[40px] lg:gap-[94px]'>
+                <div className='flex flex-col items-start gap-6 lg:w-3/12'>
                     <div className='flex flex-col gap-3'>
                         <p className='font-grava text-[#002244] font-medium text-base'>CONTACT US</p>
                         <p className='font-grava text-[#002244] text-sm '>info@tatumbank.com</p>
@@ -57,7 +57,7 @@ const Footer = () => {
                         <img src={Apple} alt='Apple' className='w-[140px]' />
                     </div>
                 </div>
-                <div className='w-9/12 flex items-start gap-[96px]'>
+                <div className='lg:w-9/12 grid grid-cols-2 lg:grid-cols-5 items-start gap-[40px] lg:gap-[96px]'>
                     <div className='flex flex-col gap-6 w-[85px]'>
                         <p className='font-grava text-base text-[#002244] font-medium'>COMPANY</p>
                         <div className='flex flex-col gap-6'>
@@ -122,7 +122,7 @@ const Footer = () => {
                         Terms of Service.
                     </p>
                 </div>
-                <div className='flex items-center justify-between' >
+                <div className='flex items-center justify-between pb-10' >
                     <p className='text-xs text-[#002244] font-grava'>
                         &copy; {new Date().getFullYear()}. Tatum Bank Ltd. All Rights Reserved.
                     </p>
