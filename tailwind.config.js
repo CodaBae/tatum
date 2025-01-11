@@ -3,7 +3,7 @@ export default {
   content: ["./src/**/*.html", "./src/**/*.jsx", "./src/**/*.js"],
   theme: {
     screens: {
-      xs: "300px",  //360px
+      xs: "300px", //360px
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -12,10 +12,10 @@ export default {
     },
 
     fontFamily: {
-      'grava': ['grava'],
+      grava: ["grava"],
     },
     colors: {
-      primary : "#3BFF81",
+      primary: "#3BFF81",
 
       secondary: "",
 
@@ -26,16 +26,15 @@ export default {
 
       MODAL_BACKGROUND: "rgba(11, 12, 14, 0.77)",
 
-      GREEN:{
+      GREEN: {
         _100: "#42D979",
-        _200: "#6C8173"
+        _200: "#6C8173",
       },
 
       RED: {
-        _100: "#AF202D"
+        _100: "#AF202D",
       },
-
     },
   },
   plugins: [],
-}
+};
