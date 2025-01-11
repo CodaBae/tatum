@@ -65,8 +65,8 @@ const Home = () => {
                 // dynamicHeight={true} 
                 interval={5000} 
                 showArrows={false} 
-                autoPlay={true} 
-                showIndicators={false} 
+                autoPlay={true}         // {false}  
+                showIndicators={false}   //  {true} 
                 showStatus={false} 
                 showThumbs={false} 
                 infiniteLoop={true}
@@ -115,7 +115,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-40'>
+                            <div className='flex items-start absolute -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -182,7 +182,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-40'>
+                            <div className='flex items-start absolute -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -240,7 +240,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-40'>
+                            <div className='flex items-start absolute -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -297,7 +297,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-40'>
+                            <div className='flex items-start absolute -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
