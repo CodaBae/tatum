@@ -39,6 +39,7 @@ const Home = () => {
     const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
     const [repay, setRepay] = useState(3); // Initial repay amount
     const [interest, setInterest] = useState(4); // Initial Interest
+    const [activeCard, setActiveCard] = useState(false)
 
     const handleLoanSliderChange = (value) => {
         setLoanAmount(value);
@@ -54,6 +55,14 @@ const Home = () => {
         setActiveIndex(index);
     };
 
+    const handleCardEnter = () => {
+        setActiveCard(true)
+    } 
+
+    const handleCardLeave = () => {
+        setActiveCard(false)
+    } 
+
     const isTab = window.innerWidth < 1028
     const isMobile = window.innerWidth < 768
 
@@ -65,8 +74,8 @@ const Home = () => {
                 // dynamicHeight={true} 
                 interval={5000} 
                 showArrows={false} 
-                autoPlay={true}         // {false}  
-                showIndicators={false}   //  {true} 
+                autoPlay={false}  //  {true}
+                showIndicators={true}  //{false}
                 showStatus={false} 
                 showThumbs={false} 
                 infiniteLoop={true}
@@ -312,7 +321,7 @@ const Home = () => {
                             style={{
                                 display: isTab ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__slow" : ""}  h-[1000px] top-20 right-1/3 relative`} 
+                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__slow" : ""}  h-[1000px] top-20 right-[25rem] relative`} 
                         />
                     </div>
                 </div>
@@ -399,11 +408,15 @@ const Home = () => {
                 </p>
             </div>
             <div className='flex items-center relative gap-4 group'>
-                <div className='card-wrapper group-hover:gap-8 overflow-x-scroll lg:overflow-x-hidden'>
-                    <img src={YellowCard} alt='YellowCard' className='card w-[50%] lg:w-[25%] lg:relative lg:left-48' />
-                    <img src={BlueCard} alt='BlueCard' className='card  w-[50%] lg:w-[25%] z-10 lg:relative lg:right-0' />
-                    <img src={WhiteCard} alt='WhiteCard' className='card w-[50%] lg:w-[25%] z-20 lg:relative lg:right-36' />
-                    <img src={BlackCard} alt='BlackCard' className='card w-[50%] lg:w-[25%] z-30 lg:relative lg:right-72' />
+                <div 
+                    className='card-wrapper group-hover:gap-0 lg:justify-end overflow-x-scroll lg:overflow-x-hidden'
+                    onMouseEnter={handleCardEnter}
+                    onMouseLeave={handleCardLeave}
+                >
+                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "" : "lg:relative lg:w-[20%] lg:left-48"} card w-[50%] lg:w-[25%] `} />
+                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "" : "lg:relative  z-10 lg:relative lg:right-0"} card w-[50%] lg:w-[25%]`} />
+                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "" : "lg:relativez-20 lg:relative lg:right-36"} card  w-[50%]  lg:w-[25%] `} />
+                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "" : "lg:relative z-30 lg:relative lg:right-72"} card  w-[50%]  lg:w-[25%]`} />
                 </div>
             </div>
             {/* <div className='flex items-center relative'>

@@ -2,6 +2,8 @@
     display: flex;
     gap: 0; /* Cards are closely stacked by default */
     transition: gap 0.3s ease;
+    overflow-y: "hidden";
+
 }
 
 .card {
@@ -13,9 +15,11 @@
 .card:hover {
     transform: scale(1.1); /* Enlarge the hovered card */
     z-index: 10; /* Ensure the hovered card stays on top */
+   
 }
 
 /* When group is hovered (any child card is hovered) */
 .card-wrapper:hover {
     gap: 20px; /* Space out all cards */
+    overflow-y: "hidden"
 }
