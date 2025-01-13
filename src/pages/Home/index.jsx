@@ -46,6 +46,8 @@ const Home = () => {
     const [interest, setInterest] = useState(4); // Initial Interest
     const [activeCard, setActiveCard] = useState(false)
 
+    const formatter = new Intl.NumberFormat('en-US');
+
     const settings = {
         // dots: true,
         infinite: true,
@@ -65,11 +67,11 @@ const Home = () => {
               }
             },
             // {
-            //   breakpoint: 600,
+            //   breakpoint: 768,
             //   settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2,
-            //     initialSlide: 2
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     initialSlide: 3
             //   }
             // },
             {
@@ -377,7 +379,7 @@ const Home = () => {
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
-                <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>Personal Banking</p>
+                <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Personal Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
@@ -391,7 +393,7 @@ const Home = () => {
         </div>
         <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
-                <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>CORPORATE Banking</p>
+                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>CORPORATE Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                     Streamlined services for complex business needs.
                 </p>
@@ -420,7 +422,7 @@ const Home = () => {
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
-                <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>SME Banking</p>
+                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>SME Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                     Empowering small businesses with loans, tools, and expert support.
                 </p>
@@ -436,7 +438,7 @@ const Home = () => {
         </div>
         <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
-                <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>PRIVATE Banking</p>
+                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>PRIVATE Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                     Exclusive wealth management for discerning clients.
                 </p>
@@ -487,16 +489,16 @@ const Home = () => {
             <div className='lg:hidden w-full'>
                 <Slider {...settings}>
                     <div className='slide-item'>
-                        <img src={YellowCard} alt='YellowCard' className='w-[234px]'/>
+                        <img src={YellowCard} alt='YellowCard' className='w-[234px] md:w-[300px]'/>
                     </div>
                     <div className='slide-item'>
-                        <img src={BlueCard} alt='BlueCard' className='w-[234px]'/>
+                        <img src={BlueCard} alt='BlueCard' className='w-[234px] md:w-[300px]'/>
                     </div>
                     <div className='slide-item'>
-                        <img src={WhiteCard} alt='WhiteCard' className='w-[234px]'/>
+                        <img src={WhiteCard} alt='WhiteCard' className='w-[234px] md:w-[300px]'/>
                     </div>
                     <div className='slide-item'>
-                        <img src={BlackCard} alt='BlackCard' className='w-[234px]'/>
+                        <img src={BlackCard} alt='BlackCard' className='w-[234px] md:w-[300px]'/>
                     </div>
                 </Slider>
             </div>
@@ -520,7 +522,7 @@ const Home = () => {
                 <p className='font-grava text-[#002244] text-[24px] lg:text-[48px] font-medium '>Instant loan, instant benefits</p>
             </div>
             <div className='flex flex-col lg:flex-row items-start gap-5'>
-                <div className='bg-[#FFFFFF] rounded-lg flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-auto lg:w-[728px]'>
+                <div className='bg-[#FFFFFF] rounded-lg flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-auto md:w-[728px]'>
                     <div className='flex items-center gap-3'>
                         <div className='transition ease-in-out delay-150 duration-300 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center rounded-tl-lg rounded-br-lg bg-[#FFCC33]'>
                             <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Personal</p>
@@ -544,6 +546,7 @@ const Home = () => {
                             step={10000}
                             onChange={handleLoanSliderChange}
                             trackStyle={{ backgroundColor: '#ffcc33', height: "8px", borderRadius: "8px" }}
+                            tipFormatter={(value) => formatter.format(value)}
                             className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
@@ -591,7 +594,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='flex flex-col items-center gap-5 lg:w-[580px]'>
-                    <div className='lg:w-full bg-[#fff] w-auto rounded-lg h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 lg:gap-0 lg:justify-between items-center'>
+                    <div className='md:w-[728px] lg:w-full bg-[#fff] w-auto rounded-lg h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 md:gap-24 lg:gap-0 md:justify-center lg:justify-between items-center'>
                         <div className='flex flex-col gap-4'>
                             <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Monthly Payments</p>
                             <p className='text-base lg:text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
@@ -700,10 +703,10 @@ const Home = () => {
 
         </div>
 
-        <div className='bg-[#F9FAFB] flex flex-col py-[80px] gap-[32px] items-center px-5 lg:px-[88px]' data-aos="fade-up">
+        <div className='bg-[#F9FAFB] flex flex-col pt-[56px] pb-[49.5px] lg:py-[80px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[88px]' data-aos="fade-up">
             <p className='font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]'>Find what you need instantly.</p>
-            <div className='flex w-full overflow-x-auto space-x-5 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                {/* <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[356px] rounded-[24px] gap-[40px] w-[80%] sm:w-[70%] md:w-auto'>
+            <div className='flex w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {/* <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[356px]  gap-[40px] w-[80%] sm:w-[70%] md:w-auto'>
                     <img src={Card} alt='Card' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[002244]'>Debit/Credit Cards</p>
@@ -720,131 +723,131 @@ const Home = () => {
                         </p>
                     </button>
                 </div> */}
-                <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-lg gap-[40px] w-[100%] sm:w-[80%] md:w-auto ">
+                <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto ">
                     <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
                     <div className="flex flex-col gap-3">
-                        <p className="text-lg font-medium font-grava text-[002244]">Debit/Credit Cards</p>
-                        <p className="text-base font-grava font-[350] text-[#002244]">
+                        <p className="text-lg font-medium font-grava text-[#002244]">Debit/Credit Cards</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
                             Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[356px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Learn more
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto '>
+                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto '>
                     <img src={ATM} alt='ATM' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>ATM Branch Locator</p>
-                        <p className='text-base font-[350] font-grava text-[#002244]'>
+                        <p className='text-sm lg:text-base font-[350] font-grava text-[#002244]'>
                             Simply enter your location and find our closest branch on the map.
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[340px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Check the nearest ATM branch
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col p-[26px] bg-[#fff] h-[400px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto'>
+                <div className='flex-shrink-0 flex flex-col p-[26px] bg-[#fff] h-[400px] h-[332px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
                     <img src={Online} alt='Online' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>Online Banking</p>
-                        <p className='text-base font-[350] font-grava text-[#002244]'>
+                        <p className='text-sm lg:text-base font-[350] font-grava text-[#002244]'>
                             Manage your accounts, pay bills, transfer funds, and track transactions anytime, anywhere. 
                             Our user-friendly mobile app serves you no matter where life takes you.
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[340px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Download our mobile app
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto'>
+                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
                     <img src={USSD} alt='USSD' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>USSD Banking</p>
-                        <p className='text-base font-[350] font-grava text-[#002244]'>
+                        <p className='text-sm lg:text-base font-[350] font-grava text-[#002244]'>
                             No internet? No problem. Access your account, check balances, 
                             and perform essential transactions using our simple *911#. It is quick, secure, and reliable.
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Dial *911#
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto'>
+                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] md:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
                     <img src={Loan} alt='Loan' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>Loan calculator</p>
-                        <p className='text-base font-grava font-[350] text-[#002244]'>
+                        <p className='text-sm lg:text-base font-grava font-[350] text-[#002244]'>
                             Easily calculate loan eligibility according to your current salary. 
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Try our loan calculator
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto'>
+                <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
                     <img src={FX} alt='FX' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>FX Market Rate</p>
-                        <p className='text-base font-grava font-[350] text-[#002244]'>
+                        <p className='text-sm lg:text-base font-grava font-[350] text-[#002244]'>
                             Stay updated with real-time FX rates and make smarter, 
                             timely decisions in the global market.
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
-                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
                             Check our FX rates
                         </p>
                     </button>
