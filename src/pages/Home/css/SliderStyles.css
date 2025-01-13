@@ -1,9 +1,10 @@
 .custom-slider .ant-slider-handle::after {
     border-color: #ffcc33 !important; /* Custom border color */
+    border-width: 3px !important;
     box-shadow: 0 0 0 2px #ffcc33 !important;
     /* background-color: #ffcc33 !important; Custom background color */
-    height: 10px !important; /* Optional: adjust size */
-    width: 10px !important; /* Optional: adjust size */
-    margin-top: 1px !important;
+    height: 14px !important; /* Optional: adjust size */
+    width: 14px !important; /* Optional: adjust size */
+    margin-top: 0.5px !important;
     /* box-shadow: none !important; Remove default shadow if needed */
 }
