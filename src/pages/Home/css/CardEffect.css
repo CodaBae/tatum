@@ -2,8 +2,6 @@
     display: flex;
     gap: 0; /* Cards are closely stacked by default */
     transition: gap 0.3s ease;
-    overflow-y: "hidden";
-
 }
 
 .card {
