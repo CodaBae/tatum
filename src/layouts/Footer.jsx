@@ -170,7 +170,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#002244] h-[5px] w-full"></div>
+      <div className="bg-[#FFCC33] h-[14px] w-full"></div>
     </>
   );
 };

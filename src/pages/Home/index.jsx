@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel as LandingCarousel } from 'react-responsive-carousel'
 import { FaArrowRightLong } from 'react-icons/fa6';
-import { Slider } from 'antd';
+import Slider from 'react-slick';
+import { Slider as Slide } from 'antd';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import Family from "../../assets/png/family.png"
 import Phone from "../../assets/png/phone.png"
@@ -34,6 +37,7 @@ import Online from "../../assets/svg/online.svg"
 import "./css/CardEffect.css"
 import "./css/SliderStyles.css"
 import "./css/CardScroll.css"
+import "./css/Dot.css"
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -41,6 +45,43 @@ const Home = () => {
     const [repay, setRepay] = useState(3); // Initial repay amount
     const [interest, setInterest] = useState(4); // Initial Interest
     const [activeCard, setActiveCard] = useState(false)
+
+    const settings = {
+        // dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                // dots: true,
+              }
+            },
+            // {
+            //   breakpoint: 600,
+            //   settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2,
+            //     initialSlide: 2
+            //   }
+            // },
+            {
+              breakpoint: 320,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                // dots: true
+              }
+            }
+          ]
+      };
 
     const handleLoanSliderChange = (value) => {
         setLoanAmount(value);
@@ -140,7 +181,7 @@ const Home = () => {
                             style={{
                                 display: isTab ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 0 ? "animate__animated animate__fadeInRight " : ""} relative right-44 h-[750px]`} 
+                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative right-44 h-[750px]`} 
                         />
                     </div>
                 </div>
@@ -186,7 +227,6 @@ const Home = () => {
                                         className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                                         type='button'
                                         //  animate__delay-2s
-                                      
                                     >
                                         <p className='font-grava text-base text-[#002244] font-medium'>Download App</p>
                                     </button>
@@ -265,7 +305,7 @@ const Home = () => {
                             style={{
                                 display: isTab ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 2 ? "animate__animated animate__fadeInRight animate__slow" : ""} h-[1000px] top-40 right-2/4 relative`} 
+                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[1000px] top-40 right-2/4 relative`} 
                         />
                     </div>
                 </div>
@@ -322,14 +362,20 @@ const Home = () => {
                             style={{
                                 display: isTab ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__slow" : ""}  h-[1000px] top-20 right-[25rem] relative`} 
+                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""}  h-[1000px] top-20 right-[25rem] relative`} 
                         />
                     </div>
                 </div>
             </LandingCarousel>
         </div>
         <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <img src={Boy} alt='Boy' className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-right" />
+            <div data-aos="fade-right" >
+                <img 
+                    src={Boy} 
+                    alt='Boy' 
+                    className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                />
+            </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>Personal Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
@@ -357,10 +403,22 @@ const Home = () => {
                     <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
-            <img src={Girl} alt='Girl' className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-left"  />
+            <div data-aos="fade-left">
+                <img 
+                    src={Girl} 
+                    alt='Girl' 
+                    className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                />
+            </div>
         </div>
         <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <img src={Farmer} alt='Farmer' className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-right" />
+            <div data-aos="fade-right" >
+                <img 
+                    src={Farmer} 
+                    alt='Farmer' 
+                    className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
+                />
+            </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
                 <p className='font-grava text-[#334E69] font-medium uppercase text-sm' style={{ letterSpacing: "25%"}}>SME Banking</p>
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -390,7 +448,13 @@ const Home = () => {
                     <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
-            <img src={SchoolGirl} alt='SchoolGirl' className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px]' data-aos="fade-left"  />
+            <div data-aos="fade-left">
+                <img 
+                    src={SchoolGirl} 
+                    alt='SchoolGirl' 
+                    className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
+                />
+            </div>
         </div>
         <div 
             style={{
@@ -398,7 +462,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='bg-[#FFFAEB] h-[627px] md:h-[900px] lg:h-[1103px] flex flex-col items-center justify-center lg:py-[95px] gap-[20px] lg:gap-[76px]'
+            className='bg-[#FFFAEB] h-[627px] md:h-[900px] lg:h-[1050px] flex flex-col items-center justify-center gap-[20px] lg:gap-[76px]'
         >
             <div className='w-[336px] lg:w-[697px] flex flex-col items-center gap-3'>
                 <p className='text-[#002244] font-medium text-[24px] md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
@@ -408,17 +472,33 @@ const Home = () => {
                     Tatum cards keep up the pace, so your money is with you everywhere you go.
                 </p>
             </div>
-            <div className='flex items-center relative gap-4 group'>
+            <div className='lg:flex items-center relative gap-4 hidden group transition'>
                 <div 
-                    className='card-wrapper group-hover:gap-0 lg:justify-end overflow-y-hidden overflow-x-scroll lg:overflow-x-hidden'
+                    className='card-wrapper group-hover:gap-6 lg:justify-end overflow-y-hidden lg:overflow-x-hidden'
                     onMouseEnter={handleCardEnter}
                     onMouseLeave={handleCardLeave}
                 >
-                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "" : "lg:relative lg:w-[20%] lg:left-48"} card w-[50%] lg:w-[25%] `} />
-                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "" : "lg:relative  z-10 lg:relative lg:right-0"} card w-[50%] lg:w-[25%]`} />
-                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "" : "lg:relative z-20 lg:relative lg:right-36"} card  w-[50%]  lg:w-[25%] `} />
-                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "" : "lg:relative z-30 lg:relative lg:right-72"} card  w-[50%]  lg:w-[25%]`} />
+                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative  lg:left-48"} card w-[50%] rounded-bl-xl rounded-br-xl  lg:h-[500px] lg:w-[25%] `} />
+                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative  z-10 lg:relative lg:right-0"} card rounded-bl-xl rounded-br-xl  w-[50%] lg:h-[500px] lg:w-[25%]`} />
+                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative z-20 lg:relative lg:right-36"} card rounded-bl-xl rounded-br-xl  w-[50%] lg:h-[500px] lg:w-[25%] `} />
+                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative z-30 lg:relative lg:right-72"} card rounded-bl-xl rounded-br-xl w-[50%] lg:h-[500px] lg:w-[25%]`} />
                 </div>
+            </div>
+            <div className='lg:hidden w-full'>
+                <Slider {...settings}>
+                    <div className='slide-item'>
+                        <img src={YellowCard} alt='YellowCard' className='w-[234px]'/>
+                    </div>
+                    <div className='slide-item'>
+                        <img src={BlueCard} alt='BlueCard' className='w-[234px]'/>
+                    </div>
+                    <div className='slide-item'>
+                        <img src={WhiteCard} alt='WhiteCard' className='w-[234px]'/>
+                    </div>
+                    <div className='slide-item'>
+                        <img src={BlackCard} alt='BlackCard' className='w-[234px]'/>
+                    </div>
+                </Slider>
             </div>
             {/* <div className='flex items-center relative'>
                 <img src={YellowCard} alt='YellowCard' className='w-[398px] relative left-48 ' />
@@ -457,13 +537,13 @@ const Home = () => {
                             <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Loan amount</p>
                             <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>NGN {loanAmount.toLocaleString()}</p>
                         </div>
-                        <Slider 
+                        <Slide
                             defaultValue={500000}
                             min={10000}
                             max={1500000}
                             step={10000}
                             onChange={handleLoanSliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "8px", borderRadius: "8px" }}
                             className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
@@ -476,13 +556,13 @@ const Home = () => {
                             <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>You want to re-pay it over</p>
                             <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>{repay.toLocaleString()} Months</p>
                         </div>
-                        <Slider 
-                            defaultValue={1}
+                        <Slide 
+                            defaultValue={3}
                             min={1}
                             max={48}
                             step={2}
                             onChange={handleRepaySliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "8px", borderRadius: "8px" }}
                             className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
@@ -495,13 +575,13 @@ const Home = () => {
                             <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Interest Rate</p>
                             <p className='text-sm lg:text-[18px] font-grava text-[#546B82]'>{interest.toLocaleString()}%</p>
                         </div>
-                        <Slider 
-                            defaultValue={1}
+                        <Slide
+                            defaultValue={4}
                             min={1}
                             max={24}
                             step={2}
                             onChange={handleInterestSliderChange}
-                            trackStyle={{ backgroundColor: '#ffcc33', height: "6px" }}
+                            trackStyle={{ backgroundColor: '#ffcc33', height: "8px", borderRadius: "8px" }}
                             className="custom-slider"
                         />
                         <div className='flex items-center justify-between'>
@@ -527,7 +607,7 @@ const Home = () => {
                             <button className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'>
                                 <p className='transition-colors duration-300 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
                             </button>
-                            <p className='text-base text-[#002244] font-grava'>Check eligibility</p>
+                            <p className='text-base text-[#002244] font-grava cursor-pointer'>Check eligibility</p>
                         </div>
                         <div className="flex flex-col gap-[32px]">
                             <div className='lg:w-[532px] w-full h-[1px] bg-[#E6E9EC]'></div>   
@@ -643,16 +723,22 @@ const Home = () => {
                 <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-lg gap-[40px] w-[100%] sm:w-[80%] md:w-auto ">
                     <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
                     <div className="flex flex-col gap-3">
-                    <p className="text-lg font-medium font-grava text-[002244]">Debit/Credit Cards</p>
-                    <p className="text-base font-grava font-[350] text-[#002244]">
-                        Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
-                    </p>
+                        <p className="text-lg font-medium font-grava text-[002244]">Debit/Credit Cards</p>
+                        <p className="text-base font-grava font-[350] text-[#002244]">
+                            Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
+                        </p>
                     </div>
                     <button
-                    className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[356px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center"
-                    type="button"
+                        className="absolute bottom-5 w-[80%] lg:w-[356px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                    <p className="font-medium text-base font-grava text-[#002244]">Learn more</p>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
+                            Learn more
+                        </p>
                     </button>
                 </div>
                 <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto '>
@@ -663,15 +749,18 @@ const Home = () => {
                             Simply enter your location and find our closest branch on the map.
                         </p>
                     </div>
-
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[340px] mx-auto absolute bottom-5 h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
                             Check the nearest ATM branch
                         </p>
-                    </button> 
+                    </button>
                 </div>
                 <div className='flex-shrink-0 flex flex-col p-[26px] bg-[#fff] h-[400px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[100%] sm:w-[80%] md:w-auto'>
                     <img src={Online} alt='Online' className='w-[43px] h-[35px]' />
@@ -683,10 +772,14 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[340px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
                             Download our mobile app
                         </p>
                     </button>
@@ -701,10 +794,14 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[340px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
                             Dial *911#
                         </p>
                     </button>
@@ -718,10 +815,14 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[340px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
                             Try our loan calculator
                         </p>
                     </button>
@@ -736,13 +837,18 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[80%] lg:w-[340px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
+                        <span
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-base font-grava text-[#002244]">
                             Check our FX rates
                         </p>
                     </button>
+                 
                 </div>
 
             </div>
