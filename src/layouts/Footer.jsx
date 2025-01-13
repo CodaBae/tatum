@@ -8,13 +8,17 @@ import Twitter from "../assets/svg/twitter.svg";
 import Apple from "../assets/png/apple-store.png";
 import Google from "../assets/png/google-play-store.png";
 import World from "../assets/png/world.png";
+import WorldSmall from "../assets/png/world_small.png";
 
 const Footer = () => {
+
+  const isMobile = window.innerWidth < 768
+
   return (
     <>
       <div
         style={{
-          backgroundImage: `url(${World})`,
+          backgroundImage: `url(${isMobile ? WorldSmall : World})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -155,7 +159,7 @@ const Footer = () => {
             </p>
             <p className="text-xs text-[#002244] font-grava">
               For assistance, please contact our Customer Support Team or refer
-              to our Privacy Policy and Terms of Service.
+              to our <span className="underline">Privacy Policy</span> and <span className="underline">Terms of Service.</span>
             </p>
           </div>
           <div className="flex items-center justify-between pb-10">
@@ -166,6 +170,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="bg-[#002244] h-[5px] w-full"></div>
     </>
   );
 };
