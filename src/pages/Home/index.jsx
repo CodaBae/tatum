@@ -45,6 +45,8 @@ const Home = () => {
   const [interest, setInterest] = useState(4); // Initial Interest
   const [activeCard, setActiveCard] = useState(false);
 
+  const formatter = new Intl.NumberFormat("en-US");
+
   const settings = {
     // dots: true,
     infinite: true,
@@ -665,12 +667,6 @@ const Home = () => {
             </div>
           </Slider>
         </div>
-        {/* <div className='flex items-center relative'>
-                <img src={YellowCard} alt='YellowCard' className='w-[398px] relative left-48 ' />
-                <img src={BlueCard} alt='BlueCard' className='w-[398px] z-10 relative right-0' />
-                <img src={WhiteCard} alt='WhiteCard' className='w-[398px] z-20 relative right-36' />
-                <img src={BlackCard} alt='BlackCard' className='w-[398px] z-30 relative right-72' />
-            </div> */}
         <button className="transition-all duration-300 ease-in-out w-[246px] h-[64px] p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]">
           <p className="transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-base">
             Choose your Tatum Card
@@ -936,22 +932,22 @@ const Home = () => {
         </p>
         <div className="flex w-full overflow-x-auto space-x-5 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[356px] rounded-[24px] gap-[40px] w-[80%] sm:w-[70%] md:w-auto'>
-                    <img src={Card} alt='Card' className='w-[43px] h-[35px]' />
-                    <div className='flex flex-col gap-3'>
-                        <p className='text-lg font-medium font-grava text-[002244]'>Debit/Credit Cards</p>
-                        <p className='text-base font-grava font-[350] text-[#002244]'>
-                            Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
-                        </p>
-                    </div>
-                    <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[366px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
-                    >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
-                            Learn more
-                        </p>
-                    </button>
-                </div> */}
+            <img src={Card} alt='Card' className='w-[43px] h-[35px]' />
+            <div className='flex flex-col gap-3'>
+                <p className='text-lg font-medium font-grava text-[002244]'>Debit/Credit Cards</p>
+                <p className='text-base font-grava font-[350] text-[#002244]'>
+                    Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
+                </p>
+            </div>
+            <button
+                className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[366px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
+                type='button'
+            >
+                <p className='font-medium text-base font-grava text-[#002244]'>
+                    Learn more
+                </p>
+            </button>
+        </div> */}
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-lg gap-[40px] w-[100%] sm:w-[80%] md:w-auto ">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
