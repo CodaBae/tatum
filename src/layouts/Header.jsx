@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { useNavigate } from 'react-router-dom'
 import { SlLock } from 'react-icons/sl'
 import { CiSearch } from 'react-icons/ci'
@@ -20,6 +21,7 @@ const Header = () => {
 
   const navigate = useNavigate()
 
+  
 
   //About
   const handleAboutMouseEnter = () => {
@@ -39,6 +41,8 @@ const Header = () => {
     setShowPersonalDropdown(false)
   }
 
+  
+
 
   return (
     <div className='bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between'>
@@ -47,45 +51,54 @@ const Header = () => {
             <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/")}>Home</p>
             <div className="relative inline-block dropdown-wrapper">
               <div 
-                onMouseOver={handleAboutMouseEnter}
+                onMouseEnter={handleAboutMouseEnter}
+                // onMouseLeave={handleAboutMouseLeave}
                 className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
               >
                 About Us
               </div> 
               {showAboutDropdown && (
                   <div 
-                    className="dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px]" 
-                    onMouseOver={() => setShowAboutDropdown(true)} 
+                    className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px]`} 
+                    onMouseEnter={() => setShowAboutDropdown(true)} 
                     onMouseLeave={handleAboutMouseLeave}
                   >
-                      <div className="block flex items-start gap-5 cursor-pointer px-8 py-10 text-BLUE-_200">
+                      <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col  gap-4 w-[237px]">
-                          <div className='flex flex-row gap-1.5 cursor-pointer' onClick={() => navigate("/about")}>
-                            <img src={Savings} alt='Savings' className="w-[40px] h-[40px]" />
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => navigate("/about")}>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Savings} alt='Savings' className="w-6 h-6" />
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Our Story</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Who we are and what we do.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Current} alt='Current' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Current} alt='Current' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Mission and Vision</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Innovation driving our purpose.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Card} alt='Card' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Card} alt='Card' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Services</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Innovative services designed for you.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Mortgage} alt='Mortgage' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => navigate("/teams")}>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Mortgage} alt='Mortgage' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Our Team</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Meet the people behind our success.</p>
@@ -93,10 +106,12 @@ const Header = () => {
                           </div>
 
                         </div>
-                        <div className="bg-[#E6E9EC] w-[1px] h-[208px]"></div>
+                        <div className="bg-[#E6E9EC] w-[1px] h-[260px]"></div>
                         <div className="flex flex-col gap-4">
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Insurance} alt='Insurance' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Insurance} alt='Insurance' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Careers</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Explore opportunities to grow with us</p>
@@ -109,8 +124,8 @@ const Header = () => {
             </div>
             <div className="relative inline-block dropdown-wrapper">
               <div 
-                onClick={() => {navigate("/personal") }}
-                onMouseOver={handlePersonalMouseEnter}
+                
+                onMouseEnter={handlePersonalMouseEnter}
                 className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
               >
                 Personal 
@@ -118,37 +133,45 @@ const Header = () => {
               {showPersonalDropdown && (
                   <div 
                     className="dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px]" 
-                    onMouseOver={() => setShowPersonalDropdown(true)} 
+                    onMouseEnter={() => setShowPersonalDropdown(true)} 
                     onMouseLeave={handlePersonalMouseLeave}
                   >
-                      <div className="block flex items-start gap-5 cursor-pointer px-8 py-10 text-BLUE-_200">
+                      <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col gap-4 w-[237px]">
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Savings} alt='Savings' className="w-[40px] h-[40px]" />
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => {navigate("/personal") }}>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Savings} alt='Savings' className="w-6 h-6" />
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Savings Accounts</p>
-                              <p className='text-[#546B82] text-[10px] font-grava'>Flexible options to grow your savings.</p>
+                              <p className='text-[#546B82] text-[10px] font-grava whitespace-nowrap'>Flexible options to grow your savings.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Current} alt='Current' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Current} alt='Current' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Current Accounts</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Easy solutions for daily banking.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Card} alt='Card' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Card} alt='Card' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Cards ( Debit, Credit, Virtual)</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Seamless payments anywhere, anytime.</p>
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Mortgage} alt='Mortgage' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Mortgage} alt='Mortgage' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Loans and Mortgages</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Tailored financing to achieve your goals.</p>
@@ -156,17 +179,21 @@ const Header = () => {
                           </div>
 
                         </div>
-                        <div className="bg-[#E6E9EC] w-[1px] h-[208px]"></div>
+                        <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
                         <div className="flex flex-col gap-4">
-                          <div className='flex flex-row gap-1.5 cursor-pointer'>
-                            <img src={Insurance} alt='Insurance' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer'>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Insurance} alt='Insurance' className="w-6 h-6"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>Insurance Services</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Protect what matters most.</p>
                             </div>
                           </div>
-                          <div className='flex flex-row gap-1.5 cursor-pointer '> {/* hover:bg-[#FFFAEB] p-2 rounded-lg */}
-                            <img src={Faq} alt='Faq' className="w-[40px] h-[40px]"/>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer '>
+                            <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                              <img src={Faq} alt='Faq' className="w-5 h-5"/>
+                            </div>
                             <div className="flex flex-col gap-1">
                               <p className='text-[#002244] text-xs font-medium font-grava'>FAQ</p>
                               <p className='text-[#546B82] text-[10px] font-grava'>Quick answers to your banking questions.</p>

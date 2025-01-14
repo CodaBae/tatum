@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel as LandingCarousel } from 'react-responsive-carousel'
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -45,16 +45,36 @@ const Home = () => {
     const [repay, setRepay] = useState(3); // Initial repay amount
     const [interest, setInterest] = useState(4); // Initial Interest
     const [activeCard, setActiveCard] = useState(false)
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const formatter = new Intl.NumberFormat('en-US');
+
+    const cards = [
+        { id: 1, src: YellowCard, alt: "Yellow Card" },
+        { id: 2, src: BlueCard, alt: "Blue Card" },
+        { id: 3, src: WhiteCard, alt: "White Card" },
+        { id: 4, src: BlackCard, alt: "Black Card" },
+      ];
+    
+    
+      // Auto-slide functionality
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentIndex((prevIndex) =>
+            prevIndex === cards.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 4000); // Slide every 4 seconds
+        return () => clearInterval(interval);
+      }, [cards.length]);
 
     const settings = {
         // dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
+        className:"m-0",
         autoplaySpeed: 4000,
         responsive: [
             {
@@ -66,14 +86,13 @@ const Home = () => {
                 // dots: true,
               }
             },
-            // {
-            //   breakpoint: 768,
-            //   settings: {
-            //     slidesToShow: 3,
-            //     slidesToScroll: 3,
-            //     initialSlide: 3
-            //   }
-            // },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
             {
               breakpoint: 320,
               settings: {
@@ -142,7 +161,7 @@ const Home = () => {
                                     Your Smile, <br /> <span className='font-medium '>Our Priority</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} md:w-[265px] lg:w-[530px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                                 >
                                     Secure banking, low-interest loans, and profitable investments for everyone.
                                 </p>
@@ -161,7 +180,7 @@ const Home = () => {
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} cursor-pointer outline-none border border-x-0 border-t-0`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`} 
                                         type='button'
                                     >
                                         <p className='font-grava text-sm whitespace-nowrap lg:text-base text-[#002244] font-medium'>Learn more</p>
@@ -181,9 +200,9 @@ const Home = () => {
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507865/file_28_1_cu7s3e.png" 
                             alt='Family' 
                             style={{
-                                display: isTab ? "none" : "flex"
+                                display: isMobile ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative right-44 h-[750px]`} 
+                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative md:right-24 lg:right-44 md:h-[400px] lg:h-[750px]`} 
                         />
                     </div>
                 </div>
@@ -198,14 +217,14 @@ const Home = () => {
                         className='bg-[#FFCC33] h-[374px] lg:h-[694px]  pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
-                            <div className='flex lg:w-[692px] flex-col items-start gap-2 lg:gap-5'>
+                            <div className='flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 1 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                                 >
                                     Say Hello To Banking  <span className='font-bold '>On The Go</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__slow " : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__slow " : ""} font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                     // animate__delay-1s
                                 >
                                     Your money, your way. Experience banking that fits your lifestyle, not the other way around.
@@ -226,7 +245,7 @@ const Home = () => {
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
+                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                                         type='button'
                                         //  animate__delay-2s
                                     >
@@ -247,9 +266,9 @@ const Home = () => {
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png" 
                             alt='Phone' 
                             style={{
-                                display: isTab ? "none" : "flex"
+                                display: isMobile ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover h-[1030px] relative right-[33rem]`} 
+                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover h-[400px] md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
                             // animate__delay-2s
                         />
                     </div>
@@ -265,14 +284,14 @@ const Home = () => {
                         className='bg-[#FFCC33] h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 gap-[64px] relative lg:gap-[113px]'>
-                            <div className='flex lg:w-[786px] flex-col items-start gap-2 lg:gap-5'>
+                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 2 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
                                     Smart Banking for Your  <span className='font-bold '>Big Ideas.</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__slow" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Instant access to the funds, insights, and support you need to take your business further.
                                 </p>
@@ -305,9 +324,9 @@ const Home = () => {
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png" 
                             alt='Teach' 
                             style={{
-                                display: isTab ? "none" : "flex"
+                                display: isMobile ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[1000px] top-40 right-2/4 relative`} 
+                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
                         />
                     </div>
                 </div>
@@ -322,14 +341,14 @@ const Home = () => {
                         className='h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 relative gap-[64px] lg:gap-[113px]'>
-                            <div className='flex lg:w-[786px] flex-col items-start gap-2 lg:gap-5'>
+                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 3 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
                                     Your Wealth, <br/> <span className='font-medium '> Expertly Managed </span> 
                                 </p>
                                 <p 
-                                    className={`lg:w-[616px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__slow" : ""} text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`lg:w-[616px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__slow" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Access high-end services and exclusive investments, all in one seamless experience.
                                 </p>
@@ -362,70 +381,76 @@ const Home = () => {
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png" 
                             alt='Smile' 
                             style={{
-                                display: isTab ? "none" : "flex"
+                                display: isMobile ? "none" : "flex"
                             }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""}  h-[1000px] top-20 right-[25rem] relative`} 
+                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""} md:h-[500px] md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] md:top-10 lg:top-20 lg:right-[25rem] relative`} 
                         />
                     </div>
                 </div>
             </LandingCarousel>
         </div>
-        <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <div data-aos="fade-right" >
+        <div className='bg-[#fff]  md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <div data-aos="fade-right" className="hidden md:block" >
                 <img 
                     src={Boy} 
                     alt='Boy' 
-                    className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
                 />
             </div>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
-                <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Personal Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
+                <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+                    <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Personal Banking</p>
+                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
+                </div>
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <FaArrowRightLong className='transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <img src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </div>
-        <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
-                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>CORPORATE Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
-                    Streamlined services for complex business needs.
-                </p>
+        <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-right">
+                <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+                    <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>CORPORATE Banking</p>
+                    <p className='font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                        Streamlined services for complex business needs.
+                    </p>
+                </div>
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <FaArrowRightLong className='transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <div data-aos="fade-left">
                 <img 
                     src={Girl} 
                     alt='Girl' 
-                    className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
                 />
             </div>
         </div>
-        <div className='bg-[#fff] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <div data-aos="fade-right" >
+        <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+            <div data-aos="fade-right" className="hidden md:block" >
                 <img 
                     src={Farmer} 
                     alt='Farmer' 
-                    className='hidden md:flex w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
                 />
             </div>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-left" >
-                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>SME Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
-                    Empowering small businesses with loans, tools, and expert support.
-                </p>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
+                <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+                    <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>SME Banking</p>
+                    <p className='font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                        Empowering small businesses with loans, tools, and expert support.
+                    </p>
+                </div>
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
@@ -437,11 +462,13 @@ const Home = () => {
             <img src={Farmer} alt='Farmer' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </div>
         <div className='bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[400px] lg:w-[498px]' data-aos="fade-right">
-                <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>PRIVATE Banking</p>
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[22px] md:text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
-                    Exclusive wealth management for discerning clients.
-                </p>
+            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-right">
+                <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+                    <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>PRIVATE Banking</p>
+                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                        Exclusive wealth management for discerning clients.
+                    </p>
+                </div>
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
@@ -454,7 +481,7 @@ const Home = () => {
                 <img 
                     src={SchoolGirl} 
                     alt='SchoolGirl' 
-                    className='w-[295px] h-[295px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
                 />
             </div>
         </div>
@@ -464,7 +491,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='bg-[#FFFAEB] h-[627px] md:h-[900px] lg:h-[1050px] flex flex-col items-center justify-center gap-[20px] lg:gap-[76px]'
+            className='bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]'
         >
             <div className='w-[336px] lg:w-[697px] flex flex-col items-center gap-3'>
                 <p className='text-[#002244] font-medium text-[24px] md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
@@ -474,55 +501,73 @@ const Home = () => {
                     Tatum cards keep up the pace, so your money is with you everywhere you go.
                 </p>
             </div>
-            <div className='lg:flex items-center relative gap-4 hidden group transition'>
+              {/* Desktop Card Layout */}
+            <div className='lm:flex items-center relative gap-4 hidden group transition'>
                 <div 
-                    className='card-wrapper group-hover:gap-6 lg:justify-end overflow-y-hidden lg:overflow-x-hidden'
+                    className='card-wrapper group-hover:gap-6 lm:justify-end'
                     onMouseEnter={handleCardEnter}
                     onMouseLeave={handleCardLeave}
+                    // onClick={handleCardEnter}
                 >
-                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative  lg:left-48"} card w-[50%] rounded-bl-xl rounded-br-xl  lg:h-[500px] lg:w-[25%] `} />
-                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative  z-10 lg:relative lg:right-0"} card rounded-bl-xl rounded-br-xl  w-[50%] lg:h-[500px] lg:w-[25%]`} />
-                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative z-20 lg:relative lg:right-36"} card rounded-bl-xl rounded-br-xl  w-[50%] lg:h-[500px] lg:w-[25%] `} />
-                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%]" : "lg:relative z-30 lg:relative lg:right-72"} card rounded-bl-xl rounded-br-xl w-[50%] lg:h-[500px] lg:w-[25%]`} />
+                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative lm:left-44 lg:left-44"} card rounded-xl rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative  z-10 lm:left-[5rem] lg:left-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-20 lm:right-[1rem] lg:right-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
+                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-30 lm:right-[7rem] lg:right-40"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                 </div>
             </div>
-            <div className='lg:hidden w-full'>
+            {/* Mobile Card Layout */}
+            {/* <div className="relative w-full overflow-hidden max-w-[100%] lg:max-w-[1200px]">
+                <div
+                className="flex transition-transform duration-700 gap-2 ease-in-out"
+                style={{
+                    transform: `translateX(-${currentIndex * 50}%)`,
+                }}
+                >
+                {cards.map((card) => (
+                    <div
+                    key={card.id}
+                    className="min-w-[50%] flex items-center"
+                    >
+                    <img
+                        src={card.src}
+                        alt={card.alt}
+                        className="w-[175px] md:w-[300px] lg:w-[400px] rounded-lg"
+                    />
+                    </div>
+                ))}
+                </div>
+            </div> */}
+            <div className='lm:hidden w-full'>
                 <Slider {...settings}>
-                    <div className='slide-item'>
-                        <img src={YellowCard} alt='YellowCard' className='w-[234px] md:w-[300px]'/>
+                    <div className='slide-item slick-slide flex'>
+                        <img src={YellowCard} alt='YellowCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
-                    <div className='slide-item'>
-                        <img src={BlueCard} alt='BlueCard' className='w-[234px] md:w-[300px]'/>
+                    <div className='slide-item flex justify-center'>
+                        <img src={BlueCard} alt='BlueCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
-                    <div className='slide-item'>
-                        <img src={WhiteCard} alt='WhiteCard' className='w-[234px] md:w-[300px]'/>
+                    <div className='slide-item flex justify-center'>
+                        <img src={WhiteCard} alt='WhiteCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
-                    <div className='slide-item'>
-                        <img src={BlackCard} alt='BlackCard' className='w-[234px] md:w-[300px]'/>
+                    <div className='slide-item flex justify-center'>
+                        <img src={BlackCard} alt='BlackCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
                 </Slider>
             </div>
-            {/* <div className='flex items-center relative'>
-                <img src={YellowCard} alt='YellowCard' className='w-[398px] relative left-48 ' />
-                <img src={BlueCard} alt='BlueCard' className='w-[398px] z-10 relative right-0' />
-                <img src={WhiteCard} alt='WhiteCard' className='w-[398px] z-20 relative right-36' />
-                <img src={BlackCard} alt='BlackCard' className='w-[398px] z-30 relative right-72' />
-            </div> */}
            <button
-                className='transition-all duration-300 ease-in-out w-[246px] h-[64px] p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
+                className='transition-all duration-300 ease-in-out w-[200px] lg:w-[246px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
            >
-                <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-base'>Choose your Tatum Card</p>
+                <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Choose your Tatum Card</p>
            </button>
         </div>
         <div 
             className='bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]'
         >
-            <div className='flex flex-col items-center w-full lg:w-[653px] h-[99px] gap-3'>
+            <div className='flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3'>
                 <p className='font-grava text-[#002244] text-sm lg:text-[18px]'>Loan Calculator</p>
-                <p className='font-grava text-[#002244] text-[24px] lg:text-[48px] font-medium '>Instant loan, instant benefits</p>
+                <p className='font-grava text-[#002244] text-[24px] lg:text-[48px] whitespace-nowrap font-medium '>Instant loan, instant benefits</p>
             </div>
-            <div className='flex flex-col lg:flex-row items-start gap-5'>
-                <div className='bg-[#FFFFFF] rounded-lg flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-auto md:w-[728px]'>
+            <div className='w-full flex flex-col lg:flex-row items-start gap-5'>
+                <div className='bg-[#FFFFFF] rounded-2xl flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-full  lg:w-[728px]'>
                     <div className='flex items-center gap-3'>
                         <div className='transition ease-in-out delay-150 duration-300 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center rounded-tl-lg rounded-br-lg bg-[#FFCC33]'>
                             <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Personal</p>
@@ -593,8 +638,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-5 lg:w-[580px]'>
-                    <div className='md:w-[728px] lg:w-full bg-[#fff] w-auto rounded-lg h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 md:gap-24 lg:gap-0 md:justify-center lg:justify-between items-center'>
+                <div className='w-full flex flex-col items-center gap-5 lg:w-[580px]'>
+                    <div className='lg:w-[580px] w-full bg-[#fff] rounded-2xl h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 md:gap-24 lg:gap-0 md:justify-center lg:justify-between items-center'>
                         <div className='flex flex-col gap-4'>
                             <p className='font-semibold text-[#00224] font-grava text-base lg:text-[18px]'>Monthly Payments</p>
                             <p className='text-base lg:text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
@@ -605,7 +650,7 @@ const Home = () => {
                             <p className='text-base lg:text-[18px] font-grava text-center text-[#546B82]'>NGN 50,000</p>
                         </div>
                     </div>
-                    <div className='w-full bg-[#fff] rounded-lg gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center'>
+                    <div className='w-full bg-[#fff] rounded-2xl gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center'>
                         <div className='flex flex-col items-center gap-6 '>
                             <button className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'>
                                 <p className='transition-colors duration-300 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>

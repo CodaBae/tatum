@@ -1,24 +1,26 @@
 .card-wrapper {
     display: flex;
-    gap: 0; /* Cards are closely stacked by default */
+    gap: 40px; 
     transition: gap 0.3s ease;
+    overflow: visible;
 }
 
 .card {
     transition: transform 0.3s ease, margin 0.3s ease;
-    transform: scale(1); /* Default scale */
+    transform: scale(1); 
     cursor: pointer;
+    position: relative;
 }
 
 .card:hover {
-    transform: scale(1.1); /* Enlarge the hovered card */
-    z-index: 9999; /* Ensure the hovered card stays on top */
-   
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* When group is hovered (any child card is hovered) */
+
 .card-wrapper:hover {
-    gap: 20px; /* Space out all cards */
+    gap: 50px;
     overflow-y: "hidden";
     transition: gap 0.3s ease;
 }

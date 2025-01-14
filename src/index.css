@@ -3,10 +3,10 @@
 /* @font-face {
     font-family: 'Grava'; /* Replace with your font name 
     src: url('/src/assets/fonts/Grava_Black.otf') format('otf');
-         url('/src/assets/fonts/font-Grava_Black.woff') format('woff');
-    font-weight: 400; /* Adjust weight if necessary */
-    /* font-style: normal;  Adjust style if necessary  */
-  /* }  */
+         /* url('/src/assets/fonts/font-Grava_Black.woff') format('woff'); */
+    /* font-weight: 400; Adjust weight if necessary */
+     /* font-style: normal;  /* Adjust style if necessary   */
+  /* }   */
   
 
 @tailwind base;
