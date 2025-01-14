@@ -46,7 +46,7 @@ const MobileNavBar = ({ handleClose }) => {
       style={{zIndex: 9999}}
     >
        <div className="px-5 py-[32px] flex flex-col gap-[36px]">
-          <p className="font-medium font-grava text-[#334E69] text-base uppercase">Home</p>
+          <p className="font-medium font-grava text-[#334E69] text-base uppercase cursor-pointer" onClick={() => navigate("/")}>Home</p>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handleAbout}>
               <p className="font-medium font-grava text-[#334E69] text-base uppercase">About Us</p>
