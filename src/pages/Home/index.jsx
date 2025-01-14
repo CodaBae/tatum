@@ -1,43 +1,42 @@
 import React, { useState, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel as LandingCarousel } from 'react-responsive-carousel'
-import { FaArrowRightLong } from 'react-icons/fa6';
-import Slider from 'react-slick';
-import { Slider as Slide } from 'antd';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { Carousel as LandingCarousel } from "react-responsive-carousel";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Slider from "react-slick";
+import { Slider as Slide } from "antd";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import Family from "../../assets/png/family.png"
-import Phone from "../../assets/png/phone.png"
-import Smile from "../../assets/png/smile.png"
-import Teach from "../../assets/png/teach.png"
-import Boy from "../../assets/png/boy.png"
-import Girl from "../../assets/png/girl.png"
-import Farmer from "../../assets/png/farmer.png"
-import SchoolGirl from "../../assets/png/school_girl.png"
-import Tiles from "../../assets/png/tile.png"
-import BlueCard from "../../assets/png/blue_card.png"
-import YellowCard from "../../assets/png/yellow_card.png"
-import BlackCard from "../../assets/png/black_card.png"
-import WhiteCard from "../../assets/png/white_card.png"
-import Staff from "../../assets/png/staff.png"
-import Business from "../../assets/png/business.png"
-import Ceremony from "../../assets/png/ceremony.png"
+import Family from "../../assets/png/family.png";
+import Phone from "../../assets/png/phone.png";
+import Smile from "../../assets/png/smile.png";
+import Teach from "../../assets/png/teach.png";
+import Boy from "../../assets/png/boy.png";
+import Girl from "../../assets/png/girl.png";
+import Farmer from "../../assets/png/farmer.png";
+import SchoolGirl from "../../assets/png/school_girl.png";
+import Tiles from "../../assets/png/tile.png";
+import BlueCard from "../../assets/png/blue_card.png";
+import YellowCard from "../../assets/png/yellow_card.png";
+import BlackCard from "../../assets/png/black_card.png";
+import WhiteCard from "../../assets/png/white_card.png";
+import Staff from "../../assets/png/staff.png";
+import Business from "../../assets/png/business.png";
+import Ceremony from "../../assets/png/ceremony.png";
 
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
+import Card from "../../assets/svg/credit_card.svg";
+import ATM from "../../assets/svg/atm.svg";
+import Loan from "../../assets/svg/loan.svg";
+import FX from "../../assets/svg/fx.svg";
+import USSD from "../../assets/svg/ussd.svg";
+import Online from "../../assets/svg/online.svg";
 
-import CBN from "../../assets/svg/cbn_logo.svg"
-import NDIC from "../../assets/svg/ndic.svg"
-import Card from "../../assets/svg/credit_card.svg"
-import ATM from "../../assets/svg/atm.svg"
-import Loan from "../../assets/svg/loan.svg"
-import FX from "../../assets/svg/fx.svg"
-import USSD from "../../assets/svg/ussd.svg"
-import Online from "../../assets/svg/online.svg"
-
-import "./css/CardEffect.css"
-import "./css/SliderStyles.css"
-import "./css/CardScroll.css"
-import "./css/Dot.css"
+import "./css/CardEffect.css";
+import "./css/SliderStyles.css";
+import "./css/CardScroll.css";
+import "./css/Dot.css";
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -104,32 +103,31 @@ const Home = () => {
           ]
       };
 
-    const handleLoanSliderChange = (value) => {
-        setLoanAmount(value);
-    };
-    const handleRepaySliderChange = (value) => {
-        setRepay(value);
-    };
-    const handleInterestSliderChange = (value) => {
-        setInterest(value);
-    };
+  const handleLoanSliderChange = (value) => {
+    setLoanAmount(value);
+  };
+  const handleRepaySliderChange = (value) => {
+    setRepay(value);
+  };
+  const handleInterestSliderChange = (value) => {
+    setInterest(value);
+  };
 
-    const handleSlideChange = (index) => {
-        setActiveIndex(index);
-    };
+  const handleSlideChange = (index) => {
+    setActiveIndex(index);
+  };
 
-    const handleCardEnter = () => {
-        setActiveCard(true)
-    } 
+  const handleCardEnter = () => {
+    setActiveCard(true);
+  };
 
-    const handleCardLeave = () => {
-        setActiveCard(false)
-    } 
+  const handleCardLeave = () => {
+    setActiveCard(false);
+  };
 
-    const isTab = window.innerWidth < 1028
-    const isMobile = window.innerWidth < 768
+  const isTab = window.innerWidth < 1028;
+  const isMobile = window.innerWidth < 768;
 
-    
   return (
     <div className='w-full pt-[40px]  lg:pt-[80px]'>
         <div className='w-full overflow-x-hidden'>
