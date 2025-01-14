@@ -46,20 +46,20 @@ const MobileNavBar = ({ handleClose }) => {
       style={{zIndex: 9999}}
     >
        <div className="px-5 py-[32px] flex flex-col gap-[36px]">
-          <p className="font-medium font-grava text-[#334E69] text-base uppercase cursor-pointer" onClick={() => navigate("/")}>Home</p>
-          <div className="flex flex-col">
+          <p className="font-medium font-grava text-[#334E69] text-base uppercase cursor-pointer" onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}}>Home</p>
+          <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between" onClick={handleAbout}>
               <p className="font-medium font-grava text-[#334E69] text-base uppercase">About Us</p>
               {openAboutDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
               {
                 openAboutDropdown && (
-                  <div className='flex flex-col gap-3 mt-3'>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">MISSION AND VISION</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">SERVICES</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">CAREERS</p>
+                  <div className='flex flex-col gap-6 mt-3'>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">MISSION AND VISION</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">SERVICES</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">CAREERS</p>
                   </div>
                 )
               }
