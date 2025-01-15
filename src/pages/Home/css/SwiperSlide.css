@@ -1,0 +1,7 @@
+.swiper-slide {
+    width: 28%;
+    height: 332px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; */
+}

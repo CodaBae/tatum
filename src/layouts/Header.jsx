@@ -21,25 +21,24 @@ const Header = () => {
 
   const navigate = useNavigate()
 
+
+  const handleMouseEnter = (menu) => {
+    if (menu === 'about') {
+      setShowAboutDropdown(true);
+    } else if (menu === 'personal') {
+      setShowPersonalDropdown(true);
+    }
+  };
   
+  const handleMouseLeave = (menu) => {
+    if (menu === 'about') {
+      setShowAboutDropdown(false);
+    } else if (menu === 'personal') {
+      setShowPersonalDropdown(false);
+    }
+  };
 
-  //About
-  const handleAboutMouseEnter = () => {
-    setShowAboutDropdown(true)
-  }
 
-  const handleAboutMouseLeave = () => {
-    setShowAboutDropdown(false)
-  }
-
-  //Personal
-  const handlePersonalMouseEnter = () => {
-    setShowPersonalDropdown(true)
-  }
-
-  const handlePersonalMouseLeave = () => {
-    setShowPersonalDropdown(false)
-  }
 
   
 
@@ -51,17 +50,15 @@ const Header = () => {
             <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/")}>Home</p>
             <div className="relative inline-block dropdown-wrapper">
               <div 
-                onMouseEnter={handleAboutMouseEnter}
-                // onMouseLeave={handleAboutMouseLeave}
+                onMouseEnter={() => handleMouseEnter('about')}
                 className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
               >
                 About Us
               </div> 
               {showAboutDropdown && (
                   <div 
-                    className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px]`} 
-                    onMouseEnter={() => setShowAboutDropdown(true)} 
-                    onMouseLeave={handleAboutMouseLeave}
+                    className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[566px] ${showAboutDropdown ? 'show' : ''}`} 
+                    onMouseLeave={() => handleMouseLeave('about')}
                   >
                       <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col  gap-4 w-[237px]">
@@ -124,17 +121,15 @@ const Header = () => {
             </div>
             <div className="relative inline-block dropdown-wrapper">
               <div 
-                
-                onMouseEnter={handlePersonalMouseEnter}
+                onMouseEnter={() => handleMouseEnter('personal')}
                 className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
               >
                 Personal 
               </div> 
               {showPersonalDropdown && (
                   <div 
-                    className="dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px]" 
-                    onMouseEnter={() => setShowPersonalDropdown(true)} 
-                    onMouseLeave={handlePersonalMouseLeave}
+                    className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px] ${showPersonalDropdown ? 'show' : ''}`} 
+                    onMouseLeave={() => handleMouseLeave('personal')}
                   >
                       <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col gap-4 w-[237px]">
