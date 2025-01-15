@@ -5,7 +5,11 @@
     left: 0;
     z-index: 999;
   }
-  
-  .dropdown-wrapper:hover .dropdown-menu {
+
+  .dropdown-menu.show {
     display: block;
   }
+  
+  /* .dropdown-wrapper:hover .dropdown-menu {
+    display: block;
+  } */

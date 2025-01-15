@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel as LandingCarousel } from "react-responsive-carousel";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -6,6 +6,10 @@ import Slider from "react-slick";
 import { Slider as Slide } from "antd";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules'; // Updated import
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import Family from "../../assets/png/family.png";
 import Phone from "../../assets/png/phone.png";
@@ -37,6 +41,7 @@ import "./css/CardEffect.css";
 import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
+import "./css/SwiperSlide.css";
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -54,7 +59,8 @@ const Home = () => {
         { id: 3, src: WhiteCard, alt: "White Card" },
         { id: 4, src: BlackCard, alt: "Black Card" },
       ];
-    
+
+     
     
       // Auto-slide functionality
       useEffect(() => {
@@ -72,7 +78,7 @@ const Home = () => {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         className:"m-0",
         autoplaySpeed: 4000,
         responsive: [
@@ -502,17 +508,24 @@ const Home = () => {
               {/* Desktop Card Layout */}
             <div className='lm:flex items-center relative gap-4 hidden group transition'>
                 <div 
+                    className='card-wrapper'
+                >
+                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={BlueCard} alt='BlueCard' className={`card card-2 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={WhiteCard} alt='WhiteCard' className={`card card-3 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
+                    <img src={BlackCard} alt='BlackCard' className={`card card-4 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                </div>
+            </div>
+                {/* <div 
                     className='card-wrapper group-hover:gap-6 lm:justify-end'
                     onMouseEnter={handleCardEnter}
                     onMouseLeave={handleCardLeave}
-                    // onClick={handleCardEnter}
                 >
-                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative lm:left-44 lg:left-44"} card rounded-xl rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative lm:left-44 lg:left-44"} card  rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                     <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative  z-10 lm:left-[5rem] lg:left-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                     <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-20 lm:right-[1rem] lg:right-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
                     <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-30 lm:right-[7rem] lg:right-40"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                </div>
-            </div>
+                </div> */}
             {/* Mobile Card Layout */}
             {/* <div className="relative w-full overflow-hidden max-w-[100%] lg:max-w-[1200px]">
                 <div
@@ -748,24 +761,142 @@ const Home = () => {
 
         <div className='bg-[#F9FAFB] flex flex-col pt-[56px] pb-[49.5px] lg:py-[80px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[88px]' data-aos="fade-up">
             <p className='font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]'>Find what you need instantly.</p>
-            <div className='flex w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                {/* <div className='flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[356px]  gap-[40px] w-[80%] sm:w-[70%] md:w-auto'>
-                    <img src={Card} alt='Card' className='w-[43px] h-[35px]' />
-                    <div className='flex flex-col gap-3'>
-                        <p className='text-lg font-medium font-grava text-[002244]'>Debit/Credit Cards</p>
-                        <p className='text-base font-grava font-[350] text-[#002244]'>
-                            Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
+                                        {/* Mobile Card View */}
+            <Swiper
+                modules={[Autoplay]} 
+                spaceBetween={20} // Space between slides
+                slidesPerView={'auto'} // Automatically adjust to fit the number of cards
+                grabCursor={true}
+                autoplay={{
+                    delay: 3000, // Slide transition delay in milliseconds
+                    disableOnInteraction: false, // Continue autoplay after interaction
+                  }}
+                loop={true} // Enables infinite looping of slides
+                style={{
+                    display: isMobile ? "block" : "none" 
+                }}
+            >
+                            {/* Individual Card */}
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">Debit/Credit Cards</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                        Enjoy a card that never flops. Our Debit and credit cards are reliable and secure.
                         </p>
                     </div>
                     <button
-                        className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-[#fff] w-[274px] lg:w-[366px] absolute bottom-5 mx-auto h-[54px] border border-[#002244] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#FFCC33] flex items-center justify-center'
-                        type='button'
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
                     >
-                        <p className='font-medium text-base font-grava text-[#002244]'>
-                            Learn more
-                        </p>
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Learn more</p>
                     </button>
-                </div> */}
+                </SwiperSlide>
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">ATM Branch Locator</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                            Simply enter your location and find our closest branch on the map.
+                        </p>
+                    </div>
+                    <button
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
+                    >
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Check the nearest ATM branch</p>
+                    </button>
+                </SwiperSlide>
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={Online} alt="Online" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">Online Banking</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                            Manage your accounts, pay bills, transfer funds, and track transactions anytime, anywhere. 
+                            Our user-friendly mobile app serves you no matter where life takes you.
+                        </p>
+                    </div>
+                    <button
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
+                    >
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Download our mobile app</p>
+                    </button>
+                </SwiperSlide>
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={USSD} alt="USSD" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">USSD Banking</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                            No internet? No problem. Access your account, check balances, 
+                            and perform essential transactions using our simple *911#. It is quick, secure, and reliable.
+                        </p>
+                    </div>
+                    <button
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
+                    >
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Dial *911#</p>
+                    </button>
+                </SwiperSlide>
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">Loan calculator</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                            Easily calculate loan eligibility according to your current salary. 
+                        </p>
+                    </div>
+                    <button
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
+                    >
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Try our loan calculator</p>
+                    </button>
+                </SwiperSlide>
+                <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
+                    <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
+                    <div className="flex flex-col gap-3">
+                        <p className="text-lg font-medium font-grava text-[#002244]">FX Market Rate</p>
+                        <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+                            Stay updated with real-time FX rates and make smarter, 
+                            timely decisions in the global market. 
+                        </p>
+                    </div>
+                    <button
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        type="button"
+                    >
+                        <span
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        aria-hidden="true"
+                        ></span>
+                        <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Check our FX rates</p>
+                    </button>
+                </SwiperSlide>
+            </Swiper>
+                                    {/* Tablets and Desktop Card Layout*/}
+            <div className='hidden md:block w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto ">
                     <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
                     <div className="flex flex-col gap-3">
@@ -808,7 +939,7 @@ const Home = () => {
                         </p>
                     </button>
                 </div>
-                <div className='flex-shrink-0 flex flex-col p-[26px] bg-[#fff] h-[400px] h-[332px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
+                <div className='flex-shrink-0 flex flex-col p-[26px] bg-[#fff]  h-[332px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto'>
                     <img src={Online} alt='Online' className='w-[43px] h-[35px]' />
                     <div className='flex flex-col gap-3'>
                         <p className='text-lg font-medium font-grava text-[#002244]'>Online Banking</p>

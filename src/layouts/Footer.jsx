@@ -58,7 +58,7 @@ const Footer = () => {
               <img src={Apple} alt="Apple" className="w-[140px]" />
             </div>
           </div>
-          <div className="lg:w-[1044px] grid grid-cols-2 lg:grid-cols-5 items-start gap-[40px] lg:gap-[96px]">
+          <div className="lg:w-[1044px] grid grid-cols-2 lg:flex items-start gap-[40px] lg:gap-[96px]">
             <div className="flex flex-col gap-6 w-[85px]">
               <p className="font-grava text-base text-[#002244] font-medium">
                 COMPANY
@@ -138,7 +138,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-6">
                 <p className="font-grava text-[#002244] text-sm cursor-pointer">
-                  1-11 Commercial Avenue, Yaba, Lagos, Nigeria
+                  Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja
                 </p>
               </div>
             </div>
