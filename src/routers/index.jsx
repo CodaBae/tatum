@@ -4,6 +4,13 @@ import Home from "../pages/Home";
 import PageLayout from "../layouts";
 import About from "../pages/About";
 import Teams from "../pages/About/components/Teams";
+import TeamDetails from "../pages/About/components/TeamDetails";
+import SME from "../pages/SME";
+import Personal from "../pages/Personal";
+import Corporate from "../pages/Corporate";
+import Help from "../pages/Help";
+import Private from "../pages/Private";
+import Resources from "../pages/Resources";
 
 export default function Routers() {
   return (
@@ -13,6 +20,13 @@ export default function Routers() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/teams/details" element={<TeamDetails />} />
+          <Route path="/sme" element={<SME />} />
+          <Route path="/personal" element={<Personal />} />
+          <Route path="/corporate" element={<Corporate />} />
+          <Route path="/help-and-support" element={<Help />} />
+          <Route path="/private" element={<Private />} />
+          <Route path="/resources" element={<Resources />} />
         </Route>
       </Routes>
     </div>
