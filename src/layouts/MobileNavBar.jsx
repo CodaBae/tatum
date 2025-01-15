@@ -55,10 +55,10 @@ const MobileNavBar = ({ handleClose }) => {
               {
                 openAboutDropdown && (
                   <div className='flex flex-col gap-6 mt-3'>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
+                      <p onClick={() => {navigate("/about"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
                       <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">MISSION AND VISION</p>
                       <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">SERVICES</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
+                      <p onClick={() => {navigate("/teams"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
                       <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">CAREERS</p>
                   </div>
                 )

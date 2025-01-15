@@ -25,8 +25,10 @@ const Header = () => {
   const handleMouseEnter = (menu) => {
     if (menu === 'about') {
       setShowAboutDropdown(true);
+      setShowPersonalDropdown(false);
     } else if (menu === 'personal') {
       setShowPersonalDropdown(true);
+      setShowAboutDropdown(false);
     }
   };
   
@@ -45,9 +47,9 @@ const Header = () => {
 
   return (
     <div className='bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between'>
-        <img src={Logo} alt="Logo" className='w-[109px] h-[44px] cursor-pointer' onClick={() => navigate("/")}/>
+        <img src={Logo} alt="Logo" className='w-[109px] h-[44px] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}/>
         <div className='flex items-center gap-[32px]'>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/")}>Home</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/"); window.scrollTo(0, 0)}}>Home</p>
             <div className="relative inline-block dropdown-wrapper">
               <div 
                 onMouseEnter={() => handleMouseEnter('about')}
@@ -62,7 +64,7 @@ const Header = () => {
                   >
                       <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col  gap-4 w-[237px]">
-                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => navigate("/about")}>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => {navigate("/about"); window.scrollTo(0, 0)}}>
                             <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                               <img src={Savings} alt='Savings' className="w-6 h-6" />
                             </div>
@@ -92,7 +94,7 @@ const Header = () => {
                             </div>
                           </div>
 
-                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => navigate("/teams")}>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => {navigate("/teams"); window.scrollTo(0, 0)}}>
                             <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                               <img src={Mortgage} alt='Mortgage' className="w-6 h-6"/>
                             </div>
@@ -133,7 +135,7 @@ const Header = () => {
                   >
                       <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                         <div className="flex flex-col gap-4 w-[237px]">
-                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => {navigate("/personal") }}>
+                          <div className='flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer' onClick={() => {navigate("/personal"); window.scrollTo(0, 0)}}>
                             <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                               <img src={Savings} alt='Savings' className="w-6 h-6" />
                             </div>
@@ -200,12 +202,12 @@ const Header = () => {
               )}
           </div>
   
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/sme")}>SME</p>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/corporate")}>Corporate</p>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/private")}>Private</p>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/resources")}>Resources</p>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/help-and-support")}>Help & Support</p>
-            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => navigate("/contact Us")}>Contact Us</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/sme"); window.scrollTo(0, 0)}}>SME</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/corporate"); window.scrollTo(0, 0)}}>Corporate</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/private"); window.scrollTo(0, 0)}}>Private</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/resources"); window.scrollTo(0, 0)}}>Resources</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/help-and-support"); window.scrollTo(0, 0)}}>Help & Support</p>
+            <p className='font-grava font-medium text-base text-[#002244] cursor-pointer' onClick={() => {navigate("/contact Us"); window.scrollTo(0, 0)}}>Contact Us</p>
         </div>
         <div className='flex items-center gap-[15px]'>
           <CiSearch className='w-5 h-5 text-[#002244]'/>
