@@ -40,8 +40,8 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[94px]">
           <div className="flex flex-col items-start gap-6 lg:w-[180px]">
             <div className="flex flex-col gap-3">
-              <p className="font-grava text-[#002244] font-medium text-base">
-                CONTACT US
+              <p className="font-grava text-[#002244] uppercase tracking-wide font-medium text-base">
+                Contact us
               </p>
               <p className="font-grava text-[#002244] font-[350] text-sm ">
                 info@tatumbank.com
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-[1044px] grid grid-cols-2 lg:flex items-start gap-[40px] lg:gap-[96px]">
             <div className="flex flex-col gap-6 w-[85px]">
-              <p className="font-grava text-base text-[#002244] font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
                 COMPANY
               </p>
               <div className="flex flex-col gap-6">
@@ -79,7 +79,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[126px]">
-              <p className="font-grava text-base text-[#002244] font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
                 SERVICES
               </p>
               <div className="flex flex-col gap-6">
@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[156px]">
-              <p className="font-grava text-base text-[#002244] font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
                 LEGAL
               </p>
               <div className="flex flex-col gap-6">
@@ -117,7 +117,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[97px]">
-              <p className="font-grava text-base text-[#002244] font-medium">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-medium">
                 SUPPORT
               </p>
               <div className="flex flex-col gap-6">
@@ -133,7 +133,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[196px]">
-              <p className="font-grava text-base text-[#002244] font-medium">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-medium">
                 ADDRESS
               </p>
               <div className="flex flex-col gap-6">
@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="h-[1px] bg-[#546B82] w-full"></div>
         <div className="flex flex-col gap-[51px]">
           <div className="flex flex-col gap-[17px]">
-            <p className="font-grava text-[#002244] text-xs">
+            <p className="font-grava font-[350] text-[#002244] text-xs">
               If you would like to find out more about which Tatum entity you
               receive services from, please reach out to us via the contact
               options provided on our website or through our customer support

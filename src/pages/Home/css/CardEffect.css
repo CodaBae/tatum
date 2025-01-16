@@ -9,6 +9,7 @@
     /* left: 50%;         Centers horizontally */
     /* transform: translate(-50%, -50%);          Offsets the positioning for exact centering */
     cursor: pointer;
+    overflow: visible;
     transition: all 0.5s ease;
     justify-content: center;
 }
@@ -16,8 +17,10 @@
 .card {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease, transform 0.3s ease;
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    /* transition: all 0.5s ease, transform 0.3s ease; */
     position: relative;
+    transform-origin: center;
 }
 
 .card-1 {
@@ -40,15 +43,11 @@
     left: -50px; /* Adjusted position so it’s visible */
   }
 
+
 .card:hover {
-    /* padding: 4px; */
-    /* transform: scale(1) !important;
-    transition: transform 0.3s ease, z-index 0s;
-    width: 27%;
-    height: 600px;
-    margin-left: 2%; */
-    /* margin-top: -4px;  */
-}
+    transform: scale(1.1) !important; /* Scale effect */
+    z-index: 10; /* Bring to front */
+  }
 
 
 .card-wrapper:hover .card {
@@ -58,21 +57,26 @@
 }
 
 .card-wrapper:hover .card-1 {
-    transform: translateX(-50px); 
+    /* transform: translateX(-50px); */
+    right: 20px;
 
     /* z-index: 10; */
   }
   
   .card-wrapper:hover .card-2 {
-    transform: translateX(-20px); 
+    /* transform: translateX(-20px);  */
+      left: 10px;
+
   }
   
   .card-wrapper:hover .card-3 {
-    transform: translateX(15px); 
+    /* transform: translateX(15px);  */
+      left: 40px;
   }
   
   .card-wrapper:hover .card-4 {
-    transform: translateX(50px); 
+    /* transform: translateX(50px);  */
+      right: -80px;
   }
 
 /* .card:hover {
