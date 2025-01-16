@@ -490,7 +490,7 @@ const Home = () => {
                 <div 
                     className='card-wrapper'
                 >
-                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
                     <img src={BlueCard} alt='BlueCard' className={`card card-2 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                     <img src={WhiteCard} alt='WhiteCard' className={`card card-3 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
                     <img src={BlackCard} alt='BlackCard' className={`card card-4 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
