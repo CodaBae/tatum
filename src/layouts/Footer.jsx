@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Instagram from "../assets/svg/instagram.svg";
 import Facebook from "../assets/svg/facebook.svg";
@@ -11,6 +12,8 @@ import World from "../assets/png/world.png";
 import WorldSmall from "../assets/png/world_small.png";
 
 const Footer = () => {
+
+  const navigate = useNavigate()
 
   const isMobile = window.innerWidth < 768
 
@@ -159,7 +162,7 @@ const Footer = () => {
             </p>
             <p className="text-xs text-[#002244] font-grava">
               For assistance, please contact our Customer Support Team or refer
-              to our <span className="underline">Privacy Policy</span> and <span className="underline">Terms of Service.</span>
+              to our <span className="underline cursor-pointer" onClick={() => {navigate("/privacy-policy"); window.scrollTo(0, 0)}}>Privacy Policy</span> and <span className="underline cursor-pointer" onClick={() => {navigate("/terms"); window.scrollTo(0, 0)}}>Terms of Service.</span>
             </p>
           </div>
           <div className="flex items-center justify-between pb-10">
