@@ -18,7 +18,23 @@ import USSDicon from "../../assets/svg/USSDicon.svg";
 import calculatorIcon from "../../assets/svg/calculatorIcon.svg";
 import FXicon from "../../assets/svg/FXicon.svg";
 
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+
 const About = () => {
+  const missionRef = useRef(null);
+  const servicesRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+    if (state?.section === "mission-and-vision" && missionRef.current) {
+      missionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "services" && servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
+
   return (
     <div>
       <div className="relative">
@@ -128,8 +144,8 @@ const About = () => {
       </div>
 
       <div className="lg:m-[59.66px] mt-[30px]  mb-[50px]  w-auto">
-        <div className="w-[100%] pl-[35px] lg:pl-0 ">
-          <h1 className="font-grava font-semibold text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px] tracking-[1.4%] lg:tracking-[0.2%] lg:mb-11 mb-7 text-[#002244] w-[100%]">
+        <div className="w-[100%]  pr-[170px] -0 lg:pl-0 ">
+          <h1 className="font-grava flex justify-center lg:justify-start font-semibold text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px] tracking-[1.4%] lg:tracking-[0.2%] lg:mb-11 mb-7 text-[#002244] w-[100%]">
             Our Core Values
           </h1>
         </div>
@@ -255,7 +271,7 @@ const About = () => {
 
       {/* Mission / Vission Section */}
 
-      <div>
+      <div ref={missionRef} id="mission-and-vision">
         <div className="flex flex-col lg:flex-row">
           <div className="bg-[#002244] w-[auto] h-[190px] lg:w-[767.088px] lg:h-[405.9174px] flex items-center justify-center">
             <div className="w-[350px] lg:w-[516.67px] lg:h-[115.05px]">
@@ -288,7 +304,7 @@ const About = () => {
           <img
             src={MissionVisionImg}
             alt="MissionVisionImg"
-            className=" w-[100%] h-[260px] lg:w-[100%] lg:h-[745.78px] object-cover filter grayscale"
+            className=" w-[100%] h-[260px] lg:w-[100%] sm:h-[400px] lg:h-[745.78px] object-cover filter grayscale"
           />
         </div>
       </div>
@@ -344,6 +360,8 @@ const About = () => {
       {/* Services section */}
 
       <div
+        ref={servicesRef}
+        id="services"
         className="bg-[#F9FAFB] flex flex-col py-[80px] gap-[32px] items-center px-5 lg:px-[88px]"
         data-aos="fade-up">
         <p className="font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]">
