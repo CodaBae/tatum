@@ -151,7 +151,7 @@ const Header = () => {
                     </div>
                     <div
                       className="flex flex-col gap-1"
-                      onClick={() => navigate("/careers")}>
+                      onClick={() => navigate("/about/careers")}>
                       <p className="text-[#002244] text-xs font-medium font-grava">
                         Careers
                       </p>
