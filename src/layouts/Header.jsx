@@ -24,8 +24,10 @@ const Header = () => {
   const handleMouseEnter = (menu) => {
     if (menu === "about") {
       setShowAboutDropdown(true);
+      setShowPersonalDropdown(false);
     } else if (menu === "personal") {
       setShowPersonalDropdown(true);
+      setShowAboutDropdown(false);
     }
   };
 

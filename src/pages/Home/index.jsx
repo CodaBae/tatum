@@ -48,29 +48,9 @@ const Home = () => {
     const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
     const [repay, setRepay] = useState(3); // Initial repay amount
     const [interest, setInterest] = useState(4); // Initial Interest
-    const [activeCard, setActiveCard] = useState(false)
-    const [currentIndex, setCurrentIndex] = useState(0);
+    
 
     const formatter = new Intl.NumberFormat('en-US');
-
-    const cards = [
-        { id: 1, src: YellowCard, alt: "Yellow Card" },
-        { id: 2, src: BlueCard, alt: "Blue Card" },
-        { id: 3, src: WhiteCard, alt: "White Card" },
-        { id: 4, src: BlackCard, alt: "Black Card" },
-      ];
-
-     
-    
-      // Auto-slide functionality
-      useEffect(() => {
-        const interval = setInterval(() => {
-          setCurrentIndex((prevIndex) =>
-            prevIndex === cards.length - 1 ? 0 : prevIndex + 1
-          );
-        }, 4000); // Slide every 4 seconds
-        return () => clearInterval(interval);
-      }, [cards.length]);
 
     const settings = {
         // dots: true,
@@ -510,7 +490,7 @@ const Home = () => {
                 <div 
                     className='card-wrapper'
                 >
-                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
+                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
                     <img src={BlueCard} alt='BlueCard' className={`card card-2 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                     <img src={WhiteCard} alt='WhiteCard' className={`card card-3 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
                     <img src={BlackCard} alt='BlackCard' className={`card card-4 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
@@ -527,27 +507,6 @@ const Home = () => {
                     <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-30 lm:right-[7rem] lg:right-40"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
                 </div> */}
             {/* Mobile Card Layout */}
-            {/* <div className="relative w-full overflow-hidden max-w-[100%] lg:max-w-[1200px]">
-                <div
-                className="flex transition-transform duration-700 gap-2 ease-in-out"
-                style={{
-                    transform: `translateX(-${currentIndex * 50}%)`,
-                }}
-                >
-                {cards.map((card) => (
-                    <div
-                    key={card.id}
-                    className="min-w-[50%] flex items-center"
-                    >
-                    <img
-                        src={card.src}
-                        alt={card.alt}
-                        className="w-[175px] md:w-[300px] lg:w-[400px] rounded-lg"
-                    />
-                    </div>
-                ))}
-                </div>
-            </div> */}
             <div className='lm:hidden w-full'>
                 <Slider {...settings}>
                     <div className='slide-item slick-slide flex'>
