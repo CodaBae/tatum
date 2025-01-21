@@ -98,6 +98,9 @@ const Footer = () => {
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
                   Private Banking
                 </p>
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                  Institutional Banking
+                </p>
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[156px]">
@@ -132,6 +135,9 @@ const Footer = () => {
                 </p>
                 <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
                   Help Center
+                </p>
+                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                  Sitemap
                 </p>
               </div>
             </div>

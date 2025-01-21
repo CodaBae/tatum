@@ -135,7 +135,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-[374px] lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex lg:flex-row items-center gap-0'
+                        className='h-[374px] lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex  lg:flex-row items-center gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
                             <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -856,7 +856,7 @@ const Home = () => {
             </Swiper>
                                     {/* Tablets and Desktop Card Layout*/}
             <div className='hidden md:block w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto ">
+                <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
                     <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
                     <div className="flex flex-col gap-3">
                         <p className="text-lg font-medium font-grava text-[#002244]">Debit/Credit Cards</p>
@@ -865,7 +865,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
@@ -886,7 +886,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[340px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
@@ -908,7 +908,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[340px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
@@ -930,7 +930,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
@@ -951,7 +951,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span
@@ -973,7 +973,7 @@ const Home = () => {
                         </p>
                     </div>
                     <button
-                        className="absolute bottom-5 w-[80%] lg:w-[340px] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+                        className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
                     >
                         <span

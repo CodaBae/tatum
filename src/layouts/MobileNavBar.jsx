@@ -55,82 +55,107 @@ const MobileNavBar = ({ handleClose }) => {
               {
                 openAboutDropdown && (
                   <div className='flex flex-col gap-6 mt-3'>
-                      <p onClick={() => {navigate("/about"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">MISSION AND VISION</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">SERVICES</p>
-                      <p onClick={() => {navigate("/teams"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
-                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava font-[350] text-[#334E69] text-base uppercase">CAREERS</p>
+                      <p onClick={() => {navigate("/about"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">MISSION AND VISION</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">SERVICES</p>
+                      <p onClick={() => {navigate("/teams"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">BOARD MEMBERS</p>
+                      <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">CAREERS</p>
                   </div>
                 )
               }
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handlePersonal}>
-              <p className="font-medium font-grava text-[#334E69] text-base uppercase">PERSONAL</p>
+              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">PERSONAL</p>
               {openPersonalDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {
               openPersonalDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                    {/* <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p> */}
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Savings Accounts</p>
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Current Accounts</p>
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Cards ( Debit, Credit, Virtual)</p>
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Loans and Mortgages</p>
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Insurance Services</p>
+                    <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">FAQ</p>
                 </div>
               )
             }
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handleSme}>
-              <p className="font-medium font-grava text-[#334E69] text-base uppercase">sme</p>
+              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">sme</p>
               {openSmeDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {
               openSmeDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                  {/* <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p> */}
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Business Accounts</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Payment solutions</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Loans and Credit Lines</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Expense Management Tools</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Business Insurance</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Financial Planning and Advisory</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">FAQ</p>
                 </div>
               )
             }
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handleCorporate}>
-              <p className="font-medium font-grava text-[#334E69] text-base uppercase">Corporate</p>
+              <p className="font-medium font-grava text-[#334E69] tracking-wide text-base uppercase">Corporate</p>
               {openCorporateDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {
               openCorporateDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                  {/* <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p> */}
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Treasury Management</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Trade Finance</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Investment Banking</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Payroll Management</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Corporate Lending and Leasing</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Risk Management</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">FAQ</p>
                 </div>
               )
             }
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handlePrivate}>
-              <p className="font-medium font-grava text-[#334E69] text-base uppercase">Private</p>
+              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">Private</p>
               {openPrivateDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {
               openPrivateDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                  {/* <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p> */}
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Wealth Management</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Investment Advisory</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Estate and Trust Planning</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Personal Loans and Credit</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Custom Financial Solutions</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">FAQ</p>
                 </div>
               )
             }
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handleResources}>
-              <p className="font-medium font-grava text-[#334E69] text-base uppercase">Resources</p>
+              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">Resources</p>
               {openResourcesDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {
               openResourcesDropdown && (
                 <div className='flex flex-col gap-3 mt-3'>
-                  {/* <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] text-base uppercase">COMPANY OVERVIEW</p> */}
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Blog</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Press Release</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Media Gallery</p>
+                  <p onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide text-[#334E69] text-base uppercase">Branch & ATM Locator</p>
                 </div>
               )
             }
           </div>
-          <p className="font-medium font-grava text-[#334E69] text-base uppercase">Help & Support</p>
-          <p className="font-medium font-grava text-[#334E69] text-base uppercase">Contact us</p>
+          <p className="font-medium font-grava tracking-wide text-[#334E69] text-base uppercase">Help & Support</p>
+          <p className="font-medium font-grava tracking-wide text-[#334E69] text-base uppercase">Contact us</p>
        </div>
     </div>
   )

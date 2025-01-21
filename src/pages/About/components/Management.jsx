@@ -2,6 +2,14 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import Man from "../../../assets/png/man.png"
+import ManB from "../../../assets/png/man-b.jpg"
+import ManC from "../../../assets/png/man-c.jpg"
+import ManD from "../../../assets/png/man-d.jpg"
+import ManE from "../../../assets/png/man-e.jpg"
+import ManF from "../../../assets/png/man-f.jpg"
+import ManG from "../../../assets/png/man-g.jpg"
+import ManH from "../../../assets/png/man-h.jpg"
+import ManI from "../../../assets/png/man-i.jpg"
 
 const Management = () => {
 
@@ -20,7 +28,7 @@ const Management = () => {
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
                 className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -31,12 +39,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManB})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -47,12 +55,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManC})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -63,12 +71,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManD})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -79,12 +87,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManE})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -95,12 +103,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManF})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -111,12 +119,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManG})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -127,12 +135,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManH})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
@@ -143,12 +151,12 @@ const Management = () => {
             </div>
             <div 
                 style={{
-                    backgroundImage: `url(${Man})`,
+                    backgroundImage: `url(${ManI})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
-                onClick={() => {navigate('/teams/details'); window.scrollTo(0, 0)}}
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
                     <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
