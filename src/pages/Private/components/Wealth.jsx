@@ -75,7 +75,7 @@ const Wealth = () => {
     
 
   return (
-    <div className="w-full mb-[194px]">
+    <div className="w-full mb-[56px] lg:mb-[194px]">
         <div 
             style={{
                 backgroundImage: `url(${OfficeMan})`,
@@ -192,13 +192,13 @@ const Wealth = () => {
         </div>
 
         <div 
-            className='w-full pt-[56px] md:pt-[80px] pb-[120px] px-5 lg:px-[56px] grid grid-cols-1 gap-[100px]'
-            style={{
-                gridTemplateRows: 'repeat(6, 1fr)',
-            }}
+            className='w-full pt-[56px] md:pt-[80px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] grid grid-cols-1 gap-[100px]'
+        //     style={{
+        //         gridTemplateRows: 'repeat(6, 1fr)',
+        //     }}
         >
             <div 
-                className='flex sticky top-[calc(8%+var(0rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-auto lg:h-[510px]'
+                className='flex sticky top-[calc(8%+var(0rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]'
             >
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
@@ -219,12 +219,12 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex justify-end'>
+                <div className='w-5/12 hidden md:flex justify-end'>
                     <img src={File} alt='File' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
-            <div className='flex sticky top-[calc(8%+var(2.25rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-auto lg:h-[510px]'>
+            <div className='flex sticky top-[calc(8%+var(2.25rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-[710px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -243,12 +243,12 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex justify-end'>
-                    <img src={Gold} alt='File' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={Gold} alt='File' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FEF3F2] w-full rounded-[24px] h-auto lg:h-[510px]'>
+            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FEF3F2] w-full rounded-[24px] h-[678px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -268,12 +268,12 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex justify-end'>
+                <div className='w-5/12 hidden md:flex justify-end'>
                     <img src={Report} alt='Report' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-auto lg:h-[510px]'>
+            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-[638px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -297,7 +297,7 @@ const Wealth = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F0FBFF] w-full rounded-[24px] h-auto lg:h-[510px]'>
+            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F0FBFF] w-full rounded-[24px] h-[698px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -318,12 +318,12 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='w-5/12 hidden md:flex justify-end'>
                     <img src={House} alt='House' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#ECFDF3] w-full rounded-[24px] h-auto lg:h-[510px]'>
+            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#ECFDF3] w-full rounded-[24px] h-[698px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -343,8 +343,8 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex '>
-                    <img src={Growth} alt='Growth' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={Growth} alt='Growth' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
@@ -354,21 +354,21 @@ const Wealth = () => {
 
        
 
-        <div className='flex flex-col items-center justify-center gap-[56px] w-full px-5 lg:px-[56px] '>
-            <p className='text-[#002244] font-grava font-medium text-[48px]'>Get Started in 3 Easy Steps</p>
-            <div className='flex flex-col lg:flex-row item-center gap-5'>
-                <div className='bg-[#F9FAFB] lg:w-[429px] h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
+        <div className='flex flex-col items-center justify-center gap-[32px] lg:gap-[56px] w-full px-5 lg:px-[56px] '>
+            <p className='text-[#002244] font-grava font-medium text-[24px] lg:text-[48px]'>Get Started in 3 Easy Steps</p>
+            <div className='w-full flex flex-col md:flex-row item-center gap-5'>
+                <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px] h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
                     <img src={One} alt='One' className='w-[25px]' />
-                    <p className='font-grava font-medium tracking-wide text-[20px] text-[#8A99A9]'>Sign Up or Log In</p>
+                    <p className='font-grava font-medium tracking-wide text-base lg:text-[20px] text-[#8A99A9]'>Sign Up or Log In</p>
                 </div>
-                <div className='bg-[#F9FAFB] lg:w-[429px]  h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
+                <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px]  h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
                     <img src={Two} alt='Two' className='w-[50px]' />
-                    <p className='font-grava font-medium tracking-wide text-[20px] text-[#8A99A9]'>Define Your Financial Goals</p>
+                    <p className='font-grava font-medium tracking-wide text-base lg:text-[20px] text-[#8A99A9]'>Define Your Financial Goals</p>
                 </div>
-                <div className='bg-[#F9FAFB] lg:w-[429px] h-[270px]  rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
+                <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px] h-[270px]  rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
                     <img src={Three} alt='Three' className='w-[50px]' />
                     {/* <p className='font-[900] font-grava text-[112px] text-[#E6E9EC]'>3</p> */}
-                    <p className='font-grava font-medium tracking-wide text-center text-[20px] text-[#8A99A9]'>Connect with Your Personal Account Manager</p>
+                    <p className='font-grava font-medium tracking-wide text-center text-base lg:text-[20px] text-[#8A99A9]'>Connect with Your Personal Account Manager</p>
                 </div>
             </div>
             <div className='flex flex-col w-full md:flex-row items-center md:w-[443px] mx-auto gap-4'>
@@ -380,7 +380,7 @@ const Wealth = () => {
                     <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
                 <button className='cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'>
-                    <p className='text-[#8A99A9] font-medium text-[18px]'>Sign up</p>
+                    <p className='text-[#8A99A9] font-medium text-sm lg:text-[18px]'>Sign up</p>
                 </button>
             </div>
         </div>
