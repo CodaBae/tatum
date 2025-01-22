@@ -20,14 +20,14 @@ const Management = () => {
 
   return (
     <div className='w-full pt-6 lg:pt-[48px]'>
-        <div data-aos="fade-up" data-aos-duration="3000" className='grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-4 lm:gap-5'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-4 lm:gap-5'>
             <div 
                 style={{
                     backgroundImage: `url(${Man})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3 '
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -43,7 +43,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -59,7 +59,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -75,7 +75,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover" 
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -91,7 +91,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -107,7 +107,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -123,7 +123,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col w-full rounded-tl-3xl rounded-br-3xl cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -139,7 +139,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>
@@ -155,7 +155,7 @@ const Management = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: isMobile ? "contain" : "cover"
                 }}
-                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer'
+                className='h-[472px] lg:h-[548px] relative flex flex-col rounded-tl-3xl rounded-br-3xl w-full cursor-pointer transition-transform ease-in-out hover:-translate-y-3'
                 onClick={() => {navigate('/about/team-details'); window.scrollTo(0, 0)}}
             >
                 <div className='absolute bottom-14 lm:bottom-5 w-full'>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef }  from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import OfficeGirlImg from "../../assets/png/office-girl.png";
@@ -31,7 +31,11 @@ const AboutB = () => {
 
     const missionRef = useRef(null);
     const servicesRef = useRef(null);
+    const aboutRef = useRef(null);
+    const teamsRef = useRef(null);
     const { state } = useLocation();
+
+    const navigate = useNavigate();
     
     useEffect(() => {
     if (state?.section === "mission-and-vision" && missionRef.current) {
@@ -40,10 +44,16 @@ const AboutB = () => {
     if (state?.section === "services" && servicesRef.current) {
         servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    if (state?.section === "about" && aboutRef.current) {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "teams" && teamsRef.current) {
+        teamsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
     }, [state]);
 
   return (
-    <div className="w-full">
+    <div className="w-full" ref={aboutRef}  id="about">
         <div 
             className="w-full h-[234px] lg:h-[542px] bg-[#FFCC33] flex py-[30px]  lg:py-[282px] relative justify-center"
         >                   
@@ -86,7 +96,7 @@ const AboutB = () => {
             </div>
         </div>
 
-        <div className="w-full bg-[#F9FAFB] md:h-[780px] lg:h-[800px] flex flex-col md:flex-row items-start relative gap-10 lg:gap-0 justify-between pt-[40px] lg:pt-[80px]">
+        <div ref={teamsRef} className="w-full bg-[#F9FAFB] md:h-[780px] lg:h-[800px] flex flex-col md:flex-row items-start relative gap-10 lg:gap-0 justify-between pt-[40px] lg:pt-[80px]">
             <div data-aos="fade-up" className="w-full md:w-[600px] lg:w-[803px] flex flex-col pl-5 lg:pl-[56px] pr-5 lg:pr-0 gap-[49px] lg:gap-[89px]">
                 <div className="flex flex-col gap-5 lg:gap-[40px]">
                     <p className="font-semibold text-[#002244] text-[24px] lm:text-[48px] leading-[60px]">Leadership</p>
@@ -105,9 +115,13 @@ const AboutB = () => {
                         <p className="font-grava font-[350] text-sm text-[#002244]">Non-Executive Director</p>
                     </div>
                 </div>
-                <button className="bg-[#FFCC33] w-[297px] h-[63px] p-5 flex gap-2 items-center justify-center rounded-lg">
-                    <p className="font-medium text-[#002244] font-grava text-base">View our board of directors</p>
-                    <FaArrowRightLong  className="w-5 h-5 text-[#002244]"/>
+                <button 
+                    className="transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[297px] h-[63px] p-5 flex gap-2 items-center justify-center rounded-lg"
+                    type="button"
+                    onClick={() => navigate("/about/teams", { state: { section: "teams" } })}
+                >
+                    <p className="transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] font-medium text-[#002244] font-grava text-base">View our board of directors</p>
+                    <FaArrowRightLong  className="transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#002244]"/>
                 </button>
             </div>
             <div className="md:absolute md:bottom-0 md:right-0 -right-20">
@@ -296,7 +310,7 @@ const AboutB = () => {
                             Gen Z-Focused Solutions
                         </h3>
                     </div>
-                    <div className="absolute top-[0px] left-[355px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
+                    <div className="absolute top-[0px] left-[365px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
                         <h3 className="font-grava font-[500] text-[19.18px]  leading-[28.77px] tracking-[0.2%] text-[#E8BA2E] text-center w-[181px]">
                             Cutting-Edge Digital Banking
                         </h3>
@@ -306,12 +320,12 @@ const AboutB = () => {
                             Accessible and Inclusive
                         </h3>
                     </div>
-                    <div className="absolute top-[239px] left-[222px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
+                    <div className="absolute top-[239px] left-[232px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
                         <h3 className="font-grava font-[500] text-[19.18px] leading-[28.77px] tracking-[0.2%] text-[#E8BA2E] text-center w-[181px]">
                             Financial Literacy Advocacy
                         </h3>
                     </div>
-                    <div className="absolute top-[212px] left-[445px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
+                    <div className="absolute top-[212px] left-[465px] w-[218px] h-[218px] flex items-center justify-center bg-[#FFFAEB] rounded-[100%] transition-transform duration-300 ease-in-out transform hover:scale-110 cursor-pointer">
                         <h3 className="font-grava font-[500] text-[19.18px] leading-[28.77px] tracking-[0.2%] text-[#E8BA2E] text-center w-[181px]">
                             Exceptional Support
                         </h3>

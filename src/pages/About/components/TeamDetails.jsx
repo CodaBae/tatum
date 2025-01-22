@@ -33,30 +33,34 @@ const TeamDetails = () => {
             </div>
 
             <div className='flex items-center gap-3'>
-              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center'>
+              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
                 <img src={InstagramWhite} alt='InstagramWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
               </div>
-              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center'>
+              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
                 <img src={TwitterWhite} alt='TwitterWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
               </div>
-              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center'>
+              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
                 <img src={LinkedInWhite} alt='LinkedInWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
               </div>
-              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center'>
+              <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
                 <img src={FacebookWhite} alt='FacebookWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
               </div>
             </div>
 
           </div>
-          <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[115px] cursor-pointer' onClick={() => navigate(-1)}>
-            <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#002244]' />
-            <p className='font-grava text-[#002244] text-[20px] font-medium'>Go back</p>
+          <div 
+            className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[115px] cursor-pointer group' 
+            onClick={() => navigate(-1)}
+          >
+            <MdKeyboardBackspace className='w-5 h-5 mt-0.5 text-[#002244] transition-all duration-300 group-hover:mr-2' />
+            <p className='font-grava text-[#002244] text-[20px] font-medium whitespace-nowrap'>Go back</p>
           </div>
+
       </div>
       <div className='flex flex-col gap-4 lg:gap-[40px] px-5 lg:px-[56px] pt-[40px] lg:pt-[80px] pb-[56px] lg:pb-[120px]'>
         <div 
           data-aos="fade-up" 
-          data-aos-duration="3000"
+          data-aos-duration="1000"
           className='flex flex-col lg:flex-row items-start gap-6 lg:gap-[48px]'
         >
           <img src={Man} alt='Man' className='md:w-full lg:w-[429px]' />
