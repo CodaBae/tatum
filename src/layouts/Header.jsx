@@ -604,7 +604,7 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
-            // onClick={() => navigate("/private")}
+            onClick={() => navigate("/private")}
           >
             Private
           </p>
@@ -618,9 +618,9 @@ const Header = () => {
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    // onClick={() => {
-                    //   navigate("/corporate");
-                    // }}
+                    onClick={() => {
+                      navigate("/private/wealth-management");
+                    }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Wealth} alt="Wealth" className="w-6 h-6" />

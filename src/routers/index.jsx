@@ -14,6 +14,7 @@ import Private from "../pages/Private";
 import Resources from "../pages/Resources";
 import PrivacyPolicy from "../pages/Privacy";
 import Terms from "../pages/Terms";
+import Wealth from "../pages/Private/components/Wealth";
 
 export default function Routers() {
   return (
@@ -29,6 +30,7 @@ export default function Routers() {
         <Route path="corporate" element={<Corporate />} />
         <Route path="help" element={<Help />} />
         <Route path="private" element={<Private />} />
+        <Route path="private/wealth-management" element={<Wealth />} />
         <Route path="resources" element={<Resources />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
