@@ -237,7 +237,12 @@ const Header = () => {
         <div className="relative inline-block dropdown-wrapper">
           <div
             onMouseEnter={() => handleMouseEnter("personal")}
-            className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none">
+            className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
+            onClick={() => {
+              navigate("/personal");
+              window.scrollTo(0, 0);
+            }}
+            >
             Personal
           </div>
           {showPersonalDropdown && (
@@ -250,9 +255,7 @@ const Header = () => {
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/personal");
-                    }}>
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
@@ -604,7 +607,7 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
-            onClick={() => navigate("/private")}
+            onClick={() => {navigate("/private"); window.scrollTo(0, 0)}}
           >
             Private
           </p>
@@ -620,6 +623,7 @@ const Header = () => {
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
                       navigate("/private/wealth-management");
+                      window.scrollTo(0, 0)
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
