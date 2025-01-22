@@ -4,7 +4,7 @@ import ball1 from "../../../assets/svg/ball1.svg";
 import ball2 from "../../../assets/svg/ball2.svg";
 import ball3 from "../../../assets/svg/ball3.svg";
 import arrow from "../../../assets/svg/buttonArrow.svg";
-import arrow2 from "../../../assets/svg/buttonArrowblue.svg";
+import arrow2 from "../../../assets/svg/buttonArrowBlue.svg";
 import benefitsPerksBG from "../../../assets/svg/benefitsPerksBG.svg";
 import benefitsBG2 from "../../../assets/svg/benefitsBG2.svg";
 import PerksBennefitsIMG from "../../../assets/jpg/PerksBennefitsIMG.jpg";
