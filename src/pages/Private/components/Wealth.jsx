@@ -49,27 +49,9 @@ const Wealth = () => {
 
     const isTab = window.innerWidth < 1028;
     const isMobile = window.innerWidth < 768;  
-
-    // const cardsData = [
-    //     {
-    //       image: 'https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=100',
-    //       title: 'Personalized Investment Management',
-    //       description: 'Achieve your financial targets with our personalized investment solutions.',
-    //     },
-    //     {
-    //       image: 'https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=100',
-    //       title: 'Plan for Retirement',
-    //       description: 'We help you create and implement strategies for a robust retirement plan.',
-    //     },
-    //     {
-    //       image: 'https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=100',
-    //       title: 'Strategic Tax Planning',
-    //       description: 'Optimize your investments for tax efficiency with expert strategies.',
-    //     },
-    //   ];
       
-      const cardRef = useRef(null);
-  const cardInnerRef = useRef(null);
+    const cardRef = useRef(null);
+    const cardInnerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,9 +191,16 @@ const Wealth = () => {
 
         </div>
 
-        <div className='w-full pt-[56px] md:pt-[80px] pb-[120px] px-5 lg:px-[56px] flex flex-col gap-[100px]'>
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+        <div 
+            className='w-full pt-[56px] md:pt-[80px] pb-[120px] px-5 lg:px-[56px] grid grid-cols-1 gap-[100px]'
+            style={{
+                gridTemplateRows: 'repeat(6, 1fr)',
+            }}
+        >
+            <div 
+                className='flex sticky top-[calc(8%+var(0rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-auto lg:h-[510px]'
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Personalized Investment Management
@@ -230,13 +219,13 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='5/12 hidden md:flex justify-end'>
                     <img src={File} alt='File' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+            <div className='flex sticky top-[calc(8%+var(2.25rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-auto lg:h-[510px]'>
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Plan for a Comfortable Retirement
@@ -254,13 +243,13 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='5/12 hidden md:flex justify-end'>
                     <img src={Gold} alt='File' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
             <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FEF3F2] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Strategic Tax Planning for Smarter Investments
@@ -279,13 +268,13 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='5/12 hidden md:flex justify-end'>
                     <img src={Report} alt='Report' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
             <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Smart Risk Management for a Worry-Free Life
@@ -303,13 +292,13 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='5/12 hidden md:flex justify-end'>
                     <img src={Settings} alt='Settings' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
             <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F0FBFF] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Comprehensive Asset Protection and Distribution
@@ -330,12 +319,12 @@ const Wealth = () => {
                     </div>
                 </div>
                 <div className='5/12 hidden md:flex'>
-                    <img src={House} alt='House' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                    <img src={House} alt='House' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
             <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#ECFDF3] w-full rounded-[24px] h-auto lg:h-[510px]'>
-                <div className='w-full md:w-6/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                             Expert Support for Budgeting and Financial Growth
@@ -354,29 +343,16 @@ const Wealth = () => {
                         <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
                     </div>
                 </div>
-                <div className='5/12 hidden md:flex'>
+                <div className='5/12 hidden md:flex '>
                     <img src={Growth} alt='Growth' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
         </div>
 
-        {/* <div className="cards">
-            {cardsData.map((card, index) => (
-                <div key={index} className="card" ref={cardRef}>
-                 <div className="card__inner" ref={cardInnerRef}>
-                   <div className="card__image-container">
-                     <img className="card__image" src={card.image} alt={card.title} />
-                   </div>
-                   <div className="card__content">
-                     <h1 className="card__title">{card.title}</h1>
-                     <p className="card__description">{card.description}</p>
-                   </div>
-                 </div>
-               </div>
-                // <Card key={index} {...card} />
-            ))}
-        </div> */}
+
+
+       
 
         <div className='flex flex-col items-center justify-center gap-[56px] w-full px-5 lg:px-[56px] '>
             <p className='text-[#002244] font-grava font-medium text-[48px]'>Get Started in 3 Easy Steps</p>
