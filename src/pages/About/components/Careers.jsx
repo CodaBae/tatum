@@ -67,11 +67,11 @@ const Careers = () => {
           className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[0px] top-[294px]"
         />
 
-        <div className="absolute w-[274px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
-          <h1 className="font-grava font-[700] w-[229px] lg:w-[531px] text-[32px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
+        <div className="absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
+          <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
             Build Your Future with Us
           </h1>
-          <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] pb-[25px]">
+          <p className="font-grava font-[350] text-[14px] sm:text-[18px] leading-[20px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] pb-[25px]">
             Working with Tatum Bank is more than just a career; it’s meaningful
             work that improves the lives of millions of people.
           </p>
@@ -88,7 +88,7 @@ const Careers = () => {
           <img
             src={heroImg}
             alt="heroImg"
-            className="w-[305px] h-[361px] lg:w-[585px] lg:h-[692px]"
+            className="w-[305px] h-[361px] sm:w-[420px] sm:h-auto lg:w-[585px] lg:h-[692px]"
           />
         </div>
       </div>
@@ -97,14 +97,14 @@ const Careers = () => {
 
       <div>
         <div className="flex flex-col items-center lg:items-start lg:flex-row p-[25px] lg:p-[50px] mt-[35px] mb-[80px] lg:mt-[50px] lg:mb-[50px] gap-[20px] lg:gap-[140px]">
-          <div className="w-[350px]  lg:w-[546px]">
-            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+          <div className="w-[350px] sm:w-[545px] lg:w-[546px]">
+            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:leading-[35px] sm:text-[32px] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
               We are always seeking passionate, knowledgeable, ambitious and
               well-rounded individuals.
             </h2>
           </div>
-          <div className="w-[350px] lg:w-[654px]">
-            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
+          <div className="w-[350px] sm:w-[545px]  lg:w-[654px]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] sm:text-[21px] sm:leading-[35px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
               We’re driven by innovation, collaboration, and a commitment to
               making a difference.
             </p>
@@ -231,35 +231,35 @@ const Careers = () => {
 
       {/* CAREERS SECTION */}
       <div className="w-[100%] flex flex-col items-center lg:flex-row lg:justify-center ">
-        <div className=" w-[350px] lg:w-[1327px] flex flex-col gap-[40px] mt-[50px] mb-[90px] ">
-          <div className="flex flex-col w-[350px] lg:w-[486px] gap-[16px]">
-            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+        <div className=" w-[350px] sm:w-[486px] lg:w-[1327px] flex flex-col  gap-[40px] mt-[50px] mb-[90px] ">
+          <div className="flex flex-col w-[350px] sm:w-[486px] gap-[16px]">
+            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
               Careers at Tatum Bank
             </h2>
-            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[20px] lg:leading-[26px] lg:tracking-[1.4%] text-[#002244]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
               We’re committed to helping you reach your potential. Whether
               you’re a recent graduate or a seasoned professional, we offer
               tailored programs to suit your career stage.
             </p>
           </div>
-          <div className=" w-[350px] lg:w-[1327px] flex-col lg:flex-row flex gap-[20px]">
-            <div className="w-[350px] lg:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
-              <div className="flex flex-col gap-[24px] lg:gap-[40px]">
+          <div className=" w-[350px] sm:w-[486px] lg:w-[1327px] flex-col lg:flex-row flex gap-[20px]">
+            <div className="w-[350px] sm:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
+              <div className="flex flex-col gap-[24px] sm:gap-[40px]">
                 <div>
                   <img
                     src={graduateIcon}
                     alt="graduateIcon"
-                    className="w-[50px] lg:w-[80px] "
+                    className="w-[50px] sm:w-[80px] "
                   />
                 </div>
                 <div className="flex flex-col gap-[16px] ">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Internships & Graduate Programs
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Are you ready to take your first step into the
                       professional world? At Tatum, we’re passionate about
                       nurturing the next generation of leaders and innovators.
@@ -271,13 +271,13 @@ const Careers = () => {
                 </div>
                 <div>
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Apply for an Internship
                       <span className="mt-[1px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
-                          className="w-[20px] lg:w-[26px]"
+                          className="w-[20px] sm:w-[26px]"
                         />
                       </span>
                     </p>
@@ -286,23 +286,23 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="w-[350px] lg:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
-              <div className="flex flex-col gap-[24px] lg:gap-[40px]">
+            <div className="w-[350px] sm:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
+              <div className="flex flex-col gap-[24px] sm:gap-[40px]">
                 <div>
                   <img
                     src={trainingIcon}
                     alt="graduateIcon"
-                    className="w-[50px] lg:w-[80px] "
+                    className="w-[50px] sm:w-[80px] "
                   />
                 </div>
                 <div className="flex flex-col gap-[16px]">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Leadership Training
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Our Leadership Training Program is designed to unlock your
                       potential and prepare you to take on critical leadership
                       roles in today’s dynamic world. We believe that great
@@ -314,13 +314,13 @@ const Careers = () => {
                 </div>
                 <div className="pt-[25px]">
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
-                          className="w-[20px] lg:w-[26px]"
+                          className="w-[20px] sm:w-[26px]"
                         />
                       </span>
                     </p>
@@ -329,23 +329,23 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="w-[350px] lg:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
-              <div className="flex flex-col gap-[24px] lg:gap-[40px]">
+            <div className="w-[350px] sm:w-[429px] bg-[#F9FAFB] pt-[32px] pb-[32px] pl-[18px] pr-[18px] rounded-[24px] ">
+              <div className="flex flex-col gap-[24px] sm:gap-[40px]">
                 <div>
                   <img
                     src={connectivityIcon}
                     alt="graduateIcon"
-                    className="w-[50px] lg:w-[80px] "
+                    className="w-[50px] sm:w-[80px] "
                   />
                 </div>
                 <div className="flex flex-col gap-[16px]">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Mentorship Opportunities
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Our mentorship opportunities connect you with seasoned
                       professionals who are committed to guiding you to achieve
                       your goals. Whether you're just starting your career or
@@ -356,13 +356,13 @@ const Careers = () => {
                 </div>
                 <div className="pt-[25px]">
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
-                          className="w-[20px] lg:w-[26px]"
+                          className="w-[20px] sm:w-[26px]"
                         />
                       </span>
                     </p>
@@ -379,7 +379,7 @@ const Careers = () => {
       <div>
         <div className="w-[100%] h-[809px] lg:h-[720px] bg-[#FFCC33] flex flex-col items-center gap-[40px] pt-[40px] lg:pt-[80px] pb-[80px]  mb-[10px] ">
           <div className="w-[1328px] flex justify-center lg:justify-start">
-            <div className="w-[350px] lg:w-[720px] ">
+            <div className="w-[350px] sm:w-[500px] lg:w-[720px] ">
               <h2 className="font-grava font-[500] text-[28px] leading-[35px] lg:text-[40px] lg:leading-[50px] tracking-[0.2%] text-[#002244]">
                 You’re the missing piece of our team! Check out our open
                 positions.
@@ -387,7 +387,7 @@ const Careers = () => {
             </div>
           </div>
 
-          <div className="w-[350px] lg:w-[1328px] flex flex-col gap-[32px]">
+          <div className="w-[350px] sm:w-[500px] lg:w-[1328px] flex flex-col gap-[32px]">
             <div className="bg-[#002244] lg:h-[152px] flex flex-col lg:flex-row lg:justify-between pt-[32px] pb-[32px] pr-[24px] pl-[24px] lg:pt-[46px] lg:pb-[46px] lg:pr-[48px] lg:pl-[48px] gap-[40px] lg:gap-[270px] rounded-[20px]">
               <div className="flex flex-col w-[249px] lg:w-[284px] gap-[8px] ">
                 <div>
@@ -473,14 +473,14 @@ const Careers = () => {
 
       <div className=" flex justify-center">
         <div className="w-[1328px] flex flex-col items-center lg:items-start gap-[40px] mt-[50px] mb-[50px] ">
-          <div className="w-[350px] lg:w-[486px] flex flex-col gap-[16px] ">
+          <div className="w-[350px] sm:w-[486px] flex flex-col gap-[16px] ">
             <div>
-              <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+              <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
                 Work. Play. Thrive.
               </h1>
             </div>
             <div>
-              <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[20px] lg:leading-[26px] lg:tracking-[1.4%] text-[#002244]">
+              <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
                 At Tatum, we don’t just work—we celebrate. From team-building
                 events to wellness initiatives, our culture is vibrant and
                 inclusive.
@@ -488,10 +488,10 @@ const Careers = () => {
             </div>
           </div>
 
-          <div className="lg:w-[100%] flex justify-center">
-            <div className="flex flex-col lg:flex-row gap-[20px] w-[350px] lg:w-[100%]  ">
+          <div className="sm:w-[100%] flex justify-center">
+            <div className="flex flex-col lg:flex-row gap-[20px] w-[350px] sm:w-[486px] lg:w-[100%]  ">
               <div className="relative">
-                <div className="w-[350px] h-[300px] lg:w-[654px] lg:h-[762px] rounded-[24px] overflow-hidden ">
+                <div className="w-[350px] h-[300px] sm:w-[486px] sm:h-[auto] lg:w-[654px] lg:h-[762px] rounded-[24px] overflow-hidden ">
                   <img
                     src={Celebrations}
                     alt="Celebrations"
@@ -509,7 +509,7 @@ const Careers = () => {
 
               <div className="flex flex-col gap-[20px]">
                 <div className="relative">
-                  <div className="w-[350px] h-[300px] lg:w-[654px] lg:h-[371px] rounded-[24px] overflow-hidden">
+                  <div className="w-[350px] h-[300px] sm:w-[486px] sm:h-[auto] lg:w-[654px] lg:h-[371px] rounded-[24px] overflow-hidden">
                     <img
                       src={Retreats}
                       alt="Retreats"
@@ -525,7 +525,7 @@ const Careers = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="w-[350px] h-[300px] lg:w-[654px] lg:h-[371px] rounded-[24px] overflow-hidden ">
+                  <div className="w-[350px] h-[300px] sm:w-[486px] sm:h-[auto] lg:w-[654px] lg:h-[371px] rounded-[24px] overflow-hidden ">
                     <img
                       src={Wellness}
                       alt="Wellness"
@@ -548,14 +548,14 @@ const Careers = () => {
 
       <div className="w-[100%] flex justify-center mt-[20px] mb-[80px]">
         <div className="flex flex-col lg:flex-row items-center gap-[32px] justify-between w-[350px] lg:w-[1328px]">
-          <div className="w-[350px] lg:w-[486px] flex flex-col gap-[16px] ">
+          <div className="w-[350px] sm:w-[500px] flex flex-col gap-[16px] ">
             <div>
-              <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+              <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
                 Diversity, Equity, and Inclusion (DEI)
               </h1>
             </div>
             <div>
-              <p className="font-grava font-[350] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[20px] lg:leading-[26px] lg:tracking-[1.4%] text-[#002244]">
+              <p className="font-grava font-[350] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
                 Empowering everyone, embracing differences. At Tatum, we
                 celebrate diversity because it drives innovation and success.
               </p>
@@ -563,9 +563,9 @@ const Careers = () => {
           </div>
 
           <div className="flex flex-col gap-[24px]">
-            <div className="w-[350px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
+            <div className="w-[350px] sm:w-[500px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
               <div>
-                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] lg:text-[20px]  lg:tracking-[1.4%] text-[#002244]">
+                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] sm:text-[20px]  sm:tracking-[1.4%] text-[#002244]">
                   Active Employee Resource Groups.
                 </p>
               </div>
@@ -573,14 +573,14 @@ const Careers = () => {
                 <img
                   src={resourcesIcon}
                   alt="resourcesIcon"
-                  className="w-[20px] lg:w-[32px]"
+                  className="w-[20px] sm:w-[32px]"
                 />
               </div>
             </div>
 
-            <div className="w-[350px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
+            <div className="w-[350px] sm:w-[500px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
               <div>
-                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] lg:text-[20px]  lg:tracking-[1.4%] text-[#002244]">
+                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] sm:text-[20px]  sm:tracking-[1.4%] text-[#002244]">
                   Equal opportunity policies.
                 </p>
               </div>
@@ -588,14 +588,14 @@ const Careers = () => {
                 <img
                   src={policiesIcon}
                   alt="resourcesIcon"
-                  className="w-[20px] lg:w-[32px]"
+                  className="w-[20px] sm:w-[32px]"
                 />
               </div>
             </div>
 
-            <div className="w-[350px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
+            <div className="w-[350px] sm:w-[500px] lg:w-[685px] flex justify-between rounded-[16px] pt-[16px] pb-[16px] pl-[25px] pr-[24px] bg-[#F9FAFB] ">
               <div>
-                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] lg:text-[20px]  lg:tracking-[1.4%] text-[#002244]">
+                <p className="font-grava font-[350] text-[14px]  tracking-[0.2%] sm:text-[20px]  sm:tracking-[1.4%] text-[#002244]">
                   Programs to support underrepresented groups.
                 </p>
               </div>
@@ -603,7 +603,7 @@ const Careers = () => {
                 <img
                   src={groupIcon}
                   alt="resourcesIcon"
-                  className="w-[20px] lg:w-[32px]"
+                  className="w-[20px] sm:w-[32px]"
                 />
               </div>
             </div>
@@ -616,14 +616,14 @@ const Careers = () => {
       <div className=" bg-[#F9FAFB] h-[700px] lg:h-[796px] flex justify-center pt-[70px] ">
         <div className=" flex flex-col items-center lg:items-start gap-[40px] relative ">
           <div className=" flex lg:justify-between justify-center w-[1328px]  top-[80px] left-[56px ">
-            <div className="w-[350px] lg:w-[486px] flex flex-col gap-[16px]">
+            <div className="w-[350px] sm:w-[486px] flex flex-col gap-[16px]">
               <div className="">
-                <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+                <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
                   Our Hiring Process
                 </h2>
               </div>
               <div>
-                <p className="font-grava font-[350] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[20px] lg:leading-[26px] lg:tracking-[1.4%] text-[#002244]">
+                <p className="font-grava font-[350] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
                   At Tatum, we are committed to ensuring a transparent, fair,
                   and engaging recruitment experience. Here's what to expect:
                 </p>
@@ -649,23 +649,23 @@ const Careers = () => {
 
           <div
             ref={scrollableDivRef}
-            className=" absolute top-[170px] lg:top-[200px] gap-[20px] flex w-[370px] lg:w-full overflow-x-auto scrollbar-hidden">
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col ">
+            className=" absolute top-[170px] lg:top-[200px] gap-[20px] flex w-[370px] sm:w-[486px] lg:w-full overflow-x-auto scrollbar-hidden">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col ">
               <div>
                 <img
                   src={applicationIcon}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Application
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Submit your application online by completing the form and
                     attaching your CV. Be sure to highlight your skills,
                     experiences, and aspirations.
@@ -673,22 +673,22 @@ const Careers = () => {
                 </div>
               </div>
             </div>
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
               <div>
                 <img
                   src={OnlineAssessments}
                   alt="OnlineAssessments"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Online Assessments
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Take a series of online assessments designed to evaluate
                     your technical knowledge, problem-solving abilities, and
                     logical reasoning skills.
@@ -696,22 +696,22 @@ const Careers = () => {
                 </div>
               </div>
             </div>
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
               <div>
                 <img
                   src={Physical}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Physical Assessments
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     For roles requiring physical or practical tasks, you may be
                     invited to demonstrate your abilities through a structured
                     physical assessment.
@@ -719,22 +719,22 @@ const Careers = () => {
                 </div>
               </div>
             </div>
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col     ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col     ">
               <div>
                 <img
                   src={verification}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Document & Eligibility Verification
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     We will verify the authenticity of your credentials and
                     ensure that all necessary requirements for the role are met.
                   </p>
@@ -742,22 +742,22 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col     ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col     ">
               <div>
                 <img
                   src={interview}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Interview Stage
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Engage in one-on-one or panel interviews to showcase your
                     skills, learn about the organization, and interact with top
                     management for alignment with our goals.
@@ -766,22 +766,22 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px]  flex flex-col ">
               <div>
                 <img
                   src={medical}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Medical Fitness Assessment
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Complete a medical fitness evaluation to ensure you meet thw
                     health and safety standards required for the role.
                   </p>
@@ -789,22 +789,22 @@ const Careers = () => {
               </div>
             </div>
 
-            <div className="gap-[32px] lg:gap-[48px] w-[300px] h-[244px] lg:w-[429px] lg:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
+            <div className="gap-[32px] sm:gap-[48px] w-[300px] h-[244px] sm:w-[429px] sm:h-[298px] bg-[#ffffff] p-[24px] flex flex-col     ">
               <div>
                 <img
                   src={training}
                   alt="applicationIcon"
-                  className="w-[32px] lg:w-[40px]"
+                  className="w-[32px] sm:w-[40px]"
                 />
               </div>
-              <div className="w-[260px] lg:w-[381px] flex flex-col gap-[16px] lg:gap-[24px]">
+              <div className="w-[260px] sm:w-[381px] flex flex-col gap-[16px] sm:gap-[24px]">
                 <div>
-                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-[16px] leading-[24px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                     Training Period
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Upon selection, participate in our immersive 6-month
                     training program (or specific period) to develop your skills
                     and understand our operations.
@@ -817,7 +817,7 @@ const Careers = () => {
       </div>
 
       <div className="relative h-[400px] lg:h-[300px]  w-[100%] flex justify-center mb-[80px]">
-        <div className=" absolute top-[-150px] pl-[20px] pt-[56px] lg:pl-[56px] lg:pt-[39px] w-[350px] h-[545px] lg:w-[1113px] lg:h-[418px] bg-[#002244]  rounded-tl-[24px]   rounded-br-[24px]  ">
+        <div className=" absolute top-[-150px] pl-[20px] pt-[56px] lg:pl-[56px] lg:pt-[39px] w-[350px] h-[545px]  lg:w-[1113px] lg:h-[418px] bg-[#002244]  rounded-tl-[24px]   rounded-br-[24px] sm:mt-[60px] lg:mt-[0px] ">
           <div className="flex flex-col-reverse lg:flex-row gap-[40px] lg:justify-between w-[310px] lg:w-[1001px] items-center">
             <div className="flex flex-col justify-center h-[170px] w-[310px] lg:h-[225px] lg:w-[473px]  gap-[32px]">
               <div className="flex flex-col w-[310px] lg:w-[473px] gap-[12px]">
