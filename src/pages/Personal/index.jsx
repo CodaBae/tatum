@@ -1,6 +1,6 @@
 import heroImg from "../../assets/jpg/PersonalHeroImg.jpg";
 import arrow from "../../assets/svg/buttonArrow.svg";
-import arrow2 from "../../assets/svg/buttonArrowblue.svg";
+import arrow2 from "../../assets/svg/buttonArrowBlue.svg";
 import ServicesCard1 from "../../assets/jpg/ServicesCard1.jpg";
 import ServicesCard2 from "../../assets/jpg/ServicesCard2.jpg";
 import ServicesCard3 from "../../assets/jpg/ServicesCard3.jpg";

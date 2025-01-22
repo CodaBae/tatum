@@ -639,7 +639,13 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/private/investement-advisory");
+                      window.scrollTo(0, 0)
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Suit} alt="Suit" className="w-6 h-6" />
                     </div>
@@ -653,7 +659,13 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/private/estate-and-trust-planning");
+                      window.scrollTo(0, 0)
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Estate} alt="Estate" className="w-6 h-6" />
                     </div>
@@ -667,7 +679,13 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/private/personal-loans-and-credit");
+                      window.scrollTo(0, 0)
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Money} alt="Money" className="w-6 h-6" />
                     </div>
