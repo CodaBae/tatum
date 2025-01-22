@@ -51,14 +51,14 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <img src={Instagram} alt="Instagram" className="" />
-              <img src={Twitter} alt="Twitter" className="" />
-              <img src={LinkedIn} alt="LinkedIn" className="" />
-              <img src={Facebook} alt="Facebook" className="" />
+              <img src={Instagram} alt="Instagram" className="cursor-pointer" />
+              <img src={Twitter} alt="Twitter" className="cursor-pointer" />
+              <img src={LinkedIn} alt="LinkedIn" className="cursor-pointer" />
+              <img src={Facebook} alt="Facebook" className="cursor-pointer" />
             </div>
             <div className="flex flex-col gap-2">
-              <img src={Google} alt="Google" className="w-[140px]" />
-              <img src={Apple} alt="Apple" className="w-[140px]" />
+              <img src={Google} alt="Google" className="w-[140px] cursor-pointer" />
+              <img src={Apple} alt="Apple" className="w-[140px] cursor-pointer" />
             </div>
           </div>
           <div className="lg:w-[1044px] grid grid-cols-2 lg:flex items-start gap-[40px] lg:gap-[96px]">
@@ -67,10 +67,19 @@ const Footer = () => {
                 COMPANY
               </p>
               <div className="flex flex-col gap-6">
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/about", {
+                    state: { section: "about" },
+                  }) }
+                >
                   About us
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/about/careers", {
+                    state: { section: "careers" },
+                  })}
+                >
                   Careers
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
@@ -86,7 +95,12 @@ const Footer = () => {
                 SERVICES
               </p>
               <div className="flex flex-col gap-6">
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/personal", {
+                    state: { section: "personal" },
+                  })}
+                >
                   Personal Banking
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
@@ -95,10 +109,19 @@ const Footer = () => {
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
                   Corporate Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/private", {
+                    state: { section: "private" },
+                  })}
+                >
                   Private Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  // onClick={() => {navigate("/private/institutional-banking", {
+                  //   state: { section: "resources" },
+                  // }); window.scrollTo(0, 0)}}
+                >
                   Institutional Banking
                 </p>
               </div>
@@ -108,10 +131,20 @@ const Footer = () => {
                 LEGAL
               </p>
               <div className="flex flex-col gap-6">
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => {navigate("/privacy-policy", {
+                    state: { section: "privacy" },
+                  }); window.scrollTo(0, 0)}}
+                >
                   Privacy policy
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => {navigate("/terms", {
+                    state: { section: "terms" },
+                  }); window.scrollTo(0, 0)}}
+                >
                   Terms of service
                 </p>
                 <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
@@ -147,7 +180,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-6">
                 <p className="font-grava text-[#002244] text-sm cursor-pointer">
-                  Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja
+                  Plot 1088, Cadastral Zone AO1, Area 3, <br /> Garki FCT Abuja
                 </p>
               </div>
             </div>

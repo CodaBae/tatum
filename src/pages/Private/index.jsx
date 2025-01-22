@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BsPlus } from 'react-icons/bs'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { BiMinus } from 'react-icons/bi'
@@ -13,6 +13,7 @@ import OfficeMan from "../../assets/png/office-man.jpeg"
 import CardMan from "../../assets/png/card-man.jpeg"
 import CallMan from "../../assets/png/call-man.jpeg"
 import Brainstorm from "../../assets/png/brainstorm.jpeg"
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(false)
@@ -22,6 +23,11 @@ const Private = () => {
   const isTab = window.innerWidth < 1028;
   const isMobile = window.innerWidth < 768;
 
+  const navigate = useNavigate()
+
+  const privateRef = useRef(null);
+  const faqRef = useRef(null);
+  const { state } = useLocation();
   
   const handleTabOne = () => {
     setOpenTabOne(!openTabOne)
@@ -35,8 +41,17 @@ const Private = () => {
     setOpenTabThree(!openTabThree)
   }
 
+  useEffect(() => {
+    if (state?.section === "private" && privateRef.current) {
+      privateRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
+
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={privateRef}>
       <div 
         style={{
           backgroundImage: `url(${Bg})`,
@@ -54,10 +69,10 @@ const Private = () => {
             </p>
           </div>
           <button
-            className='bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
+            className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
           >
-            <p className='text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Open an account</p>
-            <FaArrowRightLong className='w-5 h-5 text-[#001F3E] mt-0.5' />
+            <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Open an account</p>
+            <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
           </button>
         </div>
       </div>
@@ -84,9 +99,14 @@ const Private = () => {
                   allowing you to achieve long-term success.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2'>
-                <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff]'>Get Started</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5' />
+              <div 
+                className='flex items-center cursor-pointer gap-2 group'
+                onClick={() => navigate("/private/wealth-management", {
+                  state: { section: "wealth" } }
+                )}
+              >
+                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2  text-[#fff]'>Get Started</p>
+                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5 transition-all duration-300 group-hover:ml-2' />
               </div>
             </div>
           </div>
@@ -111,9 +131,14 @@ const Private = () => {
                     Build, grow, and protect your wealth with strategies tailored to your goals.
                   </p>
                 </div>
-                <div className='flex items-center cursor-pointer gap-2'>
-                  <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff]'>Build Your Investment Plan Today</p>
-                  <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5' />
+                <div 
+                  className='flex items-center cursor-pointer gap-2 group'
+                  onClick={() => navigate("/private/investement-advisory", {
+                    state: { section: "invest" } }
+                  )}
+                >
+                  <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff] group-hover:mr-2 '>Build Your Investment Plan Today</p>
+                  <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
                 </div>
               </div>
             </div>
@@ -134,9 +159,14 @@ const Private = () => {
                   financial stability and security for years to come.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2'>
-                <p className='font-medium font-grava text-sm lg:text-[18px] text-[#002244]'>Learn More</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+              <div 
+                className='flex items-center cursor-pointer gap-2 group'
+                onClick={() => navigate("/private/estate-and-trust-planning", {
+                  state: { section: "estate" } }
+                )}
+              >
+                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#002244]'>Learn More</p>
+                <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 transition-all duration-300 group-hover:ml-2' />
               </div>
             </div>
           </div>
@@ -158,9 +188,9 @@ const Private = () => {
                   From start to finish, we're here to help you succeed.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2'>
-                <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff]'>Explore Flexible Loan Options</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5' />
+              <div className='flex items-center cursor-pointer gap-2 group  w-full'>
+                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Explore Flexible Loan Options</p>
+                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
               </div>
             </div>
           </div>
@@ -176,9 +206,9 @@ const Private = () => {
                   your resources and, ultimately, achieving more.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2'>
-                <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff]'>Start Now</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5' />
+              <div className='flex items-center cursor-pointer gap-2 group'>
+                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Start Now</p>
+                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
               </div>
             </div>
           </div>
@@ -196,10 +226,10 @@ const Private = () => {
           </p>
         </div>
         <button
-          className='bg-[#FFCC33] w-[220px] lg:w-[277px] h-[44px] lg:h-[58px] rounded-tl-lg rounded-br-lg flex items-center justify-center p-4 gap-2'
+          className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[220px] lg:w-[277px] h-[44px] lg:h-[58px] rounded-tl-lg rounded-br-lg flex items-center justify-center p-4 gap-2'
         >
-          <p className='text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Schedule a Consultation</p>
-          <FaArrowRightLong className='w-5 h-5 text-[#001F3E] mt-0.5' />
+          <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Schedule a Consultation</p>
+          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
         </button>
       </div>
 
@@ -208,7 +238,7 @@ const Private = () => {
         <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
       </div>
 
-      <div className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
+      <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
           <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
 

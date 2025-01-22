@@ -35,6 +35,7 @@ import Press from "../assets/svg/press.svg";
 import Faq from "../assets/svg/faq.svg";
 
 import "./css/Header.css";
+import { FiSearch } from "react-icons/fi";
 
 const Header = () => {
   const [showPersonalDropdown, setShowPersonalDropdown] = useState(false);
@@ -119,13 +120,21 @@ const Header = () => {
       <div className="flex items-center gap-[32px]">
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => navigate("/")}>
+          onClick={() => navigate("/", {
+            state: { section: "home" },
+          })}
+        >
           Home
         </p>
         <div className="relative inline-block dropdown-wrapper">
           <div
             onMouseEnter={() => handleMouseEnter("about")}
-            className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none">
+            className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
+            onClick={() => 
+              navigate("/about", {
+                state: { section: "about" },
+              })}
+          >
             About Us
           </div>
           {showAboutDropdown && (
@@ -138,7 +147,13 @@ const Header = () => {
                 <div className="flex flex-col  gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/about")}>
+                    onClick={() => {
+                      navigate("about", {
+                        state: { section: "about" },
+                      });
+                
+                    }}
+                    >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
@@ -194,7 +209,7 @@ const Header = () => {
 
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {navigate("/about/teams"); window.scrollTo(0, 0)}}>
+                    onClick={() => {navigate("/about", {state: { section: "teams" }, } )}}>
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
@@ -239,8 +254,7 @@ const Header = () => {
             onMouseEnter={() => handleMouseEnter("personal")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onClick={() => {
-              navigate("/personal");
-              window.scrollTo(0, 0);
+              navigate("/personal", {state: { section: "personal" }, });
             }}
             >
             Personal
@@ -255,6 +269,9 @@ const Header = () => {
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "save" }, });
+                    }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
@@ -269,7 +286,12 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "save" }, });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
@@ -283,7 +305,12 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "save" }, });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
@@ -297,7 +324,12 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "save" }, });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
@@ -313,7 +345,12 @@ const Header = () => {
                 </div>
                 <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "save" } });
+                    }} 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img
                         src={Insurance}
@@ -330,7 +367,12 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer ">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
+                    onClick={() => {
+                      navigate("/personal", {state: { section: "faq" }, });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
@@ -607,7 +649,7 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
-            onClick={() => {navigate("/private"); window.scrollTo(0, 0)}}
+            onClick={() => navigate("/private", {state: { section: "private" } }) }
           >
             Private
           </p>
@@ -622,8 +664,7 @@ const Header = () => {
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/private/wealth-management");
-                      window.scrollTo(0, 0)
+                      navigate("/private/wealth-management", {state: { section: "wealth" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -642,8 +683,9 @@ const Header = () => {
                   <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/private/investement-advisory");
-                      window.scrollTo(0, 0)
+                      navigate("/private/investement-advisory", {
+                        state: { section: "invest" },
+                      });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -661,10 +703,9 @@ const Header = () => {
 
                   <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/private/estate-and-trust-planning");
-                      window.scrollTo(0, 0)
-                    }}
+                    onClick={() => navigate("/private/estate-and-trust-planning", {
+                      state: { section: "estate" } }
+                    )}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Estate} alt="Estate" className="w-6 h-6" />
@@ -718,7 +759,11 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer ">
+                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/private", {state: { section: "faq" } });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
@@ -845,7 +890,7 @@ const Header = () => {
         </p>
       </div>
       <div className="flex items-center gap-[15px]">
-        <CiSearch className="w-5 h-5 text-[#002244]" />
+        <FiSearch className="w-5 h-5 text-[#002244] " />
         <button
           className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-[#090540]"
           type="button"

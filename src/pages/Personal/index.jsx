@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import heroImg from "../../assets/jpg/PersonalHeroImg.jpg";
 import arrow from "../../assets/svg/buttonArrow.svg";
 import arrow2 from "../../assets/svg/buttonArrowBlue.svg";
@@ -10,49 +10,61 @@ import whiteArrowIcon from "../../assets/svg/whiteArrowIcon.svg";
 import beforeFAQ from "../../assets/jpg/beforeFAQ.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 
 const Personal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const personalRef = useRef(null);
+  const faqRef = useRef(null);
+  const saveRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+    if (state?.section === "personal" && personalRef.current) {
+      personalRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "save" && saveRef.current) {
+      saveRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div>
-      <div className="relative mt-[45px] overflow-hidden">
-        <div className="relative h-[619px] lg:h-[715px]">
+      <div className="relative overflow-hidden">
+        <div className="relative h-[715px]">
           <img
             src={heroImg}
             alt="heroImg"
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
         </div>
 
-        <div className=" absolute w-[350px] top-[350px] left-[25px] sm:w-[622px] lg:top-[250px] lg:left-[56px] ">
-          <h1 className="font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
+        <div className="absolute w-[274px] top-[120px] left-[25px] lg:w-[622px] lg:top-[290px] lg:left-[56px]">
+          <h1 className="font-grava font-[700] w-[229px] lg:w-[622px] text-[32px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%] text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
             Personal Banking
           </h1>
-          <p className="font-grava font-[350] text-[14px] sm:text-[20px] leading-[20px] sm:leading-[27px] sm:w-[490px] lg:w-[622px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
+          <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
             Our personal banking solutions are designed to add color to your
             financial journey and make managing your money both simple and
             rewarding.
           </p>
-          <button
-            className={`${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-            type="button">
-            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-              Open an account
+          <button className="w-[190px] h-[44px] lg:w-[243.78px] lg:h-[58.99px] bg-[#ffcc33] rounded-tl-[8.53px] rounded-br-[8.53px]">
+            <p className="font-grava font-[500] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#002244] flex justify-center">
+              Get Started
             </p>
-            <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
           </button>
         </div>
       </div>
 
       {/* SERVICES SECTION */}
 
-      <div className="flex flex-col items-center pt-[80px] pb-[80px]">
+      <div
+        className="flex flex-col items-center pt-[80px] pb-[80px]"
+        ref={saveRef}>
         {/* CARD ONE */}
         <div className="flex flex-col lg:flex-row items-center gap-[32px] lg:gap-[0px] justify-between w-[1328px] pb-[35px] ">
           <div className=" relative w-[350px] h-[371px] sm:w-[654px] sm:h-[570px] rounded-[24px] ">
@@ -81,10 +93,10 @@ const Personal = () => {
                 </div>
               </div>
               <div>
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
-                    Learn more
-                    <span>
+                <button className="group w-full">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                    learn more
+                    <span className="group-hover:ml-2">
                       <img
                         src={whiteArrowIcon}
                         alt="whiteArrowIcon"
@@ -122,10 +134,10 @@ const Personal = () => {
                 </div>
               </div>
               <div>
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group w-full">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     View Investment Options
-                    <span>
+                    <span className="group-hover:ml-2">
                       <img
                         src={whiteArrowIcon}
                         alt="whiteArrowIcon"
@@ -165,10 +177,10 @@ const Personal = () => {
                 </div>
               </div>
               <div>
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group w-full">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     View our Insurance Plans
-                    <span>
+                    <span className="group-hover:ml-2">
                       <img
                         src={whiteArrowIcon}
                         alt="whiteArrowIcon"
@@ -206,10 +218,10 @@ const Personal = () => {
                 </div>
               </div>
               <div>
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group w-full">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Get the App
-                    <span>
+                    <span className="group-hover:ml-2">
                       <img
                         src={whiteArrowIcon}
                         alt="whiteArrowIcon"
@@ -264,7 +276,9 @@ const Personal = () => {
 
       {/* FAQ SECTION */}
 
-      <div className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
+      <div
+        className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center "
+        ref={faqRef}>
         <div className="flex flex-col items-center w-[350px] sm:w-[650px] lg:w-[878px] gap-[56px] ">
           <div className="flex justify-center">
             <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
