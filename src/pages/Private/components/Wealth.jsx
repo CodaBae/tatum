@@ -153,7 +153,7 @@ const Wealth = () => {
             </div>
 
                                     {/* Mobile */}
-            <div className="w-full flex lg:hidden flex-col gap-5 ">
+            <div className="w-full flex lm:hidden flex-col gap-5 ">
                 <div className="flex-shrink-0 flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] h-[232px] rounded-[24px] w-full ">
                     <img src={Block} alt="Block" className="w-[93px] h-[131px]" />
                     <p className="text-lg font-medium font-grava text-[#8A99A9]">Wealth Creation</p> 
@@ -350,9 +350,6 @@ const Wealth = () => {
 
         </div>
 
-
-
-       
 
         <div className='flex flex-col items-center justify-center gap-[32px] lg:gap-[56px] w-full px-5 lg:px-[56px] '>
             <p className='text-[#002244] font-grava font-medium text-[24px] lg:text-[48px]'>Get Started in 3 Easy Steps</p>
