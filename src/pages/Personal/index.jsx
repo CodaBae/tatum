@@ -33,29 +33,36 @@ const Personal = () => {
 
   return (
     <div>
-      <div className="relative overflow-hidden">
-        <div className="relative h-[715px]">
+      <div className="relative overflow-hidden mt-[80px]">
+        <div className="relative h-[619px] lg:h-[630px]">
           <img
             src={heroImg}
             alt="heroImg"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-50 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
         </div>
 
-        <div className="absolute w-[274px] top-[120px] left-[25px] lg:w-[622px] lg:top-[290px] lg:left-[56px]">
-          <h1 className="font-grava font-[700] w-[229px] lg:w-[622px] text-[32px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%] text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
+        <div className="absolute w-[274px] top-[350px] left-[25px] sm:left-[40px] sm:w-[622px] lg:top-[215px] lg:left-[56px]">
+          <h1 className="font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%] text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
             Personal Banking
           </h1>
-          <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
+          <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[24px] lg:text-[24px] lg:leading-[30px] sm:leading-[30px] lg:tracking-[1.4%] sm:lg:tracking-[0.5%] text-[#ffffff] pb-[25px]">
             Our personal banking solutions are designed to add color to your
             financial journey and make managing your money both simple and
             rewarding.
           </p>
-          <button className="w-[190px] h-[44px] lg:w-[243.78px] lg:h-[58.99px] bg-[#ffcc33] rounded-tl-[8.53px] rounded-br-[8.53px]">
-            <p className="font-grava font-[500] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#002244] flex justify-center">
-              Get Started
+          <button
+            className={`${
+              activeIndex === 2
+                ? "animate__animated animate__slow animate__fadeInUp"
+                : ""
+            } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+            type="button">
+            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+              Open an Account
             </p>
+            <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
           </button>
         </div>
       </div>
