@@ -10,7 +10,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true, // Ensures animations occur only once
+  });
   }, []);
 
   return (

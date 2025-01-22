@@ -1,7 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   const [activeTab, setActiveTab] = useState(1)
+
+  const privacyRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.section === "privacy" && privacyRef.current) {
+        privacyRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+  }, [state]);
 
 
    const introductionRef = useRef(null);
@@ -51,7 +61,7 @@ const PrivacyPolicy = () => {
 
 
   return (
-    <div className='w-full mb-[56px] lg:mb-[120px]'>
+    <div ref={privacyRef} className='w-full mb-[56px] lg:mb-[120px]'>
       <div className='bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:fixed lg:z-10 justify-center'>
           <p className='font-bold text-[#002244] font-grava text-[32px] lg:text-[75px] mt-[44px] lg:mt-[66px] '>Privacy Policy</p>
       </div>

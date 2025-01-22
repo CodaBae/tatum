@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom';
 
 const Terms = () => {
+
+  const termsRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.section === "terms" && termsRef.current) {
+        termsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+  }, [state]);
+
+
   return (
     <div 
       className='w-full mb-[56px] lg:mb-[120px]' 
       data-aos="fade-up" 
       data-aos-duration="3000" 
+      ref={termsRef}
     >
       <div className='bg-[#FFCC33] w-full h-[184px] lg:h-[314px]  flex flex-col items-center justify-center'>
           <p className='font-bold text-[#002244] font-grava text-[32px] mt-[66px] lg:text-[75px]  '>Terms and Conditions</p>

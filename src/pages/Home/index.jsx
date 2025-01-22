@@ -42,6 +42,7 @@ import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -51,6 +52,16 @@ const Home = () => {
     
 
     const formatter = new Intl.NumberFormat('en-US');
+
+    const homeRef = useRef(null);
+    const { state } = useLocation();
+
+    useEffect(() => {
+        if (state?.section === "home" && homeRef.current) {
+            homeRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state]);
+
 
     const settings = {
         // dots: true,
@@ -115,7 +126,7 @@ const Home = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div className='w-full pt-[40px]  lg:pt-[80px]'>
+    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
                 // dynamicHeight={true} 
@@ -373,7 +384,7 @@ const Home = () => {
                 </div>
             </LandingCarousel>
         </div>
-        <div className='bg-[#fff]  md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+        <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div data-aos="fade-right" className="hidden md:block" >
                 <img 
                     src={Boy} 
@@ -486,7 +497,7 @@ const Home = () => {
                 </p>
             </div>
               {/* Desktop Card Layout */}
-            <div className='lm:flex items-center relative gap-4 hidden group transition'>
+            <div className='lm:flex items-center justify-center relative gap-4 hidden group transition'>
                 <div 
                     className='card-wrapper'
                 >

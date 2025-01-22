@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import HeaderImg from "../../../assets/jpg/TeamPhoto.jpg";
 import HeaderImgMobile from "../../../assets/png/TeamPhotoMobile.png";
@@ -9,15 +10,26 @@ import Director from './Director';
 const Teams = () => {
     const [activeTab, setActiveTab] = useState("management")
 
+    const navigate = useNavigate()
+
+    const teamsRef = useRef(null);
+    const { state } = useLocation();
+
     const handleTabChange = (value) => {
         setActiveTab(value)
     }
+
+    useEffect(() => {   
+        if (state?.section === "teams" && teamsRef.current) {
+            teamsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state])
 
     const isTab = window.innerWidth < 1028;
     const isMobile = window.innerWidth < 768;  
 
   return (
-    <div className="w-full">
+    <div className="w-full" ref={teamsRef}>
         <div 
             style={{
                 backgroundImage: `url(${isTab ? HeaderImgMobile : HeaderImg})`,
@@ -30,11 +42,32 @@ const Teams = () => {
             <div 
                 className="bg-[#FFCC33] absolute -bottom-8 flex items-center justify-center w-[90%] md:w-[493px] h-[66px] gap-4 rounded-tl-lg rounded-br-lg py-5 px-10"
             >
-                <p className="font-[350] font-grava text-[#002244] text-sm lm:text-[20px]">Home</p>
+                <p 
+                    className="font-[350] font-grava text-[#002244] text-sm lm:text-[20px] cursor-pointer"
+                    onClick={() => navigate("/", {
+                        state: { section: "home" },
+                    })}
+                >
+                    Home
+                </p>
                 <img src={Forward} alt="forward" className=""/>
-                <p className="font-[350] font-grava text-[#002244] whitespace-nowrap text-sm lm:text-[20px]">About Us</p>
+                <p 
+                    className="font-[350] font-grava text-[#002244] whitespace-nowrap text-sm lm:text-[20px] cursor-pointer"
+                    onClick={() => navigate("/about", {
+                        state: { section: "about" },
+                    })}
+                >
+                    About Us
+                </p>
                 <img src={Forward} alt="forward" className=""/>
-                <p className="font-[350] font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px]">Board Members</p>
+                <p 
+                    className="font-[350] font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px] "
+                    // onClick={() => navigate("/about/teams", {
+                    //     state: { section: "teams" },
+                    // })}
+                >
+                    Board Members
+                </p>
             </div>
         </div>
         <div className='bg-[#fff] pt-[82px] lg:pt-[152px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] flex flex-col gap-2'>

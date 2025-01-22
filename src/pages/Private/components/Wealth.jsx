@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules'; // Updated import
 import 'swiper/css';
@@ -32,6 +32,9 @@ import "./css/Wealth.css"
 
 const Wealth = () => {
     const [visibleIndex, setVisibleIndex] = useState(0);
+
+    const wealthRef = useRef(null);
+    const { state } = useLocation();
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -73,9 +76,14 @@ const Wealth = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
     
+    useEffect(() => {
+      if (state?.section === "wealth" && wealthRef.current) {
+        wealthRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [state]);
 
   return (
-    <div className="w-full mb-[56px] lg:mb-[194px]">
+    <div className="w-full mb-[56px] lg:mb-[194px]" ref={wealthRef}>
         <div 
             style={{
                 backgroundImage: `url(${OfficeMan})`,
@@ -88,16 +96,28 @@ const Wealth = () => {
 
             <p className='font-grava font-bold z-10 text-[#fff] text-[32px] lg:text-[75px] '>Wealth Management</p>
 
-            <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[115px] cursor-pointer' onClick={() => navigate(-1)}>
-                <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#fff]' />
-                <p className='font-grava text-[#fff] text-[20px] font-medium'>Go back</p>
+            <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
+                <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#fff] group-hover:mr-2' />
+                <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-300 group-hover:ml-2'>Go back</p>
             </div>
             <div 
                 className="bg-[#FFCC33] absolute -bottom-8 flex items-center justify-center w-[90%] md:w-[493px] h-[66px] gap-4 rounded-tl-lg rounded-br-lg py-5 px-10"
             >
-                <p className="font-[350] font-grava text-[#002244] text-sm lm:text-[20px]">Home</p>
+                <p className="font-[350] font-grava text-[#002244] text-sm lm:text-[20px] cursor-pointer"
+                    onClick={() => navigate("/", {
+                        state: { section: "home" },
+                    })}
+                >
+                    Home
+                </p>
                 <img src={Forward} alt="forward" className=""/>
-                <p className="font-[350] font-grava text-[#002244] whitespace-nowrap text-sm lm:text-[20px]">Private</p>
+                <p className="font-[350] font-grava text-[#002244] whitespace-nowrap text-sm lm:text-[20px] cursor-pointer"
+                    onClick={() => navigate("/private", {
+                        state: { section: "private" },
+                    })}
+                >
+                    Private
+                </p>
                 <img src={Forward} alt="forward" className=""/>
                 <p className="font-[350] font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px]">Wealth management</p>
             </div>
@@ -117,7 +137,7 @@ const Wealth = () => {
                 <Swiper
                     modules={[Autoplay]} 
                     spaceBetween={20} // Space between slides
-                    slidesPerView={'auto'} // Automatically adjust to fit the number of cards
+                    slidesPerView={'4'} // Automatically adjust to fit the number of cards
                     grabCursor={true}
                     autoplay={{
                         delay: 3000, // Slide transition delay in milliseconds
@@ -129,23 +149,23 @@ const Wealth = () => {
                     }}
                 >
                                             {/* Individual Card */}
-                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto ">
+                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center gap-5 bg-[#F9FAFB] h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto lg:w-[217px] ">
                         <img src={Block} alt="Block" className="w-[93px] h-[131px]" />
                         <p className="text-lg font-medium font-grava text-[#8A99A9]">Wealth Creation</p>      
                     </SwiperSlide>
-                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto">
+                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto lg:w-[217px]">
                         <img src={Pipe} alt="Pipe" className="w-[85px] h-[114px]" />
                         <p className="text-lg font-medium font-grava text-[#8A99A9]">Wealth Growth</p>      
                     </SwiperSlide>
-                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto">
+                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto lg:w-[217px]">
                         <img src={Up} alt="Up" className="w-[94px] h-[104px]" />
                         <p className="text-lg font-medium font-grava text-[#8A99A9]">Wealth Protection</p>      
                     </SwiperSlide>
-                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto">
+                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto lg:w-[217px]">
                         <img src={Brick} alt="Brick" className="w-[69px] h-[124px]" />
                         <p className="text-lg font-medium font-grava text-[#8A99A9]">Generational Transfers</p>      
                     </SwiperSlide>
-                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto">
+                    <SwiperSlide className="flex-shrink-0 flex flex-col items-center justify-center bg-[#F9FAFB] gap-5 h-[232px] rounded-[24px] w-[317px] sm:w-[80%] md:w-auto lg:w-[217px]">
                         <img src={Lever} alt="Lever" className="w-[107px] h-[105px]" />
                         <p className="text-lg font-medium font-grava text-[#8A99A9]">Succession Planning</p>      
                     </SwiperSlide>                    
@@ -184,8 +204,11 @@ const Wealth = () => {
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
                     <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
-                <button className='cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'>
-                    <p className='text-[#8A99A9] font-medium text-[18px]'>Sign up</p>
+                <button 
+                    className='transition-all duration-300 ease-in-out group hover:bg-[#002244] cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'
+                    type='button'
+                >
+                    <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#8A99A9] font-medium text-[18px]'>Sign up</p>
                 </button>
             </div>
 
@@ -214,9 +237,9 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={File} alt='File' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Schedule a Free Consultation</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 cursor-pointer w-full group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Schedule a Free Consultation</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -238,13 +261,13 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={Gold} alt='File' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Contact Us for a Personalized Plan</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 w-full group cursor-pointer'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Contact Us for a Personalized Plan</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
-                    <img src={Gold} alt='File' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                    <img src={Gold} alt='Gold' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
@@ -263,13 +286,13 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={Report} alt='Report' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Request a Portfolio Review</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Request a Portfolio Review</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
-                    <img src={Report} alt='Report' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                    <img src={Report} alt='Report' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
@@ -287,13 +310,13 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={Settings} alt='Settings' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Get a Free Insurance Quote</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 w-full group cursor-pointer '>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Get a Free Insurance Quote</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='5/12 hidden md:flex justify-end'>
-                    <img src={Settings} alt='Settings' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                    <img src={Settings} alt='Settings' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
                 </div>
             </div>
 
@@ -313,9 +336,9 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={House} alt='House' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Download Our Estate Planning Guide</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Download Our Estate Planning Guide</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -338,9 +361,9 @@ const Wealth = () => {
                     <div className='flex md:hidden'>
                         <img src={Growth} alt='Growth' className='w-[198px] mx-auto' />
                     </div>
-                    <div className='flex items-center gap-2 '>
-                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px]'>Learn more</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-0.5' />
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Learn more</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -376,8 +399,11 @@ const Wealth = () => {
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
                     <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
-                <button className='cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'>
-                    <p className='text-[#8A99A9] font-medium text-sm lg:text-[18px]'>Sign up</p>
+                <button 
+                    className='transition-all duration-300 ease-in-out group hover:bg-[#002244] cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'
+                    type='button'
+                >
+                    <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#8A99A9] font-medium text-[18px]'>Sign up</p>
                 </button>
             </div>
         </div>
