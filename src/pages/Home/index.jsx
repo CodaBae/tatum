@@ -171,7 +171,7 @@ const Home = () => {
                                             Open an account today
                                         </p>
                                         <FaArrowRightLong 
-                                            className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='mt-[1px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                     <button 
@@ -236,7 +236,7 @@ const Home = () => {
                                             Explore our offerings
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                     <button 
@@ -301,7 +301,7 @@ const Home = () => {
                                             Get started with SME Banking
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>
@@ -358,7 +358,7 @@ const Home = () => {
                                             Get exclusive access
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>

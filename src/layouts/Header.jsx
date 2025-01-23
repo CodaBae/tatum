@@ -395,7 +395,7 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("sme")}
-            // onClick={() => navigate("/sme")}
+            onClick={() => navigate("/sme", {state: { section: "sme" } })}
           >
             SME
           </p>
@@ -409,9 +409,7 @@ const Header = () => {
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    // onClick={() => {
-                    //   navigate("/corporate");
-                    // }}
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Business} alt="Business" className="w-6 h-6" />
@@ -426,7 +424,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Solutions} alt="Solutions" className="w-6 h-6" />
                     </div>
@@ -440,7 +441,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Credit} alt="Credit" className="w-6 h-6" />
                     </div>
@@ -454,7 +458,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Expense} alt="Expense" className="w-6 h-6" />
                     </div>
@@ -470,7 +477,10 @@ const Header = () => {
                 </div>
                 <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
+                  <div 
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img
                         src={Job}
@@ -487,7 +497,10 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer ">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
+                    onClick={() => navigate("/sme", {state: { section: "payment" } })}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Funding} alt="Funding" className="w-5 h-5" />
                     </div>
@@ -500,7 +513,10 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer ">
+                  <div 
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => navigate("/sme", {state: { section: "faq" } })}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import smeHeroImg from "../../assets/jpg/smeHeroImg.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import whiteArrowIcon from "../../assets/svg/whiteArrowIcon.svg";
@@ -11,12 +11,30 @@ import smeCard3Icon from "../../assets/svg/smeCard3Icon.svg";
 import smeCard4Icon from "../../assets/svg/smeCard4Icon.svg";
 import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
+import { useLocation } from "react-router-dom";
 
 const SME = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const smeRef = useRef(null);
+  const paymentRef = useRef(null);
+  const faqRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.section === "sme" && smeRef.current) {
+        smeRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "payment" && paymentRef.current) {
+        paymentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "faq" && faqRef.current) {
+        faqRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [state]);
+
   return (
-    <div>
+    <div ref={smeRef}>
       <div className="relative mt-[45px] overflow-hidden">
         <div className="relative h-[619px] lg:h-[715px]">
           <img
@@ -53,7 +71,7 @@ const SME = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
+      <div ref={paymentRef} className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
         <div className="flex gap-[20px] ">
           <div className="relative w-[429px] h-[524px] rounded-[24px] overflow-hidden ">
             <img
@@ -282,7 +300,7 @@ const SME = () => {
         </div>
       </div>
 
-      <div className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
+      <div ref={faqRef} className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
         <div className="flex flex-col items-center w-[350px] sm:w-[650px] lg:w-[878px] gap-[56px] ">
           <div className="flex justify-center">
             <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
