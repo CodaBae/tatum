@@ -22,16 +22,16 @@ const SME = () => {
   const { state } = useLocation();
 
   useEffect(() => {
-      if (state?.section === "sme" && smeRef.current) {
-        smeRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-      if (state?.section === "payment" && paymentRef.current) {
-        paymentRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-      if (state?.section === "faq" && faqRef.current) {
-        faqRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, [state]);
+    if (state?.section === "sme" && smeRef.current) {
+      smeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "payment" && paymentRef.current) {
+      paymentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div ref={smeRef}>
@@ -58,8 +58,7 @@ const SME = () => {
           </p>
           <button
             className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-            type="button"
-          >
+            type="button">
             <p className="animate__animated  animate__fadeInUp animate__slow transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
               Open an account
             </p>
@@ -68,9 +67,13 @@ const SME = () => {
         </div>
       </div>
 
-      <div ref={paymentRef} className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
-        <div className="flex gap-[20px] ">
-          <div className="relative w-[429px] h-[524px] rounded-[24px] overflow-hidden ">
+      {/* CARDS */}
+
+      <div
+        ref={paymentRef}
+        className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
+        <div className="flex flex-col lg:flex-row gap-[20px] ">
+          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[429px]  sm:h-[524px] sm:rounded-[24px] overflow-hidden ">
             <img
               src={smeCard1}
               alt="smeCard1"
@@ -79,12 +82,12 @@ const SME = () => {
             <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
             <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
 
-            <div className="absolute w-[389px] h-[249px] top-[251px] left-[20px] flex flex-col justify-between">
-              <div className=" flex flex-col gap-[16px]">
-                <h1 className="font-grava font-[500] text-[28px] leading-[35px]   text-[#ffffff]  ">
+            <div className="absolute w-[389px] h-[249px] top-[118px] left-[20px] sm:top-[251px] sm:left-[20px] flex flex-col gap-[24px] sm:justify-between">
+              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
+                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#ffffff]  ">
                   Business Accounts
                 </h1>
-                <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
+                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
                   Build your business on a solid foundation with our SME
                   accounts. We help keep your business moving with a reliable
                   payment solution that works everywhere and is designed to make
@@ -96,14 +99,14 @@ const SME = () => {
                   <p className="font-grava group flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Get Started
                     <span className="flex group-hover:ml-2 items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff]  ml-[7px] mt-[5px] " />
+                      <FaArrowRightLong className="w-4 sm:w-5 sm:h-5 transition-colors duration-300 ease-in-out text-[#ffffff]  ml-[7px] mt-[2px] sm:mt-[5px]  " />
                     </span>
                   </p>
                 </button>
               </div>
             </div>
           </div>
-          <div className="relative w-[429px] h-[524px] rounded-[24px] overflow-hidden bg-[#FFCC33] ">
+          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[429px]  sm:h-[524px] sm:rounded-[24px] overflow-hidden bg-[#ffcc33] ">
             <img
               src={smeCard2}
               alt="smeCard1"
@@ -115,12 +118,12 @@ const SME = () => {
               className="absolute top-[24px] left-[20px] "
             />
 
-            <div className="absolute w-[389px] h-[249px] top-[270px] left-[20px] flex flex-col gap-[32px] ">
-              <div className=" flex flex-col gap-[16px]">
-                <h1 className="font-grava font-[500] text-[28px] leading-[35px]   text-[#002244]  ">
+            <div className="absolute w-[389px] h-[249px]  top-[155px] left-[20px] sm:top-[251px] sm:left-[20px] flex flex-col gap-[32px]  ">
+              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
+                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#002244] ">
                   Expense Management Tools
                 </h1>
-                <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]  ">
+                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#002244]">
                   Clear insights into your business spending. Keep track of
                   every naira, manage budgets, and make informed decisions with
                   our easy-to-use tools.
@@ -131,14 +134,14 @@ const SME = () => {
                   <p className="font-grava group-hover:mr-2 flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
                     Learn More
                     <span className="flex group-hover:ml-2 items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] ml-[7px] mt-[5px] " />
+                      <FaArrowRightLong className="m-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] ml-[7px] mt-[2px] sm:mt-[5px] " />
                     </span>
                   </p>
                 </button>
               </div>
             </div>
           </div>
-          <div className="relative w-[429px] h-[524px] rounded-[24px] overflow-hidden ">
+          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[654px] sm:h-[420px] lg:w-[429px]  lg:h-[524px] sm:rounded-[24px] overflow-hidden ">
             <img
               src={smeCard3}
               alt="smeCard1"
@@ -152,12 +155,12 @@ const SME = () => {
             <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
             <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
 
-            <div className="absolute w-[389px] h-[249px] top-[270px] left-[20px] flex flex-col  gap-[32px] ">
-              <div className=" flex flex-col gap-[16px]">
-                <h1 className="font-grava font-[500] text-[28px] leading-[35px]   text-[#ffffff]  ">
+            <div className="absolute w-[389px] h-[249px]  top-[155px] left-[20px] sm:top-[251px] sm:left-[20px]  flex flex-col  gap-[32px] ">
+              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
+                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#ffffff]  ">
                   Loans & Credit Lines
                 </h1>
-                <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
+                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
                   Your business deserves strong financial backing when you need
                   it. Are you looking to start a business, expand, or purchase
                   equipment? We’ve got you!
@@ -165,10 +168,10 @@ const SME = () => {
               </div>
               <div className=" h-[31px] flex items-start">
                 <button className="group">
-                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffcc33]">
                     Explore our financing plans
                     <span className="flex items-center group-hover:ml-2">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
+                      <FaArrowRightLong className="w-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -176,7 +179,7 @@ const SME = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-[20px] ">
+        <div className="flex flex-col lg:flex-row gap-[20px] ">
           <div className="relative w-[654px] h-[420px] rounded-[24px] overflow-hidden bg-[#002244] ">
             <img
               src={smeCard2}
@@ -297,7 +300,9 @@ const SME = () => {
         </div>
       </div>
 
-      <div ref={faqRef} className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
+      <div
+        ref={faqRef}
+        className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
         <div className="flex flex-col items-center w-[350px] sm:w-[650px] lg:w-[878px] gap-[56px] ">
           <div className="flex justify-center">
             <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
