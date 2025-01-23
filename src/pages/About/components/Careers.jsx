@@ -45,10 +45,10 @@ const Careers = () => {
   const { state } = useLocation();
 
   useEffect(() => {
-      if (state?.section === "careers" && careersRef.current) {
-        careersRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, [state]);
+    if (state?.section === "careers" && careersRef.current) {
+      careersRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   useEffect(() => {
     let scrollInterval;
@@ -111,7 +111,6 @@ const Careers = () => {
           alt="ball"
           className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[0px] top-[294px]"
         />
-
         <div className="animate__animated animate__fadeInUp absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
           <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
             Build Your Future with Us
@@ -122,8 +121,7 @@ const Careers = () => {
           </p>
           <button
             className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
-            type="button"
-          >
+            type="button">
             <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
             </p>
@@ -131,12 +129,15 @@ const Careers = () => {
           </button>
         </div>
         <div className="animate__animated animate__zoomIn absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
-          <img
-            src={heroImg}
-            alt="heroImg"
-            className="w-[305px] h-[361px] sm:w-[420px] sm:h-auto lg:w-[585px] lg:h-[692px]"
-          />
-        </div>
+          <div className="relative">
+            <div className="absolute top-[18px] sm:hidden lg:block lg:top-[40px] right-0 z-20 w-[75%] h-[20px] bg-[#FFCC33] "></div>
+            <img
+              src={heroImg}
+              alt="heroImg"
+              className="w-[305px] h-[361px] sm:w-[420px] sm:h-auto lg:w-[585px] lg:h-[692px]"
+            />
+          </div>
+        </div>{" "}
       </div>
 
       {/* OPPOTUNITIES SECTION */}
@@ -165,10 +166,14 @@ const Careers = () => {
               support to unlock your potential.
             </p>
             <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex justify-start">
+              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex items-center justify-start">
                 Find opportunities
-                <span className="mt-[2px] ml-[6px]">
-                  <img src={arrow2} alt="-->" />
+                <span className="">
+                  <img
+                    src={arrow2}
+                    alt="-->"
+                    className="  sm:pt-[2px] ml-[6px]"
+                  />
                 </span>
               </p>
             </button>
@@ -188,7 +193,7 @@ const Careers = () => {
           <img
             src={benefitsBG2}
             alt="benefitsPerksBG"
-            className="sm:hidden w-[420px]"
+            className="sm:hidden w-[440px]"
           />
         </div>
         <div className="absolute top-[-40px] left-[25px]  lg:top-[-190px] lg:left-[56px] w-[215.37px] h-[240px] lg:w-[341px] lg:h-[380px] lg:z-10">
