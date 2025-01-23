@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   const [activeTab, setActiveTab] = useState(1)
+  const [tabName, setTabName] = useState("intro")
 
   const privacyRef = useRef(null);
   const { state } = useLocation();
@@ -12,6 +13,10 @@ const PrivacyPolicy = () => {
         privacyRef.current.scrollIntoView({ behavior: "smooth" });
       }
   }, [state]);
+
+  const handleClickedTab = (value) => { 
+    setTabName(value);
+  }
 
 
    const introductionRef = useRef(null);
@@ -25,6 +30,42 @@ const PrivacyPolicy = () => {
    const cookiesRef = useRef(null);
    const updatesRef = useRef(null);
    const contactRef = useRef(null);
+
+   useEffect(() => {
+    if (tabName === "intro" && introductionRef.current) {
+      introductionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "data" && dataCollectionRef.current) {
+      dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "personal" && personalRef.current) {
+      personalRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "purpose" && purposeRef.current) {
+      purposeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "sharing" && sharingRef.current) {
+      sharingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "storage" && storageRef.current) {
+      storageRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "security" && securityRef.current) {
+      securityRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "rights" && rightsRef.current) {
+      rightsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "cookies" && cookiesRef.current) {
+      cookiesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "updates" && updatesRef.current) {
+      updatesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [tabName]);
  
    useEffect(() => {
      const sectionRefs = [
@@ -65,46 +106,48 @@ const PrivacyPolicy = () => {
       <div className='bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:fixed lg:z-10 justify-center'>
           <p className='font-bold text-[#002244] font-grava text-[32px] lg:text-[75px] mt-[44px] lg:mt-[66px] '>Privacy Policy</p>
       </div>
+      
       <div className='flex flex-col lg:flex-row items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[364px] bg-[#fff] relative'>
         <div className='hidden lg:flex flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]'>
           <p className='font-medium font-grava text-[#546B82] '>Table of content:</p>
           <div className='flex flex-col gap-4'>
-            <div className={`${activeTab === 1 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("intro")} className={`${activeTab === 1 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Introduction</p>
             </div>
-            <div className={`${activeTab === 2 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("data")} className={`${activeTab === 2 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Data Collection</p>
             </div>
-            <div className={`${activeTab === 3 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("personal")} className={`${activeTab === 3 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Personal Data</p>
             </div>
-            <div className={`${activeTab === 4 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("purpose")} className={`${activeTab === 4 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Purpose of Data Use</p>
             </div>
-            <div className={`${activeTab === 5 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("sharing")} className={`${activeTab === 5 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Data Sharing and Disclosure</p>
             </div>
-            <div className={`${activeTab === 6 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("storage")}  className={`${activeTab === 6 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Data Storage and Retention</p>
             </div>
-            <div className={`${activeTab === 7 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("security")} className={`${activeTab === 7 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Data Security Measures</p>
             </div>
-            <div className={`${activeTab === 8 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("rights")} className={`${activeTab === 8 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Data Subject Rights </p>
             </div>
-            <div className={`${activeTab === 9 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("cookies")} className={`${activeTab === 9 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Use of Cookies</p>
             </div>
-            <div className={`${activeTab === 10 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("updates")} className={`${activeTab === 10 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Updates to the Policy</p>
             </div>
-            <div className={`${activeTab === 11 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""}  h-[48px] py-3 px-4`}>
+            <div onClick={() => handleClickedTab("contact")} className={`${activeTab === 11 ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg" : ""} cursor-pointer  h-[48px] py-3 px-4`}>
               <p className='font-grava text-[#546B82] text-base'>Contact us</p>
             </div>
           </div>
 
         </div>
+
         <div className='flex flex-col lg:flex-1 lg:overflow-y-auto lg:max-h-[calc(200vh-364px)] '>
 
           <div ref={introductionRef} className='flex gap-4 flex-col'>
