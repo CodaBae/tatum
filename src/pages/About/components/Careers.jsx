@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import heroImg from "../../../assets/svg/careersHeroImage.svg";
 import ball1 from "../../../assets/svg/ball1.svg";
 import ball2 from "../../../assets/svg/ball2.svg";
@@ -33,9 +33,44 @@ import verification from "../../../assets/svg/verification.svg";
 import ApplynowImg from "../../../assets/svg/ApplynowImg.svg";
 import Applynowimg2 from "../../../assets/svg/Applynowimg2.svg";
 import ApplynowCircle from "../../../assets/svg/ApplynowCircle.svg";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Careers = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const scrollableDivRef = useRef(null);
+
+  useEffect(() => {
+    let scrollInterval;
+
+    const handleResize = () => {
+      if (scrollInterval) {
+        clearInterval(scrollInterval);
+      }
+
+      if (window.innerWidth < 768) {
+        scrollInterval = setInterval(() => {
+          if (scrollableDivRef.current) {
+            scrollableDivRef.current.scrollBy({
+              left: 100,
+              behavior: "smooth",
+            });
+          }
+        }, 5000);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (scrollInterval) {
+        clearInterval(scrollInterval);
+      }
+    };
+  }, []);
 
   const scrollDiv = (scrollOffset) => {
     if (scrollableDivRef.current) {
@@ -75,13 +110,17 @@ const Careers = () => {
             Working with Tatum Bank is more than just a career; it’s meaningful
             work that improves the lives of millions of people.
           </p>
-          <button className="w-[190px] h-[44px] lg:w-[243.78px] lg:h-[58.99px] bg-[#002244]  rounded-tl-[8.53px] rounded-br-[8.53px] ">
-            <p className="font-grava font-[500] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#FFCC33] flex justify-center">
+          <button
+            className={`${
+              activeIndex === 2
+                ? "animate__animated animate__slow animate__fadeInUp"
+                : ""
+            } transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
+            type="button">
+            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
-              <span className="mt-[2px] ml-[6px]">
-                <img src={arrow} alt="-->" className="w-[20px] lg:w-[26px]" />
-              </span>
             </p>
+            <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
         <div className="absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
@@ -457,8 +496,14 @@ const Careers = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <button className="w-[302px] h-[48px] lg:w-[246px] lg:h-[64px] bg-[#ffffff] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] ">
-                    <p className="font-grava font-[500] text-[14px] lg:text-[16px] leading-[20px] tracking-[0.2%] text-[#002244] flex justify-center">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffffff] group hover:bg-[#002244] hover:border hover:border-[#ffffff] w-[302px] h-[48px] lg:w-[246px] lg:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center border-[1px] border-[#002244] `}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffffff]">
                       Search jobs
                     </p>
                   </button>
@@ -829,17 +874,18 @@ const Careers = () => {
                   future where banking meets ambition and expertise.
                 </p>
               </div>
-              <button className="w-[129px] h-[44px] lg:w-[161.59px] lg:h-[53px] bg-[#FFCC33]  rounded-tl-[8.53px] rounded-br-[8.53px] ">
-                <p className="font-grava font-[500] text-[14px] lg:text-[18px] tracking-[0.2%] text-[#002244]  flex justify-center ">
+
+              <button
+                className={`${
+                  activeIndex === 2
+                    ? "animate__animated animate__slow animate__fadeInUp"
+                    : ""
+                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[161px] sm:h-[53px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                type="button">
+                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
-                  <span>
-                    <img
-                      src={rightBlueArrow}
-                      alt="-->"
-                      className="w-[20px] h-[20px] lg:w-[25.59px] lg:h-[25.59px] pt-[3px] lg:pt-[5px] pl-[4px] "
-                    />
-                  </span>
                 </p>
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
             <div className=" relative w-[246px] h-[223px] lg:w-[248px] lg:h-[305.18px]">
