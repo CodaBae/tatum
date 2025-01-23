@@ -19,6 +19,7 @@ import Estate from "../pages/Private/components/Estate";
 import Investment from "../pages/Private/components/Investment";
 import Loan from "../pages/Private/components/Loan";
 import Custom from "../pages/Private/components/Custom";
+import Sitemap from "../pages/Sitemap";
 
 export default function Routers() {
   return (
@@ -42,6 +43,7 @@ export default function Routers() {
         <Route path="resources" element={<Resources />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="sitemap" element={<Sitemap />} />
       </Route>
     </Routes>
   );

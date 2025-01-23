@@ -138,17 +138,17 @@ const Footer = () => {
               <div className="flex flex-col gap-6">
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
-                  onClick={() => {navigate("/privacy-policy", {
+                  onClick={() => navigate("/privacy-policy", {
                     state: { section: "privacy" },
-                  }); window.scrollTo(0, 0)}}
+                  })}
                 >
                   Privacy policy
                 </p>
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
-                  onClick={() => {navigate("/terms", {
+                  onClick={() => navigate("/terms", {
                     state: { section: "terms" },
-                  }); window.scrollTo(0, 0)}}
+                  })}
                 >
                   Terms of service
                 </p>
@@ -174,7 +174,12 @@ const Footer = () => {
                 <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
                   Help Center
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/sitemap", {
+                    state: { section: "site" },
+                  })}
+                >
                   Sitemap
                 </p>
               </div>
