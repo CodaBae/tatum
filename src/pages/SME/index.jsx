@@ -48,7 +48,7 @@ const SME = () => {
         </div>
 
         <div className=" absolute w-[350px] top-[350px] left-[25px] sm:w-[622px] lg:top-[200px] lg:left-[56px] ">
-          <h1 className="font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
+          <h1 className="animate__animated animate__fadeInUp font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
             SME Banking
           </h1>
           <p className="font-grava font-[350] text-[14px] sm:text-[20px] leading-[20px] sm:leading-[27px] sm:w-[490px] lg:w-[622px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
@@ -57,13 +57,10 @@ const SME = () => {
             cheerleader, and advocate.
           </p>
           <button
-            className={`${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-            type="button">
-            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+            type="button"
+          >
+            <p className="animate__animated  animate__fadeInUp animate__slow transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
               Open an account
             </p>
             <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
@@ -96,10 +93,10 @@ const SME = () => {
               </div>
               <div className=" h-[31px] flex items-start">
                 <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                  <p className="font-grava group flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Get Started
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                    <span className="flex group-hover:ml-2 items-center">
+                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff]  ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -130,11 +127,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
+                <button className="group">
+                  <p className="font-grava group-hover:mr-2 flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
                     Learn More
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                    <span className="flex group-hover:ml-2 items-center">
+                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -167,11 +164,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Explore our financing plans
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                    <span className="flex items-center group-hover:ml-2">
+                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -204,11 +201,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group flex items-center ">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     View our insurance plans
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                    <span className="group-hover:ml-2 flex items-center">
+                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -237,11 +234,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group flex items-center">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Learn More
                     <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                      <FaArrowRightLong className="w-5 h-5 group-hover:ml-2 mt-[1px] transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>

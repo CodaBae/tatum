@@ -202,7 +202,7 @@ const Wealth = () => {
                     type='button'
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
-                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] mt-1' />
                 </button>
                 <button 
                     className='transition-all duration-300 ease-in-out group hover:bg-[#002244] cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'
@@ -263,7 +263,7 @@ const Wealth = () => {
                     </div>
                     <div className='flex items-center gap-2 w-full group cursor-pointer'>
                         <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Contact Us for a Personalized Plan</p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-[1px] group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -397,7 +397,7 @@ const Wealth = () => {
                     type='button'
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
-                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <FaArrowRightLong className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] mt-1' />
                 </button>
                 <button 
                     className='transition-all duration-300 ease-in-out group hover:bg-[#002244] cursor-pointer border border-[#8A99A9] w-full md:w-[165px] h-[55px] flex items-center justify-center'
