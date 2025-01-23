@@ -121,7 +121,7 @@ const AboutB = () => {
                     onClick={() => navigate("/about/teams", { state: { section: "teams" } })}
                 >
                     <p className="transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] font-medium text-[#002244] font-grava text-base">View our board of directors</p>
-                    <FaArrowRightLong  className="transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#002244]"/>
+                    <FaArrowRightLong className="mt-[2px] transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#002244]"/>
                 </button>
             </div>
             <div className="md:absolute md:bottom-0 md:right-0 -right-20">
