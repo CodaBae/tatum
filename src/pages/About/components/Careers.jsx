@@ -34,11 +34,21 @@ import ApplynowImg from "../../../assets/svg/ApplynowImg.svg";
 import Applynowimg2 from "../../../assets/svg/Applynowimg2.svg";
 import ApplynowCircle from "../../../assets/svg/ApplynowCircle.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 
 const Careers = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const scrollableDivRef = useRef(null);
+
+  const careersRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.section === "careers" && careersRef.current) {
+        careersRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [state]);
 
   useEffect(() => {
     let scrollInterval;
@@ -82,7 +92,7 @@ const Careers = () => {
   };
 
   return (
-    <div>
+    <div ref={careersRef}>
       {/* Hero section */}
 
       <div className="relative w-full h-[630px] lg:h-[713px]  overflow-hidden bg-[#FFCC33]">
@@ -102,28 +112,25 @@ const Careers = () => {
           className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[0px] top-[294px]"
         />
 
-        <div className="absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
+        <div className="animate__animated animate__fadeInUp absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
           <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
             Build Your Future with Us
           </h1>
-          <p className="font-grava font-[350] text-[14px] sm:text-[18px] leading-[20px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] pb-[25px]">
+          <p className="animate__animated  animate__fadeInUp animate__slow font-grava font-[350] text-[14px] sm:text-[18px] leading-[20px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] pb-[25px]">
             Working with Tatum Bank is more than just a career; it’s meaningful
             work that improves the lives of millions of people.
           </p>
           <button
-            className={`${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            } transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
-            type="button">
+            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
+            type="button"
+          >
             <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
             </p>
-            <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
+            <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
-        <div className="absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
+        <div className="animate__animated animate__zoomIn absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
           <img
             src={heroImg}
             alt="heroImg"
@@ -885,7 +892,7 @@ const Careers = () => {
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
             <div className=" relative w-[246px] h-[223px] lg:w-[248px] lg:h-[305.18px]">

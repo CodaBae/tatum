@@ -17,6 +17,8 @@ import Terms from "../pages/Terms";
 import Wealth from "../pages/Private/components/Wealth";
 import Estate from "../pages/Private/components/Estate";
 import Investment from "../pages/Private/components/Investment";
+import Loan from "../pages/Private/components/Loan";
+import Custom from "../pages/Private/components/Custom";
 
 export default function Routers() {
   return (
@@ -35,6 +37,8 @@ export default function Routers() {
         <Route path="private/wealth-management" element={<Wealth />} />
         <Route path="private/investement-advisory" element={<Investment />} />
         <Route path="private/estate-and-trust-planning" element={<Estate />} />
+        <Route path="private/personal-loans-and-credit" element={<Loan />} />
+        <Route path="private/custom-financial-solutions" element={<Custom />} />
         <Route path="resources" element={<Resources />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />

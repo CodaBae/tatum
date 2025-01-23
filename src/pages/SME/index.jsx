@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import smeHeroImg from "../../assets/jpg/smeHeroImg.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import whiteArrowIcon from "../../assets/svg/whiteArrowIcon.svg";
@@ -11,12 +11,30 @@ import smeCard3Icon from "../../assets/svg/smeCard3Icon.svg";
 import smeCard4Icon from "../../assets/svg/smeCard4Icon.svg";
 import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
+import { useLocation } from "react-router-dom";
 
 const SME = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const smeRef = useRef(null);
+  const paymentRef = useRef(null);
+  const faqRef = useRef(null);
+  const { state } = useLocation();
+
+  useEffect(() => {
+    if (state?.section === "sme" && smeRef.current) {
+      smeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "payment" && paymentRef.current) {
+      paymentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
+
   return (
-    <div>
+    <div ref={smeRef}>
       <div className="relative mt-[45px] overflow-hidden">
         <div className="relative h-[619px] lg:h-[715px]">
           <img
@@ -30,7 +48,7 @@ const SME = () => {
         </div>
 
         <div className=" absolute w-[350px] top-[350px] left-[25px] sm:w-[622px] lg:top-[200px] lg:left-[56px] ">
-          <h1 className="font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
+          <h1 className="animate__animated animate__fadeInUp font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
             SME Banking
           </h1>
           <p className="font-grava font-[350] text-[14px] sm:text-[20px] leading-[20px] sm:leading-[27px] sm:w-[490px] lg:w-[622px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
@@ -39,13 +57,9 @@ const SME = () => {
             cheerleader, and advocate.
           </p>
           <button
-            className={`${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
             type="button">
-            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+            <p className="animate__animated  animate__fadeInUp animate__slow transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
               Open an account
             </p>
             <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
@@ -55,7 +69,9 @@ const SME = () => {
 
       {/* CARDS */}
 
-      <div className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
+      <div
+        ref={paymentRef}
+        className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
         <div className="flex flex-col lg:flex-row gap-[20px] ">
           <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[429px]  sm:h-[524px] sm:rounded-[24px] overflow-hidden ">
             <img
@@ -80,10 +96,10 @@ const SME = () => {
               </div>
               <div className=" h-[31px] flex items-start">
                 <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                  <p className="font-grava group flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Get Started
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-4 sm:w-5 sm:h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px]  " />
+                    <span className="flex group-hover:ml-2 items-center">
+                      <FaArrowRightLong className="w-4 sm:w-5 sm:h-5 transition-colors duration-300 ease-in-out text-[#ffffff]  ml-[7px] mt-[2px] sm:mt-[5px]  " />
                     </span>
                   </p>
                 </button>
@@ -114,11 +130,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
+                <button className="group">
+                  <p className="font-grava group-hover:mr-2 flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
                     Learn More
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="m-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px] " />
+                    <span className="flex group-hover:ml-2 items-center">
+                      <FaArrowRightLong className="m-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] ml-[7px] mt-[2px] sm:mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -151,11 +167,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffcc33]">
+                <button className="group">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffcc33]">
                     Explore our financing plans
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffcc33] group-hover:text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px] " />
+                    <span className="flex items-center group-hover:ml-2">
+                      <FaArrowRightLong className="w-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -188,11 +204,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group flex items-center ">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     View our insurance plans
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                    <span className="group-hover:ml-2 flex items-center">
+                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -221,11 +237,11 @@ const SME = () => {
                 </p>
               </div>
               <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
+                <button className="group flex items-center">
+                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
                     Learn More
                     <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] group-hover:text-[#ffcc33] ml-[7px] mt-[5px] " />
+                      <FaArrowRightLong className="w-5 h-5 group-hover:ml-2 mt-[1px] transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
                     </span>
                   </p>
                 </button>
@@ -284,7 +300,9 @@ const SME = () => {
         </div>
       </div>
 
-      <div className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
+      <div
+        ref={faqRef}
+        className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
         <div className="flex flex-col items-center w-[350px] sm:w-[650px] lg:w-[878px] gap-[56px] ">
           <div className="flex justify-center">
             <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">

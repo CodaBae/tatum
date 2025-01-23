@@ -103,7 +103,12 @@ const Footer = () => {
                 >
                   Personal Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/sme", {
+                    state: { section: "sme" },
+                  })}
+                >
                   SME Banking
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
