@@ -97,7 +97,7 @@ const Wealth = () => {
             <p className='font-grava font-bold z-10 text-[#fff] text-[32px] lg:text-[75px] '>Wealth Management</p>
 
             <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
-                <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#fff] group-hover:mr-2' />
+                <MdKeyboardBackspace className='w-5 h-5 mt-[2px] text-[#fff] group-hover:mr-2' />
                 <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-300 group-hover:ml-2'>Go back</p>
             </div>
             <div 

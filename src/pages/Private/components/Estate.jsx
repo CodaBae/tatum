@@ -39,7 +39,7 @@ const Estate = () => {
         <p className='font-grava font-bold z-10 text-[#fff] text-center text-[32px] lg:text-[75px]'>Estate and Trust Planning</p>
               
         <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
-            <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#fff] group-hover:mr-2' />
+            <MdKeyboardBackspace className='w-5 h-5 mt-[2px] text-[#fff] group-hover:mr-2' />
             <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-300 group-hover:ml-2'>Go back</p>
         </div>
 
@@ -86,7 +86,7 @@ const Estate = () => {
             type='button'
           >
             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
-            <FaArrowRightLong className='mt-[1px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <FaArrowRightLong className='mt-[2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
 
