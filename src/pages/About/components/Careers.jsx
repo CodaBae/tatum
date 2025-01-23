@@ -137,7 +137,7 @@ const Careers = () => {
               className="w-[305px] h-[361px] sm:w-[420px] sm:h-auto lg:w-[585px] lg:h-[692px]"
             />
           </div>
-        </div>{" "}
+        </div>
       </div>
 
       {/* OPPOTUNITIES SECTION */}
