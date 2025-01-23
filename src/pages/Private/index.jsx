@@ -180,7 +180,7 @@ const Private = () => {
             className=' w-full h-[419px] lg:w-[429px] lg:h-[530px] rounded-[24px] p-5 flex relative'
           >
             <div className="absolute inset-0 w-full h-auto rounded-[24px] bg-[#0005]" />
-            <div className='flex flex-col gap-6 lg:gap-[32px] absolute bottom-5 z-10 w-[310px] lg:w-[389px]'>
+            <div className='flex flex-col gap-6 lg:gap-[32px] absolute bottom-5 z-10 w-[310px] lg:w-[90%]'> {/* lg:w-[389px] */}
               <div className='flex flex-col gap-2 lg:gap-4'>
                 <p className='font-medium font-grava text-[#fff] text-[20px] lg:text-[28px]'>Personal Loans and Credit</p>
                 <p className='text-[#fff] font-[350] font-grava text-base lg:text-[18px] '>
@@ -239,7 +239,7 @@ const Private = () => {
           className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[220px] lg:w-[277px] h-[44px] lg:h-[58px] rounded-tl-lg rounded-br-lg flex items-center justify-center p-4 gap-2'
         >
           <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Schedule a Consultation</p>
-          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-1' />
+          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-[2px]' />
         </button>
       </div>
 

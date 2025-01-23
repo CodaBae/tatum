@@ -53,16 +53,13 @@ const Personal = () => {
             rewarding.
           </p>
           <button
-            className={`${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-            type="button">
+            className={`animate__animated animate__slow animate__fadeInUp outline-none transition-all duration-300 ease-in-out bg-[#ffcc33] group  hover:bg-[#002244] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+            type="button"
+          >
             <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
               Open an Account
             </p>
-            <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+            <FaArrowRightLong className="w-5 h-5 mt-[2px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
           </button>
         </div>
       </div>
@@ -257,12 +254,12 @@ const Personal = () => {
                 activeIndex === 2
                   ? "animate__animated animate__slow animate__fadeInUp"
                   : ""
-              } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+              } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
               type="button">
               <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                 Open an Account
               </p>
-              <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+              <FaArrowRightLong className="w-5 h-5 mt-[2px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
             </button>
           </div>
         </div>
