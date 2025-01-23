@@ -32,7 +32,7 @@ const Personal = () => {
   }, [state]);
 
   return (
-    <div>
+    <div ref={personalRef}>
       <div className="relative overflow-hidden mt-[80px]">
         <div className="relative h-[619px] lg:h-[630px]">
           <img
@@ -262,7 +262,7 @@ const Personal = () => {
               <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                 Open an Account
               </p>
-              <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+              <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
             </button>
           </div>
         </div>

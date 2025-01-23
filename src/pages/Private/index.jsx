@@ -69,7 +69,7 @@ const Private = () => {
             </p>
           </div>
           <button
-            className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
+            className='transition-all duration-300 ease-in-out outline-none group hover:bg-[#002244] bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
           >
             <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Open an account</p>
             <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
@@ -188,7 +188,12 @@ const Private = () => {
                   From start to finish, we're here to help you succeed.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2 group  w-full'>
+              <div 
+                className='flex items-center cursor-pointer gap-2 group w-full'
+                onClick={() => navigate("/private/personal-loans-and-credit", {
+                  state: { section: "loan" } }
+                )}
+              >
                 <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Explore Flexible Loan Options</p>
                 <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
               </div>
@@ -206,7 +211,12 @@ const Private = () => {
                   your resources and, ultimately, achieving more.
                 </p>
               </div>
-              <div className='flex items-center cursor-pointer gap-2 group'>
+              <div 
+                className='flex items-center cursor-pointer gap-2 group'
+                onClick={() => navigate("/private/custom-financial-solutions", {
+                  state: { section: "custom" } }
+                )}
+              >
                 <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Start Now</p>
                 <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
               </div>
@@ -229,7 +239,7 @@ const Private = () => {
           className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[220px] lg:w-[277px] h-[44px] lg:h-[58px] rounded-tl-lg rounded-br-lg flex items-center justify-center p-4 gap-2'
         >
           <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Schedule a Consultation</p>
-          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
+          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-1' />
         </button>
       </div>
 
