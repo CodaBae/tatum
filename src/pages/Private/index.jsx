@@ -43,14 +43,14 @@ const Private = () => {
     setOpenTabThree(!openTabThree)
   }
 
-  // useEffect(() => {
-  //   if (state?.section === "private" && privateRef.current) {
-  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "faq" && faqRef.current) {
-  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+    if (state?.section === "private" && privateRef.current) {
+      privateRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div className='w-full' ref={privateRef}>
@@ -126,7 +126,7 @@ const Private = () => {
                   <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                     Your Wealth, Our <span className='block md:inline-block'>Expertise.</span> 
                   </p>
-                  <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                  <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                     At Tatum Bank, we go beyond banking—we curate personalized wealth growth strategies 
                     that align with your financial ambitions. Whether you seek investment diversification, 
                     estate planning, or asset protection, our seasoned advisors craft bespoke solutions that 
@@ -193,7 +193,7 @@ const Private = () => {
               <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                 More Than Banking. A Lifestyle.
               </p>
-              <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+              <p className="text-sm lm:text-[18px] font-grava font-[350] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
                 Our Private Banking clients enjoy a world of privileges, from preferential rates 
                 to VIP lifestyle benefits. Stay tuned for the launch of our exclusive suite of 
                 bespoke banking experiences, crafted just for you.
@@ -233,7 +233,7 @@ const Private = () => {
                   <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                     The Ultimate Symbol of Prestige
                   </p>
-                  <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                  <p className="text-sm lm:text-[18px] font-grava text-[#002244] font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                     Designed for the elite few, the Tatum Black Card is more than just a payment 
                     solution—it’s a statement of status and access to unparalleled privileges worldwide.
                   </p>
@@ -307,6 +307,20 @@ const Private = () => {
                 {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Unparalleled Service</p>
+                {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Discreet & Secure</p>
+                {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
             </div>
         </div>
       </div>
