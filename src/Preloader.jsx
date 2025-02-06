@@ -3,7 +3,7 @@ import "./Preloader.css";
 
 const Preloader = () => {
   return (
-    <body>
+    <body className='body'>
       <div className="preloader">
         <div className="container">
           <div className="static-text">We Keep You</div>
