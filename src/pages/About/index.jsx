@@ -79,7 +79,6 @@ const About = () => {
                             Welcome to <br /> <span className='font-bold'>Tatum Bank</span> 
                         </p>
                         <p 
-                            // 
                             className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             We are more than a financial institution—we are a trusted partner 
