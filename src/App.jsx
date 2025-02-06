@@ -8,10 +8,10 @@ import "./Preloader.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
-  // useEffect(() => {
-  //   AOS.init({
-  //     once: true,
-  //   });
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
 
     useEffect(() => {
       const timer = setTimeout(() => {
