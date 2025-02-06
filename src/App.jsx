@@ -13,21 +13,28 @@ function App() {
       once: true,
     });
 
+    // Reset loading state when component mounts
+    setIsLoading(true);
+    
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 8000);
-    
-    return () => clearTimeout(timer);
+    }, 8000); // Increased to 7.5s to account for unveil animation
+
+    return () => {
+      clearTimeout(timer);
+      // Reset AOS when component unmounts
+      AOS.refresh();
+    };
   }, []);
 
   return (
-    <>
-      {true ? (
+    <div className="app-container">
+      {isLoading ? (
         <Preloader />
       ) : (
         <Routers />
       )}
-    </>
+    </div>
   );
 }
 

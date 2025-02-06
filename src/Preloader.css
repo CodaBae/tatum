@@ -25,10 +25,13 @@
   .container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Added for horizontal centering */
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
     color: #002244;
+    width: 100%; /* Ensure full width for proper centering */
+    text-align: center; /* Center text alignment */
   }
   
   .static-text {
