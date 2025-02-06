@@ -52,4 +52,40 @@
   color: #16263a;
 } */
 
+/* .sticky-card {
+  transform-origin: top center;
+  will-change: transform, opacity;
+} */
+
+/* .sticky {
+  will-change: transform, opacity;
+  transform-origin: center top;
+} */
+
+/* .stacking-card {
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.95);
+  opacity: 0.8;
+  position: relative;
+}
+
+.stacking-card.active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+} */
+
+
+.stacking-card {
+  position: sticky;
+  transform-origin: center top;
+  will-change: transform, opacity;
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.stacking-card:not(.active) {
+  scale: 0.9; 
+  opacity: 0.6;
+  filter: brightness(0.8);
+}
 

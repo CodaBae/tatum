@@ -6,8 +6,6 @@ import { Autoplay, Pagination } from 'swiper/modules'; // Updated import
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import { InView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 
 import Forward from "../../../assets/svg/forward.svg"
 
@@ -31,56 +29,102 @@ import OfficeMan from "../../../assets/png/office-man.jpeg"
 import "./css/Wealth.css"
 
 const Wealth = () => {
-    const [visibleIndex, setVisibleIndex] = useState(0);
+    const [activeCard, setActiveCard] = useState(0);
+    const cardsRef = useRef([]);
 
     const wealthRef = useRef(null);
     const { state } = useLocation();
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const cardHeight = 600; // Approximate height of each card
-    const currentIndex = Math.floor(scrollPosition / cardHeight);
-    setVisibleIndex(currentIndex);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
     const navigate = useNavigate()
 
     const isTab = window.innerWidth < 1028;
     const isMobile = window.innerWidth < 768;  
+    
+    
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//         (entries) => {
+//           entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//               const index = cardsRef.current.indexOf(entry.target);
+//               setActiveCard(Math.min(index, cardsRef.current.length - 1));
+//             }
+//           });
+//         },
+//         { 
+//           threshold: 0.4,
+//           rootMargin: '0px 0px -30% 0px' 
+//         }
+//       )
+
+//     cardsRef.current.forEach(card => {
+//       if (card) observer.observe(card);
+//     });
+
+//         return () => observer.disconnect();
+//     }, []);
+
+    // Helper function to assign refs
+    
+    useEffect(() => {
+        const handleScroll = () => {
+          cardsRef.current.forEach((card, index) => {
+            if (!card) return;
+            
+            const cardTop = card.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            const progress = Math.min(1, Math.max(0, (windowHeight - cardTop) / windowHeight));
+            
+            const scale = 1 - (0.1 * (cardsData.length - 1 - index)) * progress;
+            const brightness = 1 - (0.4 * (cardsData.length - 1 - index)) * progress;
+            
+            // card.style.transform = `scale(${scale})`;
+            // card.style.filter = `brightness(${brightness})`;
+          });
+        };
       
-    const cardRef = useRef(null);
-    const cardInnerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!cardRef.current || !cardInnerRef.current) return;
-
-      const cardRect = cardRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const percentageY = Math.min(Math.max((windowHeight - cardRect.top) / windowHeight, 0), 1);
-
-      // Adjust scale and brightness
-      const scale = 1 - percentageY * 0.1;
-      const brightness = 1 - percentageY * 0.4;
-
-      cardInnerRef.current.style.transform = `scale(${scale})`;
-      cardInnerRef.current.style.filter = `brightness(${brightness})`;
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+    
+    
+    const addToRefs = (el) => {
+        if (el && !cardsRef.current.includes(el)) {
+        cardsRef.current.push(el);
+        }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-    
     useEffect(() => {
       if (state?.section === "wealth" && wealthRef.current) {
         wealthRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }, [state]);
+
+    const cardsData = [
+        {
+            title: "Personalized Investment Management",
+            content: `Achieve your financial targets with our personalized investment management solutions. 
+                We guide you with expert portfolio construction, strategic asset allocation, and diversified 
+                approaches to maximize your returns.`,
+            navTitle: "Schedule a Free Consultation",
+            img: File
+        },
+        {
+            title: "Plan for a Comfortable Retirement",
+            content: `We help you create and implement strategies to build a robust retirement plan, 
+                    accumulate wealth, and save more than enough to fund a fulfilling life after work.`,
+            navTitle: "Contact Us for a Personalized Plan",
+            img: File
+        },
+        {
+            title: "Plan for a Comfortable Retirement",
+            content: `We help you create and implement strategies to build a robust retirement plan, 
+                    accumulate wealth, and save more than enough to fund a fulfilling life after work.`,
+            navTitle: "Contact Us for a Personalized Plan",
+            img: File
+        },
+    ]
 
   return (
     <div className="w-full mb-[56px] lg:mb-[194px]" ref={wealthRef}>
@@ -119,7 +163,7 @@ const Wealth = () => {
                     Private
                 </p>
                 <img src={Forward} alt="forward" className=""/>
-                <p className="font-[350] font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px]">Wealth management</p>
+                <p className="font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px]">Wealth management</p>
             </div>
         </div>
 
@@ -214,14 +258,13 @@ const Wealth = () => {
 
         </div>
 
-        <div 
+                    {/* Stacking Cards */}
+        {/* <div 
             className='w-full pt-[56px] md:pt-[80px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] grid grid-cols-1 gap-[100px]'
-        //     style={{
-        //         gridTemplateRows: 'repeat(6, 1fr)',
-        //     }}
         >
             <div 
-                className='flex sticky top-[calc(8%+var(0rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]'
+                ref={addToRefs} 
+                className={`stacking-card ${activeCard === 0 ? "active" : ""} flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
             >
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
@@ -247,7 +290,190 @@ const Wealth = () => {
                 </div>
             </div>
 
-            <div className='flex sticky top-[calc(8%+var(2.25rem))] flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-[710px] md:h-[410px] lg:h-[510px]'>
+            <div 
+                ref={addToRefs}
+                className={`sticky top-4 transition-all duration-300 ${
+                    activeCard === 1 ? 'z-[60] scale-100' : 'z-[50] scale-95 opacity-90'
+                } flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Plan for a Comfortable Retirement
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            We help you create and implement strategies to build a robust retirement plan, 
+                            accumulate wealth, and save more than enough to fund a fulfilling life after work.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={Gold} alt='File' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 w-full group cursor-pointer'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Contact Us for a Personalized Plan</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-[1px] group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={Gold} alt='Gold' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+            <div 
+                ref={addToRefs}
+                className={`sticky top-4 transition-all duration-300 ${
+                    activeCard === 2 ? 'z-[60] scale-100' : 'z-[50] scale-95 opacity-90'
+                } flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Strategic Tax Planning for Smarter Investments
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            Keep more of your hard-earned money. 
+                            Get the help you need to optimize your investments for tax efficiency through 
+                            strategies like tax-loss harvesting and maximizing eligible deductions.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={Report} alt='Report' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Request a Portfolio Review</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={Report} alt='Report' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+            <div 
+                ref={addToRefs}
+                className={`sticky top-4 transition-all duration-300 ${
+                    activeCard === 3 ? 'z-[60] scale-100' : 'z-[50] scale-95 opacity-90'
+                } flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Smart Risk Management for a Worry-Free Life
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            Be prepared. Protect what matters most with comprehensive risk management 
+                            and insurance solutions for life, health, disability, and long-term care.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={Settings} alt='Settings' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 w-full group cursor-pointer '>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Get a Free Insurance Quote</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='5/12 hidden md:flex justify-end'>
+                    <img src={Settings} alt='Settings' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+            <div 
+                ref={addToRefs}
+                className={`sticky top-4 transition-all duration-300 ${
+                    activeCard === 4 ? 'z-[60] scale-100' : 'z-[50] scale-95 opacity-90'
+                } flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
+                // className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F0FBFF] w-full rounded-[24px] h-[698px] md:h-[410px] lg:h-[510px]'
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Comprehensive Asset Protection and Distribution
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            Plan for the future with comprehensive Estate Planning services. 
+                            We help you distribute your assets thoughtfully and create a personalized plan, 
+                            including wills, trusts, and charitable giving strategies, to protect your assets 
+                            and facilitate a smooth transition.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={House} alt='House' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Download Our Estate Planning Guide</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={House} alt='House' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+            <div 
+                ref={addToRefs}
+                className={`sticky top-4 transition-all duration-300 ${
+                    activeCard === 5 ? 'z-[60] scale-100' : 'z-[50] scale-95 opacity-90'
+                } flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]`}
+                // className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#ECFDF3] w-full rounded-[24px] h-[698px] md:h-[410px] lg:h-[510px]'
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Expert Support for Budgeting and Financial Growth
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            Get access to a personal account manager and a comprehensive set of tools 
+                            to help you manage your day-to-day finances, including budgeting and cash 
+                            flow optimization for wealth preservation.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={Growth} alt='Growth' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 w-full cursor-pointer group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Learn more</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={Growth} alt='Growth' className='md:w-[198px] lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+        </div> */}
+
+<div 
+            className='w-full pt-[56px] md:pt-[80px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] grid grid-cols-1 gap-[100px]'
+        >
+            <div 
+                className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#F6F6FD] w-full rounded-[24px] h-[730px] md:h-[410px] lg:h-[510px]'
+            >
+                <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
+                    <div className='flex flex-col gap-[26px]'>
+                        <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                            Personalized Investment Management
+                        </p>
+                        <p className='text-[#546B82] font-[350] font-grava text-base md:text-[20px] leading-[24px] lg:leading-[30px] '>
+                            Achieve your financial targets with our personalized investment management solutions. 
+                            We guide you with expert portfolio construction, strategic asset allocation, and 
+                            diversified approaches to maximize your returns.
+                        </p>
+                    </div>
+                    <div className='flex md:hidden'>
+                        <img src={File} alt='File' className='w-[198px] mx-auto' />
+                    </div>
+                    <div className='flex items-center gap-2 cursor-pointer w-full group'>
+                        <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>Schedule a Free Consultation</p>
+                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    </div>
+                </div>
+                <div className='w-5/12 hidden md:flex justify-end'>
+                    <img src={File} alt='File' className='md:w-[198px] m lm:w-[241px] lm:h-[366px]' />
+                </div>
+            </div>
+
+            <div className='flex flex-col md:flex-row justify-between px-5 py-[32px] lg:py-[48px] lg:pl-[48px] lg:pr-[120px] items-center bg-[#FFFAEB] w-full rounded-[24px] h-[710px] md:h-[410px] lg:h-[510px]'>
                 <div className='w-full md:w-7/12 flex flex-col gap-[60px] lg:gap-[118px]'>
                     <div className='flex flex-col gap-[26px]'>
                         <p className='text-[#002244] font-medium font-grava text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -374,7 +600,11 @@ const Wealth = () => {
         </div>
 
 
-        <div className='flex flex-col items-center justify-center gap-[32px] lg:gap-[56px] w-full px-5 lg:px-[56px] '>
+        <div 
+            data-aos="fade-up" 
+            data-aos-duration="3000" 
+            className='flex flex-col items-center justify-center gap-[32px] lg:gap-[56px] w-full px-5 lg:px-[56px]'
+        >
             <p className='text-[#002244] font-grava font-medium text-[24px] lg:text-[48px]'>Get Started in 3 Easy Steps</p>
             <div className='w-full flex flex-col md:flex-row item-center gap-5'>
                 <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px] h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
@@ -387,7 +617,6 @@ const Wealth = () => {
                 </div>
                 <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px] h-[270px]  rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
                     <img src={Three} alt='Three' className='w-[50px]' />
-                    {/* <p className='font-[900] font-grava text-[112px] text-[#E6E9EC]'>3</p> */}
                     <p className='font-grava font-medium tracking-wide text-center text-base lg:text-[20px] text-[#8A99A9]'>Connect with Your Personal Account Manager</p>
                 </div>
             </div>

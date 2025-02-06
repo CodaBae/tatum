@@ -41,41 +41,17 @@ const Private = () => {
     setOpenTabThree(!openTabThree)
   }
 
-  useEffect(() => {
-    if (state?.section === "private" && privateRef.current) {
-      privateRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "private" && privateRef.current) {
+  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   return (
     <div className='w-full' ref={privateRef}>
-      <div 
-        style={{
-          backgroundImage: `url(${Bg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
-        className='h-[683px] lg:h-[723px] flex w-full flex-col bg-[#ccc] px-5 lg:px-[56px] py-[320px] relative'
-      >
-        <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
-        <div className='flex flex-col md:w-[400px] lg:w-[622px] absolute bottom-0 lg:relative z-10 h-[237px] gap-6'>
-          <div className='flex flex-col gap-2 lg:gap-4'>
-            <p className='font-grava text-[#fff] font-bold text-[32px] lg:text-[75px] leading-[40px] leading-[78px]'>Private Banking</p>
-            <p className='font-grava text-[#fff] font-[350] text-sm leading-[20px] lg:text-[24px] lg:leading-[30px] '>
-              We cater to your unique needs and turn your achievements into a long-lasting legacy.
-            </p>
-          </div>
-          <button
-            className='transition-all duration-300 ease-in-out outline-none group hover:bg-[#002244] bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
-          >
-            <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Open an account</p>
-            <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
-          </button>
-        </div>
-      </div>
 
       <div className='w-full px-5 lg:px-[56px] flex flex-col items-center  gap-5 py-[56px] lg:pt-[120px] lg:pb-[112px]'>
         <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-5'>
@@ -248,7 +224,15 @@ const Private = () => {
         <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
       </div>
 
-      <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
+
+    </div>
+  )
+}
+
+export default Private
+
+
+{/* <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
           <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
 
@@ -285,10 +269,4 @@ const Private = () => {
           </div>
         </div>
 
-      </div>
-
-    </div>
-  )
-}
-
-export default Private
+      </div> */}
