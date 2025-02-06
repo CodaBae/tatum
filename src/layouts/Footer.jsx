@@ -25,10 +25,10 @@ const Footer = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="flex w-full h-[270px] lg:h-[374px] flex flex-col items-center justify-center">
-        <div className="lg:w-[521px] lg:h-[232px] flex flex-col items-center gap-[32px]">
+        className="flex w-full h-[270px] lg:h-[374px] flex-col items-center justify-center">
+        <div className="lg:w-[664px] lg:h-[232px] flex flex-col items-center gap-[32px]">
           <p className="font-grava text-[28px] lg:text-[56px] font-medium text-center leading-[35px] lg:leading-[70px] text-[#002244]">
-            Stay smiling, open an account today.
+            Stay smiling. <br /> Open an account today! 
           </p>
           <button
             className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg"
