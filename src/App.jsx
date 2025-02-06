@@ -1,24 +1,60 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 import Routers from "./routers";
+import "./App.css";
+import "./Preloader.css";
+
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({
-      once: true, // Ensures animations occur only once
-  });
-  }, []);
+      once: true,
+    });
+  }); // Runs once when the component mounts
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []); // Runs once when the component mounts
 
   return (
-    <>
-      <Routers />
-    </>
+    <div className="app-container">
+      {isLoading && (
+        <div className="preloader">
+          <div className="container">
+            <div className="static-text">We Keep You</div>
+            <div className="rolling-text">
+              <span>Winning</span>
+              <span>Thriving</span>
+              <span>Believing</span>
+              <span>Achieving</span>
+              <span>Growing</span>
+              <span>Flourishing</span>
+              <span>Succeeding</span>
+              <span>Excelling</span>
+              <span>Advancing</span>
+              <span>Prospering</span>
+              <span className="emphasis">Smiling.</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="unveil-container">
+        <div className="unveil-section unveil-top-left"></div>
+        <div className="unveil-section unveil-top-right"></div>
+        <div className="unveil-section unveil-bottom-left"></div>
+        <div className="unveil-section unveil-bottom-right"></div>
+      </div>
+
+      {!isLoading && <Routers />}
+    </div>
   );
 }
 
