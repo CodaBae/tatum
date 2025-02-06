@@ -1,139 +1,105 @@
-/* Preloader Styling */
-.body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    overflow: hidden;
-}
+/* General Styles */
 .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://res.cloudinary.com/code-idea/image/upload/v1738850988/Screenshot_2025-02-06_at_14.07.41_mkcf9e.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
   }
   
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Added for horizontal centering */
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-style: italic;
-    color: #002244;
-    width: 100%; /* Ensure full width for proper centering */
-    text-align: center; /* Center text alignment */
+    text-align: center;
   }
   
   .static-text {
-    margin-right: 15px;
-    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: bold;
   }
   
   .rolling-text {
-    height: 1.15em;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    bottom: 0px;
-    color: #002244;
-  }
-  
-  .emphasis {
-    color: #FFCC33 !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
   
   .rolling-text span {
-    display: block;
-    animation: fastLoop 2s cubic-bezier(0.7, 0, 0.3, 1) infinite, 
-               slowStop 6s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
+    opacity: 0;
+    animation: rollText 12s infinite;
   }
   
-  @keyframes fastLoop {
-    0% { transform: translateY(0); }
-    10% { transform: translateY(-100%); }
-    20% { transform: translateY(-200%); }
-    30% { transform: translateY(-300%); }
-    40% { transform: translateY(-400%); }
-    50% { transform: translateY(-500%); }
-    60% { transform: translateY(-600%); }
-    70% { transform: translateY(-700%); }
-    80% { transform: translateY(-800%); }
-    90% { transform: translateY(-900%); }
-    100% { transform: translateY(0); }
+  .rolling-text .emphasis {
+    font-size: 2rem;
+    font-weight: 700;
   }
   
-  @keyframes slowStop {
-    0% { transform: translateY(0); }
-    90% { transform: translateY(-1000%); }
-    100% { transform: translateY(-1000%); }
-  }
-  
-  .unveil-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    pointer-events: none;
-  }
-  
-  .unveil-section {
-    position: absolute;
-    background-color: #fff;
-    animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 6s forwards;
-  }
-  
-  .unveil-top-left {
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    transform-origin: top left;
-  }
-  
-  .unveil-top-right {
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-    transform-origin: top right;
-  }
-  
-  .unveil-bottom-left {
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    transform-origin: bottom left;
-  }
-  
-  .unveil-bottom-right {
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-    transform-origin: bottom right;
-  }
-  
-  @keyframes unveilQuadrant {
-    0% {
-      transform: scale(1);
+  @keyframes rollText {
+    0%, 10% {
       opacity: 1;
     }
-    100% {
-      transform: scale(0);
+    20%, 90% {
       opacity: 0;
     }
   }
+  
+  .unveil-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    z-index: -1;
+  }
+  
+  .unveil-section {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 6s forwards;
+  }
+  
+  @keyframes unveilQuadrant {
+    0% { width: 0; height: 0; }
+    100% { width: 100%; height: 100%; }
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .static-text {
+      font-size: 1.5rem;
+    }
+  
+    .rolling-text {
+      font-size: 1rem;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+  
+    .unveil-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  
+    .unveil-section {
+      animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 3s forwards;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .static-text {
+      font-size: 1.2rem;
+    }
+  
+    .rolling-text {
+      font-size: 0.9rem;
+    }
+  }
+  
