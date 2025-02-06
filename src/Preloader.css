@@ -137,36 +137,148 @@
       opacity: 0;
     }
   }
+  .body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
 
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://res.cloudinary.com/code-idea/image/upload/v1738850988/Screenshot_2025-02-06_at_14.07.41_mkcf9e.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+    font-weight: bold;
+    font-style: italic;
+    color: #002244;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px; /* Add padding for mobile */
+    flex-wrap: wrap; /* Allow wrapping on mobile */
+}
+
+.static-text {
+    margin-right: 15px;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.rolling-text {
+    height: 1.15em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    color: #002244;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack vertically on mobile */
+        line-height: 1.3;
+    }
+
     .static-text {
-      font-size: 1.5rem;
+        margin-right: 0;
+        margin-bottom: 10px;
+        white-space: normal; /* Allow text wrapping */
+        text-align: center;
     }
-  
+
     .rolling-text {
-      font-size: 1rem;
-      flex-direction: column;
-      gap: 0.2rem;
+        height: auto;
+        min-height: 1.15em;
     }
-  
-    .unveil-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
-  
+
     .unveil-section {
-      animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 3s forwards;
+        animation-duration: 1.2s; /* Slightly faster animation on mobile */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
+    .container {
+        font-size: clamp(1.2rem, 5vw, 1.5rem); /* Smaller font size */
+        padding: 0 10px;
+    }
+
     .static-text {
-      font-size: 1.2rem;
+        margin-bottom: 8px;
     }
-  
-    .rolling-text {
-      font-size: 0.9rem;
+
+    .rolling-text span {
+        animation: fastLoopMobile 1.8s cubic-bezier(0.7, 0, 0.3, 1) infinite, 
+                slowStopMobile 5s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
     }
-  }
-  
+}
+
+/* Animation Adjustments for Mobile */
+@keyframes fastLoopMobile {
+    0% { transform: translateY(0); }
+    12.5% { transform: translateY(-100%); }
+    25% { transform: translateY(-200%); }
+    37.5% { transform: translateY(-300%); }
+    50% { transform: translateY(-400%); }
+    62.5% { transform: translateY(-500%); }
+    75% { transform: translateY(-600%); }
+    87.5% { transform: translateY(-700%); }
+    100% { transform: translateY(-800%); }
+}
+
+@keyframes slowStopMobile {
+    0% { transform: translateY(0); }
+    90% { transform: translateY(-800%); }
+    100% { transform: translateY(-800%); }
+}
+
+/* Rest of your existing CSS remains the same */
+.emphasis {
+    color: #FFCC33 !important;
+}
+
+.unveil-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001; /* Higher than preloader */
+    pointer-events: none;
+}
+
+.unveil-section {
+    position: absolute;
+    background-color: #fff;
+    animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 6s forwards;
+}
+
+@keyframes unveilQuadrant {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
