@@ -18,7 +18,7 @@ function App() {
     
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 8000); // Increased to 7.5s to account for unveil animation
+    }, 10000); // Increased to 7.5s to account for unveil animation
 
     return () => {
       clearTimeout(timer);
