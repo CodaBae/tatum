@@ -427,9 +427,9 @@ const Corporate = () => {
             <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabFour}>
               <div className='flex items-center justify-between'>
                 <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Reliable Support</p>
-                {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                {openTabFour ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-              {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Our dedicated corporate banking team is always available to support you.</p>}
+              {openTabFour && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Our dedicated corporate banking team is always available to support you.</p>}
             </div>
         </div>
       </div>
