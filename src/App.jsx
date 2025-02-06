@@ -2,38 +2,58 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Routers from "./routers";
-import Preloader from './Preloader';
 import "./App.css";
+import "./Preloader.css";
+
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true)
+  // useEffect(() => {
+  //   AOS.init({
+  //     once: true,
+  //   });
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-
-    // Reset loading state when component mounts
-    setIsLoading(true);
-    
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 8000); // Increased to 7.5s to account for unveil animation
-
-    return () => {
-      clearTimeout(timer);
-      // Reset AOS when component unmounts
-      AOS.refresh();
-    };
-  }, []);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsLoading(false)
+      }, 6000)
+      return () => clearTimeout(timer)
+    }, [])
 
   return (
     <div className="app-container">
-      {isLoading ? (
-        <Preloader />
-      ) : (
-        <Routers />
+      {isLoading && (
+        <div className="preloader">
+          <div className="container">
+            <div className="static-text">We Keep You</div>
+            <div className="rolling-text">
+              <span>Winning</span>
+              <span>Thriving</span>
+              <span>Believing</span>
+              <span>Achieving</span>
+              <span>Growing</span>
+              <span>Flourishing</span>
+              <span>Succeeding</span>
+              <span>Excelling</span>
+              <span>Advancing</span>
+              <span>Prospering</span> 
+              <span className="emphasis">Smiling.</span>
+            </div>
+          </div>
+        </div>
       )}
+       <div className="unveil-container">
+        <div className="unveil-section unveil-top-left"></div>
+        <div className="unveil-section unveil-top-right"></div>
+        <div className="unveil-section unveil-bottom-left"></div>
+        <div className="unveil-section unveil-bottom-right"></div>
+      </div>
+
+      {!isLoading && (
+           <Routers />
+      )}
+
+     
     </div>
   );
 }
