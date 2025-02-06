@@ -1,20 +1,50 @@
 import { useEffect, useRef, useState } from "react";
-import smeHeroImg from "../../assets/jpg/smeHeroImg.jpg";
+import smeHeroImg from "../../assets/svg/smeHeroImg.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
-import whiteArrowIcon from "../../assets/svg/whiteArrowIcon.svg";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import line from "../../assets/svg/line.svg";
 import smeCard1 from "../../assets/jpg/smeCard1.jpg";
-import smeCard2 from "../../assets/svg/smeCard2.svg";
-import smeCard3 from "../../assets/jpg/smeCard3.jpg";
+import smeCard2 from "../../assets/jpg/smeCard2.jpg";
 import smeCard5 from "../../assets/jpg/smeCard5.jpg";
-import smeCard2Icon from "../../assets/svg/smeCard2Icon.svg";
-import smeCard3Icon from "../../assets/svg/smeCard3Icon.svg";
-import smeCard4Icon from "../../assets/svg/smeCard4Icon.svg";
+import LoanImg from "../../assets/svg/LoanImg.svg";
+import goodMark from "../../assets/svg/goodMark.svg";
+import AdvisoryImg from "../../assets/svg/AdvisoryImg.svg";
+import SmeVector from "../../assets/svg/SmeVector.svg";
+import scrollImg1 from "../../assets/jpg/scrollImg1.jpg";
+import scrollImg2 from "../../assets/jpg/scrollImg2.jpg";
+import scrollImg3 from "../../assets/jpg/scrollImg3.jpg";
+import scrollImg4 from "../../assets/jpg/scrollImg4.jpg";
+
 import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
 import { useLocation } from "react-router-dom";
+import cbn from "../../assets/svg/cbn.svg";
+import ndic from "../../assets/svg/ndic.svg";
+import ball1 from "../../assets/svg/ball1.svg";
+import ball2 from "../../assets/svg/ball2.svg";
+import ball3 from "../../assets/svg/ball3.svg";
+import "./styles.css";
 
 const SME = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const [loanAmount, setLoanAmount] = useState(100000);
+
+  const [repayPeriod, setRepayPeriod] = useState(3);
+
+  const [interest, setInterest] = useState(4);
+
+  const handleChange = (e) => {
+    setLoanAmount(Number(e.target.value));
+  };
+
+  const handleRepayChange = (e) => {
+    setRepayPeriod(Number(e.target.value));
+  };
+
+  const handleInterest = (e) => {
+    setInterest(Number(e.target.value));
+  };
 
   const smeRef = useRef(null);
   const paymentRef = useRef(null);
@@ -35,35 +65,108 @@ const SME = () => {
 
   return (
     <div ref={smeRef}>
-      <div className="relative mt-[45px] overflow-hidden">
-        <div className="relative h-[619px] lg:h-[715px]">
+      <div className="relative mt-[20px] overflow-hidden">
+        <div className="relative h-[732px] lg:h-[694px] bg-[#FFCC33]">
           <img
             src={smeHeroImg}
-            alt="heroImg"
-            className="w-full h-full object-cover"
+            alt=""
+            className="absolute w-[273.7px] h-[321.13px] sm:w-[410.55px] sm:h-[481.7px] top-[410px] sm:top-[250px] right-[10px] lg:w-[513px] lg:h-[602px] lg:top-[95px] sm:right-0 z-10"
           />
-          <div className="absolute inset-0 bg-black opacity-[0.2] pointer-events-none"></div>
 
-          <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
-        </div>
+          <img
+            src={ball1}
+            alt="ball"
+            className="absolute w-[220px] h-[220px] lg:w-[479px] lg:h-[480px] left-[-10px] top-[280px] lg:left-[-100px] lg:top-[180px] "
+          />
+          <img
+            src={ball2}
+            alt="ball"
+            className="absolute w-[64px] h-[64px] lg:w-[136px] lg:h-[136px] left-[255px] top-[100px] lg:left-[921px] lg:top-[180px] "
+          />
+          <img
+            src={ball3}
+            alt="ball"
+            className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[-130px] top-[20px]"
+          />
 
-        <div className=" absolute w-[350px] top-[350px] left-[25px] sm:w-[622px] lg:top-[200px] lg:left-[56px] ">
-          <h1 className="animate__animated animate__fadeInUp font-grava font-[700] w-[350px] sm:w-[622px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#ffffff] pb-[12.5px] lg:pb-[25px]">
-            SME Banking
-          </h1>
-          <p className="font-grava font-[350] text-[14px] sm:text-[20px] leading-[20px] sm:leading-[27px] sm:w-[490px] lg:w-[622px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#ffffff] pb-[25px]">
-            At Tatum Bank, we understand the courage it takes to build a
-            business from the ground up. That’s why we’re here as your partner,
-            cheerleader, and advocate.
-          </p>
-          <button
-            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[174px] h-[44px]  lg:w-[223px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-            type="button">
-            <p className="animate__animated  animate__fadeInUp animate__slow transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-              Open an account
+          <img
+            src={ball2}
+            alt="ball"
+            className="absolute w-[64px] h-[64px] lg:w-[80px] lg:h-[80px] left-[255px] top-[100px] lg:left-[683px] lg:top-[500px] "
+          />
+
+          <div
+            className="absolute 
+             top-[64px] left-[20px] w-[350px]
+             sm:top-[140px] sm:left-[40px] sm:w-[622px]
+             lg:top-[250px] lg:left-[56px] lg:w-[873px]">
+            <h1
+              className="animate__animated animate__fadeInUp font-grava font-[500]
+               w-[350px] sm:w-[622px] lg:w-[873px]
+               text-[32px] sm:text-[50px] lg:text-[75px]
+               leading-[40px] sm:leading-[60px] lg:leading-[78.75px]
+               tracking-[0.02%] sm:tracking-[0.03%] lg:tracking-[0.05%]
+               text-[#002244] pb-[12.5px] lg:pb-[25px]">
+              Powering Your Business, <br />
+              <span
+                className="font-[700]
+                 w-[350px] sm:w-[622px] lg:w-[873px]
+                 text-[32px] sm:text-[50px] lg:text-[75px]
+                 leading-[40px] sm:leading-[60px] lg:leading-[78.75px]
+                 tracking-[0.02%] sm:tracking-[0.03%] lg:tracking-[0.05%]
+                 text-[#002244] pb-[12.5px] lg:pb-[25px]">
+                Supporting Your Dreams
+              </span>
+            </h1>
+
+            <p
+              className="font-grava font-[350]
+               text-[14px] sm:text-[20px] lg:text-[24px]
+               leading-[20px] sm:leading-[27px] lg:leading-[30px]
+               sm:w-[490px] lg:w-[873px]
+               tracking-[0.2%] lg:tracking-[1.4%]
+               text-[#002244] pb-[25px]">
+              At Tatum Bank, we go beyond banking; we partner with you to unlock
+              opportunities, drive growth, and ensure your success.
             </p>
-            <FaArrowRightLong className="w-5 h-5 mt-[2px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
-          </button>
+
+            <button
+              type="button"
+              className="animate__animated animate__slow animate__fadeInUp 
+               transition-all duration-300 ease-in-out 
+               bg-[#002244] group hover:bg-[#ffffff]
+               w-[224px] sm:w-[260px] lg:w-[287px]
+               h-[44px] sm:h-[50px] lg:h-[59px]
+               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center">
+              <p
+                className="animate__animated animate__fadeInUp animate__slow 
+                 transition-colors duration-300 ease-in-out 
+                 font-medium text-sm lg:text-base font-grava 
+                 text-[#FFCC33] group-hover:text-[#002244]">
+                Open a business account
+              </p>
+              <FaArrowRightLong
+                className="w-5 h-5 mt-[2px] 
+                 transition-colors duration-300 ease-in-out 
+                 text-[#FFCC33] group-hover:text-[#002244]"
+              />
+            </button>
+          </div>
+
+          <div className="hidden lg:flex absolute top-[612px] left-[56px] gap-[10px] w-[100%]">
+            <div className="flex w-[168px]">
+              <p className="font-grava font-[350] w-[200px] text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[16px] lg:leading-[20px] lg:tracking-[0.2%] text-[#002244]">
+                We are licensed by
+              </p>
+              <img src={cbn} alt="" className="w-[21px] h-[28px] " />
+            </div>
+            <div className="flex w-[100%] ">
+              <p className="font-grava font-[350] pr-[10px]  text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[16px] lg:leading-[20px] lg:tracking-[0.2%] text-[#002244]">
+                Deposit insured by
+              </p>
+              <img src={ndic} alt="" className=" w-[60.4px] h-[26.5px]" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -71,277 +174,845 @@ const SME = () => {
 
       <div
         ref={paymentRef}
-        className="flex flex-col items-center gap-[20px] mt-[80px] mb-[80px] ">
-        <div className="flex flex-col lg:flex-row gap-[20px] ">
-          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[429px]  sm:h-[524px] sm:rounded-[24px] overflow-hidden ">
-            <img
-              src={smeCard1}
-              alt="smeCard1"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
-
-            <div className="absolute w-[389px] h-[249px] top-[118px] left-[20px] sm:top-[251px] sm:left-[20px] flex flex-col gap-[24px] sm:justify-between">
-              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
-                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#ffffff]  ">
-                  Business Accounts
-                </h1>
-                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
-                  Build your business on a solid foundation with our SME
-                  accounts. We help keep your business moving with a reliable
-                  payment solution that works everywhere and is designed to make
-                  daily operations smoother.
-                </p>
-              </div>
-              <div className=" h-[31px] flex items-start">
-                <button>
-                  <p className="font-grava group flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
-                    Get Started
-                    <span className="flex group-hover:ml-2 items-center">
-                      <FaArrowRightLong className="w-4 sm:w-5 sm:h-5 transition-colors duration-300 ease-in-out text-[#ffffff]  ml-[7px] mt-[2px] sm:mt-[5px]  " />
-                    </span>
-                  </p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[429px]  sm:h-[524px] sm:rounded-[24px] overflow-hidden bg-[#ffcc33] ">
-            <img
-              src={smeCard2}
-              alt="smeCard1"
-              className="w-full h-full object-cover"
-            />
-            <img
-              src={smeCard2Icon}
-              alt="smeCard2Icon"
-              className="absolute top-[24px] left-[20px] "
-            />
-
-            <div className="absolute w-[389px] h-[249px]  top-[155px] left-[20px] sm:top-[251px] sm:left-[20px] flex flex-col gap-[32px]  ">
-              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
-                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#002244] ">
-                  Expense Management Tools
-                </h1>
-                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                  Clear insights into your business spending. Keep track of
-                  every naira, manage budgets, and make informed decisions with
-                  our easy-to-use tools.
-                </p>
-              </div>
-              <div className=" h-[31px] flex items-start">
-                <button className="group">
-                  <p className="font-grava group-hover:mr-2 flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
-                    Learn More
-                    <span className="flex group-hover:ml-2 items-center">
-                      <FaArrowRightLong className="m-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] ml-[7px] mt-[2px] sm:mt-[5px] " />
-                    </span>
-                  </p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="relative w-[350px] h-[371px] rounded-[16px] sm:w-[654px] sm:h-[420px] lg:w-[429px]  lg:h-[524px] sm:rounded-[24px] overflow-hidden ">
-            <img
-              src={smeCard3}
-              alt="smeCard1"
-              className="w-full h-full object-cover"
-            />
-            <img
-              src={smeCard3Icon}
-              alt="smeCard3Icon"
-              className="absolute top-[24px] left-[20px] "
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
-
-            <div className="absolute w-[389px] h-[249px]  top-[155px] left-[20px] sm:top-[251px] sm:left-[20px]  flex flex-col  gap-[32px] ">
-              <div className=" flex flex-col gap-[12px] sm:gap-[16px] w-[310px] sm:w-[100%]">
-                <h1 className="font-grava font-[500] text-[20px] leading-[25px]  sm:text-[28px] sm:leading-[35px]   text-[#ffffff]  ">
-                  Loans & Credit Lines
-                </h1>
-                <p className="font-grava font-[350] text-[16px] leading-[24px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
-                  Your business deserves strong financial backing when you need
-                  it. Are you looking to start a business, expand, or purchase
-                  equipment? We’ve got you!
-                </p>
-              </div>
-              <div className=" h-[31px] flex items-start">
-                <button className="group">
-                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffcc33]">
-                    Explore our financing plans
-                    <span className="flex items-center group-hover:ml-2">
-                      <FaArrowRightLong className="w-4 sm:w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffcc33] ml-[7px] mt-[2px] sm:mt-[5px] " />
-                    </span>
-                  </p>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row gap-[20px] ">
-          <div className="relative w-[654px] h-[420px] rounded-[24px] overflow-hidden bg-[#002244] ">
-            <img
-              src={smeCard2}
-              alt="smeCard1"
-              className="w-full h-full object-cover"
-            />
-            <img
-              src={smeCard4Icon}
-              alt="smeCard3Icon"
-              className="absolute top-[24px] left-[20px] "
-            />
-
-            <div className="absolute w-[389px] h-[249px] top-[170px] left-[20px] flex flex-col gap-[32px]  ">
-              <div className=" flex flex-col gap-[16px]">
-                <h1 className="font-grava font-[500] text-[28px] leading-[35px]   text-[#ffffff]  ">
-                  Business Insurance
-                </h1>
-                <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
-                  Your peace of mind, our priority. We protect what you've built
-                  with customizable insurance plans. You should safeguard your
-                  assets, staff, and operations against unforeseen events.
-                </p>
-              </div>
-              <div className=" h-[31px] flex items-start">
-                <button className="group flex items-center ">
-                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
-                    View our insurance plans
-                    <span className="group-hover:ml-2 flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
-                    </span>
-                  </p>
-                </button>
-              </div>
-            </div>
+        className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1227px]">
+        <div className="flex flex-col items-center gap-[72px] ">
+          <div className="flex flex-col items-center gap-[16px]">
+            <h1 className="font-grava font-[500] w-[350px] sm:w-[429px] text-center text-[28px] leading-[35px] tracking-[0.2%] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244]">
+              Business Savings & Current Accounts
+            </h1>
+            <p className="font-grava font-[350] text-center w-[350px] sm:w-[429px] text-[16px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[24px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              Whether you’re a startup, SME, or enterprise, our flexible
+              accounts offer:
+            </p>
           </div>
 
-          <div className="relative w-[654px] h-[420px] rounded-[24px] overflow-hidden ">
-            <img
-              src={smeCard5}
-              alt="smeCard1"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
-            <div className="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
+          <div className="flex flex-col gap-[56px]">
+            <div className="flex flex-col lg:flex-row gap-[40px]">
+              <div className="">
+                <div className=" flex flex-col items-center gap-[32px] ">
+                  <div className="w-[350px] h-[360px] sm:w-[450px] sm:h-[480px] lg:w-[542px] lg:h-[537px] rounded-tl-[32px] rounded-br-[32px] overflow-hidden">
+                    <img
+                      src={smeCard1}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-            <div className="absolute w-[389px] h-[249px] top-[170px] left-[20px] flex flex-col gap-[32px]  ">
-              <div className=" flex flex-col gap-[16px]">
-                <h1 className="font-grava font-[500] text-[28px] leading-[35px]   text-[#ffffff]  ">
-                  Financial Planning & Advisory
-                </h1>
-                <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#ffffff]  ">
-                  Get expert guidance for your business decisions. Our advisors
-                  bring local market knowledge and practical solutions to help
-                  you succeed.
-                </p>
+                  <div className="flex flex-col items-center gap-[12px] ">
+                    <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
+                      Savings Accounts
+                    </h1>
+                    <p className="font-grava font-[350] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                      Competitive interest rates to grow your reserves.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className=" h-[31px] flex items-start">
-                <button className="group flex items-center">
-                  <p className="group-hover:mr-2 font-grava flex font-[500] text-[14px] leading-[20px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#ffffff]">
-                    Learn More
-                    <span className="flex items-center">
-                      <FaArrowRightLong className="w-5 h-5 group-hover:ml-2 mt-[1px] transition-colors duration-300 ease-in-out text-[#ffffff] ml-[7px] mt-[5px] " />
-                    </span>
-                  </p>
-                </button>
+              <div>
+                <div className=" flex flex-col items-center gap-[32px] ">
+                  <div className="w-[350px] h-[360px] sm:w-[450px] sm:h-[480px] lg:w-[542px] lg:h-[537px] rounded-tl-[32px] rounded-br-[32px] overflow-hidden">
+                    <img
+                      src={smeCard2}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div className="flex flex-col items-center gap-[12px] ">
+                    <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
+                      Current Accounts
+                    </h1>
+                    <p className="font-grava font-[350] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                      Seamless transactions, overdraft options, and
+                      multi-currency support.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div>
-        <div className=" flex justify-center w-[full] h-[180px] sm:h-[250px] bg-[#ffffff]">
-          <div className="w-[310px] sm:w-[596px] flex flex-col items-center gap-[24px]">
-            <div className="w-[490px] ">
-              <h2 className="font-grava font-[500] text-[18px] leading-[27px] sm:text-[32px] sm:leading-[40px] tracking-[0.2%] text-[#002244] text-center ">
-                We’re not just shaping the future of banking; we’re shaping your
-                future too.
-              </h2>
-            </div>
-            <div className="flex gap-[16px]">
+            <div className="flex justify-center">
               <button
                 className={`${
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[174px] h-[44px]  lg:w-[272px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[190px] h-[55px]  lg:w-[220px] sm:h-[63px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button">
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  Open an account today
+                  Open an account
                 </p>
-                <FaArrowRightLong className="mt-[2px] w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* LOAN CALCULATOR SECTION */}
+
+      <div className="pt-[56px] lg:pt-0 h-[1256px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
+        <div className="flex flex-col items-center gap-[40px] w-[1328px] h-[753px] ">
+          <div className=" flex flex-col w-[836px] gap-[12px] ">
+            <p className="font-grava font-[350] text-center text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              Loan Calculator
+            </p>
+            <h1 className="font-grava font-[500]text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
+              Get instant loan estimates and choose the right financing plan.
+            </h1>
+          </div>
+          <div className=" flex flex-col lg:flex-row gap-[20px]">
+            <div className="w-[350px] lg:w-[728px] flex flex-col items-center bg-[#ffffff] h-[554px] py-[32px] px-[24px] gap-[40px] rounded-[12px] ">
+              <div className="flex w-[100%] justify-start ">
+                <form className=" ">
+                  <fieldset>
+                    <legend className="sr-only">Select an Option</legend>
+                    <div className="flex items-center">
+                      {/* Personal */}
+                      <label className="cursor-pointer  mr-2 last:mr-0">
+                        <input
+                          type="radio"
+                          name="option"
+                          value="personal"
+                          className="peer sr-only"
+                          defaultChecked
+                        />
+                        <div
+                          className="px-[24px] py-[12px] w-[113px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none  ">
+                          <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
+                            Personal
+                          </p>
+                        </div>
+                      </label>
+
+                      {/* Home */}
+                      <label className="cursor-pointer relative mr-2 last:mr-0">
+                        <input
+                          type="radio"
+                          name="option"
+                          value="home"
+                          className="peer sr-only"
+                        />
+                        <div
+                          className="px-[24px] py-[12px] w-[93px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
+                          <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
+                            Home
+                          </p>
+                        </div>
+                      </label>
+
+                      {/* Car */}
+                      <label className="cursor-pointer relative mr-2 last:mr-0">
+                        <input
+                          type="radio"
+                          name="option"
+                          value="car"
+                          className="peer sr-only"
+                        />
+                        <div
+                          className="px-[24px] py-[12px] w-[75px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
+                          <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%]  text-[#002244]">
+                            Car
+                          </p>
+                        </div>
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+              <div className="w-[289px] h-[372px] lg:w-[680px] lg:h-[402px] flex flex-col gap-[48px] ">
+                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
+                  {/* Label and current amount */}
+                  <div className="flex justify-between items-center mb-2">
+                    <label className="font-semibold text-gray-700">
+                      <p className="font-grava font-[600] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        Loan amount
+                      </p>
+                    </label>
+                    <span className="text-gray-600">
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        NGN 500,000
+                      </p>
+                    </span>
+                  </div>
+
+                  {/* Slider */}
+                  <div className=" relative">
+                    <input
+                      type="range"
+                      min={0}
+                      max={1500000}
+                      step={1000}
+                      value={loanAmount}
+                      onChange={handleChange}
+                      className=" my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
+                      style={{
+                        background: `linear-gradient(to right, #FFCC33 ${(
+                          (loanAmount / 1500000) *
+                          95
+                        ).toFixed(2)}%, #F2F4F7 ${
+                          (loanAmount / 1500000) * 100
+                        }%)`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Min/Max Labels */}
+                  <div className="flex justify-between text-sm text-gray-500 mt-2">
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        NGN {loanAmount.toLocaleString()}
+                      </p>
+                    </span>
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        NGN 1,500,000
+                      </p>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
+                  <div className="flex justify-between items-center mb-2">
+                    <label className="font-semibold text-gray-700">
+                      <p className="font-grava font-[600] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        You want to re-pay it over
+                      </p>
+                    </label>
+                    <span className="text-gray-600">
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        12 Months
+                      </p>
+                    </span>
+                  </div>
+
+                  {/* Slider */}
+                  <input
+                    type="range"
+                    min={0}
+                    max={48}
+                    step={1}
+                    value={repayPeriod}
+                    onChange={handleRepayChange}
+                    className="my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
+                    style={{
+                      background: `linear-gradient(to right, #FFCC33 ${(
+                        (repayPeriod / 48) *
+                        95
+                      ).toFixed(2)}%, #F2F4F7 ${(repayPeriod / 48) * 100}%)`,
+                    }}
+                  />
+
+                  {/* Min/Max Labels */}
+                  <div className="flex justify-between text-sm text-gray-500 mt-2">
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        {repayPeriod.toLocaleString()} Month(s)
+                      </p>
+                    </span>
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        48 Months
+                      </p>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
+                  {/* Label and current amount */}
+                  <div className="flex justify-between items-center mb-2">
+                    <label className="font-semibold text-gray-700">
+                      <p className="font-grava font-[600] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        Interest Rate
+                      </p>
+                    </label>
+                    <span className="text-gray-600">
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        2.4%
+                      </p>
+                    </span>
+                  </div>
+
+                  {/* Slider */}
+                  <input
+                    type="range"
+                    min={0}
+                    max={24}
+                    step={1}
+                    value={interest}
+                    onChange={handleInterest}
+                    className=" my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
+                    style={{
+                      background: `linear-gradient(to right, #FFCC33 ${(
+                        (interest / 24) *
+                        95
+                      ).toFixed(2)}%, #F2F4F7 ${(interest / 24) * 100}%)`,
+                    }}
+                  />
+
+                  {/* Min/Max Labels */}
+                  <div className="flex justify-between text-sm text-gray-500 mt-2">
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        {interest.toLocaleString()}%
+                      </p>
+                    </span>
+                    <span>
+                      <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                        24%
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[350px] h-[454px] lg:w-[580px] lg:h-[554px] flex flex-col gap-[22px] ">
+              <div className="w-[350px] h-[160px] lg:w-[580px] lg:h-[245px] flex bg-[#ffffff] py-[46px] px-[28px] justify-between lg:gap-[102px] lg:justify-center items-center rounded-[12px] ">
+                <div>
+                  <h1 className="font-grava font-[600] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                    Monthly Payments
+                  </h1>
+                  <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                    NGN 50,000
+                  </p>
+                </div>
+                <img src={line} alt="" />
+                <div>
+                  <h1 className="font-grava font-[600] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                    Total Payments
+                  </h1>
+                  <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%]  text-[#002244]">
+                    NGN 50,000
+                  </p>
+                </div>
+              </div>
+              <div className="w-[350px] h-[272px] lg:w-[580px] lg:h-[287px] flex flex-col gap-[40px] lg:gap-[56px] bg-[#ffffff] rounded-[12px] py-[32px] px-[24px] ">
+                <div className="flex flex-col items-center gap-[24px] ">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[302px] h-[56px]  lg:w-[532px] sm:h-[67px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                      Apply now
+                    </p>
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                  </button>
+
+                  <p className="font-grava font-[350] text-center text-[16px] w-[532px] leading-[24px] tracking-[0.2%]  text-[#002244] cursor-pointer  ">
+                    Check eligibility
+                  </p>
+                </div>
+                <div className="w-[302px] h-[64px]  lg:w-[532px] lg:h-[52px] border-t-[1px] border-[#E6E9EC] pt-[24px] lg:pt-0 flex items-end">
+                  <p className="font-grava font-[350] text-center text-[14px] w-[532px] leading-[20px] tracking-[0.2%]  text-[#546B82]">
+                    Terms & conditions applied. Actual installments may differ.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[705px] bg-[#FFFFFF] flex justify-between items-center py-[60px] pr-[101px] pl-[110px] ">
+        <div className="w-[571px] h-[585px] ">
+          <img src={LoanImg} alt="" />
+        </div>
+        <div className="w-[565px] h-[424.53px] flex flex-col gap-[32px]">
+          <div className="flex flex-col items-center gap-[16px] w-[565px] h-[197px] ">
+            <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+              Business Loans - Funding Your Business Growth
+            </h1>
+            <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              Need capital to expand, restock, or invest in new opportunities?
+              Our tailored loan solutions ensure you have the financial backing
+              to keep your business moving forward.
+            </p>
+          </div>
+          <div className="flex flex-col gap-[48px] h-[195.53px] ">
+            <div className="relative">
+              <div className="absolute top-0 left-0 flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+              <div className="absolute top-[0px] left-[286px] flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+              <div className="absolute top-[60px] left-[0px] flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+              <div className="absolute top-[60px] left-[286px]  flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[full] h-[100%] flex justify-start items-end">
               <button
                 className={`${
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-300 ease-in-out bg-[#ffffff] group hover:bg-[#002244] hover:border hover:border-[#ffffff] w-[302px] h-[48px] lg:w-[229px] lg:h-[59px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center border-[1px] border-[#002244] `}
+                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[159px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button">
-                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffffff]">
-                  About tatum bank
+                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                  Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffffff]" />
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden">
-          <div className="relative h-[619px] lg:h-[739px]">
-            <img
-              src={carrots}
-              alt="carrots"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black opacity-[0.3] pointer-events-none"></div>
+      </div>
+
+      {/* Scroll section starts */}
+
+      <div className=" py-[88px] px-[56px] flex flex-col gap-[64px] ">
+        <div className="flex flex-col items-center gap-[72px] ">
+          <div className="flex flex-col items-center gap-[16px]">
+            <h1 className="font-grava font-[500] w-[754px] text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244]">
+              Payment Solutions - Making Every Transaction Seamless
+            </h1>
+            <p className="font-grava font-[350] text-center w-[538px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              We provide secure, fast, and efficient payment solutions that
+              enable you to manage transactions effortlessly.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-[64px] ">
+          <div className="h-[485px] w-[1328px] bg-[#F9FAFB] flex justify-between items-center py-[50px] px-[48px] rounded-tl-[32px] rounded-br-[32px] ">
+            <div className="w-[565px] h-[385px] flex flex-col gap-[32px]">
+              <div className="flex flex-col gap-[16px] w-[557px] h-[89px] ">
+                <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+                  POS Services
+                </h1>
+                <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  POS & Merchant Services for easy customer payments
+                </p>
+              </div>
+              <div className="flex flex-col gap-[48px] h-[255.53px] ">
+                <div className="flex flex-col gap-[32px] items-start">
+                  <div className="flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Sell Smarter with our Advanced POS Systems
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Secure card processing, real-time sales analytics, and
+                        inventory sync.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[full] h-[100%] flex justify-start items-end">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[254px] sm:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                      Request a POS system
+                    </p>
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="w-[516px] h-[385px] ">
+              <img
+                src={scrollImg1}
+                alt=""
+                className="w-full h-full object-cover rounded-[32px]"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-[64px] ">
+          <div className="h-[485px] w-[1328px] bg-[#F9FAFB] flex justify-between items-center py-[50px] px-[48px] rounded-tl-[32px] rounded-br-[32px] ">
+            <div className="w-[565px] h-[385px] flex flex-col gap-[32px]">
+              <div className="flex flex-col gap-[16px] w-[557px] h-[89px] ">
+                <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+                  Merchant Services
+                </h1>
+                <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  Accept Payments Anywhere, Anytime
+                </p>
+              </div>
+              <div className="flex flex-col gap-[48px] h-[255.53px] ">
+                <div className="flex flex-col gap-[32px] items-start">
+                  <div className="flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Payment gateways, QR codes, and card terminals.
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Advanced security to protect your revenue.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[full] h-[100%] flex justify-start items-end">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[177px] sm:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                      Sign up now
+                    </p>
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="w-[516px] h-[385px] ">
+              <img
+                src={scrollImg2}
+                alt=""
+                className="w-full h-full object-cover rounded-[32px]"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-[64px] ">
+          <div className="h-[485px] w-[1328px] bg-[#FFFAEB] flex justify-between items-center py-[50px] px-[48px] rounded-tl-[32px] rounded-br-[32px] ">
+            <div className="w-[565px] h-[415px] flex flex-col gap-[32px]">
+              <div className="flex flex-col gap-[16px] w-[557px] h-[193px] ">
+                <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+                  Online & Mobile Transfers for seamless banking
+                </h1>
+                <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  Stay in control of your finances with our cutting-edge digital
+                  banking solutions, designed to simplify operations and enhance
+                  efficiency.
+                </p>
+              </div>
+              <div className="flex flex-col gap-[48px] h-[255.53px] ">
+                <div className="flex flex-col gap-[32px] items-start">
+                  <div className="flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Internet & Mobile Banking
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        24/7 Account Access & Monitoring
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[full] h-[100%] flex justify-start items-end">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[177px] sm:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                      Sign up now
+                    </p>
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="w-[516px] h-[385px] ">
+              <img
+                src={scrollImg3}
+                alt=""
+                className="w-full h-full object-cover rounded-[32px]"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex gap-[64px] ">
+          <div className="h-[485px] w-[1328px] bg-[#F9FAFB] flex justify-between items-center py-[50px] px-[48px] rounded-tl-[32px] rounded-br-[32px] ">
+            <div className="w-[565px] h-[385px] flex flex-col gap-[32px]">
+              <div className="flex flex-col gap-[16px] w-[557px] h-[116px] ">
+                <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+                  Payroll Management
+                </h1>
+                <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                  Payroll Management to pay salaries on time, handle taxes, and
+                  manage employee benefits—all with ease.
+                </p>
+              </div>
+              <div className="flex flex-col gap-[48px] h-[255.53px] ">
+                <div className="flex flex-col gap-[32px] items-start">
+                  <div className="flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Bulk Payment Processing
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex gap-[8px]">
+                    <div className="w-[28px] h-[28px] ">
+                      <img src={goodMark} alt="" />
+                    </div>
+                    <div>
+                      <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                        Advanced security to protect your revenue.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[full] h-[100%] flex justify-start items-end">
+                  <button
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow animate__fadeInUp"
+                        : ""
+                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[208px] sm:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    type="button">
+                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                      Get started now
+                    </p>
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="w-[516px] h-[385px] ">
+              <img
+                src={scrollImg4}
+                alt=""
+                className="w-full h-full object-cover rounded-[32px]"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div
-        ref={faqRef}
-        className="w-[full] h-[726px] bg-[#FFFAEB] flex items-center justify-center ">
-        <div className="flex flex-col items-center w-[350px] sm:w-[650px] lg:w-[878px] gap-[56px] ">
-          <div className="flex justify-center">
-            <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
-              Frequently Asked Questions
+      {/* Scroll section ends */}
+
+      <div className="h-[705px] bg-[#FFFFFF] flex justify-between items-center py-[60px] pr-[101px] pl-[110px] ">
+        <div className="w-[571px] h-[585px] ">
+          <img src={AdvisoryImg} alt="" />
+        </div>
+        <div className="w-[565px] h-[534.53px] flex flex-col gap-[32px]">
+          <div className="flex flex-col items-center gap-[16px] w-[565px] h-[247px] ">
+            <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[40px] lg:leading-[50px] tracking-[0.2%]  text-[#002244]">
+              Financial Advisory Services – Expert Guidance for Smart Decisions
             </h1>
+            <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              Your business success is our priority. Our expert advisory
+              services help you make sound financial decisions that fuel
+              business growth and sustainability.
+            </p>
           </div>
-          <div className="flex flex-col gap-[32px]">
-            <div className="w-[350px] sm:w-[650px] lg:w-[878px] h-[96px] rounded-[16px] border-[1px] border-[#002244] items-center flex justify-between p-[18px] sm:p-[32px] cursor-pointer ">
-              <p className="font-grava font-[500] w-[250px] sm:w-auto text-[14px] leading-[20px] tracking-[0.2%] sm:text-[20px] sm:leading-[25px] sm:tracking-[1.4%] text-[#475467]">
-                How do I open an account with Tatum
-              </p>
-              <span>
-                <img src={plusIcon} alt="plusIcon" className="w-[32px]" />
-              </span>
+          <div className="flex flex-col gap-[48px] h-[255.53px] ">
+            <div className="flex flex-col gap-[32px] items-start">
+              <div className="flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+              <div className=" flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-[8px]">
+                <div className="w-[28px] h-[28px] ">
+                  <img src={goodMark} alt="" />
+                </div>
+                <div>
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                    Working Capital Loans
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="w-[350px] sm:w-[650px] lg:w-[878px] h-[96px] rounded-[16px] border-[1px] border-[#002244] items-center flex justify-between p-[18px] sm:p-[32px] cursor-pointer ">
-              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[20px] sm:leading-[25px] sm:tracking-[1.4%] text-[#475467]">
-                Do you offer loans for small businesses?
-              </p>
-              <span>
-                <img src={plusIcon} alt="plusIcon" className="w-[32px]" />
-              </span>
+            <div className="w-[full] h-[100%] flex justify-start items-end">
+              <button
+                className={`${
+                  activeIndex === 2
+                    ? "animate__animated animate__slow animate__fadeInUp"
+                    : ""
+                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[210px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                type="button">
+                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                  Open an account
+                </p>
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+              </button>
             </div>
-            <div className="w-[350px] sm:w-[650px] lg:w-[878px] h-[96px] rounded-[16px] border-[1px] border-[#002244] items-center flex justify-between p-[18px] sm:p-[32px] cursor-pointer ">
-              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[20px] sm:leading-[25px] sm:tracking-[1.4%] text-[#475467]">
-                What are the criterias for getting a loan
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[555px] bg-[#F9FAFB] flex  items-center justify-center">
+        <div className="h-[395px] w-[1322px] flex gap-[64px] ">
+          <div className="w-[448px] h-[100%] flex justify-start items-start  ">
+            <div>
+              <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[14px] lg:leading-[20px] lg:tracking-[0.2%] text-[#002244]">
+                WHY CHOOSE US
               </p>
-              <span>
-                <img src={plusIcon} alt="plusIcon" className="w-[32px]" />
-              </span>
+              <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[48px] lg:leading-[60px] tracking-[0.2%]  text-[#002244]">
+                Why Choose Tatum SME Banking.
+              </h1>
             </div>
-            <div className="flex justify-center  ">
-              <p className="font-grava font-[350] text-[12px] leading-[18px] sm:text-[18px] sm:leading-[27px] tracking-[0.2%] text-[#002244]">
-                Have more questions? Visit our
-                <span className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244] pl-[5px] underline cursor-pointer">
-                  Help Center
-                </span>
+          </div>
+          <div>
+            <div className="flex flex-col gap-[32px] ">
+              <div className="flex justify-between w-[810px] h-[57px] border-b-[1px] border-[#c9ced3] ">
+                <p className="font-grava font-[400] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[0.2%] text-[#546B82]">
+                  We Understand Your Business
+                </p>
+                <FaPlus className="text-[#334E69] text-[16px] cursor-pointer" />
+              </div>
+              <div className="flex justify-between w-[810px] h-[57px] border-b-[1px] border-[#c9ced3] ">
+                <p className="font-grava font-[400] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[0.2%] text-[#546B82]">
+                  Customer-Centric Approach
+                </p>
+                <FaPlus className="text-[#334E69] text-[16px] cursor-pointer" />
+              </div>
+              <div>
+                <div className="flex flex-col gap-[20px] border-b-[1px] h-[96px] border-[#c9ced3] ">
+                  <div className="flex justify-between w-[810px]   ">
+                    <p className="font-grava font-[400] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[0.2%] text-[#546B82]">
+                      Technology-Driven Excellence
+                    </p>
+                    <FaMinus className="text-[#334E69] text-[16px] cursor-pointer" />
+                  </div>
+
+                  <div>
+                    <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#546B82]">
+                      Enjoy seamless, secure, and innovative banking tailored
+                      for your business.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between w-[810px] h-[57px] border-b-[1px] border-[#c9ced3] ">
+                <p className="font-grava font-[400] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[0.2%] text-[#546B82]">
+                  We Keep You Smiling!
+                </p>
+                <FaPlus className="text-[#334E69] text-[16px] cursor-pointer" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[680px] py-[120px]  gap-[8px] rounded-[32px] flex justify-center relative">
+        <img
+          src={SmeVector}
+          alt=""
+          className="absolute  rounded-[32px] z-[-1] bg-[#F9FAFB] opacity-20"
+        />
+        <div className="overflow-hidden h-[440px] w-[1328px] rounded-[32px] py-[64px] px-[64px] gap-[133px] flex  ">
+          <div className="w-[615px] h-[312px] flex flex-col justify-between">
+            <div className="flex flex-col gap-[16px] ">
+              <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[32px] lg:leading-[48px] tracking-[0.2%]  text-[#002244]">
+                Let’s Build the Future of Your Business Together
+              </h1>
+              <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                Your business deserves a bank that believes in your dreams as
+                much as you do. Let’s talk about how Tatum Bank can empower you
+                to achieve more or Visit our nearest branch to get started
               </p>
             </div>
+            <div className="flex ">
+              <button
+                className={`${
+                  activeIndex === 2
+                    ? "animate__animated animate__slow animate__fadeInUp"
+                    : ""
+                } transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] lg:w-[183px] lg:h-[59px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
+                type="button">
+                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  Call us today
+                </p>
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
+              </button>
+            </div>
+          </div>
+          <div className="w-[468px] h-[312px]">
+            <img
+              src={smeCard5}
+              alt=""
+              className="w-full h-full object-cover rounded-[24px]"
+            />
           </div>
         </div>
       </div>

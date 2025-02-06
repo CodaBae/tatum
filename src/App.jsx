@@ -1,24 +1,40 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 import Routers from "./routers";
+import Preloader from './Preloader';
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({
-      once: true, // Ensures animations occur only once
-  });
+      once: true,
+    });
+
+    // Reset loading state when component mounts
+    setIsLoading(true);
+    
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 8000); // Increased to 7.5s to account for unveil animation
+
+    return () => {
+      clearTimeout(timer);
+      // Reset AOS when component unmounts
+      AOS.refresh();
+    };
   }, []);
 
   return (
-    <>
-      <Routers />
-    </>
+    <div className="app-container">
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <Routers />
+      )}
+    </div>
   );
 }
 
