@@ -115,7 +115,9 @@ const Header = () => {
         src={Logo}
         alt="Logo"
         className="w-[109px] h-[44px] cursor-pointer"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/", {
+          state: { section: "home" },
+        })}
       />
       <div className="flex items-center gap-[32px]">
         <p
