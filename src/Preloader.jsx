@@ -3,7 +3,7 @@ import "./Preloader.css";
 
 const Preloader = () => {
   return (
-    <>
+    <div className='body'>
       <div className="preloader">
         <div className="container">
           <div className="static-text">We Keep You</div>
@@ -29,7 +29,7 @@ const Preloader = () => {
         <div className="unveil-section unveil-bottom-left"></div>
         <div className="unveil-section unveil-bottom-right"></div>
       </div>
-    </>
+    </div>
   );
 };
 
