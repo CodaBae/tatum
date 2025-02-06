@@ -43,11 +43,13 @@
   
   .emphasis {
     color: #FFCC33 !important;
+    text-align:left;
   }
   
   .rolling-text span {
     display: block;
     animation: fastLoop 2s cubic-bezier(0.7, 0, 0.3, 1) infinite, slowStop 6s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
+    text-align:left;
   }
 
 
