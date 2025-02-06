@@ -2,18 +2,20 @@ import React, { useEffect, useRef, useState } from 'react'
 import { BsPlus } from 'react-icons/bs'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { BiMinus } from 'react-icons/bi'
-
-import Calculator from "../../assets/svg/calculator.svg"
-import Estate from "../../assets/svg/real-estate.svg"
-import Manager from "../../assets/svg/manager.svg"
-
-import Bg from "../../assets/png/private-bg.jpeg"
-import BgMobile from "../../assets/png/private-bg-mobile.jpeg"
-import OfficeMan from "../../assets/png/office-man.jpeg"
-import CardMan from "../../assets/png/card-man.jpeg"
-import CallMan from "../../assets/png/call-man.jpeg"
-import Brainstorm from "../../assets/png/brainstorm.jpeg"
 import { useLocation, useNavigate } from 'react-router-dom'
+
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
+import Check from "../../assets/svg/check.svg";
+import Plus from "../../assets/svg/plus.svg";
+import Minus from "../../assets/svg/minus.svg";
+
+import Golfer from "../../assets/png/golfer.png";
+import Dining from "../../assets/png/dining.png";
+import Airplane from "../../assets/png/airplane.png";
+import Cards from "../../assets/png/atm_cards.png";
+
+
 
 const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(false)
@@ -52,203 +54,286 @@ const Private = () => {
 
   return (
     <div className='w-full' ref={privateRef}>
-      <div 
-        style={{
-          backgroundImage: `url(${Bg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
-        className='h-[683px] lg:h-[723px] flex w-full flex-col bg-[#ccc] px-5 lg:px-[56px] py-[320px] relative'
-      >
-        <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
-        <div className='flex flex-col md:w-[400px] lg:w-[622px] absolute bottom-0 lg:relative z-10 h-[237px] gap-6'>
-          <div className='flex flex-col gap-2 lg:gap-4'>
-            <p className='font-grava text-[#fff] font-bold text-[32px] lg:text-[75px] leading-[40px] leading-[78px]'>Private Banking</p>
-            <p className='font-grava text-[#fff] font-[350] text-sm leading-[20px] lg:text-[24px] lg:leading-[30px] '>
-              We cater to your unique needs and turn your achievements into a long-lasting legacy.
-            </p>
-          </div>
-          <button
-            className='transition-all duration-300 ease-in-out outline-none group hover:bg-[#002244] bg-[#FFCC33] w-[174px] h-[44px] lg:w-[222px] lg:h-[58px] rounded-lg flex items-center justify-center p-4 gap-2'
-          >
-            <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Open an account</p>
-            <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-0.5' />
-          </button>
-        </div>
-      </div>
 
-      <div className='w-full px-5 lg:px-[56px] flex flex-col items-center  gap-5 py-[56px] lg:pt-[120px] lg:pb-[112px]'>
-        <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-5'>
-
-          <div 
+      <section className='h-full w-full overflow-hidden outline-none'>
+        <div 
             style={{
-              backgroundImage: `url(${OfficeMan})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
+                backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover"
             }}
-            className=' w-full lg:w-[766px] relative h-[386px] lg:h-[420px] px-5 flex rounded-[24px]'
-          >
-            <div className="absolute inset-0 w-full rounded-[24px] h-auto bg-[#0005]" />
-            <div className='flex flex-col gap-[32px] w-[310px] z-10 absolute bottom-5 lg:w-[620px]'>
-              <div className='flex flex-col gap-4'>
-                <p className='font-medium font-grava text-[#fff] text-[20px] lg:text-[28px]'>Wealth Management</p>
-                <p className='text-[#fff] font-[350] font-grava text-base lg:text-[18px] '>
-                  You might be saving for retirement, starting a new job, 
-                  investing business profits, or planning for your family's future. 
-                  Working closely with you, we ensure that your portfolio is in line with your long-term objectives, 
-                  allowing you to achieve long-term success.
-                </p>
-              </div>
-              <div 
-                className='flex items-center cursor-pointer gap-2 group'
-                onClick={() => navigate("/private/wealth-management", {
-                  state: { section: "wealth" } }
-                )}
-              >
-                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2  text-[#fff]'>Get Started</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-0.5 transition-all duration-300 group-hover:ml-2' />
-              </div>
+            className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+        >
+            <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
+                <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                    <p 
+                        className={`animate__animated animate__fadeInUp lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-bold leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                    >
+                        Exclusive. Personalized. Exceptional
+                    </p>
+                    <p 
+                        // 
+                        className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[833px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                    >
+                        With privileged access to premium banking services, bespoke investment strategies, 
+                        and the prestige of Tatum Private Banking, we keep you smiling—every step of the way.
+                    </p>
+                    <div className='flex items-center mt-[12px] gap-3'>
+                      <button
+                        className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[194px] rounded-tl-lg rounded-br-lg h-[44px] gap-2 flex items-center justify-center`}
+                        type='button'
+                      >
+                          <p 
+                            className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                          >
+                              Sign up today
+                          </p>
+                          <FaArrowRightLong 
+                            className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                          />
+                      </button>
+                    </div>
+                </div>
+                <div className='hidden lm:flex items-start absolute -bottom-36'>
+                    <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
+                        We are licensed by 
+                        <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
+                        Deposit insured by
+                        <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
+                    </p>
+                </div>
             </div>
-          </div>
+            <img 
+                src={isMobile ? Golfer : Golfer} 
+                alt='Family' 
+                className={`animate__animated animate__zoomIn relative  h-[605px] lg:mt-40 lm:h-[694px]`} 
+            />
+        </div>
+      </section>
 
-          <div 
-            style={{
-              backgroundImage: `url(${Brainstorm})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
-            }}
-            className=' w-full  h-[371px] lg:w-[542px] lg:h-[420px] flex flex-col rounded-[24px] relative p-5'
-          >
-            <div className="absolute inset-0 w-full h-auto rounded-[24px] bg-[#0005]" />
-            <div className='flex flex-col z-10 gap-[72px] lg:gap-[140px] absolute'>
-              <img src={Manager} alt='Manager' className='w-[40px] h-[40px]' />
-
-              <div className='flex flex-col gap-6 lg:gap-[32px] w-[310px] lg:w-[502px]'>
-                <div className='flex flex-col gap-4'>
-                  <p className='font-medium font-grava text-[#fff] text-[20px] lg:text-[28px]'>Investment Advisory</p>
-                  <p className='text-[#fff] font-[350] font-grava text-base lg:text-[18px] '>
-                    Accelerate your financial growth with actionable advice from seasoned professionals. 
-                    Build, grow, and protect your wealth with strategies tailored to your goals.
+      <div className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+        <div data-aos="fade-right" className="hidden md:block" >
+            <img 
+                src={Dining} 
+                alt='Saver' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+            />
+        </div>
+        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Wealth Management Advisory</p>
+                <div className='flex flex-col w-full gap-[18px]'>
+                  <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                    Your Wealth, Our <span className='block md:inline-block'>Expertise.</span> 
+                  </p>
+                  <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                    At Tatum Bank, we go beyond banking—we curate personalized wealth growth strategies 
+                    that align with your financial ambitions. Whether you seek investment diversification, 
+                    estate planning, or asset protection, our seasoned advisors craft bespoke solutions that 
+                    optimize your wealth.
                   </p>
                 </div>
-                <div 
-                  className='flex items-center cursor-pointer gap-2 group'
-                  onClick={() => navigate("/private/investement-advisory", {
-                    state: { section: "invest" } }
-                  )}
+
+                <button
+                  className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[141px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                  type='button'
                 >
-                  <p className='font-medium font-grava text-sm lg:text-[18px] text-[#fff] group-hover:mr-2 '>Build Your Investment Plan Today</p>
-                  <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                    <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                </button>
+
+                <div className='flex flex-col gap-[32px] mt-6'>
+                  <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                    <img src={Check} alt="Check" className='' />
+                    <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                      Portfolio Management <span className='font-[350] lm:font-normal'>– Tailored investment strategies for sustainable growth.</span>
+                    </p>
+                  </div>
+                  <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                    <img src={Check} alt="Check" className='' />
+                    <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                      Estate & Legacy Planning <span className='font-[350] lm:font-normal'>– Secure your legacy with expert guidance.</span>
+                    </p>
+                  </div>
+                  <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                    <img src={Check} alt="Check" className='' />
+                    <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                      Real Estate Advisory  <span className='font-[350] lm:font-normal'>– Strategic insights for profitable investments.</span>
+                    </p>
+                  </div>
+                  <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                    <img src={Check} alt="Check" className='' />
+                    <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                      Alternative Investments  <span className='font-[350] lm:font-normal'>– Access exclusive opportunities in private equity, hedge funds, and more.</span>
+                    </p>
+                  </div>
+                </div>
+
+            </div>
+            <button
+              className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[234px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
+              type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+        </div>
+        <img src={Dining} alt='Dining' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+      </div>
+
+      <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+        <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+          <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+              <div className='flex flex-col lm:flex-row items-center gap-2'>
+                <p className='font-grava text-[#334E69] font-medium lm:tracking-[0.25em] uppercase text-sm'>Exclusive Banking Benefits</p>
+                <div className='w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center'>
+                  <p className='uppercase text-[#546B82] text-xs tracking-wide font-grava font-semibold'>coming soon</p>
                 </div>
               </div>
-            </div>
-
+              <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
+                More Than Banking. A Lifestyle.
+              </p>
+              <p className="text-sm lm:text-[18px] font-grava font-[350] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                Our Private Banking clients enjoy a world of privileges, from preferential rates 
+                to VIP lifestyle benefits. Stay tuned for the launch of our exclusive suite of 
+                bespoke banking experiences, crafted just for you.
+              </p>
           </div>
-
-        </div>
-
-        <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-5'>
-
-          <div className='bg-[#FFCC33]  w-full  h-[371px] lg:w-[429px] lg:h-[530px] rounded-[24px] gap-[98px] lg:gap-[220px] p-5 flex flex-col gap-5'>
-            <img src={Estate} alt='Estate'  className='w-[40px] h-[40px]' />
-            <div className='flex flex-col gap-[32px] lg:w-[389px]'>
-              <div className='flex flex-col gap-2 lg:gap-4'>
-                <p className='font-medium font-grava text-[#002244] text-[20px] lg:text-[28px]'>Estate and Trust Planning</p>
-                <p className='text-[#002244] font-[350] font-grava text-base lg:text-[18px] '>
-                  Secure your legacy with expert estate planning. Make proactive decisions that ensure 
-                  financial stability and security for years to come.
-                </p>
-              </div>
-              <div 
-                className='flex items-center cursor-pointer gap-2 group'
-                onClick={() => navigate("/private/estate-and-trust-planning", {
-                  state: { section: "estate" } }
-                )}
-              >
-                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#002244]'>Learn More</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 transition-all duration-300 group-hover:ml-2' />
-              </div>
-            </div>
-          </div>
-
-          <div 
-            style={{
-              backgroundImage: `url(${CardMan})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
-            }}
-            className=' w-full h-[419px] lg:w-[429px] lg:h-[530px] rounded-[24px] p-5 flex relative'
+          <button
+              className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[234px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              type='button'
           >
-            <div className="absolute inset-0 w-full h-auto rounded-[24px] bg-[#0005]" />
-            <div className='flex flex-col gap-6 lg:gap-[32px] absolute bottom-5 z-10 w-[310px] lg:w-[90%]'> {/* lg:w-[389px] */}
-              <div className='flex flex-col gap-2 lg:gap-4'>
-                <p className='font-medium font-grava text-[#fff] text-[20px] lg:text-[28px]'>Personal Loans and Credit</p>
-                <p className='text-[#fff] font-[350] font-grava text-base lg:text-[18px] '>
-                  Get the credit you deserve and pursue your dreams with loans that work for you. 
-                  From start to finish, we're here to help you succeed.
+              <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Sign up for Updates</p>
+              <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+          </button>
+        </div>
+        <div data-aos="fade-left">
+            <img 
+                src={Airplane} 
+                alt='Airplane' 
+                className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+            />
+        </div>
+      </div>
+
+      <div className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+        <div data-aos="fade-right" className="hidden md:block" >
+            <img 
+                src={Cards} 
+                alt='Cards' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+            />
+        </div>
+        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+          <div className='flex gap-5 lm:gap-[32px] flex-col'>
+
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Tatum Black Card</p>
+                <div className='flex flex-col w-full gap-[18px]'>
+                  <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                    The Ultimate Symbol of Prestige
+                  </p>
+                  <p className="text-sm lm:text-[18px] font-grava text-[#002244] font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                    Designed for the elite few, the Tatum Black Card is more than just a payment 
+                    solution—it’s a statement of status and access to unparalleled privileges worldwide.
+                  </p>
+                </div>
+            </div>
+
+            <button
+                className='transition-all duration-300 ease-in-out bg-[#FFCC33]  w-[272px] mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                type='button'
+            >
+              <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
+              <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+
+            <div className='flex flex-col lm:flex-row items-center gap-2'>
+              <p className='font-grava text-[#334E69] font-medium lm:tracking-[0.25em] uppercase text-sm'>Exclusive Banking Benefits</p>
+              <div className='w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center'>
+                <p className='uppercase text-[#546B82] text-xs tracking-wide font-grava font-semibold'>coming soon</p>
+              </div>
+            </div>
+
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Global Concierge Services<span className='font-[350] lm:font-normal'>– 24/7 personalized assistance, anywhere in the world.</span>
                 </p>
               </div>
-              <div 
-                className='flex items-center cursor-pointer gap-2 group w-full'
-                onClick={() => navigate("/private/personal-loans-and-credit", {
-                  state: { section: "loan" } }
-                )}
-              >
-                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Explore Flexible Loan Options</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                 Luxury Travel Perks <span className='font-[350] lm:font-normal'>– First-class upgrades, VIP airport lounges, and premium hotel benefits.</span>
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  High Spending Limits <span className='font-[350] lm:font-normal'>– Unmatched flexibility for high-value transactions.</span>
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Exclusive Event Access  <span className='font-[350] lm:font-normal'>– Invitations to premium experiences, from fashion shows to private auctions..</span>
+                </p>
               </div>
             </div>
           </div>
 
-          <div className='bg-[#002244] w-full lg:w-[429px] h-[371px] lg:h-[530px] rounded-[24px] gap-[62px] lg:gap-[190px] p-5 flex flex-col gap-5'>
-            <img src={Calculator} alt='Calculator'  className='w-[40px] h-[40px]' />
-            <div className='flex flex-col gap-6 lg:gap-[32px] w-[310px] lg:w-[389px]'>
-              <div className='flex flex-col gap-2 lg:gap-4'>
-                <p className='font-medium font-grava text-[#fff] text-[20px] lg:text-[28px]'>Custom Financial Solutions</p>
-                <p className='text-[#fff] font-[350] font-grava text-base lg:text-[18px] '>
-                  Discover, design, and improve your financial outlook with unique banking services 
-                  tailored to your needs. Let us assist you in laying a solid foundation for maximizing 
-                  your resources and, ultimately, achieving more.
-                </p>
+        
+          <button
+            className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
+            type='button'
+          >
+              <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
+              <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+          </button>
+        </div>
+        <img src={Cards} alt='Cards' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+      </div>
+
+      <div className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
+        <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
+          <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
+          <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Private Banking.</p>
+        </div>
+        <div className='flex flex-col w-full lm:w-[710px]'>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Exclusive Access</p>
+                {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-              <div 
-                className='flex items-center cursor-pointer gap-2 group'
-                onClick={() => navigate("/private/custom-financial-solutions", {
-                  state: { section: "custom" } }
-                )}
-              >
-                <p className='font-medium font-grava text-sm lg:text-[18px] group-hover:mr-2 text-[#fff]'>Start Now</p>
-                <FaArrowRightLong className='w-5 h-5 text-[#fff] mt-1 transition-all duration-300 group-hover:ml-2' />
-              </div>
+              {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
             </div>
-          </div>
-
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Unparalleled Service</p>
+                {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Discreet & Secure</p>
+                {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
         </div>
       </div>
 
-      <div className='flex flex-col items-center justify-center mx-auto gap-4 lg:gap-6 w-[90%] lg:w-[596px]'>
-        <div className='bg-[#FFEFC0] rounded-[48px] w-[147px] h-[36px] py-4 px-[18px] flex items-center justify-center'>
-          <p className='text-[#002244] font-grava text-sm font-medium'>Have Questions?</p>
-        </div>
-        <div className='w-[90%] lg:w-[490px] text-center'>
-          <p className='text-[18px] lg:text-[32px] font-grava text-[#002244] font-medium '>
-            We are here to listen, understand, and guide you toward the right solutions.
-          </p>
-        </div>
-        <button
-          className='transition-all duration-300 ease-in-out group hover:bg-[#002244] bg-[#FFCC33] w-[220px] lg:w-[277px] h-[44px] lg:h-[58px] rounded-tl-lg rounded-br-lg flex items-center justify-center p-4 gap-2'
-        >
-          <p className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] text-[#001F3E] font-medium text-sm lg:text-[18px] font-grava'>Schedule a Consultation</p>
-          <FaArrowRightLong className='transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33] w-5 h-5 text-[#001F3E] mt-[2px]' />
-        </button>
-      </div>
 
-      <div className='mt-[56px] w-full relative'>
-        <img src={CallMan} alt='CallMan' className='h-[531px] lg:h-[739px] object-cover w-full' />
-        <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
-      </div>
+    </div>
+  )
+}
 
-      <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
+export default Private
+
+
+{/* <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
           <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
 
@@ -285,10 +370,4 @@ const Private = () => {
           </div>
         </div>
 
-      </div>
-
-    </div>
-  )
-}
-
-export default Private
+      </div> */}

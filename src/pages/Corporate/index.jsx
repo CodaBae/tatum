@@ -1,9 +1,442 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { FaArrowRightLong } from 'react-icons/fa6';
+import { useLocation } from 'react-router-dom';
+
+import Chairman from "../../assets/png/chairman.png";
+import Corp from "../../assets/png/business_corp.png";
+import Investment from "../../assets/png/investment.png";
+import Treasury from "../../assets/png/treasury.png";
+import Lending from "../../assets/png/lending.png";
+import Partner from "../../assets/png/partner.png";
+import Trade from "../../assets/png/trade.png";
+
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
+import Check from "../../assets/svg/check.svg";
+import Plus from "../../assets/svg/plus.svg";
+import Minus from "../../assets/svg/minus.svg";
 
 const Corporate = () => {
+  const [openTabOne, setOpenTabOne] = useState(false)
+  const [openTabTwo, setOpenTabTwo] = useState(false)
+  const [openTabThree, setOpenTabThree] = useState(false)
+  const [openTabFour, setOpenTabFour] = useState(false)
+
+  const isMobile = window.innerWidth < 768
+
+  const corporateRef = useRef(null);
+  const { state } = useLocation();
+
+  const handleTabOne = () => {
+    setOpenTabOne(!openTabOne)
+  }
+
+  const handleTabTwo = () => {
+    setOpenTabTwo(!openTabTwo)
+  }
+
+  const handleTabThree = () => {
+    setOpenTabThree(!openTabThree)
+  }
+
+  const handleTabFour = () => {
+    setOpenTabFour(!openTabFour)
+  }
+
+  useEffect(() => {
+      if (state?.section === "corporate" && corporateRef.current) {
+        corporateRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [state]);
+
+
   return (
-    <div>Corporate</div>
+    <div className='w-full' ref={corporateRef}>
+
+      <section className='h-full w-full overflow-hidden outline-none'>
+              <div 
+                  style={{
+                      backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"
+                  }}
+                  className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+              >
+                  <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
+                      <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                          <p 
+                              className={`animate__animated animate__fadeInUp w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                          >
+                              Powering Your <span className='font-bold'>Business Growth</span>
+                          </p>
+                          <p 
+                              className={`animate__animated  animate__fadeInUp animate__slow w-auto  md:w-[786px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                          >
+                            At Tatum Bank, we understand that businesses thrive when they have the right 
+                            financial partner—one that offers tailored solutions, expert insights, and 
+                            seamless banking services to drive growth.
+                          </p>
+                          <div className='flex items-center mt-[12px] gap-3'>
+                            <button
+                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                              type='button'
+                            >
+                                <p 
+                                  className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                >
+                                    Open a corporate account
+                                </p>
+                                <FaArrowRightLong 
+                                  className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                />
+                            </button>
+                          </div>
+                      </div>
+                      <div className='hidden lm:flex items-start absolute -bottom-36'>
+                          <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
+                              We are licensed by 
+                              <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
+                              Deposit insured by
+                              <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
+                          </p>
+                      </div>
+                  </div>
+                  <img 
+                      src={isMobile ? Chairman : Chairman} 
+                      alt='Family' 
+                      className={`animate__animated animate__zoomIn relative lm:right-96 lm:bottom-14 h-[605px] lg:mt-40 lm:h-[694px]`} 
+                  />
+              </div>
+      </section>
+      
+      <div className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+        <div data-aos="fade-right" className="hidden md:block" >
+            <img 
+                src={Corp} 
+                alt='Saver' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+            />
+        </div>
+        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+              
+                <div className='flex flex-col w-full gap-[18px]'>
+                  <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                    Corporate Banking
+                  </p>
+                  <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                    Whether you're looking to optimize cash flow, expand your operations, 
+                    or navigate global trade, we are here to support your ambitions with expertise, 
+                    innovation, and reliability.
+                  </p>
+                </div>
+
+                <button
+                  className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[241px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                  type='button'
+                >
+                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
+                    <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                </button>
+
+            </div>
+            <button
+              className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[283px] h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
+              type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
+                <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+        </div>
+        <img src={Corp} alt='Corp' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+      </div>
+
+      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+          <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                  Investment Services 
+                </p>
+                <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                  Secure and grow your capital with our diverse investment offerings tailored to corporate clients. 
+                  Our expert advisors provide strategic insights to help you maximize returns while minimizing risks.
+                </p>
+            </div>
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Fixed Income & Treasury Bills
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Asset & Wealth Management
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Structured Investment Portfolios
+                </p>
+              </div>
+            </div> 
+            <button
+                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+          </div>
+          <div data-aos="fade-left">
+              <img 
+                  src={Investment} 
+                  alt='Airplane' 
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+              />
+          </div>
+      </div>
+
+      <div className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+        <div data-aos="fade-right" className="hidden md:block" >
+            <img 
+                src={Treasury} 
+                alt='Treasury' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+            />
+        </div>
+        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+          <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                  Treasury Management
+                </p>
+                <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                  Stay ahead with efficient liquidity management, risk mitigation, and cash flow 
+                  optimization designed for today’s dynamic business environment. Our treasury 
+                  solutions ensure that your capital works smarter for you.
+                </p>
+            </div>
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Cash & Liquidity Management
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                Foreign Exchange Services
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                Interest Rate Risk Management
+                </p>
+              </div>
+            </div> 
+            <button
+                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+        </div>
+        <img src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+      </div>
+
+      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+          <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                  Trade Finance
+                </p>
+                <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                  Expand your business with seamless international and domestic trade solutions. 
+                  From import/export financing to letters of credit, we ensure your transactions 
+                  are secure and hassle-free.
+                </p>
+            </div>
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Letters of Credit & Guarantees
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Import & Export Financing
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Supply Chain Finance
+                </p>
+              </div>
+            </div> 
+            <button
+                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[210px] lg:w-[247px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+          </div>
+          <div data-aos="fade-left">
+              <img 
+                  src={Trade} 
+                  alt='Trade' 
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+              />
+          </div>
+      </div>
+
+      <div className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+        <div data-aos="fade-right" className="hidden md:block" >
+            <img 
+                src={Lending} 
+                alt='Lending' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+            />
+        </div>
+        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+          <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                  Corporate Lending
+                </p>
+                <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                  Fuel your growth with customized financing solutions that align with your business goals. 
+                  Whether you need working capital, asset financing, or expansion funding, 
+                  we offer flexible loan structures to keep your business moving forward.
+                </p>
+            </div>
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Term Loans & Working Capital Financing
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                Asset & Equipment Financing
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                Project & Infrastructure Financing
+                </p>
+              </div>
+            </div> 
+            <button
+              className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[208px] lg:w-[245px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+        </div>
+        <img src={Lending} alt='Lending' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+      </div>
+
+      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+          <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                  Strategic Partnerships
+                </p>
+                <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                  We believe in the power of collaborations that drive innovation and mutual growth. 
+                  Our partnership solutions provide enterprises with access to exclusive financial products, 
+                  industry insights, and customized banking support.
+                </p>
+            </div>
+            <div className='flex flex-col gap-[32px] mt-6'>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Co-Branded Financial Solutions
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Technology & Fintech Collaborations
+                </p>
+              </div>
+              <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
+                <img src={Check} alt="Check" className='' />
+                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                  Industry-Specific Advisory
+                </p>
+              </div>
+            </div> 
+            <button
+                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                type='button'
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+          </div>
+          <div data-aos="fade-left">
+              <img 
+                  src={Partner} 
+                  alt='Partner' 
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+              />
+          </div>
+      </div>
+
+      <div className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
+        <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
+          <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
+          <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Corporate Banking.</p>
+        </div>
+        <div className='flex flex-col w-full lm:w-[710px]'>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Expert Financial Advisory</p>
+                {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Tailored Solutions</p>
+                {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Confidentiality and personalized attention at every level</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Technology-Driven Banking</p>
+                {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Enjoy seamless banking with cutting-edge digital solutions.</p>}
+            </div>
+            <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabFour}>
+              <div className='flex items-center justify-between'>
+                <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Reliable Support</p>
+                {openTabFour ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              </div>
+              {openTabFour && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Our dedicated corporate banking team is always available to support you.</p>}
+            </div>
+        </div>
+      </div>
+
+    </div>
   )
 }
 
 export default Corporate
+

@@ -20,7 +20,8 @@ import Girl from "../../assets/png/girl.png";
 import Farmer from "../../assets/png/farmer.png";
 import SchoolGirl from "../../assets/png/school_girl.png";
 import Tiles from "../../assets/png/tile.png";
-import BlueCard from "../../assets/png/blue_card.png";
+import GreyCard from "../../assets/png/grey_card.png";
+import SilverCard from "../../assets/png/silver_card.png";
 import YellowCard from "../../assets/png/yellow_card.png";
 import BlackCard from "../../assets/png/black_card.png";
 import WhiteCard from "../../assets/png/white_card.png";
@@ -61,6 +62,59 @@ const Home = () => {
             homeRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
+
+
+    const carouselRef = useRef(null);
+    const angleRef = useRef(0);
+    const startXRef = useRef(0);
+    const isDraggingRef = useRef(false);
+
+    const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
+
+    const handleMouseDown = (e) => {
+        e.preventDefault();
+        isDraggingRef.current = true;
+        startXRef.current = e.clientX || e.touches[0].clientX;
+        
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        document.addEventListener('touchmove', handleMouseMove, { passive: false });
+        document.addEventListener('touchend', handleMouseUp);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDraggingRef.current) return;
+        e.preventDefault();
+        
+        const currentX = e.clientX || e.touches[0].clientX;
+        const deltaX = currentX - startXRef.current;
+        angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
+        
+        startXRef.current = currentX;
+        
+        if (carouselRef.current) {
+            carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+            carouselRef.current.style.transition = 'none';
+        }
+    };
+
+    const handleMouseUp = () => {
+        isDraggingRef.current = false;
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('touchmove', handleMouseMove);
+        document.removeEventListener('touchend', handleMouseUp);
+    };
+
+    const handleWheel = (e) => {
+        e.preventDefault();
+        angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
+        
+        if (carouselRef.current) {
+            carouselRef.current.style.transition = 'transform 0.3s ease';
+            carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+        }
+    };
 
 
     const settings = {
@@ -384,6 +438,7 @@ const Home = () => {
                 </div>
             </LandingCarousel>
         </div>
+
         <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div data-aos="fade-right" className="hidden md:block" >
                 <img 
@@ -407,6 +462,7 @@ const Home = () => {
             </div>
             <img src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </div>
+
         <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-right">
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
@@ -431,6 +487,7 @@ const Home = () => {
                 />
             </div>
         </div>
+        
         <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
             <div data-aos="fade-right" className="hidden md:block" >
                 <img 
@@ -480,6 +537,7 @@ const Home = () => {
                 />
             </div>
         </div>
+
         <div 
             style={{
                 backgroundImage: `url(${Tiles})`,
@@ -497,49 +555,73 @@ const Home = () => {
                 </p>
             </div>
               {/* Desktop Card Layout */}
-            <div className='lm:flex items-center justify-center relative gap-4 hidden group transition'>
-                <div 
-                    className='card-wrapper'
-                >
-                    <img src={YellowCard} alt='YellowCard' className={`card  card-1 rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
-                    <img src={BlueCard} alt='BlueCard' className={`card card-2 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                    <img src={WhiteCard} alt='WhiteCard' className={`card card-3 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
-                    <img src={BlackCard} alt='BlackCard' className={`card card-4 rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                </div>
+            {/* <div className='lm:flex items-center justify-center relative gap-4 hidden group transition'>
+               <img src={BlackCard} alt="BlackCard" className='w-[240px] h-[360px]' />
+               <img src={GreyCard} alt="GreyCard" className='w-[240px] h-[360px]' />
+               <img src={SilverCard} alt="SilverCard" className='w-[240px] h-[360px]' />
+               <img src={YellowCard} alt="YellowCard" className='w-[240px] h-[360px]' />
+               <img src={WhiteCard} alt="WhiteCard" className='w-[240px] h-[360px]' />
+            </div> */}
+
+               {/* Rotating Card Effect (Desktop Only) */}
+               <div className="hidden lg:flex items-center justify-center" style={{ perspective: '1000px' }}>
+            <div
+                ref={carouselRef}
+                className="relative w-[400px] h-[400px] flex items-center justify-center"
+                style={{
+                    transformStyle: 'preserve-3d',
+                    cursor: 'grab'
+                }}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleMouseDown}
+                onWheel={handleWheel}
+            >
+                {cardImages.map((card, index) => {
+                    const angle = (index * 360) / cardImages.length;
+                    return (
+                        <img
+                            key={index}
+                            src={card}
+                            alt="Card"
+                            className="absolute w-[252px] h-[350px] transition-transform duration-300"
+                            style={{
+                                transform: `rotateY(${angle}deg) translateZ(300px)`,
+                                pointerEvents: 'none'
+                            }}
+                        />
+                    );
+                })}
             </div>
-                {/* <div 
-                    className='card-wrapper group-hover:gap-6 lm:justify-end'
-                    onMouseEnter={handleCardEnter}
-                    onMouseLeave={handleCardLeave}
-                >
-                    <img src={YellowCard} alt='YellowCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative lm:left-44 lg:left-44"} card  rounded-2xl lm:h-[400px] lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                    <img src={BlueCard} alt='BlueCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative  z-10 lm:left-[5rem] lg:left-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                    <img src={WhiteCard} alt='WhiteCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-20 lm:right-[1rem] lg:right-24"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px] `} />
-                    <img src={BlackCard} alt='BlackCard' className={`${activeCard ? "lg:w-[25%] lm:w-[250px]" : "relative z-30 lm:right-[7rem] lg:right-40"} card rounded-2xl lm:h-[400px] rounded-xl lg:h-[500px] lg:w-[25%] lm:w-[250px]`} />
-                </div> */}
-            {/* Mobile Card Layout */}
+        </div>
+              
+            {/* Mobile */}
             <div className='lm:hidden w-full'>
                 <Slider {...settings}>
                     <div className='slide-item slick-slide flex'>
-                        <img src={YellowCard} alt='YellowCard' className='rounded-xl w-[50%] md:w-[100%]'/>
+                        <img src={BlackCard} alt='BlackCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
                     <div className='slide-item flex justify-center'>
-                        <img src={BlueCard} alt='BlueCard' className='rounded-xl w-[50%] md:w-[100%]'/>
+                        <img src={GreyCard} alt='GreyCard' className='rounded-xl w-[50%] md:w-[100%]'/>
+                    </div>
+                    <div className='slide-item flex justify-center'>
+                        <img src={SilverCard} alt='SilverCard' className='rounded-xl w-[50%] md:w-[100%]'/>
+                    </div>
+                    <div className='slide-item flex justify-center'>
+                        <img src={YellowCard} alt='YellowCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
                     <div className='slide-item flex justify-center'>
                         <img src={WhiteCard} alt='WhiteCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
-                    <div className='slide-item flex justify-center'>
-                        <img src={BlackCard} alt='BlackCard' className='rounded-xl w-[50%] md:w-[100%]'/>
-                    </div>
                 </Slider>
             </div>
+
            <button
                 className='transition-all duration-300 ease-in-out w-[200px] lg:w-[246px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
            >
                 <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Choose your Tatum Card</p>
            </button>
         </div>
+
         <div 
             className='bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]'
         >
