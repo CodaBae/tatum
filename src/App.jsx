@@ -3,8 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Routers from "./routers";
 import "./App.css";
-import "./Preloader.css";
-
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
