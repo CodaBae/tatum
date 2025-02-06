@@ -44,16 +44,12 @@ import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
 import { useLocation } from 'react-router-dom';
-import Preloader from './Preloader'; 
-
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
     const [repay, setRepay] = useState(3); // Initial repay amount
     const [interest, setInterest] = useState(4); // Initial Interest
-    const [isLoading, setIsLoading] = useState(true);
-
     
 
     const formatter = new Intl.NumberFormat('en-US');
@@ -66,10 +62,6 @@ const Home = () => {
             homeRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
-
-    const handleFinishLoading = () => {
-        setIsLoading(false);
-    };
 
 
     const carouselRef = useRef(null);
@@ -188,11 +180,6 @@ const Home = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-
-    <>
-            {isLoading ? (
-                <Preloader onFinish={handleFinishLoading} />
-            ) : (
     <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
@@ -1098,8 +1085,6 @@ const Home = () => {
         </div>
 
     </div>
-     )}
-        </>
   )
 }
 
