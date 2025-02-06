@@ -1,12 +1,11 @@
 /* Preloader Styling */
-.body{
-    font-family: Arial, sans-serif;
+body{
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #fff;
     overflow: hidden;
 }
 .preloader {
@@ -153,8 +152,10 @@
     }
   
     .unveil-section {
-      animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 6s forwards; /* Keep original animation */
-    }
+        position: absolute;
+        background-color: #fff;
+        animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 6s forwards;
+      }
   }
   
   @media (max-width: 480px) {
