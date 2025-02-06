@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      {isLoading ? (
+      {true ? (
         <Preloader onFinish={() => setIsLoading(false)} /> // Show preloader while loading
       ) : (
         <Routers /> // Show the main app content after loading is done
