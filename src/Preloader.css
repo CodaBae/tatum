@@ -150,9 +150,9 @@ body {
     }
   
     .rolling-text {
-      font-size: 1rem; /* Adjust the font size for mobile */
+      font-size: 1.5rem; /* Adjust the font size for mobile */
       flex-direction: column; /* Stack text vertically */
-      gap: 0.2rem;
+    
     }
   
     .unveil-container {
