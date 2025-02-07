@@ -68,7 +68,7 @@ const Help = () => {
 
           <div className='flex flex-col gap-6 w-full'>
             <div 
-              onClick={handleDropdownOne} 
+              
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
@@ -87,7 +87,7 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
@@ -110,7 +110,7 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
@@ -127,7 +127,7 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
@@ -146,7 +146,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
