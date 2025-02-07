@@ -23,6 +23,7 @@ const Institutional = () => {
 
     const { state } = useLocation()
     const faqRef = useRef(null)
+    const InstitutionRef = useRef(null)
 
     const isMobile  = window.innerWidth
 
@@ -31,6 +32,9 @@ const Institutional = () => {
     useEffect(() => {
         if (state?.section === "faq" && faqRef.current) {
             faqRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "Institution" && InstitutionRef.current) {
+            InstitutionRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
 
@@ -53,7 +57,7 @@ const Institutional = () => {
 
 
     return (
-        <div className='w-full'>
+        <div className='w-full' ref={InstitutionRef}>
 
             <section className='h-full w-full overflow-hidden outline-none'>
                 <div 

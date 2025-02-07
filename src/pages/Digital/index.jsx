@@ -24,11 +24,11 @@ const Digital = () => {
 
     const isMobile = window.innerWidth < 768
 
-    // useEffect(() => {
-    //     if (state?.section === "digital" && digitalRef.current) {
-    //         digitalRef.current.scrollIntoView({ behavior: "smooth" });
-    //       }
-    // }, [state])
+    useEffect(() => {
+        if (state?.section === "digital" && digitalRef.current) {
+            digitalRef.current.scrollIntoView({ behavior: "smooth" });
+          }
+    }, [state])
 
   return (
     <div ref={digitalRef}>

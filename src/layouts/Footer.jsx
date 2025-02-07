@@ -105,11 +105,11 @@ const Footer = () => {
                 </p>
                 <p 
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
-                  onClick={() => navigate("/sme", {
-                    state: { section: "sme" },
+                  onClick={() => navigate("/business", {
+                    state: { section: "business" },
                   })}
                 >
-                  SME Banking
+                  Business Banking
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
                   Corporate Banking
@@ -123,11 +123,18 @@ const Footer = () => {
                   Private Banking
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
-                  // onClick={() => {navigate("/private/institutional-banking", {
-                  //   state: { section: "resources" },
-                  // }); window.scrollTo(0, 0)}}
+                  onClick={() => {navigate("/institutional", {
+                    state: { section: "institution" },
+                  }); window.scrollTo(0, 0)}}
                 >
                   Institutional Banking
+                </p>
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => {navigate("/digital", {
+                    state: { section: "digital" },
+                  }); window.scrollTo(0, 0)}}
+                >
+                  Digital Banking
                 </p>
               </div>
             </div>
