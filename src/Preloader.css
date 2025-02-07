@@ -1,15 +1,5 @@
-/* Preloader Styling */
-.body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    overflow: hidden;
-}
-.preloader {
+ /* Preloader Styling */
+  .preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,26 +7,28 @@
     height: 100%;
     background: url('https://res.cloudinary.com/code-idea/image/upload/v1738850988/Screenshot_2025-02-06_at_14.07.41_mkcf9e.png') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    background-color: white; /* Or any background you prefer */
+    z-index: 9999; /* Ensures it appears on top */
   }
   
   .container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Added for horizontal centering */
     font-size: 2.5rem;
     font-weight: bold;
     font-style: italic;
     color: #002244;
-    width: 100%; /* Ensure full width for proper centering */
-    text-align: center; /* Center text alignment */
+    text-align: center;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
   }
   
   .static-text {
     margin-right: 15px;
     white-space: nowrap;
+
   }
   
   .rolling-text {
@@ -51,13 +43,16 @@
   
   .emphasis {
     color: #FFCC33 !important;
+    text-align:left;
   }
   
   .rolling-text span {
     display: block;
-    animation: fastLoop 2s cubic-bezier(0.7, 0, 0.3, 1) infinite, 
-               slowStop 6s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
+    animation: fastLoop 2s cubic-bezier(0.7, 0, 0.3, 1) infinite, slowStop 6s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
+    text-align:left;
   }
+
+
   
   @keyframes fastLoop {
     0% { transform: translateY(0); }
@@ -75,10 +70,11 @@
   
   @keyframes slowStop {
     0% { transform: translateY(0); }
-    90% { transform: translateY(-1000%); }
-    100% { transform: translateY(-1000%); }
+    90% { transform: translateY(-1010%); }
+    100% { transform: translateY(-1010%); }
   }
   
+  /* Unveil Effect */
   .unveil-container {
     position: fixed;
     top: 0;
@@ -128,45 +124,23 @@
   }
   
   @keyframes unveilQuadrant {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0);
-      opacity: 0;
-    }
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
   }
-
+  
+  /* Website Content */
+  .website-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
   /* Mobile Responsive */
   @media (max-width: 768px) {
-    .static-text {
-      font-size: 1.5rem;
-    }
-  
-    .rolling-text {
-      font-size: 1rem;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-  
-    .unveil-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
-  
-    .unveil-section {
-      animation: unveilQuadrant 1.5s cubic-bezier(0.7, 0, 0.3, 1) 3s forwards;
-    }
+    .static-text { font-size: 1.5rem; }
+    .rolling-text { font-size: 1.5rem; }
   }
   
   @media (max-width: 480px) {
-    .static-text {
-      font-size: 1.2rem;
-    }
-  
-    .rolling-text {
-      font-size: 0.9rem;
-    }
+    .static-text { font-size: 1.5rem; }
+    .rolling-text { font-size: 1.5rem; }
   }
-  
