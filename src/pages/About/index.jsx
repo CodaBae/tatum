@@ -159,14 +159,14 @@ const About = () => {
                         to support every step of your financial journey.
                     </p>
                     <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
-                        Tatum Bank, <span className="font-medium italic">We Keep You Smiling.</span>
+                        Tatum Bank, <span className="font-semibold italic">We Keep You Smiling.</span>
                     </p>
                 </div>
                 <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
-                    <div className="items-start flex gap-6  pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+                    <div className="items-start flex gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
                         <img src={MissionStar} alt="MissionStar" className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]" />
                         <div className="flex flex-col gap-3">
-                            <p className="font-grava text-[#002244] font-medium leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                            <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                                 Our Mission
                             </p>
                             <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
@@ -179,7 +179,7 @@ const About = () => {
                     <div className="items-start flex gap-6 relative  lm:pt-[38px] md:pl-5 lg:pl-[60px]">
                         <img src={Moon} alt="Moon" className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]" />
                         <div className="flex flex-col gap-3">
-                            <p className="font-grava text-[#002244] font-medium leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                            <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                                 Vision.
                             </p>
                             <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
@@ -466,7 +466,7 @@ const About = () => {
             >
                 <div 
                 className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
-                style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
+                style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
                 >
                 <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px] ">
                     <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
@@ -481,7 +481,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-5 lm:gap-[40px] lm:w-[766px] relative h-[300px]">
+                <div className="flex flex-col gap-5 w-full lm:gap-[40px] lm:w-[766px] relative h-[300px]">
                     {testimonials.map((testimonial, index) => (
                     <div
                         key={index}

@@ -396,7 +396,7 @@ const Personal = () => {
 
         <button
           className='transition-all duration-300 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg group hover:bg-[#002244]'
-          onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+          onClick={() => navigate("/digital", { state: {section: "digital"}})}
         >
           <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Get yours today</p>
         </button>

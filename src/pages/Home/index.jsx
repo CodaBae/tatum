@@ -37,6 +37,7 @@ import Loan from "../../assets/svg/loan.svg";
 import FX from "../../assets/svg/fx.svg";
 import USSD from "../../assets/svg/ussd.svg";
 import Online from "../../assets/svg/online.svg";
+import Arrow from "../../assets/svg/arrow_forward.svg";
 
 import "./css/CardEffect.css";
 import "./css/SliderStyles.css";
@@ -186,9 +187,9 @@ const Home = () => {
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
                 // dynamicHeight={true} 
-                interval={5000} 
+                // interval={5000} 
                 showArrows={false} 
-                autoPlay={true}  //   {false}
+                // autoPlay={true}  //   {false}
                 showIndicators={false}  // {true}
                 showStatus={false} 
                 showThumbs={false} 
@@ -202,7 +203,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-[374px] lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex  lg:flex-row items-center gap-0'
+                        className='h-auto lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
                             <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -244,7 +245,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-36'>
+                            <div className='lm:flex items-start absolute hidden -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -256,10 +257,10 @@ const Home = () => {
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507865/file_28_1_cu7s3e.png" 
                             alt='Family' 
-                            style={{
-                                display: isMobile ? "none" : "flex"
-                            }}
-                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative md:right-24 lg:right-44 md:h-[400px] lg:h-[750px]`} 
+                            // style={{
+                            //     display: isMobile ? "none" : "flex"
+                            // }}
+                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative -right-20 md:right-24  bottom-0 lg:right-44 h-[400px] lg:h-[750px]`} 
                         />
                     </div>
                 </div>
@@ -271,7 +272,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-[374px] lg:h-[694px]  pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[694px]  pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
                             <div className='flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5'>
@@ -315,7 +316,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-36'>
+                            <div className='hidden lm:flex items-start absolute -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -327,10 +328,10 @@ const Home = () => {
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png" 
                             alt='Phone' 
-                            style={{
-                                display: isMobile ? "none" : "flex"
-                            }}
-                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover h-[400px] md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
+                            // style={{
+                            //     display: isMobile ? "none" : "flex"
+                            // }}
+                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover h-[400px]  md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
                             // animate__delay-2s
                         />
                     </div>
@@ -343,7 +344,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 gap-[64px] relative lg:gap-[113px]'>
                             <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
@@ -376,7 +377,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-36'>
+                            <div className='lg:flex items-start absolute hidden -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -388,10 +389,10 @@ const Home = () => {
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png" 
                             alt='Teach' 
-                            style={{
-                                display: isMobile ? "none" : "flex"
-                            }}
-                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
+                            // style={{
+                            //     display: isMobile ? "none" : "flex"
+                            // }}
+                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[424px] top-10 -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
                         />
                     </div>
                 </div>
@@ -403,7 +404,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-[374px] lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex lg:flex-row items-center relative gap-0'
+                        className='h-auto lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 relative gap-[64px] lg:gap-[113px]'>
                             <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
@@ -436,7 +437,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='flex items-start absolute -bottom-36'>
+                            <div className='lg:flex items-start absolute hidden -bottom-36'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -448,10 +449,10 @@ const Home = () => {
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png" 
                             alt='Smile' 
-                            style={{
-                                display: isMobile ? "none" : "flex"
-                            }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""} md:h-[500px] md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] md:top-10 lg:top-20 lg:right-[25rem] relative`} 
+                            // style={{
+                            //     display: isMobile ? "none" : "flex"
+                            // }}
+                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[500px] md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`} 
                         />
                     </div>
                 </div>
@@ -586,7 +587,7 @@ const Home = () => {
             className='bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]'
         >
             <div className='w-[336px] lg:w-[697px] flex flex-col items-center gap-3'>
-                <p className='text-[#002244] font-medium text-[24px] md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
+                <p className='text-[#002244] font-medium text-[24px] font-grava md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
                     Rewards and Benefits, Every Time You Spend.
                 </p>
                 <p className='text-sm lg:text-xl text-[#334E69] font-grava leading-[20px] lg:leading-[27px] text-center'>
@@ -764,9 +765,9 @@ const Home = () => {
                             <button 
                                 className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'
                                 onClick={() => {
-                                    navigate("/digital", {
+                                    navigate("/business", {
                                         state: {
-                                            section: "digital"
+                                            section: "business"
                                         }
                                     })
                                 }}

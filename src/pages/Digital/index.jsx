@@ -120,7 +120,7 @@ const Digital = () => {
                             <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-[13px] mt-[16px] '>
+                        <p className='font-grava text-[#334E69] font-medium tracking-[25%]  text-[13px] mt-[16px] '>
                             Features & Login
                         </p>
         
@@ -168,7 +168,7 @@ const Digital = () => {
                 </div>
                 <img src={Talk} alt='Talk' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
-            <hr />
+            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
@@ -240,12 +240,12 @@ const Digital = () => {
                     />
                 </div>
             </div>
-            <hr />
+            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-6'>
                 <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Download the App</p>
                 <div className='flex items-center gap-2'>
-                    <img src={Google} alt='Google' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px]' />
-                    <img src={Apple} alt='Apple' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px]' />
+                    <img src={Google} alt='Google' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
+                    <img src={Apple} alt='Apple' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
                 </div>
             </div>
         </section>
@@ -324,7 +324,7 @@ const Digital = () => {
                 </div>
                 <img src={Ussd} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
-            <hr />
+            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase'>Registration Guide</p>
                 <div className='flex flex-col gap-[32px]'>
@@ -383,7 +383,7 @@ const Digital = () => {
                     />
                 </div>
             </div>
-            <hr />
+            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-6'>
                 <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Card Services</p>
                 <div className='flex flex-col lm:flex-row items-start lm:items-center gap-6 lm:gap-[32px]'>
@@ -478,7 +478,7 @@ const Digital = () => {
             >
                 <div 
                     className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
-                    style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
+                    style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
                 >
                     <div className='flex flex-col lm:w-[615px] lm:h-[312px] gap-5 lm:gap-[100px]'>
                         <div className="flex flex-col  gap-[20px]">
