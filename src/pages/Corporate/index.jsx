@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Chairman from "../../assets/png/chairman.png";
 import Corp from "../../assets/png/business_corp.png";
@@ -26,6 +26,8 @@ const Corporate = () => {
 
   const corporateRef = useRef(null);
   const { state } = useLocation();
+
+  const navigate = useNavigate()
 
   const handleTabOne = () => {
     setOpenTabOne(!openTabOne)
@@ -80,6 +82,7 @@ const Corporate = () => {
                             <button
                               className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                               type='button'
+                              onClick={() => navigate("/corporate/account")}
                             >
                                 <p 
                                   className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'

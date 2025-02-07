@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
 import PersonalImg from "../../assets/png/personal.png";
@@ -37,6 +37,8 @@ const Personal = () => {
   const faqRef = useRef(null);
   const saveRef = useRef(null);
   const { state } = useLocation();
+
+  const navigate = useNavigate()
 
 
   const handleClickCard = (value) => {
@@ -94,6 +96,7 @@ const Personal = () => {
   }, [state]);
 
   
+  
   const isMobile = window.innerWidth < 768
 
   return (
@@ -129,6 +132,7 @@ const Personal = () => {
                       >
                         <p 
                             className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                            onClick={() => navigate("/personal/account")}
                         >
                             Open an account today
                         </p>
@@ -415,46 +419,6 @@ const Personal = () => {
       </div>
 
       <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
-        {/* <div 
-           style={{
-            backgroundImage: `url(${Layer})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
-          }}
-          className=" w-full h-[440px] rounded-xl"
-        >
-          <div 
-            className="w-full bg-[#F9FAFB] h-full rounded-xl opacity-80 px-[56px] py-[64px] flex justify-between items-center"
-          >
-            <div className="flex flex-col w-[615px] h-[312px] gap-[20px]">
-              <p className="font-grava font-medium text-[32px] leading-[48px] tracking-[0.2%]">
-                At Tatum Bank, we are committed to providing you personalized banking, 
-                tailored to your needs and lifestyle.
-              </p>
-              <p className="font-grava font-[350] text-[18px] leading-[27px] w-[389px] tracking-[0.2%]">
-                Ready to Experience Banking That Truly Keeps You Smiling?
-              </p>
-              <button
-                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                type='button' 
-                //animate__delay-2s
-              >
-                <p 
-                  className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                >
-                  Open an Account
-                </p>
-                <FaArrowRightLong 
-                  className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
-                />
-              </button>
-            </div>
-            <div className="w-[468px] h-[312px]">
-              <img src={Collab} alt="Collab" className="" />
-            </div>
-          </div>
-
-        </div> */}
         <div 
           style={{
             backgroundImage: `url(${Layer})`,

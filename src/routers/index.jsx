@@ -20,6 +20,13 @@ import Investment from "../pages/Private/components/Investment";
 import Loan from "../pages/Private/components/Loan";
 import Custom from "../pages/Private/components/Custom";
 import Sitemap from "../pages/Sitemap";
+import AccountPersonal from "../pages/Personal/component/AccountPersonal";
+import AccountBusiness from "../pages/SME/component/AccountBusiness";
+import AccountCorporate from "../pages/Corporate/component/AccountCorporate";
+import AccountPrivacy from "../pages/Private/components/AccountPrivacy";
+import Institutional from "../pages/Institutional";
+import AccountInstitutional from "../pages/Institutional/component/AccountInstitutional";
+import Digital from "../pages/Digital";
 
 export default function Routers() {
   return (
@@ -30,11 +37,18 @@ export default function Routers() {
         <Route path="about/teams" element={<Teams />} />
         <Route path="about/careers" element={<Careers />} />
         <Route path="about/team-details" element={<TeamDetails />} />
-        <Route path="sme" element={<SME />} />
+        <Route path="business" element={<SME />} />
+        <Route path="/business/account" element={<AccountBusiness />} />
         <Route path="personal" element={<Personal />} />
+        <Route path="personal/account" element={<AccountPersonal />} />
         <Route path="corporate" element={<Corporate />} />
+        <Route path="corporate/account" element={<AccountCorporate />} />
         <Route path="help" element={<Help />} />
+        <Route path="institution" element={<Institutional />} />
+        <Route path="/institution/account" element={<AccountInstitutional />} />
+        <Route path="digital" element={<Digital />} />
         <Route path="private" element={<Private />} />
+        <Route path="/private/account" element={<AccountPrivacy />} />
         <Route path="private/wealth-management" element={<Wealth />} />
         <Route path="private/investement-advisory" element={<Investment />} />
         <Route path="private/estate-and-trust-planning" element={<Estate />} />

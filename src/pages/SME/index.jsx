@@ -20,7 +20,7 @@ import Minus from "../../assets/svg/minus.svg";
 
 import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import cbn from "../../assets/svg/cbn.svg";
 import ndic from "../../assets/svg/ndic.svg";
 import ball1 from "../../assets/svg/ball1.svg";
@@ -65,13 +65,15 @@ const SME = () => {
     setInterest(Number(e.target.value));
   };
 
+  const navigate = useNavigate()
+
   const smeRef = useRef(null);
   const paymentRef = useRef(null);
   const faqRef = useRef(null);
   const { state } = useLocation();
 
   useEffect(() => {
-    if (state?.section === "sme" && smeRef.current) {
+    if (state?.section === "business" && smeRef.current) {
       smeRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "payment" && paymentRef.current) {
@@ -150,6 +152,7 @@ const SME = () => {
             </p>
 
             <button
+              onClick={() => navigate("/business/account")}
               type="button"
               className="animate__animated animate__slow animate__fadeInUp 
                transition-all duration-300 ease-in-out 
