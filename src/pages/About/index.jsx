@@ -369,41 +369,112 @@ const About = () => {
                 </div>
             </div>
             <div className="flex flex-col lm:flex-row gap-5">
-            {teamMembers.map((member, index) => (
-                <div
-                    key={index}
-                    className="flex flex-col gap-6"
-                    onClick={() => navigate("/about/team-details", { state: { section: "details", team: team[index] } })}
-                >
+                {/* First Card with Hover Effect */}
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[0]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-                        {/* Background Image */}
-                        <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]"
-                        />
+                    {/* Background Image */}
+                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
 
-                        {/* Hover Overlay */}
-                        <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
 
-                        {/* Center Arrow */}
-                        <img
-                            src={ArrowClick}
-                            alt="ArrowClick"
-                            className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                        />
+                    {/* Center Arrow */}
+                    <img 
+                        src={ArrowClick} 
+                        alt="ArrowClick" 
+                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
                     </div>
+
                     <div className="flex flex-col gap-[4px]">
                         <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                            {member.name}
+                            Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
                         </p>
                         <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                            {member.role}
+                            Non-Executive Director
                         </p>
                     </div>
                 </div>
-            ))}
-        </div>
+
+                {/* Second Card (Hover Effect) */}
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[1]}}) }}>
+                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+                    {/* Background Image */}
+                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+                    {/* Center Arrow */}
+                    <img 
+                        src={ArrowClick} 
+                        alt="ArrowClick" 
+                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+                    </div>
+                    <div className="flex flex-col gap-[4px]">
+                    <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
+                        Niyi Adeseun
+                    </p>
+                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                        Managing Director
+                    </p>
+                    </div>
+                </div>
+
+                {/* Third Card (Hover Effect) */}
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[2]}}) }}>
+                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+                    {/* Background Image */}
+                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+                    {/* Center Arrow */}
+                    <img 
+                        src={ArrowClick} 
+                        alt="ArrowClick" 
+                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+                    </div>
+                    <div className="flex flex-col gap-[4px]">
+                    <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+                        Aminatu Dahiru Chiroma
+                    </p>
+                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                        Executive Director
+                    </p>
+                    </div>
+                </div>
+
+                {/* Fourth Card (Hover Effect) */}
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[3]}}) }}>
+                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+                    {/* Background Image */}
+                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+                    {/* Center Arrow */}
+                    <img 
+                        src={ArrowClick} 
+                        alt="ArrowClick" 
+                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+                    </div>
+                    <div className="flex flex-col gap-[4px]">
+                    <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+                        Aminatu Dahiru Chiroma
+                    </p>
+                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                        Non-Executive Director
+                    </p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
