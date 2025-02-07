@@ -187,9 +187,9 @@ const Home = () => {
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
                 // dynamicHeight={true} 
-                // interval={5000} 
+                interval={5000} 
                 showArrows={false} 
-                // autoPlay={true}  //   {false}
+                autoPlay={true}  //   {false}
                 showIndicators={false}  // {true}
                 showStatus={false} 
                 showThumbs={false} 
