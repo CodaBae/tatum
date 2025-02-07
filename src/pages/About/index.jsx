@@ -105,7 +105,11 @@ const About = () => {
             </div>
         </section>
 
-        <section className="px-5 lm:px-[56px]"  ref={missionRef}>
+        <section 
+            className="px-5 lm:px-[56px]"  
+            ref={missionRef}
+            
+        >
             <div className="lm:border-[1px] lm:border-x-0 lm:border-[#C9C9C9] flex flex-col md:flex-row items-start justify-between border-dashed">
                 <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[59px] lg:pr-[59px]">
                     <div className="flex items-center justify-between">

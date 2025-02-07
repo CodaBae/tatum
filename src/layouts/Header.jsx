@@ -901,7 +901,7 @@ const Header = () => {
         </div>
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => navigate("/help-and-support")}>
+          onClick={() => navigate("/help")}>
           Help & Support
         </p>
         <p

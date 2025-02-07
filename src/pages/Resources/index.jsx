@@ -94,7 +94,7 @@ const Resources = () => {
               <button
                 className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[169px] lg:w-[200px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/", {state: {section: "home"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
                   <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />

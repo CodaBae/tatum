@@ -27,6 +27,7 @@ import AccountPrivacy from "../pages/Private/components/AccountPrivacy";
 import Institutional from "../pages/Institutional";
 import AccountInstitutional from "../pages/Institutional/component/AccountInstitutional";
 import Digital from "../pages/Digital";
+import Contact from "../pages/Contact";
 
 export default function Routers() {
   return (
@@ -57,6 +58,7 @@ export default function Routers() {
         <Route path="resources" element={<Resources />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
       </Route>
     </Routes>
