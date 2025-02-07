@@ -5,23 +5,31 @@ import Routers from "./routers";
 import "./App.css";
 import "./Preloader.css";
 
-
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(
+    localStorage.getItem("preloaderShown") !== "true"
+  );
+
+  const [isShow, setIsShow] = useState(
+    localStorage.getItem("preloaderShown") 
+  );
 
   useEffect(() => {
     AOS.init({
       once: true,
     });
-  }); // Runs once when the component mounts
+  }, []); // Runs once when the component mounts
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 6000);
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem("preloaderShown", "true");
+      }, 6000);
 
-    return () => clearTimeout(timer);
-  }, []); // Runs once when the component mounts
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   return (
     <div className="app-container">
@@ -45,14 +53,14 @@ function App() {
           </div>
         </div>
       )}
-
+  {!isShow && (
       <div className="unveil-container">
         <div className="unveil-section unveil-top-left"></div>
         <div className="unveil-section unveil-top-right"></div>
         <div className="unveil-section unveil-bottom-left"></div>
         <div className="unveil-section unveil-bottom-right"></div>
       </div>
-
+   )}
       {!isLoading && <Routers />}
     </div>
   );

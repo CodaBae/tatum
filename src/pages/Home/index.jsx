@@ -72,7 +72,7 @@ const Home = () => {
     const startXRef = useRef(0);
     const isDraggingRef = useRef(false);
 
-    const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
+    const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard, BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
 
     const handleMouseDown = (e) => {
         e.preventDefault();
@@ -464,7 +464,7 @@ const Home = () => {
                 <img 
                     src={Boy} 
                     alt='Boy' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -509,7 +509,7 @@ const Home = () => {
                 <img 
                     src={Girl} 
                     alt='Girl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
                 />
             </div>
         </div>
@@ -519,7 +519,7 @@ const Home = () => {
                 <img 
                     src={Farmer} 
                     alt='Farmer' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -573,7 +573,7 @@ const Home = () => {
                 <img 
                     src={SchoolGirl} 
                     alt='SchoolGirl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'    
                 />
             </div>
         </div>
@@ -652,6 +652,7 @@ const Home = () => {
                     <div className='slide-item flex justify-center'>
                         <img src={WhiteCard} alt='WhiteCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
+                    
                 </Slider>
             </div>
 
