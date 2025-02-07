@@ -152,7 +152,11 @@ const SME = () => {
             </p>
 
             <button
-              onClick={() => navigate("/business/account")}
+              onClick={() => navigate("/business/account", {
+                state: {
+                  section: "account"
+                }
+              })}
               type="button"
               className="animate__animated animate__slow animate__fadeInUp 
                transition-all duration-300 ease-in-out 

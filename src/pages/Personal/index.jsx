@@ -36,6 +36,12 @@ const Personal = () => {
   const personalRef = useRef(null);
   const faqRef = useRef(null);
   const saveRef = useRef(null);
+  const currentRef = useRef(null);
+  const digitalRef = useRef(null);
+  const fixedRef = useRef(null);
+  const loanRef = useRef(null);
+  const cardRef = useRef(null)
+
   const { state } = useLocation();
 
   const navigate = useNavigate()
@@ -90,8 +96,14 @@ const Personal = () => {
     if (state?.section === "faq" && faqRef.current) {
       faqRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    if (state?.section === "save" && saveRef.current) {
+    if (state?.section === "savings" && saveRef.current) {
       saveRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "current" && currentRef.current) {
+      currentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "fixed" && fixedRef.current) {
+      currentRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [state]);
 
@@ -132,7 +144,7 @@ const Personal = () => {
                       >
                         <p 
                             className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                            onClick={() => navigate("/personal/account")}
+                            onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
                             Open an account today
                         </p>
@@ -163,7 +175,7 @@ const Personal = () => {
         </div>
       </section>
 
-      <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={saveRef} className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div data-aos="fade-right" className="hidden md:block" >
               <img 
                   src={Saver} 
@@ -191,7 +203,7 @@ const Personal = () => {
           <img src={Saver} alt='Saver' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div  ref={currentRef} className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
         <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
               <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Current Account</p>
@@ -221,7 +233,7 @@ const Personal = () => {
         </div>
       </div>
 
-      <div className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={fixedRef} className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div data-aos="fade-right" className="hidden md:block" >
               <img 
                   src={Power} 
@@ -250,7 +262,7 @@ const Personal = () => {
           <img src={Power} alt='Power' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
+      <div ref={loanRef} className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
               <p className="text-[#002244] font-[350] font-grava text-sm lg:text-[18px] leading-[27px] tracking-[0.2%]">Loans</p>
@@ -310,6 +322,7 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover"
         }}
+        ref={cardRef}
         className='bg-[#FFFAEB] py-[96px] gap-[40px] px-5 lm:px-[127px] lg:h-auto flex flex-col items-center justify-center lg:gap-[112px]' //[845px]
       >
         <div className="flex flex-col w-[296px] mx-auto gap-3 items-center">
@@ -379,6 +392,7 @@ const Personal = () => {
       </div>
 
       <div 
+        ref={digitalRef}
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
       > 
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
@@ -442,6 +456,11 @@ const Personal = () => {
               <button
                 className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type='button'
+                onClick={() => navigate("/personal/account", {
+                  state: {
+                    section: "account"
+                  }
+                })}
               >
                 <p 
                   className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'

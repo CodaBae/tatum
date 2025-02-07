@@ -51,14 +51,13 @@ const About = () => {
         {
             name: "Jamal Thompson",
             role: "Client",
-            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success. They make me feel like a valued individual rather than just another account number."`
+            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success."`
         },
         {
           name: "David Williams Atata",
           role: "CFO at NovaTech Industries",
-          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out. They know what businesses need, and they have provided everything for me in their app. There are many things I could point out, but to keep it short I'll say, Tatum is just amazing!"`
-        },
-       
+          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out."`
+        }
      
     ];
 
@@ -207,19 +206,32 @@ const About = () => {
                 className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
             >
                 <div className="lm:w-[364px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
-                    <div className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[211px] lm:w-[296px]">
+                    <div 
+                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
+                         data-aos="fade-up"
+                            data-aos-delay="0"
+                    >
                         <img src={Check} alt="Check" className="" />
                         <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Gen Z-Focused Solutions</p>
                     </div>
-                    <div className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px]">
+                    <div
+                           data-aos="fade-up"
+                           data-aos-delay="200" 
+                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px]">
                         <img src={Check} alt="Check" className="" />
                         <p className="font-grava text-[#272727] leading-[20px] lm:leading-[24px] text-[14px] lm:text-[20px]">Cutting-Edge Digital Banking</p>
                     </div>
-                    <div className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[203px] lm:w-[287px]">
+                    <div
+                           data-aos="fade-up"
+                           data-aos-delay="400" 
+                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[203px] lm:w-[287px]">
                         <img src={Check} alt="Check" className="" />
                         <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Accessible and Inclusive</p>
                     </div>
-                    <div className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]">
+                    <div
+                           data-aos="fade-up"
+                           data-aos-delay="600" 
+                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]">
                         <img src={Check} alt="Check" className="" />
                         <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Financial Literacy Advocacy</p>
                     </div>
@@ -247,7 +259,10 @@ const About = () => {
                     and how we serve our customers to deliver exemplary financial services.
                 </p>
             </div>
-            <div className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="0" 
+                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
                 <img src={People} alt="People" className="w-[83px] h-[64px]" />
                 <div className="flex flex-col gap-4">
                     <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
@@ -259,7 +274,10 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6">
+            <div 
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6">
                 <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
                 <div className="flex flex-col gap-4">
                     <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
@@ -271,7 +289,10 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
+            <div
+                   data-aos="fade-up"
+                   data-aos-delay="400" 
+                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
                 <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
                 <div className="flex flex-col gap-4">
                     <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
@@ -283,7 +304,10 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
+            <div
+                   data-aos="fade-up"
+                   data-aos-delay="600" 
+                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
                 <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
                 <div className="flex flex-col gap-4">
                     <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
@@ -296,7 +320,10 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
+            <div
+                   data-aos="fade-up"
+                   data-aos-delay="800" 
+                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
                 <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
                 <div className="flex flex-col gap-4">
                     <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
@@ -435,7 +462,7 @@ const About = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
                 }}
-                className="w-full h-min-auto lm:h-[640px] rounded-xl" // h-[300px]
+                className="w-full h-min-auto lm:h-[380px] rounded-xl" // 
             >
                 <div 
                 className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"

@@ -23,6 +23,7 @@ const AccountPersonal = () => {
     
     const isMobile = window.innerWidth < 768 
     const faqRef = useRef(null);
+    const accountRef = useRef(null);
 
     const { state } = useLocation()
 
@@ -54,10 +55,13 @@ const AccountPersonal = () => {
         if (state?.section === "faq" && faqRef.current) {
           faqRef.current.scrollIntoView({ behavior: "smooth" });
         }
+        if (state?.section === "account" && accountRef.current) {
+            accountRef.current.scrollIntoView({ behavior: "smooth" });
+        }
     }, [state]); 
 
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={accountRef}>
         <section className='h-full w-full overflow-hidden outline-none'>
             <div 
                 style={{

@@ -5,6 +5,7 @@ import Instagram from "../assets/svg/instagram.svg";
 import Facebook from "../assets/svg/facebook.svg";
 import LinkedIn from "../assets/svg/linkedin.svg";
 import Twitter from "../assets/svg/twitter.svg";
+import Logo from "../assets/svg/logo.svg";
 
 import Apple from "../assets/png/apple-store.png";
 import Google from "../assets/png/google-play-store.png";
@@ -32,23 +33,34 @@ const Footer = () => {
           </p>
           <button
             className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg"
-            type="button">
+            type="button"
+            onClick={() => {
+              navigate("/personal/account", {
+                  state: {
+                      section: "account"
+                  }
+              })
+          }}
+          >
             <p className="font-grava text-[#FFCC33] group-hover:text-[#002244]">
-              Open an Account Today
+                Download Form
             </p>
           </button>
         </div>
       </div>
-      <div className="bg-[#fff] w-full px-5 lg:pl-[55px] lg:pr-[67px] pt-[61px] lg:pb-[45px] flex flex-col gap-[48px] lg:items-center">
+      <div className="bg-[#fff] w-full px-5 lg:pl-[55px] lg:pr-[67px] pt-[61px] lg:pb-[10px] flex flex-col gap-[48px] lg:items-center">
         <div className="flex flex-col lg:flex-row gap-[40px] lg:gap-[94px]">
           <div className="flex flex-col items-start gap-6 lg:w-[180px]">
             <div className="flex flex-col gap-3">
               <p className="font-grava text-[#002244] uppercase tracking-wide font-medium text-base">
                 Contact us
               </p>
-              <p className="font-grava text-[#002244] font-[350] text-sm ">
+              <a 
+                href="mailto:info@tatumbank.com"
+                className="font-grava text-[#002244] block font-[350] text-sm "
+              >
                 info@tatumbank.com
-              </p>
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <img src={Instagram} alt="Instagram" className="cursor-pointer" />
@@ -82,10 +94,20 @@ const Footer = () => {
                 >
                   Careers
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/resources", {
+                    state: { section: "resources" },
+                  }) }
+                >
                   Blogs
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/contact", {
+                    state: { section: "contact" },
+                  }) }
+                >
                   Contact
                 </p>
               </div>
@@ -111,7 +133,12 @@ const Footer = () => {
                 >
                   Business Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  onClick={() => navigate("/corporate", {
+                    state: { section: "corporate" },
+                  }) }
+                >
                   Corporate Banking
                 </p>
                 <p 
@@ -172,13 +199,28 @@ const Footer = () => {
                 SUPPORT
               </p>
               <div className="flex flex-col gap-6">
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/help", {
+                    state: { section: "help" },
+                  }) }
+                >
                   FAQ
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/resources", {
+                    state: { section: "resources" },
+                  }) }
+                >
                   Video Tutorials
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/help", {
+                    state: { section: "help" },
+                  }) }
+                >
                   Help Center
                 </p>
                 <p 
@@ -204,27 +246,22 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-[1px] bg-[#546B82] w-full"></div>
-        <div className="flex flex-col gap-[51px]">
-          <div className="flex flex-col gap-[17px]">
-            <p className="font-grava font-[350] text-[#002244] text-xs">
-              If you would like to find out more about which Tatum entity you
-              receive services from, please reach out to us via the contact
-              options provided on our website or through our customer support
-              channels. Nigerian banking services are offered by Tatum Bank Ltd
-              (RC7745719) with a registered address at Plot 1088, Cadastral Zone
-              AO1, Area 3, Garki FCT Abuja, Nigeria. Tatum Bank Ltd. is licensed
-              by the Central Bank of Nigeria (CBN). Deposits are insured by the
-              Nigerian Deposit Insurance Corporation (NDIC).
+        <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[51px]">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="w-[109px] h-[44px] cursor-pointer"
+            onClick={() => navigate("/", {
+              state: { section: "home" },
+            })}
+          />
+       
+          <div className="flex flex-col gap-1 ">
+            <p className="text-xs text-[#002244] flex justify-end font-grava">
+              &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
             </p>
             <p className="text-xs text-[#002244] font-grava">
-              For assistance, please contact our Customer Support Team or refer
-              to our <span className="underline cursor-pointer" onClick={() => {navigate("/privacy-policy"); window.scrollTo(0, 0)}}>Privacy Policy</span> and <span className="underline cursor-pointer" onClick={() => {navigate("/terms"); window.scrollTo(0, 0)}}>Terms of Service.</span>
-            </p>
-          </div>
-          <div className="flex items-center justify-between pb-10">
-            <p className="text-xs text-[#002244] font-grava">
-              &copy; {new Date().getFullYear()}. Tatum Bank Ltd. All Rights
-              Reserved.
+              Licensed by the Central Bank of Nigeria. All deposits are insured by NDIC. All rights reserved
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ import Management from './Management';
 import Director from './Director';
 
 const Teams = () => {
-    const [activeTab, setActiveTab] = useState("management")
+    const [activeTab, setActiveTab] = useState("board")
 
     const navigate = useNavigate()
 
@@ -81,11 +81,11 @@ const Teams = () => {
 
         <div className='bg-[#fff] pt-[56px] lg:pt-[120px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] flex flex-col gap-2'>
             <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] border-x-0 border-t-0'>
-                <div className={`${activeTab === "management" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[369px] flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("management")}>
+                {/* <div className={`${activeTab === "management" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[369px] flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("management")}>
                     <p className={`${activeTab === "management" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[40px] font-normal`}>
                         Management Team
                     </p>
-                </div>
+                </div> */}
                 <div className={`${activeTab === "board" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[369px] flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("board")}>
                     <p className={`${activeTab === "board" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[40px] font-normal`}>
                         Board of Directors
