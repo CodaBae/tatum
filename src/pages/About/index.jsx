@@ -61,7 +61,29 @@ const About = () => {
      
     ];
 
-    
+    const team = [
+        {
+          name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
+          role: "Non-Executive Director",
+          bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring 'Selected Judgment & Ruling of Hon. Justice L.H. Gummi' and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association. His career is marked by exceptional legal achievements, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally."
+        },
+        {
+          name: "Niyi Adeseun",
+          role: "Managing Director",
+          bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School."
+        },
+        {
+          name: "Aminatu Dahiru Chiroma",
+          role: "Executive Director",
+          bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+        },
+        {
+          name: "Aminatu Dahiru Chiroma",
+          role: "Non-Executive Director",
+          bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+        }
+      ];
+      
     useEffect(() => {
         const interval = setInterval(() => {
         setActiveIndex(prev => (prev + 1) % testimonials.length);
@@ -348,7 +370,7 @@ const About = () => {
             </div>
             <div className="flex flex-col lm:flex-row gap-5">
                 {/* First Card with Hover Effect */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details"}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[0]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -375,7 +397,7 @@ const About = () => {
                 </div>
 
                 {/* Second Card (Hover Effect) */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[1]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -401,7 +423,7 @@ const About = () => {
                 </div>
 
                 {/* Third Card (Hover Effect) */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[2]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -427,7 +449,7 @@ const About = () => {
                 </div>
 
                 {/* Fourth Card (Hover Effect) */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[3]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
