@@ -348,7 +348,7 @@ const About = () => {
             </div>
             <div className="flex flex-col lm:flex-row gap-5">
                 {/* First Card with Hover Effect */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team[0]}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team: team[0]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -375,7 +375,7 @@ const About = () => {
                 </div>
 
                 {/* Second Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team[1]}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[1]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -401,7 +401,7 @@ const About = () => {
                 </div>
 
                 {/* Third Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team[2]}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[2]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
@@ -427,7 +427,7 @@ const About = () => {
                 </div>
 
                 {/* Fourth Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team[3]}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[3]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
