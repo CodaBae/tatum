@@ -43,7 +43,7 @@ import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -53,6 +53,8 @@ const Home = () => {
     
 
     const formatter = new Intl.NumberFormat('en-US');
+
+    const navigate  = useNavigate()
 
     const homeRef = useRef(null);
     const { state } = useLocation();
@@ -218,6 +220,9 @@ const Home = () => {
                                     <button
                                         className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
                                         type='button'
+                                        onClick={() => navigate("/digital", {state: {
+                                            section: "digital"
+                                        }})}
                                     >
                                         <p 
                                             className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -231,6 +236,9 @@ const Home = () => {
                                     <button 
                                         className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`} 
                                         type='button'
+                                        onClick={() => navigate("/digital", {state: {
+                                            section: "digital"
+                                        }})}
                                     >
                                         <p className='font-grava text-sm whitespace-nowrap lg:text-base text-[#002244] font-medium'>Learn more</p>
                                     </button>
@@ -282,6 +290,9 @@ const Home = () => {
                                     <button
                                         className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button' 
+                                        onClick={() => navigate("/digital", {state: {
+                                            section: "digital"
+                                        }})}
                                         //animate__delay-2s
                                     >
                                         <p 
@@ -296,7 +307,9 @@ const Home = () => {
                                     <button 
                                         className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                                         type='button'
-                                        //  animate__delay-2s
+                                        onClick={() => navigate("/digital", {state: {
+                                            section: "digital"
+                                        }})}
                                     >
                                         <p className='font-grava text-base text-[#002244] font-medium'>Download App</p>
                                     </button>
@@ -348,11 +361,14 @@ const Home = () => {
                                     <button
                                         className={`${activeIndex === 2 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
+                                        onClick={() => navigate("/business", {state: {
+                                            section: "business"
+                                        }})}
                                     >
                                         <p 
                                             className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
-                                            Get started with SME Banking
+                                            Get started with Business Banking
                                         </p>
                                         <FaArrowRightLong 
                                             className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
@@ -405,6 +421,9 @@ const Home = () => {
                                     <button
                                         className={`${activeIndex === 3 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
+                                        onClick={() => navigate("/digital", {state: {
+                                            section: "digital"
+                                        }})}
                                     >
                                         <p 
                                             className='font-medium transition-colors duration-300 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -455,6 +474,9 @@ const Home = () => {
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
+                    onClick={() => navigate("/personal", {state: {
+                        section: "personal"
+                    }})}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                     <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -474,6 +496,9 @@ const Home = () => {
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
+                    onClick={() => navigate("/corporate", {state: {
+                        section: "corporate"
+                    }})}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                     <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -498,7 +523,7 @@ const Home = () => {
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-                    <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>SME Banking</p>
+                    <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>Business Banking</p>
                     <p className='font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
                         Empowering small businesses with loans, tools, and expert support.
                     </p>
@@ -506,6 +531,13 @@ const Home = () => {
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
+                    onClick={() => {
+                        navigate("/business", {
+                            state: {
+                                section: "business"
+                            }
+                        })
+                    }}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                     <FaArrowRightLong className='mt-[2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -524,6 +556,13 @@ const Home = () => {
                 <button
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
+                    onClick={() => {
+                        navigate("/private", {
+                            state: {
+                                section: "private"
+                            }
+                        })
+                    }}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                     <FaArrowRightLong className='mt-[2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -583,7 +622,7 @@ const Home = () => {
                             key={index}
                             src={card}
                             alt="Card"
-                            className="absolute w-[252px] h-[350px] transition-transform duration-300"
+                            className="absolute w-full h-[250px] transition-transform duration-300"
                             style={{
                                 transform: `rotateY(${angle}deg) translateZ(300px)`,
                                 pointerEvents: 'none'
@@ -617,6 +656,13 @@ const Home = () => {
 
            <button
                 className='transition-all duration-300 ease-in-out w-[200px] lg:w-[246px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
+                onClick={() => {
+                    navigate("/personal", {
+                        state: {
+                            section: "personalCard"
+                        }
+                    })
+                }}
            >
                 <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Choose your Tatum Card</p>
            </button>
@@ -715,7 +761,16 @@ const Home = () => {
                     </div>
                     <div className='w-full bg-[#fff] rounded-2xl gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center'>
                         <div className='flex flex-col items-center gap-6 '>
-                            <button className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'>
+                            <button 
+                                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'
+                                onClick={() => {
+                                    navigate("/digital", {
+                                        state: {
+                                            section: "digital"
+                                        }
+                                    })
+                                }}
+                            >
                                 <p className='transition-colors duration-300 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
                             </button>
                             <p className='text-base text-[#002244] font-grava cursor-pointer'>Check eligibility</p>
@@ -803,6 +858,13 @@ const Home = () => {
             <button
                 className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                 type='button'
+                onClick={() => {
+                    navigate("/resources", {
+                        state: {
+                            section: "resources"
+                        }
+                    })
+                }}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>
                     Explore Our Resource Center
@@ -960,6 +1022,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/personal", {
+                                state: {
+                                    section: "personalCard"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -981,6 +1050,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/contact", {
+                                state: {
+                                    section: "contact"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1003,6 +1079,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/digital", {
+                                state: {
+                                    section: "digital"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1025,6 +1108,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/digital", {
+                                state: {
+                                    section: "digital"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1046,6 +1136,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/digital", {
+                                state: {
+                                    section: "digital"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1068,6 +1165,13 @@ const Home = () => {
                     <button
                         className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
                         type="button"
+                        onClick={() => {
+                            navigate("/digital", {
+                                state: {
+                                    section: "digital"
+                                }
+                            })
+                        }}
                     >
                         <span
                             className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"

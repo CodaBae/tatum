@@ -25,6 +25,13 @@ const Corporate = () => {
   const isMobile = window.innerWidth < 768
 
   const corporateRef = useRef(null);
+  const treasuryRef = useRef(null);
+  const investmentRef = useRef(null);
+  const tradeRef = useRef(null);
+  const lendingRef = useRef(null);
+  const strategicRef = useRef(null);
+  const faqRef = useRef(null);
+
   const { state } = useLocation();
 
   const navigate = useNavigate()
@@ -48,6 +55,21 @@ const Corporate = () => {
   useEffect(() => {
       if (state?.section === "corporate" && corporateRef.current) {
         corporateRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "treasury" && treasuryRef.current) {
+        treasuryRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "trade" && tradeRef.current) {
+        tradeRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "faq" && faqRef.current) {
+        faqRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "investment" && investmentRef.current) {
+        investmentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (state?.section === "lending" && lendingRef.current) {
+        lendingRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }, [state]);
 
@@ -82,7 +104,9 @@ const Corporate = () => {
                             <button
                               className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                               type='button'
-                              onClick={() => navigate("/corporate/account")}
+                              onClick={() => navigate("/corporate/account", {
+                                state: {section: "account"}
+                              })}
                             >
                                 <p 
                                   className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -137,6 +161,9 @@ const Corporate = () => {
                 <button
                   className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[241px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
+                  onClick={() => navigate("/corporate/account", {
+                    state: {section: "account"}
+                  })}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
                     <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -146,6 +173,9 @@ const Corporate = () => {
             <button
               className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[283px] h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
               type='button'
+              onClick={() => navigate("/corporate/account", {
+                state: {section: "account"}
+              })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
                 <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -154,7 +184,7 @@ const Corporate = () => {
         <img src={Corp} alt='Corp' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={investmentRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
@@ -188,6 +218,9 @@ const Corporate = () => {
             <button
                 className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/corporate/account", {
+                  state: {section: "account"}
+                })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -202,7 +235,7 @@ const Corporate = () => {
           </div>
       </div>
 
-      <div className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={treasuryRef} className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
         <div data-aos="fade-right" className="hidden md:block" >
             <img 
                 src={Treasury} 
@@ -244,6 +277,9 @@ const Corporate = () => {
             <button
                 className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/corporate/account", {
+                  state: {section: "account"}
+                })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -252,7 +288,7 @@ const Corporate = () => {
         <img src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={tradeRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
@@ -287,6 +323,9 @@ const Corporate = () => {
             <button
                 className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[210px] lg:w-[247px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/corporate/account", {
+                  state: {section: "account"}
+                })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -301,7 +340,7 @@ const Corporate = () => {
           </div>
       </div>
 
-      <div className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={lendingRef} className='bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
         <div data-aos="fade-right" className="hidden md:block" >
             <img 
                 src={Lending} 
@@ -343,6 +382,9 @@ const Corporate = () => {
             <button
               className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[208px] lg:w-[245px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
+              onClick={() => navigate("/corporate/account", {
+                state: {section: "account"}
+              })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -351,7 +393,7 @@ const Corporate = () => {
         <img src={Lending} alt='Lending' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={strategicRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                 <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
@@ -386,6 +428,9 @@ const Corporate = () => {
             <button
                 className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/corporate/account", {
+                  state: {section: "account"}
+                })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -400,7 +445,7 @@ const Corporate = () => {
           </div>
       </div>
 
-      <div className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
+      <div ref={faqRef} className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
         <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
           <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
           <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Corporate Banking.</p>
