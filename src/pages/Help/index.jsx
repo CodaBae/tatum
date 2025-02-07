@@ -1,8 +1,258 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FiSearch } from 'react-icons/fi'
+import { FaArrowRightLong } from 'react-icons/fa6';
+
+import Line from "../../assets/svg/line_b.svg"
+import Plus from "../../assets/svg/plus.svg";
+import Chat from "../../assets/svg/chat.svg";
+import Locator from "../../assets/svg/locator.svg";
+import Minus from "../../assets/svg/minus.svg";
 
 const Help = () => {
+  const [text, setText] = useState("")
+
+  const isMobile = window.innerWidth < 768
+
   return (
-    <div>Help</div>
+    <div className='w-full'>
+      <section className='h-full w-full outline-none '>
+        <div 
+          style={{
+              backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover"
+          }}
+          className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+        >
+          <div className='w-full  flex flex-col items-start relative pt-[124px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+              <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                  <p 
+                      className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                  >
+                      Help & Support
+                  </p>
+                  <p 
+                      className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                  >
+                      If you require any assistance regarding our company, businesses or exploits, 
+                      please don’t hesitate to contact us..
+                  </p>
+                
+              </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section className='flex flex-col items-center justify-center py-[80px] gap-[56px] lm:gap-[72px]'>
+        <div className='w-10/12 lm:w-[878px] h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
+          <input 
+            className='w-8/12 text-[#546B82] text-[18px] font-grava font-[350]'
+            type='text'
+            placeholder='Enter keyword...'
+            value={text}
+            name="search"
+            onChange={(e) => setText(e.target.value)}
+          />
+          <FiSearch className="w-5 h-5 text-[#002244] " />
+        </div>
+        <img src={Line} alt='Line' className='w-full' />
+
+        <div
+          className='flex items-center flex-col gap-[56px] justify-center lm:w-[878px] w-11/12'
+        >
+          <div className='flex flex-col items-center gap-2 lm:gap-4'>
+            <p className='font-grava font-medium text-[21px] lm:text-[48px] leading-[60px] tracking-[0.2%] text-[#002244]'>FAQs</p>
+            <p className='font-[350] font-grava text-sm text-[#334E69]'>Have a question? We’re here to help.</p>
+          </div>
+
+          <div className='flex flex-col gap-6 w-full'>
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What do I need to open an account?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Are there any account opening fees?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+
+            <div 
+              // onClick={handleDropdownOne} 
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+            >
+              <div className='flex items-center justify-between'>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <img src={Plus} alt='Plus' className='' />
+                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+              </div>
+                {/* { openDropdownOne && 
+                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        Just a government-issued ID and your account opening is processed.
+                    </p>
+                } */}
+            </div>
+          </div>
+
+          <div className='bg-[#FFFAEB] w-full lg:w-[1014px] rounded-[16px] px-5 lm:px-[32px] mt-[32px] flex flex-col lm:flex-row items-center gap-[32px] lm:gap-0 justify-between py-10 lm:py-[52px]'>
+            <div className='flex flex-col w-[310px] lm:w-full items-center lm:items-start gap-2'>
+              <p className='font-grava font-medium text-[#002244] text-[18px] lm:text-[28px] leading-[27px] lm:leading-[35px] '>Still have questions?</p>
+              <p className='font-[350] text-[#334E69] text-center lm:text-left text-xs lm:text-sm'>Can’t find the answer you’re looking for? Please get in touch with our team.</p>
+            </div>
+            <button
+              className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[166px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              type='button'
+              // onClick={() => navigate("/", {state: {section: "home"}})}
+            >
+                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
+                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+      
+      <section className='w-full px-5 lm:px-[56px] py-[56px] lm:py-[80px] flex flex-col lm:flex-row items-center gap-5'> 
+          <div className='bg-[#FFFAEB] flex flex-col w-full lm:w-6/12 rounded-tl-[24px] rounded-br-[24px] h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
+              <img src={Chat} alt='Chat' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
+              <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
+                <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-medium'>General support:</p>
+                <p className='font-[350] font-grava text-[#334E69] text-sm lm:text-[20px]'>info@tatumbank.com</p>
+              </div>
+          </div>
+
+          <div className='bg-[#FFFAEB] flex flex-col rounded-tl-[24px] rounded-br-[24px] w-full lm:w-6/12  h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
+              <img src={Locator} alt='Locator' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
+              <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
+                <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-medium'>Head Office</p>
+                <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</p>
+              </div>
+          </div>
+
+      </section>
+        
+
+    </div>
+
   )
 }
 
