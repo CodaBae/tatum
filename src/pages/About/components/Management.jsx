@@ -35,24 +35,45 @@ const team = [
     {
       name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
       role: "Non-Executive Director",
-      bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring 'Selected Judgment & Ruling of Hon. Justice L.H. Gummi' and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association. His career is marked by exceptional legal achievements, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally."
+      bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association."
     },
     {
       name: "Niyi Adeseun",
       role: "Managing Director",
-      bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School."
+      bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. He has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. He was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until 2017. Niyi holds an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB)."
     },
     {
       name: "Aminatu Dahiru Chiroma",
       role: "Executive Director",
-      bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+      bio: "Aminatu Chiroma is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
     },
     {
       name: "Aminatu Dahiru Chiroma",
       role: "Non-Executive Director",
-      bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+      bio: "Aminatu Chiroma has a proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity. With expertise in project management, risk mitigation, and legal compliance, she has played a significant role in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations."
+    },
+    {
+      name: "Felix E. Igbinosa",
+      role: "Independent Non-Executive Director",
+      bio: "Felix Igbinosa is a seasoned ex-banker with over three decades of experience in banking and financial services, specializing in corporate banking, relationship management, internal control, and audit. He held senior roles at Seven-UP Bottling Company Plc, Allstates Trust Bank, UBA Plc, and Ecobank, where he was the Chief Audit Executive (CAE) and Chief Risk Officer from 2015 to 2023. Felix holds a degree in Business Management from the University of Benin and multiple professional certifications, including Fellowship of CITN and ISACA (USA)."
+    },
+    {
+      name: "Samuel Otseliu Zibiri, SAN",
+      role: "Non-Executive Director",
+      bio: "Samuel Otseliu Zibiri, SAN, is a distinguished Nigerian lawyer with a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co and has served as Secretary General of the Nigerian Bar Association, Abuja Branch. A Senior Advocate of Nigeria since 2011, he actively contributes to legal scholarship and human rights advocacy."
+    },
+    {
+      name: "Tonya Lawani",
+      role: "Non-Executive Director",
+      bio: "Tonya Lawani is a seasoned entrepreneur with over 20 years of experience leading multiple businesses. As the Group Chief Executive of Seal Group, she oversees operations across industries such as manufacturing, hospitality, retail, and advertising. She founded Virgin Vie Angel Limited in 2005, ABC Inflatables Nigeria Limited, and The Virgin Hospitality Company. With a BSc in Economics and an MBA, she has attended executive education at Business School Netherlands and Harvard University."
+    },
+    {
+      name: "Francis Okosun",
+      role: "Non-Executive Director",
+      bio: "Francis Okosun is an accomplished real estate professional and the Senior Partner/CEO of Knight Frank Nigeria. With over two decades of experience, he has played a crucial role in maintaining Knight Frank's position as a leading estate surveying and valuation firm. He holds an MBA from Lagos State University and a Diploma in Estate Management from the Federal Polytechnic, Auchi. A Fellow of the Nigerian Institution of Estate Surveyors & Valuers, he has been recognized as the Real Estate Professional of the Year at the Nigeria BEMIS Honors Nite."
     }
   ];
+
 
 
 const Management = () => {
