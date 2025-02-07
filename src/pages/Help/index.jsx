@@ -24,19 +24,19 @@ const Help = () => {
     setOpenDropdownOne(!openDropdownOne)
 
   }
-  const handleDropdownOne= () => {
+  const handleDropdownTwo= () => {
     setOpenDropdownTwo(!openDropdownTwo)
 
   }
-  const handleDropdownOne= () => {
+  const handleDropdownThree= () => {
     setOpenDropdownThree(!openDropdownThree)
 
   }
-  const handleDropdownOne= () => {
+  const handleDropdownFour= () => {
     setOpenDropdownFour(!openDropdownFour)
 
   }
-  const handleDropdownOne= () => {
+  const handleDropdownFive= () => {
     setOpenDropdownFive(!openDropdownFive)
 
   }
