@@ -45,8 +45,8 @@ export default function Routers() {
         <Route path="corporate" element={<Corporate />} />
         <Route path="corporate/account" element={<AccountCorporate />} />
         <Route path="help" element={<Help />} />
-        <Route path="institution" element={<Institutional />} />
-        <Route path="/institution/account" element={<AccountInstitutional />} />
+        <Route path="institutional" element={<Institutional />} />
+        <Route path="/institutional/account" element={<AccountInstitutional />} />
         <Route path="digital" element={<Digital />} />
         <Route path="private" element={<Private />} />
         <Route path="/private/account" element={<AccountPrivacy />} />

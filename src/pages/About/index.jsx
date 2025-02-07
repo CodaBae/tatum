@@ -1,4 +1,4 @@
-import React, { useEffect, useRef }  from "react";
+import React, { useEffect, useRef, useState }  from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
@@ -32,7 +32,8 @@ import Layer from "../../assets/png/layer.png";
 
 
 const About = () => {
-
+    const [activeIndex, setActiveIndex] = useState(0);
+    
     const aboutRef = useRef(null);
     const missionRef = useRef(null); 
     const teamsRef = useRef(null); 
@@ -40,6 +41,37 @@ const About = () => {
     const { state } = useLocation();
 
     const navigate = useNavigate();
+
+    const testimonials = [
+        {
+            name: "Nnamdi Peters",
+            role: "Client",
+            text: `"Ever since I switched to Tatum Bank, managing my finances has become incredibly straightforward. Their online platform and customer service have always makes me happy"`
+        },
+        {
+            name: "Jamal Thompson",
+            role: "Client",
+            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success. They make me feel like a valued individual rather than just another account number."`
+        },
+        {
+          name: "David Williams Atata",
+          role: "CFO at NovaTech Industries",
+          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out. They know what businesses need, and they have provided everything for me in their app. There are many things I could point out, but to keep it short I'll say, Tatum is just amazing!"`
+        },
+       
+     
+    ];
+
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setActiveIndex(prev => (prev + 1) % testimonials.length);
+        }, 5000); // Change testimonial every 5 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const formatNumber = (num) => String(num + 1).padStart(2, '0');
     
     useEffect(() => {
     if (state?.section === "about" && aboutRef.current) {
@@ -399,6 +431,63 @@ const About = () => {
         <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
             <div
                 style={{
+                backgroundImage: `url(${Layer})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover"
+                }}
+                className="w-full h-min-auto lm:h-[640px] rounded-xl" // h-[300px]
+            >
+                <div 
+                className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
+                style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
+                >
+                <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px] ">
+                    <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
+                    Words from <span className="font-bold">our clients.</span>
+                    </p>
+                    <div className="flex items-center gap-4">
+                    <div className="h-[1px] w-[230px] bg-[#002244]"></div>
+                    <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
+                        {formatNumber(activeIndex)} 
+                        <span className="text-[#8A99A9] font-[350]"> / {formatNumber(testimonials.length - 1)}</span>
+                    </p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-5 lm:gap-[40px] lm:w-[766px] relative h-[300px]">
+                    {testimonials.map((testimonial, index) => (
+                    <div
+                        key={index}
+                        className={`absolute transition-all duration-500 ease-in-out ${
+                        index === activeIndex 
+                            ? 'opacity-100 translate-x-0' 
+                            : 'opacity-0 translate-x-10'
+                        }`}
+                    >
+                        <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[32px]">
+                        {testimonial.text}
+                        </p>
+                        <div className="flex gap-4 mt-5">
+                        <img src={Girl} alt="" className="w-[64px] h-[64px]" />
+                        <div className="flex flex-col gap-2">
+                            <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
+                            {testimonial.name}
+                            </p>
+                            <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
+                            {testimonial.role}
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    ))}
+                </div>
+                </div>
+            </div>
+        </section>
+
+        {/* <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
+            <div
+                style={{
                     backgroundImage: `url(${Layer})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
@@ -408,7 +497,7 @@ const About = () => {
                 <div 
                     className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
                     style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
-                    // flex items-start gap-[216px]
+                 
                 >
                     <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px] ">
                         <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">Words from 
@@ -434,7 +523,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
 
         {/* <section
             style={{
