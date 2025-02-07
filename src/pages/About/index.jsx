@@ -61,6 +61,39 @@ const About = () => {
      
     ];
 
+    const team = [
+        {
+            name: "Nnamdi Peters",
+            role: "Client",
+            text: `"Ever since I switched to Tatum Bank, managing my finances has become incredibly straightforward. Their online platform and customer service have always makes me happy"`
+        },
+        {
+            name: "Jamal Thompson",
+            role: "Client",
+            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success."`
+        },
+        {
+          name: "David Williams Atata",
+          role: "CFO at NovaTech Industries",
+          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out."`
+        },
+        {
+            name: "Nnamdi Peters",
+            role: "Client",
+            text: `"Ever since I switched to Tatum Bank, managing my finances has become incredibly straightforward. Their online platform and customer service have always makes me happy"`
+        },
+        {
+            name: "Jamal Thompson",
+            role: "Client",
+            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success."`
+        },
+        {
+          name: "David Williams Atata",
+          role: "CFO at NovaTech Industries",
+          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out."`
+        },
+     
+    ];
     
     useEffect(() => {
         const interval = setInterval(() => {
@@ -348,7 +381,7 @@ const About = () => {
             </div>
             <div className="flex flex-col lm:flex-row gap-5">
                 {/* First Card with Hover Effect */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team: team[0]}}) }}>
+                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[0]}}) }}>
                     <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
                     {/* Background Image */}
                     <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
