@@ -11,6 +11,11 @@ import Minus from "../../assets/svg/minus.svg";
 const Help = () => {
   const [text, setText] = useState("")
   const [openDropdownOne, setOpenDropdownOne] = useState(false)
+  const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
+  const [openDropdownThree, setOpenDropdownThree] = useState(false)
+  const [openDropdownFour, setOpenDropdownFour] = useState(false)
+  const [openDropdownFive, setOpenDropdownFive] = useState(false)
+
 
 
   const isMobile = window.innerWidth < 768
@@ -19,7 +24,22 @@ const Help = () => {
     setOpenDropdownOne(!openDropdownOne)
 
   }
+  const handleDropdownOne= () => {
+    setOpenDropdownTwo(!openDropdownTwo)
 
+  }
+  const handleDropdownOne= () => {
+    setOpenDropdownThree(!openDropdownThree)
+
+  }
+  const handleDropdownOne= () => {
+    setOpenDropdownFour(!openDropdownFour)
+
+  }
+  const handleDropdownOne= () => {
+    setOpenDropdownFive(!openDropdownFive)
+
+  }
   return (
     <div className='w-full'>
       <section className='h-full w-full outline-none '>
@@ -80,7 +100,7 @@ const Help = () => {
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How can I contact Tatum Bank?</p>
-                <img src={Plus} alt='Plus' className='' />
+               
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownOne && 
@@ -94,16 +114,15 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              onClick={handleDropdownTwo} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How do I open an account with Tatum Bank?
                 </p>
-                <img src={Plus} alt='Plus' className='' />
-                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                { openDropdownOne && 
+                { openDropdownTwo && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         You can open an account online via our website or visit our office. Required documents include:
 
@@ -117,15 +136,14 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              onClick={handleDropdownThree} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
-                <img src={Plus} alt='Plus' className='' />
-                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                { openDropdownOne && 
+                { openDropdownThree && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Yes, Tatum Bank is fully licensed and regulated by the Central Bank of Nigeria (CBN) and insured by the Nigeria Deposit Insurance Corporation (NDIC).
 
@@ -134,15 +152,14 @@ You can also visit our head office for in-person support during business hours.
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              onClick={handleDropdownFour} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Where is Tatum Bank located?                </p>
-                <img src={Plus} alt='Plus' className='' />
-                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                {openDropdownFour ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                { openDropdownOne && 
+                { openDropdownFour && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Currently, we operate solely from our head office in Abuja, but we are expanding soon. Stay updated via our website and social media channels. <br />
 Our head office is at:  <br />
@@ -153,16 +170,15 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
             </div>
 
             <div 
-              onClick={handleDropdownOne} 
+              onClick={handleDropdownFive} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What types of banking services does Tatum Bank offer?
                 </p>
-                <img src={Plus} alt='Plus' className='' />
-                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                {openDropdownFive ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                { openDropdownOne && 
+                { openDropdownFive && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         We offer five core segments:   <br />
 •⁠  ⁠Personal Banking: For individuals   <br />
