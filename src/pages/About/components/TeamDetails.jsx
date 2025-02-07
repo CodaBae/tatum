@@ -94,8 +94,8 @@ const TeamDetails = () => {
             <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-[17px]'>
 
               <div className='flex flex-col items-start '>
-                <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>Non-Executive Director</p>
-                <p className='text-[#002244] font-semibold text-[34px] leading-[51px] font-grava '>Aminatu Dahiru Chiroma</p>
+                <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
+                <p className='text-[#002244] font-semibold text-[34px] leading-[51px] font-grava '>{state?.team.name}</p>
               </div>
 
               <div className='flex items-center gap-3'>
