@@ -72,7 +72,7 @@ const Contact = () => {
             <img src={Call} alt='Call' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
         </section>
 
-        <section data-aos="fade-up"  className='bg-[#F9FAFB] flex flex-col px-5 gap-[56px] lm:px-[56px] py-[56px] lm:py-[80px] '>
+        <section data-aos="fade-up"  data-aos-duration="3000" className='bg-[#F9FAFB] flex flex-col px-5 gap-[56px] lm:px-[56px] py-[56px] lm:py-[80px] '>
             <div className='flex flex-col gap-4 w-full lm:w-[354px]'>
                 <p className='font-grava text-[#002244] font-medium leading-[40px] lm:leading-[60px] text-[32px] lm:text-[48px] '>Get in Touch</p>
                 <p className='font-[350] font-grava text-[#002244] text-sm lm:text-[18px] '>Fill the form below and a member of our team will be in touch with you.</p>
@@ -147,7 +147,7 @@ const Contact = () => {
             </div>
         </section>
 
-        <section data-aos="fade-up"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
+        <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
             <div className='flex flex-col gap-4 w-full items-center lm:w-[461px]'>
                 <p className='font-grava text-[28px] font-medium lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
                 <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
