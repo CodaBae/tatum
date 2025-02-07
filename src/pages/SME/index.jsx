@@ -69,12 +69,24 @@ const SME = () => {
 
   const smeRef = useRef(null);
   const paymentRef = useRef(null);
+  const accountRef = useRef(null);
+  const loanRef = useRef(null);
+  const advisoryRef = useRef(null);
   const faqRef = useRef(null);
   const { state } = useLocation();
 
   useEffect(() => {
     if (state?.section === "business" && smeRef.current) {
       smeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "account" && accountRef.current) {
+      accountRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "loans" && loanRef.current) {
+      loanRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "advisory" && advisoryRef.current) {
+      advisoryRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "payment" && paymentRef.current) {
       paymentRef.current.scrollIntoView({ behavior: "smooth" });
@@ -199,7 +211,7 @@ const SME = () => {
       {/* CARDS */}
 
       <div
-        ref={paymentRef}
+        ref={accountRef}
         className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1227px]">
         <div className="flex flex-col items-center gap-[72px] ">
           <div className="flex flex-col items-center gap-[16px]">
@@ -277,7 +289,7 @@ const SME = () => {
 
       {/* LOAN CALCULATOR SECTION */}
 
-      <div className="pt-[56px] lg:pt-0 h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
+      <div ref={loanRef}  className="pt-[56px] lg:pt-0 h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
         <div className="flex flex-col items-center gap-[40px] w-[1328px] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
             <p className="font-grava font-[350] text-center text-[14px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
@@ -624,7 +636,7 @@ const SME = () => {
 
       {/* Scroll section starts */}
 
-      <div className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col gap-8 sm:gap-[64px]">
+      <div ref={paymentRef} className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col gap-8 sm:gap-[64px]">
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
             <h1 className="font-grava font-medium w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
@@ -855,6 +867,7 @@ const SME = () => {
       {/* Scroll section ends */}
 
       <div
+      ref={advisoryRef}
         className="
     h-[1019.45px] sm:h-[1120.45px] lg:h-[705px] 
     bg-[#FFFFFF] 
@@ -1021,7 +1034,7 @@ const SME = () => {
         </div>
       </div>
 
-      <div className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+      <div ref={faqRef} className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
           <p className="text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava">
             WHY CHOOSE US

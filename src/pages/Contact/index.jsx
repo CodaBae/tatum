@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
 
 import Call from "../../assets/png/call_center.png"
@@ -9,6 +9,7 @@ import MapBig from "../../assets/png/map_big.png"
 
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
+import { useLocation } from 'react-router-dom'
 
 const Contact = () => {
     const [name, setName] = useState("")
@@ -19,8 +20,20 @@ const Contact = () => {
 
     const isMobile = window.innerWidth < 768
 
+    const contactRef = useRef(null)
+    const { state } = useLocation()
+
+    useEffect(() => {
+        if (state?.section === "contact" && contactRef.current) {
+            contactRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state])
+
+        
+       
+
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={contactRef}>
 
         <section className='h-full w-full outline-none '>
             <div 

@@ -33,7 +33,7 @@ const Institutional = () => {
         if (state?.section === "faq" && faqRef.current) {
             faqRef.current.scrollIntoView({ behavior: "smooth" });
         }
-        if (state?.section === "Institution" && InstitutionRef.current) {
+        if (state?.section === "institution" && InstitutionRef.current) {
             InstitutionRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]);
@@ -87,7 +87,9 @@ const Institutional = () => {
                                 <button
                                     className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                     type='button'
-                                    onClick={() => navigate("/institution/account")}
+                                    onClick={() => navigate("/institutional/account", {state: {
+                                        section: "account"
+                                    }})}
                                 >
                                     <p 
                                     className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -112,7 +114,7 @@ const Institutional = () => {
                     <img 
                         src={Institution} 
                         alt='Temple' 
-                        className={`animate__animated animate__zoomIn relative lm:right-52 h-[605px] lg:mt-20 lm:h-[641px]`} 
+                        className={`animate__animated animate__zoomIn relative lm:right-44 h-[605px] lg:mt-20 lm:h-[641px]`} 
                     />
                 </div>
             </section>
@@ -142,6 +144,9 @@ const Institutional = () => {
                         <button
                             className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[141px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'
+                            onClick={() => navigate("/institutional/account", {state: {
+                                section: "account"
+                            }})}
                         >
                             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                             <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -199,6 +204,9 @@ const Institutional = () => {
                     <button
                         className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[168px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
                         type='button'
+                        onClick={() => navigate("/institutional/account", {state: {
+                            section: "account"
+                        }})}
                     >
                         <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                         <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -222,6 +230,9 @@ const Institutional = () => {
                         <button
                             className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[293px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'
+                            onClick={() => navigate("/institutional/account", {state: {
+                                section: "account"
+                            }})}
                         >
                             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
                             <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -278,6 +289,9 @@ const Institutional = () => {
                     <button
                         className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[342px] h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] hidden lm:flex items-center justify-center'
                         type='button'
+                        onClick={() => navigate("/institutional/account", {state: {
+                            section: "account"
+                        }})}
                     >
                         <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
                         <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />

@@ -26,6 +26,9 @@ const Private = () => {
   const navigate = useNavigate()
 
   const privateRef = useRef(null);
+  const wealthRef = useRef(null);
+  const investRef = useRef(null);
+  const cardRef = useRef(null);
   const faqRef = useRef(null);
   const { state } = useLocation();
   
@@ -44,6 +47,15 @@ const Private = () => {
   useEffect(() => {
     if (state?.section === "private" && privateRef.current) {
       privateRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "wealth" && wealthRef.current) {
+      wealthRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "invest" && investRef.current) {
+      investRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "card" && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "faq" && faqRef.current) {
       faqRef.current.scrollIntoView({ behavior: "smooth" });
@@ -83,7 +95,9 @@ const Private = () => {
                       >
                           <p 
                             className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                            onClick={() => navigate("/private/account")}
+                            onClick={() => navigate("/private/account", {state: {
+                              section: "account"
+                            }})}
                           >
                               Sign up today
                           </p>
@@ -110,7 +124,7 @@ const Private = () => {
         </div>
       </section>
 
-      <div className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={wealthRef} className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
         <div data-aos="fade-right" className="hidden md:block" >
             <img 
                 src={Dining} 
@@ -136,6 +150,9 @@ const Private = () => {
                 <button
                   className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[141px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
+                  onClick={() => navigate("/private/account", {state: {
+                    section: "account"
+                  }})}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                     <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -172,6 +189,9 @@ const Private = () => {
             <button
               className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[234px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
               type='button'
+              onClick={() => navigate("/private/account", {state: {
+                section: "account"
+              }})}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                 <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -180,7 +200,7 @@ const Private = () => {
         <img src={Dining} alt='Dining' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={investRef} className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
         <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
               <div className='flex flex-col lm:flex-row items-center gap-2'>
@@ -215,7 +235,7 @@ const Private = () => {
         </div>
       </div>
 
-      <div className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
+      <div ref={cardRef} className='bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]'>
         <div data-aos="fade-right" className="hidden md:block" >
             <img 
                 src={Cards} 
@@ -242,6 +262,9 @@ const Private = () => {
             <button
                 className='transition-all duration-300 ease-in-out bg-[#FFCC33]  w-[272px] mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/private/account", {state: {
+                  section: "account"
+                }})}
             >
               <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
               <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -286,6 +309,9 @@ const Private = () => {
           <button
             className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
             type='button'
+            onClick={() => navigate("/private/account", {state: {
+              section: "account"
+            }})}
           >
               <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
               <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -294,7 +320,7 @@ const Private = () => {
         <img src={Cards} alt='Cards' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
       </div>
 
-      <div className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
+      <div ref={faqRef} className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
         <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
           <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
           <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Private Banking.</p>

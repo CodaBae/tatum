@@ -72,7 +72,14 @@ const Sitemap = () => {
                 >
                     Business
                   </p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Corporate Banking</p>
+                <p 
+                  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
+                  onClick={() => navigate("/corporate", {
+                    state: { section: "corporate" },
+                  }) }
+                >
+                  Corporate Banking
+                </p>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
                   onClick={() => navigate("/private", {
@@ -80,6 +87,22 @@ const Sitemap = () => {
                   })}
                 >
                   Private Banking
+                </p>
+                <p 
+                  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
+                  onClick={() => navigate("/digital", {
+                    state: { section: "digital" },
+                  })}
+                >
+                  Digital Banking
+                </p>
+                <p 
+                  className='text-base lg:text-[20px] text-[#002244] whitespace-nowrap underline font-grava cursor-pointer'
+                  onClick={() => navigate("/institutional", {
+                    state: { section: "institution" },
+                  })}
+                >
+                  Institutional Banking
                 </p>
               </div>
             </div>
