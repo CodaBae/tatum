@@ -28,7 +28,7 @@ const Footer = () => {
         }}
         className="flex w-full h-[270px] lg:h-[374px] flex-col items-center justify-center">
         <div className="lg:w-[664px] lg:h-[232px] flex flex-col items-center gap-[32px]">
-          <p className="font-grava text-[28px] lg:text-[56px] font-medium text-center leading-[35px] lg:leading-[70px] text-[#002244]">
+          <p className="font-grava text-[24px] lg:text-[56px] font-semibold text-center leading-[35px] lg:leading-[70px] text-[#002244]">
             Stay smiling. <br /> Open an account today! 
           </p>
           <button
@@ -257,7 +257,7 @@ const Footer = () => {
           />
        
           <div className="flex flex-col gap-1 ">
-            <p className="text-xs text-[#002244] flex justify-end font-grava">
+            <p className="text-xs text-[#002244] flex lg:justify-end font-grava">
               &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
             </p>
             <p className="text-xs text-[#002244] font-grava">
@@ -266,7 +266,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#FFCC33] h-[14px] w-full"></div>
+      <div className="bg-[#002244] h-[14px] w-full"></div>
     </>
   );
 };

@@ -114,7 +114,7 @@ const Header = () => {
       <img
         src={Logo}
         alt="Logo"
-        className="w-[109px] h-[44px] cursor-pointer"
+        className="w-[110px] h-[64px] cursor-pointer"
         onClick={() => navigate("/", {
           state: { section: "home" },
         })}
@@ -162,7 +162,7 @@ const Header = () => {
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Our Story
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -182,7 +182,7 @@ const Header = () => {
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Mission and Vision
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -202,7 +202,7 @@ const Header = () => {
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Services
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -218,7 +218,7 @@ const Header = () => {
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Our Team
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -283,7 +283,7 @@ const Header = () => {
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Savings Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -302,7 +302,7 @@ const Header = () => {
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Current Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -321,7 +321,7 @@ const Header = () => {
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Cards ( Debit, Credit, Virtual)
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -340,7 +340,7 @@ const Header = () => {
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Loans and Mortgages
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -365,7 +365,7 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Fixed Deposit
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -373,25 +373,6 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-
-                  {/* <div 
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
-                    onClick={() => {
-                      navigate("/personal", {state: { section: "faq" }, });
-                    }}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Faq} alt="Faq" className="w-5 h-5" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        FAQ
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Quick answers to your banking questions.
-                      </p>
-                    </div>
-                  </div> */}
 
                 </div>
               </div>
@@ -424,7 +405,7 @@ const Header = () => {
                       <img src={Business} alt="Business" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Business Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -441,7 +422,7 @@ const Header = () => {
                       <img src={Solutions} alt="Solutions" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Payment solutions
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -458,7 +439,7 @@ const Header = () => {
                       <img src={Credit} alt="Credit" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Loans and Credit Lines
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -467,45 +448,9 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* <div 
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/business", {state: { section: "payment" } })}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Expense} alt="Expense" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Expense Management Tools
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Streamline business spending
-                      </p>
-                    </div>
-                  </div> */}
                 </div>
                 <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
                 <div className="flex flex-col gap-4">
-                  {/* <div 
-                    onClick={() => navigate("/business", {state: { section: "payment" } })}
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img
-                        src={Job}
-                        alt="Job"
-                        className="w-6 h-6"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Business Insurance
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Comprehensive coverage for your enterprise
-                      </p>
-                    </div>
-                  </div> */}
                   <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
                     onClick={() => navigate("/business", {state: { section: "advisory" } })}
@@ -514,7 +459,7 @@ const Header = () => {
                       <img src={Funding} alt="Funding" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Financial Planning and Advisory
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -530,7 +475,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -573,7 +518,7 @@ const Header = () => {
                       <img src={Treasury} alt="Treasury" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Treasury Management
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -592,7 +537,7 @@ const Header = () => {
                       <img src={Trade} alt="Trade" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-semibold font-grava">
                         Trade Finance
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -611,7 +556,7 @@ const Header = () => {
                       <img src={Investment} alt="Investment" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Investment Banking
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -656,7 +601,7 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Corporate Lending and Leasing
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -669,7 +614,7 @@ const Header = () => {
                       <img src={Risk} alt="Risk" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Risk Management
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -687,7 +632,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -728,7 +673,7 @@ const Header = () => {
                       <img src={Wealth} alt="Wealth" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Wealth Management
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -749,7 +694,7 @@ const Header = () => {
                       <img src={Suit} alt="Suit" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         Investment Advisory
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -768,7 +713,7 @@ const Header = () => {
                       <img src={Estate} alt="Estate" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                           Tatum Black Card
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -827,7 +772,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
+                      <p className="text-[#002244] text-base font-medium font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">

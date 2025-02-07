@@ -74,7 +74,7 @@ const Help = () => {
       <section className='flex flex-col items-center justify-center py-[80px] gap-[56px] lm:gap-[72px]'>
         <div className='w-10/12 lm:w-[878px] h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
           <input 
-            className='w-8/12 text-[#546B82] text-[18px] font-grava font-[350]'
+            className='w-8/12 text-[#546B82] text-[18px] outline-none font-grava font-[350]'
             type='text'
             placeholder='Enter keyword...'
             value={text}

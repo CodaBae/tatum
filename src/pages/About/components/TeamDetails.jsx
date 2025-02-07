@@ -123,7 +123,7 @@ const TeamDetails = () => {
                 driving organizational growth through strategic planning, operational efficiency, 
                 and business development.
               </p>
-              <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
+              <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[20px] leading-[27px] lg:leading-[38px]'>
                 Proven track record in fostering strong partnerships, streamlining operations, 
                 and implementing key performance metrics to enhance productivity and achieve company goals. 
                 Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of 
