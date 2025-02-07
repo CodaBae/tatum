@@ -68,148 +68,107 @@ const Help = () => {
 
           <div className='flex flex-col gap-6 w-full'>
             <div 
-              // onClick={handleDropdownOne} 
+              onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What do I need to open an account?</p>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How can I contact Tatum Bank?</p>
                 <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                {/* { openDropdownOne && 
+                { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
+                        If you have any questions or need assistance, please email us at:
+info@tatumbank.com
+You can also visit our head office for in-person support during business hours.
+
                     </p>
-                } */}
+                }
             </div>
 
             <div 
-              // onClick={handleDropdownOne} 
+              onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Are there any account opening fees?</p>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How do I open an account with Tatum Bank?
+                </p>
                 <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                {/* { openDropdownOne && 
+                { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
+                        You can open an account online via our website or visit our office. Required documents include:
+
+                        A valid ID (NIN, International Passport, or Driver’s License).
+                        Proof of address (utility bill or bank statement).
+                        Two passport photographs.
+                        BVN (Bank Verification Number).
+
                     </p>
-                } */}
+                }
             </div>
 
             <div 
-              // onClick={handleDropdownOne} 
+              onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
                 <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                {/* { openDropdownOne && 
+                { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
+                        Yes, Tatum Bank is fully licensed and regulated by the Central Bank of Nigeria (CBN) and insured by the Nigeria Deposit Insurance Corporation (NDIC).
+
                     </p>
-                } */}
+                }
             </div>
 
             <div 
-              // onClick={handleDropdownOne} 
+              onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Where is Tatum Bank located?                </p>
                 <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                {/* { openDropdownOne && 
+                { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
+                        Currently, we operate solely from our head office in Abuja, but we are expanding soon. Stay updated via our website and social media channels. <br />
+Our head office is at:  <br />
+Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
+
                     </p>
-                } */}
+                }
             </div>
 
             <div 
-              // onClick={handleDropdownOne} 
+              onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What types of banking services does Tatum Bank offer?
+                </p>
                 <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
+                {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-                {/* { openDropdownOne && 
+                { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
+                        We offer five core segments:   <br />
+•⁠  ⁠Personal Banking: For individuals   <br />
+•⁠  ⁠Business Banking: For SMEs   <br />
+•⁠  ⁠Institutional Banking: For organizations   <br />
+•⁠  ⁠Corporate Banking: For larger enterprises   <br />
+•⁠  ⁠Private Banking: For high-net-worth clients <br />
+
                     </p>
-                } */}
+                }
             </div>
 
-            <div 
-              // onClick={handleDropdownOne} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
-            >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
-                <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
-              </div>
-                {/* { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
-                    </p>
-                } */}
-            </div>
-
-            <div 
-              // onClick={handleDropdownOne} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
-            >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
-                <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
-              </div>
-                {/* { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
-                    </p>
-                } */}
-            </div>
-
-            <div 
-              // onClick={handleDropdownOne} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
-            >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
-                <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
-              </div>
-                {/* { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
-                    </p>
-                } */}
-            </div>
-
-            <div 
-              // onClick={handleDropdownOne} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
-            >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
-                <img src={Plus} alt='Plus' className='' />
-                {/* {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />} */}
-              </div>
-                {/* { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Just a government-issued ID and your account opening is processed.
-                    </p>
-                } */}
-            </div>
+           
           </div>
 
           <div className='bg-[#FFFAEB] w-full lg:w-[1014px] rounded-[16px] px-5 lm:px-[32px] mt-[32px] flex flex-col lm:flex-row items-center gap-[32px] lm:gap-0 justify-between py-10 lm:py-[52px]'>
@@ -220,7 +179,7 @@ const Help = () => {
             <button
               className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[166px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
-              // onClick={() => navigate("/", {state: {section: "home"}})}
+               onClick={() => navigate("/", {state: {section: "home"}})}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
