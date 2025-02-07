@@ -53,8 +53,8 @@ const TeamDetails = () => {
           <div className='w-[350px] md:w-[851px] flex items-center flex-col mx-auto gap-6 lg:gap-[40px]'>
 
             <div className='flex flex-col items-center gap-2 lg:gap-4'>
-              <p className='text-[#002244] font-semibold text-[32px] leading-[32px] text-center lg:text-[48px] font-grava lg:leading-[48px]'>Aminatu Dahiru Chiroma</p>
-              <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>Non-Executive Director</p>
+              <p className='text-[#002244] font-semibold text-[32px] leading-[32px] text-center lg:text-[48px] font-grava lg:leading-[48px]'>{state?.team.name}</p>
+              <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
             </div>
 
             <div className='flex items-center gap-3'>
@@ -117,7 +117,7 @@ const TeamDetails = () => {
           </div>
           <div className='flex flex-col gap-6 w-full'>
             <div className='flex flex-col gap-4'>
-              <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
+              {/* <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
                 Aminatu Chiroma is a highly accomplished individual and Group Managing Director of 
                 Binani Group of Companies with decades of experience leading diverse teams and 
                 driving organizational growth through strategic planning, operational efficiency, 
@@ -128,16 +128,9 @@ const TeamDetails = () => {
                 and implementing key performance metrics to enhance productivity and achieve company goals. 
                 Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of 
                 employee development.
-              </p>
+              </p> */}
               <p className='font-grava font-[350] text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
-                Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, 
-                with a deep understanding of the energy and precious metals industries. 
-                Demonstrated leadership in expanding market presence, optimizing supply chains, 
-                and integrating sustainable practices across international operations. 
-                She holds an advanced Postgraduate Diploma in Business Leadership and Management 
-                and a diverse skill set in project management, risk mitigation, legal compliance, 
-                and technology integration. Recognized for excellence within several industry awards, 
-                including the “Beacon of Hope for Africa’s Development” and “West African Merit Award.”
+              {state?.team.bio}
               </p>
             </div>
 
