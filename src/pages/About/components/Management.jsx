@@ -57,11 +57,7 @@ const Management = () => {
             animate="show"
         >
             <motion.div 
-                // style={{
-                //     backgroundImage: `url(${HeadShot})`,
-                //     backgroundRepeat: "no-repeat",
-                //     backgroundSize: isMobile ? "contain" : "cover" 
-                // }}
+          
                 variants={gridSquareVariants}
                 className="flex flex-col gap-6"
                 // className='h-[472px] lg:h-[529px] relative flex flex-col w-full cursor-pointer group transition-transform ease-in-out hover:-translate-y-3 '
