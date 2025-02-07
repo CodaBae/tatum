@@ -66,11 +66,11 @@ const Sitemap = () => {
                 </p>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
-                  onClick={() => navigate("/sme", {
-                    state: { section: "sme" },
+                  onClick={() => navigate("/business", {
+                    state: { section: "business" },
                   }) }
                 >
-                    SME Banking
+                    Business
                   </p>
                 <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Corporate Banking</p>
                 <p 

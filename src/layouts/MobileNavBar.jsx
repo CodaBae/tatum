@@ -84,7 +84,7 @@ const MobileNavBar = ({ handleClose }) => {
           </div>
           <div className="flex flex-col">
             <div className="flex items-center justify-between" onClick={handleSme}>
-              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">sme</p>
+              <p className="font-medium font-grava text-[#334E69] text-base tracking-wide uppercase">e</p>
               {openSmeDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
             </div>
             {

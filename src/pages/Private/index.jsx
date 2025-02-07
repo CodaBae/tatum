@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { BsPlus } from 'react-icons/bs'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import { BiMinus } from 'react-icons/bi'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import CBN from "../../assets/svg/cbn_logo.svg";
@@ -85,6 +83,7 @@ const Private = () => {
                       >
                           <p 
                             className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                            onClick={() => navigate("/private/account")}
                           >
                               Sign up today
                           </p>
@@ -331,43 +330,3 @@ const Private = () => {
 }
 
 export default Private
-
-
-{/* <div ref={faqRef} className='bg-[#FFFAEB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
-        <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
-
-          <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
-
-            <div onClick={handleTabOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'>
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How do I open an account with Tatum</p>
-                {openTabOne ? <BiMinus className='text-[#001F3E] w-6 h-6'/> : <BsPlus className='text-[#001F3E] w-6 h-6' />}
-              </div>
-              {}
-            </div>
-
-            <div onClick={handleTabTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'>
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Do you offer loans for small businesses?</p>
-                {openTabTwo ? <BiMinus className='text-[#001F3E] w-6 h-6'/> : <BsPlus className='text-[#001F3E] w-6 h-6' />}
-              </div>
-              {}
-            </div>
-
-            <div onClick={handleTabThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'>
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What are the criterias for getting a loan</p>
-                {openTabThree ? <BiMinus className='text-[#001F3E] w-6 h-6'/> : <BsPlus className='text-[#001F3E] w-6 h-6' />}
-              </div>
-              {}
-            </div>
-
-          </div>
-
-          <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
-            <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span className='text-sm lg:text-[20px] underline text-[#002244]'>Help Center</span></p>
-          </div>
-        </div>
-
-      </div> */}
