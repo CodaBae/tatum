@@ -18,6 +18,7 @@ const Resources = () => {
 
   const resourcesRef = useRef(null);
   const faqRef = useRef(null);
+
   const { state } = useLocation();
 
   useEffect(() => {
@@ -74,7 +75,7 @@ const Resources = () => {
         </div>
       </section>
       
-      <section className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
+      <section  className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
           <div data-aos="fade-right" className="hidden md:block" >
               <img 
                   src={Meeting} 

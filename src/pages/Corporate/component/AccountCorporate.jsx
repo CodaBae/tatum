@@ -24,6 +24,7 @@ const AccountCorporate = () => {
     
     const isMobile = window.innerWidth < 768 
     const faqRef = useRef(null);
+    const accountRef = useRef(null);
         
     const { state } = useLocation()
         
@@ -55,10 +56,13 @@ const AccountCorporate = () => {
         if (state?.section === "faq" && faqRef.current) {
             faqRef.current.scrollIntoView({ behavior: "smooth" });
         }
+        if (state?.section === "account" && accountRef.current) {
+            accountRef.current.scrollIntoView({ behavior: "smooth" });
+        }
     }, [state]); 
     
   return (
-    <div className='w-full'>
+    <div className='w-full' ref={accountRef}>
         <section className='h-full w-full overflow-hidden outline-none'>
             <div 
                 style={{
@@ -145,6 +149,7 @@ const AccountCorporate = () => {
             <button
                 className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[175px] lg:w-[194px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />

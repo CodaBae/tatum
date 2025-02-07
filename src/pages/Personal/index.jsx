@@ -96,6 +96,12 @@ const Personal = () => {
     if (state?.section === "faq" && faqRef.current) {
       faqRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    if (state?.section === "cards" && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "loans" && loanRef.current) {
+      loanRef.current.scrollIntoView({ behavior: "smooth" });
+    }
     if (state?.section === "savings" && saveRef.current) {
       saveRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -103,7 +109,7 @@ const Personal = () => {
       currentRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "fixed" && fixedRef.current) {
-      currentRef.current.scrollIntoView({ behavior: "smooth" });
+      fixedRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [state]);
 
@@ -140,11 +146,12 @@ const Personal = () => {
                       <button
                           className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                           type='button' 
+                          onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                           //animate__delay-2s
                       >
                         <p 
                             className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                            onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                           
                         >
                             Open an account today
                         </p>
@@ -195,6 +202,7 @@ const Personal = () => {
               <button
                 className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[220px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
                   <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -219,6 +227,7 @@ const Personal = () => {
           <button
               className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
+              onClick={() => navigate("/personal/account", { state: {section: "account"}})}
           >
               <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
               <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -254,6 +263,7 @@ const Personal = () => {
               <button
                   className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
+                  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Learn more</p>
                   <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -300,6 +310,7 @@ const Personal = () => {
             <button
                 className='transition-all duration-300 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
+                onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
                 <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
@@ -385,6 +396,7 @@ const Personal = () => {
 
         <button
           className='transition-all duration-300 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg group hover:bg-[#002244]'
+          onClick={() => navigate("/personal/account", { state: {section: "account"}})}
         >
           <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Get yours today</p>
         </button>
@@ -424,6 +436,7 @@ const Personal = () => {
           <button
             className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[193px] lg:w-[220px] h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
             type='button'
+            onClick={() => navigate("/digital", { state: {section: "digital"}})}
           >
             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started now</p>
             <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
