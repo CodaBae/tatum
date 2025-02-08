@@ -117,16 +117,16 @@ const Management = () => {
             >
                 <div className="relative w-auto cursor-pointer h-auto lg:h-[529px]  group overflow-hidden rounded-lg">
                                     {/* Background Image */}
-                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
+                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-[0.5]" />
 
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
 
                     {/* Center Arrow */}
                     <img 
                         src={ArrowClick} 
                         alt="ArrowClick" 
-                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                 </div>
 
@@ -134,7 +134,7 @@ const Management = () => {
                     <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[27px]">
                         {item.name}
                     </p>
-                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-[21px] tracking-[0.2%] leading-[24px]">
+                    <p className="font-grava text-[#002244] font-[300] text-sm md:text-[21px] tracking-[0.2%] leading-[24px]">
                     {item.role}
                     </p>
                 </div>

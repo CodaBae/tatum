@@ -40,7 +40,7 @@ const Investment = () => {
         
             <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
                 <MdKeyboardBackspace className='w-5 h-5 mt-[-2px] text-[#fff] group-hover:mr-2' />
-                <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-300 group-hover:ml-2'>Go back</p>
+                <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-500 group-hover:ml-2'>Go back</p>
             </div>
             <div 
                 className="bg-[#FFCC33] absolute -bottom-8 flex items-center justify-center w-[90%] md:w-[493px] h-[66px] gap-4 rounded-tl-lg rounded-br-lg py-5 px-10"

@@ -122,8 +122,8 @@ const cardVariants = {
   return (
     <div ref={smeRef}>
       <section
-        style={{ marginTop: "1.5%" }}
-        className="h-full w-full overflow-hidden outline-none"
+
+        className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]"
       >
         <div
           style={{
@@ -135,7 +135,7 @@ const cardVariants = {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0"
+          className=" lm: pt-[127px] pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[95vh]"
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -148,7 +148,7 @@ const cardVariants = {
               </p>
               <p
                 //
-                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[833px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 At Tatum Bank, we go beyond banking; we partner with you to
                 <br></br> unlock opportunities, drive growth, and ensure your
@@ -156,7 +156,7 @@ const cardVariants = {
               </p>
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/business/account", {
@@ -165,14 +165,14 @@ const cardVariants = {
                   }
                   //animate__delay-2s
                 >
-                  <p className="transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Business account today
                   </p>
                   <FaArrowRightLong className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]" />
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute -bottom-36">
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-23%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -192,8 +192,8 @@ const cardVariants = {
           <img
             src={isMobile ? smeHeroImg : smeHeroImg}
             alt="Family"
-            className={`animate__animated animate__zoomIn relative   lg:mt-40 lm:`}
-          />
+            className={`animate__animated animate__zoomIn relative lm:top-[4%] lg:w-[75%] `} 
+            />
         </div>
       </section>
 
@@ -265,7 +265,7 @@ const cardVariants = {
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[190px] h-[55px]  lg:w-[220px] sm:h-[63px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[190px] h-[55px]  lg:w-[220px] sm:h-[63px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate("/business/account", {
@@ -273,10 +273,10 @@ const cardVariants = {
                   })
                 }
               >
-                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Open an account
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
           </div>
@@ -287,7 +287,7 @@ const cardVariants = {
 
       <div
         ref={loanRef}
-        className="pt-[56px] lg:pt-0 h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center"
+        className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center"
       >
         <div className="flex flex-col items-center gap-[40px] w-[1328px] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
@@ -537,7 +537,7 @@ const cardVariants = {
                       activeIndex === 2
                         ? "animate__animated animate__slow animate__fadeInUp"
                         : ""
-                    } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[302px] h-[56px]  lg:w-[532px] sm:h-[67px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                    } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[302px] h-[56px]  lg:w-[532px] sm:h-[67px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                     type="button"
                     onClick={() =>
                       navigate("/business/account", {
@@ -545,10 +545,10 @@ const cardVariants = {
                       })
                     }
                   >
-                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                       Apply now
                     </p>
-                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
                   </button>
 
                   <p className="font-grava font-[350] text-center text-[16px] w-[532px] leading-[24px] tracking-[0.2%]  text-[#002244] cursor-pointer  ">
@@ -630,7 +630,7 @@ const cardVariants = {
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px] sm:w-[159px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px] sm:w-[159px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate("/business/account", {
@@ -638,10 +638,10 @@ const cardVariants = {
                   })
                 }
               >
-                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
           </div>
@@ -1058,7 +1058,7 @@ const cardVariants = {
                 ? "animate__animated animate__slow animate__fadeInUp"
                 : ""
             }
-            transition-all duration-300 ease-in-out 
+            transition-all duration-500 ease-in-out 
             bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] 
             w-[178px] sm:w-[190px] lg:w-[210px] 
             h-[44px] sm:h-[59.5px] 
@@ -1074,7 +1074,7 @@ const cardVariants = {
               >
                 <p
                   className="
-              transition-colors duration-300 ease-in-out 
+              transition-colors duration-500 ease-in-out 
               font-medium text-sm sm:text-base lg:text-base 
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
@@ -1085,7 +1085,7 @@ const cardVariants = {
                 <FaArrowRightLong
                   className="
               w-5 h-5 
-              transition-colors duration-300 ease-in-out 
+              transition-colors duration-500 ease-in-out 
               text-[#002244] group-hover:text-[#ffcc33]
             "
                 />
@@ -1100,7 +1100,7 @@ const cardVariants = {
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]"
       >
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava">
+          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava">
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -1223,7 +1223,7 @@ const cardVariants = {
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-300 ease-in-out bg-[#002244] group 
+                } transition-all duration-500 ease-in-out bg-[#002244] group 
               hover:bg-[#FFCC33] hover:border hover:border-[#002244] 
               w-[154px] sm:w-[170px] lg:w-[183px] 
               h-[51px] sm:h-[55px] lg:h-[59px] 
@@ -1235,14 +1235,14 @@ const cardVariants = {
                 }
               >
                 <p
-                  className="transition-colors duration-300 ease-in-out font-medium 
+                  className="transition-colors duration-500 ease-in-out font-medium 
                         text-sm sm:text-base lg:text-base font-grava 
                         text-[#FFCC33] group-hover:text-[#002244]"
                 >
                   Call us today
                 </p>
                 <FaArrowRightLong
-                  className="w-5 h-5 transition-colors duration-300 ease-in-out 
+                  className="w-5 h-5 transition-colors duration-500 ease-in-out 
                                       text-[#FFCC33] group-hover:text-[#002244]"
                 />
               </button>

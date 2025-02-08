@@ -90,6 +90,13 @@ const Header = () => {
       setShowCorporateDropdown(false);
       setShowPersonalDropdown(false);
       setShowAboutDropdown(false);
+    } else if (menu === "nil") {
+      setShowResourcesDropdown(false);
+      setShowPrivateDropdown(false);
+      setShowSmeDropdown(false);
+      setShowCorporateDropdown(false);
+      setShowPersonalDropdown(false);
+      setShowAboutDropdown(false);
     }
   };
 
@@ -106,15 +113,20 @@ const Header = () => {
       setShowPrivateDropdown(false);
     } else if (menu === "resources") {
       setShowResourcesDropdown(false);
+    } else if (menu === "nil") {
+      setShowResourcesDropdown(false);
     }
   };
 
   return (
-    <div className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between">
+    <div className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between" onMouseLeave={()=>{
+      handleMouseEnter('nil')
+      handleMouseLeave('nil')
+    } }>
       <img
         src={Logo}
         alt="Logo"
-        className="w-[110px] h-[64px] cursor-pointer"
+        className="w-[125px] h-[64px] cursor-pointer"
         onClick={() => navigate("/", {
           state: { section: "home" },
         })}
@@ -143,7 +155,7 @@ const Header = () => {
           </div>
           {showAboutDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[290px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[290px] ${
                 showAboutDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("about")}>
@@ -227,28 +239,7 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="bg-[#E6E9EC] w-[1px] h-[260px]"></div>
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img
-                        src={Insurance}
-                        alt="Insurance"
-                        className="w-6 h-6"
-                      />
-                    </div>
-                    <div
-                      className="flex flex-col gap-1"
-                      onClick={() => navigate("/about/careers")}>
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Careers
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Explore opportunities to grow with us
-                      </p>
-                    </div>
-                  </div>
-                </div> */}
+             
               </div>
             </div>
           )}
@@ -267,7 +258,7 @@ const Header = () => {
           </div>
           {showPersonalDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0  w-[566px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0  w-[566px] ${
                 showPersonalDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("personal")}>
@@ -391,7 +382,7 @@ const Header = () => {
           </p>
           {showSmeDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out h-[312px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out h-[312px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}>
@@ -502,7 +493,7 @@ const Header = () => {
           </p>
           {showCorporateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl h-[312px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl h-[312px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
                 showCorporateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("corporate")}>
@@ -565,24 +556,7 @@ const Header = () => {
                     </div>
                   </div>
 
-                  {/* <div 
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/corporate", {state: {section: "strategic"}});
-                    }}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Payroll} alt="Payroll" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Strategic Leadership
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Simplify payroll and benefits
-                      </p>
-                    </div>
-                  </div> */}
+               
                 </div>
                 
                 <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
@@ -657,7 +631,7 @@ const Header = () => {
           </p>
           {showPrivateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[312px] w-[605px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[312px] w-[605px] ${
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}>
@@ -721,48 +695,12 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-{/* 
-                  <div 
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/private/personal-loans-and-credit");
-                      window.scrollTo(0, 0)
-                    }}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Money} alt="Money" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Personal Loans and Credit
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Flexible funding tailored to you
-                      </p>
-                    </div>
-                  </div> */}
+
 
                 </div>
                 <div className="bg-[#E6E9EC] w-[1px] h-[272px]"></div>
                 <div className="flex flex-col gap-4">
-                  {/* <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer">
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img
-                        src={Custom}
-                        alt="Custom"
-                        className="w-6 h-6"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Custom Financial Solutions
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Services designed for your lifestyle
-                      </p>
-                    </div>
-                  </div> */}
-
+                 
                   <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
                       navigate("/private", {state: { section: "faq" } });
@@ -797,93 +735,7 @@ const Header = () => {
             {/* Resources */}
             Institution
           </p>
-          {/* {showResourcesDropdown && (
-            <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-300 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[294px] h-[312px] ${
-                showResourcesDropdown ? "show" : ""
-              }`}
-              onMouseLeave={() => handleMouseLeave("resources")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
-                <div className="flex flex-col  gap-4 w-[237px]">
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    // onClick={() => navigate("/about")}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Blog} alt="Blog" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Blog
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
-                        Insights and tips for smarter banking
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    // onClick={() =>
-                    //   navigate("/about", {
-                    //     state: { section: "mission-and-vision" },
-                    //   })
-                    // }
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Press} alt="Press" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Press Release
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Stay updated on our news
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
-                    // onClick={() =>
-                    //   navigate("/about", {
-                    //     state: { section: "services" },
-                    //   })
-                    // }
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Media} alt="Media" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Media Gallery
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Photos, videos, and media assets
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    // onClick={() => {navigate("/about/teams"); window.scrollTo(0, 0)}}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Branch} alt="Branch" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-xs font-medium font-grava">
-                        Branch & ATM Locator
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Find branches and ATMs near you
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )} */}
+         
         </div>
 
         {/* Help */}
@@ -915,12 +767,12 @@ const Header = () => {
             }})} 
           />
         <button
-          className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-[#090540]"
+          className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-500 ease-in-out hover:bg-[#090540]"
           type="button"
           onClick={() => navigate("digital", { state: {section: "digital"}})}
         >
-          <SlLock className="w-5 h-5 text-[#090540] transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33]" />
-          <p className="font-medium text-base font-grava text-[#090540] transition-colors duration-300 ease-in-out group-hover:text-[#FFCC33]">
+          <SlLock className="w-5 h-5 text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]" />
+          <p className="font-medium text-base font-grava text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]">
             Internet Banking
           </p>
         </button>

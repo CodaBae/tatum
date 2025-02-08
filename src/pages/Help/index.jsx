@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 import Line from "../../assets/svg/line_b.svg"
 import Plus from "../../assets/svg/plus.svg";
@@ -44,14 +44,14 @@ const Help = () => {
     <div className='w-full'>
       <section 
 
-style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
+className='h-full w-full outline-none '>
         <div 
           style={{
               backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover"
           }}
-          className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
           <div className='w-full  flex flex-col items-start relative pt-[124px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -61,7 +61,7 @@ style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
                       Help & Support
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       If you require any assistance regarding our company, businesses or exploits, 
                       please don’t hesitate to contact us..
@@ -98,7 +98,7 @@ style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
           <div className='flex flex-col gap-6 w-full'>
             <div 
               onClick={handleDropdownOne} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How can I contact Tatum Bank?</p>
@@ -117,7 +117,7 @@ You can also visit our head office for in-person support during business hours.
 
             <div 
               onClick={handleDropdownTwo} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How do I open an account with Tatum Bank?
@@ -139,7 +139,7 @@ You can also visit our head office for in-person support during business hours.
 
             <div 
               onClick={handleDropdownThree} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
@@ -155,7 +155,7 @@ You can also visit our head office for in-person support during business hours.
 
             <div 
               onClick={handleDropdownFour} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Where is Tatum Bank located?                </p>
@@ -173,7 +173,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
 
             <div 
               onClick={handleDropdownFive} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-300 ease-in-out transform'
+              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
                 <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What types of banking services does Tatum Bank offer?
@@ -202,12 +202,12 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
               <p className='font-[350] text-[#334E69] text-center lm:text-left text-xs lm:text-sm'>Can’t find the answer you’re looking for? Please get in touch with our team.</p>
             </div>
             <button
-              className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[166px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[166px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
                onClick={() => navigate("/", {state: {section: "home"}})}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
+                <IoIosArrowRoundForward className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
 

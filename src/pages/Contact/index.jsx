@@ -37,14 +37,14 @@ const Contact = () => {
 
         <section 
 
-style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
+ className='h-full w-full outline-none '>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[124px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -54,7 +54,7 @@ style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
                             Contact Us
                         </p>
                         <p 
-                            className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..
                         </p>
@@ -70,7 +70,7 @@ style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
                 <img 
                     src={Call} 
                     alt='Meeting' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -149,11 +149,11 @@ style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
                         ></textarea>
                     </div>
                     <button
-                        className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-full lg:w-[188px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                        className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lg:w-[188px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                         type='button'
                     >
-                            <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
+                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
                 </div>
                 <div className='flex flex-col w-full lm:w-4/12'>

@@ -122,38 +122,38 @@ const Personal = () => {
 
       <section 
 
-style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-none '>
+ className='h-full w-full outline-none  lg:h-[100vh]'>
         <div 
           style={{
             backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover"
           }}
-          className='lg:h-[856px] lm:h-auto pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          className='lm:h-[95vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:pt-[20%] max-sm:pb-[20%]' //[694px]
         >
             <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                    <p 
+                    <p  style={{fontWeight:450}}
                         className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                     >
                       Personalized<br /> banking that <span className='font-bold'>keeps<br /> you smiling</span> 
                     </p>
-                    <p               style={{fontWeight:450}}
+                    <p              
 
-                        className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                        className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     >
                         Explore tailored solutions that fit your lifestyle, 
-                        empower your goals, and make banking a joy.
+                        empower <br></br> your goals, and make banking a joy.
                     </p>
                     <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                       <button
-                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                           type='button' 
                           onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                           //animate__delay-2s
                       >
                         <p 
-                            className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                            className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                            
                         >
                             Open a personal account today
@@ -165,7 +165,7 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                     
                   </div>
                 </div>
-                <div className='hidden lm:flex items-start absolute -bottom-36'>
+                <div className='hidden lm:flex items-start absolute -bottom-32'>
                     <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                         We are licensed by 
                         <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -180,8 +180,8 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                 // style={{
                 //     display: isMobile ? "none" : "flex"
                 // }}
-                className={`animate__animated animate__zoomIn relative -right-10 lm:right-10 lm:h-[688px] `} 
-            />
+                className={`animate__animated animate__zoomIn relative lm:right-[10%] lm:top-[10%] lg:w-[53%] `} 
+                />
         </div>
       </section>
 
@@ -190,7 +190,7 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
               <img 
                   src={Saver} 
                   alt='Saver' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
               />
           </div>
           <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -203,12 +203,12 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                   </p>
               </div>
               <button
-                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[220px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[220px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
-                  <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Saver} alt='Saver' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -228,19 +228,19 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
               </p>
           </div>
           <button
-              className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
               onClick={() => navigate("/personal/account", { state: {section: "account"}})}
           >
-              <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-              <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+              <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
         <div data-aos="fade-left">
             <img 
                 src={Milkshake} 
                 alt='Girl' 
-                className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
             />
         </div>
       </div>
@@ -250,7 +250,7 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
               <img 
                   src={Power} 
                   alt='Power' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
               />
           </div>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]' data-aos="fade-left" >
@@ -264,12 +264,12 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                   </p>
               </div>
               <button
-                  className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                  className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
                   onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
-                  <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Learn more</p>
-                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Learn more</p>
+                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Power} alt='Power' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -292,7 +292,7 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
               <img 
                   src={MoneyWoman} 
                   alt='Girl' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
               />
           </div>
 
@@ -311,19 +311,19 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">Auto Loans</p>
             </div>
             <button
-                className='transition-all duration-300 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left" className="hidden lm:block">
               <img 
                   src={MoneyWoman} 
                   alt='Girl' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
               />
           </div>
         </div>
@@ -398,10 +398,10 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
             </div>
 
         <button
-          className='transition-all duration-300 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg group hover:bg-[#002244]'
+          className='transition-all duration-500 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg group hover:bg-[#002244]'
           onClick={() => navigate("/digital", { state: {section: "digital"}})}
         >
-          <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Get yours today</p>
+          <p className='transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Get yours today</p>
         </button>
 
       </div>
@@ -437,12 +437,12 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
           </div>
 
           <button
-            className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[193px] lg:w-[220px] h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+            className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[193px] lg:w-[220px] h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
             type='button'
             onClick={() => navigate("/digital", { state: {section: "digital"}})}
           >
-            <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started now</p>
-            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started now</p>
+            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
 
         </div>
@@ -469,11 +469,11 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                 At Tatum Bank, we are committed to providing you personalized banking, 
                 tailored to your needs and lifestyle.
               </p>
-              <p className="font-grava font-[350] text-sm lm:text-[18px] leading-[27px] lm:w-[389px] tracking-[0.2%]">
+              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] lm:w-[389px] tracking-[0.2%]">
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
-                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type='button'
                 onClick={() => navigate("/personal/account", {
                   state: {
@@ -482,7 +482,7 @@ style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-non
                 })}
               >
                 <p 
-                  className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                  className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                 >
                   Open an Account
                 </p>

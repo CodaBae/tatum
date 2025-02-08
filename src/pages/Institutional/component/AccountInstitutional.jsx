@@ -66,14 +66,14 @@ const AccountInstitutional = () => {
 
         <section 
 
-style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-none'>
-            <div 
+className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
+<div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className=' lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[95vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -85,28 +85,28 @@ style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-n
                             <span className='font-bold'>Financial Solutions</span>
                         </p>
                         <p 
-                            className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[749px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Trusted banking solutions for NGOs, 
                             insurance companies, and financial institutions.
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
-                            <button
-                                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[163px] rounded-tl-lg rounded-br-lg h-[44px] gap-2 flex items-center justify-center`}
+                        <button
+                                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                             >
                                 <p 
-                                className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
                                     Learn more
                                 </p>
                                 <FaArrowRightLong
-                                    className='w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                    className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute -bottom-28'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-35%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -118,7 +118,7 @@ style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-n
                 <img 
                     src={isMobile ? Temple : TempleMobile} 
                     alt='Temple' 
-                    className={`animate__animated animate__zoomIn relative lm:right-36  lg:mt-40 lm:h-[641px]`} 
+                    className={`animate__animated animate__zoomIn relative lm:right-[15%] lm:top-[7%] lg:w-[75%] `} 
                 />
             </div>
         </section>
@@ -153,19 +153,19 @@ style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-n
             </div>
 
             <button
-                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[175px] lg:w-[194px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[175px] lg:w-[194px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
         </section>
 
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
-                <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
+                <p className='text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
                 <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum <br />  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>

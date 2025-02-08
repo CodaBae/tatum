@@ -217,7 +217,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-auto lg:h-[694px] pt-[40px] lg:pt-0 px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0'
+                        className='h-auto lg:h-[85vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
                             <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -227,25 +227,25 @@ const Home = () => {
                                     Your Smile, <br /> <span className='font-medium '>Our Priority</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} md:w-[265px] lg:w-[530px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                                 >
                                     Secure banking, low-interest loans, and profitable investments for everyone.
                                 </p>
                                 <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
                                         }})}
                                     >
                                         <p 
-                                            className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Open an account today
                                         </p>
                                         <FaArrowRightLong 
-                                            className='mt-[1px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='mt-[1px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                     <button 
@@ -286,7 +286,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-auto lg:h-[694px]  pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[85vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px]'>
                             <div className='flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5'>
@@ -303,7 +303,7 @@ const Home = () => {
                                 </p>
                                 <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button' 
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
@@ -311,7 +311,7 @@ const Home = () => {
                                         //animate__delay-2s
                                     >
                                         <p 
-                                            className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Explore our offerings
                                         </p>
@@ -358,7 +358,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-auto lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[85vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 gap-[64px] relative lg:gap-[113px]'>
                             <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
@@ -374,19 +374,19 @@ const Home = () => {
                                 </p>
                                 <div className='flex items-center mt-[12px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 2 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 2 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                         onClick={() => navigate("/business", {state: {
                                             section: "business"
                                         }})}
                                     >
                                         <p 
-                                            className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Get started with Business Banking
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 mt-[1px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>
@@ -418,7 +418,7 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-auto lg:h-[694px] pt-[40px] px-5 lg:pt-0 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='h-auto lg:h-[85vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
                         <div className='w-full flex flex-col items-start z-30 relative gap-[64px] lg:gap-[113px]'>
                             <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
@@ -434,19 +434,19 @@ const Home = () => {
                                 </p>
                                 <div className='flex items-center mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 3 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 3 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
                                         }})}
                                     >
                                         <p 
-                                            className='font-medium transition-colors duration-300 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                            className='font-medium transition-colors duration-500 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                         >
                                             Get exclusive access
                                         </p>
                                         <FaArrowRightLong 
-                                            className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                            className='w-5 h-5 mt-[1px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
                                 </div>
@@ -478,7 +478,7 @@ const Home = () => {
                 <img 
                     src={Boy} 
                     alt='Boy' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -487,14 +487,14 @@ const Home = () => {
                     <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
                 </div>
                 <button
-                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                    className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                     onClick={() => navigate("/personal", {state: {
                         section: "personal"
                     }})}
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] ' />
                 </button>
             </div>
             <img src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -509,21 +509,21 @@ const Home = () => {
                     </p>
                 </div>
                 <button
-                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                    className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                     onClick={() => navigate("/corporate", {state: {
                         section: "corporate"
                     }})}
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <div data-aos="fade-left">
                 <img 
                     src={Girl} 
                     alt='Girl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
                 />
             </div>
         </div>
@@ -533,7 +533,7 @@ const Home = () => {
                 <img 
                     src={Farmer} 
                     alt='Farmer' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -544,7 +544,7 @@ const Home = () => {
                     </p>
                 </div>
                 <button
-                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                    className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                     onClick={() => {
                         navigate("/business", {
@@ -554,8 +554,8 @@ const Home = () => {
                         })
                     }}
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <img src={Farmer} alt='Farmer' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -569,7 +569,7 @@ const Home = () => {
                     </p>
                 </div>
                 <button
-                    className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                    className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[176px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                     onClick={() => {
                         navigate("/private", {
@@ -579,15 +579,15 @@ const Home = () => {
                         })
                     }}
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <div data-aos="fade-left">
                 <img 
                     src={SchoolGirl} 
                     alt='SchoolGirl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'    
                 />
             </div>
         </div>
@@ -637,7 +637,7 @@ const Home = () => {
                         key={index}
                         src={card}
                         alt="Card"
-                        className="absolute w-full h-[250px] transition-transform duration-300"
+                        className="absolute w-full h-[250px] transition-transform duration-500"
                         style={{
                             transform: `rotateY(${angle}deg) translateZ(300px)`,
                             pointerEvents: 'none'
@@ -670,7 +670,7 @@ const Home = () => {
             </div>
 
            <button
-                className='transition-all duration-300 ease-in-out w-[200px] lg:w-[246px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
+                className='transition-all duration-500 ease-in-out w-[200px] lg:w-[246px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]'
                 onClick={() => {
                     navigate("/personal", {
                         state: {
@@ -679,7 +679,7 @@ const Home = () => {
                     })
                 }}
            >
-                <p className='transition-colors duration-300 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Choose your Tatum Card</p>
+                <p className='transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Choose your Tatum Card</p>
            </button>
         </div>
 
@@ -693,13 +693,13 @@ const Home = () => {
             <div className='w-full flex flex-col lg:flex-row items-start gap-5'>
                 <div className='bg-[#FFFFFF] rounded-2xl flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-full  lg:w-[728px]'>
                     <div className='flex items-center gap-3'>
-                        <div className='transition ease-in-out delay-150 duration-300 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center rounded-tl-lg rounded-br-lg bg-[#FFCC33]'>
+                        <div className='transition ease-in-out delay-150 duration-500 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center rounded-tl-lg rounded-br-lg bg-[#FFCC33]'>
                             <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Personal</p>
                         </div>
-                        <div className='transition ease-in-out delay-150 duration-300 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]'>
+                        <div className='transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]'>
                             <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Home</p>
                         </div>
-                        <div className='transition ease-in-out delay-150 duration-300 w-[75px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]'>
+                        <div className='transition ease-in-out delay-150 duration-500 w-[75px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]'>
                             <p className='text-[#002244] font-medium font-grava text-sm md:text-base'>Car</p>
                         </div>
                     </div>
@@ -777,7 +777,7 @@ const Home = () => {
                     <div className='w-full bg-[#fff] rounded-2xl gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center'>
                         <div className='flex flex-col items-center gap-6 '>
                             <button 
-                                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'
+                                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg'
                                 onClick={() => {
                                     navigate("/business", {
                                         state: {
@@ -786,7 +786,7 @@ const Home = () => {
                                     })
                                 }}
                             >
-                                <p className='transition-colors duration-300 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
+                                <p className='transition-colors duration-500 ease-in-out font-grava text-[#002244] text-[18px] font-medium'>Apply now</p>
                             </button>
                             <p className='text-base text-[#002244] font-grava cursor-pointer'>Check eligibility</p>
                         </div>
@@ -871,7 +871,7 @@ const Home = () => {
                 </div>
             </div>
             <button
-                className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center'
                 type='button'
                 onClick={() => {
                     navigate("/resources", {
@@ -881,7 +881,7 @@ const Home = () => {
                     })
                 }}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>
+                <p className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]'>
                     Explore Our Resource Center
                 </p>
           </button>
@@ -919,7 +919,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Learn more</p>
@@ -938,7 +938,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Check the nearest ATM branch</p>
@@ -958,7 +958,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Download our mobile app</p>
@@ -978,7 +978,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Dial *911#</p>
@@ -997,7 +997,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Try our loan calculator</p>
@@ -1017,7 +1017,7 @@ const Home = () => {
                         type="button"
                     >
                         <span
-                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                        className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                         aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">Check our FX rates</p>
@@ -1046,7 +1046,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
@@ -1074,7 +1074,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
@@ -1103,7 +1103,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
@@ -1132,7 +1132,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
@@ -1160,7 +1160,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
@@ -1189,7 +1189,7 @@ const Home = () => {
                         }}
                     >
                         <span
-                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-300 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
+                            className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                             aria-hidden="true"
                         ></span>
                         <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">

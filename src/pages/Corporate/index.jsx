@@ -79,15 +79,17 @@ const Corporate = () => {
 
       <section 
 
-style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-none lg:h-[90vh]'>
+ className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
               <div 
                   style={{
                       backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                       backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover"
+                      backgroundSize: "cover",
+
+
                   }}
-                  className=' lm: pt-[127px] lm:pt-0 pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
-              >
+                  className='pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[95vh] max-sm:pt-[30%] '
+                  >
                   <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                       <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                           <p               style={{fontWeight:450}}
@@ -97,7 +99,7 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
                               Powering Your <span className='font-bold'>Business Growth</span>
                           </p>
                           <p 
-                              className={`animate__animated  animate__fadeInUp animate__slow w-auto  md:w-[786px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                              className={`animate__animated  animate__fadeInUp animate__slow w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                           >
                             At Tatum Bank, we understand that businesses thrive when they have the right 
                             financial partner—one that offers tailored solutions, expert insights, and 
@@ -105,36 +107,36 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
                           </p>
                           <div className='flex items-center mt-[12px] gap-3'>
                             <button
-                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                               type='button'
                               onClick={() => navigate("/corporate/account", {
                                 state: {section: "account"}
                               })}
                             >
                                 <p 
-                                  className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                  className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
                                     Open a corporate account
                                 </p>
                                 <FaArrowRightLong 
-                                  className='w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                  className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
                           </div>
                       </div>
-                      <div className='hidden lm:flex items-start absolute -bottom-36'>
-                          <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
-                              We are licensed by 
-                              <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                              Deposit insured by
-                              <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
-                          </p>
-                      </div>
+                      <div className='hidden lm:flex items-start absolute lg:bottom-[-47%]'>
+                    <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
+                        We are licensed by 
+                        <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
+                        Deposit insured by
+                        <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
+                    </p>
+                </div>
                   </div>
                   <img 
                       src={isMobile ? Chairman : Chairman} 
                       alt='Family' 
-                      className={`animate__animated animate__zoomIn relative lm:right-96 lm:bottom-14  lg:mt-40 lg:w-[69.5%]`} 
+                      className={`animate__animated animate__zoomIn relative lm:right-[32%] lm:top-[6%] lg:w-[75%] `} 
                   />
               </div>
       </section>
@@ -144,7 +146,7 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
             <img 
                 src={Corp} 
                 alt='Saver' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
@@ -162,26 +164,26 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
                 </div>
 
                 <button
-                  className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[4px] w-[241px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                  className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[241px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
                   onClick={() => navigate("/corporate/account", {
                     state: {section: "account"}
                   })}
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
 
             </div>
             <button
-              className='transition-all duration-300 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[283px] h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
+              className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[283px] h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
               type='button'
               onClick={() => navigate("/corporate/account", {
                 state: {section: "account"}
               })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Corp} alt='Corp' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -219,21 +221,21 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
               </div>
             </div> 
             <button
-                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/corporate/account", {
                   state: {section: "account"}
                 })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Investment} 
                   alt='Airplane' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
@@ -243,7 +245,7 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
             <img 
                 src={Treasury} 
                 alt='Treasury' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
@@ -278,14 +280,14 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
               </div>
             </div> 
             <button
-                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/corporate/account", {
                   state: {section: "account"}
                 })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -324,21 +326,21 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
               </div>
             </div> 
             <button
-                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[210px] lg:w-[247px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[210px] lg:w-[247px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/corporate/account", {
                   state: {section: "account"}
                 })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Trade} 
                   alt='Trade' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
@@ -348,7 +350,7 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
             <img 
                 src={Lending} 
                 alt='Lending' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
@@ -383,14 +385,14 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
               </div>
             </div> 
             <button
-              className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[208px] lg:w-[245px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+              className='transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[208px] lg:w-[245px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
               onClick={() => navigate("/corporate/account", {
                 state: {section: "account"}
               })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Lending} alt='Lending' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -429,28 +431,28 @@ style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-no
               </div>
             </div> 
             <button
-                className='transition-all duration-300 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] w-[198px] lg:w-[215px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/corporate/account", {
                   state: {section: "account"}
                 })}
             >
-                <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Partner} 
                   alt='Partner' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
 
       <div ref={faqRef} className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
         <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
-          <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
+          <p className='text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
           <p className='font-med text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Corporate Banking.</p>
         </div>
         <div className='flex flex-col w-full lm:w-[710px]'>

@@ -28,7 +28,7 @@ const Footer = () => {
         }}
         className="flex w-full h-[270px] lg:h-[374px] flex-col items-center justify-center">
         <div className="lg:w-[664px] lg:h-[232px] flex flex-col items-center gap-[32px]">
-          <p className="font-grava text-[24px] lg:text-[56px] font-semibold text-center leading-[35px] lg:leading-[70px] text-[#002244]">
+        <p className="font-grava text-[24px] lg:text-[45px] font-semibold text-center leading-[40px] lg:leading-[60px] text-[#002244]">
             Stay smiling. <br /> Open an account today! 
           </p>
           <button
@@ -52,7 +52,7 @@ const Footer = () => {
               </p>
               <a 
                 href="mailto:info@tatumbank.com"
-                className="font-grava text-[#002244] block font-[350] text-sm "
+                className="font-grava text-[#002244] block font-[300] text-sm "
               >
                 info@tatumbank.com
               </a>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-[1044px] grid grid-cols-2 lg:flex items-start gap-[40px] lg:gap-[96px]">
             <div className="flex flex-col gap-6 w-[85px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
                 COMPANY
               </p>
               <div className="flex flex-col gap-6">
@@ -108,7 +108,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[126px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
                 SERVICES
               </p>
               <div className="flex flex-col gap-6">
@@ -161,7 +161,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[156px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-medium">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
                 LEGAL
               </p>
               <div className="flex flex-col gap-6">
@@ -190,7 +190,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[97px]">
-              <p className="font-grava text-base tracking-wide text-[#002244] font-medium">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-bo">
                 SUPPORT
               </p>
               <div className="flex flex-col gap-6">
@@ -229,7 +229,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 w-[196px]">
-              <p className="font-grava text-base tracking-wide text-[#002244] font-medium">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-bo">
                 ADDRESS
               </p>
               <div className="flex flex-col gap-6">
@@ -240,7 +240,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="h-[0.5px] bg-[#546B82] w-full"></div>
+        <div className="h-[0.5px] bg-[#d7dce2] w-full"></div>
         <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[21px] lastF">
           <img
             src={Logo}
@@ -261,7 +261,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#002244] h-[14px] w-full"></div>
+      <div className="bg-[#ffcc33] h-[10px] w-full"></div>
     </>
   );
 };

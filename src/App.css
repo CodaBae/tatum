@@ -10,6 +10,10 @@
 
 }
 
+.font-bo{
+    font-weight: 500 ;
+
+}
 .font-semibold {
     font-weight: 500;
 }
@@ -60,3 +64,10 @@
     margin-top: -0.125rem !important;
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 999;
+}

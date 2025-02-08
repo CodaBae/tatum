@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MdKeyboardBackspace } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 import EstateBg from '../../../assets/png/estate-bg.jpeg'
 import Business from '../../../assets/png/business_img.png'
@@ -40,7 +40,7 @@ const Estate = () => {
               
         <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
             <MdKeyboardBackspace className='w-5 h-5 mt-[-2px] text-[#fff] group-hover:mr-2' />
-            <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-300 group-hover:ml-2'>Go back</p>
+            <p className='font-grava text-[#fff] text-[20px] font-medium whitespace-nowrap transition-all duration-500 group-hover:ml-2'>Go back</p>
         </div>
 
         <div 
@@ -82,11 +82,11 @@ const Estate = () => {
             </p>
           </div>
           <button
-            className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-full md:w-[318px] h-[55px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+            className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full md:w-[318px] h-[55px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
             type='button'
           >
-            <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
-            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
+            <IoIosArrowRoundForward className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
 
@@ -119,7 +119,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Draft your will with us
                     </p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -147,7 +147,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Establish your trust—contact us today
                     </p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
+                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -174,7 +174,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Get started now
                     </p>
-                    <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -202,7 +202,7 @@ const Estate = () => {
                   <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                     Create a guardianship plan now
                   </p>
-                  <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                  <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
               </div>
           </div>
           <div className='w-5/12 hidden md:flex justify-end'>
@@ -229,7 +229,7 @@ const Estate = () => {
                 <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                   Schedule a consultation today
                 </p>
-                <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
               </div>
           </div>
           <div className='w-5/12 hidden md:flex justify-end'>

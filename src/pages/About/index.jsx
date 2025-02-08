@@ -117,7 +117,7 @@ const About = () => {
     >
     <section 
 
-style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-hidden outline-none'>
+className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         <div
           style={{
             backgroundImage: `url(${
@@ -128,24 +128,24 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0"
+          className=" lm: pt-[127px] pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[95vh]"
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-              <p
+              <p               style={{fontWeight:450}}
+
                 className={`animate__animated animate__fadeInUp lm:w-[450px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
               >
                 Welcome to <br /> <span className="font-bold">Tatum Bank</span>
               </p>
               <p
-              style={{fontWeight:450}}
-                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 We are more than a financial institution—we are a trusted
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className="hidden lm:flex items-start absolute -bottom-44">
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-55%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -168,7 +168,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__zoomIn relative -right-5 lm:right-5 lm:h-[740px] lg:w-[40%`} 
+            className={`animate__animated animate__zoomIn relative lm:top-[0%] lg:w-[51%] `} 
             />
         </div>
       </section>
@@ -180,26 +180,26 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <p className="text-[#002244] font-grava font-medium text-[28px] lg:text-[56px] tracking-wider">
                 Our Story
               </p>
-              <img
+              {/* <img
                 src={SlimStar}
                 alt="SlimStar"
                 className="w-[48px] h-[55px] hidden lg:block"
-              />
+              /> */}
             </div>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
               Inspired by our name, Tatum, a refined form of the Latin word
               Tutum, meaning "a safe place" or "refuge," we are committed to
               being a secure and dependable guardian of your financial goals and
               aspirations.
             </p>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[24px] tracking-[1.4%]">
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[18px] tracking-[1.4%]">
               Our journey is rooted in the promise to provide a safe haven where
               customers can confidently entrust their finances. We deliver on
               this promise through innovative products, advanced technology, and
               unparalleled service designed to support every step of your
               financial journey.
             </p>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
               At Tatum Bank,{" "}
               <span className="font-semibold ">We Keep You Smiling.</span>
             </p>
@@ -215,7 +215,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
                 <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                   Our Mission
                 </p>
-                <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
                   To improve the lives of Nigerians, particularly the youth, by
                   offering innovative, easily accessible, and secure financial
                   services that promote economic growth and personal success.
@@ -232,7 +232,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
                 <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                   Vision.
                 </p>
-                <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
                   To be Nigeria's most trusted and innovative financial partner,
                   promoting financial literacy and enabling prosperity for
                   future generations.
@@ -430,7 +430,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
             <img
               src={Arrow}
               alt="Arrow"
-              className="w-[56px] h-[40px] transition-all duration-300 group-hover:ml-2"
+              className="w-[56px] h-[40px] transition-all duration-500 group-hover:ml-2"
             />
           </div>
         </div>
@@ -449,17 +449,17 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <img
                 src={HeadShot}
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-300 "
+                className="w-full h-full object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
 
               {/* Center Arrow */}
               <img
                 src={ArrowClick}
                 alt="ArrowClick"
-                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
             </div>
 
@@ -467,7 +467,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
               </p>
-              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Non-Executive Director
               </p>
             </div>
@@ -487,24 +487,24 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <img
                 src={HeadShot}
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-300 "
+                className="w-full h-full object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
 
               {/* Center Arrow */}
               <img
                 src={ArrowClick}
                 alt="ArrowClick"
-                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
             </div>
             <div className="flex flex-col gap-[4px]">
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Niyi Adeseun
               </p>
-              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Managing Director
               </p>
             </div>
@@ -524,24 +524,24 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <img
                 src={HeadShot}
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-300 "
+                className="w-full h-full object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
 
               {/* Center Arrow */}
               <img
                 src={ArrowClick}
                 alt="ArrowClick"
-                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
             </div>
             <div className="flex flex-col gap-[4px]">
               <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
                 Aminatu Dahiru Chiroma
               </p>
-              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Executive Director
               </p>
             </div>
@@ -561,24 +561,24 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
               <img
                 src={HeadShot}
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-300 "
+                className="w-full h-full object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
 
               {/* Center Arrow */}
               <img
                 src={ArrowClick}
                 alt="ArrowClick"
-                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
             </div>
             <div className="flex flex-col gap-[4px]">
               <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
                 Aminatu Dahiru Chiroma
               </p>
-              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Non-Executive Director
               </p>
             </div>
@@ -717,7 +717,7 @@ style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-h
                 </div>
                 <div className="flex items-center gap-6 group">
                     <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%]">Contact us</p>
-                    <img src={Arrow} alt="Arrow" className="w-[56px] h-[40px] transition-all duration-300 group-hover:ml-2" />
+                    <img src={Arrow} alt="Arrow" className="w-[56px] h-[40px] transition-all duration-500 group-hover:ml-2" />
                 </div>
             </div>
 
