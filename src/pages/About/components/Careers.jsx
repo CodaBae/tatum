@@ -33,7 +33,7 @@ import verification from "../../../assets/svg/verification.svg";
 import ApplynowImg from "../../../assets/svg/ApplynowImg.svg";
 import Applynowimg2 from "../../../assets/svg/Applynowimg2.svg";
 import ApplynowCircle from "../../../assets/svg/ApplynowCircle.svg";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 
 const Careers = () => {
@@ -125,7 +125,7 @@ const Careers = () => {
             <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
             </p>
-            <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
+            <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
         <div className="animate__animated animate__zoomIn absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
@@ -897,7 +897,7 @@ const Careers = () => {
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
             <div className=" relative w-[246px] h-[223px] lg:w-[248px] lg:h-[305.18px]">

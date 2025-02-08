@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import smeHeroImg from "../../assets/svg/smeHeroImg.svg";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import line from "../../assets/svg/line.svg";
 import smeCard1 from "../../assets/jpg/smeCard1.jpg";
@@ -14,6 +14,7 @@ import scrollImg1 from "../../assets/jpg/scrollImg1.jpg";
 import scrollImg2 from "../../assets/jpg/scrollImg2.jpg";
 import scrollImg3 from "../../assets/jpg/scrollImg3.jpg";
 import scrollImg4 from "../../assets/jpg/scrollImg4.jpg";
+import { useTransform, motion, useScroll } from "framer-motion";
 
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
@@ -27,7 +28,9 @@ import ball1 from "../../assets/svg/ball1.svg";
 import ball2 from "../../assets/svg/ball2.svg";
 import ball3 from "../../assets/svg/ball3.svg";
 import "./styles.css";
-import { motion } from "framer-motion";
+import "./card.css";
+
+import Lenis from "@studio-freight/lenis";
 
 const SME = () => {
   const isMobile = window.innerWidth < 768;
@@ -35,6 +38,68 @@ const SME = () => {
   const [openTabOne, setOpenTabOne] = useState(false);
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
+
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "start start"],
+  });
+
+
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
+  const projects = [
+    {
+      title: "Matthias Leidinger",
+      description:
+        "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+      src: "rock.jpg",
+      link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+      color: "#BBACAF",
+    },
+    {
+      title: "Clément Chapillon",
+      description:
+        "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+      src: "tree.jpg",
+      link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+      color: "#977F6D",
+    },
+    {
+      title: "Zissou",
+      description:
+        "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+      src: "water.jpg",
+      link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+      color: "#C2491D",
+    },
+    {
+      title: "Mathias Svold and Ulrik Hasemann",
+      description:
+        "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
+      src: "house.jpg",
+      link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
+      color: "#B62429",
+    },
+    {
+      title: "Mark Rammers",
+      description:
+        "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
+      src: "cactus.jpg",
+      link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
+      color: "#88A28D",
+    },
+  ];
 
   const handleTabOne = () => {
     setOpenTabOne(!openTabOne);
@@ -47,26 +112,6 @@ const SME = () => {
   const handleTabThree = () => {
     setOpenTabThree(!openTabThree);
   };
-
-  // Add these animation variants at the top of your component
-const cardVariants = {
-  offscreen: {
-    y: 100,
-    opacity: 0,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
-      opacity: {
-        duration: 0.4,
-      },
-    },
-  },
-};
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -91,7 +136,59 @@ const cardVariants = {
   const navigate = useNavigate();
 
   const smeRef = useRef(null);
+
   const paymentRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const cards = cardsRef.current;
+
+    // Apply padding and scaling effects
+    cards.forEach((card, index) => {
+      const offsetTop = 20 + index * 20; // Adjust overlap amount
+      card.style.paddingTop = `${offsetTop}px`;
+
+      if (index === cards.length - 1) return;
+
+      const toScale = 1 - (cards.length - 1 - index) * 0.1; // Scale down effect
+      const nextCard = cards[index + 1];
+      const cardInner = card.querySelector(".card__inner");
+
+      const handleScroll = () => {
+        const rect = nextCard.getBoundingClientRect();
+        const percentageY = Math.max(
+          0,
+          Math.min(1, (window.innerHeight - rect.top) / window.innerHeight)
+        );
+
+        cardInner.style.transform = `scale(${valueAtPercentage({
+          from: 1,
+          to: toScale,
+          percentage: percentageY,
+        })})`;
+        cardInner.style.filter = `brightness(${valueAtPercentage({
+          from: 1,
+          to: 0.6,
+          percentage: percentageY,
+        })})`;
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    });
+  }, []);
+
+  // Helper function to calculate values at a percentage
+  const valueAtPercentage = ({ from, to, percentage }) => {
+    return from + (to - from) * percentage;
+  };
+
+  // Variants for Framer Motion animations
+  const cardVariants = {
+    offscreen: { opacity: 0, y: 50 },
+    onscreen: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   const accountRef = useRef(null);
   const loanRef = useRef(null);
   const advisoryRef = useRef(null);
@@ -121,10 +218,7 @@ const cardVariants = {
 
   return (
     <div ref={smeRef}>
-      <section
-
-        className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]"
-      >
+      <section className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -168,11 +262,14 @@ const cardVariants = {
                   <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Business account today
                   </p>
-                  <FaArrowRightLong className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]" />
+                  <BsArrowRight
+                    size={100}
+                    className="text-5xl  w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                  />
                 </button>
               </div>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-23%]'>
+            <div className="hidden lm:flex items-start absolute lg:bottom-[-23%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -192,8 +289,8 @@ const cardVariants = {
           <img
             src={isMobile ? smeHeroImg : smeHeroImg}
             alt="Family"
-            className={`animate__animated animate__zoomIn relative lm:top-[4%] lg:w-[75%] `} 
-            />
+            className={`animate__animated animate__zoomIn relative lm:top-[4%] lg:w-[75%] `}
+          />
         </div>
       </section>
 
@@ -216,7 +313,7 @@ const cardVariants = {
 
           <div className="flex flex-col gap-[56px]">
             <div className="flex flex-col lg:flex-row gap-[40px]">
-              <div className="">
+              <div data-aos="fade-right" className="">
                 <div className=" flex flex-col items-center gap-[32px] ">
                   <div className="w-[350px] h-[360px] sm:w-[450px] sm:h-[480px] lg:w-[542px] lg:h-[537px] rounded-tl-[32px] rounded-br-[32px] overflow-hidden">
                     <img
@@ -236,7 +333,7 @@ const cardVariants = {
                   </div>
                 </div>
               </div>
-              <div>
+              <div data-aos="fade-left">
                 <div className=" flex flex-col items-center gap-[32px] ">
                   <div className="w-[350px] h-[360px] sm:w-[450px] sm:h-[480px] lg:w-[542px] lg:h-[537px] rounded-tl-[32px] rounded-br-[32px] overflow-hidden">
                     <img
@@ -276,7 +373,10 @@ const cardVariants = {
                 <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Open an account
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <BsArrowRight
+                  size={100}
+                  className="text-5xl  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                />
               </button>
             </div>
           </div>
@@ -289,7 +389,7 @@ const cardVariants = {
         ref={loanRef}
         className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center"
       >
-        <div className="flex flex-col items-center gap-[40px] w-[1328px] h-[753px] ">
+        <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
             <p className="font-grava font-[350] text-center text-[14px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
               Loan Calculator
@@ -548,7 +648,10 @@ const cardVariants = {
                     <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                       Apply now
                     </p>
-                    <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                    <BsArrowRight
+                      size={100}
+                      className="text-5xl  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                    />
                   </button>
 
                   <p className="font-grava font-[350] text-center text-[16px] w-[532px] leading-[24px] tracking-[0.2%]  text-[#002244] cursor-pointer  ">
@@ -567,12 +670,18 @@ const cardVariants = {
       </div>
 
       <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
-        <div className="w-[309px] h-[317px] sm:w-[464px] sm:h-[476px] lg:w-[571px] lg:h-[585px] ">
+        <div
+          data-aos="fade-right"
+          className="w-[309px] h-[317px] sm:w-[464px] sm:h-[476px] lg:w-[571px] lg:h-[585px] "
+        >
           <img src={LoanImg} alt="" />
         </div>
-        <div className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]">
+        <div
+          data-aos="fade-left"
+          className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]"
+        >
           <div className="flex flex-col items-center gap-[16px] lg:w-[565px] lg:h-[197px] ">
-            <h1 className="font-grava font-[400]  text-[24px] sm:text-[30px] leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
+            <h1 className="font-grava font-[400]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
               Business Loans - Funding Your Business Growth
             </h1>
             <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-center lg:text-start text-[#002244]">
@@ -641,7 +750,10 @@ const cardVariants = {
                 <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <BsArrowRight
+                  size={100}
+                  className="text-5xl  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                />
               </button>
             </div>
           </div>
@@ -652,7 +764,7 @@ const cardVariants = {
 
       <div
         ref={paymentRef}
-        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col gap-8 sm:gap-[64px]"
+        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col  relative min-h-[200vh]"
       >
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
@@ -666,244 +778,289 @@ const cardVariants = {
           </div>
         </div>
 
+
         {/* Card 1 - POS Services */}
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-          className="flex justify-center gap-8 sm:gap-[64px]"
-        >
-          <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
-            <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-              <div className="flex flex-col gap-4 sm:gap-[16px]">
-                <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                  POS Services
-                </h1>
-                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                  POS & Merchant Services for easy customer payments
-                </p>
-              </div>
-              <div className="flex flex-col gap-8 sm:gap-[48px]">
-                <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
-                  {/* List items */}
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Sell Smarter with our Advanced POS Systems
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Secure card processing, real-time sales analytics, and
-                      inventory sync.
-                    </p>
-                  </div>
-                </div>
-                <button className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                  <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                    Request a POS system
+        <div ref={container} className="cardContainer">
+          <motion.div
+            style={{
+
+              top: `calc(-5vh + ${0 * 25}px)`,
+            }}
+            className="card1"
+          >
+            <div className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+            style={{
+              backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height:" 55vh"
+
+            }}
+            >
+              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                <div className="flex flex-col gap-4 sm:gap-[16px]">
+                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                    POS Services
+                  </h1>
+                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    POS & Merchant Services for easy customer payments
                   </p>
-                  <FaArrowRightLong className="text-[#002244] group-hover:text-[#ffcc33] w-5 h-5" />
-                </button>
+                </div>
+                <div className="flex flex-col gap-8 sm:gap-[48px]">
+                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                    {/* List items */}
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Sell Smarter with our Advanced POS Systems
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Secure card processing, real-time sales analytics, and
+                        inventory sync.
+                      </p>
+                    </div>
+                  </div>
+                  <button className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
+                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                      Request a POS system
+                    </p>
+                    <BsArrowRight
+                      size={100}
+                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                <img
+                  src={scrollImg1}
+                  alt="POS system"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
               </div>
             </div>
-            <div className="w-full sm:w-[516px] h-[216px] sm:h-[385px] mt-8 lg:mt-0">
-              <img
-                src={scrollImg1}
-                alt="POS system"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Card 2 - Merchant Services */}
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-          className="flex justify-center gap-8 sm:gap-[64px]"
-        >
-          <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
-            <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-              <div className="flex flex-col gap-4 sm:gap-[16px]">
-                <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                  Merchant Services
-                </h1>
-                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                  Accept Payments Anywhere, Anytime
-                </p>
-              </div>
-              <div className="flex flex-col gap-8 sm:gap-[48px]">
-                <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Payment gateways, QR codes, and card terminals.
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Advanced security to protect your revenue.
-                    </p>
-                  </div>
-                </div>
-                <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                  <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                    Sign up now
+        <div ref={container} className="cardContainer">
+          <motion.div
+            style={{
+
+              top: `calc(-5vh + ${1 * 25}px)`,
+            }}
+            className="card1"
+          >
+            <div className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner" style={{
+    backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height:" 55vh"
+
+  }}>
+              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                <div className="flex flex-col gap-4 sm:gap-[16px]">
+                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                    Merchant Services
+                  </h1>
+                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    Accept Payments Anywhere, Anytime
                   </p>
-                  <FaArrowRightLong className="text-[#002244] group-hover:text-[#ffcc33] w-5 h-5" />
-                </button>
+                </div>
+                <div className="flex flex-col gap-8 sm:gap-[48px]">
+                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Payment gateways, QR codes, and card terminals.
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Advanced security to protect your revenue.
+                      </p>
+                    </div>
+                  </div>
+                  <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
+                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                      Sign up now
+                    </p>
+                    <BsArrowRight
+                      size={100}
+                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                <img
+                  src={scrollImg2}
+                  alt="Merchant services"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
               </div>
             </div>
-            <div className="w-full sm:w-[516px] h-[216px] sm:h-[385px] mt-8 lg:mt-0">
-              <img
-                src={scrollImg2}
-                alt="Merchant services"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Card 3 - Online & Mobile Transfers */}
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-          className="flex justify-center gap-8 sm:gap-[64px]"
-        >
-          <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
-            <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-              <div className="flex flex-col gap-4 sm:gap-[16px]">
-                <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                  Online & Mobile Transfers
-                </h1>
-                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                  Stay in control of your finances with our cutting-edge digital
-                  banking solutions.
-                </p>
-              </div>
-              <div className="flex flex-col gap-8 sm:gap-[48px]">
-                <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Internet & Mobile Banking
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      24/7 Account Access & Monitoring
-                    </p>
-                  </div>
-                </div>
-                <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                  <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                    Sign up now
-                  </p>
-                  <FaArrowRightLong className="text-[#002244] group-hover:text-[#ffcc33] w-5 h-5" />
-                </button>
-              </div>
-            </div>
-            <div className="w-full sm:w-[516px] h-[216px] sm:h-[385px] mt-8 lg:mt-0">
-              <img
-                src={scrollImg3}
-                alt="Mobile banking"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-          </div>
-        </motion.div>
+        <div ref={container} className="cardContainer">
+          <motion.div
+            style={{
 
-        {/* Card 4 - Payroll Management */}
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-          className="flex justify-center gap-8 sm:gap-[64px]"
-        >
-          <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
-            <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-              <div className="flex flex-col gap-4 sm:gap-[16px]">
-                <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                  Payroll Management
-                </h1>
-                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                  Manage salaries, taxes, and benefits with ease.
-                </p>
-              </div>
-              <div className="flex flex-col gap-8 sm:gap-[48px]">
-                <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Bulk Payment Processing
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-start">
-                    <img
-                      src={goodMark}
-                      className="w-6 h-6 sm:w-7 sm:h-7"
-                      alt="checkmark"
-                    />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Advanced security to protect your revenue.
-                    </p>
-                  </div>
-                </div>
-                <button className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                  <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                    Get started now
+              top: `calc(-5vh + ${2 * 25}px)`,
+            }}
+            className="card1"
+          >
+            <div className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner" style={{
+    backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height:" 55vh"
+
+  }}>
+              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                <div className="flex flex-col gap-4 sm:gap-[16px]">
+                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                    Online & Mobile Transfers
+                  </h1>
+                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    Stay in control of your finances with our cutting-edge
+                    digital banking solutions.
                   </p>
-                  <FaArrowRightLong className="text-[#002244] group-hover:text-[#ffcc33] w-5 h-5" />
-                </button>
+                </div>
+                <div className="flex flex-col gap-8 sm:gap-[48px]">
+                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Internet & Mobile Banking
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        24/7 Account Access & Monitoring
+                      </p>
+                    </div>
+                  </div>
+                  <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
+                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                      Sign up now
+                    </p>
+                    <BsArrowRight
+                      size={100}
+                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                <img
+                  src={scrollImg3}
+                  alt="Mobile banking"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
               </div>
             </div>
-            <div className="w-full sm:w-[516px] h-[216px] sm:h-[385px] mt-8 lg:mt-0">
-              <img
-                src={scrollImg4}
-                alt="Payroll management"
-                className="w-full h-full object-cover rounded-3xl"
-              />
+          </motion.div>
+        </div>
+        {/* Card 4 - Payroll Management */}
+        <div ref={container} className="cardContainer">
+          <motion.div
+            style={{
+              top: `calc(-5vh + ${3 * 25}px)`,
+            }}
+            className="card1"
+          >
+            <div className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl" style={{
+    backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height:" 55vh"
+
+  }}>
+              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                <div className="flex flex-col gap-4 sm:gap-[16px]">
+                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                    Payroll Management
+                  </h1>
+                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    Manage salaries, taxes, and benefits with ease.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-8 sm:gap-[48px]">
+                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Bulk Payment Processing
+                      </p>
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <img
+                        src={goodMark}
+                        className="w-6 h-6 sm:w-7 sm:h-7"
+                        alt="checkmark"
+                      />
+                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                        Advanced security to protect your revenue.
+                      </p>
+                    </div>
+                  </div>
+                  <button className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
+                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                      Get started now
+                    </p>
+                    <BsArrowRight
+                      size={100}
+                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                <img
+                  src={scrollImg4}
+                  alt="Payroll management"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
       {/* Scroll section ends */}
 
@@ -1082,7 +1239,8 @@ const cardVariants = {
                 >
                   Open an account
                 </p>
-                <FaArrowRightLong
+                <BsArrowRight
+                  size={100}
                   className="
               w-5 h-5 
               transition-colors duration-500 ease-in-out 
@@ -1178,7 +1336,7 @@ const cardVariants = {
             zIndex: 1, // Ensures content stays above background
           }}
           className="overflow-hidden h-[682px] sm:h-[750px] lg:h-[440px] 
-               w-[350px] sm:w-[700px] lg:w-[1328px] 
+               w-[90%] sm:w-[700px] lg:w-[90%] 
                rounded-[32px] py-[32px] sm:py-[48px] lg:py-[64px] 
                px-[20px] sm:px-[32px] lg:px-[64px] 
                gap-[48px] sm:gap-[80px] lg:gap-[133px] 
@@ -1241,7 +1399,8 @@ const cardVariants = {
                 >
                   Call us today
                 </p>
-                <FaArrowRightLong
+                <BsArrowRight
+                  size={100}
                   className="w-5 h-5 transition-colors duration-500 ease-in-out 
                                       text-[#FFCC33] group-hover:text-[#002244]"
                 />

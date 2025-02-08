@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { FaArrowRightLong } from 'react-icons/fa6'
+import { BsArrowRight } from 'react-icons/bs'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import CBN from "../../assets/svg/cbn_logo.svg";
@@ -104,7 +104,7 @@ const Private = () => {
                                 >
                                     Open a private account
                                 </p>
-                                <FaArrowRightLong 
+                                <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
@@ -158,7 +158,7 @@ const Private = () => {
                   }})}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
 
                 <div className='flex flex-col gap-[32px] mt-6'>
@@ -197,7 +197,7 @@ const Private = () => {
               }})}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Dining} alt='Dining' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -226,7 +226,7 @@ const Private = () => {
               type='button'
           >
               <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Sign up for Updates</p>
-              <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
         <div data-aos="fade-left">
@@ -270,7 +270,7 @@ const Private = () => {
                 }})}
             >
               <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
-              <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
             <div className='flex flex-col lm:flex-row items-center gap-2'>
@@ -317,7 +317,7 @@ const Private = () => {
             }})}
           >
               <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for the Tatum Black Card</p>
-              <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
         <img src={Cards} alt='Cards' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />

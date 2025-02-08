@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MdKeyboardBackspace } from 'react-icons/md';
 import { useLocation } from 'react-router-dom';
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { BsArrowRight } from "react-icons/bs";
 
 import EstateBg from '../../../assets/png/estate-bg.jpeg'
 import Business from '../../../assets/png/business_img.png'
@@ -86,7 +86,7 @@ const Estate = () => {
             type='button'
           >
             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
-            <IoIosArrowRoundForward className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
 
@@ -119,7 +119,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Draft your will with us
                     </p>
-                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -147,7 +147,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Establish your trust—contact us today
                     </p>
-                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
+                    <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -174,7 +174,7 @@ const Estate = () => {
                     <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                       Get started now
                     </p>
-                    <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                    <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                 </div>
             </div>
             <div className='w-5/12 hidden md:flex justify-end'>
@@ -202,7 +202,7 @@ const Estate = () => {
                   <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                     Create a guardianship plan now
                   </p>
-                  <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                  <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
               </div>
           </div>
           <div className='w-5/12 hidden md:flex justify-end'>
@@ -229,7 +229,7 @@ const Estate = () => {
                 <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                   Schedule a consultation today
                 </p>
-                <IoIosArrowRoundForward className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
               </div>
           </div>
           <div className='w-5/12 hidden md:flex justify-end'>

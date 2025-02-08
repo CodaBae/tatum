@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { BsArrowRight } from "react-icons/bs";
 
 import Line from "../../assets/svg/line_b.svg"
 import Plus from "../../assets/svg/plus.svg";
@@ -207,7 +207,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
                onClick={() => navigate("/", {state: {section: "home"}})}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
-                <IoIosArrowRoundForward className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
 

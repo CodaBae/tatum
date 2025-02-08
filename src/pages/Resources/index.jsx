@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { BsArrowRight } from 'react-icons/bs';
 
 import Meeting from "../../assets/png/q_and_a.png";
 
@@ -100,7 +100,7 @@ const Resources = () => {
                 onClick={() => navigate("/", {state: {section: "home"}})}
               >
                   <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
-                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Meeting} alt='Meeting' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />

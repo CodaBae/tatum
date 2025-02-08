@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel as LandingCarousel } from "react-responsive-carousel";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 import Slider from "react-slick";
 import { Slider as Slide } from "antd";
 import "slick-carousel/slick/slick.css";
@@ -200,15 +200,17 @@ const Home = () => {
     <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
-                // dynamicHeight={true} 
-               interval={5000} 
-                showArrows={false} 
-                autoPlay={true}  //   {false}
-                showIndicators={false}  // {true}
-                showStatus={false} 
-                showThumbs={false} 
-                infiniteLoop={true}
-                onChange={handleSlideChange}
+              interval={5000} 
+              showArrows={false} 
+              autoPlay={true}
+              showIndicators={false}
+              showStatus={false} 
+              showThumbs={false} 
+              infiniteLoop={true}
+              onChange={handleSlideChange}
+              // Add these two props for fade transition
+              animationHandler="fade"
+              transitionTime={500}
             >
                 <div className='h-full w-full outline-none'>
                     <div 
@@ -244,7 +246,7 @@ const Home = () => {
                                         >
                                             Open an account today
                                         </p>
-                                        <FaArrowRightLong 
+                                        <BsArrowRight size={100}   
                                             className='mt-[1px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
@@ -274,7 +276,8 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative -right-20 md:right-24  bottom-0 lg:right-44  lg:h-[750px]`} 
+                             
+                            className={`${activeIndex === 0 ? "animate__animated animate__fadeInRight" : ""} relative -right-20 md:right-24  bottom-0 lg:right-44  lg:h-[750px]`} 
                         />
                     </div>
                 </div>
@@ -315,7 +318,7 @@ const Home = () => {
                                         >
                                             Explore our offerings
                                         </p>
-                                        <FaArrowRightLong 
+                                        <BsArrowRight size={100}   
                                             className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
@@ -385,7 +388,7 @@ const Home = () => {
                                         >
                                             Get started with Business Banking
                                         </p>
-                                        <FaArrowRightLong 
+                                        <BsArrowRight size={100}   
                                             className='w-5 h-5 mt-[1px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
@@ -406,7 +409,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} top-6 lg:top-[10] -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
+                            className={`${activeIndex === 2 ? "animate__animated animate__fadeInRight animate__slow" : ""} top-6 lg:top-[10] -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
                         />
                     </div>
                 </div>
@@ -445,7 +448,7 @@ const Home = () => {
                                         >
                                             Get exclusive access
                                         </p>
-                                        <FaArrowRightLong 
+                                        <BsArrowRight size={100}   
                                             className='w-5 h-5 mt-[1px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                         />
                                     </button>
@@ -466,7 +469,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""}  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`} 
+                            className={`${activeIndex === 3 ? "animate__animated animate__fadeInRight animate__slow" : ""}  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`} 
                         />
                     </div>
                 </div>
@@ -481,7 +484,7 @@ const Home = () => {
                     className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
                 />
             </div>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
+            <div data-aos="fade-left" className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]'  >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
                     <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Personal Banking</p>
                     <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Interest-ing savings account to make your goals achievable.</p>
@@ -494,14 +497,14 @@ const Home = () => {
                     }})}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] ' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] ' />
                 </button>
             </div>
-            <img src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+            <img data-aos="fade-right" src={Boy} alt='Boy' className='flex md:hidden w-[295px] h-[295px]'  />
         </div>
 
         <div className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-            <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-right">
+            <div data-aos="fade-right" className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
                     <p className='font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm'>CORPORATE Banking</p>
                     <p className='font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -516,7 +519,7 @@ const Home = () => {
                     }})}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <div data-aos="fade-left">
@@ -555,7 +558,7 @@ const Home = () => {
                     }}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <img src={Farmer} alt='Farmer' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -580,7 +583,7 @@ const Home = () => {
                     }}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
             <div data-aos="fade-left">
@@ -601,7 +604,7 @@ const Home = () => {
             className='bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]'
         >
             <div className='w-[336px] lg:w-[697px] flex flex-col items-center gap-3'>
-                <p className='text-[#002244] font-medium text-[24px] font-grava md:text-[30px] lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
+                <p className='text-[#002244] font-medium text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center'>
                     Rewards and Benefits, Every Time You Spend.
                 </p>
                 <p className='text-sm lg:text-xl text-[#334E69] font-grava leading-[20px] lg:leading-[27px] text-center'>

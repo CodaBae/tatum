@@ -70,4 +70,31 @@
     top: 35px;
     left: 0;
     z-index: 999;
+    height: auto !important
 }
+
+
+
+
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --numcards: 4;
+    --outline-width: 0px;
+  }
+  
+  
+  
+  header, main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  
+  header {
+    height: 35vh;
+    display: grid;
+    place-items: center;
+    margin-bottom: 80px;
+  }
+  

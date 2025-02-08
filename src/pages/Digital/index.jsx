@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom';
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { BsArrowRight } from 'react-icons/bs';
 
 import Biz from "../../assets/png/businessman.png";
 import Talk from "../../assets/png/talk.png";
@@ -74,7 +74,7 @@ const Digital = () => {
                             >
                                 Get started
                             </p>
-                            <FaArrowRightLong
+                            <BsArrowRight size={100}  
                                 className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
                             />
                             </button>
@@ -124,7 +124,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#334E69] font-medium tracking-[25%]  text-[13px] mt-[16px] '>
@@ -170,7 +170,7 @@ const Digital = () => {
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
-                        <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <img src={Talk} alt='Talk' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -189,7 +189,7 @@ const Digital = () => {
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
@@ -282,7 +282,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-[13px] mt-[16px] '>
@@ -403,7 +403,7 @@ const Digital = () => {
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
@@ -433,7 +433,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
                         <div className='flex flex-col gap-[32px] mt-6'>
@@ -507,7 +507,7 @@ const Digital = () => {
                         >
                             Get started today.
                         </p>
-                        <FaArrowRightLong 
+                        <BsArrowRight size={100}   
                             className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
                         />
                         </button>

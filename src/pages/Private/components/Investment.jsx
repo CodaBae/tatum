@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { FaArrowRightLong } from 'react-icons/fa6'
+import { BsArrowRight } from 'react-icons/bs'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { MdKeyboardBackspace } from 'react-icons/md'
 
@@ -106,7 +106,7 @@ const Investment = () => {
                         <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                             Build Your Tailored Portfolio Today
                         </p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                        <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -133,7 +133,7 @@ const Investment = () => {
                         <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                             Protect Your Investments Now
                         </p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
+                        <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-[-2px] group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -160,7 +160,7 @@ const Investment = () => {
                         <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                             Get Expert Insights on Your Investments
                         </p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                        <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>
@@ -189,7 +189,7 @@ const Investment = () => {
                         <p className='font-grava text-[#002244] font-[350] tracking-wide text-sm lg:text-[20px] group-hover:mr-2'>
                             Explore Exclusive Investment Opportunities
                         </p>
-                        <FaArrowRightLong className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
+                        <BsArrowRight size={100}   className='w-5 h-5 text-[#002244] mt-1 group-hover:ml-2' />
                     </div>
                 </div>
                 <div className='w-5/12 hidden md:flex justify-end'>

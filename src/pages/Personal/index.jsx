@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
@@ -158,7 +158,7 @@ const Personal = () => {
                         >
                             Open a personal account today
                         </p>
-                        <FaArrowRightLong 
+                        <BsArrowRight size={100}   
                             className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
                         />
                       </button>
@@ -193,7 +193,7 @@ const Personal = () => {
                   className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
               />
           </div>
-          <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
+          <div data-aos="fade-left" className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]'  >
               <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
                   <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Savings Account</p>
                   <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Grow your savings effortlessly</p>
@@ -208,14 +208,14 @@ const Personal = () => {
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
-          <img src={Saver} alt='Saver' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+          <img data-aos="fade-right"  src={Saver} alt='Saver' className='flex md:hidden w-[295px] h-[295px]' />
       </div>
 
       <div  ref={currentRef} className='bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-        <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+        <div data-aos="fade-right" className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]'  >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
               <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Current Account</p>
               <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>
@@ -233,7 +233,7 @@ const Personal = () => {
               onClick={() => navigate("/personal/account", { state: {section: "account"}})}
           >
               <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-              <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
         <div data-aos="fade-left">
@@ -253,7 +253,7 @@ const Personal = () => {
                   className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
               />
           </div>
-          <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]' data-aos="fade-left" >
+          <div data-aos="fade-left" className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]'  >
               <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
                   <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Fixed Deposits</p>
                   <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Safe, secure and steadily rewarding</p>
@@ -269,10 +269,10 @@ const Personal = () => {
                   onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Learn more</p>
-                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
-          <img src={Power} alt='Power' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+          <img data-aos="fade-right" src={Power} alt='Power' className='flex md:hidden w-[295px] h-[295px]'  />
       </div>
 
       <div ref={loanRef} className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
@@ -297,7 +297,7 @@ const Personal = () => {
           </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className='flex flex-col items-center md:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
+          <div data-aos="fade-right" className='flex flex-col items-center md:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]' >
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">Personal Loans</p>
@@ -316,7 +316,7 @@ const Personal = () => {
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left" className="hidden lm:block">
@@ -442,7 +442,7 @@ const Personal = () => {
             onClick={() => navigate("/digital", { state: {section: "digital"}})}
           >
             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started now</p>
-            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
 
         </div>
@@ -486,7 +486,7 @@ const Personal = () => {
                 >
                   Open an Account
                 </p>
-                <FaArrowRightLong 
+                <BsArrowRight size={100}   
                   className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
                 />
               </button>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { BsArrowRight } from 'react-icons/bs';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Temple from "../../../assets/png/temple.png";
@@ -100,7 +100,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                 >
                                     Learn more
                                 </p>
-                                <FaArrowRightLong
+                                <BsArrowRight size={100}  
                                     className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
@@ -158,7 +158,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
         </section>

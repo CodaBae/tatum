@@ -11,7 +11,7 @@ const PageLayout = () => {
 
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
         <div className='hidden lg:block'>
             <Header />
         </div>

@@ -262,7 +262,7 @@ const Header = () => {
                 showPersonalDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("personal")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"style={{height:'31vh'}}>
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -270,10 +270,10 @@ const Header = () => {
                       navigate("/personal", {state: { section: "savings" }, });
                     }}
                   >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                    <div  className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div  className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-medium font-grava">
                         Savings Accounts
                       </p>
@@ -321,7 +321,11 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  
+                </div>
+                <div className="bg-[#E6E9E1] w-[0.1px] h-[198px]"></div>
+                <div className="flex flex-col gap-4">
+                <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
                       navigate("/personal", {state: { section: "loans" }, });
@@ -339,9 +343,6 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
-                <div className="flex flex-col gap-4">
                   <div
                     onClick={() => {
                       navigate("/personal", {state: { section: "fixed" }, });
@@ -386,7 +387,7 @@ const Header = () => {
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -440,7 +441,7 @@ const Header = () => {
                   </div>
 
                 </div>
-                <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
+                <div className="bg-[#E6E9E1] w-[0.1px] h-[188px]"></div>
                 <div className="flex flex-col gap-4">
                   <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
@@ -497,7 +498,7 @@ const Header = () => {
                 showCorporateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("corporate")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -559,7 +560,7 @@ const Header = () => {
                
                 </div>
                 
-                <div className="bg-[#E6E9EC] w-[1px] h-[298px]"></div>
+                <div className="bg-[#E6E9E1] w-[0.1px] h-[188px]"></div>
                 <div className="flex flex-col gap-4">
                   <div 
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -635,7 +636,7 @@ const Header = () => {
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -698,7 +699,7 @@ const Header = () => {
 
 
                 </div>
-                <div className="bg-[#E6E9EC] w-[1px] h-[272px]"></div>
+                <div className="bg-[#E6E9E1] w-[0.1px] h-[182px]"></div>
                 <div className="flex flex-col gap-4">
                  
                   <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"

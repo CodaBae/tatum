@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { BsArrowRight } from 'react-icons/bs';
 
 import Institution from "../../assets/png/institute.png";
 import Sector from "../../assets/png/sector.png";
@@ -101,7 +101,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                 >
                                     Open a  institutional  account
                                 </p>
-                                <FaArrowRightLong 
+                                <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
@@ -154,7 +154,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             }})}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#002244] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
@@ -214,7 +214,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         }})}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                        <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <img src={Sector} alt='Sector' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -240,7 +240,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             }})}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
-                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#334E69] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
@@ -299,7 +299,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         }})}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
-                        <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <div data-aos="fade-left">
@@ -399,7 +399,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
           >
             Contact us
           </p>
-          <FaArrowRightLong 
+          <BsArrowRight size={100}   
             className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
           />
         </button>

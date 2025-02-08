@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { BsArrowRight } from 'react-icons/bs';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Chairman from "../../assets/png/chairman.png";
@@ -118,7 +118,7 @@ const Corporate = () => {
                                 >
                                     Open a corporate account
                                 </p>
-                                <FaArrowRightLong 
+                                <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
@@ -149,7 +149,7 @@ const Corporate = () => {
                 className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
             />
         </div>
-        <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
+        <div data-aos="fade-left"  className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
               
                 <div className='flex flex-col w-full gap-[18px]'>
@@ -171,7 +171,7 @@ const Corporate = () => {
                   })}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
 
             </div>
@@ -183,7 +183,7 @@ const Corporate = () => {
               })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Corp} alt='Corp' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -228,7 +228,7 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
@@ -287,15 +287,15 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
-        <img src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+        <img data-aos="fade-right" src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]'  />
       </div>
 
       <div ref={tradeRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
-          <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
-            <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+          <div data-aos="fade-right"  className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' >
+            <div  className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                 <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Trade Finance
                 </p>
@@ -333,7 +333,7 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
@@ -392,7 +392,7 @@ const Corporate = () => {
               })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Lending} alt='Lending' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -438,7 +438,7 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
-                <FaArrowRightLong className='mt-[-2px] transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">

@@ -70,8 +70,8 @@
   
   @keyframes slowStop {
     0% { transform: translateY(0); }
-    90% { transform: translateY(-1010%); }
-    100% { transform: translateY(-1010%); }
+    90% { transform: translateY(-1015%); }
+    100% { transform: translateY(-1015%); }
   }
   
   /* Unveil Effect */
@@ -97,7 +97,8 @@
     width: 50%;
     height: 50%;
     transform-origin: top left;
-  }
+
+}
   
   .unveil-top-right {
     top: 0;
