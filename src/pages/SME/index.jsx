@@ -217,7 +217,7 @@ const SME = () => {
   }, [state]);
 
   return (
-    <div ref={smeRef}>
+    <div ref={smeRef} className="">
       <section className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]">
         <div
           style={{
@@ -793,7 +793,7 @@ const SME = () => {
               backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height:" 55vh"
+              height:" fit-content"
 
             }}
             >
@@ -866,7 +866,7 @@ const SME = () => {
     backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height:" 55vh"
+    height:" fit-content"
 
   }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
@@ -936,7 +936,7 @@ const SME = () => {
     backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height:" 55vh"
+    height:" fit-content"
 
   }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
@@ -1005,7 +1005,7 @@ const SME = () => {
     backgroundImage: "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height:" 55vh"
+    height:" fit-content"
 
   }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">

@@ -118,7 +118,7 @@ const Personal = () => {
   const isMobile = window.innerWidth < 768
 
   return (
-    <div ref={personalRef}>
+    <div ref={personalRef} className="overflow-hidden">
 
       <section 
 

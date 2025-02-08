@@ -62,7 +62,7 @@ const AccountCorporate = () => {
     }, [state]); 
     
   return (
-    <div className='w-full' ref={accountRef}>
+    <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
 
 className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>

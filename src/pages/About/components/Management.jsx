@@ -90,7 +90,7 @@ const Management = () => {
     
 
   return (
-    <div className='w-full pt-6 lg:pt-[48px]' >
+    <div className='w-full pt-6 lg:pt-[48px] overflow-hidden' >
         <motion.div 
             // data-aos="fade-up" 
             // data-aos-duration="1000" 

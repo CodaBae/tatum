@@ -31,7 +31,7 @@ const Teams = () => {
     const isMobile = window.innerWidth < 768;  
 
   return (
-    <div className="w-full" ref={teamsRef}>
+    <div className="w-full overflow-hidden" ref={teamsRef}>
         <div 
             style={{
                 backgroundImage: `url(${isTab ? HeaderImgMobile : HeaderImg})`,

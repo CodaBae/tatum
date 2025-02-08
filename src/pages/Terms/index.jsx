@@ -98,7 +98,7 @@ const Terms = () => {
 
   return (
     <div 
-      className='w-full mb-[56px] lg:mb-[120px]' 
+      className='w-full mb-[56px] lg:mb-[120px] overflow-hidden' 
       data-aos="fade-up" 
       data-aos-duration="3000" 
       ref={termsRef}

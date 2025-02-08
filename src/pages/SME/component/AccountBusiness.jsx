@@ -61,7 +61,7 @@ const AccountBusiness = () => {
         }, [state]); 
 
   return (
-    <div className='w-full' ref={accountRef}>
+    <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
 
 className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
@@ -102,7 +102,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-60%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-45%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>

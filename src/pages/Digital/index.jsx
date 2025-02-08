@@ -35,7 +35,7 @@ const Digital = () => {
     }, [state])
 
   return (
-    <div ref={digitalRef}>
+    <div className='overflow-hidden' ref={digitalRef}>
 
        <section 
 

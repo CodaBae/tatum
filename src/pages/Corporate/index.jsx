@@ -75,7 +75,7 @@ const Corporate = () => {
 
 
   return (
-    <div className='w-full' ref={corporateRef}>
+    <div className='w-full overflow-hidden' ref={corporateRef}>
 
       <section 
 

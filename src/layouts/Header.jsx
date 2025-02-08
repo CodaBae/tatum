@@ -119,7 +119,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between" onMouseLeave={()=>{
+    <div className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  " onMouseLeave={()=>{
       handleMouseEnter('nil')
       handleMouseLeave('nil')
     } }>

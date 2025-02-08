@@ -111,7 +111,7 @@ const About = () => {
 
   return (
     <div
-      className="w-full flex flex-col gap-[56px] lm:gap-[96px]"
+      className="w-full flex flex-col gap-[56px] lm:gap-[96px] overflow-hidden"
       ref={aboutRef}
       id="about"
     >

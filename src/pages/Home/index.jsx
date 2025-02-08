@@ -197,7 +197,7 @@ const Home = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
+    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px] overflow-hidden'>
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
               interval={5000} 

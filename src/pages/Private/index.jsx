@@ -63,7 +63,7 @@ const Private = () => {
   }, [state]);
 
   return (
-    <div className='w-full' ref={privateRef}>
+    <div className='w-full overflow-hidden' ref={privateRef}>
 
       <section 
 

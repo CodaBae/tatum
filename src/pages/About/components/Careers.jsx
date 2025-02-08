@@ -92,7 +92,7 @@ const Careers = () => {
   };
 
   return (
-    <div ref={careersRef}>
+    <div ref={careersRef} className="overflow-hidden">
       {/* Hero section */}
 
       <div className="relative w-full h-[630px] lg:h-[713px]  overflow-hidden bg-[#FFCC33]">

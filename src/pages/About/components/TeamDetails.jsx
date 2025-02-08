@@ -32,7 +32,7 @@ const TeamDetails = () => {
   }, [state])
 
   return (
-    <div className='w-full' ref={detailsRef}>
+    <div className='w-full overflow-hidden' ref={detailsRef}>
           
           {/* Desktop Hero Section  */}
       <div className='h-[182px] hidden lm:flex justify-end items-end relative bg-[#FFCC33]'>

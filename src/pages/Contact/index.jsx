@@ -33,7 +33,7 @@ const Contact = () => {
        
 
   return (
-    <div className='w-full' ref={contactRef}>
+    <div className='w-full overflow-hidden' ref={contactRef}>
 
         <section 
 
