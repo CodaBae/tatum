@@ -42,7 +42,9 @@ const Help = () => {
   }
   return (
     <div className='w-full'>
-      <section className='h-full w-full outline-none '>
+      <section 
+
+style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
         <div 
           style={{
               backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
@@ -83,7 +85,7 @@ const Help = () => {
           />
           <FiSearch className="w-5 h-5 text-[#002244] " />
         </div>
-        <img src={Line} alt='Line' className='w-full' />
+        <img src={Line} alt='Line' className='w-[80%]' />
 
         <div
           className='flex items-center flex-col gap-[56px] justify-center lm:w-[878px] w-11/12'
@@ -205,7 +207,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
                onClick={() => navigate("/", {state: {section: "home"}})}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState }  from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
@@ -30,512 +30,639 @@ import Unique from "../../assets/png/unique_bg.png";
 import HeadShot from "../../assets/png/headshot_mock_up.png";
 import Layer from "../../assets/png/layer.png";
 
-
 const About = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    
-    const aboutRef = useRef(null);
-    const missionRef = useRef(null); 
-    const teamsRef = useRef(null); 
-    const servicesRef = useRef(null); 
-    const { state } = useLocation();
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    const navigate = useNavigate();
+  const aboutRef = useRef(null);
+  const missionRef = useRef(null);
+  const teamsRef = useRef(null);
+  const servicesRef = useRef(null);
+  const { state } = useLocation();
 
-    const testimonials = [
-        {
-            name: "Nnamdi Peters",
-            role: "Client",
-            text: `"Ever since I switched to Tatum Bank, managing my finances has become incredibly straightforward. Their online platform and customer service have always makes me happy"`
-        },
-        {
-            name: "Jamal Thompson",
-            role: "Client",
-            text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success."`
-        },
-        {
-          name: "David Williams Atata",
-          role: "CFO at NovaTech Industries",
-          text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out."`
-        }
-     
-    ];
+  const navigate = useNavigate();
 
-    const team = [
-        {
-          name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
-          role: "Non-Executive Director",
-          bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring 'Selected Judgment & Ruling of Hon. Justice L.H. Gummi' and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association. His career is marked by exceptional legal achievements, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally."
-        },
-        {
-          name: "Niyi Adeseun",
-          role: "Managing Director",
-          bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School."
-        },
-        {
-          name: "Aminatu Dahiru Chiroma",
-          role: "Executive Director",
-          bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
-        },
-        {
-          name: "Abimbola Izu",
-          role: "Independent Non-Executive Director",
-          bio: "Abimbola Izu is an accomplished legal and business professional with a distinguished career spanning law, finance, corporate governance, and advisory services. She holds a law degree from the University of Ife (now Obafemi Awolowo University) and an LLM from the University of Warwick, UK, where she was a Foreign and Commonwealth Office scholar. Abimbola is currently the Principal Advisor at Portalis Advisory Services, where she provides expert advice on infrastructure development, mergers and acquisitions, corporate governance, and finance transactions. Previously, she served as Executive Director, Corporate and Investment Bank at Polaris Bank, overseeing a portfolio of over ₦600bn across industries like oil and gas, telecommunications, banking, and real estate. She led the development of sustainable finance frameworks and the Environmental and Social Risk Management (ESRM) framework in collaboration with the IFC. She is best recognized for her leadership in brand management, particularly during her tenure at Skye Bank, where she spearheaded successful campaigns such as “I Wish” and “Skye High.” With a strong grounding in law and business, Abimbola continues to make significant contributions to Nigeria’s financial, legal, and sustainability sectors."
-        }
-      ];
+  const testimonials = [
+    {
+      name: "Nnamdi Peters",
+      role: "Client",
+      text: `"Ever since I switched to Tatum Bank, managing my finances has become incredibly straightforward. Their online platform and customer service have always makes me happy"`,
+    },
+    {
+      name: "Jamal Thompson",
+      role: "Client",
+      text: `"Tatum Bank's customized loan alternatives and custom budgeting tools have changed the way I manage my finances. I can tell they genuinely care about my long-term success."`,
+    },
+    {
+      name: "David Williams Atata",
+      role: "CFO at NovaTech Industries",
+      text: `"Running my own company comes with its own set of financial challenges, and Tatum Bank understands those obstacles inside and out."`,
+    },
+  ];
 
-      
-    useEffect(() => {
-        const interval = setInterval(() => {
-        setActiveIndex(prev => (prev + 1) % testimonials.length);
-        }, 5000); // Change testimonial every 5 seconds
+  const team = [
+    {
+      name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
+      role: "Non-Executive Director",
+      bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring 'Selected Judgment & Ruling of Hon. Justice L.H. Gummi' and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association. His career is marked by exceptional legal achievements, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally.",
+    },
+    {
+      name: "Niyi Adeseun",
+      role: "Managing Director",
+      bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.",
+    },
+    {
+      name: "Aminatu Dahiru Chiroma",
+      role: "Executive Director",
+      bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
+    },
+    {
+      name: "Abimbola Izu",
+      role: "Independent Non-Executive Director",
+      bio: "Abimbola Izu is an accomplished legal and business professional with a distinguished career spanning law, finance, corporate governance, and advisory services. She holds a law degree from the University of Ife (now Obafemi Awolowo University) and an LLM from the University of Warwick, UK, where she was a Foreign and Commonwealth Office scholar. Abimbola is currently the Principal Advisor at Portalis Advisory Services, where she provides expert advice on infrastructure development, mergers and acquisitions, corporate governance, and finance transactions. Previously, she served as Executive Director, Corporate and Investment Bank at Polaris Bank, overseeing a portfolio of over ₦600bn across industries like oil and gas, telecommunications, banking, and real estate. She led the development of sustainable finance frameworks and the Environmental and Social Risk Management (ESRM) framework in collaboration with the IFC. She is best recognized for her leadership in brand management, particularly during her tenure at Skye Bank, where she spearheaded successful campaigns such as “I Wish” and “Skye High.” With a strong grounding in law and business, Abimbola continues to make significant contributions to Nigeria’s financial, legal, and sustainability sectors.",
+    },
+  ];
 
-        return () => clearInterval(interval);
-    }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // Change testimonial every 5 seconds
 
-    const formatNumber = (num) => String(num + 1).padStart(2, '0');
-    
-    useEffect(() => {
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatNumber = (num) => String(num + 1).padStart(2, "0");
+
+  useEffect(() => {
     if (state?.section === "about" && aboutRef.current) {
-        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "mission-and-vision" && missionRef.current) {
-        missionRef.current.scrollIntoView({ behavior: "smooth" });
+      missionRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "teams" && teamsRef.current) {
-        teamsRef.current.scrollIntoView({ behavior: "smooth" });
+      teamsRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "services" && servicesRef.current) {
-        servicesRef.current.scrollIntoView({ behavior: "smooth" });
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    }, [state]);
+  }, [state]);
 
-
-    const isMobile = window.innerWidth < 768
+  const isMobile = window.innerWidth < 768;
 
   return (
-    <div className="w-full flex flex-col gap-[56px] lm:gap-[96px]" ref={aboutRef}  id="about">
+    <div
+      className="w-full flex flex-col gap-[56px] lm:gap-[96px]"
+      ref={aboutRef}
+      id="about"
+    >
+    <section 
 
-        <section className='h-full w-full overflow-hidden outline-none'>
-            <div 
-                style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-                }}
-                className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
-            >
-                <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
-                    <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                        <p 
-                            className={`animate__animated animate__fadeInUp lm:w-[450px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
-                        >
-                            Welcome to <br /> <span className='font-bold'>Tatum Bank</span> 
-                        </p>
-                        <p 
-                            className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
-                        >
-                            We are more than a financial institution—we are a trusted partner 
-                            dedicated to safeguarding your financial wellbeing.
-                        </p>
-                    </div>
-                    <div className='hidden lm:flex items-start absolute -bottom-44'>
-                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
-                            We are licensed by 
-                            <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                            Deposit insured by
-                            <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
-                        </p>
-                    </div>
-                </div>
-                <img 
-                    src={isMobile ? ShakeMobile : Shake} 
-                    alt='Family' 
-                    // style={{
-                    //     display: isMobile ? "none" : "flex"
-                    // }}
-                    className={`animate__animated animate__zoomIn relative  h-[605px] lg:mt-40 lm:h-[694px]`} 
+style={{ marginTop: '1.5%', height:'90vh' }} className='h-full w-full overflow-hidden outline-none'>
+        <div
+          style={{
+            backgroundImage: `url(${
+              isMobile
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+            })`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className=" lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0"
+        >
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
+            <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
+              <p
+                className={`animate__animated animate__fadeInUp lm:w-[450px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+              >
+                Welcome to <br /> <span className="font-bold">Tatum Bank</span>
+              </p>
+              <p
+              style={{fontWeight:450}}
+                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+              >
+                We are more than a financial institution—we are a trusted
+                partner dedicated to safeguarding your financial wellbeing.
+              </p>
+            </div>
+            <div className="hidden lm:flex items-start absolute -bottom-44">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                We are licensed by
+                <img
+                  src={CBN}
+                  alt="CBN"
+                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
+                Deposit insured by
+                <img
+                  src={NDIC}
+                  alt="NDIC"
+                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                />
+              </p>
             </div>
-        </section>
+          </div>
+          <img
+            src={isMobile ? ShakeMobile : Shake}
+            alt="Family"
+            // style={{
+            //     display: isMobile ? "none" : "flex"
+            // }}
+            className={`animate__animated animate__zoomIn relative -right-5 lm:right-5 lm:h-[740px] lg:w-[40%`} 
+            />
+        </div>
+      </section>
 
-        <section 
-            className="px-5 lm:px-[56px]"  
-            ref={missionRef}
-            
-        >
-            <div className="lm:border-[1px] lm:border-x-0 lm:border-[#C9C9C9] flex flex-col md:flex-row items-start justify-between border-dashed">
-                <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[59px] lg:pr-[59px]">
-                    <div className="flex items-center justify-between">
-                        <p className="text-[#002244] font-grava font-medium text-[28px] lg:text-[56px] tracking-wider">Our Story</p>
-                        <img src={SlimStar} alt="SlimStar" className="w-[48px] h-[55px] hidden lg:block" />
-                    </div>
-                    <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
-                        Inspired by our name, Tatum, a refined form of the Latin word Tutum, 
-                        meaning "a safe place" or "refuge," we are committed to being a secure and dependable 
-                        guardian of your financial goals and aspirations.
-                    </p>
-                    <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[24px] tracking-[1.4%]">
-                        Our journey is rooted in the promise to provide a safe haven where 
-                        customers can confidently entrust their finances. We deliver on this promise 
-                        through innovative products, advanced technology, and unparalleled service designed 
-                        to support every step of your financial journey.
-                    </p>
-                    <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
-                        Tatum Bank, <span className="font-semibold italic">We Keep You Smiling.</span>
-                    </p>
-                </div>
-                <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
-                    <div className="items-start flex gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
-                        <img src={MissionStar} alt="MissionStar" className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]" />
-                        <div className="flex flex-col gap-3">
-                            <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                                Our Mission
-                            </p>
-                            <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
-                                To improve the lives of Nigerians, particularly the youth, 
-                                by offering innovative, easily accessible, and secure financial 
-                                services that promote economic growth and personal success.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="items-start flex gap-6 relative  lm:pt-[38px] md:pl-5 lg:pl-[60px]">
-                        <img src={Moon} alt="Moon" className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]" />
-                        <div className="flex flex-col gap-3">
-                            <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                                Vision.
-                            </p>
-                            <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
-                                To be Nigeria's most trusted and innovative financial partner, 
-                                promoting financial literacy and enabling prosperity for future generations.
-                            </p>
-                            <div className="hidden lm:flex items-end justify-end invisible">
-                                <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section ref={servicesRef} className="flex flex-col lg:flex-row items-start px-5 lm:px-[56px] gap-4 lg:gap-[32px]">
-            <div
-                style={{
-                    backgroundImage: `url(${Aunty})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-                }} 
-                className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
-            >
-                <div className="lm:w-[364px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
-                    <div 
-                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
-                         data-aos="fade-up"
-                            data-aos-delay="0"
-                    >
-                        <img src={Check} alt="Check" className="" />
-                        <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Gen Z-Focused Solutions</p>
-                    </div>
-                    <div
-                           data-aos="fade-up"
-                           data-aos-delay="200" 
-                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px]">
-                        <img src={Check} alt="Check" className="" />
-                        <p className="font-grava text-[#272727] leading-[20px] lm:leading-[24px] text-[14px] lm:text-[20px]">Cutting-Edge Digital Banking</p>
-                    </div>
-                    <div
-                           data-aos="fade-up"
-                           data-aos-delay="400" 
-                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[203px] lm:w-[287px]">
-                        <img src={Check} alt="Check" className="" />
-                        <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Accessible and Inclusive</p>
-                    </div>
-                    <div
-                           data-aos="fade-up"
-                           data-aos-delay="600" 
-                        className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]">
-                        <img src={Check} alt="Check" className="" />
-                        <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">Financial Literacy Advocacy</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div className="flex flex-col gap-4 lg:gap-[33px] lg:w-[452px]">
-                <img src={Play} alt="Play" className="lg:w-[452px] lg:h-[412px]" />
-                <img src={Learn} alt="Learn" className="lg:w-[452px] lg:h-[412px]" />
-            </div>
-        </section>
-
-        <section
-            style={{
-                backgroundImage: `url(${Core})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover"
-            }}
-            className="h-auto lm:h-[916px] py-[56px] lg:py-[112px] px-5 lm:px-[87px] grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-5 lm:gap-[33px]"
-        >
-            <div className="flex flex-col gap-5">
-                <p className="font-grava font-medium text-[28px] lm:text-[60px] leading-[35px] lm:leading-[72px] text-[#002244]">Our <span className="font-bold">Core Values</span></p>
-                <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[350] leading-6 lm:leading-[30px] tracking-[0.336px]">
-                    Our values are intrinsic to how we operate 
-                    and how we serve our customers to deliver exemplary financial services.
-                </p>
-            </div>
-            <div
-                data-aos="fade-up"
-                data-aos-delay="0" 
-                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
-                <img src={People} alt="People" className="w-[83px] h-[64px]" />
-                <div className="flex flex-col gap-4">
-                    <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-                        Integrity
-                    </p>
-                    <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
-                        We build trust through transparent 
-                        actions that brighten your banking experience.
-                    </p>
-                </div>
-            </div>
-            <div 
-                data-aos="fade-up"
-                data-aos-delay="200"
-                className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6">
-                <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
-                <div className="flex flex-col gap-4">
-                    <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-                        Customer-Centricity
-                    </p>
-                    <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
-                        Your dreams and satisfaction drive our decisions, 
-                        making banking worth smiling about.
-                    </p>
-                </div>
-            </div>
-            <div
-                   data-aos="fade-up"
-                   data-aos-delay="400" 
-                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
-                <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
-                <div className="flex flex-col gap-4">
-                    <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-                        Teamwork
-                    </p>
-                    <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
-                        By combining our diverse strengths and perspectives, 
-                        we create exceptional experiences together.
-                    </p>
-                </div>
-            </div>
-            <div
-                   data-aos="fade-up"
-                   data-aos-delay="600" 
-                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
-                <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
-                <div className="flex flex-col gap-4">
-                    <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-                        Innovation
-                    </p>
-                    <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
-                        By combining our diverse strengths and perspectives, 
-                        we create remarkable experiences together.
-                    </p>
-                </div>
-            </div>
-
-            <div
-                   data-aos="fade-up"
-                   data-aos-delay="800" 
-                className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6">
-                <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
-                <div className="flex flex-col gap-4">
-                    <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-                        Excellence
-                    </p>
-                    <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
-                        We reimagine banking with creative 
-                        solutions that make your financial journey rewarding.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
-        <section className="px-5 lg:px-[56px] flex flex-col gap-[32px] lm:gap-[56px]" ref={teamsRef}>
+      <section className="px-5 lm:px-[56px]" ref={missionRef}>
+        <div className=" flex flex-col md:flex-row items-start justify-between ">
+          <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[59px] lg:pr-[59px]">
             <div className="flex items-center justify-between">
-                <p className="font-grava font-medium text-[#002244] text-[28px] leading-[35px] lm:text-[60px] lm:leading-[72px]">Board & <span className="font-bold">Leadership.</span></p>
-                <div className="hidden md:flex items-center gap-6 group" onClick={() => navigate("/about/teams", {state: {section: "teams"}})}>
-                    <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%]">See all Team Members</p>
-                    <img src={Arrow} alt="Arrow" className="w-[56px] h-[40px] transition-all duration-300 group-hover:ml-2" />
-                </div>
+              <p className="text-[#002244] font-grava font-medium text-[28px] lg:text-[56px] tracking-wider">
+                Our Story
+              </p>
+              <img
+                src={SlimStar}
+                alt="SlimStar"
+                className="w-[48px] h-[55px] hidden lg:block"
+              />
             </div>
-            <div className="flex flex-col lm:flex-row gap-5">
-                {/* First Card with Hover Effect */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[0]}}) }}>
-                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-                    {/* Background Image */}
-                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
-
-                    {/* Center Arrow */}
-                    <img 
-                        src={ArrowClick} 
-                        alt="ArrowClick" 
-                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    />
-                    </div>
-
-                    <div className="flex flex-col gap-[4px]">
-                        <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                            Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
-                        </p>
-                        <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                            Non-Executive Director
-                        </p>
-                    </div>
-                </div>
-
-                {/* Second Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[1]}}) }}>
-                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-                    {/* Background Image */}
-                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
-
-                    {/* Center Arrow */}
-                    <img 
-                        src={ArrowClick} 
-                        alt="ArrowClick" 
-                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    />
-                    </div>
-                    <div className="flex flex-col gap-[4px]">
-                    <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                        Niyi Adeseun
-                    </p>
-                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                        Managing Director
-                    </p>
-                    </div>
-                </div>
-
-                {/* Third Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[2]}}) }}>
-                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-                    {/* Background Image */}
-                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
-
-                    {/* Center Arrow */}
-                    <img 
-                        src={ArrowClick} 
-                        alt="ArrowClick" 
-                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    />
-                    </div>
-                    <div className="flex flex-col gap-[4px]">
-                    <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
-                        Aminatu Dahiru Chiroma
-                    </p>
-                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                        Executive Director
-                    </p>
-                    </div>
-                </div>
-
-                {/* Fourth Card (Hover Effect) */}
-                <div className="flex flex-col gap-6" onClick={() => {navigate("/about/team-details", {state: {section: "details",team: team[3]}}) }}>
-                    <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-                    {/* Background Image */}
-                    <img src={HeadShot} alt="HeadShot" className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-[0.5]" />
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
-
-                    {/* Center Arrow */}
-                    <img 
-                        src={ArrowClick} 
-                        alt="ArrowClick" 
-                        className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    />
-                    </div>
-                    <div className="flex flex-col gap-[4px]">
-                    <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
-                        Aminatu Dahiru Chiroma
-                    </p>
-                    <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                        Non-Executive Director
-                    </p>
-                    </div>
-                </div>
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
+              Inspired by our name, Tatum, a refined form of the Latin word
+              Tutum, meaning "a safe place" or "refuge," we are committed to
+              being a secure and dependable guardian of your financial goals and
+              aspirations.
+            </p>
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[24px] tracking-[1.4%]">
+              Our journey is rooted in the promise to provide a safe haven where
+              customers can confidently entrust their finances. We deliver on
+              this promise through innovative products, advanced technology, and
+              unparalleled service designed to support every step of your
+              financial journey.
+            </p>
+            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[24px] tracking-[0.336px]">
+              At Tatum Bank,{" "}
+              <span className="font-semibold ">We Keep You Smiling.</span>
+            </p>
+          </div>
+          <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
+            <div className="items-start flex gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+              <img
+                src={MissionStar}
+                alt="MissionStar"
+                className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]"
+              />
+              <div className="flex flex-col gap-3">
+                <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                  Our Mission
+                </p>
+                <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                  To improve the lives of Nigerians, particularly the youth, by
+                  offering innovative, easily accessible, and secure financial
+                  services that promote economic growth and personal success.
+                </p>
+              </div>
             </div>
+            <div className="items-start flex gap-6 relative  lm:pt-[38px] md:pl-5 lg:pl-[60px]">
+              <img
+                src={Moon}
+                alt="Moon"
+                className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]"
+              />
+              <div className="flex flex-col gap-3">
+                <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                  Vision.
+                </p>
+                <p className="font-grava text-base lg:text-[24px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                  To be Nigeria's most trusted and innovative financial partner,
+                  promoting financial literacy and enabling prosperity for
+                  future generations.
+                </p>
+                <div className="hidden lm:flex items-end justify-end invisible">
+                  <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        </section>
-
-        <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
+      <section
+        ref={servicesRef}
+        className="flex flex-col lg:flex-row items-start px-5 lm:px-[56px] gap-4 lg:gap-[32px]"
+      >
+        <div
+          style={{
+            backgroundImage: `url(${Aunty})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
+        >
+          <div className="lm:w-[364px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
             <div
-                style={{
-                backgroundImage: `url(${Layer})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover"
-                }}
-                className="w-full h-min-auto lm:h-[380px] rounded-xl" // 
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
+              data-aos="fade-up"
+              data-aos-delay="0"
             >
-                <div 
-                className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
-                style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
-                >
-                <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px] ">
-                    <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
-                    Words from <span className="font-bold">our clients.</span>
-                    </p>
-                    <div className="flex items-center gap-4">
-                    <div className="h-[1px] w-[230px] bg-[#002244]"></div>
-                    <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
-                        {formatNumber(activeIndex)} 
-                        <span className="text-[#8A99A9] font-[350]"> / {formatNumber(testimonials.length - 1)}</span>
-                    </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col gap-5 w-full lm:gap-[40px] lm:w-[766px] relative h-[300px]">
-                    {testimonials.map((testimonial, index) => (
-                    <div
-                        key={index}
-                        className={`absolute transition-all duration-500 ease-in-out ${
-                        index === activeIndex 
-                            ? 'opacity-100 translate-x-0' 
-                            : 'opacity-0 translate-x-10'
-                        }`}
-                    >
-                        <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[32px]">
-                        {testimonial.text}
-                        </p>
-                        <div className="flex gap-4 mt-5">
-                        <img src={Girl} alt="" className="w-[64px] h-[64px]" />
-                        <div className="flex flex-col gap-2">
-                            <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
-                            {testimonial.name}
-                            </p>
-                            <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
-                            {testimonial.role}
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                    ))}
-                </div>
-                </div>
+              <img src={Check} alt="Check" className="" />
+              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
+                Gen Z-Focused Solutions
+              </p>
             </div>
-        </section>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px]"
+            >
+              <img src={Check} alt="Check" className="" />
+              <p className="font-grava text-[#272727] leading-[20px] lm:leading-[24px] text-[14px] lm:text-[20px]">
+                Cutting-Edge Digital Banking
+              </p>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[203px] lm:w-[287px]"
+            >
+              <img src={Check} alt="Check" className="" />
+              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
+                Accessible and Inclusive
+              </p>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]"
+            >
+              <img src={Check} alt="Check" className="" />
+              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
+                Financial Literacy Advocacy
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 lg:gap-[33px] lg:w-[452px]">
+          <img src={Play} alt="Play" className="lg:w-[452px] lg:h-[412px]" />
+          <img src={Learn} alt="Learn" className="lg:w-[452px] lg:h-[412px]" />
+        </div>
+      </section>
 
-        {/* <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
+      <section
+        style={{
+          backgroundImage: `url(${Core})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="h-auto lm:h-[916px] py-[56px] lg:py-[112px] px-5 lm:px-[87px] grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-5 lm:gap-[33px]"
+      >
+        <div className="flex flex-col gap-5">
+          <p className="font-grava font-medium text-[28px] lm:text-[60px] leading-[35px] lm:leading-[72px] text-[#002244]">
+            Our{" "}
+            <span className="font-bold">
+              Core <br /> Values
+            </span>
+          </p>
+          <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[350] leading-6 lm:leading-[30px] tracking-[0.336px]">
+            Our values are intrinsic to how we operate and how we serve our
+            customers to deliver exemplary financial services.
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="0"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={People} alt="People" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Integrity
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+              We build trust through transparent actions that brighten your
+              banking experience.
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Customer-Centricity
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+              Your dreams and satisfaction drive our decisions, making banking
+              worth smiling about.
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Teamwork
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+              By combining our diverse strengths and perspectives, we create
+              exceptional experiences together.
+            </p>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Innovation
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+              By combining our diverse strengths and perspectives, we create
+              remarkable experiences together.
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-delay="800"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Excellence
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+              We reimagine banking with creative solutions that make your
+              financial journey rewarding.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="px-5 lg:px-[56px] flex flex-col gap-[32px] lm:gap-[56px]"
+        ref={teamsRef}
+      >
+        <div className="flex items-center justify-between">
+          <p className="font-grava font-medium text-[#002244] text-[28px] leading-[35px] lm:text-[60px] lm:leading-[72px]">
+            Board & <span className="font-bold">Leadership.</span>
+          </p>
+          <div
+            className="hidden md:flex items-center gap-6 group"
+            onClick={() =>
+              navigate("/about/teams", { state: { section: "teams" } })
+            }
+          >
+            <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%]">
+              See all Team Members
+            </p>
+            <img
+              src={Arrow}
+              alt="Arrow"
+              className="w-[56px] h-[40px] transition-all duration-300 group-hover:ml-2"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col lm:flex-row gap-5">
+          {/* First Card with Hover Effect */}
+          <div
+            className="flex flex-col gap-6"
+            onClick={() => {
+              navigate("/about/team-details", {
+                state: { section: "details", team: team[0] },
+              });
+            }}
+          >
+            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+              {/* Background Image */}
+              <img
+                src={HeadShot}
+                alt="HeadShot"
+                className="w-full h-full object-cover transition-all duration-300 "
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+              {/* Center Arrow */}
+              <img
+                src={ArrowClick}
+                alt="ArrowClick"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
+
+            <div className="flex flex-col gap-[4px]">
+              <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
+                Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
+              </p>
+              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Non-Executive Director
+              </p>
+            </div>
+          </div>
+
+          {/* Second Card (Hover Effect) */}
+          <div
+            className="flex flex-col gap-6"
+            onClick={() => {
+              navigate("/about/team-details", {
+                state: { section: "details", team: team[1] },
+              });
+            }}
+          >
+            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+              {/* Background Image */}
+              <img
+                src={HeadShot}
+                alt="HeadShot"
+                className="w-full h-full object-cover transition-all duration-300 "
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+              {/* Center Arrow */}
+              <img
+                src={ArrowClick}
+                alt="ArrowClick"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
+            <div className="flex flex-col gap-[4px]">
+              <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
+                Niyi Adeseun
+              </p>
+              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Managing Director
+              </p>
+            </div>
+          </div>
+
+          {/* Third Card (Hover Effect) */}
+          <div
+            className="flex flex-col gap-6"
+            onClick={() => {
+              navigate("/about/team-details", {
+                state: { section: "details", team: team[2] },
+              });
+            }}
+          >
+            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+              {/* Background Image */}
+              <img
+                src={HeadShot}
+                alt="HeadShot"
+                className="w-full h-full object-cover transition-all duration-300 "
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+              {/* Center Arrow */}
+              <img
+                src={ArrowClick}
+                alt="ArrowClick"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
+            <div className="flex flex-col gap-[4px]">
+              <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+                Aminatu Dahiru Chiroma
+              </p>
+              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Executive Director
+              </p>
+            </div>
+          </div>
+
+          {/* Fourth Card (Hover Effect) */}
+          <div
+            className="flex flex-col gap-6"
+            onClick={() => {
+              navigate("/about/team-details", {
+                state: { section: "details", team: team[3] },
+              });
+            }}
+          >
+            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+              {/* Background Image */}
+              <img
+                src={HeadShot}
+                alt="HeadShot"
+                className="w-full h-full object-cover transition-all duration-300 "
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
+
+              {/* Center Arrow */}
+              <img
+                src={ArrowClick}
+                alt="ArrowClick"
+                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
+            <div className="flex flex-col gap-[4px]">
+              <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+                Aminatu Dahiru Chiroma
+              </p>
+              <p className="font-grava text-[#002244] font-[350] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Non-Executive Director
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
+      <div className="relative w-full h-min-auto rounded-xl">
+  {/* Background layer with reduced opacity */}
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundImage: `url(${Layer})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      opacity: 1.3, // Reduced opacity from 0.2 to 0.1
+      zIndex: 0,
+      borderRadius:'5%'
+      
+    }}
+  />
+  
+  {/* Content container with enhanced visibility */}
+  <div
+    className="relative w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
+    style={{ 
+      backgroundColor: 'rgb(244 245 246 / 95%)', // Brighter background with slight transparency
+      zIndex: 1 // Ensures content stays above background
+    }}
+  >
+    {/* Left column */}
+    <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px]">
+      <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
+        Words from <span className="font-bold">our clients.</span>
+      </p>
+      <div className="flex items-center gap-4">
+        <div className="h-[1px] w-[230px] bg-[#002244]"></div>
+        <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
+          {formatNumber(activeIndex)}
+          <span className="text-[#8A99A9] font-[350]">
+            / {formatNumber(testimonials.length - 1)}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    {/* Testimonials */}
+    <div className="flex flex-col gap-5 w-full lm:gap-[40px] lm:w-[766px] relative h-[300px]">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className={`absolute transition-all duration-500 ease-in-out ${
+            index === activeIndex
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 translate-x-10'
+          }`}
+        >
+          <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[32px]  " style={{fontWeight:350}}>
+            {testimonial.text}
+          </p>
+          <div className="flex gap-4 mt-5">
+            <img src={Girl} alt="" className="w-[64px] h-[64px] rounded-full" />
+            <div className="flex flex-col gap-2">
+              <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
+                {testimonial.name}
+              </p>
+              <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
+                {testimonial.role}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+      </section>
+
+      {/* <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
             <div
                 style={{
                     backgroundImage: `url(${Layer})`,
@@ -575,7 +702,7 @@ const About = () => {
             </div>
         </section> */}
 
-        {/* <section
+      {/* <section
             style={{
                 backgroundImage: `url(${Unique})`,
                 backgroundRepeat: "no-repeat",
@@ -630,9 +757,8 @@ const About = () => {
             </div>
 
         </section> */}
-
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

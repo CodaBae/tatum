@@ -21,14 +21,17 @@ import Minus from "../../assets/svg/minus.svg";
 import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
 import { useLocation, useNavigate } from "react-router-dom";
-import cbn from "../../assets/svg/cbn.svg";
-import ndic from "../../assets/svg/ndic.svg";
+import CBN from "../../assets/svg/cbn.svg";
+import NDIC from "../../assets/svg/ndic.svg";
 import ball1 from "../../assets/svg/ball1.svg";
 import ball2 from "../../assets/svg/ball2.svg";
 import ball3 from "../../assets/svg/ball3.svg";
 import "./styles.css";
+import { motion } from "framer-motion";
 
 const SME = () => {
+  const isMobile = window.innerWidth < 768;
+
   const [openTabOne, setOpenTabOne] = useState(false);
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
@@ -44,6 +47,26 @@ const SME = () => {
   const handleTabThree = () => {
     setOpenTabThree(!openTabThree);
   };
+
+  // Add these animation variants at the top of your component
+const cardVariants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+      opacity: {
+        duration: 0.4,
+      },
+    },
+  },
+};
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -65,7 +88,7 @@ const SME = () => {
     setInterest(Number(e.target.value));
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const smeRef = useRef(null);
   const paymentRef = useRef(null);
@@ -98,121 +121,88 @@ const SME = () => {
 
   return (
     <div ref={smeRef}>
-      <div className="relative mt-[20px] overflow-hidden">
-        <div className="relative h-[732px] lg:h-[694px] bg-[#FFCC33]">
-          <img
-            src={smeHeroImg}
-            alt=""
-            className="absolute w-[273.7px] h-[321.13px] sm:w-[410.55px] sm:h-[481.7px] top-[410px] sm:top-[250px] right-[10px] lg:w-[513px] lg:h-[602px] lg:top-[95px] sm:right-0 z-10"
-          />
-
-          <img
-            src={ball1}
-            alt="ball"
-            className="absolute w-[220px] h-[220px] lg:w-[479px] lg:h-[480px] left-[-10px] top-[280px] lg:left-[-100px] lg:top-[180px] "
-          />
-          <img
-            src={ball2}
-            alt="ball"
-            className="absolute w-[64px] h-[64px] lg:w-[136px] lg:h-[136px] left-[255px] top-[100px] lg:left-[921px] lg:top-[180px] "
-          />
-          <img
-            src={ball3}
-            alt="ball"
-            className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[-130px] top-[20px]"
-          />
-
-          <img
-            src={ball2}
-            alt="ball"
-            className="absolute w-[64px] h-[64px] lg:w-[80px] lg:h-[80px] left-[255px] top-[100px] lg:left-[683px] lg:top-[500px] "
-          />
-
-          <div
-            className="absolute 
-             top-[64px] left-[20px] w-[350px]
-             sm:top-[140px] sm:left-[40px] sm:w-[622px]
-             lg:top-[250px] lg:left-[56px] lg:w-[873px]">
-            <h1
-              className="animate__animated animate__fadeInUp font-grava font-[500]
-               w-[350px] sm:w-[622px] lg:w-[873px]
-               text-[32px] sm:text-[50px] lg:text-[75px]
-               leading-[40px] sm:leading-[60px] lg:leading-[78.75px]
-               tracking-[0.02%] sm:tracking-[0.03%] lg:tracking-[0.05%]
-               text-[#002244] pb-[12.5px] lg:pb-[25px]">
-              Powering Your Business, <br />
-              <span
-                className="font-[700]
-                 w-[350px] sm:w-[622px] lg:w-[873px]
-                 text-[32px] sm:text-[50px] lg:text-[75px]
-                 leading-[40px] sm:leading-[60px] lg:leading-[78.75px]
-                 tracking-[0.02%] sm:tracking-[0.03%] lg:tracking-[0.05%]
-                 text-[#002244] pb-[12.5px] lg:pb-[25px]">
-                Supporting Your Dreams
-              </span>
-            </h1>
-
-            <p
-              className="font-grava font-[350]
-               text-[14px] sm:text-[20px] lg:text-[24px]
-               leading-[20px] sm:leading-[27px] lg:leading-[30px]
-               sm:w-[490px] lg:w-[873px]
-               tracking-[0.2%] lg:tracking-[1.4%]
-               text-[#002244] pb-[25px]">
-              At Tatum Bank, we go beyond banking; we partner with you to unlock
-              opportunities, drive growth, and ensure your success.
-            </p>
-
-            <button
-              onClick={() => navigate("/business/account", {
-                state: {
-                  section: "account"
-                }
-              })}
-              type="button"
-              className="animate__animated animate__slow animate__fadeInUp 
-               transition-all duration-300 ease-in-out 
-               bg-[#002244] group hover:bg-[#ffffff]
-               w-[224px] sm:w-[260px] lg:w-[287px]
-               h-[44px] sm:h-[50px] lg:h-[59px]
-               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center">
+      <section
+        style={{ marginTop: "1.5%" }}
+        className="h-full w-full overflow-hidden outline-none"
+      >
+        <div
+          style={{
+            backgroundImage: `url(${
+              isMobile
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+            })`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className=" lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0"
+        >
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
+            <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
-                className="animate__animated animate__fadeInUp animate__slow 
-                 transition-colors duration-300 ease-in-out 
-                 font-medium text-sm lg:text-base font-grava 
-                 text-[#FFCC33] group-hover:text-[#002244]">
-                Open a business account
+                style={{ fontWeight: 450 }}
+                className={`animate__animated animate__fadeInUp lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+              >
+                Powering Your <br /> Business{" "}
+                <spen className="font-bold ">Supporting Your Dreams</spen>
               </p>
-              <FaArrowRightLong
-                className="w-5 h-5 mt-[2px] 
-                 transition-colors duration-300 ease-in-out 
-                 text-[#FFCC33] group-hover:text-[#002244]"
-              />
-            </button>
-          </div>
-
-          <div className="hidden lg:flex absolute top-[612px] left-[56px] gap-[10px] w-[100%]">
-            <div className="flex w-[168px]">
-              <p className="font-grava font-[350] w-[200px] text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[16px] lg:leading-[20px] lg:tracking-[0.2%] text-[#002244]">
+              <p
+                //
+                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[833px] font-[350] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+              >
+                At Tatum Bank, we go beyond banking; we partner with you to
+                <br></br> unlock opportunities, drive growth, and ensure your
+                success.
+              </p>
+              <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+                <button
+                  className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  type="button"
+                  onClick={() =>
+                    navigate("/business/account", {
+                      state: { section: "account" },
+                    })
+                  }
+                  //animate__delay-2s
+                >
+                  <p className="transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    Open a Business account today
+                  </p>
+                  <FaArrowRightLong className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]" />
+                </button>
+              </div>
+            </div>
+            <div className="hidden lm:flex items-start absolute -bottom-36">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
-              </p>
-              <img src={cbn} alt="" className="w-[21px] h-[28px] " />
-            </div>
-            <div className="flex w-[100%] ">
-              <p className="font-grava font-[350] pr-[10px]  text-[16px] sm:text-[16px] leading-[20px]   tracking-[0.2%]  lg:text-[16px] lg:leading-[20px] lg:tracking-[0.2%] text-[#002244]">
+                <img
+                  src={CBN}
+                  alt="CBN"
+                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                />
                 Deposit insured by
+                <img
+                  src={NDIC}
+                  alt="NDIC"
+                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                />
               </p>
-              <img src={ndic} alt="" className=" w-[60.4px] h-[26.5px]" />
             </div>
           </div>
+          <img
+            src={isMobile ? smeHeroImg : smeHeroImg}
+            alt="Family"
+            className={`animate__animated animate__zoomIn relative   lg:mt-40 lm:`}
+          />
         </div>
-      </div>
+      </section>
 
       {/* CARDS */}
 
       <div
         ref={accountRef}
-        className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1227px]">
+        className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1227px]"
+      >
         <div className="flex flex-col items-center gap-[72px] ">
           <div className="flex flex-col items-center gap-[16px]">
             <h1 className="font-grava font-[500] w-[350px] sm:w-[429px] text-center text-[28px] leading-[35px] tracking-[0.2%] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244]">
@@ -276,7 +266,13 @@ const SME = () => {
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
                 } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[190px] h-[55px]  lg:w-[220px] sm:h-[63px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-                type="button">
+                type="button"
+                onClick={() =>
+                  navigate("/business/account", {
+                    state: { section: "account" },
+                  })
+                }
+              >
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Open an account
                 </p>
@@ -289,13 +285,16 @@ const SME = () => {
 
       {/* LOAN CALCULATOR SECTION */}
 
-      <div ref={loanRef}  className="pt-[56px] lg:pt-0 h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
+      <div
+        ref={loanRef}
+        className="pt-[56px] lg:pt-0 h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center"
+      >
         <div className="flex flex-col items-center gap-[40px] w-[1328px] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
             <p className="font-grava font-[350] text-center text-[14px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
               Loan Calculator
             </p>
-            <h1 className="font-grava font-[500] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[32px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
+            <h1 className="font-grava font-[400] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[32px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
               Get instant loan estimates and choose the right financing plan.
             </h1>
           </div>
@@ -317,7 +316,8 @@ const SME = () => {
                         />
                         <div
                           className="px-[24px] py-[12px] w-[113px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none  ">
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none  "
+                        >
                           <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
                             Personal
                           </p>
@@ -334,7 +334,8 @@ const SME = () => {
                         />
                         <div
                           className="px-[24px] py-[12px] w-[93px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none"
+                        >
                           <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
                             Home
                           </p>
@@ -351,7 +352,8 @@ const SME = () => {
                         />
                         <div
                           className="px-[24px] py-[12px] w-[75px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
+                            peer-checked:bg-[#FFCC33] peer-checked:border-none"
+                        >
                           <p className="font-grava font-[500] text-center text-[16px] leading-[24px] tracking-[0.2%]  text-[#002244]">
                             Car
                           </p>
@@ -536,7 +538,13 @@ const SME = () => {
                         ? "animate__animated animate__slow animate__fadeInUp"
                         : ""
                     } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[302px] h-[56px]  lg:w-[532px] sm:h-[67px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-                    type="button">
+                    type="button"
+                    onClick={() =>
+                      navigate("/business/account", {
+                        state: { section: "account" },
+                      })
+                    }
+                  >
                     <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                       Apply now
                     </p>
@@ -564,7 +572,7 @@ const SME = () => {
         </div>
         <div className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]">
           <div className="flex flex-col items-center gap-[16px] lg:w-[565px] lg:h-[197px] ">
-            <h1 className="font-grava font-[500]  text-[24px] sm:text-[30px] leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
+            <h1 className="font-grava font-[400]  text-[24px] sm:text-[30px] leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
               Business Loans - Funding Your Business Growth
             </h1>
             <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-center lg:text-start text-[#002244]">
@@ -623,7 +631,13 @@ const SME = () => {
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
                 } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border hover:border-[#ffcc33] w-[129px] h-[44px] sm:w-[159px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-                type="button">
+                type="button"
+                onClick={() =>
+                  navigate("/business/account", {
+                    state: { section: "account" },
+                  })
+                }
+              >
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
@@ -636,7 +650,10 @@ const SME = () => {
 
       {/* Scroll section starts */}
 
-      <div ref={paymentRef} className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col gap-8 sm:gap-[64px]">
+      <div
+        ref={paymentRef}
+        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col gap-8 sm:gap-[64px]"
+      >
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
             <h1 className="font-grava font-medium w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
@@ -650,7 +667,13 @@ const SME = () => {
         </div>
 
         {/* Card 1 - POS Services */}
-        <div className="flex justify-center gap-8 sm:gap-[64px]">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={cardVariants}
+          className="flex justify-center gap-8 sm:gap-[64px]"
+        >
           <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
             <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
               <div className="flex flex-col gap-4 sm:gap-[16px]">
@@ -702,10 +725,16 @@ const SME = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 2 - Merchant Services */}
-        <div className="flex justify-center gap-8 sm:gap-[64px]">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={cardVariants}
+          className="flex justify-center gap-8 sm:gap-[64px]"
+        >
           <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
             <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
               <div className="flex flex-col gap-4 sm:gap-[16px]">
@@ -755,11 +784,17 @@ const SME = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 3 - Online & Mobile Transfers */}
-        <div className="flex justify-center gap-8 sm:gap-[64px]">
-          <div className="w-full lg:w-[1328px] bg-[#FFFAEB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={cardVariants}
+          className="flex justify-center gap-8 sm:gap-[64px]"
+        >
+          <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
             <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
               <div className="flex flex-col gap-4 sm:gap-[16px]">
                 <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
@@ -809,10 +844,16 @@ const SME = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 4 - Payroll Management */}
-        <div className="flex justify-center gap-8 sm:gap-[64px]">
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={cardVariants}
+          className="flex justify-center gap-8 sm:gap-[64px]"
+        >
           <div className="w-full lg:w-[1328px] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl">
             <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
               <div className="flex flex-col gap-4 sm:gap-[16px]">
@@ -862,25 +903,27 @@ const SME = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Scroll section ends */}
 
       <div
-      ref={advisoryRef}
+        ref={advisoryRef}
         className="
     h-[1019.45px] sm:h-[1120.45px] lg:h-[705px] 
     bg-[#FFFFFF] 
     flex flex-col-reverse lg:flex-row 
     justify-between items-center 
     py-[60px] pr-[101px] pl-[110px] sm:pr-[80px] sm:pl-[80px]
-  ">
+  "
+      >
         {/* Image container */}
         <div
           className="
       w-[309.41px] sm:w-[450px] lg:w-[571px] 
       h-[317px] sm:h-[460px] lg:h-[585px]
-    ">
+    "
+        >
           <img src={AdvisoryImg} alt="" />
         </div>
         {/* Text and CTA container */}
@@ -889,14 +932,16 @@ const SME = () => {
       w-[350px] sm:w-[450px] lg:w-[565px] 
       h-[550.45px] sm:h-[540px] lg:h-[534.53px] 
       flex flex-col gap-[32px]
-    ">
+    "
+        >
           {/* Heading and paragraph */}
           <div
             className="
         flex flex-col items-center sm:items-center gap-[16px]
         w-[350px] sm:w-[450px] lg:w-[565px] 
         h-[186px] sm:h-[216px] lg:h-[247px]
-      ">
+      "
+          >
             <h1
               className="
           font-grava font-[500] 
@@ -905,7 +950,8 @@ const SME = () => {
           leading-[30px] sm:leading-[40px] lg:leading-[50px] 
           tracking-[1.4%] sm:tracking-[0.8%] lg:tracking-[0.2%] 
           text-[#002244]
-        ">
+        "
+            >
               Financial Advisory Services – Expert Guidance for Smart Decisions
             </h1>
             <p
@@ -915,7 +961,8 @@ const SME = () => {
           text-[14px] sm:text-[16px] lg:text-[18px] 
           leading-[20px] sm:leading-[24px] lg:leading-[27px] 
           tracking-[0.2%] text-[#002244]
-        ">
+        "
+            >
               Your business success is our priority. Our expert advisory
               services help you make sound financial decisions that fuel
               business growth and sustainability.
@@ -927,14 +974,16 @@ const SME = () => {
             className="
         flex flex-col items-center sm:items-start lg:items-start 
         gap-[48px] h-[255.53px]
-      ">
+      "
+          >
             {/* Checkmark list */}
             <div className="flex flex-col gap-[32px] items-start">
               <div
                 className="
             flex flex-col sm:flex-row items-center 
             w-full gap-[8px]
-          ">
+          "
+              >
                 <div className="w-[28px] h-[28px]">
                   <img src={goodMark} alt="" />
                 </div>
@@ -946,7 +995,8 @@ const SME = () => {
                 leading-[24px] sm:leading-[24px] lg:leading-[25px] 
                 tracking-[0.2%] sm:tracking-[1.0%] lg:tracking-[1.4%] 
                 text-[#002244]
-              ">
+              "
+                  >
                     Business & Investment Planning
                   </p>
                 </div>
@@ -955,7 +1005,8 @@ const SME = () => {
                 className="
             flex flex-col sm:flex-row items-center 
             gap-[8px]
-          ">
+          "
+              >
                 <div className="w-[28px] h-[28px]">
                   <img src={goodMark} alt="" />
                 </div>
@@ -967,7 +1018,8 @@ const SME = () => {
                 leading-[24px] sm:leading-[24px] lg:leading-[25px] 
                 tracking-[0.2%] sm:tracking-[1.0%] lg:tracking-[1.4%] 
                 text-[#002244]
-              ">
+              "
+                  >
                     Expansion & Market Entry Strategies
                   </p>
                 </div>
@@ -976,7 +1028,8 @@ const SME = () => {
                 className="
             flex flex-col sm:flex-row items-center 
             w-full gap-[8px]
-          ">
+          "
+              >
                 <div className="w-[28px] h-[28px]">
                   <img src={goodMark} alt="" />
                 </div>
@@ -988,7 +1041,8 @@ const SME = () => {
                 leading-[24px] sm:leading-[24px] lg:leading-[25px] 
                 tracking-[0.2%] sm:tracking-[1.0%] lg:tracking-[1.4%] 
                 text-[#002244]
-              ">
+              "
+                  >
                     Risk Management & Compliance
                   </p>
                 </div>
@@ -1011,14 +1065,21 @@ const SME = () => {
             rounded-tl-lg rounded-br-lg gap-2 
             flex items-center justify-center
           `}
-                type="button">
+                type="button"
+                onClick={() =>
+                  navigate("/business/account", {
+                    state: { section: "account" },
+                  })
+                }
+              >
                 <p
                   className="
               transition-colors duration-300 ease-in-out 
               font-medium text-sm sm:text-base lg:text-base 
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
-            ">
+            "
+                >
                   Open an account
                 </p>
                 <FaArrowRightLong
@@ -1034,7 +1095,10 @@ const SME = () => {
         </div>
       </div>
 
-      <div ref={faqRef} className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+      <div
+        ref={faqRef}
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]"
+      >
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
           <p className="text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava">
             WHY CHOOSE US
@@ -1046,7 +1110,8 @@ const SME = () => {
         <div className="flex flex-col w-full lm:w-[710px]">
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
-            onClick={handleTabOne}>
+            onClick={handleTabOne}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Exclusive Access
@@ -1065,7 +1130,8 @@ const SME = () => {
           </div>
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabTwo}>
+            onClick={handleTabTwo}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Unparalleled Service
@@ -1084,7 +1150,8 @@ const SME = () => {
           </div>
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabThree}>
+            onClick={handleTabThree}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Discreet & Secure
@@ -1106,12 +1173,17 @@ const SME = () => {
 
       <div className="h-[794px] sm:h-[900px] lg:h-[680px] py-[60px] sm:py-[80px] lg:py-[120px] gap-[8px] rounded-[32px] flex justify-center">
         <div
+          style={{
+            backgroundColor: "rgb(244 245 246 / 95%)", // Brighter background with slight transparency
+            zIndex: 1, // Ensures content stays above background
+          }}
           className="overflow-hidden h-[682px] sm:h-[750px] lg:h-[440px] 
                w-[350px] sm:w-[700px] lg:w-[1328px] 
                rounded-[32px] py-[32px] sm:py-[48px] lg:py-[64px] 
                px-[20px] sm:px-[32px] lg:px-[64px] 
                gap-[48px] sm:gap-[80px] lg:gap-[133px] 
-               flex flex-col lg:flex-row bg-[#F9FAFB] justify-center items-center relative z-10">
+               flex flex-col lg:flex-row bg-[#F9FAFB] justify-center items-center relative z-10"
+        >
           <div
             className="absolute inset-0 z-[-1]"
             style={{
@@ -1119,24 +1191,27 @@ const SME = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.2, // Adjust this value as needed
+              opacity: 0.07, // Adjust this value as needed
             }}
           />
           <div
             className="w-[310px] sm:w-[600px] lg:w-[615px] 
                     h-[257.99px] sm:h-[300px] lg:h-[312px]
-                    flex flex-col gap-[40px] lg:justify-between ">
+                    flex flex-col gap-[40px] lg:justify-between "
+          >
             <div className="flex flex-col gap-[16px]">
               <h1
                 className="font-grava font-[500] text-[16px] sm:text-[22px] lg:text-[32px] 
                        leading-[20px] sm:leading-[24px] lg:leading-[48px] 
-                       tracking-[0.2%] text-[#002244]">
+                       tracking-[0.2%] text-[#002244]"
+              >
                 Let’s Build the Future of Your Business Together
               </h1>
               <p
                 className="font-grava font-[350] text-[16px] sm:text-[20px] lg:text-[18px] 
                       leading-[20px] sm:leading-[24px] lg:leading-[27px] 
-                      tracking-[0.2%] text-[#002244]">
+                      tracking-[0.2%] text-[#002244]"
+              >
                 Your business deserves a bank that believes in your dreams as
                 much as you do. Let’s talk about how Tatum Bank can empower you
                 to achieve more or Visit our nearest branch to get started
@@ -1153,11 +1228,17 @@ const SME = () => {
               w-[154px] sm:w-[170px] lg:w-[183px] 
               h-[51px] sm:h-[55px] lg:h-[59px] 
               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-                type="button">
+                onClick={() =>
+                  navigate("/business/account", {
+                    state: { section: "account" },
+                  })
+                }
+              >
                 <p
                   className="transition-colors duration-300 ease-in-out font-medium 
                         text-sm sm:text-base lg:text-base font-grava 
-                        text-[#FFCC33] group-hover:text-[#002244]">
+                        text-[#FFCC33] group-hover:text-[#002244]"
+                >
                   Call us today
                 </p>
                 <FaArrowRightLong

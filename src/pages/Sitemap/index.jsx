@@ -70,7 +70,7 @@ const Sitemap = () => {
                     state: { section: "business" },
                   }) }
                 >
-                    Business
+                    Business Banking
                   </p>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
@@ -107,27 +107,29 @@ const Sitemap = () => {
               </div>
             </div>
 
+            
+
             <div className="flex flex-col gap-[32px] w-[228px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Legal</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Account</p>
               <div className='flex flex-col gap-[30px]'>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
-                  onClick={() => navigate("/privacy-policy", {
-                    state: { section: "privacy" },
-                  })}
+                  onClick={() => {navigate("/Personal/account",);  window.scrollTo(0, 0) }}
                 >
-                  Privacy policy
+                 Personal Account
+
+
                 </p>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
-                  onClick={() => navigate("/terms", {
-                    state: { section: "terms" },
-                  })}
+                  onClick={() => {navigate("/Business/account",);  window.scrollTo(0, 0) }}
                 >
-                  Terms of service
+                   Business Account
                 </p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Whistle blower</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Anti-money Laundering</p>
+                <p  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'  onClick={() => {navigate("/Corporate/account",);  window.scrollTo(0, 0) }}>Corporate Account</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'  onClick={() => {navigate("/Private/account",);  window.scrollTo(0, 0) }}>Private Account</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'  onClick={() => {navigate("/Institutional/account",);  window.scrollTo(0, 0) }}>Institutional Account</p>
+
               </div>
             </div>
 
@@ -154,9 +156,35 @@ const Sitemap = () => {
               </div>
             </div>
 
+            <div className="flex flex-col gap-[32px] w-[228px]">
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Legal</p>
+              <div className='flex flex-col gap-[30px]'>
+                <p 
+                  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
+                  onClick={() => navigate("/privacy-policy", {
+                    state: { section: "privacy" },
+                  })}
+                >
+                  Privacy policy
+                </p>
+                <p 
+                  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
+                  onClick={() => navigate("/terms", {
+                    state: { section: "terms" },
+                  })}
+                >
+                  Terms of service
+                </p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Whistle blower</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Anti-money Laundering</p>
+              </div>
+            </div>
+
           
 
           </div>
+
+          
 
         </div>
     </div>

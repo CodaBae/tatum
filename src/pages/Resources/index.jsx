@@ -46,7 +46,9 @@ const Resources = () => {
   return (
     <div className='w-full' ref={resourcesRef}>
 
-      <section className='h-full w-full outline-none '>
+      <section 
+
+style={{ marginTop: '1.5%' }} className='h-full w-full outline-none '>
         <div 
             style={{
                 backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
@@ -80,7 +82,7 @@ const Resources = () => {
               <img 
                   src={Meeting} 
                   alt='Meeting' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
               />
           </div>
           <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
@@ -98,7 +100,7 @@ const Resources = () => {
                 onClick={() => navigate("/", {state: {section: "home"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
-                  <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Meeting} alt='Meeting' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />

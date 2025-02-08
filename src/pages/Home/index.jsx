@@ -67,12 +67,27 @@ const Home = () => {
     }, [state]);
 
 
+
+
+    const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
+
     const carouselRef = useRef(null);
     const angleRef = useRef(0);
-    const startXRef = useRef(0);
     const isDraggingRef = useRef(false);
+    const startXRef = useRef(0);
+    
+    // Auto scroll
+    useEffect(() => {
+        const autoScrollInterval = setInterval(() => {
+            angleRef.current += 0.5; // Adjust auto-scroll speed
+            if (carouselRef.current) {
+                carouselRef.current.style.transition = 'transform 0.3s ease';
+                carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+            }
+        }, 30); // Adjust interval for speed
 
-    const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard, BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
+        return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
+    }, []);
 
     const handleMouseDown = (e) => {
         e.preventDefault();
@@ -118,7 +133,6 @@ const Home = () => {
             carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
         }
     };
-
 
     const settings = {
         // dots: true,
@@ -187,9 +201,9 @@ const Home = () => {
         <div className='w-full overflow-x-hidden'>
             <LandingCarousel 
                 // dynamicHeight={true} 
-                // interval={5000} 
+               interval={5000} 
                 showArrows={false} 
-                // autoPlay={true}  //   {false}
+                autoPlay={true}  //   {false}
                 showIndicators={false}  // {true}
                 showStatus={false} 
                 showThumbs={false} 
@@ -260,7 +274,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative -right-20 md:right-24  bottom-0 lg:right-44 h-[400px] lg:h-[750px]`} 
+                            className={`${activeIndex === 0 ? "animate__animated animate__zoomIn" : ""} relative -right-20 md:right-24  bottom-0 lg:right-44  lg:h-[750px]`} 
                         />
                     </div>
                 </div>
@@ -331,7 +345,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover h-[400px]  md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
+                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn  animate__slow" : ""} object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
                             // animate__delay-2s
                         />
                     </div>
@@ -392,7 +406,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[424px] top-10 -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
+                            className={`${activeIndex === 2 ? "animate__animated animate__zoomIn animate__slow" : ""} top-6 lg:top-[10] -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`} 
                         />
                     </div>
                 </div>
@@ -452,7 +466,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""} h-[500px] md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`} 
+                            className={`${activeIndex === 3 ? "animate__animated animate__zoomIn animate__slow" : ""}  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`} 
                         />
                     </div>
                 </div>
@@ -464,7 +478,7 @@ const Home = () => {
                 <img 
                     src={Boy} 
                     alt='Boy' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -509,7 +523,7 @@ const Home = () => {
                 <img 
                     src={Girl} 
                     alt='Girl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
                 />
             </div>
         </div>
@@ -519,7 +533,7 @@ const Home = () => {
                 <img 
                     src={Farmer} 
                     alt='Farmer' 
-                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105' 
+                    className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110' 
                 />
             </div>
             <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -573,7 +587,7 @@ const Home = () => {
                 <img 
                     src={SchoolGirl} 
                     alt='SchoolGirl' 
-                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'    
+                    className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'    
                 />
             </div>
         </div>
@@ -605,33 +619,33 @@ const Home = () => {
 
                {/* Rotating Card Effect (Desktop Only) */}
                <div className="hidden lg:flex items-center justify-center" style={{ perspective: '1000px' }}>
-            <div
-                ref={carouselRef}
-                className="relative w-[400px] h-[400px] flex items-center justify-center"
-                style={{
-                    transformStyle: 'preserve-3d',
-                    cursor: 'grab'
-                }}
-                onMouseDown={handleMouseDown}
-                onTouchStart={handleMouseDown}
-                onWheel={handleWheel}
-            >
-                {cardImages.map((card, index) => {
-                    const angle = (index * 360) / cardImages.length;
-                    return (
-                        <img
-                            key={index}
-                            src={card}
-                            alt="Card"
-                            className="absolute w-full h-[250px] transition-transform duration-300"
-                            style={{
-                                transform: `rotateY(${angle}deg) translateZ(300px)`,
-                                pointerEvents: 'none'
-                            }}
-                        />
-                    );
-                })}
-            </div>
+                 <div
+            ref={carouselRef}
+            className="relative w-[400px] h-[400px] flex items-center justify-center"
+            style={{
+                transformStyle: 'preserve-3d',
+                cursor: 'grab'
+            }}
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleMouseDown}
+            onWheel={handleWheel}
+        >
+            {cardImages.map((card, index) => {
+                const angle = (index * 360) / cardImages.length;
+                return (
+                    <img
+                        key={index}
+                        src={card}
+                        alt="Card"
+                        className="absolute w-full h-[250px] transition-transform duration-300"
+                        style={{
+                            transform: `rotateY(${angle}deg) translateZ(300px)`,
+                            pointerEvents: 'none'
+                        }}
+                    />
+                );
+            })}
+        </div>
         </div>
               
             {/* Mobile */}
@@ -652,7 +666,6 @@ const Home = () => {
                     <div className='slide-item flex justify-center'>
                         <img src={WhiteCard} alt='WhiteCard' className='rounded-xl w-[50%] md:w-[100%]'/>
                     </div>
-                    
                 </Slider>
             </div>
 

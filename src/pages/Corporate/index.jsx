@@ -77,18 +77,21 @@ const Corporate = () => {
   return (
     <div className='w-full' ref={corporateRef}>
 
-      <section className='h-full w-full overflow-hidden outline-none'>
+      <section 
+
+style={{ marginTop: '1.5%'}} className='h-full w-full overflow-hidden outline-none lg:h-[90vh]'>
               <div 
                   style={{
                       backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                       backgroundRepeat: "no-repeat",
                       backgroundSize: "cover"
                   }}
-                  className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+                  className=' lm: pt-[127px] lm:pt-0 pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
               >
                   <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                       <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                          <p 
+                          <p               style={{fontWeight:450}}
+
                               className={`animate__animated animate__fadeInUp w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                           >
                               Powering Your <span className='font-bold'>Business Growth</span>
@@ -114,7 +117,7 @@ const Corporate = () => {
                                     Open a corporate account
                                 </p>
                                 <FaArrowRightLong 
-                                  className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                  className='w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
                           </div>
@@ -131,7 +134,7 @@ const Corporate = () => {
                   <img 
                       src={isMobile ? Chairman : Chairman} 
                       alt='Family' 
-                      className={`animate__animated animate__zoomIn relative lm:right-96 lm:bottom-14 h-[605px] lg:mt-40 lm:h-[694px]`} 
+                      className={`animate__animated animate__zoomIn relative lm:right-96 lm:bottom-14  lg:mt-40 lg:w-[69.5%]`} 
                   />
               </div>
       </section>
@@ -141,14 +144,14 @@ const Corporate = () => {
             <img 
                 src={Corp} 
                 alt='Saver' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
               
                 <div className='flex flex-col w-full gap-[18px]'>
-                  <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                  <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                     Corporate Banking
                   </p>
                   <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -166,7 +169,7 @@ const Corporate = () => {
                   })}
                 >
                     <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                    <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                    <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
 
             </div>
@@ -178,7 +181,7 @@ const Corporate = () => {
               })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Open a Corporate Account</p>
-                <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Corp} alt='Corp' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -187,7 +190,7 @@ const Corporate = () => {
       <div ref={investmentRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Investment Services 
                 </p>
                 <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -198,19 +201,19 @@ const Corporate = () => {
             <div className='flex flex-col gap-[32px] mt-6'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Fixed Income & Treasury Bills
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Asset & Wealth Management
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Structured Investment Portfolios
                 </p>
               </div>
@@ -223,14 +226,14 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Investment} 
                   alt='Airplane' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
@@ -240,12 +243,12 @@ const Corporate = () => {
             <img 
                 src={Treasury} 
                 alt='Treasury' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Treasury Management
                 </p>
                 <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -257,19 +260,19 @@ const Corporate = () => {
             <div className='flex flex-col gap-[32px] mt-6'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Cash & Liquidity Management
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                 Foreign Exchange Services
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                 Interest Rate Risk Management
                 </p>
               </div>
@@ -282,7 +285,7 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to an Advisor</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Treasury} alt='Treasury' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -291,7 +294,7 @@ const Corporate = () => {
       <div ref={tradeRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Trade Finance
                 </p>
                 <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -303,19 +306,19 @@ const Corporate = () => {
             <div className='flex flex-col gap-[32px] mt-6'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Letters of Credit & Guarantees
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Import & Export Financing
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Supply Chain Finance
                 </p>
               </div>
@@ -328,14 +331,14 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Start Trading Smarter</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Trade} 
                   alt='Trade' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
@@ -345,12 +348,12 @@ const Corporate = () => {
             <img 
                 src={Lending} 
                 alt='Lending' 
-                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Corporate Lending
                 </p>
                 <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -362,19 +365,19 @@ const Corporate = () => {
             <div className='flex flex-col gap-[32px] mt-6'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Term Loans & Working Capital Financing
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                 Asset & Equipment Financing
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                 Project & Infrastructure Financing
                 </p>
               </div>
@@ -387,7 +390,7 @@ const Corporate = () => {
               })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Apply for a Loan Now</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
         </div>
         <img src={Lending} alt='Lending' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -396,7 +399,7 @@ const Corporate = () => {
       <div ref={strategicRef} className='bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]' data-aos="fade-right" >
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                <p className='font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                   Strategic Partnerships
                 </p>
                 <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -408,19 +411,19 @@ const Corporate = () => {
             <div className='flex flex-col gap-[32px] mt-6'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Co-Branded Financial Solutions
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Technology & Fintech Collaborations
                 </p>
               </div>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
-                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                <p className='font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                   Industry-Specific Advisory
                 </p>
               </div>
@@ -433,14 +436,14 @@ const Corporate = () => {
                 })}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Partner With Us</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left">
               <img 
                   src={Partner} 
                   alt='Partner' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
               />
           </div>
       </div>
@@ -448,7 +451,7 @@ const Corporate = () => {
       <div ref={faqRef} className='bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
         <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
           <p className='text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
-          <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Corporate Banking.</p>
+          <p className='font-med text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Choose Tatum <br /> Corporate Banking.</p>
         </div>
         <div className='flex flex-col w-full lm:w-[710px]'>
             <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>

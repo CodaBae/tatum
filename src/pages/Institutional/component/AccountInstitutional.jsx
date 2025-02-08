@@ -64,14 +64,16 @@ const AccountInstitutional = () => {
   return (
     <div className='w-full' ref={accountRef}>
 
-        <section className='h-full w-full overflow-hidden outline-none'>
+        <section 
+
+style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-none'>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+                className=' lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -99,7 +101,7 @@ const AccountInstitutional = () => {
                                     Learn more
                                 </p>
                                 <FaArrowRightLong
-                                    className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                    className='w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
                         </div>
@@ -116,7 +118,7 @@ const AccountInstitutional = () => {
                 <img 
                     src={isMobile ? Temple : TempleMobile} 
                     alt='Temple' 
-                    className={`animate__animated animate__zoomIn relative lm:right-36 h-[605px] lg:mt-40 lm:h-[641px]`} 
+                    className={`animate__animated animate__zoomIn relative lm:right-36  lg:mt-40 lm:h-[641px]`} 
                 />
             </div>
         </section>
@@ -156,7 +158,7 @@ const AccountInstitutional = () => {
                 onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
         </section>

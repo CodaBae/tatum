@@ -34,13 +34,8 @@ const Footer = () => {
           <button
             className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg"
             type="button"
-            onClick={() => {
-              navigate("/personal/account", {
-                  state: {
-                      section: "account"
-                  }
-              })
-          }}
+            onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
+
           >
             <p className="font-grava text-[#FFCC33] group-hover:text-[#002244]">
                 Download Form
@@ -245,8 +240,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="h-[1px] bg-[#546B82] w-full"></div>
-        <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[51px]">
+        <div className="h-[0.5px] bg-[#546B82] w-full"></div>
+        <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[21px] lastF">
           <img
             src={Logo}
             alt="Logo"
@@ -256,7 +251,7 @@ const Footer = () => {
             })}
           />
        
-          <div className="flex flex-col gap-1 ">
+          <div className="flex flex-col gap-1 x">
             <p className="text-xs text-[#002244] flex lg:justify-end font-grava">
               &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
             </p>

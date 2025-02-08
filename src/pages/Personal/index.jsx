@@ -120,14 +120,16 @@ const Personal = () => {
   return (
     <div ref={personalRef}>
 
-      <section className='h-full w-full outline-none '>
+      <section 
+
+style={{ marginTop: '2.5%',height:'100vh'}} className='h-full w-full outline-none '>
         <div 
           style={{
             backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover"
           }}
-          className='h-[856px] lm:h-auto pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          className='lg:h-[856px] lm:h-auto pt-[40px] overflow-hidden lm:pt-0 pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
             <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -136,7 +138,8 @@ const Personal = () => {
                     >
                       Personalized<br /> banking that <span className='font-bold'>keeps<br /> you smiling</span> 
                     </p>
-                    <p 
+                    <p               style={{fontWeight:450}}
+
                         className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[350] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     >
                         Explore tailored solutions that fit your lifestyle, 
@@ -144,7 +147,7 @@ const Personal = () => {
                     </p>
                     <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                       <button
-                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                           type='button' 
                           onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                           //animate__delay-2s
@@ -153,10 +156,10 @@ const Personal = () => {
                             className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                            
                         >
-                            Open an account today
+                            Open a personal account today
                         </p>
                         <FaArrowRightLong 
-                            className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
+                            className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
                         />
                       </button>
                     
@@ -172,12 +175,12 @@ const Personal = () => {
                 </div>
             </div>
             <img 
-                src={PersonalImg} 
+                src={'https://framerusercontent.com/images/aIdKkIs5GohtjERCtIabST5MHvg.png'} 
                 alt='Family' 
                 // style={{
                 //     display: isMobile ? "none" : "flex"
                 // }}
-                className={`animate__animated animate__zoomIn relative -right-10 lm:right-5 mt-24 h-[394px] lm:h-[740px]`} 
+                className={`animate__animated animate__zoomIn relative -right-10 lm:right-10 lm:h-[688px] `} 
             />
         </div>
       </section>
@@ -187,7 +190,7 @@ const Personal = () => {
               <img 
                   src={Saver} 
                   alt='Saver' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
               />
           </div>
           <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
@@ -205,7 +208,7 @@ const Personal = () => {
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                  <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Saver} alt='Saver' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -230,14 +233,14 @@ const Personal = () => {
               onClick={() => navigate("/personal/account", { state: {section: "account"}})}
           >
               <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-              <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+              <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
         <div data-aos="fade-left">
             <img 
                 src={Milkshake} 
                 alt='Girl' 
-                className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
             />
         </div>
       </div>
@@ -247,7 +250,7 @@ const Personal = () => {
               <img 
                   src={Power} 
                   alt='Power' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
               />
           </div>
           <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]' data-aos="fade-left" >
@@ -266,7 +269,7 @@ const Personal = () => {
                   onClick={() => navigate("/personal/account", { state: {section: "account"}})}
               >
                   <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Learn more</p>
-                  <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                  <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
               </button>
           </div>
           <img src={Power} alt='Power' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -289,7 +292,7 @@ const Personal = () => {
               <img 
                   src={MoneyWoman} 
                   alt='Girl' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
               />
           </div>
 
@@ -313,14 +316,14 @@ const Personal = () => {
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
                 <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
-                <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
+                <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
             </button>
           </div>
           <div data-aos="fade-left" className="hidden lm:block">
               <img 
                   src={MoneyWoman} 
                   alt='Girl' 
-                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                  className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
               />
           </div>
         </div>
@@ -439,7 +442,7 @@ const Personal = () => {
             onClick={() => navigate("/digital", { state: {section: "digital"}})}
           >
             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started now</p>
-            <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
 
         </div>
@@ -456,7 +459,10 @@ const Personal = () => {
         >
           <div 
             className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
-            style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
+             style={{ 
+      backgroundColor: 'rgb(244 245 246 / 95%)', // Brighter background with slight transparency
+      zIndex: 1 // Ensures content stays above background
+    }}
           >
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
               <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
@@ -481,7 +487,7 @@ const Personal = () => {
                   Open an Account
                 </p>
                 <FaArrowRightLong 
-                  className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
+                  className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
                 />
               </button>
             </div>

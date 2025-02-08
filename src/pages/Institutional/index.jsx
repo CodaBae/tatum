@@ -59,22 +59,25 @@ const Institutional = () => {
     return (
         <div className='w-full' ref={InstitutionRef}>
 
-            <section className='h-full w-full overflow-hidden outline-none'>
+            <section 
+
+style={{ marginTop: '1.5%' }} className='h-full w-full overflow-hidden outline-none'>
                 <div 
                     style={{
                         backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover"
                     }}
-                    className='h-[732px] lm:h-[694px] pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+                    className=' lm: pt-[127px] lm:pt-0 pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
                 >
                     <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                         <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                            <p 
+                            <p               style={{fontWeight:450}}
+
                                 className={`animate__animated animate__fadeInUp lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                             >
                                 Empowering <br /> 
-                                Institutions With <br />
+                                Institutions with <br />
                                 <span className='font-bold'>Financial Excellence</span>
                             </p>
                             <p 
@@ -84,22 +87,24 @@ const Institutional = () => {
                                 institutions and are committed to providing tailored made banking solutions.
                             </p>
                             <div className='flex items-center mt-[12px] gap-3'>
+                               
+
                                 <button
-                                    className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                    type='button'
-                                    onClick={() => navigate("/institutional/account", {state: {
-                                        section: "account"
-                                    }})}
+                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                              type='button'
+                              onClick={() => navigate("/institutional/account", {
+                                state: {section: "account"}
+                              })}
+                            >
+                                <p 
+                                  className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
-                                    <p 
-                                    className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                    >
-                                        Get Started
-                                    </p>
-                                    <FaArrowRightLong
-                                        className='w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
-                                    />
-                                </button>
+                                    Open a  institutional  account
+                                </p>
+                                <FaArrowRightLong 
+                                  className='w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                />
+                            </button>
                             </div>
                         </div>
                         <div className='hidden lm:flex items-start absolute -bottom-28'>
@@ -114,7 +119,7 @@ const Institutional = () => {
                     <img 
                         src={Institution} 
                         alt='Temple' 
-                        className={`animate__animated animate__zoomIn relative lm:right-44 h-[605px] lg:mt-20 lm:h-[641px]`} 
+                        className={`animate__animated animate__zoomIn relative lm:right-44  lg:mt-20 lm:h-[701px]`} 
                     />
                 </div>
             </section>
@@ -124,12 +129,12 @@ const Institutional = () => {
                     <img 
                         src={Sector} 
                         alt='Sector' 
-                        className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110 ' 
+                        className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105 ' 
                     />
                 </div>
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                        <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-sm'>Our Institutional Banking Solutions</p>
+                        <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Our Institutional Banking Solutions</p>
                         <div className='flex flex-col w-full gap-[18px]'>
                             <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Public Sector Institutional  <span className='block md:inline-block'>Banking.</span> 
@@ -149,53 +154,53 @@ const Institutional = () => {
                             }})}
                         >
                             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                            <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-sm mt-[16px] '>
+                        <p className='font-grava text-[#002244] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
                             key offerings:
                         </p>
         
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                Public Sector Financial Management <span className='font-[350] lm:font-normal'>
+                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                Public Sector Financial Management <span className='font-[300]  '>
                                 – Simplified revenue collection, budgeting, and fund disbursement solutions.
                                 </span>
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                 Treasury & Liquidity Management <span className='font-[350] lm:font-normal'>
+                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                 Treasury & Liquidity Management <span className='font-[300]  '>
                                  – Optimized cash flow for enhanced financial planning.
                                 </span>
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
                              Collections & Payment Solutions  
-                             <span className='font-[350] lm:font-normal'>
+                             <span className='font-[300]  '>
                               - Automated tax collections, school fees payments, and bulk payments.
                             </span>
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Payroll Management <span className='font-[350] lm:font-normal'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                    Payroll Management <span className='font-[300]  '>
                                     – Secure salary disbursements and pension processing.
                                     </span>
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Digital Banking for Public Institutions  <span className='font-[350] lm:font-normal'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                    Digital Banking for Public Institutions  <span className='font-[300]'> – Secure salary disbursements and pension processing.
                                     </span>
-                                    – Secure salary disbursements and pension processing.
+                                   
                                 </p>
                             </div>
                         </div>
@@ -209,7 +214,7 @@ const Institutional = () => {
                         }})}
                     >
                         <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get started</p>
-                        <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <img src={Sector} alt='Sector' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -235,53 +240,53 @@ const Institutional = () => {
                             }})}
                         >
                             <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
-                            <FaArrowRightLong className='mt-[1px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-sm mt-[16px] '>
+                        <p className='font-grava text-[#334E69] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
                             key offerings:
                         </p>
         
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                Cash & Liquidity Management  <span className='font-[350] lm:font-normal'>
+                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                Cash & Liquidity Management  <span className='font-[300]  '>
                                 – Ensure funds are readily available for operational needs.
                                 </span>
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                Collections & Payments <span className='font-[350] lm:font-normal'>
+                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                Collections & Payments <span className='font-[300]  '>
                                 – Seamless donor fund processing, school tuition payments, and supplier transactions.
                                 </span>
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
                                     Foreign Exchange & Trade Services  
-                                    <span className='font-[350] lm:font-normal'>
+                                    <span className='font-[300]  '>
                                     – Smooth cross-border transactions for international organizations.
                                     </span>
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Bespoke Loan & Financing Solutions <span className='font-[350] lm:font-normal'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                    Bespoke Loan & Financing Solutions <span className='font-[300]  '>
                                     – Access tailored credit facilities to support growth.
                                     </span>
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Multi-Channel Banking <span className='font-[350] lm:font-normal'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                                    Multi-Channel Banking <span className='font-[300]  '> – Bank anytime, anywhere via our secure digital platforms.
                                     </span>
-                                    – Bank anytime, anywhere via our secure digital platforms.
+                                   
                                 </p>
                             </div>
                         </div>
@@ -294,14 +299,14 @@ const Institutional = () => {
                         }})}
                     >
                         <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Talk to Our Relationship Managers</p>
-                        <FaArrowRightLong className='mt-[2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <FaArrowRightLong className='mt-[-2px] transition-colors duration-300 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <div data-aos="fade-left">
                     <img 
                         src={NGO} 
                         alt='NGO' 
-                        className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-110'   
+                        className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-300 ease-in-out transform hover:scale-105'   
                     />
                 </div>
             </section>
@@ -345,46 +350,66 @@ const Institutional = () => {
                 </div>
             </section>
 
-            <section className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
-                <div 
-                    style={{
-                        backgroundImage: `url(${Layer})`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover"
-                    }}
-                    className="w-full h-[621px] lm:h-[440px] rounded-xl"
-                >
-                    <div 
-                        className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row gap-[50px] justify-between items-center"
-                        style={{ backgroundColor: 'rgba(249, 250, 251, 0.8)' }}
-                    >
-                    <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
-                        <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
-                            Experience institutional banking built for efficiency.
-                        </p>
-                        <p className="font-grava font-[350] text-sm lm:text-[18px] leading-[27px]  tracking-[0.2%]">
-                            Contact us to explore solutions tailored to your institution.  
-                        </p>
-                        <button
-                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[164px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center p-4 lm:mt-[80px] justify-center`}
-                            type='button'
-                        >
-                        <p 
-                            className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                        >
-                            Contact us
-                        </p>
-                        <FaArrowRightLong 
-                            className='w-5 h-5 mt-[1px] text-[#FFCC33] group-hover:text-[#002244]' 
-                        />
-                        </button>
-                    </div>
-                    <div className="lm:w-[468px] lm:h-[312px]">
-                        <img src={Kids} alt="Kids" className="" />
-                    </div>
-                    </div>
-                </div>
-            </section>
+            <section className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col" style={{
+  zIndex: 1,
+
+}}>
+  <div 
+    style={{
+      backgroundImage: `url(${Layer})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      position: 'relative', // Add relative positioning
+    }}
+    className="w-full h-[621px] lm:h-[440px] rounded-xl"
+  >
+    {/* Overlay div for image opacity */}
+    <div 
+      className="absolute inset-0 rounded-xl"
+      style={{ 
+        backgroundColor: 'rgb(244 245 246 / 75%)',
+    }}
+    />
+    
+    <div 
+      className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row gap-[50px] justify-between items-center relative z-10"
+      style={{ 
+        backgroundColor: 'rgba(249, 250, 251, 0.8)',
+      }}
+    >
+      <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
+        {/* ... rest of your content ... */}
+        <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
+          Experience institutional banking built for efficiency.
+        </p>
+        <p className="font-grava font-[350] text-sm lm:text-[18px] leading-[27px]  tracking-[0.2%]">
+          Contact us to explore solutions tailored to your institution.  
+        </p>
+        <button
+          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[164px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center p-4 lm:mt-[80px] justify-center`}
+          type='button'
+          onClick={() => navigate("/contact", {
+            state: {
+              section: "contact"
+            }
+          } )}
+        >
+          <p 
+            className='transition-colors duration-300 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+          >
+            Contact us
+          </p>
+          <FaArrowRightLong 
+            className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
+          />
+        </button>
+      </div>
+      <div className="lm:w-[468px] lm:h-[312px]">
+        <img src={Kids} alt="Kids" className="" />
+      </div>
+    </div>
+  </div>
+</section>
 
         </div>
     )

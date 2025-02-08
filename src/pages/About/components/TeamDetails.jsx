@@ -87,7 +87,7 @@ const TeamDetails = () => {
         <div 
           data-aos="fade-up" 
           data-aos-duration="1000"
-          className='flex flex-col lm:flex-row items-start gap-6 lg:gap-[104px]'
+          className='flex flex-col lm:flex-row items-start gap-6 lg:gap-[55px]'
         >
           <div className="flex flex-col gap-[18px] w-[429px]">
             <img src={HeadShot} alt='HeadShot' className='lm:w-[429px] w-[350px]' />
@@ -129,7 +129,7 @@ const TeamDetails = () => {
                 Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of 
                 employee development.
               </p> */}
-              <p className='font-grava font-[350] text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
+              <p className='font-grava font-[300] text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
               {state?.team.bio}
               </p>
             </div>

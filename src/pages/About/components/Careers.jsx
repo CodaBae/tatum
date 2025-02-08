@@ -125,7 +125,7 @@ const Careers = () => {
             <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
             </p>
-            <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
+            <FaArrowRightLong className="w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
         <div className="animate__animated animate__zoomIn absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
@@ -324,7 +324,7 @@ const Careers = () => {
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Apply for an Internship
-                      <span className="mt-[1px] ml-[6px]">
+                      <span className="mt-[-2px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
@@ -367,7 +367,7 @@ const Careers = () => {
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
-                      <span className="mt-[1px] ml-[6px]">
+                      <span className="mt-[-2px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
@@ -409,7 +409,7 @@ const Careers = () => {
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
-                      <span className="mt-[1px] ml-[6px]">
+                      <span className="mt-[-2px] ml-[6px]">
                         <img
                           src={arrow2}
                           alt="-->"
@@ -897,7 +897,7 @@ const Careers = () => {
                 <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
-                <FaArrowRightLong className="w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
+                <FaArrowRightLong className="w-5 h-5 mt-[-2px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />
               </button>
             </div>
             <div className=" relative w-[246px] h-[223px] lg:w-[248px] lg:h-[305.18px]">

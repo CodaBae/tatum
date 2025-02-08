@@ -1,7 +1,62 @@
 .font-medium {
-    font-weight: 400;
+    font-weight: 400 ;
+    line-height: 105% 
+
+}
+
+.font-med {
+    font-weight: 380 !important;
+    line-height: 105% !important
+
 }
 
 .font-semibold {
     font-weight: 500;
 }
+
+.lastF{
+    margin-bottom: 3%;
+}
+
+.text-xl {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+}
+
+@media (max-width: 767px) {
+    .lastF {
+        margin-bottom: 6%;
+        align-items: baseline;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .lg\:text-\[56px\] {
+        font-size: 50px !important
+    }
+}
+
+@media (min-width: 1280px) {
+    .lg\:text-\[24px\] {
+        font-size: 20px !important
+    }
+}
+
+
+.lm\:border-\[\#C9C9C9\] {
+    --tw-border-opacity: 0.5;
+    border-color: rgb(201 201 201 / var(--tw-border-opacity, 1));
+}
+
+
+@media (min-width: 1024px) {
+    .lm\:text-\[60px\] {
+        font-size: 50px !important
+    }
+}
+
+.mt-0\.5 {
+    margin-top: -0.125rem !important;
+}
+
