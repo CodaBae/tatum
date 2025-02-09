@@ -243,7 +243,7 @@ const Digital = () => {
                     <img 
                         src={Phone} 
                         alt='Phone' 
-                        className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
+                        className='w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[620px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105'   
                     />
                 </div>
             </div>

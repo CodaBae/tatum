@@ -316,7 +316,7 @@ const Personal = () => {
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3]'>Coming soon</p>
-                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] ' />
             </button>
           </div>
           <div data-aos="fade-left" className="hidden lm:block">
