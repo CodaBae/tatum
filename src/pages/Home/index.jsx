@@ -236,7 +236,7 @@ const Home = () => {
 
 
   return (
-    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
+    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px] overflow-hidden'>
         <div className='w-full '>
             <LandingCarousel 
               interval={5000} 
