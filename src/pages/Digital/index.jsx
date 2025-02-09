@@ -51,9 +51,9 @@ const Digital = () => {
                 <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
-                            className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                         >
-                            Seamless. Secure. Convenient. 
+                            Seamless. Secure. <span className='font-bold'>Convenient. </span> 
                         </p>
                         <p              
 
@@ -81,7 +81,7 @@ const Digital = () => {
                         
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-34.5%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
