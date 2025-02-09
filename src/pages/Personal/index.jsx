@@ -248,7 +248,7 @@ const Personal = () => {
       <div ref={fixedRef} className='bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]'>
           <div data-aos="fade-right" className="hidden md:block" >
               <img 
-                  src={Power} 
+                  src={'https://res.cloudinary.com/code-idea/image/upload/v1739057936/Frame_1171278628_lfnrcr.png'} 
                   alt='Power' 
                   className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
               />

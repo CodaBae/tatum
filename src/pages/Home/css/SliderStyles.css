@@ -8,3 +8,13 @@
     margin-top: 0.5px !important;
     /* box-shadow: none !important; Remove default shadow if needed */
 }
+
+/* Custom CSS to enforce fade transition */
+.carousel .slide {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .carousel .slide.selected {
+    opacity: 1;
+  }

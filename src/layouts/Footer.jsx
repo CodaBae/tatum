@@ -75,14 +75,14 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-6">
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about", {
                     state: { section: "about" },
                   }) }
                 >
                   About us
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about/careers", {
                     state: { section: "careers" },
                   })}
@@ -90,7 +90,7 @@ const Footer = () => {
                   Careers
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
                   }) }
@@ -98,7 +98,7 @@ const Footer = () => {
                   Blogs
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/contact", {
                     state: { section: "contact" },
                   }) }
@@ -113,7 +113,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-6">
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/personal", {
                     state: { section: "personal" },
                   })}
@@ -121,7 +121,7 @@ const Footer = () => {
                   Personal Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/business", {
                     state: { section: "business" },
                   })}
@@ -129,7 +129,7 @@ const Footer = () => {
                   Business Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/corporate", {
                     state: { section: "corporate" },
                   }) }
@@ -137,21 +137,21 @@ const Footer = () => {
                   Corporate Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/private", {
                     state: { section: "private" },
                   })}
                 >
                   Private Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => {navigate("/institutional", {
                     state: { section: "institution" },
                   }); window.scrollTo(0, 0)}}
                 >
                   Institutional Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer"
+                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => {navigate("/digital", {
                     state: { section: "digital" },
                   }); window.scrollTo(0, 0)}}
@@ -233,7 +233,7 @@ const Footer = () => {
                 ADDRESS
               </p>
               <div className="flex flex-col gap-6">
-                <p className="font-grava text-[#002244] text-sm cursor-pointer">
+                <p className="font-grava text-[#002244] text-sm cursor-pointer font-300">
                   Plot 1088, Cadastral Zone AO1, Area 3, <br /> Garki FCT Abuja
                 </p>
               </div>
@@ -252,10 +252,10 @@ const Footer = () => {
           />
        
           <div className="flex flex-col gap-1 x">
-            <p className="text-xs text-[#002244] flex lg:justify-end font-grava">
+            <p className="text-xs text-[#002244] flex lg:justify-end font-grava font-300" >
               &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
             </p>
-            <p className="text-xs text-[#002244] font-grava">
+            <p className="text-xs text-[#002244] font-grava font-300">
               Licensed by the Central Bank of Nigeria. All deposits are insured by NDIC. All rights reserved
             </p>
           </div>

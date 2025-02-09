@@ -44,7 +44,7 @@ const Resources = () => {
     
 
   return (
-    <div className='w-full' ref={resourcesRef}>
+    <div className='w-full overflow-hidden' ref={resourcesRef}>
 
       <section 
 

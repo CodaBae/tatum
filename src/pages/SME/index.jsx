@@ -1262,7 +1262,7 @@ const SME = () => {
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
-            Why Choose Tatum <br /> Private Banking.
+            Why Choose Tatum <br /> Business Banking.
           </p>
         </div>
         <div className="flex flex-col w-full lm:w-[710px]">
@@ -1271,7 +1271,7 @@ const SME = () => {
             onClick={handleTabOne}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 Exclusive Access
               </p>
               {openTabOne ? (
@@ -1291,7 +1291,7 @@ const SME = () => {
             onClick={handleTabTwo}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 Unparalleled Service
               </p>
               {openTabTwo ? (
@@ -1311,7 +1311,7 @@ const SME = () => {
             onClick={handleTabThree}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 Discreet & Secure
               </p>
               {openTabThree ? (

@@ -157,11 +157,11 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#002244] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
-                            key offerings:
+                        <p className='font-grava text-[#002244] font-bold tracking-[25%]  mt-[16px] ' style={{letterSpacing:'1px'}}> 
+                            Key Offerings:
                         </p>
         
-                        <div className='flex flex-col gap-[32px] mt-6'>
+                        <div className='flex flex-col gap-[20px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
                             <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
@@ -243,11 +243,11 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-bold tracking-[25%] uppercase text-sm mt-[16px] '>
-                            key offerings:
+                        <p className='font-grava text-[#002244] font-bold tracking-[25%]  mt-[16px] ' style={{letterSpacing:'1px'}}> 
+                            Key Offerings:
                         </p>
         
-                        <div className='flex flex-col gap-[32px] mt-6'>
+                        <div className='flex flex-col gap-[20px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
                             <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>

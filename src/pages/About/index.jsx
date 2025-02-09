@@ -177,7 +177,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         <div className=" flex flex-col md:flex-row items-start justify-between ">
           <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[59px] lg:pr-[59px]">
             <div className="flex items-center justify-between">
-              <p className="text-[#002244] font-grava font-medium text-[28px] lg:text-[56px] tracking-wider">
+              <p className="text-[#002244] font-grava font-bo text-[28px] lg:text-[56px] tracking-wider">
                 Our Story
               </p>
               {/* <img
@@ -186,20 +186,20 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 className="w-[48px] h-[55px] hidden lg:block"
               /> */}
             </div>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
+            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
               Inspired by our name, Tatum, a refined form of the Latin word
               Tutum, meaning "a safe place" or "refuge," we are committed to
               being a secure and dependable guardian of your financial goals and
               aspirations.
             </p>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[18px] tracking-[1.4%]">
+            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[18px] tracking-[1.4%]">
               Our journey is rooted in the promise to provide a safe haven where
               customers can confidently entrust their finances. We deliver on
               this promise through innovative products, advanced technology, and
               unparalleled service designed to support every step of your
               financial journey.
             </p>
-            <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
+            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
               At Tatum Bank,{" "}
               <span className="font-semibold ">We Keep You Smiling.</span>
             </p>
@@ -215,7 +215,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                   Our Mission
                 </p>
-                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
                   To improve the lives of Nigerians, particularly the youth, by
                   offering innovative, easily accessible, and secure financial
                   services that promote economic growth and personal success.
@@ -232,7 +232,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                   Vision.
                 </p>
-                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
                   To be Nigeria's most trusted and innovative financial partner,
                   promoting financial literacy and enabling prosperity for
                   future generations.
@@ -322,7 +322,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               Core <br /> Values
             </span>
           </p>
-          <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[350] leading-6 lm:leading-[30px] tracking-[0.336px]">
+          <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[300] leading-6 lm:leading-[30px] tracking-[0.336px]">
             Our values are intrinsic to how we operate and how we serve our
             customers to deliver exemplary financial services.
           </p>
@@ -337,7 +337,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Integrity
             </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
               We build trust through transparent actions that brighten your
               banking experience.
             </p>
@@ -353,7 +353,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Customer-Centricity
             </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
               Your dreams and satisfaction drive our decisions, making banking
               worth smiling about.
             </p>
@@ -369,7 +369,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Teamwork
             </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
               By combining our diverse strengths and perspectives, we create
               exceptional experiences together.
             </p>
@@ -385,7 +385,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Innovation
             </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
               By combining our diverse strengths and perspectives, we create
               remarkable experiences together.
             </p>
@@ -402,7 +402,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Excellence
             </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
               We reimagine banking with creative solutions that make your
               financial journey rewarding.
             </p>
@@ -424,7 +424,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               navigate("/about/teams", { state: { section: "teams" } })
             }
           >
-            <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%]">
+            <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
               See all Team Members
             </p>
             <img
@@ -538,7 +538,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               />
             </div>
             <div className="flex flex-col gap-[4px]">
-              <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+            <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Aminatu Dahiru Chiroma
               </p>
               <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
@@ -575,7 +575,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               />
             </div>
             <div className="flex flex-col gap-[4px]">
-              <p className="font-grava font-semibold text-[#002244] text-sm md:text-[20px]">
+            <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Aminatu Dahiru Chiroma
               </p>
               <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
@@ -644,6 +644,8 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[32px]  " style={{fontWeight:350}}>
             {testimonial.text}
           </p>
+
+          <br></br>
           <div className="flex gap-4 mt-5">
             <img src={Girl} alt="" className="w-[64px] h-[64px] rounded-full" />
             <div className="flex flex-col gap-2">

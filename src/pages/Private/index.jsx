@@ -150,6 +150,10 @@ const Private = () => {
                   </p>
                 </div>
 
+                <p className='font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+                     Our Expertise Covers:
+                    </p>
+
                 <button
                   className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[141px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                   type='button'
@@ -161,7 +165,7 @@ const Private = () => {
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
 
-                <div className='flex flex-col gap-[32px] mt-6'>
+                <div className='flex flex-col gap-[20px] mt-6'>
                   <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                     <img src={Check} alt="Check" className='' />
                     <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
@@ -247,7 +251,7 @@ const Private = () => {
             />
         </div>
         <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
-          <div className='flex gap-5 lm:gap-[32px] flex-col'>
+          <div className='flex gap-5 lm:gap-[20px] flex-col'>
 
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                 <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Tatum Black Card</p>
@@ -274,13 +278,14 @@ const Private = () => {
             </button>
 
             <div className='flex flex-col lm:flex-row items-center gap-2'>
-              <p className='font-grava text-[#002244] font-bold lm:tracking-[0.25em] uppercase text-sm'>Exclusive Benefits:</p>
+            <p className='font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
+Exclusive Benefits:</p>
               <div className='w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center'>
                 <p className='uppercase text-[#546B82] text-xs tracking-wide font-grava font-semibold'>coming soon</p>
               </div>
             </div>
 
-            <div className='flex flex-col gap-[32px] mt-3'>
+            <div className='flex flex-col gap-[20px] mt-3'>
               <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                 <img src={Check} alt="Check" className='' />
                 <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>

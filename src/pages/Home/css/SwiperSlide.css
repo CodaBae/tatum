@@ -5,3 +5,12 @@
     flex-direction: column;
     /* gap: 40px; */
 }
+/* Custom CSS to enforce fade transition */
+.carousel .slide {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .carousel .slide.selected {
+    opacity: 1;
+  }

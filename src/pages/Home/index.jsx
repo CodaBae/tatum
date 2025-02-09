@@ -196,9 +196,48 @@ const Home = () => {
   const isTab = window.innerWidth < 1028;
   const isMobile = window.innerWidth < 768;
 
+  const fadeAnimationHandler = (props, state) => {
+    const transitionTime = props.transitionTime + 'ms';
+    const transitionTimingFunction = 'ease-in-out';
+
+    let slideStyle = {
+        position: 'absolute',
+        display: 'block',
+        minHeight: '100%',
+        opacity: 0,
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: 0,
+        transitionTimingFunction: transitionTimingFunction,
+        msTransitionTimingFunction: transitionTimingFunction,
+        MozTransitionTimingFunction: transitionTimingFunction,
+        WebkitTransitionTimingFunction: transitionTimingFunction,
+        OTransitionTimingFunction: transitionTimingFunction,
+    };
+
+    if (!state.swiping) {
+        slideStyle = {
+            ...slideStyle,
+            WebkitTransitionDuration: transitionTime,
+            MozTransitionDuration: transitionTime,
+            OTransitionDuration: transitionTime,
+            transitionDuration: transitionTime,
+            msTransitionDuration: transitionTime,
+        };
+    }
+
+    return {
+        slideStyle,
+        selectedStyle: { ...slideStyle, opacity: 1, position: 'relative' },
+        prevStyle: { ...slideStyle },
+    };
+};
+
+
   return (
-    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px] overflow-hidden'>
-        <div className='w-full overflow-x-hidden'>
+    <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px]'>
+        <div className='w-full '>
             <LandingCarousel 
               interval={5000} 
               showArrows={false} 
@@ -208,9 +247,9 @@ const Home = () => {
               showThumbs={false} 
               infiniteLoop={true}
               onChange={handleSlideChange}
-              // Add these two props for fade transition
-              animationHandler="fade"
+              animationHandler={fadeAnimationHandler} // Use the custom fade animation
               transitionTime={500}
+              swipeable={false} // Disable swiping for fade animation
             >
                 <div className='h-full w-full outline-none'>
                     <div 
