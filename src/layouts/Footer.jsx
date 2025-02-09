@@ -230,7 +230,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-6">
                 <p className="font-grava text-[#002244] text-sm cursor-pointer font-300">
-                  Plot 1088, Cadastral Zone AO1, Area 3, <br /> Garki FCT Abuja
+                  Plot 1088, Cadastral Zone AO1, Area 3,Garki FCT  <br /> Abuja
                 </p>
               </div>
             </div>
