@@ -119,24 +119,31 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  " onMouseLeave={()=>{
-      handleMouseEnter('nil')
-      handleMouseLeave('nil')
-    } }>
+    <div
+      className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  "
+      onMouseLeave={() => {
+        handleMouseEnter("nil");
+        handleMouseLeave("nil");
+      }}
+    >
       <img
         src={Logo}
         alt="Logo"
         className="w-[125px] h-[64px] cursor-pointer"
-        onClick={() => navigate("/", {
-          state: { section: "home" },
-        })}
+        onClick={() =>
+          navigate("/", {
+            state: { section: "home" },
+          })
+        }
       />
       <div className="flex items-center gap-[32px]">
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => navigate("/", {
-            state: { section: "home" },
-          })}
+          onClick={() =>
+            navigate("/", {
+              state: { section: "home" },
+            })
+          }
         >
           Home
         </p>
@@ -146,10 +153,11 @@ const Header = () => {
           <div
             onMouseEnter={() => handleMouseEnter("about")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
-            onClick={() => 
+            onClick={() =>
               navigate("/about", {
                 state: { section: "about" },
-              })}
+              })
+            }
           >
             About Us
           </div>
@@ -158,7 +166,8 @@ const Header = () => {
               className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[290px] ${
                 showAboutDropdown ? "show" : ""
               }`}
-              onMouseLeave={() => handleMouseLeave("about")}>
+              onMouseLeave={() => handleMouseLeave("about")}
+            >
               <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200">
                 <div className="flex flex-col  gap-4 w-[237px]">
                   <div
@@ -167,9 +176,8 @@ const Header = () => {
                       navigate("about", {
                         state: { section: "mission-and-vision" },
                       });
-                
                     }}
-                    >
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
@@ -189,7 +197,8 @@ const Header = () => {
                       navigate("/about", {
                         state: { section: "mission-and-vision" },
                       })
-                    }>
+                    }
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
@@ -209,7 +218,8 @@ const Header = () => {
                       navigate("/about", {
                         state: { section: "services" },
                       })
-                    }>
+                    }
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
@@ -225,7 +235,10 @@ const Header = () => {
 
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {navigate("/about", {state: { section: "teams" }, } )}}>
+                    onClick={() => {
+                      navigate("/about", { state: { section: "teams" } });
+                    }}
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
@@ -239,7 +252,6 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-             
               </div>
             </div>
           )}
@@ -251,9 +263,9 @@ const Header = () => {
             onMouseEnter={() => handleMouseEnter("personal")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onClick={() => {
-              navigate("/personal", {state: { section: "personal" }, });
+              navigate("/personal", { state: { section: "personal" } });
             }}
-            >
+          >
             Personal
           </div>
           {showPersonalDropdown && (
@@ -261,19 +273,23 @@ const Header = () => {
               className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0  w-[566px] ${
                 showPersonalDropdown ? "show" : ""
               }`}
-              onMouseLeave={() => handleMouseLeave("personal")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"style={{height:'31vh'}}>
+              onMouseLeave={() => handleMouseLeave("personal")}
+            >
+              <div
+                className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
+                style={{ height: "31vh" }}
+              >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/personal", {state: { section: "savings" }, });
+                      navigate("/personal", { state: { section: "savings" } });
                     }}
                   >
-                    <div  className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
-                    <div  className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[13px] font-medium font-grava">
                         Savings Accounts
                       </p>
@@ -283,10 +299,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/personal", {state: { section: "current" }, });
+                      navigate("/personal", { state: { section: "current" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -302,10 +318,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/personal", {state: { section: "cards" }, });
+                      navigate("/personal", { state: { section: "cards" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -320,15 +336,13 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-
-                  
                 </div>
                 <div className="bg-[#E6E9E1] w-[0.1px] h-[198px]"></div>
                 <div className="flex flex-col gap-4">
-                <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/personal", {state: { section: "loans" }, });
+                      navigate("/personal", { state: { section: "loans" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -345,7 +359,7 @@ const Header = () => {
                   </div>
                   <div
                     onClick={() => {
-                      navigate("/personal", {state: { section: "fixed" }, });
+                      navigate("/personal", { state: { section: "fixed" } });
                     }}
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                   >
@@ -365,19 +379,20 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
           )}
         </div>
 
-          {/* Business fka Sme */}
+        {/* Business fka Sme */}
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("business")}
-            onClick={() => navigate("/business", {state: { section: "business" } })}
+            onClick={() =>
+              navigate("/business", { state: { section: "business" } })
+            }
           >
             Business
           </p>
@@ -386,12 +401,18 @@ const Header = () => {
               className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out h-[312px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
                 showSmeDropdown ? "show" : ""
               }`}
-              onMouseLeave={() => handleMouseLeave("business")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
+              onMouseLeave={() => handleMouseLeave("business")}
+            >
+              <div
+                className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
+                style={{ height: "30vh" }}
+              >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/business", {state: { section: "account" } })}
+                    onClick={() =>
+                      navigate("/business", { state: { section: "account" } })
+                    }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Business} alt="Business" className="w-6 h-6" />
@@ -406,12 +427,18 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/business", {state: { section: "payment" } })}
+                    onClick={() =>
+                      navigate("/business", { state: { section: "payment" } })
+                    }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Solutions} alt="Solutions" className="w-6 h-6" />
+                      <img
+                        src={Solutions}
+                        alt="Solutions"
+                        className="w-6 h-6"
+                      />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[13px] font-medium font-grava">
@@ -423,8 +450,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
-                    onClick={() => navigate("/business", {state: { section: "loans" } })}
+                  <div
+                    onClick={() =>
+                      navigate("/business", { state: { section: "loans" } })
+                    }
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -439,13 +468,14 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-
                 </div>
                 <div className="bg-[#E6E9E1] w-[0.1px] h-[188px]"></div>
                 <div className="flex flex-col gap-4">
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer "
-                    onClick={() => navigate("/business", {state: { section: "advisory" } })}
+                    onClick={() =>
+                      navigate("/business", { state: { section: "advisory" } })
+                    }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Funding} alt="Funding" className="w-5 h-5" />
@@ -459,9 +489,11 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/business", {state: { section: "faq" } })}
+                    onClick={() =>
+                      navigate("/business", { state: { section: "faq" } })
+                    }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
@@ -481,13 +513,13 @@ const Header = () => {
           )}
         </div>
 
-            {/* Corporate */}
+        {/* Corporate */}
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("corporate")}
             onClick={() => {
-              navigate("/corporate", {state: {section: "corporate"}});
+              navigate("/corporate", { state: { section: "corporate" } });
             }}
           >
             Corporate
@@ -497,15 +529,21 @@ const Header = () => {
               className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl h-[312px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
                 showCorporateDropdown ? "show" : ""
               }`}
-              onMouseLeave={() => handleMouseLeave("corporate")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
+              onMouseLeave={() => handleMouseLeave("corporate")}
+            >
+              <div
+                className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
+                style={{ height: "30vh" }}
+              >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/corporate", {state: {section: "treasury"}});
+                      navigate("/corporate", {
+                        state: { section: "treasury" },
+                      });
                     }}
-                    >
+                  >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Treasury} alt="Treasury" className="w-6 h-6" />
                     </div>
@@ -519,10 +557,10 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/corporate", {state: {section: "trade"}});
+                      navigate("/corporate", { state: { section: "trade" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -538,14 +576,20 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/corporate", {state: {section: "investment"}});
+                      navigate("/corporate", {
+                        state: { section: "investment" },
+                      });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Investment} alt="Investment" className="w-6 h-6" />
+                      <img
+                        src={Investment}
+                        alt="Investment"
+                        className="w-6 h-6"
+                      />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[13px] font-medium font-grava">
@@ -556,24 +600,18 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-
-               
                 </div>
-                
+
                 <div className="bg-[#E6E9E1] w-[0.1px] h-[188px]"></div>
                 <div className="flex flex-col gap-4">
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/corporate", {state: {section: "lending"}});
+                      navigate("/corporate", { state: { section: "lending" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img
-                        src={Leasing}
-                        alt="Leasing"
-                        className="w-6 h-6"
-                      />
+                      <img src={Leasing} alt="Leasing" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[13px] font-medium font-grava">
@@ -597,10 +635,10 @@ const Header = () => {
                       </p>
                     </div>
                   </div> */}
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/corporate", {state: {section: "faq"}});
+                      navigate("/corporate", { state: { section: "faq" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -621,12 +659,14 @@ const Header = () => {
           )}
         </div>
 
-          {/* Private */}
+        {/* Private */}
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
-            onClick={() => navigate("/private", {state: { section: "private" } }) }
+            onClick={() =>
+              navigate("/private", { state: { section: "private" } })
+            }
           >
             Private
           </p>
@@ -635,13 +675,17 @@ const Header = () => {
               className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[312px] w-[605px] ${
                 showPrivateDropdown ? "show" : ""
               }`}
-              onMouseLeave={() => handleMouseLeave("private")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
+              onMouseLeave={() => handleMouseLeave("private")}
+            >
+              <div
+                className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
+                style={{ height: "30vh" }}
+              >
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/private", {state: { section: "wealth" } });
+                      navigate("/private", { state: { section: "wealth" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -657,7 +701,7 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
                       navigate("/private", {
@@ -678,33 +722,33 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div 
+                  <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => navigate("/private", {
-                      state: { section: "card" } }
-                    )}
+                    onClick={() =>
+                      navigate("/private", {
+                        state: { section: "card" },
+                      })
+                    }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Estate} alt="Estate" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[13px] font-medium font-grava">
-                          Tatum Black Card
+                        Tatum Black Card
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         The Ultimate Symbol of Prestige
                       </p>
                     </div>
                   </div>
-
-
                 </div>
                 <div className="bg-[#E6E9E1] w-[0.1px] h-[182px]"></div>
                 <div className="flex flex-col gap-4">
-                 
-                  <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                  <div
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/private", {state: { section: "faq" } });
+                      navigate("/private", { state: { section: "faq" } });
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -725,49 +769,61 @@ const Header = () => {
           )}
         </div>
 
-            {/* Resources */}
+        {/* Resources */}
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="font-grava font-medium text-base text-[#002244] cursor-pointer"
             onMouseEnter={() => handleMouseEnter("resources")}
             // onClick={() => navigate("/resources", { state: {section: "resources"}})}
-            onClick={() => navigate("/institutional", { state: {section: "institution"}})}
+            onClick={() =>
+              navigate("/institutional", { state: { section: "institution" } })
+            }
           >
             {/* Resources */}
             Institutional
           </p>
-         
         </div>
 
         {/* Help */}
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} >
+          onClick={() => {
+            navigate("/help");
+            window.scrollTo(0, 0);
+            handleClose();
+          }}
+        >
           Help & Support
         </p>
 
         {/* Contact */}
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => navigate("/contact", {
-            state: {
-              section: "contact"
-            }
-          } )}>
+          onClick={() =>
+            navigate("/contact", {
+              state: {
+                section: "contact",
+              },
+            })
+          }
+        >
           Contact Us
         </p>
-
       </div>
 
       <div className="flex items-center gap-[15px]">
-        <FiSearch 
-          className="w-5 h-5 text-[#002244] cursor-pointer"   
-          onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
-          />
+        <FiSearch
+          className="w-5 h-5 text-[#002244] cursor-pointer"
+          onClick={() => {
+            navigate("/help");
+            window.scrollTo(0, 0);
+            handleClose();
+          }}
+        />
         <button
           className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-500 ease-in-out hover:bg-[#090540]"
           type="button"
-          onClick={() => navigate("digital", { state: {section: "digital"}})}
+          onClick={() => navigate("digital", { state: { section: "digital" } })}
         >
           <SlLock className="w-5 h-5 text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]" />
           <p className="font-medium text-base font-grava text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]">
@@ -775,7 +831,6 @@ const Header = () => {
           </p>
         </button>
       </div>
-
     </div>
   );
 };
