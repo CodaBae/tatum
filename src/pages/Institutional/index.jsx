@@ -57,19 +57,19 @@ const Institutional = () => {
 
 
     return (
-        <div className='w-full' ref={InstitutionRef}>
+        <div className='w-full overflow-hidden' ref={InstitutionRef}>
 
             <section 
 
-className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
+className='lg:h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 <div 
                     style={{
                         backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover"
                     }}
-                    className='s   pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
-                >
+                    className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+                    >
                     <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                         <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                             <p               style={{fontWeight:450}}
@@ -134,7 +134,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 </div>
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                        <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm'>Our Institutional Banking Solutions</p>
+                    <p className='font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-center leading-[21px] sm:text-left sm:leading-normal'>Our Institutional Banking Solutions</p>
                         <div className='flex flex-col w-full gap-[18px]'>
                             <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Public Sector Institutional  <span className='block md:inline-block'>Banking.</span> 

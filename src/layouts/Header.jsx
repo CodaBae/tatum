@@ -734,7 +734,7 @@ const Header = () => {
             onClick={() => navigate("/institutional", { state: {section: "institution"}})}
           >
             {/* Resources */}
-            Institution
+            Institutional
           </p>
          
         </div>

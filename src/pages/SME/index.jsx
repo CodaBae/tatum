@@ -229,7 +229,7 @@ const SME = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" lm:  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[100vh]"
+          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">

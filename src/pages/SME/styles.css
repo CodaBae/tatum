@@ -26,3 +26,14 @@
   cursor: pointer;
   border: 2px solid #ffcc33;
 }
+
+
+@media (min-width: 1024px) {
+
+
+  .cardContainer .card1 {
+    
+      padding: 50px 10px !important
+     
+  }
+}

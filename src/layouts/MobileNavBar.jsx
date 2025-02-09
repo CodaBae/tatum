@@ -11,6 +11,8 @@ const MobileNavBar = ({ handleClose }) => {
     const [openCorporateDropdown, setOpenCorporateDropdown] = useState(false);
     const [openPrivateDropdown, setOpenPrivateDropdown] = useState(false);
     const [openResourcesDropdown, setOpenResourcesDropdown] = useState(false);
+    const [openInstitutionalDropdown, setOpenInstitutionalDropdown] = useState(false);
+
     
     const navigate = useNavigate()
 
@@ -33,6 +35,14 @@ const MobileNavBar = ({ handleClose }) => {
     const handlePrivate = () => {
       setOpenPrivateDropdown(!openPrivateDropdown)
     }
+
+    const handleInstitutional= () => {
+      setOpenInstitutionalDropdown(!openInstitutionalDropdown)
+    }
+
+
+
+    
 
     const handleResources = () => {
       setOpenResourcesDropdown(!openResourcesDropdown)
@@ -136,6 +146,23 @@ const MobileNavBar = ({ handleClose }) => {
               )
             }
           </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-between" onClick={handleInstitutional}>
+              <p className="font-medium font-grava text-[#334E69] text-base uppercase">Institutional</p>
+              {openInstitutionalDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]'/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' />}
+            </div>
+            {
+              openInstitutionalDropdown && (
+                <div className='flex flex-col gap-4 gap-6 mt-3'>
+                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Public Sector</p>
+                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Non-Government Institution Banking</p>
+                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Why Choose Us</p>
+                </div>
+              )
+            }
+          </div>
+
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between" onClick={handleResources}>
               <p className="font-medium font-grava text-[#334E69] text-base uppercase">Resources</p>

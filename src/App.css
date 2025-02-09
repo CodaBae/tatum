@@ -59,6 +59,12 @@
     .lm\:text-\[60px\] {
         font-size: 50px !important
     }
+
+    .cardContainer .card1 {
+      
+        padding: 50px 10px !important
+       
+    }
 }
 
 .mt-0\.5 {
