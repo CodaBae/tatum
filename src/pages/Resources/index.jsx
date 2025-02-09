@@ -151,7 +151,7 @@ const Resources = () => {
           </div>
 
           <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
-            <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span className='text-sm lg:text-[20px] underline text-[#002244]'>Help Center</span></p>
+            <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-sm lg:text-[20px] underline text-[#002244]'>Help Center</span></p>
           </div>
         </div>
       </section>

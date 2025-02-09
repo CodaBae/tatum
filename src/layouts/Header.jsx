@@ -742,7 +742,7 @@ const Header = () => {
         {/* Help */}
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-          onClick={() => navigate("/help")}>
+          onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} >
           Help & Support
         </p>
 
@@ -762,10 +762,7 @@ const Header = () => {
       <div className="flex items-center gap-[15px]">
         <FiSearch 
           className="w-5 h-5 text-[#002244] cursor-pointer"   
-          onClick={() => navigate("/help", 
-            {state: {
-              section: "help"
-            }})} 
+          onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
           />
         <button
           className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-500 ease-in-out hover:bg-[#090540]"

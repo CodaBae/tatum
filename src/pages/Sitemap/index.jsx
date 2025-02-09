@@ -148,11 +148,11 @@ const Sitemap = () => {
             </div>
 
             <div className="flex flex-col gap-[32px] w-[167px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Support</p>
+              <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Support</p>
               <div className='flex flex-col gap-[30px]'>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>FAQ</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Video Tutorials</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Help Center</p>
+                <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>FAQ</p>
+                <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Video Tutorials</p>
+                <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Help Center</p>
               </div>
             </div>
 

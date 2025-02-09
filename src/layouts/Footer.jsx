@@ -196,9 +196,7 @@ const Footer = () => {
               <div className="flex flex-col gap-6">
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
-                  onClick={() => navigate("/help", {
-                    state: { section: "help" },
-                  }) }
+                  onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
                   FAQ
                 </p>
@@ -212,9 +210,7 @@ const Footer = () => {
                 </p>
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
-                  onClick={() => navigate("/help", {
-                    state: { section: "help" },
-                  }) }
+                  onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
                   Help Center
                 </p>
