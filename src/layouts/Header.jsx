@@ -387,7 +387,7 @@ const Header = () => {
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -498,7 +498,7 @@ const Header = () => {
                 showCorporateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("corporate")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -636,7 +636,7 @@ const Header = () => {
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}>
-              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'28vh'}}>
+              <div className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200" style={{height:'30vh'}}>
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
