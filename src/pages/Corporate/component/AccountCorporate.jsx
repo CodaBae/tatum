@@ -72,7 +72,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[95vh] max-sm:pt-[30%] ' //[694px]
+                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>

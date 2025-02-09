@@ -119,7 +119,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                     <img 
                         src={Institution} 
                         alt='Temple' 
-                        className={`animate__animated animate__zoomIn relative lg:right-[30%]  lm:h-[95vh]`} 
+                        className={`animate__animated animate__zoomIn relative lg:right-[30%]  lm:h-[100vh]`} 
                     />
                 </div>
             </section>

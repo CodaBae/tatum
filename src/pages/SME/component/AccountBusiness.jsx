@@ -71,7 +71,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[95vh] max-sm:pt-[30%] ' //[694px]
+                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -102,7 +102,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-45%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>

@@ -73,8 +73,9 @@ const Private = () => {
                 backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
+
             }}
-            className=' lm: pt-[127px] pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0'
+          className='lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]' //[694px]
         >
             <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -122,7 +123,7 @@ const Private = () => {
             <img 
                 src={isMobile ? Golfer : Golfer} 
                 alt='Family' 
-                className={`animate__animated animate__zoomIn relative -right-10 lm:right-10 .mt-24 lm:h-[688px] `} 
+                className={`animate__animated animate__zoomIn relative -right-10 lm:top-10 mt-24 lm:h-[688px] `} 
                 />
         </div>
       </section>

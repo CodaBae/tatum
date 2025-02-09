@@ -229,7 +229,7 @@ const SME = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" lm: pt-[127px] pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[95vh]"
+          className=" lm:  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[100vh]"
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -269,7 +269,7 @@ const SME = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-23%]">
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -289,7 +289,7 @@ const SME = () => {
           <img
             src={isMobile ? smeHeroImg : smeHeroImg}
             alt="Family"
-            className={`animate__animated animate__zoomIn relative lm:top-[4%] lg:w-[75%] `}
+            className={`animate__animated animate__zoomIn relative lm:top-[10%] lg:w-[75%] `}
           />
         </div>
       </section>

@@ -128,7 +128,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className=" lm: pt-[127px] pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[95vh]"
+          className=" lm:  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lm:h-[100vh]"
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -145,7 +145,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-55%]'>
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -168,7 +168,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__zoomIn relative lm:top-[0%] lg:w-[51%] `} 
+            className={`animate__animated animate__zoomIn relative lm:top-[10%] lg:w-[51%] `} 
             />
         </div>
       </section>
