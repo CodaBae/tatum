@@ -239,7 +239,7 @@ const Home = () => {
     <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px] overflow-hidden'>
         <div className='w-full '>
             <LandingCarousel 
-              interval={3000} 
+              interval={4000} 
               showArrows={false} 
               autoPlay={true}
               showIndicators={false}
