@@ -311,11 +311,11 @@ const Personal = () => {
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">Auto Loans</p>
             </div>
             <button
-                className='transition-all duration-500 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className='transition-all duration-500 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center'
                 type='button'
                 onClick={() => navigate("/personal/account", { state: {section: "account"}})}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3] group-hover:text-[#FFCC33]'>Coming soon</p>
+                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3]'>Coming soon</p>
                 <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] group-hover:text-[#FFCC33]' />
             </button>
           </div>
