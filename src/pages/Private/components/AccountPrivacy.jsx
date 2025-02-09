@@ -103,7 +103,7 @@ const AccountPrivacy = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-33.2%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -115,7 +115,7 @@ const AccountPrivacy = () => {
                 <img 
                     src={Bentley} 
                     alt='Bentley' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[7%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[10%] lg:w-[55%] `} 
                 />
             </div>
         </section>

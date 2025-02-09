@@ -103,7 +103,7 @@ const AccountPersonal = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-61.5%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -115,7 +115,7 @@ const AccountPersonal = () => {
                 <img 
                     src={isMobile ? Alhaja : Alhaja} 
                     alt='Family' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[12%] lg:w-[75%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
                     />
             </div>
         </section>

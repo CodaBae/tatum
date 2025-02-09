@@ -124,7 +124,7 @@ const Corporate = () => {
                             </button>
                           </div>
                       </div>
-                      <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
+                      <div className='hidden lm:flex items-start absolute lg:bottom-[-51%]'>
                     <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                         We are licensed by 
                         <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -136,7 +136,7 @@ const Corporate = () => {
                   <img 
                       src={isMobile ? Chairman : Chairman} 
                       alt='Family' 
-                      className={`animate__animated animate__fadeInRight relative lm:right-[32%] lm:top-[6%] lg:w-[75%] `} 
+                      className={`animate__animated animate__fadeInRight relative lm:right-[32%] lm:top-[10%] lg:w-[75%] `} 
                   />
               </div>
       </section>

@@ -145,7 +145,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-30%]'>
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-84%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
                 <img
@@ -168,7 +168,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[51%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[11%] lg:w-[51%] `} 
             />
         </div>
       </section>

@@ -258,9 +258,9 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-auto lg:h-[100vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0'
+                        className='h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0'
                     >
-<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mb-[20%]'>
+<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]'>
                                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 0 ? 'animate__animated animate__fadeInUp' : ' '} lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
@@ -300,7 +300,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='lm:flex items-start absolute hidden -bottom-36'>
+                            <div className='hidden lm:flex items-start absolute lg:bottom-[-65%]'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -328,9 +328,9 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-auto lg:h-[100vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
-<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mb-[20%]'>                            <div className='flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5'>
+<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]'>                            <div className='flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 1 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                                 >
@@ -371,7 +371,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='hidden lm:flex items-start absolute -bottom-36'>
+                            <div className='hidden lm:flex items-start absolute lg:bottom-[-65%]'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -399,9 +399,9 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='bg-[#FFCC33] h-auto lg:h-[100vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
-<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mb-[20%]'>                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
+<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]'>                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 2 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
@@ -431,7 +431,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='lg:flex items-start absolute hidden -bottom-36'>
+                            <div className='hidden lm:flex items-start absolute lg:bottom-[-65%]'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -458,9 +458,9 @@ const Home = () => {
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover"
                         }}
-                        className='h-auto lg:h-[100vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
+                        className='h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0'
                     >
-<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mb-[20%]'>                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
+<div className='w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]'>                            <div className='flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5'>
                                 <p 
                                     className={`${activeIndex === 3 ? 'animate__animated animate__fadeInUp' : ' '} font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                                 >
@@ -490,7 +490,7 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className='lg:flex items-start absolute hidden -bottom-36'>
+                            <div className='hidden lm:flex items-start absolute lg:bottom-[-65%]'>
                                 <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                                     We are licensed by 
                                     <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>

@@ -53,14 +53,14 @@ function App() {
           </div>
         </div>
       )}
-  {!isShow && (
+  {/* {!isShow && (
       <div className="unveil-container">
         <div className="unveil-section unveil-top-left"></div>
         <div className="unveil-section unveil-top-right"></div>
         <div className="unveil-section unveil-bottom-left"></div>
         <div className="unveil-section unveil-bottom-right"></div>
       </div>
-   )}
+   )} */}
       {!isLoading && <Routers />}
     </div>
   );
