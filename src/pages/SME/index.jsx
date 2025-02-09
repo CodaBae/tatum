@@ -327,7 +327,7 @@ const SME = () => {
                     <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
                       Savings Accounts
                     </h1>
-                    <p className="font-grava font-[350] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[300] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
                       Competitive interest rates to grow your reserves.
                     </p>
                   </div>
@@ -347,7 +347,7 @@ const SME = () => {
                     <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
                       Current Accounts
                     </h1>
-                    <p className="font-grava font-[350] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[300] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
                       Seamless transactions, overdraft options, and
                       multi-currency support.
                     </p>
