@@ -386,7 +386,7 @@ const Home = () => {
                             // style={{
                             //     display: isMobile ? "none" : "flex"
                             // }}
-                            className={`${activeIndex === 1 ? "animate__animated animate__fadeInRight  animate__slow" : ""} object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
+                            className={`${activeIndex === 1 ? "animate__animated animate__zoomIn   animate__slow" : ""} object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`} 
                             // animate__delay-2s
                         />
                     </div>
