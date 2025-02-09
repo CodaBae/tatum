@@ -268,13 +268,13 @@ const Home = () => {
                                     Your Smile, <br /> <span className='font-medium '>Our Priority</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 0 ? "animate__animated  animate__fadeInUp animate__slow" : ""} md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                                    className={`${activeIndex === 0 ? "animate__animated animate__fadeInUp animate__delay-1s" : ""} md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                                 >
                                     Secure banking, low-interest loans, and profitable investments for everyone.
                                 </p>
                                 <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} transition-all duration-500 ease-in-out  hover:border hover:border-[#002244] w-[216px] lg:w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33]`} 
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
@@ -290,7 +290,7 @@ const Home = () => {
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 0 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`} 
+                                        className={`${activeIndex === 0 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`} 
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
@@ -337,14 +337,14 @@ const Home = () => {
                                     Say Hello To Banking  <span className='font-bold '>On The Go</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__slow " : ""} font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-1s " : ""} font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                     // animate__delay-1s
                                 >
                                     Your money, your way. Experience banking that fits your lifestyle, not the other way around.
                                 </p>
                                 <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[276px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button' 
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
@@ -361,7 +361,7 @@ const Home = () => {
                                         />
                                     </button>
                                     <button 
-                                        className={`${activeIndex === 1 ? "animate__animated animate__slow animate__fadeInUp" : ""} hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
+                                        className={`${activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"
@@ -408,13 +408,13 @@ const Home = () => {
                                     Smart Banking for Your  <span className='font-bold '>Big Ideas.</span> 
                                 </p>
                                 <p 
-                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__slow" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-1s" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Instant access to the funds, insights, and support you need to take your business further.
                                 </p>
                                 <div className='flex items-center mt-[12px] lg:mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 2 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] lg:w-[363px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                         onClick={() => navigate("/business", {state: {
                                             section: "business"
@@ -467,13 +467,13 @@ const Home = () => {
                                     Your Wealth, <br/> <span className='font-medium '> Expertly Managed </span> 
                                 </p>
                                 <p 
-                                    className={`lg:w-[616px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__slow" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
+                                    className={`lg:w-[616px] ${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__delay-1s" : ""} md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}  
                                 >
                                     Access high-end services and exclusive investments, all in one seamless experience.
                                 </p>
                                 <div className='flex items-center mt-[12px] gap-3'>
                                     <button
-                                        className={`${activeIndex === 3 ? "animate__animated animate__slow animate__fadeInUp" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                                        className={`${activeIndex === 3 ? "animate__animated animate__fadeInUp animate__delay-2s" : ""} transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[264px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                                         type='button'
                                         onClick={() => navigate("/digital", {state: {
                                             section: "digital"

@@ -57,14 +57,14 @@ const Digital = () => {
                         </p>
                         <p              
 
-                            className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             Whether you're at home, at work, or on the go, our digital banking solutions
                             are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
                         </p>
                         <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                             <button
-                                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`aanimate__animated animate__fadeInUp animate__delay-2s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})} 
                                 //animate__delay-2s
                             >

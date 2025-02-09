@@ -242,7 +242,7 @@ const SME = () => {
               </p>
               <p
                 //
-                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated animate__fadeInUp animate__delay-1s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 At Tatum Bank, we go beyond banking; we partner with you to
                 <br></br> unlock opportunities, drive growth, and ensure your
@@ -250,7 +250,7 @@ const SME = () => {
               </p>
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/business/account", {

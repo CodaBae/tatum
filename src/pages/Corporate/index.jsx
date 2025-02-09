@@ -99,7 +99,7 @@ const Corporate = () => {
                               Powering Your <span className='font-bold'>Business Growth</span>
                           </p>
                           <p 
-                              className={`animate__animated  animate__fadeInUp animate__slow w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                              className={`animate__animated animate__fadeInUp animate__delay-1s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                           >
                             At Tatum Bank, we understand that businesses thrive when they have the right 
                             financial partner—one that offers tailored solutions, expert insights, and 
@@ -107,7 +107,7 @@ const Corporate = () => {
                           </p>
                           <div className='flex items-center mt-[12px] gap-3'>
                             <button
-                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                              className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                               type='button'
                               onClick={() => navigate("/corporate/account", {
                                 state: {section: "account"}

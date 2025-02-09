@@ -81,7 +81,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                 <span className='font-bold'>Financial Excellence</span>
                             </p>
                             <p 
-                                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                                className={`animate__animated animate__fadeInUp animate__delay-1s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                             >
                                 At Tatum Bank, we understand the unique financial needs of 
                                 institutions and are committed to providing tailored made banking solutions.
@@ -90,7 +90,7 @@ className='h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                
 
                                 <button
-                              className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                              className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[234px] lg:w-[299px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                               type='button'
                               onClick={() => navigate("/institutional/account", {
                                 state: {section: "account"}
