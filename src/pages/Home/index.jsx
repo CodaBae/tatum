@@ -239,7 +239,7 @@ const Home = () => {
     <div ref={homeRef} className='w-full pt-[40px]  lg:pt-[80px] overflow-hidden'>
         <div className='w-full '>
             <LandingCarousel 
-              interval={5000} 
+              interval={3000} 
               showArrows={false} 
               autoPlay={true}
               showIndicators={false}
@@ -250,6 +250,7 @@ const Home = () => {
               animationHandler={fadeAnimationHandler} // Use the custom fade animation
               transitionTime={500}
               swipeable={false} // Disable swiping for fade animation
+              stopOnHover={false}
             >
                 <div className='h-full w-full outline-none'>
                     <div 
