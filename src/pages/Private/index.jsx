@@ -123,7 +123,7 @@ const Private = () => {
             <img 
                 src={isMobile ? Golfer : Golfer} 
                 alt='Family' 
-                className={`animate__animated animate__zoomIn relative -right-10 lm:top-10 mt-24 lm:h-[688px] `} 
+                className={`animate__animated animate__fadeInRight relative -right-10 lm:top-10 mt-24 lm:h-[688px] `} 
                 />
         </div>
       </section>

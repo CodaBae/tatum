@@ -114,7 +114,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 <img 
                     src={Building} 
                     alt='Building' 
-                    className={`animate__animated animate__zoomIn relative lm:right-[13%] lm:top-[9%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[13%] lm:top-[9%] lg:w-[55%] `} 
                 />
             </div>
         </section>

@@ -115,7 +115,7 @@ const AccountPersonal = () => {
                 <img 
                     src={isMobile ? Alhaja : Alhaja} 
                     alt='Family' 
-                    className={`animate__animated animate__zoomIn relative lm:right-[23%] lm:top-[12%] lg:w-[75%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[12%] lg:w-[75%] `} 
                     />
             </div>
         </section>

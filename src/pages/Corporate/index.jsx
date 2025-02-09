@@ -136,7 +136,7 @@ const Corporate = () => {
                   <img 
                       src={isMobile ? Chairman : Chairman} 
                       alt='Family' 
-                      className={`animate__animated animate__zoomIn relative lm:right-[32%] lm:top-[6%] lg:w-[75%] `} 
+                      className={`animate__animated animate__fadeInRight relative lm:right-[32%] lm:top-[6%] lg:w-[75%] `} 
                   />
               </div>
       </section>

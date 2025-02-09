@@ -128,7 +128,7 @@ const Careers = () => {
             <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
-        <div className="animate__animated animate__zoomIn absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
+        <div className="animate__animated animate__fadeInRight absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
           <div className="relative">
             <div className="absolute top-[18px] sm:hidden lg:block lg:top-[40px] right-0 z-20 w-[75%] h-[20px] bg-[#FFCC33] "></div>
             <img

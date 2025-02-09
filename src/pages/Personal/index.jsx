@@ -180,7 +180,7 @@ const Personal = () => {
                 // style={{
                 //     display: isMobile ? "none" : "flex"
                 // }}
-                className={`animate__animated animate__zoomIn relative lm:right-[10%] lm:top-[10%] lg:w-[53%] `} 
+                className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[10%] lg:w-[53%] `} 
                 />
         </div>
       </section>
@@ -398,10 +398,9 @@ const Personal = () => {
             </div>
 
         <button
-          className='transition-all duration-500 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg group hover:bg-[#002244]'
-          onClick={() => navigate("/digital", { state: {section: "digital"}})}
+className='transition-all duration-500 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg bg-[#002244] group hover:bg-[#fdf7e6]'          onClick={() => navigate("/digital", { state: {section: "digital"}})}
         >
-          <p className='transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base'>Get yours today</p>
+          <p className='transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base'>Get yours today</p>
         </button>
 
       </div>

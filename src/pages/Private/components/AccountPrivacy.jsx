@@ -115,7 +115,7 @@ const AccountPrivacy = () => {
                 <img 
                     src={Bentley} 
                     alt='Bentley' 
-                    className={`animate__animated animate__zoomIn relative lm:right-[10%] lm:top-[7%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[7%] lg:w-[55%] `} 
                 />
             </div>
         </section>

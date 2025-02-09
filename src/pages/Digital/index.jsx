@@ -93,7 +93,7 @@ const Digital = () => {
                 <img 
                     src={Biz} 
                     alt='Biz' 
-                    className={`animate__animated animate__zoomIn relative -right-10 lm:right-28  lm:h-[790px] lg:top-40`} 
+                    className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28  lm:h-[790px] lg:top-40`} 
                 />
             </div>
         </section>

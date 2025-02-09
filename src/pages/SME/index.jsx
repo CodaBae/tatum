@@ -289,7 +289,7 @@ const SME = () => {
           <img
             src={isMobile ? smeHeroImg : smeHeroImg}
             alt="Family"
-            className={`animate__animated animate__zoomIn relative lm:top-[10%] lg:w-[75%] `}
+            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[75%] `}
           />
         </div>
       </section>

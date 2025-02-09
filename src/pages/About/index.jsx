@@ -168,7 +168,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__zoomIn relative lm:top-[10%] lg:w-[51%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[51%] `} 
             />
         </div>
       </section>

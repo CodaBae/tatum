@@ -118,7 +118,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 <img 
                     src={isMobile ? Temple : TempleMobile} 
                     alt='Temple' 
-                    className={`animate__animated animate__zoomIn relative lm:right-[15%] lm:top-[7%] lg:w-[75%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[15%] lm:top-[7%] lg:w-[75%] `} 
                 />
             </div>
         </section>
