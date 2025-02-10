@@ -164,7 +164,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[28%] lg:w-[57%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[20%] lg:w-[57%] `} 
             />
         </div>
       </section>
@@ -277,7 +277,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               }}
             >
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#272727] leading-[20px] lm:leading-[24px] text-[14px] lm:text-[20px]">
+              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
                 Cutting-Edge Digital Banking
               </p>
             </div>
