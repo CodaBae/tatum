@@ -164,7 +164,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[15%] lg:w-[57%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[30%] lg:w-[57%] `} 
             />
         </div>
       </section>

@@ -414,7 +414,7 @@ const Home = () => {
                         })
                       }>
                       <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Explore Our Offerings
+                        Explore our offerings
                       </p>
                       <BsArrowRight
                         size={100}
