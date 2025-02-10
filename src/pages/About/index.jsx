@@ -332,7 +332,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             Our{" "}
             <span className="font-bold">
               Core <br /> Values
-            </span> (TECII)
+            </span> <span className="font-bold">(TECII)</span>
           </p>
           <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[300] leading-6 lm:leading-[30px] tracking-[0.336px]">
             Our values are intrinsic to how we operate and how we serve our
@@ -417,8 +417,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               Innovation
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
-              By combining our diverse strengths and perspectives, we create
-              remarkable experiences together.
+              With creativity and forward-thinking, we transform banking into something truly remarkable.
             </p>
           </div>
         </div>
