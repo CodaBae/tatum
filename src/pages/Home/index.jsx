@@ -238,7 +238,7 @@ const Home = () => {
         <LandingCarousel
           interval={5000}
           showArrows={false}
-         autoPlay={true}
+          autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -260,7 +260,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-15%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
@@ -372,7 +372,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-15%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -460,7 +460,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212375/5807348_1_1_b0on6p.webp"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
                 alt="Phone"
                 // style={{
                 //     display: isMobile ? "none" : "flex"
@@ -469,7 +469,7 @@ const Home = () => {
                   activeIndex === 1
                     ? "animate__animated animate__zoomIn   animate__slow"
                     : ""
-                } relative -right-20 md:right-24  bottom-0 lm:right-44  lm:h-[750px] md:h-[28px] relative lg:right-[22%] lg:top-[10%]  lm:h-[80vh]`}
+                } object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
                 // animate__delay-06s
               />
             </div>
@@ -487,7 +487,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-15%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -551,7 +551,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_34_1_1_qxurtu.webp"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
                 alt="Teach"
                 // style={{
                 //     display: isMobile ? "none" : "flex"
@@ -560,7 +560,7 @@ const Home = () => {
                   activeIndex === 2
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                } relative -right-20 md:right-24  bottom-0 lm:right-44  lm:h-[750px] md:h-[28px] relative lg:right-[22%] lg:top-[10%]  lm:h-[80vh]`}
+                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[30rem] relative`}
                 />
             </div>
           </div>
@@ -577,7 +577,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-15%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -641,7 +641,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212378/wmremove-transformed__4_-TBH7ENhq3-transformed-removebg_1_1_hna2m6.webp"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
                 alt="Smile"
                 // style={{
                 //     display: isMobile ? "none" : "flex"
@@ -650,8 +650,8 @@ const Home = () => {
                   activeIndex === 3
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                } relative -right-10 md:right-14  bottom-0 lm:right-24  lm:h-[750px] md:h-[28px] relative lg:right-[12%] lg:top-[10%]  lm:h-[80vh]`}
-                />
+                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`}
+              />
             </div>
           </div>
         </LandingCarousel>

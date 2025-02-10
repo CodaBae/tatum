@@ -10,6 +10,8 @@ import Arrow from "../../assets/svg/arrow.svg";
 import ArrowClick from "../../assets/svg/arrow_click.svg";
 import Check from "../../assets/svg/check.svg";
 import Clip from "../../assets/svg/clip_triangle.svg";
+import Microphone from "../../assets/svg/microphone.svg";
+import Telescope from "../../assets/svg/telescope.svg";
 
 import People from "../../assets/png/people.png";
 import Pie from "../../assets/png/pie.png";
@@ -198,43 +200,41 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               <span className="font-semibold ">We Keep You Smiling.</span>
             </p>
           </div>
-          <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
-            <div className="items-start flex gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+          <div className="flex flex-col w-full md:w-6/12 gap-[32px] lm:gap-0 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
+            <div className="items-start lm:items-center flex flex-col gap-6 relative  lm:pt-[38px] md:pl-5 lg:pl-[60px]">
               <img
-                src={MissionStar}
-                alt="MissionStar"
-                className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]"
-              />
-              <div className="flex flex-col gap-3">
-                <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                  Our Mission
-                </p>
-                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
-                  To improve the lives of Nigerians, particularly the youth, by
-                  offering innovative, easily accessible, and secure financial
-                  services that promote economic growth and personal success.
-                </p>
-              </div>
-            </div>
-            <div className="items-start flex gap-6 relative  lm:pt-[38px] md:pl-5 lg:pl-[60px]">
-              <img
-                src={Moon}
+                src={Telescope}
                 alt="Moon"
-                className="w-[23px] h-[23px] md:w-[40px] md:h-[40px]"
+                className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
               />
-              <div className="flex flex-col gap-3">
+              <div className="flex items-start lm:items-center flex-col gap-3">
                 <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
                   Vision.
                 </p>
-                <p className="font-grava text-base lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
-                  To be Nigeria's most trusted and innovative financial partner,
-                  promoting financial literacy and enabling prosperity for
-                  future generations.
+                <p className="font-grava text-base lg:text-[18px] text-left lm:text-center text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
+                  To be Nigeria's preferred financial services <span className="block"> provider</span>
                 </p>
-                <div className="hidden lm:flex items-end justify-end invisible">
-                  <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
-                </div>
+              
               </div>
+            </div>
+            <div className="items-start lm:items-center flex flex-col gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+              <img
+                src={Microphone}
+                alt="MissionStar"
+                className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
+              />
+              <div className="flex flex-col items-start lm:items-center gap-3">
+                <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                  Mission Statement
+                </p>
+                <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
+                  To meet our customer's financial needs through innovative technology driven products and services
+                  delivered with ease 
+                </p>
+              </div>
+            </div>
+            <div className="hidden lm:flex items-end justify-end invisible">
+              <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
             </div>
           </div>
         </div>
