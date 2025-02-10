@@ -63,12 +63,12 @@ const Teams = () => {
                 </p>
                 <img src={Forward} alt="forward" className=""/>
                 <p 
-                    className="font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px] "
+                    className="font-semibold font-grava whitespace-nowrap text-[#002244] text-[14px] lm:text-[20px] "
                     // onClick={() => navigate("/about/teams", {
                     //     state: { section: "teams" },
                     // })}
                 >
-                    Board Members
+                    Leadership Team 
                 </p>
             </div>
         </div>

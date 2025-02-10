@@ -33,14 +33,14 @@ const Personal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [clickedCard, setClickedCard] = useState("debit");
 
-  const personalRef = useRef(null);
-  const faqRef = useRef(null);
-  const saveRef = useRef(null);
-  const currentRef = useRef(null);
-  const digitalRef = useRef(null);
-  const fixedRef = useRef(null);
-  const loanRef = useRef(null);
-  const cardRef = useRef(null);
+  // const personalRef = useRef(null);
+  // const faqRef = useRef(null);
+  // const saveRef = useRef(null);
+  // const currentRef = useRef(null);
+  // const digitalRef = useRef(null);
+  // const fixedRef = useRef(null);
+  // const loanRef = useRef(null);
+  // const cardRef = useRef(null);
 
   const { state } = useLocation();
 
@@ -87,34 +87,34 @@ const Personal = () => {
     ],
   };
 
-  useEffect(() => {
-    if (state?.section === "personal" && personalRef.current) {
-      personalRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "cards" && cardRef.current) {
-      cardRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "loans" && loanRef.current) {
-      loanRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "savings" && saveRef.current) {
-      saveRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "current" && currentRef.current) {
-      currentRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "fixed" && fixedRef.current) {
-      fixedRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "personal" && personalRef.current) {
+  //     personalRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "cards" && cardRef.current) {
+  //     cardRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "loans" && loanRef.current) {
+  //     loanRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "savings" && saveRef.current) {
+  //     saveRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "current" && currentRef.current) {
+  //     currentRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "fixed" && fixedRef.current) {
+  //     fixedRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div ref={personalRef} className="overflow-hidden">
+    <div  className="overflow-hidden">
       <section className="h-full w-full outline-none  lg:h-[100vh]">
         <div
           style={{
@@ -200,8 +200,9 @@ const Personal = () => {
       </section>
 
       <div
-        ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        // ref={saveRef}
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Saver}
@@ -248,8 +249,9 @@ const Personal = () => {
       </div>
 
       <div
-        ref={currentRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        // ref={currentRef}
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
@@ -291,8 +293,9 @@ const Personal = () => {
       </div>
 
       <div
-        ref={fixedRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        // ref={fixedRef}
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={
@@ -342,8 +345,9 @@ const Personal = () => {
       </div>
 
       <div
-        ref={loanRef}
-        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
+        // ref={loanRef}
+        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto"
+      >
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#002244] font-[350] font-grava text-sm lg:text-[18px] leading-[27px] tracking-[0.2%]">
@@ -421,7 +425,7 @@ const Personal = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        ref={cardRef}
+        // ref={cardRef}
         className="bg-[#FFFAEB] py-[96px] gap-[40px] px-5 lm:px-[20%] lg:h-auto flex flex-col items-center justify-center lg:gap-[112px]" //[845px]
       >
         <div className="flex flex-col w-[296px] mx-auto gap-3 items-center">
@@ -562,8 +566,9 @@ const Personal = () => {
       </div>
 
       <div
-        ref={digitalRef}
-        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
+        // ref={digitalRef}
+        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
+      >
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
           <p className="font-grava font-[350] text-[18px] leading-[27px] text-[#002244] tracking-[0.2%]">
             Digital Banking

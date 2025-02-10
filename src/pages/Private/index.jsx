@@ -14,9 +14,9 @@ import Airplane from "../../assets/png/airplane.png";
 import Cards from "../../assets/png/atm_cards.png";
 
 const Private = () => {
-  const [openTabOne, setOpenTabOne] = useState(false);
-  const [openTabTwo, setOpenTabTwo] = useState(false);
-  const [openTabThree, setOpenTabThree] = useState(false);
+  const [openTabOne, setOpenTabOne] = useState(true)
+  const [openTabTwo, setOpenTabTwo] = useState(false)
+  const [openTabThree, setOpenTabThree] = useState(false)
 
   const isTab = window.innerWidth < 1028;
   const isMobile = window.innerWidth < 768;
@@ -42,26 +42,26 @@ const Private = () => {
     setOpenTabThree(!openTabThree);
   };
 
-  useEffect(() => {
-    if (state?.section === "private" && privateRef.current) {
-      privateRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "wealth" && wealthRef.current) {
-      wealthRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "invest" && investRef.current) {
-      investRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "card" && cardRef.current) {
-      cardRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "private" && privateRef.current) {
+  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "wealth" && wealthRef.current) {
+  //     wealthRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "invest" && investRef.current) {
+  //     investRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "card" && cardRef.current) {
+  //     cardRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   return (
-    <div className="w-full overflow-hidden" ref={privateRef}>
+    <div className="w-full overflow-hidden">
       <section className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]">
         <div
           style={{

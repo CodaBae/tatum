@@ -17,10 +17,10 @@ import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 
 const Corporate = () => {
-  const [openTabOne, setOpenTabOne] = useState(false);
-  const [openTabTwo, setOpenTabTwo] = useState(false);
-  const [openTabThree, setOpenTabThree] = useState(false);
-  const [openTabFour, setOpenTabFour] = useState(false);
+  const [openTabOne, setOpenTabOne] = useState(true)
+  const [openTabTwo, setOpenTabTwo] = useState(false)
+  const [openTabThree, setOpenTabThree] = useState(false)
+  const [openTabFour, setOpenTabFour] = useState(false)
 
   const isMobile = window.innerWidth < 768;
 
@@ -74,7 +74,7 @@ const Corporate = () => {
   }, [state]);
 
   return (
-    <div className="w-full overflow-hidden" ref={corporateRef}>
+    <div className="w-full overflow-hidden" >
       <section className="h-full w-full overflow-hidden outline-none lg:h-[100vh]">
         <div
           style={{

@@ -35,7 +35,7 @@ const Digital = () => {
     }, [state])
 
   return (
-    <div className='overflow-hidden' ref={digitalRef}>
+    <div className='overflow-hidden'>
 
        <section 
 
@@ -98,7 +98,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
@@ -127,7 +127,7 @@ const Digital = () => {
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-medium tracking-[25%]  text-[13px] mt-[16px] '>
+                        <p className='font-grava text-[#334E69] font-semibold tracking-[0.01em] leading-[25px]  text-[18px] mt-[16px] '>
                             Features & Login
                         </p>
         
@@ -322,7 +322,7 @@ const Digital = () => {
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Dial “365# to Get Started!
+                                    Dial *365# to Get Started!
                                 </p>
                             </div>
                         </div>
@@ -334,8 +334,8 @@ const Digital = () => {
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase'>Registration Guide</p>
-                <div className='flex flex-col gap-[32px]'>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>1. Dial *737# from your registered phone number.</p>
+                <div className='flex items-center gap-[32px]'>
+                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>1. Dial *365# from your registered phone number.</p>
                     <div className='flex items-center gap-[32px]'>
                         <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>2. Follow the prompts to activate.</p>
                         <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>3. Start transacting instantly!</p>
