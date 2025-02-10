@@ -114,7 +114,7 @@ const Personal = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div  className="overflow-hidden">
+    <div className="overflow-hidden">
       <section className="h-full w-full outline-none  lg:h-[100vh]">
         <div
           style={{
@@ -201,8 +201,7 @@ const Personal = () => {
 
       <div
         // ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
-      >
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Saver}
@@ -250,8 +249,7 @@ const Personal = () => {
 
       <div
         // ref={currentRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
-      >
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
@@ -294,8 +292,7 @@ const Personal = () => {
 
       <div
         // ref={fixedRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
-      >
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={
@@ -346,8 +343,7 @@ const Personal = () => {
 
       <div
         // ref={loanRef}
-        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto"
-      >
+        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#002244] font-[350] font-grava text-sm lg:text-[18px] leading-[27px] tracking-[0.2%]">
@@ -560,15 +556,14 @@ const Personal = () => {
             navigate("/digital", { state: { section: "digital" } })
           }>
           <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
-            Get yours today
+            Get Yours Today
           </p>
         </button>
       </div>
 
       <div
         // ref={digitalRef}
-        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
-      >
+        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
           <p className="font-grava font-[350] text-[18px] leading-[27px] text-[#002244] tracking-[0.2%]">
             Digital Banking
