@@ -51,14 +51,14 @@ const AccountPrivacy = () => {
         setOpenDropdownThree(!openDropdownThree)
     }
             
-    useEffect(() => {
-        if (state?.section === "faq" && faqRef.current) {
-            faqRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-        if (state?.section === "account" && accountRef.current) {
-            accountRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     if (state?.section === "faq" && faqRef.current) {
+    //         faqRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    //     if (state?.section === "account" && accountRef.current) {
+    //         accountRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [state]);
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
@@ -88,19 +88,20 @@ const AccountPrivacy = () => {
                             achieve your financial goals.
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
-                        <button
-                                className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                        <a
+                                className={`animate__animated animate__fadeInUp block animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
+                                href='#section'
                             >
                                 <p 
-                                className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
                                     Learn more
                                 </p>
                                 <BsArrowRight size={100}  
                                     className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div className='hidden lm:flex items-start absolute lg:bottom-[-33.2%]'>
@@ -121,6 +122,7 @@ const AccountPrivacy = () => {
         </section>
 
         <section
+            id='section'
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
@@ -154,7 +156,7 @@ const AccountPrivacy = () => {
                 type='button'
                 onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
+                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
                 <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
@@ -211,7 +213,7 @@ const AccountPrivacy = () => {
     
                 <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What do I need to open an account?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>What do I need to open an account?</p>
                     {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownOne && 
@@ -223,7 +225,7 @@ const AccountPrivacy = () => {
     
                 <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Are there any account opening fees?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Are there any account opening fees?</p>
                     {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownTwo && 
@@ -235,7 +237,7 @@ const AccountPrivacy = () => {
     
                 <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Can I manage my account on mobile?</p>
                     {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownThree && 

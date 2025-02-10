@@ -11,11 +11,11 @@ const Loan = () => {
     const loanRef = useRef(null);
     const { state } = useLocation();
 
-    useEffect(() => {
-        if (state?.section === "loan" && loanRef.current) {
-            loanRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     if (state?.section === "loan" && loanRef.current) {
+    //         loanRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [state]);
 
   return (
     <div ref={loanRef} className="w-full mb-[56px] lg:mb-[120px]">

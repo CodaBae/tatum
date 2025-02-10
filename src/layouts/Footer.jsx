@@ -32,12 +32,12 @@ const Footer = () => {
             Stay smiling. <br /> Open an account today! 
           </p>
           <button
-            className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg"
+            className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg"
             type="button"
             onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
 
           >
-            <p className="font-grava text-[#FFCC33] group-hover:text-[#002244]">
+            <p className="font-grava text-[#FFCC33] text-base group-hover:text-[#002244]">
                 Download Form
             </p>
           </button>
@@ -78,14 +78,16 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about", {
                     state: { section: "about" },
-                  }) }
+                  },              window.scrollTo(0, 0)
+                  ) }
                 >
                   About us
                 </p>
                 <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about/careers", {
                     state: { section: "careers" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Careers
                 </p>
@@ -93,7 +95,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
-                  }) }
+                  },              window.scrollTo(0, 0)
+                  ) }
                 >
                   Blogs
                 </p>
@@ -101,7 +104,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/contact", {
                     state: { section: "contact" },
-                  }) }
+                  },              window.scrollTo(0, 0)
+                  ) }
                 >
                   Contact
                 </p>
@@ -116,7 +120,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/personal", {
                     state: { section: "personal" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Personal Banking
                 </p>
@@ -124,7 +129,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/business", {
                     state: { section: "business" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Business Banking
                 </p>
@@ -132,7 +138,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/corporate", {
                     state: { section: "corporate" },
-                  }) }
+                  },              window.scrollTo(0, 0)
+                  ) }
                 >
                   Corporate Banking
                 </p>
@@ -140,7 +147,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/private", {
                     state: { section: "private" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Private Banking
                 </p>
@@ -169,7 +177,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/privacy-policy", {
                     state: { section: "privacy" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Privacy policy
                 </p>
@@ -177,7 +186,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/terms", {
                     state: { section: "terms" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Terms of service
                 </p>
@@ -204,7 +214,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
-                  }) }
+                  },              window.scrollTo(0, 0)
+                  ) }
                 >
                   Video Tutorials
                 </p>
@@ -218,7 +229,8 @@ const Footer = () => {
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/sitemap", {
                     state: { section: "site" },
-                  })}
+                  },              window.scrollTo(0, 0)
+                  )}
                 >
                   Sitemap
                 </p>
@@ -244,7 +256,8 @@ const Footer = () => {
             className="w-[109px] h-[44px] cursor-pointer"
             onClick={() => navigate("/", {
               state: { section: "home" },
-            })}
+            },              window.scrollTo(0, 0)
+            )}
           />
        
           <div className="flex flex-col gap-1 x">

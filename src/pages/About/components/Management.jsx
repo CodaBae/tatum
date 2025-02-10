@@ -135,7 +135,7 @@ const Management = () => {
                         className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     />
                     <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                        <img src={Clip} alt='Clip' className='' />
+                        <img src={Clip} alt='Clip' className='teamBase' />
                     </div>
                     <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
                 </div>

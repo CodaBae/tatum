@@ -59,11 +59,11 @@ const Home = () => {
   const homeRef = useRef(null);
   const { state } = useLocation();
 
-  useEffect(() => {
-    if (state?.section === "home" && homeRef.current) {
-      homeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+//   useEffect(() => {
+//     if (state?.section === "home" && homeRef.current) {
+//       homeRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//   }, [state]);
 
   const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
 
@@ -238,7 +238,7 @@ const Home = () => {
         <LandingCarousel
           interval={4000}
           showArrows={false}
-          autoPlay={true}
+          // autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -286,7 +286,7 @@ const Home = () => {
                         activeIndex === 0
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
+                      } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -295,7 +295,7 @@ const Home = () => {
                           },
                         })
                       }>
-                      <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Open an Account
                       </p>
                       <BsArrowRight
@@ -398,7 +398,7 @@ const Home = () => {
                         activeIndex === 1
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -508,7 +508,7 @@ const Home = () => {
                         activeIndex === 2
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/business", {
@@ -517,7 +517,7 @@ const Home = () => {
                           },
                         })
                       }>
-                      <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Get Started with Business Banking
                       </p>
                       <BsArrowRight
@@ -598,7 +598,7 @@ const Home = () => {
                         activeIndex === 3
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -651,8 +651,8 @@ const Home = () => {
         </LandingCarousel>
       </div>
 
-      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
-        <div data-aos="fade-right" className="hidden md:block">
+      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        <div data-aos="fade-right" className="hidden md:block ">
           <img
             src={Boy}
             alt="Boy"
@@ -680,7 +680,7 @@ const Home = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -697,7 +697,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]">
@@ -719,7 +719,7 @@ const Home = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -766,7 +766,7 @@ const Home = () => {
                 },
               });
             }}>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -804,7 +804,7 @@ const Home = () => {
                 },
               });
             }}>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -952,7 +952,7 @@ const Home = () => {
                   Personal
                 </p>
               </div>
-              <div className="transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
+              <div className="transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border-[1.5px] border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
                 <p className="text-[#002244] font-medium font-grava text-sm md:text-base">
                   Home
                 </p>
@@ -1081,7 +1081,7 @@ const Home = () => {
             <div className="w-full bg-[#fff] rounded-2xl gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center">
               <div className="flex flex-col items-center gap-6 ">
                 <button
-                  className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg"
+                  className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border-[1.5px] hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg"
                   onClick={() => {
                     navigate("/business", {
                       state: {
@@ -1240,7 +1240,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
             </button>
@@ -1262,7 +1262,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
             </button>
@@ -1285,7 +1285,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
             </button>
@@ -1308,7 +1308,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
             </button>
@@ -1330,7 +1330,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
             </button>
@@ -1352,7 +1352,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
             </button>
@@ -1384,7 +1384,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
             </button>
@@ -1413,7 +1413,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
             </button>
@@ -1443,7 +1443,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
             </button>
@@ -1473,7 +1473,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
             </button>
@@ -1502,7 +1502,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
             </button>
@@ -1531,7 +1531,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
             </button>

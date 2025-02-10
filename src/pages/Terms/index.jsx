@@ -9,11 +9,11 @@ const Terms = () => {
   const termsRef = useRef(null);
   const { state } = useLocation();
 
-  useEffect(() => {
-    if (state?.section === "terms" && termsRef.current) {
-      termsRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "terms" && termsRef.current) {
+  //     termsRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   const introductionRef = useRef(null);
   const userRef = useRef(null);
@@ -101,7 +101,7 @@ const Terms = () => {
       data-aos-duration="3000"
       ref={termsRef}>
       <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px]  flex flex-col items-center justify-center">
-        <p className="font-bold text-[#002244] font-grava text-[32px] mt-[66px] lg:text-[75px]  ">
+        <p className="font-bold text-[#002244] font-grava text-[32px] mt-[6%] lg:text-[75px]  ">
           Terms and Conditions
         </p>
       </div>
@@ -256,7 +256,7 @@ const Terms = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-1 lg:overflow-y-auto lg:max-h-[calc(200vh-364px)] ">
+        <div className="flex flex-col lg:flex-1 ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
             <div className="flex flex-col">
               <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">

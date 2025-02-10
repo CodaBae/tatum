@@ -53,9 +53,7 @@ const Corporate = () => {
   };
 
   useEffect(() => {
-    if (state?.section === "corporate" && corporateRef.current) {
-      corporateRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+ 
     if (state?.section === "treasury" && treasuryRef.current) {
       treasuryRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -103,14 +101,14 @@ const Corporate = () => {
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[2px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/corporate/account", {
                       state: { section: "account" },
                     })
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Corporate Account
                   </p>
                   <BsArrowRight
@@ -176,7 +174,7 @@ const Corporate = () => {
                   state: { section: "account" },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Open a Corporate Account
               </p>
               <BsArrowRight
@@ -193,7 +191,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Open a Corporate Account
             </p>
             <BsArrowRight
@@ -212,7 +210,7 @@ const Corporate = () => {
 
       <div
         ref={investmentRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
@@ -255,7 +253,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
             </p>
             <BsArrowRight
@@ -325,7 +323,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
             </p>
             <BsArrowRight
@@ -344,7 +342,7 @@ const Corporate = () => {
 
       <div
         ref={tradeRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
@@ -386,7 +384,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start Trading Smarter
             </p>
             <BsArrowRight
@@ -456,7 +454,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for a Loan Now
             </p>
             <BsArrowRight
@@ -475,7 +473,7 @@ const Corporate = () => {
 
       <div
         ref={strategicRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
@@ -518,7 +516,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with Us
             </p>
             <BsArrowRight

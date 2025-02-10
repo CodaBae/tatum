@@ -28,11 +28,11 @@ const Digital = () => {
     const navigate = useNavigate()
 
 
-    useEffect(() => {
-        if (state?.section === "digital" && digitalRef.current) {
-            digitalRef.current.scrollIntoView({ behavior: "smooth" });
-          }
-    }, [state])
+    // useEffect(() => {
+    //     if (state?.section === "digital" && digitalRef.current) {
+    //         digitalRef.current.scrollIntoView({ behavior: "smooth" });
+    //       }
+    // }, [state])
 
   return (
     <div className='overflow-hidden'>
@@ -64,7 +64,7 @@ const Digital = () => {
                         </p>
                         <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                             <button
-                                className={`aanimate__animated animate__fadeInUp animate__delay-2s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`aanimate__animated animate__fadeInUp animate__delay-2s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})} 
                                 //animate__delay-2s
                             >
@@ -123,7 +123,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
@@ -169,7 +169,7 @@ const Digital = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                         <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
@@ -188,13 +188,13 @@ const Digital = () => {
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[4px] w-[159px] lm:w-[189px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
+                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
 
-        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[894px] flex flex-col gap-[40px] py-[60px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[894px] flex flex-col gap-[40px] py-[60px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
@@ -257,7 +257,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto lg:h-[932px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#fff] md:h-auto lg:h-[932px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
@@ -281,7 +281,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
@@ -345,7 +345,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[1023px] flex flex-col gap-[48px] py-[60px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[1023px] flex flex-col gap-[48px] py-[60px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
@@ -402,13 +402,13 @@ const Digital = () => {
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[8px] w-[159px] lm:w-[174px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
+                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto lg:h-[705px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#fff] md:h-auto lg:h-[705px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
@@ -432,7 +432,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
@@ -499,7 +499,7 @@ const Digital = () => {
                             </p>
                         </div>
                         <button
-                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[228px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[228px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
                         <p 

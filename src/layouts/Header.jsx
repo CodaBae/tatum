@@ -169,10 +169,10 @@ const Header = () => {
         src={Logo}
         alt="Logo"
         className="w-[125px] h-[64px] cursor-pointer"
-        onClick={() =>
+        onClick={() => {
           navigate("/"),
           window.scrollTo(0, 0)
-        }
+        }}
       />
       <div className="flex items-center gap-[32px]">
         <p

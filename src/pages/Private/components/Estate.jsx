@@ -85,7 +85,7 @@ const Estate = () => {
             className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full md:w-[318px] h-[55px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
             type='button'
           >
-            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
+            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Schedule a consultation now</p>
             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
           </button>
         </div>
@@ -206,7 +206,7 @@ const Estate = () => {
               </div>
           </div>
           <div className='w-5/12 hidden md:flex justify-end'>
-              <img src={Guardian} alt='Guardian' className='md:w-[198px] lm:w-[364px] lm:h-[264px]' />
+              <img src={Guardian} alt='Guardian' className='md:w-[198px] lm:w-[64px] lm:h-[264px]' />
           </div>
         </div>
 

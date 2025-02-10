@@ -89,9 +89,7 @@ const About = () => {
   const formatNumber = (num) => String(num + 1).padStart(2, "0");
 
   useEffect(() => {
-    if (state?.section === "about" && aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+   
     if (state?.section === "mission-and-vision" && missionRef.current) {
       missionRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -164,7 +162,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[11%] lg:w-[51%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[57%] `} 
             />
         </div>
       </section>
@@ -254,7 +252,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           }}
           className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
         >
-          <div className="lm:w-[364px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
+          <div className="lm:w-[64px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
             <div
               className="bg-[#fff] flex items-center p-2 cursor-pointer rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
               data-aos="fade-up"
@@ -272,7 +270,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <div
               data-aos="fade-up"
               data-aos-delay="200"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px] cursor-pointer"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[64px] cursor-pointer"
               onClick={() => {
                 navigate("/digital")
                 window.scrollTo(0, 0)
@@ -477,7 +475,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
                <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                    <img src={Clip} alt='Clip' className='' />
+                    <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
                 <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
@@ -518,8 +516,8 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
-               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                    <img src={Clip} alt='Clip' className='' />
+               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" >
+                    <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
                 <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
@@ -559,8 +557,8 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
-                <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                    <img src={Clip} alt='Clip' className='' />
+                <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" style={{    marginTop: "-10%"}}>
+                    <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
                 <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>

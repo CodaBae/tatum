@@ -42,23 +42,21 @@ const Private = () => {
     setOpenTabThree(!openTabThree);
   };
 
-  // useEffect(() => {
-  //   if (state?.section === "private" && privateRef.current) {
-  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "wealth" && wealthRef.current) {
-  //     wealthRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "invest" && investRef.current) {
-  //     investRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "card" && cardRef.current) {
-  //     cardRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "faq" && faqRef.current) {
-  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+
+    if (state?.section === "wealth" && wealthRef.current) {
+      wealthRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "invest" && investRef.current) {
+      investRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "card" && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div className="w-full overflow-hidden">
@@ -92,14 +90,14 @@ const Private = () => {
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[2px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/private/account", {
                       state: { section: "account" },
                     })
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Private Account
                   </p>
                   <BsArrowRight
@@ -167,7 +165,8 @@ const Private = () => {
 
             <p
               className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-              style={{ lineHeight: "27px" }}>
+              style={{ lineHeight: "27px",     marginTop: '2%',
+              marginBottom: '-2%' }}>
               Our Expertise Covers:
             </p>
 
@@ -181,7 +180,7 @@ const Private = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Get Started
               </p>
               <BsArrowRight
@@ -248,7 +247,7 @@ const Private = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -267,7 +266,7 @@ const Private = () => {
 
       <div
         ref={investRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
@@ -295,7 +294,7 @@ const Private = () => {
           <button
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button">
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Sign up for Updates
             </p>
             <BsArrowRight
@@ -353,7 +352,7 @@ const Private = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Apply for the Tatum Black Card
               </p>
               <BsArrowRight
@@ -435,7 +434,7 @@ const Private = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for the Tatum Black Card
             </p>
             <BsArrowRight
