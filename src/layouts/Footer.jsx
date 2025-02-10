@@ -32,7 +32,7 @@ const Footer = () => {
             Stay smiling. <br /> Open an account today! 
           </p>
           <button
-            className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg"
+            className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg"
             type="button"
             onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
 
