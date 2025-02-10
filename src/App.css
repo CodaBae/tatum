@@ -28,10 +28,22 @@
     line-height: 1.75rem;
 }
 
+.teamBase{
+    margin-top: -10%;
+
+}
+
 @media (max-width: 767px) {
     .lastF {
         margin-bottom: 6%;
         align-items: baseline;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .teamBase {
+        margin-top: -36%; /* Adjust as needed for better mobile responsiveness */
     }
 }
 
@@ -116,4 +128,9 @@
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 300;
+}
+
+.w-\[152px\] {
+    width: fit-content;
+    padding: 0 15px;
 }

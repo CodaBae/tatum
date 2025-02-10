@@ -8,21 +8,20 @@ const Sitemap = () => {
     const  sitemapRef = useRef(null);
     const { state } = useLocation();
 
-    useEffect(() => {
-        if (state?.section === "site" && sitemapRef.current) {
-            sitemapRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     if (state?.section === "site" && sitemapRef.current) {
+    //         sitemapRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [state]);
 
   return (
     <div
         className='w-full mb-[56px] lg:mb-[120px] overflow-hidden' 
-        data-aos="fade-up" 
         data-aos-duration="3000" 
         ref={sitemapRef}
     >
         <div className='bg-[#FFCC33] w-full h-[184px] lg:h-[314px]  flex flex-col items-center justify-center'>
-          <p className='font-bold text-[#002244] font-grava text-[32px] mt-[66px] lg:text-[75px]'>Sitemap</p>
+          <p className='font-bold text-[#002244] font-grava text-[32px] mt-[6%] lg:text-[75px]'>Sitemap</p>
         </div>
 
         <div className='w-full py-[56px] lg:py-[120px] px-5 lg:px-[56px] flex flex-col gap-[40px] md:gap-[120px]'>

@@ -18,11 +18,11 @@ const Investment = () => {
     const investRef = useRef(null);
     const { state } = useLocation();
 
-    useEffect(() => {
-        if (state?.section === "invest" && investRef.current) {
-            investRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [state]);
+    // useEffect(() => {
+    //     if (state?.section === "invest" && investRef.current) {
+    //         investRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [state]);
 
   return (
     <div ref={investRef} className="w-full mb-[56px] lg:mb-[120px]">

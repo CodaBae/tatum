@@ -42,23 +42,21 @@ const Private = () => {
     setOpenTabThree(!openTabThree);
   };
 
-  // useEffect(() => {
-  //   if (state?.section === "private" && privateRef.current) {
-  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "wealth" && wealthRef.current) {
-  //     wealthRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "invest" && investRef.current) {
-  //     investRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "card" && cardRef.current) {
-  //     cardRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "faq" && faqRef.current) {
-  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+
+    if (state?.section === "wealth" && wealthRef.current) {
+      wealthRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "invest" && investRef.current) {
+      investRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "card" && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div className="w-full overflow-hidden">
@@ -99,7 +97,7 @@ const Private = () => {
                       state: { section: "account" },
                     })
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Private Account
                   </p>
                   <BsArrowRight
@@ -167,7 +165,8 @@ const Private = () => {
 
             <p
               className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-              style={{ lineHeight: "27px" }}>
+              style={{ lineHeight: "27px",     marginTop: '2%',
+              marginBottom: '-2%' }}>
               Our Expertise Covers:
             </p>
 
@@ -181,7 +180,7 @@ const Private = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Get Started
               </p>
               <BsArrowRight
@@ -248,7 +247,7 @@ const Private = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -295,7 +294,7 @@ const Private = () => {
           <button
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button">
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Sign up for Updates
             </p>
             <BsArrowRight
@@ -353,7 +352,7 @@ const Private = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Apply for the Tatum Black Card
               </p>
               <BsArrowRight
@@ -435,7 +434,7 @@ const Private = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for the Tatum Black Card
             </p>
             <BsArrowRight

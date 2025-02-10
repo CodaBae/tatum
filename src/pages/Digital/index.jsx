@@ -28,11 +28,11 @@ const Digital = () => {
     const navigate = useNavigate()
 
 
-    useEffect(() => {
-        if (state?.section === "digital" && digitalRef.current) {
-            digitalRef.current.scrollIntoView({ behavior: "smooth" });
-          }
-    }, [state])
+    // useEffect(() => {
+    //     if (state?.section === "digital" && digitalRef.current) {
+    //         digitalRef.current.scrollIntoView({ behavior: "smooth" });
+    //       }
+    // }, [state])
 
   return (
     <div className='overflow-hidden'>
@@ -123,7 +123,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
@@ -169,7 +169,7 @@ const Digital = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                         <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
@@ -188,7 +188,7 @@ const Digital = () => {
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[4px] w-[159px] lm:w-[189px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
+                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
@@ -281,7 +281,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
@@ -402,7 +402,7 @@ const Digital = () => {
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[8px] w-[159px] lm:w-[174px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
+                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
@@ -432,7 +432,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
+                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         

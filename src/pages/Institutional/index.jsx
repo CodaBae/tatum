@@ -28,14 +28,14 @@ const Institutional = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "institution" && InstitutionRef.current) {
-      InstitutionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+//   useEffect(() => {
+//     if (state?.section === "faq" && faqRef.current) {
+//       faqRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//     if (state?.section === "institution" && InstitutionRef.current) {
+//       InstitutionRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//   }, [state]);
 
   const handleTabOne = () => {
     setOpenTabOne(!openTabOne);
@@ -93,7 +93,7 @@ const Institutional = () => {
                       state: { section: "account" },
                     })
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open an Institutional Account
                   </p>
                   <BsArrowRight
@@ -166,7 +166,7 @@ const Institutional = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Get Started
               </p>
               <BsArrowRight
@@ -252,7 +252,7 @@ const Institutional = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get started
             </p>
             <BsArrowRight
@@ -294,7 +294,7 @@ const Institutional = () => {
                   },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Talk to Our Relationship Managers
               </p>
               <BsArrowRight
@@ -380,7 +380,7 @@ const Institutional = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to Our Relationship Managers
             </p>
             <BsArrowRight

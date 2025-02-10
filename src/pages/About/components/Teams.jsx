@@ -21,11 +21,11 @@ const Teams = () => {
 
   
 
-    useEffect(() => {   
-        if (state?.section === "teams" && teamsRef.current) {
-            teamsRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [state])
+    // useEffect(() => {   
+    //     if (state?.section === "teams" && teamsRef.current) {
+    //         teamsRef.current.scrollIntoView({ behavior: "smooth" });
+    //     }
+    // }, [state])
 
     const isTab = window.innerWidth < 1028;
     const isMobile = window.innerWidth < 768;  
