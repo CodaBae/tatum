@@ -231,9 +231,9 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                   <span className="block">through innovative 
                   technology driven</span>  products and services delivered with ease
                 </p>
-                <div className="hidden lm:flex items-end justify-end absolute -bottom-14 right-0">
+                {/* <div className="hidden lm:flex items-end justify-end absolute -bottom-14 right-0">
                   <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
