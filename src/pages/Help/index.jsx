@@ -10,7 +10,7 @@ import Minus from "../../assets/svg/minus.svg";
 
 const Help = () => {
   const [text, setText] = useState("")
-  const [openDropdownOne, setOpenDropdownOne] = useState(false)
+  const [openDropdownOne, setOpenDropdownOne] = useState(true)
   const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
   const [openDropdownThree, setOpenDropdownThree] = useState(false)
   const [openDropdownFour, setOpenDropdownFour] = useState(false)

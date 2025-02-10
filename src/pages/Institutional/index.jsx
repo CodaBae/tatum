@@ -15,10 +15,10 @@ import NDIC from "../../assets/svg/ndic.svg";
 import Check from "../../assets/svg/check.svg";
 
 const Institutional = () => {
-  const [openTabOne, setOpenTabOne] = useState(false);
-  const [openTabTwo, setOpenTabTwo] = useState(false);
-  const [openTabThree, setOpenTabThree] = useState(false);
-  const [openTabFour, setOpenTabFour] = useState(false);
+    const [openTabOne, setOpenTabOne] = useState(true)
+    const [openTabTwo, setOpenTabTwo] = useState(false)
+    const [openTabThree, setOpenTabThree] = useState(false)
+    const [openTabFour, setOpenTabFour] = useState(false)
 
   const { state } = useLocation();
   const faqRef = useRef(null);
@@ -44,18 +44,15 @@ const Institutional = () => {
   const handleTabTwo = () => {
     setOpenTabTwo(!openTabTwo);
   };
-
-  const handleTabThree = () => {
-    setOpenTabThree(!openTabThree);
-  };
-
   const handleTabFour = () => {
     setOpenTabFour(!openTabFour);
   };
 
+
+
   return (
-    <div className="w-full overflow-hidden" ref={InstitutionRef}>
-      <section className="lg:h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]">
+    <div className="w-full overflow-hidden">
+      <section className="w-full overflow-hidden outline-none  lg:h-[100vh]">
         <div
           style={{
             backgroundImage: `url(${

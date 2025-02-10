@@ -9,6 +9,7 @@ import Moon from "../../assets/svg/moon.svg";
 import Arrow from "../../assets/svg/arrow.svg";
 import ArrowClick from "../../assets/svg/arrow_click.svg";
 import Check from "../../assets/svg/check.svg";
+import Clip from "../../assets/svg/clip_triangle.svg";
 
 import People from "../../assets/png/people.png";
 import Pie from "../../assets/png/pie.png";
@@ -61,9 +62,9 @@ const About = () => {
 
   const team = [
     {
-      name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
-      role: "Non-Executive Director",
-      bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring 'Selected Judgment & Ruling of Hon. Justice L.H. Gummi' and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association. His career is marked by exceptional legal achievements, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally.",
+        name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
+        role: "Chairman",
+        bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association."
     },
     {
       name: "Niyi Adeseun",
@@ -71,14 +72,9 @@ const About = () => {
       bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.",
     },
     {
-      name: "Aminatu Dahiru Chiroma",
-      role: "Executive Director",
-      bio: "Aminatu Chiroma is a highly accomplished individual and Group Managing Director of Binani Group of Companies with decades of experience leading diverse teams and driving organizational growth through strategic planning, operational efficiency, and business development. Proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity and achieve company goals. Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of employee development. Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with a deep understanding of the energy and precious metals industries. Demonstrated leadership in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations. She holds an advanced Postgraduate Diploma in Business Leadership and Management and a diverse skill set in project management, risk mitigation, legal compliance, and technology integration. Recognized for excellence within several industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
-    },
-    {
-      name: "Abimbola Izu",
-      role: "Independent Non-Executive Director",
-      bio: "Abimbola Izu is an accomplished legal and business professional with a distinguished career spanning law, finance, corporate governance, and advisory services. She holds a law degree from the University of Ife (now Obafemi Awolowo University) and an LLM from the University of Warwick, UK, where she was a Foreign and Commonwealth Office scholar. Abimbola is currently the Principal Advisor at Portalis Advisory Services, where she provides expert advice on infrastructure development, mergers and acquisitions, corporate governance, and finance transactions. Previously, she served as Executive Director, Corporate and Investment Bank at Polaris Bank, overseeing a portfolio of over ₦600bn across industries like oil and gas, telecommunications, banking, and real estate. She led the development of sustainable finance frameworks and the Environmental and Social Risk Management (ESRM) framework in collaboration with the IFC. She is best recognized for her leadership in brand management, particularly during her tenure at Skye Bank, where she spearheaded successful campaigns such as “I Wish” and “Skye High.” With a strong grounding in law and business, Abimbola continues to make significant contributions to Nigeria’s financial, legal, and sustainability sectors.",
+        name: "George Okoh-Oboh",
+        role: "Executive Director",
+        bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
     },
   ];
 
@@ -260,9 +256,13 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         >
           <div className="lm:w-[364px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
             <div
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
+              className="bg-[#fff] flex items-center p-2 cursor-pointer rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
               data-aos="fade-up"
               data-aos-delay="0"
+              onClick={() => {
+                navigate("/personal/account")
+                window.scrollTo(0, 0)
+              }}
             >
               <img src={Check} alt="Check" className="" />
               <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
@@ -272,7 +272,11 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <div
               data-aos="fade-up"
               data-aos-delay="200"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px]"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[364px] cursor-pointer"
+              onClick={() => {
+                navigate("/digital")
+                window.scrollTo(0, 0)
+              }}
             >
               <img src={Check} alt="Check" className="" />
               <p className="font-grava text-[#272727] leading-[20px] lm:leading-[24px] text-[14px] lm:text-[20px]">
@@ -282,7 +286,11 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <div
               data-aos="fade-up"
               data-aos-delay="400"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[203px] lm:w-[287px]"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] cursor-pointer gap-2 w-[203px] lm:w-[287px]"
+              onClick={() => {
+                navigate("/personal/account")
+                window.scrollTo(0, 0)
+              }}
             >
               <img src={Check} alt="Check" className="" />
               <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
@@ -293,6 +301,10 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               data-aos="fade-up"
               data-aos-delay="600"
               className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]"
+              onClick={() => {
+                navigate("/personal/account")
+                window.scrollTo(0, 0)
+              }}
             >
               <img src={Check} alt="Check" className="" />
               <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
@@ -320,44 +332,12 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             Our{" "}
             <span className="font-bold">
               Core <br /> Values
-            </span>
+            </span> <span className="font-bold">(TECII)</span>
           </p>
           <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[300] leading-6 lm:leading-[30px] tracking-[0.336px]">
             Our values are intrinsic to how we operate and how we serve our
             customers to deliver exemplary financial services.
           </p>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="0"
-          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
-        >
-          <img src={People} alt="People" className="w-[83px] h-[64px]" />
-          <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-              Integrity
-            </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
-              We build trust through transparent actions that brighten your
-              banking experience.
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="200"
-          className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6"
-        >
-          <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
-          <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-              Customer-Centricity
-            </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
-              Your dreams and satisfaction drive our decisions, making banking
-              worth smiling about.
-            </p>
-          </div>
         </div>
         <div
           data-aos="fade-up"
@@ -377,23 +357,6 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         </div>
         <div
           data-aos="fade-up"
-          data-aos-delay="600"
-          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
-        >
-          <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
-          <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
-              Innovation
-            </p>
-            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
-              By combining our diverse strengths and perspectives, we create
-              remarkable experiences together.
-            </p>
-          </div>
-        </div>
-
-        <div
-          data-aos="fade-up"
           data-aos-delay="800"
           className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
         >
@@ -408,6 +371,58 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             </p>
           </div>
         </div>
+       
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px]  h-auto lm:h-[330px] rounded-[20px]  p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Customer-Centricity
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
+              Your dreams and satisfaction drive our decisions, making banking
+              worth smiling about.
+            </p>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-delay="0"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={People} alt="People" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Integrity
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
+              We build trust through transparent actions that brighten your
+              banking experience.
+            </p>
+          </div>
+        </div>
+       
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
+        >
+          <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
+          <div className="flex flex-col gap-4">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+              Innovation
+            </p>
+            <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
+              With creativity and forward-thinking, we transform banking into something truly remarkable.
+            </p>
+          </div>
+        </div>
+
+        
       </section>
 
       <section
@@ -434,7 +449,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             />
           </div>
         </div>
-        <div className="flex flex-col lm:flex-row gap-5">
+        <div className="grid grid-cols-1 lm:grid-cols-3 gap-5">
           {/* First Card with Hover Effect */}
           <div
             className="flex flex-col gap-6"
@@ -444,7 +459,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               });
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 src={HeadShot}
@@ -461,6 +476,10 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
+               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+                    <img src={Clip} alt='Clip' className='' />
+                </div>
+                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
 
             <div className="flex flex-col gap-[4px]">
@@ -475,14 +494,14 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
 
           {/* Second Card (Hover Effect) */}
           <div
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 "
             onClick={() => {
               navigate("/about/team-details", {
                 state: { section: "details", team: team[1] },
               });
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 src={HeadShot}
@@ -499,6 +518,10 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
+               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+                    <img src={Clip} alt='Clip' className='' />
+                </div>
+                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
             <div className="flex flex-col gap-[4px]">
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
@@ -519,7 +542,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               });
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 src={HeadShot}
@@ -536,10 +559,14 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
+                <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+                    <img src={Clip} alt='Clip' className='' />
+                </div>
+                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
             <div className="flex flex-col gap-[4px]">
             <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                Aminatu Dahiru Chiroma
+                George Okoh-Oboh
               </p>
               <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Executive Director
@@ -547,42 +574,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             </div>
           </div>
 
-          {/* Fourth Card (Hover Effect) */}
-          <div
-            className="flex flex-col gap-6"
-            onClick={() => {
-              navigate("/about/team-details", {
-                state: { section: "details", team: team[3] },
-              });
-            }}
-          >
-            <div className="relative w-auto cursor-pointer h-auto lg:h-[387px] group overflow-hidden rounded-lg">
-              {/* Background Image */}
-              <img
-                src={HeadShot}
-                alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-500 "
-              />
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-[#FFCC33] opacity-0 transition-opacity duration-500 group-hover:opacity-60"></div>
-
-              {/* Center Arrow */}
-              <img
-                src={ArrowClick}
-                alt="ArrowClick"
-                className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              />
-            </div>
-            <div className="flex flex-col gap-[4px]">
-            <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                Aminatu Dahiru Chiroma
-              </p>
-              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                Non-Executive Director
-              </p>
-            </div>
-          </div>
+        
         </div>
       </section>
 

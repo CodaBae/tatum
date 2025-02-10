@@ -38,7 +38,7 @@ const Teams = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover" 
             }}
-            className="w-full h-[434px] md:h-[793px] flex relative justify-center"
+            className="w-full h-[434px] md:h-[693px] flex relative justify-center"
         > 
             <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
             <div 
@@ -63,12 +63,12 @@ const Teams = () => {
                 </p>
                 <img src={Forward} alt="forward" className=""/>
                 <p 
-                    className="font-medium font-grava whitespace-nowrap text-[#002244] text-sm lm:text-[20px] "
+                    className="font-semibold font-grava whitespace-nowrap text-[#002244] text-[14px] lm:text-[20px] "
                     // onClick={() => navigate("/about/teams", {
                     //     state: { section: "teams" },
                     // })}
                 >
-                    Board Members
+                    Leadership Team 
                 </p>
             </div>
         </div>

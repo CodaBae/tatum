@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 import { SlLock } from "react-icons/sl";
@@ -44,8 +44,43 @@ const Header = () => {
   const [showSmeDropdown, setShowSmeDropdown] = useState(false);
   const [showPrivateDropdown, setShowPrivateDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
+  const isScrolling = useRef(false);
 
   const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     // Return early if already processing a scroll
+  //     if (isScrolling.current) return;
+      
+  //     isScrolling.current = true;
+  //     requestAnimationFrame(() => {
+  //       const currentScrollY = window.scrollY;
+  //       const scrollDirection = currentScrollY > lastScrollYRef.current ? 'down' : 'up';
+  
+  //       // Always show header at top
+  //       if (currentScrollY <= 0) {
+  //         setVisible(true);
+  //       } else {
+  //         // Only update state if visibility needs to change
+  //         if (scrollDirection === 'down' && currentScrollY > 100 && visible) {
+  //           setVisible(false);
+  //         } else if (scrollDirection === 'up' && !visible) {
+  //           setVisible(true);
+  //         }
+  //       }
+  
+  //       lastScrollYRef.current = currentScrollY;
+  //       isScrolling.current = false;
+  //     });
+  //   };
+  
+  //   // Add passive scroll listener for better performance
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [visible]); // Add visible to dependency array
 
   const handleMouseEnter = (menu) => {
     if (menu === "about") {
@@ -120,9 +155,13 @@ const Header = () => {
 
   return (
     <div
-      className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  "
+      // className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  "
+      className={`bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between transition-transform duration-500 ease-in-out ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    
       onMouseLeave={() => {
-        handleMouseEnter("nil");
+        handleMouseEnter("nil"),
         handleMouseLeave("nil");
       }}
     >
@@ -131,9 +170,8 @@ const Header = () => {
         alt="Logo"
         className="w-[125px] h-[64px] cursor-pointer"
         onClick={() =>
-          navigate("/", {
-            state: { section: "home" },
-          })
+          navigate("/"),
+          window.scrollTo(0, 0)
         }
       />
       <div className="flex items-center gap-[32px]">
@@ -153,11 +191,10 @@ const Header = () => {
           <div
             onMouseEnter={() => handleMouseEnter("about")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
-            onClick={() =>
-              navigate("/about", {
-                state: { section: "about" },
-              })
-            }
+            onClick={() => {
+              navigate("/about"),
+              window.scrollTo(0, 0)
+            }}
           >
             About Us
           </div>
@@ -182,7 +219,7 @@ const Header = () => {
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Our Story
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -203,7 +240,7 @@ const Header = () => {
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Mission and Vision
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -224,7 +261,7 @@ const Header = () => {
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Services
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -236,14 +273,18 @@ const Header = () => {
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("/about", { state: { section: "teams" } });
+                      navigate("/about", {
+                        state: {
+                          section: "teams"
+                        }
+                      })
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Our Team
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -263,7 +304,8 @@ const Header = () => {
             onMouseEnter={() => handleMouseEnter("personal")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onClick={() => {
-              navigate("/personal", { state: { section: "personal" } });
+              navigate("/personal"),
+              window.scrollTo(0, 0)
             }}
           >
             Personal
@@ -277,7 +319,7 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "31vh" }}
+                style={{ height: "38vh" }}
               >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -290,7 +332,7 @@ const Header = () => {
                       <img src={Savings} alt="Savings" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Savings Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -309,7 +351,7 @@ const Header = () => {
                       <img src={Current} alt="Current" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Current Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -328,7 +370,7 @@ const Header = () => {
                       <img src={Card} alt="Card" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Cards ( Debit, Credit, Virtual)
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -349,7 +391,7 @@ const Header = () => {
                       <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Loans and Mortgages
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -371,7 +413,7 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Fixed Deposit
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -390,22 +432,23 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("business")}
-            onClick={() =>
-              navigate("/business", { state: { section: "business" } })
-            }
+            onClick={() =>{
+              navigate("/business"),
+              window.scrollTo(0, 0)
+            }}
           >
             Business
           </p>
           {showSmeDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out h-[312px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out h-[360px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "30vh" }}
+                style={{ height: "35vh" }}
               >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -418,7 +461,7 @@ const Header = () => {
                       <img src={Business} alt="Business" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Business Accounts
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -441,7 +484,7 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Payment solutions
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -460,7 +503,7 @@ const Header = () => {
                       <img src={Credit} alt="Credit" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Loans and Credit Lines
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -481,7 +524,7 @@ const Header = () => {
                       <img src={Funding} alt="Funding" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Financial Planning and Advisory
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -499,7 +542,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -519,7 +562,8 @@ const Header = () => {
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("corporate")}
             onClick={() => {
-              navigate("/corporate", { state: { section: "corporate" } });
+              navigate("/corporate"),
+              window.scrollTo(0, 0)
             }}
           >
             Corporate
@@ -533,7 +577,7 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "30vh" }}
+                style={{ height: "35vh" }}
               >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -548,7 +592,7 @@ const Header = () => {
                       <img src={Treasury} alt="Treasury" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Treasury Management
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -567,7 +611,7 @@ const Header = () => {
                       <img src={Trade} alt="Trade" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Trade Finance
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -592,7 +636,7 @@ const Header = () => {
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Investment Banking
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -614,7 +658,7 @@ const Header = () => {
                       <img src={Leasing} alt="Leasing" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Corporate Lending and Leasing
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -622,19 +666,6 @@ const Header = () => {
                       </p>
                     </div>
                   </div>
-                  {/* <div className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer ">
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Risk} alt="Risk" className="w-5 h-5" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
-                        Risk Management
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Proactive strategies to mitigate risks
-                      </p>
-                    </div>
-                  </div> */}
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
@@ -645,7 +676,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -664,9 +695,10 @@ const Header = () => {
           <p
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
-            onClick={() =>
-              navigate("/private", { state: { section: "private" } })
-            }
+            onClick={() => {
+              navigate("/private"),
+              window.scrollTo(0, 0)
+            }}
           >
             Private
           </p>
@@ -679,7 +711,7 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "30vh" }}
+                style={{ height: "35vh" }}
               >
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
@@ -692,7 +724,7 @@ const Header = () => {
                       <img src={Wealth} alt="Wealth" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Wealth Management
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
@@ -713,7 +745,7 @@ const Header = () => {
                       <img src={Suit} alt="Suit" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Investment Advisory
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -734,7 +766,7 @@ const Header = () => {
                       <img src={Estate} alt="Estate" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Tatum Black Card
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -755,7 +787,7 @@ const Header = () => {
                       <img src={Faq} alt="Faq" className="w-5 h-5" />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[13px] font-medium font-grava">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
@@ -775,9 +807,10 @@ const Header = () => {
             className="font-grava font-medium text-base text-[#002244] cursor-pointer"
             onMouseEnter={() => handleMouseEnter("resources")}
             // onClick={() => navigate("/resources", { state: {section: "resources"}})}
-            onClick={() =>
-              navigate("/institutional", { state: { section: "institution" } })
-            }
+            onClick={() => {
+              navigate("/institutional"),
+              window.scrollTo(0, 0)
+            }}
           >
             {/* Resources */}
             Institutional
