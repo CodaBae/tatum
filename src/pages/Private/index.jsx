@@ -44,23 +44,23 @@ const Private = () => {
     setOpenTabThree(!openTabThree)
   }
 
-  useEffect(() => {
-    if (state?.section === "private" && privateRef.current) {
-      privateRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "wealth" && wealthRef.current) {
-      wealthRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "invest" && investRef.current) {
-      investRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "card" && cardRef.current) {
-      cardRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "private" && privateRef.current) {
+  //     privateRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "wealth" && wealthRef.current) {
+  //     wealthRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "invest" && investRef.current) {
+  //     investRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "card" && cardRef.current) {
+  //     cardRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   return (
     <div className='w-full overflow-hidden' >

@@ -57,7 +57,7 @@ const Institutional = () => {
 
 
     return (
-        <div className='w-full overflow-hidden' ref={InstitutionRef}>
+        <div className='w-full overflow-hidden' >
 
             <section 
 
