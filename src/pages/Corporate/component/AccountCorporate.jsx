@@ -25,6 +25,8 @@ const AccountCorporate = () => {
     const isMobile = window.innerWidth < 768 
     const faqRef = useRef(null);
     const accountRef = useRef(null);
+
+    const sectionRef = useRef(null)
         
     const { state } = useLocation()
         
@@ -88,8 +90,9 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
                         <button
-                                className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
+                                onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
                             >
                                 <p 
                                 className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -120,6 +123,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
         </section>
 
         <section
+            ref={sectionRef}
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
