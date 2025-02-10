@@ -80,9 +80,9 @@ const Contact = () => {
                 </div> */}
                 </div>
                 <img 
-                    src="https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"
+                    src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}
                     alt='Biz' 
-                    className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28 w-[686px]  lm:h-[811px] lg:top-20`} 
+                    className={`animate__animated animate__fadeInRight relative -left-2 lm:right-28 w-[786px]  lm:h-[811px] lg:top-20`} 
                 />
             </div>
         </section>
