@@ -682,7 +682,7 @@ const SME = () => {
                   <img src={goodMark} alt="" />
                 </div>
                 <div>
-                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                  <p className="font-grava font-[500] text-[16px] leading-[20px] tracking-[0.2%]  lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
                     Working Capital Loans
                   </p>
                 </div>
@@ -692,7 +692,7 @@ const SME = () => {
                   <img src={goodMark} alt="" />
                 </div>
                 <div>
-                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]   lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
                     Trade & Export Financing
                   </p>
                 </div>
@@ -702,7 +702,7 @@ const SME = () => {
                   <img src={goodMark} alt="" />
                 </div>
                 <div>
-                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]   lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
                     SME & Start-up Loans
                   </p>
                 </div>
@@ -712,7 +712,7 @@ const SME = () => {
                   <img src={goodMark} alt="" />
                 </div>
                 <div>
-                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
+                  <p className="font-grava font-[500] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]   lg:leading-[25px] lg:tracking-[1.4%] text-[#002244]">
                     Asset Financing
                   </p>
                 </div>
