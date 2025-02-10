@@ -67,7 +67,7 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
                   </div>
                 </div>
                 <button className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                  <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                  <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
                     Request a POS system
                   </p>
                   <BsArrowRight size={100}   className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5" />

@@ -52,14 +52,14 @@ const AccountBusiness = () => {
             setOpenDropdownThree(!openDropdownThree)
         }
     
-        useEffect(() => {
-            if (state?.section === "faq" && faqRef.current) {
-              faqRef.current.scrollIntoView({ behavior: "smooth" });
-            }
-            if (state?.section === "account" && accountRef.current) {
-                accountRef.current.scrollIntoView({ behavior: "smooth" });
-            }
-        }, [state]); 
+        // useEffect(() => {
+        //     if (state?.section === "faq" && faqRef.current) {
+        //       faqRef.current.scrollIntoView({ behavior: "smooth" });
+        //     }
+        //     if (state?.section === "account" && accountRef.current) {
+        //         accountRef.current.scrollIntoView({ behavior: "smooth" });
+        //     }
+        // }, [state]); 
 
   return (
     <div className='w-full overflow-hidden'>
@@ -94,7 +94,7 @@ const AccountBusiness = () => {
                                 onClick={() => sectionRef.current.scrollIntoView({ behavior: 'smooth' })}
                             >
                                 <p 
-                                    className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                    className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
                                     Learn more
                                 </p>
@@ -116,7 +116,7 @@ const AccountBusiness = () => {
                 <img 
                     src={Smiling} 
                     alt='Family' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[5%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative lm:right-[15%] lm:top-[10%] lg:w-[55%] `} 
                 />
             </div>
         </section>
@@ -156,7 +156,7 @@ const AccountBusiness = () => {
                 type='button'
                 onClick={() => window.open("https://drive.google.com/file/d/1jMMcfNn0kAZTBxYW9AjhujwtgvBxsx-0/view?usp=sharing", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
+                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
                 <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
@@ -212,7 +212,7 @@ const AccountBusiness = () => {
     
                 <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                   <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What do I need to open an account?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>What do I need to open an account?</p>
                     {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                     { openDropdownOne && 
@@ -224,7 +224,7 @@ const AccountBusiness = () => {
     
                 <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                   <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Are there any account opening fees?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Are there any account opening fees?</p>
                     {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                   { openDropdownTwo && 
@@ -236,7 +236,7 @@ const AccountBusiness = () => {
     
                 <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                   <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Can I manage my account on mobile?</p>
+                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Can I manage my account on mobile?</p>
                     {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                   { openDropdownThree && 

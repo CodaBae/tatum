@@ -30,41 +30,41 @@ const PrivacyPolicy = () => {
   const updatesRef = useRef(null);
   const contactRef = useRef(null);
 
-  useEffect(() => {
-    if (tabName === "intro" && introductionRef.current) {
-      introductionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "data" && dataCollectionRef.current) {
-      dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "personal" && personalRef.current) {
-      personalRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "purpose" && purposeRef.current) {
-      purposeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "sharing" && sharingRef.current) {
-      sharingRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "storage" && storageRef.current) {
-      storageRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "security" && securityRef.current) {
-      securityRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "rights" && rightsRef.current) {
-      rightsRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "cookies" && cookiesRef.current) {
-      cookiesRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "updates" && updatesRef.current) {
-      updatesRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (tabName === "contact" && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [tabName]);
+  // useEffect(() => {
+  //   if (tabName === "intro" && introductionRef.current) {
+  //     introductionRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "data" && dataCollectionRef.current) {
+  //     dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "personal" && personalRef.current) {
+  //     personalRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "purpose" && purposeRef.current) {
+  //     purposeRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "sharing" && sharingRef.current) {
+  //     sharingRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "storage" && storageRef.current) {
+  //     storageRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "security" && securityRef.current) {
+  //     securityRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "rights" && rightsRef.current) {
+  //     rightsRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "cookies" && cookiesRef.current) {
+  //     cookiesRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "updates" && updatesRef.current) {
+  //     updatesRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (tabName === "contact" && contactRef.current) {
+  //     contactRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [tabName]);
 
   useEffect(() => {
     const sectionRefs = [
@@ -103,13 +103,13 @@ const PrivacyPolicy = () => {
     <div
       ref={privacyRef}
       className="w-full mb-[56px] lg:mb-[120px] overflow-hidden">
-      <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:fixed lg:z-10 justify-center">
-        <p className="font-bold text-[#002244] font-grava text-[32px] lg:text-[75px] mt-[44px] lg:mt-[66px] ">
+      <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:z-10 justify-center">
+        <p className="font-bold text-[#002244] font-grava text-[32px] lg:text-[75px] mt-[44px] lg:mt-[6%] ">
           Privacy Policy
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[364px] bg-[#fff] relative">
+      <div className="flex flex-col lg:flex-row items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
         <div className="hidden lg:flex flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]">
           <p className="font-[300] font-grava text-[#546B82] ">
             Table of content:
@@ -237,7 +237,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-1 lg:overflow-y-auto lg:max-h-[calc(200vh-364px)] ">
+        <div className="flex flex-col lg:flex-1  ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
             <div className="flex flex-col gap-4">
               <p className="font-[300] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">

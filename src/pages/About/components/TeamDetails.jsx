@@ -25,11 +25,11 @@ const TeamDetails = () => {
   const detailsRef = useRef(null)
 
   
-  useEffect(() => {   
-      if (state?.section === "details" && detailsRef.current) {
-          detailsRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-  }, [state])
+  // useEffect(() => {   
+  //     if (state?.section === "details" && detailsRef.current) {
+  //         detailsRef.current.scrollIntoView({ behavior: "smooth" });
+  //     }
+  // }, [state])
 
   return (
     <div className='w-full overflow-hidden'>

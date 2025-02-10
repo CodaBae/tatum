@@ -193,26 +193,26 @@ const SME = () => {
   const faqRef = useRef(null);
   const { state } = useLocation();
 
-  useEffect(() => {
-    if (state?.section === "business" && smeRef.current) {
-      smeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "account" && accountRef.current) {
-      accountRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "loans" && loanRef.current) {
-      loanRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "advisory" && advisoryRef.current) {
-      advisoryRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "payment" && paymentRef.current) {
-      paymentRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "business" && smeRef.current) {
+  //     smeRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "account" && accountRef.current) {
+  //     accountRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "loans" && loanRef.current) {
+  //     loanRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "advisory" && advisoryRef.current) {
+  //     advisoryRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "payment" && paymentRef.current) {
+  //     paymentRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   return (
     <div ref={smeRef} className="">
@@ -362,7 +362,7 @@ const SME = () => {
                     state: { section: "account" },
                   })
                 }>
-                <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Open an Account
                 </p>
                 <BsArrowRight
@@ -632,7 +632,7 @@ const SME = () => {
                         state: { section: "account" },
                       })
                     }>
-                    <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                       Apply Now
                     </p>
                     <BsArrowRight
@@ -731,7 +731,7 @@ const SME = () => {
                     state: { section: "account" },
                   })
                 }>
-                <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply Now
                 </p>
                 <BsArrowRight
@@ -812,7 +812,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
                       Request a POS System
                     </p>
                     <BsArrowRight
@@ -882,7 +882,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
                       Sign up now
                     </p>
                     <BsArrowRight
@@ -953,7 +953,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
                       Sign Up Now
                     </p>
                     <BsArrowRight
@@ -1022,7 +1022,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium text-sm sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
                       Get started now
                     </p>
                     <BsArrowRight
@@ -1199,7 +1199,7 @@ const SME = () => {
                 <p
                   className="
               transition-colors duration-500 ease-in-out 
-              font-medium text-sm sm:text-base lg:text-base 
+              font-medium  sm:text-base lg:text-base 
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
             ">

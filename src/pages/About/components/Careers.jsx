@@ -44,11 +44,11 @@ const Careers = () => {
   const careersRef = useRef(null);
   const { state } = useLocation();
 
-  useEffect(() => {
-    if (state?.section === "careers" && careersRef.current) {
-      careersRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "careers" && careersRef.current) {
+  //     careersRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   useEffect(() => {
     let scrollInterval;
@@ -122,7 +122,7 @@ const Careers = () => {
           <button
             className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
             type="button">
-            <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+            <p className="transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
               View open positions
             </p>
             <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
@@ -515,7 +515,7 @@ const Careers = () => {
                         : ""
                     } transition-all duration-300 ease-in-out bg-[#ffffff] group hover:bg-[#002244] hover:border-[1.5px] hover:border-[#ffffff] w-[302px] h-[48px] lg:w-[246px] lg:h-[64px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center border-[1px] border-[#002244] `}
                     type="button">
-                    <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffffff]">
+                    <p className="transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffffff]">
                       Search jobs
                     </p>
                   </button>
@@ -894,7 +894,7 @@ const Careers = () => {
                     : ""
                 } transition-all duration-300 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] hover:border-[1.5px] hover:border-[#ffcc33] w-[129px] h-[44px]  lg:w-[161px] sm:h-[53px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button">
-                <p className="transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   Apply now
                 </p>
                 <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#002244] group-hover:text-[#ffcc33]" />

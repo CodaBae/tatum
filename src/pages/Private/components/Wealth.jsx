@@ -95,11 +95,11 @@ const Wealth = () => {
         }
     };
 
-    useEffect(() => {
-      if (state?.section === "wealth" && wealthRef.current) {
-        wealthRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, [state]);
+    // useEffect(() => {
+    //   if (state?.section === "wealth" && wealthRef.current) {
+    //     wealthRef.current.scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }, [state]);
 
     const cardsData = [
         {
@@ -245,7 +245,7 @@ const Wealth = () => {
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-full md:w-[262px] h-[55px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
+                    <p className='transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
                     <BsArrowRight size={100}   className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] mt-1' />
                 </button>
                 <button 
@@ -625,7 +625,7 @@ const Wealth = () => {
                     className='transition-all duration-300 ease-in-out bg-[#FFCC33] w-full md:w-[262px] h-[55px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='transition-colors duration-300 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
+                    <p className='transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to your account</p>
                     <BsArrowRight size={100}   className='transition-colors duration-300 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] mt-1' />
                 </button>
                 <button 

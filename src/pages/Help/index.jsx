@@ -101,7 +101,7 @@ className='h-full w-full outline-none '>
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How can I contact Tatum Bank?</p>
+                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>How can I contact Tatum Bank?</p>
                
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
@@ -120,7 +120,7 @@ You can also visit our head office for in-person support during business hours.
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>How do I open an account with Tatum Bank?
+                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>How do I open an account with Tatum Bank?
                 </p>
                 {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
@@ -142,7 +142,7 @@ You can also visit our head office for in-person support during business hours.
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
+                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
                 {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownThree && 
@@ -158,7 +158,7 @@ You can also visit our head office for in-person support during business hours.
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>Where is Tatum Bank located?                </p>
+                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Where is Tatum Bank located?                </p>
                 {openDropdownFour ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownFour && 
@@ -176,7 +176,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium text-sm lg:text-[20px]'>What types of banking services does Tatum Bank offer?
+                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>What types of banking services does Tatum Bank offer?
                 </p>
                 {openDropdownFive ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
@@ -206,7 +206,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
               type='button'
                onClick={() => navigate("/", {state: {section: "home"}})}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
+                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
                 <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>

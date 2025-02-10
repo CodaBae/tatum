@@ -231,7 +231,7 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -274,7 +274,7 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -327,7 +327,7 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Learn More
             </p>
             <BsArrowRight
@@ -400,7 +400,7 @@ const Personal = () => {
               onClick={() =>
                 navigate("/personal/account", { state: { section: "account" } })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#98A2B3]">
                 Coming Soon
               </p>
               <BsArrowRight
@@ -615,7 +615,7 @@ const Personal = () => {
             onClick={() =>
               navigate("/digital", { state: { section: "digital" } })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started Now
             </p>
             <BsArrowRight

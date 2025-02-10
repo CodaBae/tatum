@@ -52,26 +52,26 @@ const Corporate = () => {
     setOpenTabFour(!openTabFour);
   };
 
-  useEffect(() => {
-    if (state?.section === "corporate" && corporateRef.current) {
-      corporateRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "treasury" && treasuryRef.current) {
-      treasuryRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "trade" && tradeRef.current) {
-      tradeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "faq" && faqRef.current) {
-      faqRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "investment" && investmentRef.current) {
-      investmentRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (state?.section === "lending" && lendingRef.current) {
-      lendingRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state?.section === "corporate" && corporateRef.current) {
+  //     corporateRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "treasury" && treasuryRef.current) {
+  //     treasuryRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "trade" && tradeRef.current) {
+  //     tradeRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "faq" && faqRef.current) {
+  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "investment" && investmentRef.current) {
+  //     investmentRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   if (state?.section === "lending" && lendingRef.current) {
+  //     lendingRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [state]);
 
   return (
     <div className="w-full overflow-hidden" >
@@ -110,7 +110,7 @@ const Corporate = () => {
                       state: { section: "account" },
                     })
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Corporate Account
                   </p>
                   <BsArrowRight
@@ -176,7 +176,7 @@ const Corporate = () => {
                   state: { section: "account" },
                 })
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Open a Corporate Account
               </p>
               <BsArrowRight
@@ -193,7 +193,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Open a Corporate Account
             </p>
             <BsArrowRight
@@ -255,7 +255,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
             </p>
             <BsArrowRight
@@ -325,7 +325,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
             </p>
             <BsArrowRight
@@ -386,7 +386,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start Trading Smarter
             </p>
             <BsArrowRight
@@ -456,7 +456,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for a Loan Now
             </p>
             <BsArrowRight
@@ -518,7 +518,7 @@ const Corporate = () => {
                 state: { section: "account" },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with Us
             </p>
             <BsArrowRight

@@ -59,11 +59,11 @@ const Home = () => {
   const homeRef = useRef(null);
   const { state } = useLocation();
 
-  useEffect(() => {
-    if (state?.section === "home" && homeRef.current) {
-      homeRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [state]);
+//   useEffect(() => {
+//     if (state?.section === "home" && homeRef.current) {
+//       homeRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//   }, [state]);
 
   const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
 
@@ -295,7 +295,7 @@ const Home = () => {
                           },
                         })
                       }>
-                      <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Open an Account
                       </p>
                       <BsArrowRight
@@ -517,7 +517,7 @@ const Home = () => {
                           },
                         })
                       }>
-                      <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Get Started with Business Banking
                       </p>
                       <BsArrowRight
@@ -680,7 +680,7 @@ const Home = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -719,7 +719,7 @@ const Home = () => {
                 },
               })
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -766,7 +766,7 @@ const Home = () => {
                 },
               });
             }}>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -804,7 +804,7 @@ const Home = () => {
                 },
               });
             }}>
-            <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
             <BsArrowRight
@@ -1240,7 +1240,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
             </button>
@@ -1262,7 +1262,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
             </button>
@@ -1285,7 +1285,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
             </button>
@@ -1308,7 +1308,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
             </button>
@@ -1330,7 +1330,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
             </button>
@@ -1352,7 +1352,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
             </button>
@@ -1384,7 +1384,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
             </button>
@@ -1413,7 +1413,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
             </button>
@@ -1443,7 +1443,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
             </button>
@@ -1473,7 +1473,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
             </button>
@@ -1502,7 +1502,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
             </button>
@@ -1531,7 +1531,7 @@ const Home = () => {
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"></span>
-              <p className="relative z-10 font-medium text-sm lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
             </button>
