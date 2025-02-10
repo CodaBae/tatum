@@ -24,7 +24,7 @@ function App() {
     if (isLoading) {
       const timer = setTimeout(() => {
         setIsLoading(false);
-        localStorage.setItem("preloaderShown", "true");
+        // localStorage.setItem("preloaderShown", "true");
       }, 6000);
 
       return () => clearTimeout(timer);
