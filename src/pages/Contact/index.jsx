@@ -7,6 +7,8 @@ import InfoBig from "../../assets/png/info_big.png"
 import MapSmall from "../../assets/png/map_small.png"
 import MapBig from "../../assets/png/map_big.png"
 
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
 import { useLocation } from 'react-router-dom'
@@ -36,17 +38,17 @@ const Contact = () => {
     <div className='w-full overflow-hidden' ref={contactRef}>
 
         <section 
-
- className='h-full w-full outline-none '>
+            className='h-full w-full outline-none'
+        >
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-auto lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
-                <div className='w-full  flex flex-col items-start relative pt-[124px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+                <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
                             className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
@@ -60,8 +62,28 @@ const Contact = () => {
                         </p>
                         
                     </div>
-                    
+                    {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                    We are licensed by
+                    <img
+                      src={CBN}
+                      alt="CBN"
+                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                    />
+                    Deposit insured by
+                    <img
+                      src={NDIC}
+                      alt="NDIC"
+                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                    />
+                  </p>
+                </div> */}
                 </div>
+                <img 
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"
+                    alt='Biz' 
+                    className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28 w-[686px]  lm:h-[811px] lg:top-20`} 
+                />
             </div>
         </section>
 

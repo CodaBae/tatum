@@ -55,9 +55,9 @@ const Resources = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='h-[355px] lm:h-[574px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+            className='h-auto lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
-          <div className='w-full  flex flex-col items-start relative pt-[124px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+          <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                   <p 
                       className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
@@ -74,6 +74,12 @@ const Resources = () => {
               </div>
             
           </div>
+          <img 
+            src="https://res.cloudinary.com/code-idea/image/upload/v1739214013/camera_man_br9idr.png"
+            alt='Biz' 
+            className={`animate__animated animate__fadeInRight relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 `} 
+          />
+       
         </div>
       </section>
       
