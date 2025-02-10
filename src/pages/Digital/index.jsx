@@ -48,7 +48,7 @@ const Digital = () => {
                 }}
                 className='lg:h-[100vh] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
-                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[0px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
                             className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
@@ -57,16 +57,16 @@ const Digital = () => {
                         </p>
                         <p              
 
-                            className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             Whether you're at home, at work, or on the go, our digital banking solutions
                             are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
                         </p>
                         <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                             <button
-                                className={`aanimate__animated animate__fadeInUp animate__delay-2s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`aanimate__animated animate__fadeInUp animate__delay-06s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})} 
-                                //animate__delay-2s
+                                //animate__delay-06s
                             >
                             <p 
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'

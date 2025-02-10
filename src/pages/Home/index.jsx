@@ -236,9 +236,9 @@ const Home = () => {
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden">
       <div className="w-full ">
         <LandingCarousel
-          interval={4000}
+          interval={5000}
           showArrows={false}
-          // autoPlay={true}
+          autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -260,7 +260,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
@@ -274,17 +274,20 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 0
-                        ? "animate__animated animate__fadeInUp animate__delay-1s"
+                        ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
                     } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                     Secure banking, low-interest loans, and profitable
                     investments for everyone.
                   </p>
-                  <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+                  <div className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                        activeIndex === 0
+                          ? "animate__animated animate__fadeInUp animate__delay-06s"
+                          : ""}`}>
                     <button
                       className={`${
                         activeIndex === 0
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? " "
                           : ""
                       } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
@@ -307,7 +310,7 @@ const Home = () => {
                     <button
                       className={`${
                         activeIndex === 0
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? ""
                           : ""
                       } transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
@@ -350,7 +353,7 @@ const Home = () => {
 
                 className={`${
                   activeIndex === 0
-                    ? "animate__animated animate__fadeInRight"
+                    ? "animate__animated animate__fadeInRight "
                     : ""
                 } relative -right-20 md:right-24  bottom-0 lg:right-44  lg:h-[750px]`}
               />
@@ -369,7 +372,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -384,19 +387,22 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 1
-                        ? "animate__animated animate__fadeInUp animate__delay-1s "
+                        ? "animate__animated animate__fadeInUp animate__delay-04s "
                         : ""
                     } font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
-                    // animate__delay-1s
+                    // animate__delay-04s
                   >
                     Your money, your way. Experience banking that fits your
                     lifestyle, not the other way around.
                   </p>
-                  <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+                  <div className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                        activeIndex === 1
+                          ? "animate__animated animate__fadeInUp animate__delay-06s"
+                          : ""}`}>
                     <button
                       className={`${
                         activeIndex === 1
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? ""
                           : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
@@ -419,7 +425,7 @@ const Home = () => {
                     <button
                       className={`${
                         activeIndex === 1
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? ""
                           : ""
                       } hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
@@ -464,7 +470,7 @@ const Home = () => {
                     ? "animate__animated animate__zoomIn   animate__slow"
                     : ""
                 } object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
-                // animate__delay-2s
+                // animate__delay-06s
               />
             </div>
           </div>
@@ -481,7 +487,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -496,17 +502,17 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 2
-                        ? "animate__animated animate__fadeInUp animate__delay-1s"
+                        ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
                     } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                     Instant access to the funds, insights, and support you need
                     to take your business further.
                   </p>
-                  <div className="flex items-center mt-[12px] lg:mt-[12px] gap-3">
+                  <div className="flex items-center mt-[12px] lg:mt-[12px] gap-3 ">
                     <button
                       className={`${
                         activeIndex === 2
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? "animate__animated animate__fadeInUp animate__delay-06s"
                           : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
@@ -571,7 +577,7 @@ const Home = () => {
                 backgroundSize: "cover",
               }}
               className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-10%]">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
@@ -586,7 +592,7 @@ const Home = () => {
                   <p
                     className={`lg:w-[616px] ${
                       activeIndex === 3
-                        ? "animate__animated animate__fadeInUp animate__delay-1s"
+                        ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
                     } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                     Access high-end services and exclusive investments, all in
@@ -596,7 +602,7 @@ const Home = () => {
                     <button
                       className={`${
                         activeIndex === 3
-                          ? "animate__animated animate__fadeInUp animate__delay-2s"
+                          ? "animate__animated animate__fadeInUp animate__delay-06s"
                           : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"

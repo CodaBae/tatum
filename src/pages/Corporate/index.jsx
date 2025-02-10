@@ -85,7 +85,7 @@ const Corporate = () => {
             backgroundSize: "cover",
           }}
           className="pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[-2%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
@@ -93,7 +93,7 @@ const Corporate = () => {
                 Powering Your <span className="font-bold">Business Growth</span>
               </p>
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-1s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we understand that businesses thrive when they
                 have the right financial partner—one that offers tailored
                 solutions, expert insights, and seamless banking services to
@@ -101,7 +101,7 @@ const Corporate = () => {
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/corporate/account", {

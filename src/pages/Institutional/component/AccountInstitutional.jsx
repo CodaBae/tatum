@@ -86,14 +86,14 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             <span className='font-bold'>Financial Solutions</span>
                         </p>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-1s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Trusted banking solutions for NGOs, 
                             insurance companies, and financial institutions.
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
                         <button
-                                className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                                 onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
                             >
