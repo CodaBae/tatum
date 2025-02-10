@@ -118,15 +118,15 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[-8.5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p               style={{fontWeight:450}}
 
@@ -159,12 +159,12 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             </div>
           </div>
           <img
-            src={isMobile ? ShakeMobile : Shake}
+            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
             alt="Family"
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[57%] `} 
+            className={`animate__animated animate__fadeInRight relative lm:top-[28%] lg:w-[57%] `} 
             />
         </div>
       </section>

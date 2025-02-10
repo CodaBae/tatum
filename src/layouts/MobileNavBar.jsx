@@ -73,7 +73,7 @@ const MobileNavBar = ({ handleClose }) => {
             </div>
               {
                 openAboutDropdown && (
-                  <div className='flex flex-col gap-4 '>
+                  <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
                     <div
                        onClick={() => {
                         navigate("about", {
@@ -156,8 +156,8 @@ const MobileNavBar = ({ handleClose }) => {
             </div>
             {
               openPersonalDropdown && (
-                <div className='flex flex-col gap-4'>
-                    <div
+                <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
+                <div
                        onClick={() => {
                         navigate("/personal", { state: { section: "savings" } });
                         // window.scrollTo(0,0); 
@@ -243,8 +243,8 @@ const MobileNavBar = ({ handleClose }) => {
             </div>
             {
               openSmeDropdown && (
-                <div className='flex flex-col gap-4'>
-                  <div
+                <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
+                <div
                       onClick={() => {
                         navigate("/business", { state: { section: "account" } })
                       // window.scrollTo(0,0); 
@@ -331,8 +331,8 @@ const MobileNavBar = ({ handleClose }) => {
             </div>
             {
               openCorporateDropdown && (
-                <div className='flex flex-col gap-4'>
-                  <div
+                <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
+                <div
                       onClick={() => {
                         navigate("/corporate", {
                           state: { section: "treasury" },
@@ -421,8 +421,8 @@ const MobileNavBar = ({ handleClose }) => {
             </div>
             {
               openPrivateDropdown && (
-                <div className='flex flex-col gap-4 '>
-                  <div
+                <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
+                <div
                       onClick={() => {
                         navigate("/private", { state: { section: "wealth" } });
                       // window.scrollTo(0,0); 

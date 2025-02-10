@@ -117,15 +117,15 @@ const Personal = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
         >
-          <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]">
+          <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[0px] z-30 gap-[64px] lg:gap-[69px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               {/* First Text */}
               <p
@@ -141,7 +141,7 @@ const Personal = () => {
 
               {/* Second Text */}
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                 Explore tailored solutions that fit your lifestyle, empower{" "}
                 <br></br> your goals, and make banking a joy.
               </p>
@@ -149,7 +149,7 @@ const Personal = () => {
               {/* Button */}
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/personal/account", {
@@ -185,13 +185,13 @@ const Personal = () => {
           </div>
           <img
             src={
-              "https://framerusercontent.com/images/aIdKkIs5GohtjERCtIabST5MHvg.png"
+              "https://res.cloudinary.com/code-idea/image/upload/v1739211220/personal_banking_1_vgnhhq.webp"
             }
             alt="Family"
             // style={{
             //     display: isMobile ? "none" : "flex"
             // }}
-            className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[10%] lg:w-[53%] `}
+            className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[13%] lg:w-[50%] `}
           />
         </div>
       </section>

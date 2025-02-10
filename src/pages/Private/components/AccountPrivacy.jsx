@@ -73,7 +73,7 @@ const AccountPrivacy = () => {
                 }}
                 className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
             >
-                <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
+                <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[1s%]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p style={{fontWeight:450}}
                             className={`animate__animated animate__fadeInUp lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-bold leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
@@ -81,7 +81,7 @@ const AccountPrivacy = () => {
                             Exclusive <span className='font-medium' >Private Banking Services at Tatum</span>
                         </p>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-1s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Enjoy priority and bespoke banking services, investment options, 
                             wealth management, and dedicated relationship managers to help 
@@ -89,7 +89,7 @@ const AccountPrivacy = () => {
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
                         <a
-                                className={`animate__animated animate__fadeInUp block animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`animate__animated animate__fadeInUp block animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                                 href='#section'
                             >

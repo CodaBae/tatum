@@ -32,7 +32,7 @@
   }
   
   .rolling-text {
-    height: 1.15em;
+    height: 1.3em;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -44,6 +44,8 @@
   .emphasis {
     color: #FFCC33 !important;
     text-align:left;
+
+
   }
   
   .rolling-text span {
@@ -70,8 +72,8 @@
   
   @keyframes slowStop {
     0% { transform: translateY(0); }
-    90% { transform: translateY(-1015%); }
-    100% { transform: translateY(-1015%); }
+    90% { transform: translateY(-1007%); }
+    100% { transform: translateY(-1007%); }
   }
   
   /* Unveil Effect */

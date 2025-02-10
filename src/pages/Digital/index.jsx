@@ -42,13 +42,13 @@ const Digital = () => {
  className='h-full w-full outline-none  lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
                 className='lg:h-[100vh] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
-                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[0px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
                             className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
@@ -57,16 +57,16 @@ const Digital = () => {
                         </p>
                         <p              
 
-                            className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             Whether you're at home, at work, or on the go, our digital banking solutions
                             are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
                         </p>
                         <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                             <button
-                                className={`aanimate__animated animate__fadeInUp animate__delay-2s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`animate__animated animate__fadeInUp animate__delay-06s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})} 
-                                //animate__delay-2s
+                                //animate__delay-06s
                             >
                             <p 
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
@@ -91,7 +91,7 @@ const Digital = () => {
                     </div>
                 </div>
                 <img 
-                    src={Biz} 
+                    src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
                     alt='Biz' 
                     className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28  lm:h-[790px] lg:top-40`} 
                 />
@@ -261,7 +261,7 @@ const Digital = () => {
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
-                        src={Ussd} 
+                        src={'https://res.cloudinary.com/code-idea/image/upload/v1739210500/Group_48095584_1_l56aez.png'} 
                         alt='Ussd' 
                         className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
                     />
@@ -329,7 +329,7 @@ const Digital = () => {
         
                     </div>
                 </div>
-                <img src={Ussd} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+                <img src={'Ussd'} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
