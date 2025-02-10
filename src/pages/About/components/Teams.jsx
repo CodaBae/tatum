@@ -38,7 +38,7 @@ const Teams = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover" 
             }}
-            className="w-full h-[434px] md:h-[793px] flex relative justify-center"
+            className="w-full h-[434px] md:h-[693px] flex relative justify-center"
         > 
             <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
             <div 
