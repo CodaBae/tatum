@@ -220,7 +220,7 @@ const SME = () => {
             backgroundImage: `url(${
               isMobile
                 ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -279,9 +279,9 @@ const SME = () => {
             </div>
           </div>
           <img
-            src={isMobile ? smeHeroImg : smeHeroImg}
+            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[75%] `}
+            className={`animate__animated animate__fadeInRight relative lm:top-[10%] lg:w-[43%] `}
           />
         </div>
       </section>

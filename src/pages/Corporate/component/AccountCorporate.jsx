@@ -70,7 +70,7 @@ const AccountCorporate = () => {
 className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
 <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}

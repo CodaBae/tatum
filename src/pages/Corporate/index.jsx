@@ -79,7 +79,7 @@ const Corporate = () => {
             backgroundImage: `url(${
               isMobile
                 ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -136,9 +136,9 @@ const Corporate = () => {
             </div>
           </div>
           <img
-            src={isMobile ? Chairman : Chairman}
+            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative lm:right-[32%] lm:top-[10%] lg:w-[75%] `}
+            className={`animate__animated animate__fadeInRight relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
           />
         </div>
       </section>

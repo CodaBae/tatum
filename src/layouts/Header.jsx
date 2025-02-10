@@ -801,7 +801,7 @@ const Header = () => {
           )}
         </div>
 
-        {/* Resources */}
+        {/* institutional */}
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="font-grava font-medium text-base text-[#002244] cursor-pointer"

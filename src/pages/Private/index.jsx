@@ -66,7 +66,7 @@ const Private = () => {
             backgroundImage: `url(${
               isMobile
                 ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -125,7 +125,7 @@ const Private = () => {
             </div>
           </div>
           <img
-            src={isMobile ? Golfer : Golfer}
+            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp'}
             alt="Family"
             className={`animate__animated animate__fadeInRight relative -right-10 lm:top-10 mt-24 lm:h-[688px] `}
           />

@@ -141,18 +141,3 @@
 .animate__delay-06s {
     animation-delay: 0.6s !important;
   }
-
-  @keyframes fadeInRightCustom {
-    from {
-      transform: translateX(10%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .animate__fadeInRightCustom {
-    animation: fadeInRightCustom 1s ease-in-out;
-  }

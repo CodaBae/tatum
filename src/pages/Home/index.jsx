@@ -365,7 +365,7 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
                     : ""
                 })`,
                 backgroundRepeat: "no-repeat",
@@ -480,8 +480,8 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                    : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
+                    : "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -560,8 +560,8 @@ const Home = () => {
                   activeIndex === 2
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                } top-6 lg:top-[10] -right-14 md:h-[500px] md:right-56 md:top-16 lg:h-[1000px] lg:top-40 lm:right-[24rem] lg:right-2/4 relative`}
-              />
+                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[30rem] relative`}
+                />
             </div>
           </div>
 
@@ -570,8 +570,8 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
-                    : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
+                    : "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
