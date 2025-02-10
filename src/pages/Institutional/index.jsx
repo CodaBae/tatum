@@ -16,7 +16,7 @@ import Check from "../../assets/svg/check.svg";
 
 
 const Institutional = () => {
-    const [openTabOne, setOpenTabOne] = useState(false)
+    const [openTabOne, setOpenTabOne] = useState(true)
     const [openTabTwo, setOpenTabTwo] = useState(false)
     const [openTabThree, setOpenTabThree] = useState(false)
     const [openTabFour, setOpenTabFour] = useState(false)
@@ -99,7 +99,7 @@ className='lg:h-[100vh] w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                 <p 
                                   className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
-                                    Open a  institutional  account
+                                    Open An  Institutional  Account
                                 </p>
                                 <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 

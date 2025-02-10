@@ -16,7 +16,7 @@ import Cards from "../../assets/png/atm_cards.png";
 
 
 const Private = () => {
-  const [openTabOne, setOpenTabOne] = useState(false)
+  const [openTabOne, setOpenTabOne] = useState(true)
   const [openTabTwo, setOpenTabTwo] = useState(false)
   const [openTabThree, setOpenTabThree] = useState(false)
 
@@ -63,7 +63,7 @@ const Private = () => {
   }, [state]);
 
   return (
-    <div className='w-full overflow-hidden' ref={privateRef}>
+    <div className='w-full overflow-hidden' >
 
       <section 
 
@@ -103,7 +103,7 @@ const Private = () => {
                                 <p 
                                   className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
-                                    Open a private account
+                                    Open a Private Account
                                 </p>
                                 <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
@@ -151,9 +151,9 @@ const Private = () => {
                   </p>
                 </div>
 
-                <p className='font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]' style={{lineHeight:'27px'}}>
-                     Our Expertise Covers:
-                    </p>
+                <p className='font-grava font-semibold text-[#002244] text-center mt-6 lm:text-left text-base lm:text-[18px] leading-[25px] ' style={{lineHeight:'27px'}}>
+                    Our Expertise Covers:
+                </p>
 
                 <button
                   className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[141px] lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'

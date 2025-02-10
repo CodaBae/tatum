@@ -114,7 +114,7 @@ const Personal = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div ref={personalRef} className="overflow-hidden">
+    <div  className="overflow-hidden">
       <section className="h-full w-full outline-none  lg:h-[100vh]">
         <div
           style={{
@@ -163,7 +163,7 @@ const Personal = () => {
       }
     >
       <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-        Open a personal account today
+        Open a Personal Account
       </p>
       <BsArrowRight
         size={100}

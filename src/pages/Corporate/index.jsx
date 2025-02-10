@@ -17,7 +17,7 @@ import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 
 const Corporate = () => {
-  const [openTabOne, setOpenTabOne] = useState(false)
+  const [openTabOne, setOpenTabOne] = useState(true)
   const [openTabTwo, setOpenTabTwo] = useState(false)
   const [openTabThree, setOpenTabThree] = useState(false)
   const [openTabFour, setOpenTabFour] = useState(false)
@@ -116,7 +116,7 @@ const Corporate = () => {
                                 <p 
                                   className='transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
-                                    Open a corporate account
+                                    Open a Corporate Account
                                 </p>
                                 <BsArrowRight size={100}   
                                   className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
