@@ -30,41 +30,39 @@ const PrivacyPolicy = () => {
   const updatesRef = useRef(null);
   const contactRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (tabName === "intro" && introductionRef.current) {
-  //     introductionRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "data" && dataCollectionRef.current) {
-  //     dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "personal" && personalRef.current) {
-  //     personalRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "purpose" && purposeRef.current) {
-  //     purposeRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "sharing" && sharingRef.current) {
-  //     sharingRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "storage" && storageRef.current) {
-  //     storageRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "security" && securityRef.current) {
-  //     securityRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "rights" && rightsRef.current) {
-  //     rightsRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "cookies" && cookiesRef.current) {
-  //     cookiesRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "updates" && updatesRef.current) {
-  //     updatesRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (tabName === "contact" && contactRef.current) {
-  //     contactRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [tabName]);
+  useEffect(() => {
+
+    if (tabName === "data" && dataCollectionRef.current) {
+      dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "personal" && personalRef.current) {
+      personalRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "purpose" && purposeRef.current) {
+      purposeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "sharing" && sharingRef.current) {
+      sharingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "storage" && storageRef.current) {
+      storageRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "security" && securityRef.current) {
+      securityRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "rights" && rightsRef.current) {
+      rightsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "cookies" && cookiesRef.current) {
+      cookiesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "updates" && updatesRef.current) {
+      updatesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (tabName === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [tabName]);
 
   useEffect(() => {
     const sectionRefs = [

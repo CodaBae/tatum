@@ -88,20 +88,18 @@ const About = () => {
 
   const formatNumber = (num) => String(num + 1).padStart(2, "0");
 
-  // useEffect(() => {
-  //   if (state?.section === "about" && aboutRef.current) {
-  //     aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "mission-and-vision" && missionRef.current) {
-  //     missionRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "teams" && teamsRef.current) {
-  //     teamsRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "services" && servicesRef.current) {
-  //     servicesRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+   
+    if (state?.section === "mission-and-vision" && missionRef.current) {
+      missionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "teams" && teamsRef.current) {
+      teamsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "services" && servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   const isMobile = window.innerWidth < 768;
 

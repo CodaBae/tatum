@@ -54,14 +54,14 @@ const AccountCorporate = () => {
         setOpenDropdownThree(!openDropdownThree)
     }
         
-    // useEffect(() => {
-    //     if (state?.section === "faq" && faqRef.current) {
-    //         faqRef.current.scrollIntoView({ behavior: "smooth" });
-    //     }
-    //     if (state?.section === "account" && accountRef.current) {
-    //         accountRef.current.scrollIntoView({ behavior: "smooth" });
-    //     }
-    // }, [state]); 
+    useEffect(() => {
+        if (state?.section === "faq" && faqRef.current) {
+            faqRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (state?.section === "account" && accountRef.current) {
+            accountRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [state]); 
     
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>

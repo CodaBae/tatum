@@ -52,26 +52,24 @@ const Corporate = () => {
     setOpenTabFour(!openTabFour);
   };
 
-  // useEffect(() => {
-  //   if (state?.section === "corporate" && corporateRef.current) {
-  //     corporateRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "treasury" && treasuryRef.current) {
-  //     treasuryRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "trade" && tradeRef.current) {
-  //     tradeRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "faq" && faqRef.current) {
-  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "investment" && investmentRef.current) {
-  //     investmentRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "lending" && lendingRef.current) {
-  //     lendingRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+ 
+    if (state?.section === "treasury" && treasuryRef.current) {
+      treasuryRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "trade" && tradeRef.current) {
+      tradeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "investment" && investmentRef.current) {
+      investmentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "lending" && lendingRef.current) {
+      lendingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div className="w-full overflow-hidden" >

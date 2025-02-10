@@ -193,26 +193,24 @@ const SME = () => {
   const faqRef = useRef(null);
   const { state } = useLocation();
 
-  // useEffect(() => {
-  //   if (state?.section === "business" && smeRef.current) {
-  //     smeRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "account" && accountRef.current) {
-  //     accountRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "loans" && loanRef.current) {
-  //     loanRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "advisory" && advisoryRef.current) {
-  //     advisoryRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "payment" && paymentRef.current) {
-  //     paymentRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   if (state?.section === "faq" && faqRef.current) {
-  //     faqRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+
+    if (state?.section === "account" && accountRef.current) {
+      accountRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "loans" && loanRef.current) {
+      loanRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "advisory" && advisoryRef.current) {
+      advisoryRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "payment" && paymentRef.current) {
+      paymentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   return (
     <div ref={smeRef} className="">
