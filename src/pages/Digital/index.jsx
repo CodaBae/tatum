@@ -194,7 +194,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[894px] flex flex-col gap-[40px] py-[60px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[894px] flex flex-col gap-[40px] py-[60px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
@@ -257,7 +257,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto lg:h-[932px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#fff] md:h-auto lg:h-[932px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
@@ -345,7 +345,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[1023px] flex flex-col gap-[48px] py-[60px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[1023px] flex flex-col gap-[48px] py-[60px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
@@ -408,7 +408,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto lg:h-[705px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'>
+        <section className='bg-[#fff] md:h-auto lg:h-[705px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
