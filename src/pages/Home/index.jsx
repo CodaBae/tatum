@@ -238,7 +238,7 @@ const Home = () => {
         <LandingCarousel
           interval={4000}
           showArrows={false}
-          autoPlay={true}
+          // autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -286,7 +286,7 @@ const Home = () => {
                         activeIndex === 0
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
+                      } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -398,7 +398,7 @@ const Home = () => {
                         activeIndex === 1
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -508,7 +508,7 @@ const Home = () => {
                         activeIndex === 2
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
                       onClick={() =>
                         navigate("/business", {
@@ -598,7 +598,7 @@ const Home = () => {
                         activeIndex === 3
                           ? "animate__animated animate__fadeInUp animate__delay-2s"
                           : ""
-                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                      } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"
                       onClick={() =>
                         navigate("/digital", {
@@ -952,7 +952,7 @@ const Home = () => {
                   Personal
                 </p>
               </div>
-              <div className="transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
+              <div className="transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border-[1.5px] border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
                 <p className="text-[#002244] font-medium font-grava text-sm md:text-base">
                   Home
                 </p>
@@ -1081,7 +1081,7 @@ const Home = () => {
             <div className="w-full bg-[#fff] rounded-2xl gap-[56px] py-[32px] h-[300px] px-4 lg:px-[28px] flex flex-col items-center">
               <div className="flex flex-col items-center gap-6 ">
                 <button
-                  className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg"
+                  className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border-[1.5px] hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg"
                   onClick={() => {
                     navigate("/business", {
                       state: {
