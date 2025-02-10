@@ -129,49 +129,46 @@ const Personal = () => {
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
         >
           <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]">
-          <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-  {/* First Text */}
-  <p
-    style={{ fontWeight: 450 }}
-    className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
-  >
-    Personalized
-    <br /> banking that{" "}
-    <span className="font-bold">
-      keeps
-      <br /> you smiling
-    </span>
-  </p>
+            <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
+              {/* First Text */}
+              <p
+                style={{ fontWeight: 450 }}
+                className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
+                Personalized
+                <br /> banking that{" "}
+                <span className="font-bold">
+                  keeps
+                  <br /> you smiling
+                </span>
+              </p>
 
-  {/* Second Text */}
-  <p
-    className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
-  >
-    Explore tailored solutions that fit your lifestyle, empower{" "}
-    <br></br> your goals, and make banking a joy.
-  </p>
+              {/* Second Text */}
+              <p
+                className={`animate__animated animate__fadeInUp animate__delay-1s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                Explore tailored solutions that fit your lifestyle, empower{" "}
+                <br></br> your goals, and make banking a joy.
+              </p>
 
-  {/* Button */}
-  <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
-    <button
-      className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[300px] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
-      type="button"
-      onClick={() =>
-        navigate("/personal/account", {
-          state: { section: "account" },
-        })
-      }
-    >
-      <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-        Open a Personal Account
-      </p>
-      <BsArrowRight
-        size={100}
-        className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
-      />
-    </button>
-  </div>
-</div>
+              {/* Button */}
+              <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+                <button
+                  className={`animate__animated animate__fadeInUp animate__delay-2s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[2px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  type="button"
+                  onClick={() =>
+                    navigate("/personal/account", {
+                      state: { section: "account" },
+                    })
+                  }>
+                  <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    Open a Personal Account
+                  </p>
+                  <BsArrowRight
+                    size={100}
+                    className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                  />
+                </button>
+              </div>
+            </div>
             <div className="hidden lm:flex items-start absolute lg:bottom-[-31.5%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by
@@ -215,8 +212,7 @@ const Personal = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]"
-        >
+          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Savings Account
@@ -230,14 +226,13 @@ const Personal = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[220px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
-            }
-          >
+            }>
             <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              Get Started
             </p>
             <BsArrowRight
               size={100}
@@ -259,8 +254,7 @@ const Personal = () => {
       >
         <div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
-        >
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Current Account
@@ -275,14 +269,13 @@ const Personal = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
-            }
-          >
+            }>
             <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              Get Started
             </p>
             <BsArrowRight
               size={100}
@@ -314,8 +307,7 @@ const Personal = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]"
-        >
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Fixed Deposits
@@ -330,14 +322,13 @@ const Personal = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[141px] lg:w-[175px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } })
-            }
-          >
+            }>
             <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Learn more
+              Learn More
             </p>
             <BsArrowRight
               size={100}
@@ -384,8 +375,7 @@ const Personal = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div
             data-aos="fade-right"
-            className="flex flex-col items-center md:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]"
-          >
+            className="flex flex-col items-center md:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]">
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">
@@ -405,14 +395,13 @@ const Personal = () => {
               </p>
             </div>
             <button
-              className="transition-all duration-500 ease-in-out bg-[#F2F4F7] w-[350px] lg:w-[257px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
+              className="transition-all duration-500 ease-in-out bg-[#F2F4F7] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
               type="button"
               onClick={() =>
                 navigate("/personal/account", { state: { section: "account" } })
-              }
-            >
+              }>
               <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#98A2B3]">
-                Coming soon
+                Coming Soon
               </p>
               <BsArrowRight
                 size={100}
@@ -452,8 +441,7 @@ const Personal = () => {
         <div className="hidden lg:flex items-center gap-[56px]">
           <div
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("debit")}
-          >
+            onClick={() => handleClickCard("debit")}>
             <img
               src={Debit}
               alt="Debit"
@@ -468,8 +456,7 @@ const Personal = () => {
                     clickedCard === "debit"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}
-                ></div>
+                  } w-6 h-6`}></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Debit cards
@@ -478,8 +465,7 @@ const Personal = () => {
           </div>
           <div
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("credit")}
-          >
+            onClick={() => handleClickCard("credit")}>
             <img
               src={Credit}
               alt="Credit"
@@ -494,8 +480,7 @@ const Personal = () => {
                     clickedCard === "credit"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}
-                ></div>
+                  } w-6 h-6`}></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Credit cards
@@ -504,8 +489,7 @@ const Personal = () => {
           </div>
           <div
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("prepaid")}
-          >
+            onClick={() => handleClickCard("prepaid")}>
             <img
               src={Prepaid}
               alt="Prepaid"
@@ -520,8 +504,7 @@ const Personal = () => {
                     clickedCard === "prepaid"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}
-                ></div>
+                  } w-6 h-6`}></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Prepaid cards
@@ -572,11 +555,10 @@ const Personal = () => {
         </div>
 
         <button
-          className="transition-all duration-500 ease-in-out w-[200px] lg:w-[214px] h-[44px] lg:h-[64px] flex items-center justify-center p-4 border border-[#002244] rounded-tl-lg rounded-br-lg bg-[#002244] group hover:bg-[#fdf7e6]"
+          className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[2px] border-[#002244] rounded-tl-lg rounded-br-lg bg-[#002244] group hover:bg-[#fdf7e6]"
           onClick={() =>
             navigate("/digital", { state: { section: "digital" } })
-          }
-        >
+          }>
           <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
             Get yours today
           </p>
@@ -628,14 +610,13 @@ const Personal = () => {
           </div>
 
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[193px] lg:w-[220px] h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate("/digital", { state: { section: "digital" } })
-            }
-          >
+            }>
             <p className="transition-colors duration-500 ease-in-out font-medium text-sm lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started now
+              Get Started Now
             </p>
             <BsArrowRight
               size={100}
@@ -652,15 +633,13 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="w-full h-[671px] lm:h-[440px] rounded-xl"
-        >
+          className="w-full h-[671px] lm:h-[440px] rounded-xl">
           <div
             className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
             style={{
               backgroundColor: "rgb(244 245 246 / 95%)", // Brighter background with slight transparency
               zIndex: 1, // Ensures content stays above background
-            }}
-          >
+            }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
               <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
                 At Tatum Bank, we are committed to providing you personalized
@@ -670,7 +649,7 @@ const Personal = () => {
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
-                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border hover:border-[#002244] w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[2px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate("/personal/account", {
@@ -678,8 +657,7 @@ const Personal = () => {
                       section: "account",
                     },
                   })
-                }
-              >
+                }>
                 <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   Open an Account
                 </p>
