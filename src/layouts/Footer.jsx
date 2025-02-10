@@ -37,7 +37,7 @@ const Footer = () => {
             onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
 
           >
-            <p className="font-grava text-[#FFCC33] group-hover:text-[#002244]">
+            <p className="font-grava text-[#FFCC33] text-base group-hover:text-[#002244]">
                 Download Form
             </p>
           </button>
