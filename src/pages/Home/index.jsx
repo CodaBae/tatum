@@ -651,8 +651,8 @@ const Home = () => {
         </LandingCarousel>
       </div>
 
-      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
-        <div data-aos="fade-right" className="hidden md:block">
+      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        <div data-aos="fade-right" className="hidden md:block ">
           <img
             src={Boy}
             alt="Boy"
