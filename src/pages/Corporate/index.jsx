@@ -146,7 +146,7 @@ const Corporate = () => {
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[0px] lg:pb-[88px] lg:pr-[110px] ">
+      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}
@@ -257,7 +257,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Talk to an Advisor
+              Talk to an advisor
             </p>
             <BsArrowRight
               size={100}
@@ -327,7 +327,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Talk to an Advisor
+              Talk to an advisor
             </p>
             <BsArrowRight
               size={100}
@@ -388,7 +388,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Start Trading Smarter
+              Start trading smarter
             </p>
             <BsArrowRight
               size={100}
@@ -458,7 +458,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Apply for a Loan Now
+              Apply for a loan now
             </p>
             <BsArrowRight
               size={100}
@@ -520,7 +520,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Partner with Us
+              Partner with us
             </p>
             <BsArrowRight
               size={100}

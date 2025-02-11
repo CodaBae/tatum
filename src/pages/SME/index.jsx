@@ -360,7 +360,7 @@ const SME = () => {
                   navigate("/business/account",window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  Open an Account
+                  Open an account
                 </p>
                 <BsArrowRight
                   size={100}
@@ -379,7 +379,7 @@ const SME = () => {
         className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
         <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
-            <p className="font-grava font-[350] text-center text-[14px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Loan Calculator
             </p>
             <h1 className="font-grava font-[400] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[32px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
@@ -628,7 +628,7 @@ const SME = () => {
                       navigate("/business/account",window.scrollTo(0, 0))
                     }>
                     <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                      Apply Now
+                      Apply now
                     </p>
                     <BsArrowRight
                       size={100}
@@ -725,7 +725,7 @@ const SME = () => {
                   navigate("/business/account",window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  Apply Now
+                  Apply now
                 </p>
                 <BsArrowRight
                   size={100}
@@ -808,7 +808,7 @@ const SME = () => {
                 navigate("/business/account",window.scrollTo(0, 0))
               }className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
                     <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Request a POS System
+                      Request a POS system
                     </p>
                     <BsArrowRight
                       size={100}
@@ -953,7 +953,7 @@ const SME = () => {
                 navigate("/business/account",window.scrollTo(0, 0))
               }className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
                     <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Sign Up Now
+                      Sign up now
                     </p>
                     <BsArrowRight
                       size={100}
@@ -1202,7 +1202,7 @@ const SME = () => {
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
             ">
-                  Open an Account
+                  Open an account
                 </p>
                 <BsArrowRight
                   size={100}
@@ -1350,7 +1350,7 @@ const SME = () => {
                   className="transition-colors duration-500 ease-in-out font-medium 
                         text-sm sm:text-base lg:text-base font-grava 
                         text-[#FFCC33] group-hover:text-[#002244]">
-                  Call Us Today
+                  Call us today
                 </p>
                 <BsArrowRight
                   size={100}

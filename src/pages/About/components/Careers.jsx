@@ -879,7 +879,7 @@ const Careers = () => {
             <div className="flex flex-col justify-center h-[170px] w-[310px] lg:h-[225px] lg:w-[473px]  gap-[32px]">
               <div className="flex flex-col w-[310px] lg:w-[473px] gap-[12px]">
                 <h1 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] lg:text-[50px] lg:leading-[50px] lg:tracking-[0.2%] text-[#ffffff]">
-                  Apply Now!
+                  Apply now!
                 </h1>
                 <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[20px] lg:leading-[26px] lg:tracking-[1.4%] text-[#ffffff]">
                   Join us and take your career to new heights, contributing to a

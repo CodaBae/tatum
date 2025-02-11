@@ -179,7 +179,7 @@ const Private = () => {
             </div>
 
             <p
-              className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+              className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px]  tracking-[1.4%]"
               style={{
                 lineHeight: "27px",
                 marginTop: "2%",
@@ -303,7 +303,7 @@ const Private = () => {
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col lm:flex-row items-center gap-2">
-              <p className="font-grava text-[#334E69] font-medium lm:tracking-[0.25em] uppercase text-sm">
+              <p className="font-grava text-[#334E69] font-medium  uppercase text-sm">
                 Exclusive Banking Benefits
               </p>
               <div className="w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center">
@@ -327,7 +327,7 @@ const Private = () => {
             type="button"
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Sign up for Updates
+              Sign up for updates
             </p>
             <BsArrowRight
               size={100}

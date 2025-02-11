@@ -329,7 +329,7 @@ const Header = () => {
           <div
             onMouseEnter={() => handleMouseEnter("personal")}
             className="block font-grava font-medium text-base text-[#002244] cursor-pointer focus:outline-none"
-            onClick={() => {
+            onClick={() =>{
               navigate("/personal"),
               window.scrollTo(0, 0)
             }}
