@@ -388,7 +388,7 @@ const SME = () => {
 
       {/* LOAN CALCULATOR SECTION */}
 
-      <div
+      {/* <div
         ref={loanRef}
         className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
         <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
@@ -407,7 +407,7 @@ const SME = () => {
                   <fieldset>
                     <legend className="sr-only">Select an Option</legend>
                     <div className="flex items-center">
-                      {/* Personal */}
+                      {/* Personal 
                       <label className="cursor-pointer  mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -425,7 +425,7 @@ const SME = () => {
                         </div>
                       </label>
 
-                      {/* Home */}
+                      {/* Home 
                       <label className="cursor-pointer relative mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -442,7 +442,7 @@ const SME = () => {
                         </div>
                       </label>
 
-                      {/* Car */}
+                      {/* Car 
                       <label className="cursor-pointer relative mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -464,7 +464,7 @@ const SME = () => {
               </div>
               <div className="w-[289px] h-[372px] lg:w-[680px] lg:h-[402px] flex flex-col gap-[48px] ">
                 <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount */}
+                  {/* Label and current amount 
                   <div className="flex justify-between items-center mb-2">
                     <label className="font-semibold text-gray-700">
                       <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
@@ -478,7 +478,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <div className=" relative">
                     <input
                       type="range"
@@ -499,7 +499,7 @@ const SME = () => {
                     />
                   </div>
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -528,7 +528,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <input
                     type="range"
                     min={0}
@@ -545,7 +545,7 @@ const SME = () => {
                     }}
                   />
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -561,7 +561,7 @@ const SME = () => {
                 </div>
 
                 <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount */}
+                  {/* Label and current amount 
                   <div className="flex justify-between items-center mb-2">
                     <label className="font-semibold text-gray-700">
                       <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
@@ -575,7 +575,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <input
                     type="range"
                     min={0}
@@ -592,7 +592,7 @@ const SME = () => {
                     }}
                   />
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -663,7 +663,7 @@ const SME = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
         <div

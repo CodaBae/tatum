@@ -10,11 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules"; // Updated import
 import "swiper/css";
 import "swiper/css/pagination";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import Family from "../../assets/png/family.png";
-import Phone from "../../assets/png/phone.png";
-import Smile from "../../assets/png/smile.png";
-import Teach from "../../assets/png/teach.png";
 import Boy from "../../assets/png/boy.png";
 import Girl from "../../assets/png/girl.png";
 import Farmer from "../../assets/png/farmer.png";
@@ -40,11 +37,12 @@ import Online from "../../assets/svg/online.svg";
 import Arrow from "../../assets/svg/arrow_forward.svg";
 
 import "./css/CardEffect.css";
+import "./css/CardEffectMain.css";
 import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
-import { useLocation, useNavigate } from "react-router-dom";
+
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -52,83 +50,187 @@ const Home = () => {
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
 
+  const [currdeg, setCurrdeg] = useState(0);
+  const [isManualTransition, setIsManualTransition] = useState(false);
+  const [isPageVisible, setIsPageVisible] = useState(true);
+
   const formatter = new Intl.NumberFormat("en-US");
 
   const navigate = useNavigate();
 
-  const homeRef = useRef(null);
-  const { state } = useLocation();
+  const carouselRef = useRef(null);
+  const autoplayInterval = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startRotation = useRef(0);
+  const currdegRef = useRef(currdeg);
 
-  //   useEffect(() => {
-  //     if (state?.section === "home" && homeRef.current) {
-  //       homeRef.current.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }, [state]);
+  // Keep currdegRef in sync with state
+  useEffect(() => {
+    currdegRef.current = currdeg;
+  }, [currdeg]);
+
+  const updateRotation = (deg) => {
+    // Rotation is handled via style prop
+  };
+
+  const startAutoplay = () => {
+    if (!autoplayInterval.current && isPageVisible) {
+      setIsManualTransition(false);
+      autoplayInterval.current = setInterval(() => {
+        const newDeg = currdegRef.current - 0.3;
+        currdegRef.current = newDeg;
+        setCurrdeg(newDeg);
+      }, 16);
+    }
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayInterval.current) {
+      clearInterval(autoplayInterval.current);
+      autoplayInterval.current = null;
+    }
+  };
+
+  // Autoplay setup
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
+  }, []);
+
+  // Visibility change handler
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const visible = !document.hidden;
+      setIsPageVisible(visible);
+      
+      if (visible) {
+        if (!isDragging.current) {
+          setTimeout(() => {
+            setIsManualTransition(false);
+            startAutoplay();
+          }, 100);
+        }
+      } else {
+        stopAutoplay();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Mouse handlers
+  const handleRotate = (direction) => {
+    const newDeg = direction === 'n' ? currdeg - 60 : currdeg + 60;
+    setIsManualTransition(true);
+    setCurrdeg(newDeg);
+  };
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.pageX;
+    startRotation.current = currdegRef.current;
+    setIsManualTransition(false);
+
+    const handleMouseMove = (e) => {
+      if (!isDragging.current) return;
+      const dragDistance = e.pageX - startX.current;
+      const newDeg = startRotation.current + (dragDistance / 5);
+      setCurrdeg(newDeg);
+    };
+
+    const handleMouseUp = () => {
+      isDragging.current = false;
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseleave', handleMouseUp);
+      setIsManualTransition(true);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mouseleave', handleMouseUp);
+  };
+
+  const handleMouseEnterOrDown = () => {
+    stopAutoplay();
+  };
+
+  const handleMouseLeave = () => {
+    if (!isDragging.current && isPageVisible) {
+      setIsManualTransition(false);
+      startAutoplay();
+    }
+  };
+
 
   const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
 
-  const carouselRef = useRef(null);
-  const angleRef = useRef(0);
-  const isDraggingRef = useRef(false);
-  const startXRef = useRef(0);
+  // const carouselRef = useRef(null);
+  // const angleRef = useRef(0);
+  // const isDraggingRef = useRef(false);
+  // const startXRef = useRef(0);
 
   // Auto scroll
-  useEffect(() => {
-    const autoScrollInterval = setInterval(() => {
-      angleRef.current += 0.5; // Adjust auto-scroll speed
-      if (carouselRef.current) {
-        carouselRef.current.style.transition = "transform 0.3s ease";
-        carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-      }
-    }, 30); // Adjust interval for speed
+  // useEffect(() => {
+  //   const autoScrollInterval = setInterval(() => {
+  //     angleRef.current += 0.5; // Adjust auto-scroll speed
+  //     if (carouselRef.current) {
+  //       carouselRef.current.style.transition = "transform 0.3s ease";
+  //       carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //     }
+  //   }, 30); // Adjust interval for speed
 
-    return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
-  }, []);
+  //   return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
+  // }, []);
 
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    isDraggingRef.current = true;
-    startXRef.current = e.clientX || e.touches[0].clientX;
+  // const handleMouseDown = (e) => {
+  //   e.preventDefault();
+  //   isDraggingRef.current = true;
+  //   startXRef.current = e.clientX || e.touches[0].clientX;
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-    document.addEventListener("touchmove", handleMouseMove, { passive: false });
-    document.addEventListener("touchend", handleMouseUp);
-  };
+  //   document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mouseup", handleMouseUp);
+  //   document.addEventListener("touchmove", handleMouseMove, { passive: false });
+  //   document.addEventListener("touchend", handleMouseUp);
+  // };
 
-  const handleMouseMove = (e) => {
-    if (!isDraggingRef.current) return;
-    e.preventDefault();
+  // const handleMouseMove = (e) => {
+  //   if (!isDraggingRef.current) return;
+  //   e.preventDefault();
 
-    const currentX = e.clientX || e.touches[0].clientX;
-    const deltaX = currentX - startXRef.current;
-    angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
+  //   const currentX = e.clientX || e.touches[0].clientX;
+  //   const deltaX = currentX - startXRef.current;
+  //   angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
 
-    startXRef.current = currentX;
+  //   startXRef.current = currentX;
 
-    if (carouselRef.current) {
-      carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-      carouselRef.current.style.transition = "none";
-    }
-  };
+  //   if (carouselRef.current) {
+  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //     carouselRef.current.style.transition = "none";
+  //   }
+  // };
 
-  const handleMouseUp = () => {
-    isDraggingRef.current = false;
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
-    document.removeEventListener("touchmove", handleMouseMove);
-    document.removeEventListener("touchend", handleMouseUp);
-  };
+  // const handleMouseUp = () => {
+  //   isDraggingRef.current = false;
+  //   document.removeEventListener("mousemove", handleMouseMove);
+  //   document.removeEventListener("mouseup", handleMouseUp);
+  //   document.removeEventListener("touchmove", handleMouseMove);
+  //   document.removeEventListener("touchend", handleMouseUp);
+  // };
 
-  const handleWheel = (e) => {
-    e.preventDefault();
-    angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
+  // const handleWheel = (e) => {
+  //   e.preventDefault();
+  //   angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
 
-    if (carouselRef.current) {
-      carouselRef.current.style.transition = "transform 0.3s ease";
-      carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-    }
-  };
+  //   if (carouselRef.current) {
+  //     carouselRef.current.style.transition = "transform 0.3s ease";
+  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //   }
+  // };
 
   const settings = {
     // dots: true,
@@ -232,17 +334,17 @@ const Home = () => {
 
   return (
     <div
-      ref={homeRef}
+  
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden"
     >
       <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
-          // autoPlay={true}
+          autoPlay={true}
           showIndicators={false}
           showStatus={false}
-          showThumbs={true}
+          showThumbs={false}
           infiniteLoop={true}
           onChange={handleSlideChange}
           animationHandler={fadeAnimationHandler} // Use the custom fade animation
@@ -346,7 +448,7 @@ const Home = () => {
                     </p>
                     <p className="flex items-center gap-2">
                       All deposits are insured by
-                      <div className="">
+                      <div className="lm:w-[70px]">
                         <img
                           src={NDIC}
                           alt="NDIC"
@@ -1008,16 +1110,80 @@ const Home = () => {
           </p>
         </div>
         {/* Desktop Card Layout */}
-        {/* <div className='lm:flex items-center justify-center relative gap-4 hidden group transition'>
-               <img src={BlackCard} alt="BlackCard" className='w-[240px] h-[360px]' />
-               <img src={GreyCard} alt="GreyCard" className='w-[240px] h-[360px]' />
-               <img src={SilverCard} alt="SilverCard" className='w-[240px] h-[360px]' />
-               <img src={YellowCard} alt="YellowCard" className='w-[240px] h-[360px]' />
-               <img src={WhiteCard} alt="WhiteCard" className='w-[240px] h-[360px]' />
-            </div> */}
 
         {/* Rotating Card Effect (Desktop Only) */}
-        <div
+
+        <div className="hidden lg:flex items-center justify-center">
+          <div className="container">
+            <div 
+              // className="carousel"
+              ref={carouselRef}
+              className={`carousel ${isManualTransition ? 'manual-transition' : ''}`}
+              onMouseDown={handleMouseDown}
+              onMouseEnter={handleMouseEnterOrDown}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: `rotateY(${currdeg}deg)`,
+                WebkitTransform: `rotateY(${currdeg}deg)`,
+                MozTransform: `rotateY(${currdeg}deg)`,
+                OTransform: `rotateY(${currdeg}deg)`,
+              }}
+            >
+                <div className="item a">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-1_q0ryzg.png"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-1-back"/>
+                    </div>
+                </div>
+                <div className="item b">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-3_xw0eq3.png" alt="card-2-front"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png"/>
+                    </div>
+                </div>
+                <div className="item c">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-2_yctunv.png"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-3-back"/>
+                    </div>
+                </div>
+                <div className="item d">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-5_imctz0.png" alt="card-4-front"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-4-back"/>
+                    </div>
+                </div>
+                <div className="item e">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-1_q0ryzg.png" alt="card-5-front"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-5-back"/>
+                    </div>
+                </div>
+                <div className="item f">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-2_yctunv.png" alt="card-6-front"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png"/>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div className="next">Next</div>
+          <div className="prev">Prev</div>
+        </div>
+
+        {/* <div
           className="hidden lg:flex items-center justify-center"
           style={{ perspective: "2000px" }}
         >
@@ -1048,7 +1214,7 @@ const Home = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile */}
         <div className="lm:hidden w-full">
@@ -1111,7 +1277,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
+      {/* <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
         <div className="flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3">
           <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
             Loan Calculator
@@ -1293,7 +1459,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="bg-[#FFFFFF] flex flex-col items-center px-5 lg:px-[55px] py-[72px] lg:h-[996px] gap-[60px]"
@@ -1559,49 +1725,50 @@ const Home = () => {
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                Loan calculator
+                Help and Support
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Easily calculate loan eligibility according to your current
-                salary.
+                Need help? Send us an email at <a href="info@tatumbank.com." className="underline">info@tatumbank.com.</a>
+                {" "}Our team is always on standby to assist, and resolve any issues.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
+              href="mailto:info@tatumbank.com."
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Try our loan calculator
+                Send an Email
               </p>
-            </button>
+            </a>
           </SwiperSlide>
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                FX Market Rate
+                Contact Us
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Stay updated with real-time FX rates and make smarter, timely
-                decisions in the global market.
+                Get in touch with us.
+                Our dedicated support team is available to assist you with any concerns. 
+                We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
+              href="mailto:info@tatumbank.com."
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check our FX rates
+                Send an Email
               </p>
-            </button>
+            </a>
           </SwiperSlide>
         </Swiper>
         {/* Tablets and Desktop Card Layout*/}
@@ -1748,71 +1915,51 @@ const Home = () => {
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                Loan calculator
+                Help & Support
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Easily calculate loan eligibility according to your current
-                salary.
+                Need help? Send us an email at <a href="mailto:info@tatumbank.com." className="underline">info@tatumbank.com.</a> 
+                {" "}Our team is always on standby to assist, and resolve any issues.
               </p>
             </div>
-            <button
-              className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+            <a
+              className="absolute  bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
-              onClick={() => {
-                navigate(
-                  "/digital",
-                  {
-                    state: {
-                      section: "digital",
-                    },
-                  },
-                  window.scrollTo(0, 0)
-                );
-              }}
+              href="mailto:info@tatumbank.com"
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Try our loan calculator
+                Send an Email
               </p>
-            </button>
+            </a>
           </div>
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                FX Market Rate
+                Contact Us
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Stay updated with real-time FX rates and make smarter, timely
-                decisions in the global market.
+                Get in touch with us.
+                Our dedicated support team is available to assist you with any concerns. 
+                We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
-              onClick={() => {
-                navigate(
-                  "/digital",
-                  {
-                    state: {
-                      section: "digital",
-                    },
-                  },
-                  window.scrollTo(0, 0)
-                );
-              }}
+              href="mailto:info@tatumbank.com"
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check our FX rates
+                Send an Email
               </p>
-            </button>
+            </a>
           </div>
         </div>
       </div>

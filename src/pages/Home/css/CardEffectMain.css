@@ -1,0 +1,92 @@
+
+/* body {
+    padding: 70px 0;
+} */
+.container {
+    margin: 0 auto;
+    width: 400px;
+    height: 320px;
+    position: relative;
+    perspective: 1500px;
+    cursor: grab;
+}
+.carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.carousel.manual-transition {
+    transition: transform 1s;
+}
+.item {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 251px;
+    line-height: 320px;
+    text-align: center;
+    opacity: 1;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+.card-front {
+    z-index: 2;
+}
+.card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.a {
+    transform: rotateY(0deg) translateZ(400px);
+}
+.b {
+    transform: rotateY(60deg) translateZ(400px);
+}
+.c {
+    transform: rotateY(120deg) translateZ(400px);
+}
+.d {
+    transform: rotateY(180deg) translateZ(400px);
+}
+.e {
+    transform: rotateY(240deg) translateZ(400px);
+} 
+.f {
+    transform: rotateY(300deg) translateZ(400px);
+}
+.next, .prev {
+    color: #444;
+    position: absolute;
+    top: 150px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #CCC;
+    border-radius: 5px;
+    border-top: 1px solid #FFF;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+    display: none;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+    top: 154px;
+    box-shadow: 0 1px 0 #999;
+}
+.next { right: 5em; }
+.prev { left: 5em; }
