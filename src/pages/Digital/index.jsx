@@ -72,7 +72,7 @@ const Digital = () => {
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 onClick={() => {navigate("/personal/account");window.scrollTo(0, 0)}}
                             >
-                                Get started
+                                Get Started
                             </p>
                             <BsArrowRight size={100}  
                                 className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
