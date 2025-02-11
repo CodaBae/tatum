@@ -49,7 +49,33 @@ const Header = () => {
   const isScrolling = useRef(false);
 
   const navigate = useNavigate();
-
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isScrolling.current) return;
+      
+      isScrolling.current = true;
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const scrollDirection = currentScrollY > lastScrollYRef.current ? 'down' : 'up';
+  
+        if (currentScrollY <= 0) {
+          setVisible(true);
+        } else {
+          if (scrollDirection === 'down' && currentScrollY > 100 && visible) {
+            setVisible(false);
+          } else if (scrollDirection === 'up' && !visible) {
+            setVisible(true);
+          }
+        }
+  
+        lastScrollYRef.current = currentScrollY;
+        isScrolling.current = false;
+      });
+    };
+  
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visible]);
   // useEffect(() => {
   //   const handleScroll = () => {
   //     // Return early if already processing a scroll
