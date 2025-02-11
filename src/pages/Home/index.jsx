@@ -238,7 +238,7 @@ const Home = () => {
         <LandingCarousel
           interval={5000}
           showArrows={false}
-          autoPlay={true}
+          //autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -355,7 +355,7 @@ const Home = () => {
                   activeIndex === 0
                     ? "animate__animated animate__fadeInRight "
                     : ""
-                } relative  md:right-14  bottom-0 lm:right-24   md:h-[28px] relative lg:right-[35%] lg:top-[0%]  lm:h-[55vh]`}
+                } relative  md:right-14  bottom-0 lm:right-24   md:h-[28px] relative lg:right-[35%] lg:top-[0%]  lm:h-[65vh]`}
               />
             </div>
           </div>
