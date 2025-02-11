@@ -42,11 +42,11 @@ const Contact = () => {
         >
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-auto lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -79,14 +79,29 @@ const Contact = () => {
               </p>
             </div>
                 </div>
-                <img 
-                    src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}
-                    alt='Biz' 
-                    className={`animate__animated  relative -left-2 lm:right-28 w-[786px]  lm:h-[811px] lg:top-20`} 
-                    data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-                />
+                {
+                    isMobile ? 
+                    <div className='w-[400px]'>
+                        <img 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1739285563/woman-laughing-while-talking-phone_1_zjuqzz.png"
+                            alt='Biz' 
+                            className={`animate__animated  relative left-2  h-[500px] top-24   `} 
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                            data-aos-once="false"
+                        />
+                    </div>
+                    :
+                    <img 
+                        src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}
+                        alt='Biz' 
+                        className={`animate__animated  relative -left-2 lm:right-28 w-[786px]   lm:h-[811px] lg:top-20`} 
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-once="false"
+                    />
+
+                }
             </div>
         </section>
 

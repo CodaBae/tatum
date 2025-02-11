@@ -54,7 +54,7 @@ className='h-full w-full outline-none '>
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover"
           }}
-          className='h-auto lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -64,7 +64,7 @@ className='h-full w-full outline-none '>
                       Help & Support
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       If you require any assistance regarding our company, businesses or exploits, 
                       please don’t hesitate to contact us..
@@ -93,14 +93,29 @@ className='h-full w-full outline-none '>
             
           </div>
 
-          <img 
-            src="https://res.cloudinary.com/code-idea/image/upload/v1739213447/hands_ibmssy.png"
-            alt='Biz' 
-            className={`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ? 
+            <div className='w-[450px]'>
+              <img 
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"
+                alt='Biz' 
+                className={`animate__animated  relative -right-2 lm:right-52 lm:h-[741px] -top-12`} 
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img 
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739213447/hands_ibmssy.png"
+              alt='Biz' 
+              className={`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+            />
+          }
+
         </div>
       </section>
 
