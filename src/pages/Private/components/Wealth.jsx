@@ -605,7 +605,7 @@ const Wealth = () => {
             data-aos-duration="3000" 
             className='flex flex-col items-center justify-center gap-[32px] lg:gap-[56px] w-full px-5 lg:px-[56px]'
         >
-            <p className='text-[#002244] font-grava font-medium text-[24px] lg:text-[48px]'>Get Started in 3 Easy Steps</p>
+            <p className='text-[#002244] font-grava font-medium text-[24px] lg:text-[48px]'>Get started in 3 Easy Steps</p>
             <div className='w-full flex flex-col md:flex-row item-center gap-5'>
                 <div className='bg-[#F9FAFB] md:w-4/12 lg:w-[429px] h-[270px] rounded-[24px] flex flex-col items-center justify-center gap-[41px]'>
                     <img src={One} alt='One' className='w-[25px]' />

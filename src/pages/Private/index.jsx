@@ -200,7 +200,7 @@ const Private = () => {
               }}
             >
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-                Get Started
+                Get started
               </p>
               <BsArrowRight
                 size={100}
@@ -274,7 +274,7 @@ const Private = () => {
             }}
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get Started
+              Get started
             </p>
             <BsArrowRight
               size={100}

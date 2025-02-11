@@ -72,7 +72,7 @@ const Digital = () => {
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 onClick={() => {navigate("/personal/account");window.scrollTo(0, 0)}}
                             >
-                                Get Started
+                                Get started
                             </p>
                             <BsArrowRight size={100}  
                                 className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
@@ -322,7 +322,7 @@ const Digital = () => {
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
-                                    Dial *365# to Get Started!
+                                    Dial *365# to Get started!
                                 </p>
                             </div>
                         </div>
