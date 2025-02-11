@@ -238,7 +238,7 @@ const Home = () => {
         <LandingCarousel
           interval={5000}
           showArrows={false}
-          //autoPlay={true}
+          autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -469,7 +469,7 @@ const Home = () => {
                   activeIndex === 1
                     ? "animate__animated animate__zoomIn   animate__slow"
                     : ""
-                } object-cover   md:right-36 lm:right-[20rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                } object-cover   md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
                 // animate__delay-06s
               />
             </div>
