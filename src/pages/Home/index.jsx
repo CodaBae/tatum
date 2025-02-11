@@ -353,17 +353,15 @@ const Home = () => {
                 </div>
               </div>
               <img
-                data-aos="fade-left"
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
-                alt="Family"
-                // style={{
-                //     display: isMobile ? "none" : "flex"
-                // }}
-
-                className={`${
-                  activeIndex === 0 ? "animate__animated " : ""
-                } relative  md:right-14  bottom-0 lm:right-24   md:h-[28px] relative lg:right-[25%] lg:top-[3.5%]  lm:h-[80vh]`}
-              />
+    data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-once="false" 
+    src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
+    alt="Family"
+    className={`${
+        activeIndex === 0 ? "animate__animated " : ""
+    } relative md:right-14 bottom-0 lm:right-24 md:h-[28px] relative lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+/>
             </div>
           </div>
 
@@ -991,14 +989,14 @@ const Home = () => {
           }}
         >
           <p className="transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base">
-            Choose Your Tatum Card
+            Choose your Tatum Card
           </p>
         </button>
       </div>
 
       <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
         <div className="flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3">
-          <p className="font-grava text-[#002244] text-sm lg:text-[18px]">
+        <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
             Loan Calculator
           </p>
           <p className="font-grava text-[#002244] text-[24px] lg:text-[48px] whitespace-nowrap font-medium ">
@@ -1026,10 +1024,10 @@ const Home = () => {
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <p className="font-semibold text-[#00224] font-grava text-base lg:text-[18px]">
+                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]">
                   Loan amount
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   NGN {loanAmount.toLocaleString()}
                 </p>
               </div>
@@ -1048,20 +1046,20 @@ const Home = () => {
                 className="custom-slider"
               />
               <div className="flex items-center justify-between">
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   NGN 10,000
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   NGN 1,500,000
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <p className="font-semibold text-[#00224] font-grava text-base lg:text-[18px]">
+                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]">
                   You want to re-pay it over
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   {repay.toLocaleString()} Months
                 </p>
               </div>
@@ -1079,20 +1077,20 @@ const Home = () => {
                 className="custom-slider"
               />
               <div className="flex items-center justify-between">
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   3 Months
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   48 Months
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <p className="font-semibold text-[#00224] font-grava text-base lg:text-[18px]">
+                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]">
                   Interest Rate
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   {interest.toLocaleString()}%
                 </p>
               </div>
@@ -1110,10 +1108,10 @@ const Home = () => {
                 className="custom-slider"
               />
               <div className="flex items-center justify-between">
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   4%
                 </p>
-                <p className="text-sm lg:text-[18px] font-grava text-[#546B82]">
+                <p className="text-sm lg:text-[18px] font-grava text-[#002244]">
                   24%
                 </p>
               </div>
@@ -1122,19 +1120,19 @@ const Home = () => {
           <div className="w-full flex flex-col items-center gap-5 lg:w-[580px]">
             <div className="lg:w-[580px] w-full bg-[#fff] rounded-2xl h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 md:gap-24 lg:gap-0 md:justify-center lg:justify-between items-center">
               <div className="flex flex-col gap-4">
-                <p className="font-semibold text-[#00224] font-grava text-base lg:text-[18px]">
+                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]" style={{color:'#002244'}}>
                   Monthly Payments
                 </p>
-                <p className="text-base lg:text-[18px] font-grava text-center text-[#546B82]">
+                <p className="text-base lg:text-[18px] font-grava text-center text-[#002244]">
                   NGN 50,000
                 </p>
               </div>
               <div className="w-[1px] h-[120px] bg-[#D0D5DD]"></div>
               <div className="flex flex-col gap-4">
-                <p className="font-semibold text-[#00224] font-grava text-base lg:text-[18px]">
+                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]" style={{color:'#002244'}}>
                   Total Payments
                 </p>
-                <p className="text-base lg:text-[18px] font-grava text-center text-[#546B82]">
+                <p className="text-base lg:text-[18px] font-grava text-center text-[#002244]">
                   NGN 50,000
                 </p>
               </div>
@@ -1165,7 +1163,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col gap-[32px]">
                 <div className="lg:w-[532px] w-full h-[1px] bg-[#E6E9EC]"></div>
-                <p className="font-grava text-[#546B82] text-center text-sm">
+                <p className="font-grava text-[#002244] text-center text-sm">
                   Terms & conditions applied. Actual installments may differ.
                 </p>
               </div>
@@ -1207,7 +1205,17 @@ const Home = () => {
               Tatum Bank is set to launch this February, offering a fresh
               approach to traditional banking with digital tools ...
             </p>
-            <p className="text-[#546B82] font-grava cursor-pointer text-sm underline">
+            <p onClick={() => {
+            navigate(
+              "/resources",
+              {
+                state: {
+                  section: "resources",
+                },
+              },
+              window.scrollTo(0, 0)
+            );
+          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
               Learn more
             </p>
           </div>
@@ -1227,7 +1235,17 @@ const Home = () => {
             <p className="text-sm lg:text-base text-[#667085] font-grava leading-[24px]">
               Actionable insights and advice tailored for the growth of SMEs
             </p>
-            <p className="text-[#546B82] font-grava cursor-pointer text-sm underline">
+            <p onClick={() => {
+            navigate(
+              "/resources",
+              {
+                state: {
+                  section: "resources",
+                },
+              },
+              window.scrollTo(0, 0)
+            );
+          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
               Learn more
             </p>
           </div>
@@ -1248,7 +1266,17 @@ const Home = () => {
               Tatum Bank officially opens its doors with a new branch,
               furthering financing inclusion in Eti Osa. Check out the...
             </p>
-            <p className="text-[#546B82] font-grava cursor-pointer text-sm underline">
+            <p onClick={() => {
+            navigate(
+              "/resources",
+              {
+                state: {
+                  section: "resources",
+                },
+              },
+              window.scrollTo(0, 0)
+            );
+          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
               See photos
             </p>
           </div>
@@ -1269,7 +1297,7 @@ const Home = () => {
           }}
         >
           <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
-            Explore Our Resource Center
+            Explore our resource center
           </p>
         </button>
       </div>
