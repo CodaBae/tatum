@@ -106,7 +106,7 @@ const Corporate = () => {
                   onClick={() =>
                     navigate("/corporate/account", {
                       state: { section: "account" },
-                    })
+                    },window.scrollTo(0, 0))
                   }>
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Corporate Account
@@ -172,7 +172,7 @@ const Corporate = () => {
               onClick={() =>
                 navigate("/corporate/account", {
                   state: { section: "account" },
-                })
+                },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Open a Corporate Account
@@ -189,7 +189,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Open a Corporate Account
@@ -251,7 +251,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
@@ -321,7 +321,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an Advisor
@@ -382,7 +382,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start Trading Smarter
@@ -452,7 +452,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for a Loan Now
@@ -514,7 +514,7 @@ const Corporate = () => {
             onClick={() =>
               navigate("/corporate/account", {
                 state: { section: "account" },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with Us

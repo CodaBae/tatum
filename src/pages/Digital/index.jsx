@@ -65,12 +65,12 @@ const Digital = () => {
                         <div className='flex items-center mt-[32px] lg:mt-[12px] gap-3'>
                             <button
                                 className={`animate__animated animate__fadeInUp animate__delay-06s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})} 
+                                type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))} 
                                 //animate__delay-06s
                             >
                             <p 
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                onClick={() => navigate("/personal/account")}
+                                onClick={() => {navigate("/personal/account");window.scrollTo(0, 0)}}
                             >
                                 Get started
                             </p>
@@ -121,7 +121,7 @@ const Digital = () => {
                         
                         <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -167,7 +167,7 @@ const Digital = () => {
                     </div>
                     <button
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
-                        type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                        type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                         <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -186,7 +186,7 @@ const Digital = () => {
                 </div>
                 <button
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[4px] w-[159px] lm:w-[189px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
-                    type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                    type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
@@ -279,7 +279,7 @@ const Digital = () => {
                         
                         <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -400,7 +400,7 @@ const Digital = () => {
                 <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
                 <button
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[8px] w-[159px] lm:w-[174px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
-                    type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                    type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
                     <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
@@ -430,7 +430,7 @@ const Digital = () => {
                         
                         <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to Internet Banking</p>
                             <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -500,7 +500,7 @@ const Digital = () => {
                         </div>
                         <button
                             className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[228px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}})}
+                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                         <p 
                             className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'

@@ -91,7 +91,7 @@ const Institutional = () => {
                   onClick={() =>
                     navigate("/institutional/account", {
                       state: { section: "account" },
-                    })
+                    },window.scrollTo(0, 0))
                   }>
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open an Institutional Account
@@ -164,7 +164,7 @@ const Institutional = () => {
                   state: {
                     section: "account",
                   },
-                })
+                },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Get Started
@@ -250,7 +250,7 @@ const Institutional = () => {
                 state: {
                   section: "account",
                 },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get started
@@ -292,7 +292,7 @@ const Institutional = () => {
                   state: {
                     section: "account",
                   },
-                })
+                },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Talk to Our Relationship Managers
@@ -378,7 +378,7 @@ const Institutional = () => {
                 state: {
                   section: "account",
                 },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to Our Relationship Managers
@@ -529,7 +529,7 @@ const Institutional = () => {
                     state: {
                       section: "contact",
                     },
-                  })
+                  },window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   Contact Us

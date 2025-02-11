@@ -225,7 +225,7 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } })
+              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -267,7 +267,7 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } })
+              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -319,7 +319,7 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } })
+              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Learn More
@@ -391,7 +391,7 @@ const Personal = () => {
               className="transition-all duration-500 ease-in-out bg-[#F2F4F7] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
               type="button"
               onClick={() =>
-                navigate("/personal/account", { state: { section: "account" } })
+                navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#98A2B3]">
                 Coming Soon
@@ -550,7 +550,7 @@ const Personal = () => {
         <button
           className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[2px] border-[#002244] rounded-tl-lg rounded-br-lg bg-[#002244] group hover:bg-[#fdf7e6]"
           onClick={() =>
-            navigate("/digital", { state: { section: "digital" } })
+            navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           }>
           <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
             Get Yours Today
@@ -605,7 +605,7 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/digital", { state: { section: "digital" } })
+              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started Now
@@ -644,11 +644,7 @@ const Personal = () => {
                 className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
-                  navigate("/personal/account", {
-                    state: {
-                      section: "account",
-                    },
-                  })
+                  navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   Open an Account

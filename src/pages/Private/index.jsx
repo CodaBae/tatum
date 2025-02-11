@@ -14,9 +14,9 @@ import Airplane from "../../assets/png/airplane.png";
 import Cards from "../../assets/png/atm_cards.png";
 
 const Private = () => {
-  const [openTabOne, setOpenTabOne] = useState(true)
-  const [openTabTwo, setOpenTabTwo] = useState(false)
-  const [openTabThree, setOpenTabThree] = useState(false)
+  const [openTabOne, setOpenTabOne] = useState(true);
+  const [openTabTwo, setOpenTabTwo] = useState(false);
+  const [openTabThree, setOpenTabThree] = useState(false);
 
   const isTab = window.innerWidth < 1028;
   const isMobile = window.innerWidth < 768;
@@ -43,7 +43,6 @@ const Private = () => {
   };
 
   useEffect(() => {
-
     if (state?.section === "wealth" && wealthRef.current) {
       wealthRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -74,16 +73,18 @@ const Private = () => {
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
-            <div className="flex w-full flex-col items-start gap-2 lg:gap-5 " >
+            <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+              >
                 Exclusive. Personalized.{" "}
                 <span className="font-bold ">Exceptional </span>
               </p>
               <p
                 //
-                className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+              >
                 With privileged access to premium banking services, bespoke
                 investment strategies, and the prestige of Tatum Private
                 Banking, we keep you smiling—every step of the way.
@@ -92,11 +93,16 @@ const Private = () => {
                 <button
                   className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
-                  onClick={() =>
-                    navigate("/private/account", {
-                      state: { section: "account" },
-                    })
-                  }>
+                  onClick={() => {
+                    navigate(
+                      "/private/account",
+                      {
+                        state: { section: "account" },
+                      },
+                      window.scrollTo(0, 0)
+                    );
+                  }}
+                >
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Open a Private Account
                   </p>
@@ -125,7 +131,11 @@ const Private = () => {
             </div>
           </div>
           <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp'}
+            src={
+              isMobile
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
+            }
             alt="Family"
             className={`animate__animated animate__fadeInRight relative -right-10 lm:top-10 mt-24 lm:h-[688px] `}
           />
@@ -134,7 +144,8 @@ const Private = () => {
 
       <div
         ref={wealthRef}
-        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[110px] lg:pb-[88px]  lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[110px] lg:pb-[88px]  lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Dining}
@@ -144,7 +155,8 @@ const Private = () => {
         </div>
         <div
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
-          data-aos="fade-left">
+          data-aos="fade-left"
+        >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Wealth Management Advisory
@@ -165,21 +177,28 @@ const Private = () => {
 
             <p
               className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-              style={{ lineHeight: "27px",     marginTop: '2%',
-              marginBottom: '-2%' }}>
+              style={{
+                lineHeight: "27px",
+                marginTop: "2%",
+                marginBottom: "-2%",
+              }}
+            >
               Our Expertise Covers:
             </p>
 
             <button
               className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] px-5 lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
-              onClick={() =>
-                navigate("/private/account", {
-                  state: {
-                    section: "account",
+              onClick={() => {
+                navigate(
+                  "/private/account",
+                  {
+                    state: { section: "account" },
                   },
-                })
-              }>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Get Started
               </p>
@@ -194,7 +213,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Portfolio Management{" "}
                   <span className="font-[300]  ">
                     – Tailored investment strategies for sustainable growth.
@@ -205,7 +225,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Estate & Legacy Planning{" "}
                   <span className="font-[300] ">
                     – Secure your legacy with expert guidance.
@@ -216,7 +237,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Real Estate Advisory{" "}
                   <span className="font-[300] ">
                     – Strategic insights for profitable investments.
@@ -227,7 +249,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Alternative Investments{" "}
                   <span className="font-[300] ">
                     – Access exclusive opportunities in private equity, hedge
@@ -240,13 +263,16 @@ const Private = () => {
           <button
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
             type="button"
-            onClick={() =>
-              navigate("/private/account", {
-                state: {
-                  section: "account",
+            onClick={() => {
+              navigate(
+                "/private/account",
+                {
+                  state: { section: "account" },
                 },
-              })
-            }>
+                window.scrollTo(0, 0)
+              );
+            }}
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
@@ -266,10 +292,12 @@ const Private = () => {
 
       <div
         ref={investRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
-          data-aos="fade-right">
+          data-aos="fade-right"
+        >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col lm:flex-row items-center gap-2">
               <p className="font-grava text-[#334E69] font-medium lm:tracking-[0.25em] uppercase text-sm">
@@ -293,7 +321,8 @@ const Private = () => {
           </div>
           <button
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
-            type="button">
+            type="button"
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Sign up for Updates
             </p>
@@ -314,7 +343,8 @@ const Private = () => {
 
       <div
         ref={cardRef}
-        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Cards}
@@ -324,7 +354,8 @@ const Private = () => {
         </div>
         <div
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
-          data-aos="fade-left">
+          data-aos="fade-left"
+        >
           <div className="flex gap-5 lm:gap-[20px] flex-col">
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
               <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
@@ -345,13 +376,16 @@ const Private = () => {
             <button
               className="transition-all duration-500 ease-in-out bg-[#FFCC33]  px-5 mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
-              onClick={() =>
-                navigate("/private/account", {
-                  state: {
-                    section: "account",
+              onClick={() => {
+                navigate(
+                  "/private/account",
+                  {
+                    state: { section: "account" },
                   },
-                })
-              }>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Apply for the Tatum Black Card
               </p>
@@ -364,7 +398,8 @@ const Private = () => {
             <div className="flex flex-col lm:flex-row items-center gap-2">
               <p
                 className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                style={{ lineHeight: "27px" }}>
+                style={{ lineHeight: "27px" }}
+              >
                 Exclusive Benefits:
               </p>
               <div className="w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center">
@@ -379,7 +414,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Global Concierge Services
                   <span className="font-[300] ">
                     – 24/7 personalized assistance, anywhere in the world.
@@ -390,7 +426,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Luxury Travel Perks{" "}
                   <span className="font-[300] ">
                     – First-class upgrades, VIP airport lounges, and premium
@@ -402,7 +439,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   High Spending Limits{" "}
                   <span className="font-[300] ">
                     – Unmatched flexibility for high-value transactions.
@@ -413,7 +451,8 @@ const Private = () => {
                 <img src={Check} alt="Check" className="" />
                 <p
                   className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
-                  style={{ lineHeight: "27px" }}>
+                  style={{ lineHeight: "27px" }}
+                >
                   Exclusive Event Access{" "}
                   <span className="font-[300]">
                     – Invitations to premium experiences, from fashion shows to
@@ -427,13 +466,16 @@ const Private = () => {
           <button
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
             type="button"
-            onClick={() =>
-              navigate("/private/account", {
-                state: {
-                  section: "account",
+            onClick={() => {
+              navigate(
+                "/private/account",
+                {
+                  state: { section: "account" },
                 },
-              })
-            }>
+                window.scrollTo(0, 0)
+              );
+            }}
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Apply for the Tatum Black Card
             </p>
@@ -453,7 +495,8 @@ const Private = () => {
 
       <div
         ref={faqRef}
-        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]"
+      >
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
           <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava">
             WHY CHOOSE US
@@ -465,7 +508,8 @@ const Private = () => {
         <div className="flex flex-col w-full lm:w-[710px]">
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
-            onClick={handleTabOne}>
+            onClick={handleTabOne}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Exclusive Access
@@ -484,7 +528,8 @@ const Private = () => {
           </div>
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabTwo}>
+            onClick={handleTabTwo}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Unparalleled Service
@@ -503,7 +548,8 @@ const Private = () => {
           </div>
           <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabThree}>
+            onClick={handleTabThree}
+          >
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Discreet & Secure

@@ -684,7 +684,7 @@ const Home = () => {
                 state: {
                   section: "personal",
                 },
-              })
+              }, window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -723,7 +723,7 @@ const Home = () => {
                 state: {
                   section: "corporate",
                 },
-              })
+              },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -770,7 +770,7 @@ const Home = () => {
                 state: {
                   section: "business",
                 },
-              });
+              },window.scrollTo(0, 0));
             }}>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -808,7 +808,7 @@ const Home = () => {
                 state: {
                   section: "private",
                 },
-              });
+              },window.scrollTo(0, 0));
             }}>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
@@ -933,7 +933,7 @@ const Home = () => {
               state: {
                 section: "personalCard",
               },
-            });
+            },window.scrollTo(0, 0));
           }}>
           <p className="transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base">
             Choose Your Tatum Card
@@ -1093,7 +1093,7 @@ const Home = () => {
                       state: {
                         section: "business",
                       },
-                    });
+                    },window.scrollTo(0, 0));
                   }}>
                   <p className="transition-colors duration-500 ease-in-out font-grava text-[#002244] text-[18px] font-medium">
                     Apply now
@@ -1200,7 +1200,7 @@ const Home = () => {
               state: {
                 section: "resources",
               },
-            });
+            },window.scrollTo(0, 0));
           }}>
           <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
             Explore Our Resource Center
@@ -1414,7 +1414,7 @@ const Home = () => {
                   state: {
                     section: "contact",
                   },
-                });
+                },window.scrollTo(0, 0));
               }}>
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1444,7 +1444,7 @@ const Home = () => {
                   state: {
                     section: "digital",
                   },
-                });
+                },window.scrollTo(0, 0));
               }}>
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1474,7 +1474,7 @@ const Home = () => {
                   state: {
                     section: "digital",
                   },
-                });
+                },window.scrollTo(0, 0));
               }}>
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1503,7 +1503,7 @@ const Home = () => {
                   state: {
                     section: "digital",
                   },
-                });
+                },window.scrollTo(0, 0));
               }}>
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
@@ -1532,7 +1532,7 @@ const Home = () => {
                   state: {
                     section: "digital",
                   },
-                });
+                },window.scrollTo(0, 0));
               }}>
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"

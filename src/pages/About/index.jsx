@@ -434,7 +434,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           <div
             className="hidden md:flex items-center gap-6 group"
             onClick={() =>
-              navigate("/about/teams", { state: { section: "teams" } })
+              navigate("/about/teams", { state: { section: "teams" } }, window.scrollTo(0, 0))
             }
           >
             <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
@@ -454,7 +454,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             onClick={() => {
               navigate("/about/team-details", {
                 state: { section: "details", team: team[0] },
-              });
+              },window.scrollTo(0, 0));
             }}
           >
             <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
@@ -496,7 +496,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             onClick={() => {
               navigate("/about/team-details", {
                 state: { section: "details", team: team[1] },
-              });
+              },window.scrollTo(0, 0));
             }}
           >
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
@@ -537,7 +537,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             onClick={() => {
               navigate("/about/team-details", {
                 state: { section: "details", team: team[2] },
-              });
+              },window.scrollTo(0, 0));
             }}
           >
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
