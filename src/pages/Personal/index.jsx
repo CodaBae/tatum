@@ -177,11 +177,11 @@ const Personal = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   All deposits are insured by
-                  <div className="">
+                  <div className=""> 
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px] lg:w-[60px]"
                     />
                   </div>
                 </p>

@@ -333,8 +333,31 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-
+                
                 <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
+                  </p>
+                </div>
+
+                {/* <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -355,7 +378,7 @@ const Home = () => {
                       </div>
                     </p>
                   </p>
-                </div>
+                </div> */}
 
               </div>
               <img

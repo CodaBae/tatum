@@ -24,7 +24,7 @@ const Institutional = () => {
   const faqRef = useRef(null);
   const InstitutionRef = useRef(null);
 
-  const isMobile = window.innerWidth;
+  const isMobile = window.innerWidth < 768;
 
   const navigate = useNavigate();
 
@@ -136,7 +136,7 @@ const Institutional = () => {
             <img
               src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/institutional_tatum_1_1_h6pymk.webp'}
               alt="Temple"
-              className={`animate__animated  relative lg:right-[30%]  lm:h-[100vh]`}
+              className={`animate__animated relative lg:right-[30%] lm:h-[100vh]`}
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-once="false"
