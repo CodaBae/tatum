@@ -355,7 +355,7 @@ const Home = () => {
                   activeIndex === 0
                     ? "animate__animated animate__fadeInRight "
                     : ""
-                } relative -right-10 md:right-14  bottom-0 lm:right-14  lm:h-[850px] md:h-[28px] relative lg:right-[18%] lg:top-[1%]  lm:h-[70vh]`}
+                } relative  md:right-14  bottom-0 lm:right-4  lm:h-[850px] md:h-[28px] relative lg:right-[8%] lg:top-[1%]  lm:h-[60vh]`}
               />
             </div>
           </div>
