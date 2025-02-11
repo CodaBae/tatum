@@ -38,7 +38,7 @@ const Footer = () => {
 
           >
             <p className="font-grava text-[#FFCC33] text-base group-hover:text-[#002244]">
-                Download Form
+                Download form
             </p>
           </button>
         </div>
