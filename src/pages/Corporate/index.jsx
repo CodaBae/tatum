@@ -89,11 +89,11 @@ const Corporate = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                 Powering Your <span className="font-bold">Business Growth</span>
               </p>
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-04s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we understand that businesses thrive when they
                 have the right financial partner—one that offers tailored
                 solutions, expert insights, and seamless banking services to
@@ -101,7 +101,7 @@ const Corporate = () => {
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/corporate/account", {
@@ -138,7 +138,10 @@ const Corporate = () => {
           <img
             src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
+            className={`animate__animated  relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
           />
         </div>
       </section>

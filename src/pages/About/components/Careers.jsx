@@ -111,7 +111,7 @@ const Careers = () => {
           alt="ball"
           className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[0px] top-[294px]"
         />
-        <div className="animate__animated animate__fadeInUp absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
+        <div className="animate__animated animate__fadeInUp animate__delay-04s absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
           <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
             Build Your Future with Us
           </h1>

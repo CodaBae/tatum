@@ -267,9 +267,7 @@ const Home = () => {
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
-                      activeIndex === 0
-                        ? "animate__animated animate__fadeInUp"
-                        : " "
+                      activeIndex === 0 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
                   >
                     Your Smile, <br />{" "}
@@ -280,7 +278,7 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 0
-                        ? "animate__animated animate__fadeInUp animate__delay-04s"
+                        ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
                     } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
@@ -290,7 +288,7 @@ const Home = () => {
                   <div
                     className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
                       activeIndex === 0
-                        ? "animate__animated animate__fadeInUp animate__delay-06s"
+                        ? "animate__animated animate__fadeInUp animate__delay-10s"
                         : ""
                     }`}
                   >
@@ -353,15 +351,16 @@ const Home = () => {
                 </div>
               </div>
               <img
-    data-aos="fade-left"
-    data-aos-duration="1000"
-    data-aos-once="false" 
-    src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
-    alt="Family"
-    className={`${
-        activeIndex === 0 ? "animate__animated " : ""
-    } relative md:right-14 bottom-0 lm:right-24 md:h-[28px] relative lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
-/>
+                key={activeIndex}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
+                alt="Family"
+                className={`${
+                  activeIndex === 0 ? "animate__animated " : ""
+                } relative md:right-14 bottom-0 lm:right-24 md:h-[28px] relative lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+              />
             </div>
           </div>
 
@@ -384,9 +383,7 @@ const Home = () => {
                   <p
                     style={{ fontWeight: 450 }}
                     className={`${
-                      activeIndex === 1
-                        ? "animate__animated animate__fadeInUp"
-                        : " "
+                      activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
                     Say Hello To Banking{" "}
@@ -395,10 +392,10 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 1
-                        ? "animate__animated animate__fadeInUp animate__delay-04s "
+                        ? "animate__animated animate__fadeInUp animate__delay-08s "
                         : ""
                     } font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
-                    // animate__delay-04s
+                    // animate__animated animate__fadeInUp animate__delay-08s
                   >
                     Your money, your way. Experience banking that fits your
                     lifestyle, not the other way around.
@@ -406,7 +403,7 @@ const Home = () => {
                   <div
                     className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
                       activeIndex === 1
-                        ? "animate__animated animate__fadeInUp animate__delay-06s"
+                        ? "animate__animated animate__fadeInUp animate__delay-10s"
                         : ""
                     }`}
                   >
@@ -479,7 +476,7 @@ const Home = () => {
                     ? "animate__animated animate__zoomIn   animate__slow"
                     : ""
                 } object-cover   md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
-                // animate__delay-06s
+                // animate__animated animate__fadeInUp animate__delay-10s
               />
             </div>
           </div>
@@ -503,9 +500,7 @@ const Home = () => {
                   <p
                     style={{ fontWeight: 450 }}
                     className={`${
-                      activeIndex === 2
-                        ? "animate__animated animate__fadeInUp"
-                        : " "
+                      activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Smart Banking for Your{" "}
@@ -514,7 +509,7 @@ const Home = () => {
                   <p
                     className={`${
                       activeIndex === 2
-                        ? "animate__animated animate__fadeInUp animate__delay-04s"
+                        ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
                     } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
@@ -525,7 +520,7 @@ const Home = () => {
                     <button
                       className={`${
                         activeIndex === 2
-                          ? "animate__animated animate__fadeInUp animate__delay-06s"
+                          ? "animate__animated animate__fadeInUp animate__delay-10s"
                           : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
@@ -567,12 +562,13 @@ const Home = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
                 alt="Teach"
-                // style={{
-                //     display: isMobile ? "none" : "flex"
-                // }}
+                key={activeIndex}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
                 className={`${
                   activeIndex === 2
-                    ? "animate__animated animate__fadeInRight animate__slow"
+                    ? "animate__animated animate__slow"
                     : ""
                 }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[40rem] relative`}
               />
@@ -597,9 +593,7 @@ const Home = () => {
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
-                      activeIndex === 3
-                        ? "animate__animated animate__fadeInUp"
-                        : " "
+                      activeIndex === 3 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Your Wealth, <br />{" "}
@@ -611,7 +605,7 @@ const Home = () => {
                   <p
                     className={`lg:w-[616px] ${
                       activeIndex === 3
-                        ? "animate__animated animate__fadeInUp animate__delay-04s"
+                        ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
                     } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
@@ -622,7 +616,7 @@ const Home = () => {
                     <button
                       className={`${
                         activeIndex === 3
-                          ? "animate__animated animate__fadeInUp animate__delay-06s"
+                          ? "animate__animated animate__fadeInUp animate__delay-10s"
                           : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"
@@ -664,12 +658,13 @@ const Home = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
                 alt="Smile"
-                // style={{
-                //     display: isMobile ? "none" : "flex"
-                // }}
+                key={activeIndex}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
                 className={`${
                   activeIndex === 3
-                    ? "animate__animated animate__fadeInRight animate__slow"
+                    ? "animate__animated "
                     : ""
                 }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-4 md:top-10 lg:top-5 lg:right-[25rem] relative`}
               />
@@ -996,7 +991,7 @@ const Home = () => {
 
       <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
         <div className="flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3">
-        <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+          <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
             Loan Calculator
           </p>
           <p className="font-grava text-[#002244] text-[24px] lg:text-[48px] whitespace-nowrap font-medium ">
@@ -1120,7 +1115,10 @@ const Home = () => {
           <div className="w-full flex flex-col items-center gap-5 lg:w-[580px]">
             <div className="lg:w-[580px] w-full bg-[#fff] rounded-2xl h-[160px] lg:h-[212px] px-5 lg:px-[28px] flex gap-4 md:gap-24 lg:gap-0 md:justify-center lg:justify-between items-center">
               <div className="flex flex-col gap-4">
-                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]" style={{color:'#002244'}}>
+                <p
+                  className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]"
+                  style={{ color: "#002244" }}
+                >
                   Monthly Payments
                 </p>
                 <p className="text-base lg:text-[18px] font-grava text-center text-[#002244]">
@@ -1129,7 +1127,10 @@ const Home = () => {
               </div>
               <div className="w-[1px] h-[120px] bg-[#D0D5DD]"></div>
               <div className="flex flex-col gap-4">
-                <p className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]" style={{color:'#002244'}}>
+                <p
+                  className="font-semibold text-[#002244] font-grava text-base lg:text-[18px]"
+                  style={{ color: "#002244" }}
+                >
                   Total Payments
                 </p>
                 <p className="text-base lg:text-[18px] font-grava text-center text-[#002244]">
@@ -1205,17 +1206,20 @@ const Home = () => {
               Tatum Bank is set to launch this February, offering a fresh
               approach to traditional banking with digital tools ...
             </p>
-            <p onClick={() => {
-            navigate(
-              "/resources",
-              {
-                state: {
-                  section: "resources",
-                },
-              },
-              window.scrollTo(0, 0)
-            );
-          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
+            <p
+              onClick={() => {
+                navigate(
+                  "/resources",
+                  {
+                    state: {
+                      section: "resources",
+                    },
+                  },
+                  window.scrollTo(0, 0)
+                );
+              }}
+              className="text-[#002244] font-grava cursor-pointer text-sm underline"
+            >
               Learn more
             </p>
           </div>
@@ -1235,17 +1239,20 @@ const Home = () => {
             <p className="text-sm lg:text-base text-[#667085] font-grava leading-[24px]">
               Actionable insights and advice tailored for the growth of SMEs
             </p>
-            <p onClick={() => {
-            navigate(
-              "/resources",
-              {
-                state: {
-                  section: "resources",
-                },
-              },
-              window.scrollTo(0, 0)
-            );
-          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
+            <p
+              onClick={() => {
+                navigate(
+                  "/resources",
+                  {
+                    state: {
+                      section: "resources",
+                    },
+                  },
+                  window.scrollTo(0, 0)
+                );
+              }}
+              className="text-[#002244] font-grava cursor-pointer text-sm underline"
+            >
               Learn more
             </p>
           </div>
@@ -1266,17 +1273,20 @@ const Home = () => {
               Tatum Bank officially opens its doors with a new branch,
               furthering financing inclusion in Eti Osa. Check out the...
             </p>
-            <p onClick={() => {
-            navigate(
-              "/resources",
-              {
-                state: {
-                  section: "resources",
-                },
-              },
-              window.scrollTo(0, 0)
-            );
-          }} className="text-[#002244] font-grava cursor-pointer text-sm underline">
+            <p
+              onClick={() => {
+                navigate(
+                  "/resources",
+                  {
+                    state: {
+                      section: "resources",
+                    },
+                  },
+                  window.scrollTo(0, 0)
+                );
+              }}
+              className="text-[#002244] font-grava cursor-pointer text-sm underline"
+            >
               See photos
             </p>
           </div>
@@ -1297,7 +1307,7 @@ const Home = () => {
           }}
         >
           <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
-            Explore our resource center
+            Explore our resource centre
           </p>
         </button>
       </div>

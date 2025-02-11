@@ -59,12 +59,12 @@ className='h-full w-full outline-none '>
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                   <p 
-                      className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                       Help & Support
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__slow md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       If you require any assistance regarding our company, businesses or exploits, 
                       please don’t hesitate to contact us..
@@ -96,7 +96,10 @@ className='h-full w-full outline-none '>
           <img 
             src="https://res.cloudinary.com/code-idea/image/upload/v1739213447/hands_ibmssy.png"
             alt='Biz' 
-            className={`animate__animated animate__fadeInRight relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
+            className={`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
           />
         </div>
       </section>

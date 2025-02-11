@@ -76,14 +76,14 @@ const Private = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
               >
                 Exclusive. Personalized.{" "}
                 <span className="font-bold ">Exceptional </span>
               </p>
               <p
                 //
-                className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 With privileged access to premium banking services, bespoke
                 investment strategies, and the prestige of Tatum Private
@@ -91,7 +91,7 @@ const Private = () => {
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() => {
                     navigate(
@@ -138,6 +138,9 @@ const Private = () => {
             }
             alt="Family"
             className={`animate__animated animate__fadeInRight relative -right-10 lm:top-10 mt-24 lm:h-[688px] `}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
           />
         </div>
       </section>

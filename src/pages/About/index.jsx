@@ -130,12 +130,12 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p               style={{fontWeight:450}}
 
-                className={`animate__animated animate__fadeInUp lm:w-[450px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[450px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
               >
                 Welcome to <br /> <span className="font-bold">Tatum Bank</span>
               </p>
               <p
-                className={`animate__animated  animate__fadeInUp animate__slow w-[300px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated   animate__fadeInUp animate__delay-06s w-[300px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 We are more than a financial institution—we are a trusted
                 partner dedicated to safeguarding your financial wellbeing.
@@ -161,10 +161,10 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           <img
             src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
             alt="Family"
-            // style={{
-            //     display: isMobile ? "none" : "flex"
-            // }}
-            className={`animate__animated animate__fadeInRight relative lm:top-[30%] lg:w-[57%] `} 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
+            className={`animate__animated relative lm:top-[30%] lg:w-[57%] `} 
             />
         </div>
       </section>

@@ -130,7 +130,7 @@ const Personal = () => {
               {/* First Text */}
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
                 Personalized
                 <br /> banking that{" "}
                 <span className="font-bold">
@@ -141,7 +141,7 @@ const Personal = () => {
 
               {/* Second Text */}
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-04s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                 Explore tailored solutions that fit your lifestyle, empower{" "}
                 <br></br> your goals, and make banking a joy.
               </p>
@@ -149,7 +149,7 @@ const Personal = () => {
               {/* Button */}
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/personal/account", {
@@ -188,10 +188,10 @@ const Personal = () => {
               "https://res.cloudinary.com/code-idea/image/upload/v1739211220/personal_banking_1_vgnhhq.webp"
             }
             alt="Family"
-            // style={{
-            //     display: isMobile ? "none" : "flex"
-            // }}
-            className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[13%] lg:w-[50%] `}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
+            className={`animate__animated relative lm:right-[10%] lm:top-[13%] lg:w-[50%] `}
           />
         </div>
       </section>

@@ -77,20 +77,20 @@ const AccountPersonal = () => {
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Seamless Banking, <span className='font-bold'>Endless Smiles.</span>
                         </p>
                         <p 
                             // 
-                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Experience banking that keeps you smiling with our range 
                             of savings and current accounts, cards, and loans.
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
                         <a
-                            className={`animate__animated animate__fadeInUp block animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                             type='button'
                             href='#section'
                         >

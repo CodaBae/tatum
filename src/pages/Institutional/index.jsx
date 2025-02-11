@@ -73,20 +73,20 @@ const Institutional = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                 Empowering <br />
                 Institutions with <br />
                 <span className="font-bold">Financial Excellence</span>
               </p>
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-04s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we understand the unique financial needs of
                 institutions and are committed to providing tailored made
                 banking solutions.
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-06s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
                     navigate("/institutional/account", {
@@ -123,7 +123,10 @@ const Institutional = () => {
           <img
             src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/institutional_tatum_1_1_h6pymk.webp'}
             alt="Temple"
-            className={`animate__animated animate__fadeInRight relative lg:right-[30%]  lm:h-[100vh]`}
+            className={`animate__animated  relative lg:right-[30%]  lm:h-[100vh]`}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="false"
           />
         </div>
       </section>
