@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs';
 
 import Meeting from "../../assets/png/q_and_a.png";
-
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 
@@ -72,7 +73,22 @@ const Resources = () => {
                   </p>
                 
               </div>
-            
+              <div className="hidden lm:flex items-start absolute lg:bottom-[-104.9%]">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                We are licensed by the Central Bank of Nigeria
+                <img
+                  src={CBN}
+                  alt="CBN"
+                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                />
+                All deposits are insured by
+                <img
+                  src={NDIC}
+                  alt="NDIC"
+                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                />
+              </p>
+            </div>
           </div>
           <img 
             src="https://res.cloudinary.com/code-idea/image/upload/v1739214013/camera_man_br9idr.png"

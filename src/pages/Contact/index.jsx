@@ -50,9 +50,9 @@ const Contact = () => {
             >
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                        <p 
-                            className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
-                        >
+                        <p  
+                      className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                      >
                             Contact Us
                         </p>
                         <p 
@@ -62,22 +62,22 @@ const Contact = () => {
                         </p>
                         
                     </div>
-                    {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    Deposit insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
-                  </p>
-                </div> */}
+                    <div className="hidden lm:flex items-start absolute lg:bottom-[-104.9%]">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                We are licensed by the Central Bank of Nigeria
+                <img
+                  src={CBN}
+                  alt="CBN"
+                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                />
+                All deposits are insured by
+                <img
+                  src={NDIC}
+                  alt="NDIC"
+                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                />
+              </p>
+            </div>
                 </div>
                 <img 
                     src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}

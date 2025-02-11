@@ -85,7 +85,7 @@ const Corporate = () => {
             backgroundSize: "cover",
           }}
           className="pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[-2%]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
@@ -118,15 +118,15 @@ const Corporate = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-51%]">
+            <div className="hidden lm:flex items-start absolute lg:bottom-[-52.8%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by
+                We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
                   alt="CBN"
                   className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
-                Deposit insured by
+                All deposits are insured by
                 <img
                   src={NDIC}
                   alt="NDIC"
@@ -143,7 +143,7 @@ const Corporate = () => {
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[0px] lg:pb-[88px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}

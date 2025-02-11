@@ -126,7 +126,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
           }}
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[-8.5%]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3.5%%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p               style={{fontWeight:450}}
 
@@ -141,15 +141,15 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-84%]'>
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-92%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by
+                We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
                   alt="CBN"
                   className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
-                Deposit insured by
+                All deposits are insured by
                 <img
                   src={NDIC}
                   alt="NDIC"
@@ -171,7 +171,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
 
       <section className="px-5 lm:px-[56px]" ref={missionRef}>
         <div className=" flex flex-col md:flex-row items-start justify-between ">
-          <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[59px] lg:pr-[59px]">
+          <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[15px] lg:pr-[59px]">
             <div className="flex items-center justify-between">
               <p className="text-[#002244] font-grava font-bo text-[28px] lg:text-[56px] tracking-wider">
                 Our Story
@@ -201,7 +201,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             </p>
           </div>
           <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
-            <div className="items-start lm:items-center flex flex-col gap-6 lg:pt-14 pb-[38px] md:pl-5 lg:pl-[60px]  lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+            <div className="items-start lm:items-center flex flex-col gap-6 lg:pt-0 pb-[38px] md:pl-5   lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
               <img
                 src={Telescope}
                 alt="MissionStar"
@@ -212,7 +212,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                    Vision.
                 </p>
                 <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
-                  To be Nigeria's preferred financial services <span className="block">provider</span>
+                  To be Nigeria's preferred financial services provider
                 </p>
               </div>
             </div>
@@ -228,8 +228,8 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 </p>
                 <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
                   To meet our customer's financial needs 
-                  <span className="block">through innovative 
-                  technology driven</span>  products and services delivered with ease
+             through innovative 
+                  technology  driven  products and services  <br></br>delivered with ease
                 </p>
                 {/* <div className="hidden lm:flex items-end justify-end absolute -bottom-14 right-0">
                   <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
@@ -263,14 +263,14 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               }}
             >
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap lm:leading-[24px] text-[14px] lm:text-[20px]">
+              <p className="font-grava text-[#272727] leading-[20px] whitespace-nowrap  w-[211px] lm:leading-[24px] text-[14px] lm:text-[20px]">
                 Gen Z-Focused Solutions
               </p>
             </div>
             <div
               data-aos="fade-up"
               data-aos-delay="200"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[318px] lm:w-[64px] cursor-pointer"
+              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2  lm:w-[340px] cursor-pointer"
               onClick={() => {
                 navigate("/digital")
                 window.scrollTo(0, 0)
@@ -339,7 +339,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         </div>
         <div
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="0"
           className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
         >
           <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
@@ -355,7 +355,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         </div>
         <div
           data-aos="fade-up"
-          data-aos-delay="800"
+          data-aos-delay="100"
           className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
         >
           <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
@@ -389,7 +389,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
 
         <div
           data-aos="fade-up"
-          data-aos-delay="0"
+          data-aos-delay="300"
           className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
         >
           <img src={People} alt="People" className="w-[83px] h-[64px]" />
@@ -406,7 +406,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
        
         <div
           data-aos="fade-up"
-          data-aos-delay="600"
+          data-aos-delay="500"
           className="bg-[#FFFFFF] flex flex-col gap-[40px] h-auto lm:h-[330px] rounded-[20px] p-6 lm:py-[40.5px] lm:px-6"
         >
           <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />

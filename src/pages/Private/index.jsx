@@ -73,7 +73,7 @@ const Private = () => {
           }}
           className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
         >
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[-3%]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 " >
               <p
                 style={{ fontWeight: 450 }}
@@ -107,15 +107,15 @@ const Private = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-51.5%]">
+            <div className="hidden lm:flex items-start absolute lg:bottom-[-53%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by
+                We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
                   alt="CBN"
                   className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
-                Deposit insured by
+                All deposits are insured by
                 <img
                   src={NDIC}
                   alt="NDIC"
@@ -134,7 +134,7 @@ const Private = () => {
 
       <div
         ref={wealthRef}
-        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[110px] lg:pb-[88px]  lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Dining}

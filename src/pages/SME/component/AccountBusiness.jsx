@@ -106,9 +106,9 @@ const AccountBusiness = () => {
                     </div>
                     <div className='hidden lm:flex items-start absolute lg:bottom-[-51%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
-                            We are licensed by 
+                            We are licensed by the Central Bank of Nigeria 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                            Deposit insured by
+                            All deposits are insured by
                             <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
                         </p>
                     </div>

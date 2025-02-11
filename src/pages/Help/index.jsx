@@ -8,6 +8,9 @@ import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
 import Minus from "../../assets/svg/minus.svg";
 
+import CBN from "../../assets/svg/cbn_logo.svg";
+import NDIC from "../../assets/svg/ndic.svg";
+
 const Help = () => {
   const [text, setText] = useState("")
   const [openDropdownOne, setOpenDropdownOne] = useState(true)
@@ -57,7 +60,7 @@ className='h-full w-full outline-none '>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                   <p 
                       className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
-                  >
+                      >
                       Help & Support
                   </p>
                   <p 
@@ -68,9 +71,28 @@ className='h-full w-full outline-none '>
                   </p>
                 
               </div>
+
+
+          <div className="hidden lm:flex items-start absolute lg:bottom-[-104.9%]">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                We are licensed by the Central Bank of Nigeria
+                <img
+                  src={CBN}
+                  alt="CBN"
+                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                />
+                All deposits are insured by
+                <img
+                  src={NDIC}
+                  alt="NDIC"
+                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                />
+              </p>
+            </div>
               
             
           </div>
+
           <img 
             src="https://res.cloudinary.com/code-idea/image/upload/v1739213447/hands_ibmssy.png"
             alt='Biz' 
@@ -79,7 +101,7 @@ className='h-full w-full outline-none '>
         </div>
       </section>
 
-      <section className='flex flex-col items-center justify-center py-[80px] gap-[56px] lm:gap-[72px]'>
+      <section className='flex flex-col items-center justify-center  lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
         <div className='w-10/12 lm:w-[878px] h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
           <input 
             className='w-8/12 text-[#546B82] text-[18px] outline-none font-grava font-[350]'

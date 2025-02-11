@@ -234,7 +234,7 @@ const Home = () => {
     <div
       ref={homeRef}
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden">
-      <div className="w-full ">
+      <div className="w-full h-full w-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
@@ -259,17 +259,17 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[70px] relative w-full flex flex-col lg:flex-row items-center gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
+              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-                  <p
+                <p 
                     className={`${
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp"
                         : " "
                     } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}>
                     Your Smile, <br />{" "}
-                    <span className="font-medium ">Our Priority</span>
+                    <span className="" style={{fontWeight:450}}>Our Priority</span>
                   </p>
                   <p
                     className={`${
@@ -299,7 +299,7 @@ const Home = () => {
                         })
                       }>
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Open an Account
+                        Open an account today
                       </p>
                       <BsArrowRight
                         size={100}
@@ -329,13 +329,13 @@ const Home = () => {
                 </div>
                 <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by
+                    We are licensed by the Central Bank of Nigeria
                     <img
                       src={CBN}
                       alt="CBN"
                       className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                     />
-                    Deposit insured by
+                    All deposits are insured by
                     <img
                       src={NDIC}
                       alt="NDIC"
@@ -355,7 +355,7 @@ const Home = () => {
                   activeIndex === 0
                     ? "animate__animated animate__fadeInRight "
                     : ""
-                } relative -right-20 md:right-24  bottom-0 lm:right-44  lm:h-[750px] md:h-[28px] relative lg:right-[22%] lg:top-[10%]  lm:h-[80vh]`}
+                } relative -right-10 md:right-14  bottom-0 lm:right-14  lm:h-[850px] md:h-[28px] relative lg:right-[22%] lg:top-[3%]  lm:h-[78vh]`}
               />
             </div>
           </div>
@@ -371,11 +371,11 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
+              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5">
-                  <p
+                <p style={{fontWeight:450}}
                     className={`${
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp"
@@ -444,13 +444,13 @@ const Home = () => {
                 </div>
                 <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by
+                    We are licensed by the Central Bank of Nigeria
                     <img
                       src={CBN}
                       alt="CBN"
                       className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                     />
-                    Deposit insured by
+                    All deposits are insured by
                     <img
                       src={NDIC}
                       alt="NDIC"
@@ -486,11 +486,11 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
+              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
-                  <p
+                  <p style={{fontWeight:450}}
                     className={`${
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp"
@@ -524,7 +524,7 @@ const Home = () => {
                         })
                       }>
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Get Started with Business Banking
+                        Get Started with SME Banking
                       </p>
                       <BsArrowRight
                         size={100}
@@ -535,13 +535,13 @@ const Home = () => {
                 </div>
                 <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by
+                    We are licensed by the Central Bank of Nigeria
                     <img
                       src={CBN}
                       alt="CBN"
                       className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                     />
-                    Deposit insured by
+                    All deposits are insured by
                     <img
                       src={NDIC}
                       alt="NDIC"
@@ -560,7 +560,7 @@ const Home = () => {
                   activeIndex === 2
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[30rem] relative`}
+                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[40rem] relative`}
                 />
             </div>
           </div>
@@ -576,18 +576,18 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[70px] w-full flex flex-col lg:flex-row items-center relative gap-0">
-              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-13%]">
+              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
-                  <p
+                <p 
                     className={`${
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp"
                         : " "
                     } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}>
                     Your Wealth, <br />{" "}
-                    <span className="font-medium "> Expertly Managed </span>
+                    <span className=" " style={{fontWeight:450}}> Expertly Managed </span>
                   </p>
                   <p
                     className={`lg:w-[616px] ${
@@ -625,13 +625,13 @@ const Home = () => {
                 </div>
                 <div className="hidden lm:flex items-start absolute lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by
+                    We are licensed by the Central Bank of Nigeria
                     <img
                       src={CBN}
                       alt="CBN"
                       className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                     />
-                    Deposit insured by
+                    All deposits are insured by
                     <img
                       src={NDIC}
                       alt="NDIC"
@@ -650,14 +650,14 @@ const Home = () => {
                   activeIndex === 3
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[25rem] relative`}
+                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-5 lg:right-[25rem] relative`}
               />
             </div>
           </div>
         </LandingCarousel>
       </div>
 
-      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:pt-[0px] lg:pb-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block ">
           <img
             src={Boy}
