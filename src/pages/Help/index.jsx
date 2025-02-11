@@ -73,7 +73,7 @@ className='h-full w-full outline-none '>
               </div>
 
 
-          <div className="hidden lm:flex items-start absolute lg:bottom-[-104.9%]">
+          <div className="hidden lm:flex items-start absolute lg:bottom-[-102.9%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by the Central Bank of Nigeria
                 <img

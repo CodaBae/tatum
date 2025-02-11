@@ -259,7 +259,7 @@ const SME = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-39.5%]">
+            <div className="hidden lm:flex items-start absolute lg:bottom-[-37.5%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
