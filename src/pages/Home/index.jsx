@@ -47,7 +47,7 @@ import "./css/SwiperSlide.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
@@ -235,14 +235,14 @@ const Home = () => {
       ref={homeRef}
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden"
     >
-      <div className="w-full h-full w-full overflow-hidden outline-none lm:h-[100vh] ">
+      <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
           autoPlay={true}
           showIndicators={false}
           showStatus={false}
-          showThumbs={false}
+          showThumbs={true}
           infiniteLoop={true}
           onChange={handleSlideChange}
           animationHandler={fadeAnimationHandler} // Use the custom fade animation
@@ -255,13 +255,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
                     : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+              className="h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -333,33 +333,41 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
               </div>
               <img
                 key={activeIndex}
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
+                src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"}
                 alt="Family"
                 className={`${
                   activeIndex === 0 ? "animate__animated " : ""
-                } relative md:right-14 bottom-0 lm:right-24 md:h-[28px] relative lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                } relative md:right-14 bottom-0 lm:right-24 top-16 -right-5 h-[385.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
               />
             </div>
           </div>
@@ -369,13 +377,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
-                    : ""
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
+                    : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[732px] lg:h-[91vh]  pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -386,8 +394,8 @@ const Home = () => {
                       activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
-                    Say Hello To Banking{" "}
-                    <span className="font-bold ">On The Go</span>
+                    Say Hello To {" "}
+                    <span className="font-bold block ">Banking On The Go</span>
                   </p>
                   <p
                     className={`${
@@ -448,34 +456,39 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
               </div>
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
                 alt="Phone"
-                // style={{
-                //     display: isMobile ? "none" : "flex"
-                // }}
                 className={`${
                   activeIndex === 1
                     ? "animate__animated animate__zoomIn   animate__slow"
                     : ""
-                } object-cover   md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                } object-cover top-16 h-[550px] right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
                 // animate__animated animate__fadeInUp animate__delay-10s
               />
             </div>
@@ -486,13 +499,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                     : "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -542,36 +555,61 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
-                alt="Teach"
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                className={`${
-                  activeIndex === 2
-                    ? "animate__animated animate__slow"
-                    : ""
-                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[40rem] relative`}
-              />
+              {
+                isMobile ? 
+                <div className="w-[600px] "> 
+                  <img
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
+                    alt="Teach"
+                    key={activeIndex}
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow"
+                        : ""
+                    }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-10 lg:top-20 lg:right-[40rem] relative`}
+                  />
+                </div> :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
+                  alt="Teach"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 2
+                      ? "animate__animated animate__slow"
+                      : ""
+                  }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-10 lg:top-20 lg:right-[40rem] relative`}
+                />
+              }
             </div>
           </div>
 
@@ -580,13 +618,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                     : "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -638,36 +676,63 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
-                alt="Smile"
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                className={`${
-                  activeIndex === 3
-                    ? "animate__animated "
-                    : ""
-                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-4 md:top-10 lg:top-5 lg:right-[25rem] relative`}
-              />
+              {
+                isMobile ?
+                <div className="w-[600px] h-[550px]">
+                  <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
+                  alt="Smile"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 3
+                      ? "animate__animated "
+                      : ""
+                  }  md:right-[8rem] lm:right-[14rem] -right-10 lg:h-[1000px] top-20 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                />
+                </div>
+                :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
+                  alt="Smile"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 3
+                      ? "animate__animated "
+                      : ""
+                  }  md:right-[8rem] lm:right-[14rem] h-[550px] lg:h-[1000px] top-10 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                />
+              }
             </div>
           </div>
         </LandingCarousel>

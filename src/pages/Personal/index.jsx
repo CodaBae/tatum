@@ -117,13 +117,13 @@ const Personal = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
+          className="lm:h-[100vh] h-[796px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
         >
           <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[5%] z-30 gap-[64px] lg:gap-[69px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -131,11 +131,11 @@ const Personal = () => {
               <p
                 style={{ fontWeight: 450 }}
                 className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
-                Personalized
-                <br /> banking that{" "}
-                <span className="font-bold">
-                  keeps
-                  <br /> you smiling
+                Personalized banking
+                <br />  that {" "}
+                <span className="font-bold ">
+                  keeps you smiling
+                  {/* <br /> you smiling */}
                 </span>
               </p>
 
@@ -164,22 +164,30 @@ const Personal = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-23.3%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
+
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                <p className="flex items-center gap-2">
+                  We are licensed by the Central Bank of Nigeria
+                  <img
+                    src={CBN}
+                    alt="CBN"
+                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                  />
+                </p>
+                <p className="flex items-center gap-2">
+                  All deposits are insured by
+                  <div className="">
+                    <img
+                      src={NDIC}
+                      alt="NDIC"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                    />
+                  </div>
+                </p>
               </p>
             </div>
+
           </div>
           <img
             src={
@@ -189,7 +197,7 @@ const Personal = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative lm:right-[10%] lm:top-[13%] lg:w-[50%] `}
+            className={`animate__animated relative -right-12 top-[20%] lm:right-[10%] w-[300px] lm:top-[13%] lg:w-[50%] `}
           />
         </div>
       </section>

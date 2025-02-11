@@ -42,18 +42,18 @@ const Digital = () => {
  className='h-full w-full outline-none  lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='lg:h-[100vh] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='lg:h-[100vh] h-[794px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp font-bold animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                         >
-                            Seamless. Secure. <span className='font-bold'>Convenient. </span> 
+                            Seamless. Secure. <span className=''>Convenient. </span> 
                         </p>
                         <p              
 
@@ -93,7 +93,7 @@ const Digital = () => {
                 <img 
                     src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
                     alt='Biz' 
-                    className={`animate__animated  relative -right-10 lm:right-28  lm:h-[790px] lg:top-20`} 
+                    className={`animate__animated  relative -right-2 h-[400px] lm:right-28 top-12  lm:h-[790px] lg:top-20`} 
                     data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"

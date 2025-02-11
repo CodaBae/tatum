@@ -219,13 +219,13 @@ const SME = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="lm:h-[100vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -237,9 +237,9 @@ const SME = () => {
               </p>
               <p
                 //
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[350px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we go beyond banking; we partner with you to
-                <br></br> unlock opportunities, drive growth, and ensure your
+                unlock opportunities, drive growth, and ensure your
                 success.
               </p>
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
@@ -276,14 +276,28 @@ const SME = () => {
               </p>
             </div>
           </div>
-          <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
-            alt="Family"
-            className={`animate__animated  relative lm:top-[10%] lg:w-[43%] `}
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ? 
+            <div className="w-[300px]">
+              <img
+                src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+                alt="Family"
+                className={`animate__animated relative top-[13.5%] -right-3 lg:w-[43%] `}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img
+              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+              alt="Family"
+              className={`animate__animated relative lm:top-[10%] lg:w-[43%] `}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+            />
+          }
         </div>
       </section>
 

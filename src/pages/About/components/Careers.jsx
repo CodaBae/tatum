@@ -91,6 +91,8 @@ const Careers = () => {
     }
   };
 
+  const isMobile = window.innerWidth < 768
+
   return (
     <div ref={careersRef} className="overflow-hidden">
       {/* Hero section */}
@@ -128,11 +130,11 @@ const Careers = () => {
             <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
         </div>
-        <div className="animate__animated animate__fadeInRight absolute bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
+        <div className="animate__animated animate__fadeInRight absolute  bottom-[-80px] lm:bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
           <div className="relative">
-            <div className="absolute top-[18px] sm:hidden lg:block lg:top-[40px] right-0 z-20 w-[75%] h-[20px] bg-[#FFCC33] "></div>
+            <div className="absolute top-[18px] hidden lg:block lg:top-[40px] right-0 z-20 w-[75%] h-[20px] bg-[#FFCC33] "></div>
             <img
-              src={heroImg}
+              src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png" : heroImg}
               alt="heroImg"
               className="w-[305px] h-[361px] sm:w-[420px] sm:h-auto lg:w-[585px] lg:h-[692px]"
             />

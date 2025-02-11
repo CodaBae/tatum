@@ -78,13 +78,13 @@ const Corporate = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
+          className="h-[732px] pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
@@ -135,14 +135,28 @@ const Corporate = () => {
               </p>
             </div>
           </div>
-          <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
-            alt="Family"
-            className={`animate__animated  relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ?
+            <div className="w-[120%]">
+              <img
+                src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
+                alt="Family"
+                className={`animate__animated  relative right-14 lm:right-[30%] h-[383px] lm:top-[8%] lg:w-[75%] `}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img
+              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
+              alt="Family"
+              className={`animate__animated  relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+            />
+          }
         </div>
       </section>
 
