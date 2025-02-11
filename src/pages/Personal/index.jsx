@@ -343,7 +343,7 @@ const Personal = () => {
         className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
-            <p className="text-[#002244] font-[350] font-grava text-sm lg:text-[18px] leading-[27px] tracking-[0.2%]">
+          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Loans
             </p>
             <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center">
@@ -394,7 +394,7 @@ const Personal = () => {
                 navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#98A2B3]">
-                Coming Soon
+                Coming soon
               </p>
               <BsArrowRight
                 size={100}
@@ -553,7 +553,7 @@ const Personal = () => {
             navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           }>
           <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
-            Get Yours Today
+            Get yours today
           </p>
         </button>
       </div>
@@ -562,7 +562,7 @@ const Personal = () => {
         ref={digitalRef}
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
-          <p className="font-grava font-[350] text-[18px] leading-[27px] text-[#002244] tracking-[0.2%]">
+        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
@@ -608,7 +608,7 @@ const Personal = () => {
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started Now
+              Get started now
             </p>
             <BsArrowRight
               size={100}
@@ -633,11 +633,11 @@ const Personal = () => {
               zIndex: 1, // Ensures content stays above background
             }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
-              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
+              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>
-              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] lm:w-[389px] tracking-[0.2%]">
+              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
@@ -647,7 +647,7 @@ const Personal = () => {
                   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                  Open an Account
+                  Open an account
                 </p>
                 <BsArrowRight
                   size={100}
