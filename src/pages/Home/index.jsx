@@ -59,11 +59,11 @@ const Home = () => {
   const homeRef = useRef(null);
   const { state } = useLocation();
 
-//   useEffect(() => {
-//     if (state?.section === "home" && homeRef.current) {
-//       homeRef.current.scrollIntoView({ behavior: "smooth" });
-//     }
-//   }, [state]);
+  //   useEffect(() => {
+  //     if (state?.section === "home" && homeRef.current) {
+  //       homeRef.current.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }, [state]);
 
   const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
 
@@ -233,7 +233,8 @@ const Home = () => {
   return (
     <div
       ref={homeRef}
-      className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden">
+      className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden"
+    >
       <div className="w-full h-full w-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
@@ -247,7 +248,8 @@ const Home = () => {
           animationHandler={fadeAnimationHandler} // Use the custom fade animation
           transitionTime={500}
           swipeable={false} // Disable swiping for fade animation
-          stopOnHover={false}>
+          stopOnHover={false}
+        >
           <div className="h-full w-full outline-none">
             <div
               style={{
@@ -259,36 +261,42 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0">
+              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+            >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-                <p 
+                  <p
                     className={`${
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp"
                         : " "
-                    } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}>
+                    } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
+                  >
                     Your Smile, <br />{" "}
-                    <span className="" style={{fontWeight:450}}>Our Priority</span>
+                    <span className="" style={{ fontWeight: 450 }}>
+                      Our Priority
+                    </span>
                   </p>
                   <p
                     className={`${
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
-                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                  >
                     Secure banking, low-interest loans, and profitable
                     investments for everyone.
                   </p>
-                  <div className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
-                        activeIndex === 0
-                          ? "animate__animated animate__fadeInUp animate__delay-06s"
-                          : ""}`}>
+                  <div
+                    className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                      activeIndex === 0
+                        ? "animate__animated animate__fadeInUp animate__delay-06s"
+                        : ""
+                    }`}
+                  >
                     <button
                       className={`${
-                        activeIndex === 0
-                          ? " "
-                          : ""
+                        activeIndex === 0 ? " " : ""
                       } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
                       onClick={() =>
@@ -297,7 +305,8 @@ const Home = () => {
                             section: "digital",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Open an account today
                       </p>
@@ -309,9 +318,7 @@ const Home = () => {
 
                     <button
                       className={`${
-                        activeIndex === 0
-                          ? ""
-                          : ""
+                        activeIndex === 0 ? "" : ""
                       } transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
                       onClick={() =>
@@ -320,14 +327,15 @@ const Home = () => {
                             section: "digital",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="font-grava text-sm whitespace-nowrap lg:text-base text-[#002244] font-medium">
                         Learn More
                       </p>
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-59%]">
+                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                     We are licensed by the Central Bank of Nigeria
                     <img
@@ -345,6 +353,7 @@ const Home = () => {
                 </div>
               </div>
               <img
+                data-aos="fade-left"
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
                 alt="Family"
                 // style={{
@@ -352,9 +361,7 @@ const Home = () => {
                 // }}
 
                 className={`${
-                  activeIndex === 0
-                    ? "animate__animated animate__fadeInRight "
-                    : ""
+                  activeIndex === 0 ? "animate__animated " : ""
                 } relative  md:right-14  bottom-0 lm:right-24   md:h-[28px] relative lg:right-[25%] lg:top-[3.5%]  lm:h-[80vh]`}
               />
             </div>
@@ -371,16 +378,19 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+            >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex md:w-[350px] lm:w-[692px] flex-col items-start gap-2 lg:gap-5">
-                <p style={{fontWeight:450}}
+                  <p
+                    style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp"
                         : " "
-                    } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
+                    } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                  >
                     Say Hello To Banking{" "}
                     <span className="font-bold ">On The Go</span>
                   </p>
@@ -395,15 +405,16 @@ const Home = () => {
                     Your money, your way. Experience banking that fits your
                     lifestyle, not the other way around.
                   </p>
-                  <div className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
-                        activeIndex === 1
-                          ? "animate__animated animate__fadeInUp animate__delay-06s"
-                          : ""}`}>
+                  <div
+                    className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                      activeIndex === 1
+                        ? "animate__animated animate__fadeInUp animate__delay-06s"
+                        : ""
+                    }`}
+                  >
                     <button
                       className={`${
-                        activeIndex === 1
-                          ? ""
-                          : ""
+                        activeIndex === 1 ? "" : ""
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center p-5`}
                       type="button"
                       onClick={() =>
@@ -412,7 +423,8 @@ const Home = () => {
                             section: "digital",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Explore our offerings
                       </p>
@@ -424,9 +436,7 @@ const Home = () => {
 
                     <button
                       className={`${
-                        activeIndex === 1
-                          ? ""
-                          : ""
+                        activeIndex === 1 ? "" : ""
                       } hidden transition hover:border-b-0 lg:flex cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
                       onClick={() =>
@@ -435,14 +445,15 @@ const Home = () => {
                             section: "digital",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="font-grava text-base text-[#002244] font-medium">
                         Download App
                       </p>
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-59%]">
+                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                     We are licensed by the Central Bank of Nigeria
                     <img
@@ -486,16 +497,19 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+            >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
-                  <p style={{fontWeight:450}}
+                  <p
+                    style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp"
                         : " "
-                    } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}>
+                    } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                  >
                     Smart Banking for Your{" "}
                     <span className="font-bold ">Big Ideas.</span>
                   </p>
@@ -504,7 +518,8 @@ const Home = () => {
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                  >
                     Instant access to the funds, insights, and support you need
                     to take your business further.
                   </p>
@@ -522,7 +537,8 @@ const Home = () => {
                             section: "business",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Get Started with SME Banking
                       </p>
@@ -533,7 +549,7 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-59%]">
+                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                     We are licensed by the Central Bank of Nigeria
                     <img
@@ -561,7 +577,7 @@ const Home = () => {
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
                 }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[40rem] relative`}
-                />
+              />
             </div>
           </div>
 
@@ -576,25 +592,31 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0">
+              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+            >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
-                <p 
+                  <p
                     className={`${
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp"
                         : " "
-                    } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}>
+                    } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                  >
                     Your Wealth, <br />{" "}
-                    <span className=" " style={{fontWeight:450}}> Expertly Managed </span>
+                    <span className=" " style={{ fontWeight: 450 }}>
+                      {" "}
+                      Expertly Managed{" "}
+                    </span>
                   </p>
                   <p
                     className={`lg:w-[616px] ${
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp animate__delay-04s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                  >
                     Access high-end services and exclusive investments, all in
                     one seamless experience.
                   </p>
@@ -612,7 +634,8 @@ const Home = () => {
                             section: "digital",
                           },
                         })
-                      }>
+                      }
+                    >
                       <p className="font-medium transition-colors duration-500 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         Get exclusive access
                       </p>
@@ -623,7 +646,7 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-59%]">
+                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                     We are licensed by the Central Bank of Nigeria
                     <img
@@ -667,7 +690,8 @@ const Home = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]">
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Personal Banking
@@ -680,12 +704,17 @@ const Home = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal", {
-                state: {
-                  section: "personal",
+              navigate(
+                "/personal",
+                {
+                  state: {
+                    section: "personal",
+                  },
                 },
-              }, window.scrollTo(0, 0))
-            }>
+                window.scrollTo(0, 0)
+              )
+            }
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
@@ -706,7 +735,8 @@ const Home = () => {
       <div className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]">
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
               CORPORATE Banking
@@ -719,12 +749,17 @@ const Home = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/corporate", {
-                state: {
-                  section: "corporate",
+              navigate(
+                "/corporate",
+                {
+                  state: {
+                    section: "corporate",
+                  },
                 },
-              },window.scrollTo(0, 0))
-            }>
+                window.scrollTo(0, 0)
+              )
+            }
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
@@ -753,7 +788,8 @@ const Home = () => {
         </div>
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
-          data-aos="fade-left">
+          data-aos="fade-left"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
               Business Banking
@@ -766,12 +802,17 @@ const Home = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() => {
-              navigate("/business", {
-                state: {
-                  section: "business",
+              navigate(
+                "/business",
+                {
+                  state: {
+                    section: "business",
+                  },
                 },
-              },window.scrollTo(0, 0));
-            }}>
+                window.scrollTo(0, 0)
+              );
+            }}
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
@@ -791,7 +832,8 @@ const Home = () => {
       <div className="bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
-          data-aos="fade-right">
+          data-aos="fade-right"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
               PRIVATE Banking
@@ -804,12 +846,17 @@ const Home = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() => {
-              navigate("/private", {
-                state: {
-                  section: "private",
+              navigate(
+                "/private",
+                {
+                  state: {
+                    section: "private",
+                  },
                 },
-              },window.scrollTo(0, 0));
-            }}>
+                window.scrollTo(0, 0)
+              );
+            }}
+          >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Get Started
             </p>
@@ -834,7 +881,8 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]">
+        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]"
+      >
         <div className="w-[336px] lg:w-[697px] flex flex-col items-center gap-3">
           <p className="text-[#002244] font-medium text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
             Rewards and Benefits, Every Time You Spend.
@@ -856,7 +904,8 @@ const Home = () => {
         {/* Rotating Card Effect (Desktop Only) */}
         <div
           className="hidden lg:flex items-center justify-center"
-          style={{ perspective: "1000px" }}>
+          style={{ perspective: "1000px" }}
+        >
           <div
             ref={carouselRef}
             className="relative w-[400px] h-[400px] flex items-center justify-center"
@@ -866,7 +915,8 @@ const Home = () => {
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleMouseDown}
-            onWheel={handleWheel}>
+            onWheel={handleWheel}
+          >
             {cardImages.map((card, index) => {
               const angle = (index * 360) / cardImages.length;
               return (
@@ -929,12 +979,17 @@ const Home = () => {
         <button
           className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[1.5px] border-[#002244] rounded-tr-lg rounded-bl-lg group hover:bg-[#002244]"
           onClick={() => {
-            navigate("/personal", {
-              state: {
-                section: "personalCard",
+            navigate(
+              "/personal",
+              {
+                state: {
+                  section: "personalCard",
+                },
               },
-            },window.scrollTo(0, 0));
-          }}>
+              window.scrollTo(0, 0)
+            );
+          }}
+        >
           <p className="transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base">
             Choose Your Tatum Card
           </p>
@@ -1089,12 +1144,17 @@ const Home = () => {
                 <button
                   className="transition-all duration-500 ease-in-out bg-[#FFCC33] w-[300px] group hover:border-[1.5px] hover:bg-[#fff] hover:border-[#002244] lg:w-[532px] h-[67px] flex items-center justify-center rounded-tl-lg rounded-br-lg"
                   onClick={() => {
-                    navigate("/business", {
-                      state: {
-                        section: "business",
+                    navigate(
+                      "/business",
+                      {
+                        state: {
+                          section: "business",
+                        },
                       },
-                    },window.scrollTo(0, 0));
-                  }}>
+                      window.scrollTo(0, 0)
+                    );
+                  }}
+                >
                   <p className="transition-colors duration-500 ease-in-out font-grava text-[#002244] text-[18px] font-medium">
                     Apply now
                   </p>
@@ -1116,7 +1176,8 @@ const Home = () => {
 
       <div
         className="bg-[#FFFFFF] flex flex-col items-center px-5 lg:px-[55px] py-[72px] lg:h-[996px] gap-[60px]"
-        data-aos="fade-up">
+        data-aos="fade-up"
+      >
         <div className="flex flex-col items-center gap-3 w-[300px] lg:w-[434px]">
           <p className="font-medium text-[#002244] font-grava text-[24px] lg:text-[48px] ">
             Tatum Insights.
@@ -1196,12 +1257,17 @@ const Home = () => {
           className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#090540] flex items-center justify-center"
           type="button"
           onClick={() => {
-            navigate("/resources", {
-              state: {
-                section: "resources",
+            navigate(
+              "/resources",
+              {
+                state: {
+                  section: "resources",
+                },
               },
-            },window.scrollTo(0, 0));
-          }}>
+              window.scrollTo(0, 0)
+            );
+          }}
+        >
           <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
             Explore Our Resource Center
           </p>
@@ -1210,7 +1276,8 @@ const Home = () => {
 
       <div
         className="bg-[#F9FAFB] flex flex-col pt-[56px] pb-[49.5px] lg:py-[80px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[88px]"
-        data-aos="fade-up">
+        data-aos="fade-up"
+      >
         <p className="font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]">
           Find what you need instantly.
         </p>
@@ -1227,7 +1294,8 @@ const Home = () => {
           loop={true} // Enables infinite looping of slides
           style={{
             display: isMobile ? "block" : "none",
-          }}>
+          }}
+        >
           {/* Individual Card */}
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
@@ -1242,10 +1310,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
@@ -1264,10 +1334,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
@@ -1287,10 +1359,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
@@ -1310,10 +1384,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
@@ -1332,10 +1408,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
@@ -1354,10 +1432,12 @@ const Home = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button">
+              type="button"
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
@@ -1386,10 +1466,12 @@ const Home = () => {
                     section: "personalCard",
                   },
                 });
-              }}>
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Learn more
               </p>
@@ -1410,15 +1492,21 @@ const Home = () => {
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               onClick={() => {
-                navigate("/contact", {
-                  state: {
-                    section: "contact",
+                navigate(
+                  "/contact",
+                  {
+                    state: {
+                      section: "contact",
+                    },
                   },
-                },window.scrollTo(0, 0));
-              }}>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check the nearest ATM branch
               </p>
@@ -1440,15 +1528,21 @@ const Home = () => {
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               onClick={() => {
-                navigate("/digital", {
-                  state: {
-                    section: "digital",
+                navigate(
+                  "/digital",
+                  {
+                    state: {
+                      section: "digital",
+                    },
                   },
-                },window.scrollTo(0, 0));
-              }}>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Download our mobile app
               </p>
@@ -1470,15 +1564,21 @@ const Home = () => {
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               onClick={() => {
-                navigate("/digital", {
-                  state: {
-                    section: "digital",
+                navigate(
+                  "/digital",
+                  {
+                    state: {
+                      section: "digital",
+                    },
                   },
-                },window.scrollTo(0, 0));
-              }}>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Dial *911#
               </p>
@@ -1499,15 +1599,21 @@ const Home = () => {
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               onClick={() => {
-                navigate("/digital", {
-                  state: {
-                    section: "digital",
+                navigate(
+                  "/digital",
+                  {
+                    state: {
+                      section: "digital",
+                    },
                   },
-                },window.scrollTo(0, 0));
-              }}>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Try our loan calculator
               </p>
@@ -1528,15 +1634,21 @@ const Home = () => {
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               onClick={() => {
-                navigate("/digital", {
-                  state: {
-                    section: "digital",
+                navigate(
+                  "/digital",
+                  {
+                    state: {
+                      section: "digital",
+                    },
                   },
-                },window.scrollTo(0, 0));
-              }}>
+                  window.scrollTo(0, 0)
+                );
+              }}
+            >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
-                aria-hidden="true"></span>
+                aria-hidden="true"
+              ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
                 Check our FX rates
               </p>
