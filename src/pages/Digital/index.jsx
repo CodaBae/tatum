@@ -48,7 +48,7 @@ const Digital = () => {
                 }}
                 className='lg:h-[100vh] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
-                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[0px] z-30 gap-[64px] lg:gap-[69px]'>
+                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
                             className={`animate__animated animate__fadeInUp lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
@@ -81,7 +81,7 @@ const Digital = () => {
                         
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-34.5%]'>
+                    <div className='hidden lm:flex items-start absolute lg:bottom-[-42%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by the Central Bank of Nigeria 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
@@ -93,7 +93,7 @@ const Digital = () => {
                 <img 
                     src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
                     alt='Biz' 
-                    className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28  lm:h-[790px] lg:top-40`} 
+                    className={`animate__animated animate__fadeInRight relative -right-10 lm:right-28  lm:h-[790px] lg:top-20`} 
                 />
             </div>
         </section>
