@@ -239,7 +239,7 @@ const Home = () => {
         <LandingCarousel
           interval={5000}
           showArrows={false}
-          autoPlay={true}
+          // autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={true}
@@ -261,7 +261,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -381,17 +381,35 @@ const Home = () => {
                 </div> */}
 
               </div>
-              <img
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"}
-                alt="Family"
-                className={`${
-                  activeIndex === 0 ? "animate__animated " : ""
-                } relative md:right-14 bottom-0 lm:right-24 top-16 -right-5 h-[385.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
-              />
+              {
+                isMobile ?
+                <div className="w-[400px]">
+                  <img
+                    key={activeIndex}
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                    src={"https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png"}
+                    alt="Family"
+                    className={`${
+                      activeIndex === 0 ? "animate__animated " : ""
+                    } relative md:right-14 bottom-0 lm:right-24 top-28 -right-2 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                  />
+                </div>
+                :
+                <img
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"}
+                  alt="Family"
+                  className={`${
+                    activeIndex === 0 ? "animate__animated " : ""
+                  } relative md:right-14 bottom-0 lm:right-24 top-28 -right-5 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                />
+
+              }
             </div>
           </div>
 
@@ -406,7 +424,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-[732px] lg:h-[91vh]  pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh]  pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -504,16 +522,32 @@ const Home = () => {
                 </div>
 
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
-                alt="Phone"
-                className={`${
-                  activeIndex === 1
-                    ? "animate__animated animate__zoomIn   animate__slow"
-                    : ""
-                } object-cover top-16 h-[550px] right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
-                // animate__animated animate__fadeInUp animate__delay-10s
-              />
+              {
+                isMobile ?
+                <div className="w-[400px]">
+                  <img
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1739290246/phone_gt2kbz.png"
+                    alt="Phone"
+                    className={`${
+                      activeIndex === 1
+                        ? "animate__animated animate__zoomIn animate__slow"
+                        : ""
+                    } object-cover top-28 h-[350px] -right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                    // animate__animated animate__fadeInUp animate__delay-10s
+                  />
+                </div>
+                :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
+                  alt="Phone"
+                  className={`${
+                    activeIndex === 1
+                      ? "animate__animated animate__zoomIn   animate__slow"
+                      : ""
+                  } object-cover top-16 h-[550px] right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                  // animate__animated animate__fadeInUp animate__delay-10s
+                />
+              }
             </div>
           </div>
 
@@ -528,7 +562,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -539,8 +573,8 @@ const Home = () => {
                       activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
-                    Smart Banking for Your{" "}
-                    <span className="font-bold ">Big Ideas.</span>
+                    Smart Banking for <br/> {" "}
+                    <span>Your </span><span className="font-bold ">Big Ideas.</span>
                   </p>
                   <p
                     className={`${
@@ -616,7 +650,7 @@ const Home = () => {
                       activeIndex === 2
                         ? "animate__animated animate__slow"
                         : ""
-                    }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-10 lg:top-20 lg:right-[40rem] relative`}
+                    }  md:right-[8rem] lm:right-[20rem] h-[500px] lg:h-[1000px] top-32 md:top-10 lg:top-20 lg:right-[40rem] relative`}
                   />
                 </div> :
                 <img
@@ -647,7 +681,7 @@ const Home = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-[732px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -726,7 +760,7 @@ const Home = () => {
               </div>
               {
                 isMobile ?
-                <div className="w-[600px] h-[550px]">
+                <div className="w-[600px]">
                   <img
                   src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
                   alt="Smile"
@@ -738,7 +772,7 @@ const Home = () => {
                     activeIndex === 3
                       ? "animate__animated "
                       : ""
-                  }  md:right-[8rem] lm:right-[14rem] -right-10 lg:h-[1000px] top-20 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                  }  md:right-[8rem] lm:right-[14rem] -right-10 h-[550px] top-14 md:top-10 lg:top-5 lg:right-[25rem] relative`}
                 />
                 </div>
                 :
