@@ -160,7 +160,7 @@ const Corporate = () => {
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
+      <div className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}
@@ -170,10 +170,11 @@ const Corporate = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]">
+          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
+        >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Corporate Banking
               </p>
               <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
