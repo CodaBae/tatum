@@ -897,7 +897,7 @@ const Home = () => {
         {/* Rotating Card Effect (Desktop Only) */}
         <div
           className="hidden lg:flex items-center justify-center"
-          style={{ perspective: "1000px" }}
+          style={{ perspective: "2000px" }}
         >
           <div
             ref={carouselRef}

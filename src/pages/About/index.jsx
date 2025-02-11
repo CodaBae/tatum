@@ -188,7 +188,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
               being a secure and dependable guardian of your financial goals and
               aspirations.
             </p>
-            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[37.2px] text-base lg:text-[18px] tracking-[1.4%]">
+            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
               Our journey is rooted in the promise to provide a safe haven where
               customers can confidently entrust their finances. We deliver on
               this promise through innovative products, advanced technology, and

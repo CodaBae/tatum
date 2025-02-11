@@ -74,7 +74,7 @@ const Teams = () => {
         </div>
 
         <div className='mt-[56px] lg:mt-[120px] w-full px-5 lg:px-[56px] '>
-            <p className='font-grava text-[20px] lg:text-[32px] text-[#182230] leading-[30px] lg:leading-[40px] tracking-[0.064px]'>
+            <p className='font-grava text-[20px] lg:text-[32px] text-[#002244] leading-[30px] lg:leading-[40px] tracking-[0.064px]'>
                 Our team of experienced leaders is focused on serving our clients, 
                 transforming our business, generating long-term shareholder value 
                 and driving a culture of excellence and accountability.  
@@ -83,13 +83,13 @@ const Teams = () => {
 
         <div className='bg-[#fff] pt-[56px] lg:pt-[120px] pb-[56px] lg:pb-[120px] px-5 lg:px-[56px] flex flex-col gap-2'>
             <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] border-x-0 border-t-0'>
-                {/* <div className={`${activeTab === "management" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[369px] flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("management")}>
+                {/* <div className={`${activeTab === "management" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[289px] flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("management")}>
                     <p className={`${activeTab === "management" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[40px] font-normal`}>
                         Management Team
                     </p>
                 </div> */}
-                <div className={`${activeTab === "board" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[369px] flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("board")}>
-                    <p className={`${activeTab === "board" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[40px] font-normal`}>
+                <div className={`${activeTab === "board" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-[289px] flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("board")}>
+                    <p className={`${activeTab === "board" ? "text-[#002244]" : "text-[#002244]"} font-grava text-base lg:text-[30px] font-normal`}>
                         Board of Directors
                     </p>
                 </div>
