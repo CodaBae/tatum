@@ -164,7 +164,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative lm:top-[30%] lg:w-[57%] `} 
+            className={`animate__animated relative lm:top-[32%] lg:w-[57%] `} 
             />
         </div>
       </section>
