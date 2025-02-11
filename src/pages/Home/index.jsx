@@ -355,7 +355,7 @@ const Home = () => {
                   activeIndex === 0
                     ? "animate__animated animate__fadeInRight "
                     : ""
-                } relative -right-10 md:right-14  bottom-0 lm:right-14  lm:h-[850px] md:h-[28px] relative lg:right-[22%] lg:top-[3%]  lm:h-[78vh]`}
+                } relative -right-10 md:right-14  bottom-0 lm:right-14  lm:h-[850px] md:h-[28px] relative lg:right-[18%] lg:top-[1%]  lm:h-[70vh]`}
               />
             </div>
           </div>
@@ -650,7 +650,7 @@ const Home = () => {
                   activeIndex === 3
                     ? "animate__animated animate__fadeInRight animate__slow"
                     : ""
-                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-5 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-4 md:top-10 lg:top-5 lg:right-[25rem] relative`}
               />
             </div>
           </div>
