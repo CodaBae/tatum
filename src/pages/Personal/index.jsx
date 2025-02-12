@@ -231,7 +231,7 @@ const Personal = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
-                className={`animate__animated relative -right-20 top-[7%%] w-[100%] h-[450px]`}
+                className={`animate__animated relative -right-20 top-[7%] w-[100%] h-[450px]`}
               />
             </div>
             :
