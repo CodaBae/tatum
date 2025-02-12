@@ -372,7 +372,7 @@ const About = () => {
         >
           <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px]  lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Teamwork
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
@@ -388,7 +388,7 @@ const About = () => {
         >
           <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px]  lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Excellence
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
@@ -405,7 +405,7 @@ const About = () => {
         >
           <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px]  lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Customer-Centricity
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
@@ -422,7 +422,7 @@ const About = () => {
         >
           <img src={People} alt="People" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px]  lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Integrity
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">
@@ -439,7 +439,7 @@ const About = () => {
         >
           <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px]  lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-medium text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Innovation
             </p>
             <p className="text-sm lm:text-[20px] text-[#002244] font-[300] leading-5 lm:leading-[33px] font-grava">

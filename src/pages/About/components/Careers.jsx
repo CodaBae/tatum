@@ -153,22 +153,22 @@ const Careers = () => {
             </h2>
           </div>
           <div className="w-[350px] sm:w-[545px]  lg:w-[654px]">
-            <p className="font-grava font-[350] text-[18px] leading-[27px]  sm:text-[21px] sm:leading-[35px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] sm:text-[21px] sm:leading-[35px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
               We’re driven by innovation, collaboration, and a commitment to
               making a difference.
             </p>
-            <p className="font-grava font-[350] text-[18px] leading-[27px]  tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
               We’re committed to helping you reach your potential. Whether
               you’re a recent graduate or a seasoned professional, we offer
               tailored programs to suit your career stage.
             </p>
-            <p className="font-grava font-[350] text-[18px] leading-[27px]  tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] mb-[20px]">
               Whether you're a recent graduate or a student seeking hands-on
               experience, we believe in giving you the tools, experiences, and
               support to unlock your potential.
             </p>
             <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px]  lg:tracking-[0.2%] text-[#002244] flex items-center justify-start">
+              <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244] flex items-center justify-start">
                 Find opportunities
                 <span className="">
                   <img
@@ -206,7 +206,7 @@ const Careers = () => {
           />
         </div>
         <div className="absolute top-[237px] left-[25px] lg:left-[56px] w-[350px] lg:w-[590px]">
-          <h3 className="font-grava font-[500] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px]  tracking-[0.2%] text-[#FFCC33]">
+          <h3 className="font-grava font-[500] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#FFCC33]">
             Grow with us
           </h3>
           <p className="font-grava font-[500] text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] tracking-[1.4%] lg:tracking-[0.2%] text-[#ffffff]">
@@ -289,7 +289,7 @@ const Careers = () => {
             <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[40px] sm:leading-[50px] sm:tracking-[0.2%] text-[#002244]">
               Careers at Tatum Bank
             </h2>
-            <p className="font-grava font-[350] text-[18px] leading-[27px]  tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
+            <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
               We’re committed to helping you reach your potential. Whether
               you’re a recent graduate or a seasoned professional, we offer
               tailored programs to suit your career stage.
@@ -307,12 +307,12 @@ const Careers = () => {
                 </div>
                 <div className="flex flex-col gap-[16px] ">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Internships & Graduate Programs
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Are you ready to take your first step into the
                       professional world? At Tatum, we’re passionate about
                       nurturing the next generation of leaders and innovators.
@@ -324,7 +324,7 @@ const Careers = () => {
                 </div>
                 <div>
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Apply for an Internship
                       <span className="mt-[1px] ml-[6px]">
                         <img
@@ -350,12 +350,12 @@ const Careers = () => {
                 </div>
                 <div className="flex flex-col gap-[16px]">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Leadership Training
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Our Leadership Training Program is designed to unlock your
                       potential and prepare you to take on critical leadership
                       roles in today’s dynamic world. We believe that great
@@ -367,7 +367,7 @@ const Careers = () => {
                 </div>
                 <div className="pt-[25px]">
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">
                         <img
@@ -393,12 +393,12 @@ const Careers = () => {
                 </div>
                 <div className="flex flex-col gap-[16px]">
                   <div>
-                    <h1 className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
+                    <h1 className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[24px] sm:leading-[30px] sm:tracking-[1.4%] text-[#002244]">
                       Mentorship Opportunities
                     </h1>
                   </div>
                   <div>
-                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                       Our mentorship opportunities connect you with seasoned
                       professionals who are committed to guiding you to achieve
                       your goals. Whether you're just starting your career or
@@ -409,7 +409,7 @@ const Careers = () => {
                 </div>
                 <div className="pt-[25px]">
                   <button className="pb-[4px]  border-b-[1px] border-[#002244]">
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244] flex justify-start">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">
                         <img
@@ -444,12 +444,12 @@ const Careers = () => {
             <div className="bg-[#002244] lg:h-[152px] flex flex-col lg:flex-row lg:justify-between pt-[32px] pb-[32px] pr-[24px] pl-[24px] lg:pt-[46px] lg:pb-[46px] lg:pr-[48px] lg:pl-[48px] gap-[40px] lg:gap-[270px] rounded-[20px]">
               <div className="flex flex-col w-[249px] lg:w-[284px] gap-[8px] ">
                 <div>
-                  <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px]  lg:tracking-[0.2%] text-[#E6E9EC]">
+                  <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#E6E9EC]">
                     Position
                   </p>
                 </div>
                 <div>
-                  <p className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
+                  <p className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
                     Your next position at Tatum...
                   </p>
                 </div>
@@ -458,12 +458,12 @@ const Careers = () => {
               <div className="flex flex-col gap-[40px] lg:flex-row lg:justify-between lg:w-[376px] ">
                 <div className="flex flex-col gap-[8px]">
                   <div>
-                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px]  lg:tracking-[0.2%] text-[#E6E9EC]">
+                    <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#E6E9EC]">
                       Team
                     </p>
                   </div>
                   <div>
-                    <p className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
+                    <p className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
                       Graduate Training
                     </p>
                   </div>
@@ -472,12 +472,12 @@ const Careers = () => {
                 <div className="flex justify-between lg:block">
                   <div className="flex flex-col gap-[8px]">
                     <div>
-                      <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px]  lg:tracking-[0.2%] text-[#E6E9EC]">
+                      <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#E6E9EC]">
                         Location
                       </p>
                     </div>
                     <div>
-                      <p className="font-grava font-[500] text-[18px] leading-[27px]  tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
+                      <p className="font-grava font-[500] text-[18px] leading-[27px] tracking-[0.2%] lg:text-[20px] lg:leading-[25px] lg:tracking-[1.4%] text-[#FFFFFF]">
                         Abuja, NG
                       </p>
                     </div>
@@ -503,7 +503,7 @@ const Careers = () => {
                   <h2 className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[34px] lg:leading-[40px] lg:tracking-[0.2%] text-[#002244]">
                     Looking for your perfect role?
                   </h2>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px]  tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#002244]">
                     Your dream career starts here. Browse our open roles and
                     take the first step towards a rewarding future.
                   </p>
@@ -539,7 +539,7 @@ const Careers = () => {
               </h1>
             </div>
             <div>
-              <p className="font-grava font-[350] text-[18px] leading-[27px]  tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
+              <p className="font-grava font-[350] text-[18px] leading-[27px] tracking-[0.2%] sm:text-[20px] sm:leading-[26px] sm:tracking-[1.4%] text-[#002244]">
                 At Tatum, we don’t just work—we celebrate. From team-building
                 events to wellness initiatives, our culture is vibrant and
                 inclusive.
@@ -724,7 +724,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Submit your application online by completing the form and
                     attaching your CV. Be sure to highlight your skills,
                     experiences, and aspirations.
@@ -747,7 +747,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Take a series of online assessments designed to evaluate
                     your technical knowledge, problem-solving abilities, and
                     logical reasoning skills.
@@ -770,7 +770,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     For roles requiring physical or practical tasks, you may be
                     invited to demonstrate your abilities through a structured
                     physical assessment.
@@ -793,7 +793,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     We will verify the authenticity of your credentials and
                     ensure that all necessary requirements for the role are met.
                   </p>
@@ -816,7 +816,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Engage in one-on-one or panel interviews to showcase your
                     skills, learn about the organization, and interact with top
                     management for alignment with our goals.
@@ -840,7 +840,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Complete a medical fitness evaluation to ensure you meet thw
                     health and safety standards required for the role.
                   </p>
@@ -863,7 +863,7 @@ const Careers = () => {
                   </h1>
                 </div>
                 <div>
-                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px]  sm:tracking-[0.2%] text-[#002244]">
+                  <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244]">
                     Upon selection, participate in our immersive 6-month
                     training program (or specific period) to develop your skills
                     and understand our operations.

@@ -37,7 +37,7 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
                 <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
                   POS Services
                 </h1>
-                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px]  text-[#002244]">
+                <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                   POS & Merchant Services for easy customer payments
                 </p>
               </div>
@@ -50,7 +50,7 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
                       className="w-6 h-6 sm:w-7 sm:h-7"
                       alt="checkmark"
                     />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px]  text-[#002244]">
+                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                       Sell Smarter with our Advanced POS Systems
                     </p>
                   </div>
@@ -60,7 +60,7 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
                       className="w-6 h-6 sm:w-7 sm:h-7"
                       alt="checkmark"
                     />
-                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px]  text-[#002244]">
+                    <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                       Secure card processing, real-time sales analytics, and
                       inventory sync.
                     </p>

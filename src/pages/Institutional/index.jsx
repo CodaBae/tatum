@@ -190,7 +190,7 @@ const Institutional = () => {
                 Public Sector Institutional{" "}
                 <span className="block md:inline-block">Banking.</span>
               </p>
-              <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px]  text-center md:text-left tracking-[0.2%]">
+              <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 Efficient financial management is critical to delivering public
                 services effectively. Our banking solutions help government
                 agencies, ministries, and public enterprises manage funds
@@ -319,7 +319,7 @@ const Institutional = () => {
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
               Non-Government Institution Banking
             </p>
-            <p className="text-sm lm:text-[18px] font-grava font-[350] text-[#002244] leading-[20px] lm:leading-[27px]  text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-sm lm:text-[18px] font-grava font-[350] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               We provide customized banking solutions for NGOs, educational
               institutions, healthcare providers, and international
               organizations, ensuring secure transactions and efficient fund
@@ -464,7 +464,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabOne && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]">
+              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Confidentiality and personalized attention at every level
               </p>
             )}
@@ -483,7 +483,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabTwo && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]">
+              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Confidentiality and personalized attention at every level
               </p>
             )}
@@ -502,7 +502,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabThree && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]">
+              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Expert financial guidance and personalized service.
               </p>
             )}
@@ -521,7 +521,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabFour && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]">
+              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Simplified revenue and fund management solutions.
               </p>
             )}
@@ -560,7 +560,7 @@ const Institutional = () => {
               <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]">
                 Experience institutional banking built for efficiency.
               </p>
-              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px]   tracking-[0.2%]">
+              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px]  tracking-[0.2%]">
                 Contact us to explore solutions tailored to your institution.
               </p>
               <button
