@@ -42,7 +42,6 @@ import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
-import { useLocation, useNavigate } from "react-router-dom";
 import CookieConsent from "../../CookieConsent";
 
 const Home = () => {
