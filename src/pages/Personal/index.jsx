@@ -472,7 +472,7 @@ const Personal = () => {
           backgroundSize: "cover",
         }}
         ref={cardRef}
-        className="bg-[#FFFAEB] py-[96px] gap-[40px] px-5 lm:px-[20%] lg:h-auto flex flex-col items-center justify-center lg:gap-[112px]" //[845px]
+        className="bg-[#FFFAEB] py-[96px] gap-[40px] lm:px-[20%] lg:h-auto flex flex-col items-center justify-center lg:gap-[112px]" //[845px]
       >
         <div className="flex flex-col w-[296px] mx-auto gap-3 items-center">
           <p className="font-grava text-[#002244] font-medium text-[24px] leading-[30px] lm:text-[48px] lm:leading-[60px]">
