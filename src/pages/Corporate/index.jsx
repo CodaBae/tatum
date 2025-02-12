@@ -187,7 +187,7 @@ const Corporate = () => {
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
+      <div className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lm:pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}

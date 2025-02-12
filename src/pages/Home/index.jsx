@@ -489,7 +489,7 @@ const handleTouchEnd = () => {
 
   return (
     <div
-      className="w-full pt-[40px]  lg:pt-[80px]  "
+      className="w-full pt-[40px]  lg:pt-[80px] "
     >
       <div className="w-full h-full outline-none lm:h-[100vh] ">
         <LandingCarousel
@@ -1924,7 +1924,7 @@ const handleTouchEnd = () => {
           </SwiperSlide>
         </Swiper>
         {/* Tablets and Desktop Card Layout*/}
-        <div className="hidden md:block w-full  space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="hidden md:block w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
