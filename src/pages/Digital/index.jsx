@@ -357,7 +357,7 @@ const Digital = () => {
         
                     </div>
                 </div>
-                <img src={'Ussd'} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+                <img src={'https://res.cloudinary.com/code-idea/image/upload/v1739210500/Group_48095584_1_l56aez.png'} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
