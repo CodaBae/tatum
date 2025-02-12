@@ -117,19 +117,19 @@ const TeamDetails = () => {
           </div>
           <div className='flex flex-col gap-6 w-full'>
             <div className='flex flex-col gap-4'>
-              {/* <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
+              {/* <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[24px] leading-[27px]  lg:leading-[38px]'>
                 Aminatu Chiroma is a highly accomplished individual and Group Managing Director of 
                 Binani Group of Companies with decades of experience leading diverse teams and 
                 driving organizational growth through strategic planning, operational efficiency, 
                 and business development.
               </p>
-              <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[20px] leading-[27px] lg:leading-[38px]'>
+              <p className='font-[350] font-grava text-[#002244] text-lg lg:text-[20px] leading-[27px]  lg:leading-[38px]'>
                 Proven track record in fostering strong partnerships, streamlining operations, 
                 and implementing key performance metrics to enhance productivity and achieve company goals. 
                 Expertise in navigating complex challenges, ensuring compliance, and cultivating a culture of 
                 employee development.
               </p> */}
-              <p className='font-grava font-[300] text-[#002244] text-lg lg:text-[24px] leading-[27px] lg:leading-[38px]'>
+              <p className='font-grava font-[300] text-[#002244] text-lg lg:text-[24px] leading-[27px]  lg:leading-[38px]'>
               {state?.team.bio}
               </p>
             </div>

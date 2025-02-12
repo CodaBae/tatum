@@ -260,7 +260,7 @@ const SME = () => {
               </div>
             </div>
             
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-29.5%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-42%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
@@ -275,7 +275,7 @@ const SME = () => {
                   </p>
                   <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] lm:mt-1.5">
+                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                       <img
                       src={NDIC}
                       alt="NDIC"
@@ -420,7 +420,7 @@ const SME = () => {
         className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
         <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
           <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
-          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
               Loan Calculator
             </p>
             <h1 className="font-grava font-[400] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[34px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
@@ -1263,7 +1263,7 @@ const SME = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava">
+          <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">

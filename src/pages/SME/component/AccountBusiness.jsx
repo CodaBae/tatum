@@ -119,7 +119,7 @@ const AccountBusiness = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] lm:mt-1.5">
+                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
@@ -152,7 +152,7 @@ const AccountBusiness = () => {
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
                 <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
-                <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
+                <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px]  tracking-[0.2%] text-center text-[#002244]'>
                     We offer secure online banking, 
                     convenient branch services, 
                     and reliable support whenever you need it.
@@ -162,17 +162,17 @@ const AccountBusiness = () => {
             <div className='flex flex-col lm:flex-row items-center gap-[50px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px]  tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px]  tracking-[0.2%] text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:leading-[27px] tracking-[0.2%]'>Email your completed form to 📩<span className='underline'> accounts@tatumbank.com</span> </p>
+                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:leading-[27px]  tracking-[0.2%]'>Email your completed form to 📩<span className='underline'> accounts@tatumbank.com</span> </p>
                 </div>
             </div>
 
@@ -189,7 +189,7 @@ const AccountBusiness = () => {
 
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
-                <p className='text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava'>WHY CHOOSE US</p>
+                <p className='ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]'>WHY CHOOSE US</p>
                 <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum <br />  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
@@ -198,7 +198,7 @@ const AccountBusiness = () => {
                     <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Seamless Banking</p>
                     {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]'>
                         Enjoy easy access to business-friendly digital banking solutions, 
                         from hassle-free transactions to instant payments, 
                         all tailored to keep your business running smoothly.
@@ -209,7 +209,7 @@ const AccountBusiness = () => {
                     <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Financing & Growth Support</p>
                     {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]'>
                         Gain access to competitive loan options, 
                         credit facilities, 
                         and expert business advisory services designed to help your business thrive.
@@ -220,7 +220,7 @@ const AccountBusiness = () => {
                     <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Secure and Reliable Transactions</p>
                     {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px]  text-[#334E69]'>
                         Bank with confidence using our advanced security features, 
                         ensuring your business transactions are protected 24/7.
                     </p>}

@@ -129,7 +129,7 @@ const Private = () => {
                   </p>
                   <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] lm:mt-1.5">
+                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                       <img
                       src={NDIC}
                       alt="NDIC"
@@ -189,7 +189,7 @@ const Private = () => {
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
               Wealth Management Advisory
             </p>
             <div className="flex flex-col w-full gap-[18px]">
@@ -389,7 +389,7 @@ const Private = () => {
         >
           <div className="flex gap-5 lm:gap-[20px] flex-col">
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-              <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+              <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
                 Tatum Black Card
               </p>
               <div className="flex flex-col w-full gap-[18px]">
@@ -529,7 +529,7 @@ const Private = () => {
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]"
       >
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava">
+          <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">

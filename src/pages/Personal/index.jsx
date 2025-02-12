@@ -169,7 +169,7 @@ const Personal = () => {
               </div>
             </div>
 
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-41%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-51%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                 <p className="flex items-center gap-1">
                   We are licensed by the Central Bank of Nigeria
@@ -184,7 +184,7 @@ const Personal = () => {
                 </p>
                 <p className="flex items-center gap-1" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] lm:mt-1.5">
+                  <div className="lm:w-[60px]  mt-0 lg:mt-1.5">
                     <img
                       src={NDIC}
                       alt="NDIC"
@@ -262,13 +262,13 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium   text-[11px] lg:text-[14px] tracking-[0.25em] uppercase text-sm">
               Savings Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Grow your savings effortlessly
             </p>
-            <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+            <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.2%]">
               Our savings account helps you move your money with ease, offering
               security and successful transactions every single time
             </p>
@@ -303,7 +303,7 @@ const Personal = () => {
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Current Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -355,7 +355,7 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Fixed Deposits
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -395,10 +395,10 @@ const Personal = () => {
         className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
-          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
               Loans
             </p>
-            <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center">
+            <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center text-[11px] lg:text-[14px]">
               <p className="font-grava text-xs text-[#546B82] uppercase leading-[12px]">
                 to be available soon
               </p>
@@ -620,7 +620,7 @@ const Personal = () => {
         ref={digitalRef}
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
-        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
@@ -683,7 +683,7 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="w-full h-[671px] lm:h-[440px] rounded-xl">
+          className="w-full h-[531px] lm:h-[440px] rounded-xl">
           <div
             className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
             style={{
@@ -695,7 +695,7 @@ const Personal = () => {
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>
-              <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p className="font-grava font-[300] text-sm text-16 lm:text-[18px] lg:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button

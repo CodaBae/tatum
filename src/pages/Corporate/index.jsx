@@ -119,7 +119,7 @@ const Corporate = () => {
               </div>
             </div>
             
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-38.8%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-44.8%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
@@ -134,7 +134,7 @@ const Corporate = () => {
                   </p>
                   <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] lm:mt-1.5">
+                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                       <img
                       src={NDIC}
                       alt="NDIC"
@@ -583,7 +583,7 @@ const Corporate = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava">
+          <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-med text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">

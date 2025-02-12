@@ -88,7 +88,7 @@ const Resources = () => {
                     </p>
                     <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                     All deposits are insured by
-                    <div className="lm:w-[60px] lm:mt-1.5">
+                    <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                         <img
                         src={NDIC}
                         alt="NDIC"

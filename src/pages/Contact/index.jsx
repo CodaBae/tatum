@@ -77,7 +77,7 @@ const Contact = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] lm:mt-1.5">
+                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
@@ -142,7 +142,7 @@ const Contact = () => {
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
                     <p className='font-medium text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase lm:ml-1.5'>CONTACT US</p>
                     <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
-                    <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                    <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px]  text-center md:text-left tracking-[0.2%]">
                         If you require any assistance regarding our company, 
                         businesses or exploits, please don’t hesitate to contact us. 
                         We would be more than happy to help you out.
@@ -230,7 +230,7 @@ const Contact = () => {
         <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
             <div className='flex flex-col gap-4 w-full items-center lm:w-[461px]'>
                 <p className='font-grava text-[28px] font-medium lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
-                <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
+                <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px] '>Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
             </div>
             <img src={isMobile ? MapSmall : MapBig} alt='map' className='' />
 

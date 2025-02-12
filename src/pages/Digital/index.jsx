@@ -96,7 +96,7 @@ const Digital = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] lm:mt-1.5">
+                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
@@ -205,7 +205,7 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
-                <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase'>Registration Guide</p>
+                <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase text-[11px] lg:text-[14px]'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
                     <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>1. Getting started is easy!</p>
                     <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>2. Visit our Internet Banking portal.</p>
@@ -519,7 +519,7 @@ const Digital = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className="w-full h-[671px] lm:h-[440px] rounded-xl"
+                className="w-full h-[600px] lm:h-[440px] rounded-xl"
             >
                 <div 
                     className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"

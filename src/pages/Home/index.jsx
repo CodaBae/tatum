@@ -590,7 +590,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]" style={{zIndex:'99999'}}>
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-65%]" style={{zIndex:'99999'}}>
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -605,7 +605,7 @@ const handleTouchEnd = () => {
                     </p>
                     <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                       All deposits are insured by
-                      <div className="lm:w-[60px] lm:mt-1.5">
+                      <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                         <img
                           src={NDIC}
                           alt="NDIC"
@@ -734,7 +734,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -849,7 +849,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -970,7 +970,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-65%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -1043,8 +1043,8 @@ const handleTouchEnd = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
-          <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
+          <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center ">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm  text-[11px] lg:text-[14px]">
               Personal Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -1089,7 +1089,7 @@ const handleTouchEnd = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
               CORPORATE Banking
             </p>
             <p className="font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -1142,7 +1142,7 @@ const handleTouchEnd = () => {
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
               Business Banking
             </p>
             <p className="font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -1186,7 +1186,7 @@ const handleTouchEnd = () => {
           data-aos="fade-right"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
               PRIVATE Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
