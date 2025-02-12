@@ -388,11 +388,11 @@ const handleTouchEnd = () => {
     // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     autoplay: true,
     className: "m-0",
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -1803,7 +1803,7 @@ const handleTouchEnd = () => {
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                Branch Locator
+              Client Centres
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
                 Simply enter your location and find our closest branch on the
@@ -1819,7 +1819,7 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check the nearest ATM branch
+                Check the nearest branch
               </p>
             </button>
           </SwiperSlide>
@@ -1987,7 +1987,7 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check the nearest ATM branch
+                Check the nearest branch
               </p>
             </button>
           </div>

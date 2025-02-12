@@ -153,7 +153,7 @@
 
 
   .animate__delay-10s {
-    animation-delay: 0.6s !important;
+    animation-delay: 0.4s !important;
   }
 
   .-bottom-2 {
@@ -162,4 +162,8 @@
 .framer-0ZCIA .framer-13ha838 {
  
     width: 140px !important
+}
+
+.border-\[1\.5px\] {
+    border-width: 1.2px !important
 }
