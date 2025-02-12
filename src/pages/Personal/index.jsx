@@ -51,16 +51,15 @@ const Personal = () => {
   const handleClickCard = (value) => {
     setClickedCard(value);
   };
-
   const settings = {
     // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     autoplay: true,
     className: "m-0",
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -68,6 +67,7 @@ const Personal = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+         
           // dots: true,
         },
       },
@@ -76,13 +76,15 @@ const Personal = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+      
         },
       },
       {
         breakpoint: 320,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+    
           // dots: true
         },
       },
@@ -564,35 +566,41 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
-                className="rounded-xl w-[60%] md:w-[100%]"
+                className="rounded-xl w-[50%] md:w-[100%]"
+              
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
-                className="rounded-xl w-[60%] md:w-[100%]"
+                className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
-            <div className="slide-item flex justify-center">
+            <div className="slide-item flex justify-center" >
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
-                className="rounded-xl w-[60%] md:w-[100%]"
+              
+                className="rounded-xl w-[50%] md:w-[100%]"
+               
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
-                className="rounded-xl w-[60%] md:w-[100%]"
+        
+                className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
-                className="rounded-xl w-[60%] md:w-[100%]"
+                className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
           </Slider>

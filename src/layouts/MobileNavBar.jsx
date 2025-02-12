@@ -48,10 +48,10 @@ const MobileNavBar = ({ handleClose }) => {
 
   return (
     <div 
-      className="fixed top-14 bg-[#FDF7E7] w-[100%] left-0 h-screen pb-10 animate__animated  animate__fadeInDown  overflow-y-auto" 
-      style={{zIndex: 9999}}
+      className="fixed top-14 bg-[#FDF7E7] w-full left-0 h-screen pb-10 animate__animated animate__fadeInDown" 
+      style={{ zIndex: 9999 }}
     >
-       <div className="px-5 py-[32px] flex flex-col gap-4 gap-[36px]">
+       <div className="px-5 py-[32px] flex flex-col gap-4 gap-[36px]  max-h-screen">
           <p className="font-medium font-grava text-[#334E69] text-base capitalize cursor-pointer" onClick={() => {navigate("/"); window.scrollTo(0,0); handleClose()}}>Home</p>
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
