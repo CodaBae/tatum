@@ -76,7 +76,7 @@ const Private = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
               >
                 Exclusive. Personalized.{" "}
                 <span className="font-bold ">Exceptional </span>

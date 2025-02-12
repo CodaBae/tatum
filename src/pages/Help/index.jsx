@@ -60,7 +60,7 @@ className='h-full w-full outline-none '>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                 {/* lm:pt-[50px] */}
                   <p 
-                      className={`animate__animated animate__fadeInUp animate__delay-04s lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                       Help & Support
                   </p>

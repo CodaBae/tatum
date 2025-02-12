@@ -523,7 +523,7 @@ const handleTouchEnd = () => {
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
-                      activeIndex === 0 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
+                      activeIndex === 0 ? "animate__animated animate__fadeInUp " : " "
                     } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
                   >
                     Your Smile, <br />{" "}
@@ -668,7 +668,7 @@ const handleTouchEnd = () => {
                   <p
                     style={{ fontWeight: 450 }}
                     className={`${
-                      activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
+                      activeIndex === 1 ? "animate__animated animate__fadeInUp " : " "
                     } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
                     Say Hello To {" "}
@@ -806,7 +806,7 @@ const handleTouchEnd = () => {
                   <p
                     style={{ fontWeight: 450 }}
                     className={`${
-                      activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
+                      activeIndex === 2 ? "animate__animated animate__fadeInUp " : " "
                     } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Smart Banking for <br/> {" "}
@@ -924,7 +924,7 @@ const handleTouchEnd = () => {
                 <div className="flex lm:w-[786px] flex-col items-start gap-2 lg:gap-5">
                   <p
                     className={`${
-                      activeIndex === 3 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
+                      activeIndex === 3 ? "animate__animated animate__fadeInUp " : " "
                     } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Your Wealth, <br />{" "}

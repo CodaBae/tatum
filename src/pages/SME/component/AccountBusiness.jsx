@@ -77,7 +77,7 @@ const AccountBusiness = () => {
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp  lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Take Your Business<br></br>   To <span className='font-bold'>The Next Level</span>
                         </p>
