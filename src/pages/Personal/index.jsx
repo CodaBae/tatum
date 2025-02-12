@@ -566,7 +566,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
-                className="rounded-xl w-[50%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[100%]"
               
               />
             </div>
@@ -574,7 +574,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
-                className="rounded-xl w-[50%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center" >
@@ -582,7 +582,7 @@ const Personal = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
               
-                className="rounded-xl w-[50%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[100%]"
                
               />
             </div>
@@ -591,7 +591,7 @@ const Personal = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
         
-                className="rounded-xl w-[50%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
@@ -599,7 +599,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
-                className="rounded-xl w-[50%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
