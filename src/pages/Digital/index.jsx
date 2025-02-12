@@ -42,18 +42,18 @@ const Digital = () => {
  className='h-full w-full outline-none  lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='lg:h-[100vh] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='lg:h-[100vh] h-[794px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  style={{fontWeight:450}}
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp font-bold animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                         >
-                            Seamless. Secure. <span className='font-bold'>Convenient. </span> 
+                            Seamless. Secure. <span className=''>Convenient. </span> 
                         </p>
                         <p              
 
@@ -93,7 +93,7 @@ const Digital = () => {
                 <img 
                     src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
                     alt='Biz' 
-                    className={`animate__animated  relative -right-10 lm:right-28  lm:h-[790px] lg:top-20`} 
+                    className={`animate__animated  relative -right-2 h-[400px] lm:right-28 top-12  lm:h-[790px] lg:top-20`} 
                     data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
@@ -137,31 +137,31 @@ const Digital = () => {
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 View account balances and statements
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 Transfer funds seamlessly
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 Pay bills and schedule payments
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:mt-1 lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Request and manage your chequebooks
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] text-center lm:mt-1 lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Set up standing orders and manage beneficiaries
                                 </p>
                             </div>
@@ -218,25 +218,25 @@ const Digital = () => {
                 <div className='flex flex-col gap-[32px] mt-6'>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Transfer funds with ease
                         </p>
                     </div>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Pay bills and top up airtime
                         </p>
                     </div>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Track transactions in real-time
                         </p>
                     </div>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Secure biometric login (Fingerprint/Face ID)
                         </p>
                     </div>
@@ -295,31 +295,31 @@ const Digital = () => {
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 View account balances and statements
                             </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Send money instantly
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Pay bills on the go
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Buy airtime for yourself and others
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Check balances and mini statements
                                 </p>
                             </div>
@@ -367,19 +367,19 @@ const Digital = () => {
                 <div className='flex flex-col gap-[32px] mt-6'>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Cash withdrawals & deposits
                         </p>
                     </div>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Balance inquiry & mini statements
                         </p>
                     </div>
                     <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             PIN change for added security
                         </p>
                     </div>
@@ -442,25 +442,25 @@ const Digital = () => {
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Never share your PIN, OTP, or password
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Enable biometric login for extra security
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Always log out after each session
                                 </p>
                             </div>
                             <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Report suspicious activities immediately
                                 </p>
                             </div>

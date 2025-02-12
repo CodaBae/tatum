@@ -70,18 +70,19 @@ const AccountCorporate = () => {
 className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
 <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
+                className='h-[732px]  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
-                            Banking <br/> Excellence For  <span className='font-bold'>Large Corporations</span>
+                            Banking  Excellence For  <span className='font-bold'>Large Corporations</span>
+                            {/* <br/> */}
                         </p>
                         <p 
                             className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
@@ -114,11 +115,22 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         </p>
                     </div>
                 </div>
-                <img 
-                    src={Building} 
-                    alt='Building' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[13%] lm:top-[10%] lg:w-[55%] `} 
-                />
+                {
+                    isMobile ?
+                    <div className='w-[120%]'>
+                        <img 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png" 
+                            alt='Building' 
+                            className={`animate__animated animate__fadeInRight relative right-[10%] -bottom-5 h-[394px] lg:w-[55%] `} 
+                        />
+                    </div>
+                    :
+                    <img 
+                        src={Building} 
+                        alt='Building' 
+                        className={`animate__animated animate__fadeInRight relative lm:right-[13%] lm:top-[10%] lg:w-[55%] `} 
+                    />
+                }
             </div>
         </section>
 

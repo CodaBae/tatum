@@ -31,3 +31,14 @@
   }
 
   
+
+   /* Add this instead */
+/* .slick-slide > div {
+  display: flex !important;
+  justify-content: center;
+
+}
+
+.slick-list {
+  overflow: visible;
+} */

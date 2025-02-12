@@ -112,19 +112,18 @@ const About = () => {
       id="about"
     >
     <section 
-
-className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
+        className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
         <div
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="h-[732px] lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3.5%%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -135,7 +134,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
                 Welcome to <br /> <span className="font-bold">Tatum Bank</span>
               </p>
               <p
-                className={`animate__animated   animate__fadeInUp animate__delay-06s w-[300px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated   animate__fadeInUp animate__delay-06s w-[280px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 We are more than a financial institution—we are a trusted
                 partner dedicated to safeguarding your financial wellbeing.
@@ -164,7 +163,7 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative lm:top-[32%] lg:w-[57%] `} 
+            className={`${isMobile ? "top-8 -right-14" : "lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
             />
         </div>
       </section>
@@ -574,6 +573,23 @@ className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
 
         
         </div>
+        
+        <button 
+          onClick={() =>
+            navigate("/about/teams", { state: { section: "teams" } }, window.scrollTo(0, 0))
+          }
+          className="lm:hidden flex justify-center p-4 items-center gap-3 bg-[#FFCC33] rounded-tr-[16px] rounded-bl-[16px] h-[52px]"
+        >
+          <p className="text-[#19352D] text-[14px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
+            See all Team Members
+          </p>
+          <img
+            src={Arrow}
+            alt="Arrow"
+            className="w-[28px] h-[20px] transition-all duration-500 group-hover:ml-2"
+          />
+        </button>
+
       </section>
 
       <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">

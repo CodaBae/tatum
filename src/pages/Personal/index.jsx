@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import PersonalImg from "../../assets/png/personal.png";
 import Saver from "../../assets/png/saver.png";
@@ -79,13 +81,14 @@ const Personal = () => {
       {
         breakpoint: 320,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           // dots: true
         },
       },
     ],
   };
+
 
   useEffect(() => {
     if (state?.section === "faq" && faqRef.current) {
@@ -117,13 +120,13 @@ const Personal = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
+          className="lm:h-[100vh] h-[796px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
         >
           <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[5%] z-30 gap-[64px] lg:gap-[69px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -131,11 +134,11 @@ const Personal = () => {
               <p
                 style={{ fontWeight: 450 }}
                 className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
-                Personalized
-                <br /> banking that{" "}
-                <span className="font-bold">
-                  keeps
-                  <br /> you smiling
+                Personalized banking
+                <br />  that {" "}
+                <span className="font-bold ">
+                  keeps you smiling
+                  {/* <br /> you smiling */}
                 </span>
               </p>
 
@@ -164,22 +167,30 @@ const Personal = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-23.3%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
+
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                <p className="flex items-center gap-2">
+                  We are licensed by the Central Bank of Nigeria
+                  <img
+                    src={CBN}
+                    alt="CBN"
+                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                  />
+                </p>
+                <p className="flex items-center gap-2">
+                  All deposits are insured by
+                  <div className=""> 
+                    <img
+                      src={NDIC}
+                      alt="NDIC"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px] lg:w-[60px]"
+                    />
+                  </div>
+                </p>
               </p>
             </div>
+
           </div>
           <img
             src={
@@ -189,7 +200,7 @@ const Personal = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative lm:right-[10%] lm:top-[13%] lg:w-[50%] `}
+            className={`animate__animated relative -right-12 top-[20%] lm:right-[10%] w-[300px] lm:top-[13%] lg:w-[50%] `}
           />
         </div>
       </section>
@@ -208,7 +219,7 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
               Savings Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -249,7 +260,7 @@ const Personal = () => {
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
               Current Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -301,7 +312,7 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
               Fixed Deposits
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -434,7 +445,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("debit")}>
             <img
-              src={Debit}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
               alt="Debit"
               className={`${
                 clickedCard === "debit" ? "" : "opacity-70"
@@ -458,7 +469,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("credit")}>
             <img
-              src={Credit}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
               alt="Credit"
               className={`${
                 clickedCard === "credit" ? "" : "opacity-70"
@@ -482,7 +493,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("prepaid")}>
             <img
-              src={Prepaid}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
               alt="Prepaid"
               className={`${
                 clickedCard === "prepaid" ? "" : "opacity-70"
@@ -509,35 +520,35 @@ const Personal = () => {
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src={BlackCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={GreyCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={SilverCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={YellowCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={WhiteCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />

@@ -54,17 +54,18 @@ className='h-full w-full outline-none '>
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover"
           }}
-          className='h-auto lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
-          <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
+          <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-0 z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                {/* lm:pt-[50px] */}
                   <p 
-                      className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp animate__delay-04s lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                       Help & Support
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       If you require any assistance regarding our company, businesses or exploits, 
                       please don’t hesitate to contact us..
@@ -75,13 +76,13 @@ className='h-full w-full outline-none '>
 
           <div className="hidden lm:flex items-start absolute lg:bottom-[-94.9%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                We are licensed by the Central Bank of Nigeria
+                  We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
                   alt="CBN"
                   className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
-                All deposits are insured by
+                  All deposits are insured by
                 <img
                   src={NDIC}
                   alt="NDIC"
@@ -93,19 +94,35 @@ className='h-full w-full outline-none '>
             
           </div>
 
-          <img 
-            src="https://res.cloudinary.com/code-idea/image/upload/v1739213447/hands_ibmssy.png"
-            alt='Biz' 
-            className={`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ? 
+            <div className='w-[450px]'>
+              <img 
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"
+                alt='Biz' 
+                className={`animate__animated  relative -right-2 lm:right-52 lm:h-[741px] -top-12`} 
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img 
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"
+              alt='Biz' 
+              className={`animate__animated  relative -right-10 lm:right-64 w-[500vh]  lm:h-[720px] top-10 lg:top-8`}  
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+              //{`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
+            />
+          }
+
         </div>
       </section>
 
-      <section className='flex flex-col items-center justify-center  lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
-        <div className='w-10/12 lm:w-[878px] h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
+      <section className='flex flex-col items-center justify-center pt-[56px] lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
+        <div className='w-10/12 lm:w-[878px] h-[52px] lm:h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
           <input 
             className='w-8/12 text-[#546B82] text-[18px] outline-none font-grava font-[350]'
             type='text'
@@ -139,8 +156,8 @@ className='h-full w-full outline-none '>
                 { openDropdownOne && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         If you have any questions or need assistance, please email us at:
-info@tatumbank.com
-You can also visit our head office for in-person support during business hours.
+                        info@tatumbank.com
+                        You can also visit our head office for in-person support during business hours.
 
                     </p>
                 }

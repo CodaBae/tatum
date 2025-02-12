@@ -42,21 +42,21 @@ const Contact = () => {
         >
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-auto lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  
-                      className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                             Contact Us
                         </p>
                         <p 
-                            className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated  animate__fadeInUp animate__delay-06s w-[300px] md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..
                         </p>
@@ -79,14 +79,29 @@ const Contact = () => {
               </p>
             </div>
                 </div>
-                <img 
-                    src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}
-                    alt='Biz' 
-                    className={`animate__animated  relative -left-2 lm:right-28 w-[786px]  lm:h-[811px] lg:top-20`} 
-                    data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-                />
+                {
+                    isMobile ? 
+                    <div className='w-[400px]'>
+                        <img 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1739285563/woman-laughing-while-talking-phone_1_zjuqzz.png"
+                            alt='Biz' 
+                            className={`animate__animated  relative -left-2  h-[500px] top-14   `} 
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                            data-aos-once="false"
+                        />
+                    </div>
+                    :
+                    <img 
+                        src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png": "https://res.cloudinary.com/code-idea/image/upload/v1739213039/woman_laughing_sq4zu7.png"}
+                        alt='Biz' 
+                        className={`animate__animated  relative -left-2 lm:right-28 w-[786px]   lm:h-[811px] lg:top-20`} 
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-once="false"
+                    />
+
+                }
             </div>
         </section>
 
@@ -100,7 +115,7 @@ const Contact = () => {
             </div>
             <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase'>CONTACT US</p>
+                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase lm:ml-1.5'>CONTACT US</p>
                     <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
                     <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                         If you require any assistance regarding our company, 
@@ -114,7 +129,7 @@ const Contact = () => {
 
         <section data-aos="fade-up"  data-aos-duration="3000" className='bg-[#F9FAFB] flex flex-col px-5 gap-[56px] lm:px-[56px] py-[56px] lm:py-[80px] '>
             <div className='flex flex-col gap-4 w-full lm:w-[354px]'>
-                <p className='font-grava text-[#002244] font-medium leading-[40px] lm:leading-[60px] text-[32px] lm:text-[48px] '>Get in Touch</p>
+                <p className='font-grava text-[#002244] font-medium leading-[40px] lm:leading-[60px] text-[32px] lm:text-[48px] lm:-ml-1'>Get in Touch</p>
                 <p className='font-[350] font-grava text-[#002244] text-sm lm:text-[18px] '>Fill the form below and a member of our team will be in touch with you.</p>
             </div>
             <div className='flex  flex-col lm:flex-row items-center gap-[82px]'>

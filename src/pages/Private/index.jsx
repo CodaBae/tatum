@@ -64,13 +64,13 @@ const Private = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
+          className="lm:h-[100vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
@@ -137,7 +137,7 @@ const Private = () => {
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
             }
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative -right-10 lm:top-10 mt-24 lm:h-[688px] `}
+            className={`animate__animated animate__fadeInRight relative h-[400px] -top-14 -right-2 lm:-right-10 lm:top-10 mt-24 lm:h-[688px] `}
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"

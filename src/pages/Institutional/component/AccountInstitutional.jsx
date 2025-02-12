@@ -70,7 +70,7 @@ const AccountInstitutional = () => {
 className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
 <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -79,14 +79,14 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Empowering <br /> 
                             Institutions With <br />
                             <span className='font-bold'>Financial Solutions</span>
                         </p>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[313px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Trusted banking solutions for NGOs, 
                             insurance companies, and financial institutions.
@@ -117,11 +117,21 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         </p>
                     </div>
                 </div>
-                <img 
-                    src={isMobile ? Temple : TempleMobile} 
-                    alt='Temple' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
-                />
+                { isMobile ?
+                    <div className='w-[450px]'>
+                        <img 
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"
+                            alt='Temple' 
+                            className={`animate__animated animate__fadeInRight relative right-5 top-5 lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
+                        />
+                    </div>
+                    :
+                    <img 
+                        src={TempleMobile} 
+                        alt='Temple' 
+                        className={`animate__animated animate__fadeInRight relative lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
+                    />
+                }
             </div>
         </section>
         
