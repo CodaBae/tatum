@@ -222,7 +222,7 @@ const Personal = () => {
           </div>
           {
             isMobile ? 
-            <div className="w-[120%] h-[500px]">
+            <div className="w-[163%] h-[500px]">
               <img
                 src={
                   "https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"
@@ -231,7 +231,7 @@ const Personal = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
-                className={`animate__animated relative -right-20 top-[20%] w-[100%] h-[334px]`}
+                className={`animate__animated relative -right-20 top-[7%%] w-[100%] h-[450px]`}
               />
             </div>
             :
