@@ -360,17 +360,27 @@ const Digital = () => {
                 <img src={'https://res.cloudinary.com/code-idea/image/upload/v1739210500/Group_48095584_1_l56aez.png'} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
-            <div className='flex flex-col gap-[32px]'>
-                <p className='font-grava text-[#334E69] text-[13px] font-medium leading-[16px] tracking-widest uppercase'>Registration Guide</p>
-                <div className='flex items-center gap-[32px]'>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>1. Dial *365# from your registered phone number.</p>
-                    <div className='flex items-center gap-[32px]'>
-                        <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>2. Follow the prompts to activate.</p>
-                        <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>3. Start transacting instantly!</p>
-                    </div>
-                </div>
-               
-            </div>
+            <div className='flex flex-col gap-8'>
+    <p className='font-grava text-[#334E69] text-sm font-medium leading-4 tracking-widest uppercase'>
+        Registration Guide
+    </p>
+    
+    <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
+        <p className='text-[#002244] font-medium font-grava text-base md:text-lg tracking-wide leading-6'>
+            1. Dial *365# from your registered phone number.
+        </p>
+    </div>
+
+    <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
+        <p className='text-[#002244] font-medium font-grava text-base md:text-lg tracking-wide leading-6'>
+            2. Follow the prompts to activate.
+        </p>
+        <p className='text-[#002244] font-medium font-grava text-base md:text-lg tracking-wide leading-6'>
+            3. Start transacting instantly!
+        </p>
+    </div>
+</div>
+
         </section>
 
         <section className='bg-[#F9FAFB] md:h-[400px] lg:h-[1023px] flex flex-col gap-[48px] py-[60px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
