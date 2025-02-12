@@ -135,21 +135,25 @@
     padding: 0 15px;
 }
 
+.animate__delay-01s {
+    animation-delay: 0.1s !important;
+  }
+
 .animate__delay-04s {
-    animation-delay: 0.2s !important;
+    animation-delay: 0s !important;
   }
 
 .animate__delay-08s {
-  animation-delay: 0.6s !important;
+  animation-delay: 0.2s !important;
 }
 
 .animate__delay-06s {
-    animation-delay: 0.4s !important;
+    animation-delay: 0.2s !important;
   }
 
 
   .animate__delay-10s {
-    animation-delay: 0.8s !important;
+    animation-delay: 0.6s !important;
   }
 
   .-bottom-2 {
