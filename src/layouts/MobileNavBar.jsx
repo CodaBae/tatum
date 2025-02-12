@@ -52,7 +52,7 @@ const MobileNavBar = ({ handleClose }) => {
 
   return (
     <div 
-      className="fixed top-14 bg-[#FDF7E7] w-[100%] left-0 h-screen pb-10 animate__animated  animate__fadeInDown animate__slow overflow-y-auto" 
+      className="fixed top-14 bg-[#FDF7E7] w-[100%] left-0 h-screen pb-10 animate__animated  animate__fadeInDown  overflow-y-auto" 
       style={{zIndex: 9999}}
     >
        <div className="px-5 py-[32px] flex flex-col gap-4 gap-[36px]">
