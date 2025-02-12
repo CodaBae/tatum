@@ -169,7 +169,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 type='button'
                 onClick={() => window.open("https://drive.google.com/file/d/1jMMcfNn0kAZTBxYW9AjhujwtgvBxsx-0/view?usp=sharing", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download Form</p>
+                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
                 <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
