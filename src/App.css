@@ -167,3 +167,13 @@
 .border-\[1\.5px\] {
     border-width: 1.2px !important
 }
+
+
+
+
+.slick-slide > div {
+    margin: 0 -99px;
+    width: 405px;
+    display: flex
+
+}

@@ -392,7 +392,7 @@ const handleTouchEnd = () => {
     slidesToScroll: 3,
     autoplay: true,
     className: "m-0",
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
