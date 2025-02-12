@@ -494,8 +494,8 @@ const handleTouchEnd = () => {
       <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
-          showArrows={true}
-          // autoPlay={true}
+          showArrows={false}
+          autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
