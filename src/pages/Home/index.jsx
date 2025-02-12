@@ -45,6 +45,7 @@ import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import CookieConsent from "../../CookieConsent";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -1694,6 +1695,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </div>
   );
 };
