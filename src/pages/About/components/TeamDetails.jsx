@@ -38,7 +38,7 @@ const TeamDetails = () => {
       <div className='h-[182px] hidden lm:flex justify-end items-end relative bg-[#FFCC33]'>
         <div 
           className='absolute bottom-6 right-14 hidden md:flex items-center gap-3 w-[270px] cursor-pointer group' 
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/teams')}
         >
           <MdKeyboardBackspace className='w-5 h-5 mt-0.5 text-[#002244] transition-all duration-500 group-hover:mr-2' />
           <p className='font-grava text-[#002244] text-[20px] font-medium whitespace-nowrap'>Back to leadership team</p>
