@@ -74,15 +74,15 @@ className='h-full w-full outline-none '>
               </div>
 
 
-          <div className="hidden lm:flex items-start absolute lg:bottom-[-94.9%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                  We are licensed by the Central Bank of Nigeria
+          <div className="hidden lm:flex items-start absolute lg:bottom-[-138%]">
+          <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+                We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
                   alt="CBN"
                   className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
                 />
-                  All deposits are insured by
+                All deposits are insured by
                 <img
                   src={NDIC}
                   alt="NDIC"

@@ -221,6 +221,15 @@ const Footer = () => {
                 </p>
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/resources", {
+                    state: { section: "resources" },
+                  },              window.scrollTo(0, 0)
+                  ) }
+                >
+                  Media
+                </p>
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
                   Help Center

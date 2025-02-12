@@ -33,7 +33,7 @@ const gridSquareVariants = { hidden: { opacity: 0 }, show: { opacity: 1 } };
 const team = [
   {
     name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
-    role: "Chairman",
+    role: "Chairman, Board of Directors",
     bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.",
   },
   {
@@ -69,8 +69,19 @@ const team = [
   {
     name: "Felix E. Igbinosa",
     role: "Independent Non-Executive Director",
-    bio: "Felix Igbinosa is a seasoned ex-banker with over three decades of experience in banking and financial services, specializing in corporate banking, relationship management, internal control, and audit. He held senior roles at Seven-UP Bottling Company Plc, Allstates Trust Bank, UBA Plc, and Ecobank, where he was the Chief Audit Executive (CAE) and Chief Risk Officer from 2015 to 2023. Felix holds a degree in Business Management from the University of Benin and multiple professional certifications, including Fellowship of CITN and ISACA (USA).",
-  },
+    bio:  `
+    Felix Igbinosa is a seasoned banker and professional with over three decades of Banking and Financial services experience. His expertise spans Banking Operations, Corporate Banking, Relationship Management, Internal Control, Audit, Information Technology, Corporate Services, General Administration and Project Management.
+    
+    Felix began his career as a Chartered Accountant in Practice and held senior positions at several leading financial institutions, including Allstates Trust Bank Plc, Co-operative Development Bank Plc, Continental Trust Bank Ltd, Omegabank Plc, Spring Bank Plc, where he was the pioneer Chief Inspector and UBA Plc. At UBA, he served as the Division Head, Group Internal Control, where he provided strategic oversight for the bank’s operations across Nigeria, 18 African countries, UBA CAPE (UK), and UBA New York (USA). Before his appointment as Divisional Head, he was the Regional Audit and Control Coordinator for UBA WAMZ, covering Ghana, Sierra Leone, and Liberia.
+    
+    From 2015 to 2023, Felix was the Chief Audit Executive (CAE) and Cluster Head at Ecobank, where he oversaw the bank’s Internal Audit and Management Services function, reporting directly to the Board Audit Committee. He was also responsible for the internal audit functions of the Ecobank Software Centre Nigeria and Ecobank Development Corporation (EDC).
+    
+    Felix holds a Higher National Diploma in Accountancy from the Federal Polytechnic, Auchi; a Bachelor’s degree in Business Management from the University of Sunderland, UK; and an MBA from the Federal University of Technology, Akure (FUTA). He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) (FCA) and the Chartered Institute of Taxation of Nigeria (CITN) (FCTI). Additionally, he is a Platinum Member of ISACA (USA) and an Honorary Senior Member of the Chartered Institute of Bankers of Nigeria (CIBN) (HCIB), where he currently serves on the CIBN Investigation Panel.
+    
+    Felix was also the Chairman of the Association of Chief Audit Executives of Banks in Nigeria (ACAEBIN) until his retirement in July 2023.
+    
+    He is currently the Managing Partner at Felix Igbinosa & Co (Chartered Accountants) and the Managing Consultant at First VineField Consulting.
+    ` },
   {
     name: "Abimbola Izu",
     role: "Independent Non-Executive Director",
@@ -117,14 +128,12 @@ const Management = () => {
               <div
                 className="flex flex-col gap-6 "
                 onClick={() => {
-                  navigate(
-                    "/about/team-details",
-                    {
-                      state: { section: "details", team: team[1] },
-                    },
-                    window.scrollTo(0, 0)
-                  );
+                  window.scrollTo(0, 0); // Scroll to the top first
+                  navigate("/about/team-details", {
+                    state: { section: "details", team: team[1] },
+                  });
                 }}
+                
               >
                 <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
                   {/* Background Image */}

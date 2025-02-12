@@ -65,7 +65,7 @@ const About = () => {
   const team = [
     {
         name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
-        role: "Chairman",
+        role: "Chairman, Board of Directors",
         bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association."
     },
     {
@@ -140,7 +140,7 @@ const About = () => {
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-84%]'>
+            <div className='hidden lm:flex items-start absolute lg:bottom-[-80%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by the Central Bank of Nigeria
                 <img

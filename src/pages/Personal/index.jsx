@@ -168,7 +168,7 @@ const Personal = () => {
               </div>
             </div>
 
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-41%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                 <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria

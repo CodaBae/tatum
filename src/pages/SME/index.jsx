@@ -214,7 +214,7 @@ const SME = () => {
 
   return (
     <div ref={smeRef} className="">
-      <section className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]">
+      <section className="h-full w-full outline-none  lg:h-[100vh]">
         <div
           style={{
             backgroundImage: `url(${

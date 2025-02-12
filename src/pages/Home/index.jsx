@@ -43,6 +43,8 @@ import "./css/CardScroll.css";
 import "./css/Dot.css";
 import "./css/SwiperSlide.css";
 import CookieConsent from "../../CookieConsent";
+import $ from 'jquery';
+import './CardCarousel.css'; // Create this file for styles
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -50,19 +52,137 @@ const Home = () => {
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
 
-  const [currdeg, setCurrdeg] = useState(0);
+  // const [currdeg, setCurrdeg] = useState(0);
   const [isManualTransition, setIsManualTransition] = useState(false);
-  const [isPageVisible, setIsPageVisible] = useState(true);
+  // const [isPageVisible, setIsPageVisible] = useState(true);
 
   const formatter = new Intl.NumberFormat("en-US");
 
-  const navigate = useNavigate();
 
+  
+
+  const navigate = useNavigate();
   const carouselRef = useRef(null);
+
+  const carousel1Ref = useRef(null);
+
+  const [currdeg, setCurrdeg] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [startRotation, setStartRotation] = useState(0);
+  const [isPageVisible, setIsPageVisible] = useState(true);
+  const autoplayIntervalRef = useRef(null);
+
+  useEffect(() => {
+    const carousel = $(carouselRef.current);
+
+  const rotate = (direction) => {
+    let newDeg = currdeg;
+    if (direction === "n") {
+      newDeg -= 60;
+    } else if (direction === "p") {
+      newDeg += 60;
+    }
+    setCurrdeg(newDeg);
+    updateRotation(newDeg);
+  };
+
+  const updateRotation = (deg) => {
+    carousel.css({
+      "-webkit-transform": `rotateY(${deg}deg)`,
+      "-moz-transform": `rotateY(${deg}deg)`,
+      "-o-transform": `rotateY(${deg}deg)`,
+      "transform": `rotateY(${deg}deg)`
+    });
+  };
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX);
+    setStartRotation(currdeg);
+    carousel.removeClass('manual-transition');
+    e.preventDefault();
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const dragDistance = e.pageX - startX;
+    const rotationDelta = dragDistance / 5;
+    const newDeg = startRotation + rotationDelta;
+    setCurrdeg(newDeg);
+    updateRotation(newDeg);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    carousel.addClass('manual-transition');
+    updateRotation(currdeg);
+  };
+
+  const startAutoplay = () => {
+    if (!autoplayIntervalRef.current && isPageVisible) {
+      carousel.removeClass('manual-transition');
+      autoplayIntervalRef.current = setInterval(() => {
+        setCurrdeg((prevDeg) => prevDeg - 0.3);
+      }, 16);
+    }
+  };
+
+  const handleVisibilityChange = () => {
+    if (document.hidden) {
+      setIsPageVisible(false);
+      if (autoplayIntervalRef.current) {
+        clearInterval(autoplayIntervalRef.current);
+        autoplayIntervalRef.current = null;
+      }
+    } else {
+      setIsPageVisible(true);
+      if (!isDragging) {
+        setTimeout(() => {
+          carousel.removeClass('manual-transition');
+          startAutoplay();
+        }, 100);
+      }
+    }
+  };
+
+  carousel.on("mousedown", handleMouseDown);
+  $(document).on("mousemove", handleMouseMove);
+  $(document).on("mouseup mouseleave", handleMouseUp);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+
+  startAutoplay();
+
+  carousel.on("mouseenter mousedown", () => {
+    if (autoplayIntervalRef.current) {
+      clearInterval(autoplayIntervalRef.current);
+      autoplayIntervalRef.current = null;
+    }
+  }).on("mouseleave", () => {
+    if (!isDragging && isPageVisible) {
+      carousel.removeClass('manual-transition');
+      startAutoplay();
+    }
+  });
+
+  return () => {
+    carousel.off("mousedown", handleMouseDown);
+    $(document).off("mousemove", handleMouseMove);
+    $(document).off("mouseup mouseleave", handleMouseUp);
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    if (autoplayIntervalRef.current) {
+      clearInterval(autoplayIntervalRef.current);
+    }
+  };
+}, [currdeg, isDragging, startX, startRotation, isPageVisible]);
+
+
+
+
+  // const carouselRef = useRef(null);
   const autoplayInterval = useRef(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const startRotation = useRef(0);
+ 
   const currdegRef = useRef(currdeg);
 
   // Keep currdegRef in sync with state
@@ -470,7 +590,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]" style={{zIndex:'99999'}}>
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -478,32 +598,10 @@ const handleTouchEnd = () => {
                         src={CBN}
                         alt="CBN"
                         className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                        tyle={{zIndex:'99999'}}
                       />
                     </p>
-                    <p className="flex items-center gap-2">
-                      All deposits are insured by
-                      <div className="lm:w-[70px]">
-                        <img
-                          src={NDIC}
-                          alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                        />
-                      </div>
-                    </p>
-                  </p>
-                </div>
-
-                {/* <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
-                    <p className="flex items-center gap-2">
-                      We are licensed by the Central Bank of Nigeria
-                      <img
-                        src={CBN}
-                        alt="CBN"
-                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                      />
-                    </p>
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                       All deposits are insured by
                       <div className="">
                         <img
@@ -514,7 +612,7 @@ const handleTouchEnd = () => {
                       </div>
                     </p>
                   </p>
-                </div> */}
+                </div>
 
               </div>
               {
@@ -634,7 +732,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -749,7 +847,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -870,7 +968,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -1172,6 +1270,9 @@ const handleTouchEnd = () => {
               //   OTransform: `rotateY(${currdeg}deg)`,
               // }}
             >
+
+
+              
                 <div className="item a">
                     <div className="card-face card-front">
                         <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png" className="rounded-[24px]"/>
@@ -1702,7 +1803,7 @@ const handleTouchEnd = () => {
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                ATM Branch Locator
+                Branch Locator
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
                 Simply enter your location and find our closest branch on the
@@ -1755,7 +1856,7 @@ const handleTouchEnd = () => {
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
                 No internet? No problem. Access your account, check balances,
-                and perform essential transactions using our simple *911#. It is
+                and perform essential transactions using our simple *365#. It is
                 quick, secure, and reliable.
               </p>
             </div>
@@ -1859,7 +1960,7 @@ const handleTouchEnd = () => {
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                ATM Branch Locator
+                Client Centres
               </p>
               <p className="text-sm lg:text-base font-[350] font-grava text-[#002244]">
                 Simply enter your location and find our closest branch on the
