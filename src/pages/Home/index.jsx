@@ -562,7 +562,7 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Open an account today
+                        Open an account 
                       </p>
                       <BsArrowRight
                         size={100}
