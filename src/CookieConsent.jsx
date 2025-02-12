@@ -24,7 +24,7 @@ const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-5 left-5 right-5 md:left-14 md:right-auto  md:w-[429px]  bg-[#FFFAEB] py-5 px-4 rounded-[16px] shadow-lg">
+    <div className="fixed bottom-5  left-5 right-5 md:left-auto md:right-8 md:w-[429px]  bg-[#FFFAEB] py-5 px-4 rounded-[16px] shadow-lg">
       <h2 className="text-[14px] lg:text-[16px] font-grava font-semibold leading-6 tracking-[0.2%] text-[#000000]">Tatum Uses Cookies</h2>
       <p className="text-[#002244] font-grava font-[350] leading-5 tracking-[0.2%] text-[12px] lg:text-[14px] mt-3">
         We use essential cookies to make our site work. With your consent, we

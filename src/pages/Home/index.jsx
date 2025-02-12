@@ -494,8 +494,8 @@ const handleTouchEnd = () => {
       <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
-          showArrows={false}
-          autoPlay={true}
+          showArrows={true}
+          // autoPlay={true}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -594,16 +594,18 @@ const handleTouchEnd = () => {
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
-                      <img
-                        src={CBN}
-                        alt="CBN"
-                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                        tyle={{zIndex:'99999'}}
-                      />
+                      <div className="lm:w-[30px]">
+                        <img
+                          src={CBN}
+                          alt="CBN"
+                          className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                          tyle={{zIndex:'99999'}}
+                        />
+                      </div>
                     </p>
                     <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                       All deposits are insured by
-                      <div className="">
+                      <div className="lm:w-[60px] lm:mt-1.5">
                         <img
                           src={NDIC}
                           alt="NDIC"
