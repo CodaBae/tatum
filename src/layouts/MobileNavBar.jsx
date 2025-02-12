@@ -40,10 +40,6 @@ const MobileNavBar = ({ handleClose }) => {
       setOpenInstitutionalDropdown(!openInstitutionalDropdown)
     }
 
-
-
-    
-
     const handleResources = () => {
       setOpenResourcesDropdown(!openResourcesDropdown)
     }

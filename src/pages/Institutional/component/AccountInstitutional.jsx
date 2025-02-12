@@ -108,21 +108,46 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                             </button>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-32%]'>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-32%]" style={{zIndex:'99999'}}>
+                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                            <p className="flex items-center gap-2">
+                            We are licensed by the Central Bank of Nigeria
+                            <div className="lm:w-[30px]">
+                                <img
+                                src={CBN}
+                                alt="CBN"
+                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                tyle={{zIndex:'99999'}}
+                                />
+                            </div>
+                            </p>
+                            <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                            All deposits are insured by
+                            <div className="lm:w-[60px] lm:mt-1.5">
+                                <img
+                                src={NDIC}
+                                alt="NDIC"
+                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                                />
+                            </div>
+                            </p>
+                        </p>
+                    </div>
+                    {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-32%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by the Central Bank of Nigeria 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                             All deposits are insured by
                             <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 { isMobile ?
                     <div className='w-[450px]'>
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"
                             alt='Temple' 
-                            className={`animate__animated animate__fadeInRight relative right-5 top-5 lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
+                            className={`animate__animated animate__fadeInRight relative right-8 top-14 lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
                         />
                     </div>
                     :

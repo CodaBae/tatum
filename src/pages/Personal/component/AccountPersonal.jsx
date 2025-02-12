@@ -72,7 +72,7 @@ const AccountPersonal = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
+                className=' h-[764px]  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -105,14 +105,39 @@ const AccountPersonal = () => {
                             </a>
                         </div>
                     </div>
-                    <div className='hidden lm:flex items-start absolute lg:bottom-[-51.5%]'>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-51.5%]" style={{zIndex:'99999'}}>
+                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                            <p className="flex items-center gap-2">
+                            We are licensed by the Central Bank of Nigeria
+                            <div className="lm:w-[30px]">
+                                <img
+                                src={CBN}
+                                alt="CBN"
+                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                tyle={{zIndex:'99999'}}
+                                />
+                            </div>
+                            </p>
+                            <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                            All deposits are insured by
+                            <div className="lm:w-[60px] lm:mt-1.5">
+                                <img
+                                src={NDIC}
+                                alt="NDIC"
+                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                                />
+                            </div>
+                            </p>
+                        </p>
+                    </div>
+                    {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-51.5%]'>
                         <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
                             We are licensed by the Central Bank of Nigeria 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                             All deposits are insured by
                             <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 {
                     isMobile ? 
@@ -120,14 +145,14 @@ const AccountPersonal = () => {
                         <img 
                             src={Alhaja} 
                             alt='Family' 
-                            className={`animate__animated animate__fadeInRight relative right-4  `} 
+                            className={`animate__animated animate__fadeInRight relative top-[30%] right-4 `} 
                         />
                     </div>
                     :
                     <img 
                         src={Alhaja} 
                         alt='Family' 
-                        className={`animate__animated animate__fadeInRight relative  lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
+                        className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
                     />
                 }
             </div>

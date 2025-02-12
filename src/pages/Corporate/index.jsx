@@ -84,7 +84,7 @@ const Corporate = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[732px] pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
+          className="h-[762px] pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
@@ -118,7 +118,33 @@ const Corporate = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden lm:flex items-start absolute lg:bottom-[-38.8%]">
+            
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-38.8%]" style={{zIndex:'99999'}}>
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                  <p className="flex items-center gap-2">
+                  We are licensed by the Central Bank of Nigeria
+                  <div className="lm:w-[30px]">
+                      <img
+                      src={CBN}
+                      alt="CBN"
+                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      tyle={{zIndex:'99999'}}
+                      />
+                  </div>
+                  </p>
+                  <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                  All deposits are insured by
+                  <div className="lm:w-[60px] lm:mt-1.5">
+                      <img
+                      src={NDIC}
+                      alt="NDIC"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      />
+                  </div>
+                  </p>
+              </p>
+            </div>
+            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-38.8%]">
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
@@ -133,7 +159,8 @@ const Corporate = () => {
                   className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
                 />
               </p>
-            </div>
+            </div> */}
+
           </div>
           {
             isMobile ?
@@ -141,7 +168,7 @@ const Corporate = () => {
               <img
                 src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
                 alt="Family"
-                className={`animate__animated  relative right-14 lm:right-[30%] h-[383px] lm:top-[8%] lg:w-[75%] `}
+                className={`animate__animated  relative right-14 lm:right-[30%] h-[383px] top-[8%] `}
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
