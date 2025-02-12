@@ -229,7 +229,7 @@ const Personal = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
-                className={`animate__animated relative -right-20 top-[10%] w-[90%] h-[434px]`}
+                className={`animate__animated relative -right-20 top-[20%] w-[100%] h-[334px]`}
               />
             </div>
             :
@@ -241,7 +241,7 @@ const Personal = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative -right-12 top-[20%] lm:right-[10%]  lm:top-[13%] lg:w-[60%] lg:h-[654px] `}
+            className={`animate__animated relative -right-12 top-[0%] lm:right-[25%]  lm:top-[5%] lg:w-[90%] lg:h-[954px] `}
           />
           }
         </div>
