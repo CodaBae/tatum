@@ -47,7 +47,7 @@ import $ from 'jquery';
 import './CardCarousel.css'; // Create this file for styles
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
