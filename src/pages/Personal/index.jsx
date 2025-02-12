@@ -133,7 +133,7 @@ const Personal = () => {
               {/* First Text */}
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
                 Personalized banking
                 <br />  that {" "}
                 <span className="font-bold ">
