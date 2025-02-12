@@ -489,7 +489,7 @@ const handleTouchEnd = () => {
 
   return (
     <div
-      className="w-full pt-[40px]  lg:pt-[80px] overflow-y-auto"
+      className="w-full pt-[40px]  lg:pt-[80px] overflow-x-auto"
     >
       <div className="w-full h-full outline-none lm:h-[100vh] ">
         <LandingCarousel
