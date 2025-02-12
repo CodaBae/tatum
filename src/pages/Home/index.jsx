@@ -1375,9 +1375,7 @@ const handleTouchEnd = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
-             
                 className="rounded-xl w-[50%] md:w-[100%]"
-            
               />
             </div>
             <div className="slide-item flex justify-center" >
