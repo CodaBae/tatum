@@ -14,7 +14,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import Boy from "../../assets/png/boy.png";
 import Girl from "../../assets/png/girl.png";
-import Farmer from "../../assets/png/farmer.png";
+import Farmer from "../../assets/png/tailor.png";
 import SchoolGirl from "../../assets/png/school_girl.png";
 import Tiles from "../../assets/png/tile.png";
 import GreyCard from "../../assets/png/grey_card.png";

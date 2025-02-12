@@ -140,7 +140,34 @@ const About = () => {
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
-            <div className='hidden lm:flex items-start absolute lg:bottom-[-80%]'>
+
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-80%]" style={{zIndex:'99999'}}>
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                <p className="flex items-center gap-2">
+                  We are licensed by the Central Bank of Nigeria
+                  <div className="lm:w-[30px]">
+                    <img
+                      src={CBN}
+                      alt="CBN"
+                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      tyle={{zIndex:'99999'}}
+                    />
+                  </div>
+                </p>
+                <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                  All deposits are insured by
+                  <div className="lm:w-[60px] lm:mt-1.5">
+                    <img
+                      src={NDIC}
+                      alt="NDIC"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                    />
+                  </div>
+                </p>
+              </p>
+            </div>
+
+            {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-80%]'>
               <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
@@ -155,7 +182,8 @@ const About = () => {
                   className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
                 />
               </p>
-            </div>
+            </div> */}
+
           </div>
           <img
             src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
@@ -163,7 +191,8 @@ const About = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`${isMobile ? "top-8 -right-14" : "lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
+            className={`${isMobile ? "top-12 -right-14" : "lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
+            //top-8
             />
         </div>
       </section>
