@@ -53,7 +53,7 @@ const TeamDetails = () => {
           <div className='w-[350px] md:w-[851px] flex items-center flex-col mx-auto gap-6 lg:gap-[40px]'>
 
             <div className='flex flex-col items-center gap-2 lg:gap-4'>
-              <p className='text-[#002244] font-semibold text-[32px] leading-[32px] text-center lg:text-[48px] font-grava lg:leading-[48px]'>{state?.team.name}</p>
+              <p className='text-[#002244] font-semibold text-[34px] leading-[32px] text-center lg:text-[48px] font-grava lg:leading-[48px]'>{state?.team.name}</p>
               <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
             </div>
 

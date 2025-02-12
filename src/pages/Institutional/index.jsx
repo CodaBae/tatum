@@ -73,7 +73,7 @@ const Institutional = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                 Empowering <br />
                 Institutions with <br />
                 <span className="font-bold">Financial Excellence</span>
@@ -104,7 +104,7 @@ const Institutional = () => {
               </div>
             </div>
             <div className="flex items-start absolute -bottom-20 lg:bottom-[-24.9%]" style={{zIndex:'99999'}}>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
                   <div className="lm:w-[30px]">
@@ -129,7 +129,7 @@ const Institutional = () => {
               </p>
             </div>
             {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-24.9%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
@@ -557,7 +557,7 @@ const Institutional = () => {
             }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
               {/* ... rest of your content ... */}
-              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]">
+              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]">
                 Experience institutional banking built for efficiency.
               </p>
               <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px]  tracking-[0.2%]">

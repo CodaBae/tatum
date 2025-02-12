@@ -89,7 +89,7 @@ const Corporate = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                 Powering Your <span className="font-bold">Business Growth</span>
               </p>
               <p
@@ -120,7 +120,7 @@ const Corporate = () => {
             </div>
             
             <div className="flex items-start absolute -bottom-20 lg:bottom-[-38.8%]" style={{zIndex:'99999'}}>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
                   <div className="lm:w-[30px]">
@@ -145,7 +145,7 @@ const Corporate = () => {
               </p>
             </div>
             {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-38.8%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}

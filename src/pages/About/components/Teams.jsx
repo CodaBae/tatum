@@ -74,7 +74,7 @@ const Teams = () => {
         </div>
 
         <div className='mt-[56px] lg:mt-[120px] w-full px-5 lg:px-[56px] '>
-            <p className='font-grava text-[20px] lg:text-[32px] text-[#002244] leading-[30px] lg:leading-[40px] tracking-[0.064px]'>
+            <p className='font-grava text-[20px] lg:text-[34px] text-[#002244] leading-[30px] lg:leading-[40px] tracking-[0.064px]'>
                 Our team of experienced leaders is focused on serving our clients, 
                 transforming our business, generating long-term shareholder value 
                 and driving a culture of excellence and accountability.  

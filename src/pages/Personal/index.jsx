@@ -135,7 +135,7 @@ const Personal = () => {
               {/* First Text */}
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
                 Personalized banking
                 <br />  that {" "}
                 <span className="font-bold ">
@@ -146,13 +146,12 @@ const Personal = () => {
 
               {/* Second Text */}
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
-                Explore tailored solutions that fit your lifestyle, empower{" "}
-                <br></br> your goals, and make banking a joy.
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[90%] md:w-[265px] lg:w-[737px] font-[300]   text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy.
               </p>
 
               {/* Button */}
-              <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+              <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
                 <button
                   className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   type="button"
@@ -171,8 +170,8 @@ const Personal = () => {
             </div>
 
             <div className="flex items-start absolute -bottom-20 lg:bottom-[-41%]" style={{zIndex:'99999'}}>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
-                <p className="flex items-center gap-2">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                <p className="flex items-center gap-1">
                   We are licensed by the Central Bank of Nigeria
                   <div className="lm:w-[30px]">
                     <img
@@ -183,7 +182,7 @@ const Personal = () => {
                     />
                   </div>
                 </p>
-                <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                <p className="flex items-center gap-1" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
                   <div className="lm:w-[60px] lm:mt-1.5">
                     <img
@@ -197,7 +196,7 @@ const Personal = () => {
             </div>
 
             {/* <div className="flex items-start absolute -bottom-20 lg:bottom-[-41%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                 <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
                   <img
@@ -692,7 +691,7 @@ const Personal = () => {
               zIndex: 1, // Ensures content stays above background
             }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
-              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>

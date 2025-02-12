@@ -231,7 +231,7 @@ const SME = () => {
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                 Powering Your <br /> Business{" "}
                 <spen className="font-bold ">Supporting Your Dreams</spen>
               </p>
@@ -242,7 +242,7 @@ const SME = () => {
                 unlock opportunities, drive growth, and ensure your
                 success.
               </p>
-              <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
+              <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
                 <button
                   className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center px-5 py-2`}
                   type="button"
@@ -261,7 +261,7 @@ const SME = () => {
             </div>
             
             <div className="flex items-start absolute -bottom-20 lg:bottom-[-29.5%]" style={{zIndex:'99999'}}>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
                   <div className="lm:w-[30px]">
@@ -286,7 +286,7 @@ const SME = () => {
               </p>
             </div>
             {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-29.5%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}
@@ -423,7 +423,7 @@ const SME = () => {
           <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
               Loan Calculator
             </p>
-            <h1 className="font-grava font-[400] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[32px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
+            <h1 className="font-grava font-[400] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[34px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
               Get instant loan estimates and choose the right financing plan.
             </h1>
           </div>
@@ -1122,7 +1122,7 @@ const SME = () => {
               className="
           font-grava font-[500] 
           text-center lg:text-start 
-          text-[24px] sm:text-[32px] lg:text-[40px] 
+          text-[24px] sm:text-[34px] lg:text-[40px] 
           leading-[30px] sm:leading-[40px] lg:leading-[50px] 
           tracking-[1.4%] sm:tracking-[0.8%] lg:tracking-[0.2%] 
           text-[#002244]
@@ -1359,7 +1359,7 @@ const SME = () => {
                     flex flex-col gap-[40px] lg:justify-between ">
             <div className="flex flex-col gap-[16px]">
               <h1
-                className="font-grava font-[500] text-[16px] sm:text-[22px] lg:text-[32px] 
+                className="font-grava font-[500] text-[16px] sm:text-[22px] lg:text-[34px] 
                        leading-[20px] sm:leading-[24px] lg:leading-[48px] 
                        tracking-[0.2%] text-[#002244]">
                 Let’s Build the Future of Your Business Together

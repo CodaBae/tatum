@@ -29,7 +29,7 @@ const Loan = () => {
         > 
             <div className="absolute inset-0 w-full h-auto bg-[#0005]" />
                       
-            <p className='font-grava font-bold z-10 text-[#fff] text-center text-[32px] lg:text-[75px]'>Personal Loan and Credit</p>
+            <p className='font-grava font-bold z-10 text-[#fff] text-center text-[34px] lg:text-[75px]'>Personal Loan and Credit</p>
                       
             <div className='absolute bottom-10 right-14 hidden md:flex items-center gap-3 w-[125px] cursor-pointer group' onClick={() => navigate(-1)}>
                 <MdKeyboardBackspace className='w-5 h-5 mt-1 text-[#fff] group-hover:mr-2' />

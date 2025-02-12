@@ -61,12 +61,12 @@ const Resources = () => {
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                   <p 
-                      className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
                       Media & Publications
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       Learn about everything, from customer's success stories 
                       to getting informed with our latest news.
@@ -74,7 +74,7 @@ const Resources = () => {
                 
               </div>
               <div className="flex items-start absolute -bottom-20 lg:bottom-[-85.9%]" style={{zIndex:'99999'}}>
-                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                     We are licensed by the Central Bank of Nigeria
                     <div className="lm:w-[30px]">
@@ -99,7 +99,7 @@ const Resources = () => {
                 </p>
               </div>
               {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-85.9%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}

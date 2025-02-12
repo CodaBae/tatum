@@ -60,12 +60,12 @@ className='h-full w-full outline-none '>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                 {/* lm:pt-[50px] */}
                   <p 
-                      className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                       Help & Support
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                       If you require any assistance regarding our company, businesses or exploits, 
                       please don’t hesitate to contact us..
@@ -74,7 +74,7 @@ className='h-full w-full outline-none '>
               </div>
 
               <div className="flex items-start absolute -bottom-20 lg:bottom-[-138%]" style={{zIndex:'99999'}}>
-                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                     We are licensed by the Central Bank of Nigeria
                     <div className="lm:w-[30px]">
@@ -100,7 +100,7 @@ className='h-full w-full outline-none '>
               </div>
 
             {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-138%]">
-          <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
+          <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
                 We are licensed by the Central Bank of Nigeria
                 <img
                   src={CBN}

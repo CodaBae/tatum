@@ -114,7 +114,7 @@ const Careers = () => {
           className="absolute hidden lg:block lg:w-[670px] lg:h-[670px] right-[0px] top-[294px]"
         />
         <div className="animate__animated animate__fadeInUp  absolute w-[274px] sm:w-[350px] top-[120px] left-[25px] lg:w-[531px] lg:top-[220px] lg:left-[56px] ">
-          <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[32px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
+          <h1 className="font-grava font-[700] w-[229px] sm:w-[350px] lg:w-[531px] text-[34px] sm:text-[50px] lg:text-[75px] lg:leading-[78.75px] lg:tracking-[0.05%] leading-[40px] tracking-[0.02%]  text-[#002244] pb-[12.5px] lg:pb-[25px]">
             Build Your Future with Us
           </h1>
           <p className="animate__animated  animate__fadeInUp animate__slow font-grava font-[350] text-[14px] sm:text-[18px] leading-[20px] tracking-[0.2%]  lg:text-[24px] lg:leading-[30px] lg:tracking-[1.4%] text-[#002244] pb-[25px]">
@@ -147,7 +147,7 @@ const Careers = () => {
       <div>
         <div className="flex flex-col items-center lg:items-start lg:flex-row p-[25px] lg:p-[50px] mt-[35px] mb-[80px] lg:mt-[50px] lg:mb-[50px] gap-[20px] lg:gap-[140px]">
           <div className="w-[350px] sm:w-[545px] lg:w-[546px]">
-            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:leading-[35px] sm:text-[32px] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
+            <h2 className="font-grava font-[500] text-[24px] leading-[30px] tracking-[1.4%] sm:leading-[35px] sm:text-[34px] lg:text-[40px] lg:leading-[50px] lg:tracking-[0.2%] text-[#002244]">
               We are always seeking passionate, knowledgeable, ambitious and
               well-rounded individuals.
             </h2>
@@ -209,7 +209,7 @@ const Careers = () => {
           <h3 className="font-grava font-[500] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#FFCC33]">
             Grow with us
           </h3>
-          <p className="font-grava font-[500] text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] tracking-[1.4%] lg:tracking-[0.2%] text-[#ffffff]">
+          <p className="font-grava font-[500] text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] tracking-[1.4%] lg:tracking-[0.2%] text-[#ffffff]">
             When you join us, you’re not just taking on a job, you’re stepping
             into a career filled with growth, purpose, and opportunities to
             thrive.
@@ -500,7 +500,7 @@ const Careers = () => {
             <div className="">
               <div className="bg-[#ffffff] lg:w-[1328px] flex flex-col items-center lg:flex-row lg:justify-between pt-[32px] pb-[32px] pr-[24px] pl-[24px] lg:pt-[64px] lg:pb-[64px] lg:pr-[48px] lg:pl-[48px] rounded-[20px] gap-[40px] ">
                 <div className="flex flex-col gap-[14px] w-[302px] lg:w-[621px]">
-                  <h2 className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[32px] lg:leading-[40px] lg:tracking-[0.2%] text-[#002244]">
+                  <h2 className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[34px] lg:leading-[40px] lg:tracking-[0.2%] text-[#002244]">
                     Looking for your perfect role?
                   </h2>
                   <p className="font-grava font-[350] text-[14px] leading-[20px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%] text-[#002244]">
@@ -560,7 +560,7 @@ const Careers = () => {
                 <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
 
                 <div className="absolute top-[230px] left-[20px] lg:top-[650px] lg:left-[32px] w-[410px] ">
-                  <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[32px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
+                  <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[34px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
                     Celebrations of milestones and achievements.
                   </p>
                 </div>
@@ -578,7 +578,7 @@ const Careers = () => {
                   <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
 
                   <div className="absolute  top-[230px] left-[20px] lg:top-[259px] lg:left-[32px] w-[310px] lg:w-[410px] ">
-                    <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[32px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
+                    <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[34px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
                       Team retreats and social events.
                     </p>
                   </div>
@@ -594,7 +594,7 @@ const Careers = () => {
                   <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none rounded-[24px]"></div>
 
                   <div className="absolute  top-[255px] left-[20px] lg:top-[259px] lg:left-[32px] w-[410px] ">
-                    <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[32px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
+                    <p className="font-grava font-[500] text-[20px] leading-[25px] tracking-[1.4%] lg:text-[34px] lg:leading-[40px] lg:tracking-[0.2%] text-[#ffffff]">
                       Monthly wellness programs.
                     </p>
                   </div>

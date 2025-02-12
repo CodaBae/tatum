@@ -524,7 +524,7 @@ const handleTouchEnd = () => {
                   <p
                     className={`${
                       activeIndex === 0 ? "animate__animated animate__fadeInUp " : " "
-                    } lg:w-[450px] font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
+                    } lg:w-[450px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
                   >
                     Your Smile, <br />{" "}
                     <span className="" style={{ fontWeight: 450 }}>
@@ -536,13 +536,13 @@ const handleTouchEnd = () => {
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Secure banking, low-interest loans, and profitable
                     investments for everyone.
                   </p>
                   <div
-                    className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                    className={`flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 ${
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp animate__delay-10s"
                         : ""
@@ -591,7 +591,7 @@ const handleTouchEnd = () => {
                 </div>
                 
                 <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]" style={{zIndex:'99999'}}>
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
                       <div className="lm:w-[30px]">
@@ -669,7 +669,7 @@ const handleTouchEnd = () => {
                     style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 1 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
                     Say Hello To {" "}
                     <span className="font-bold block ">Banking On The Go</span>
@@ -679,14 +679,14 @@ const handleTouchEnd = () => {
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp animate__delay-08s "
                         : ""
-                    } font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } font-[350] font-grava text-sm lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     // animate__animated animate__fadeInUp animate__delay-08s
                   >
                     Your money, your way. Experience banking that fits your
                     lifestyle, not the other way around.
                   </p>
                   <div
-                    className={`flex items-center mt-[32px] lg:mt-[12px] gap-3 ${
+                    className={`flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 ${
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp animate__delay-10s"
                         : ""
@@ -735,7 +735,7 @@ const handleTouchEnd = () => {
                 </div>
 
                 <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
                       <img
@@ -807,7 +807,7 @@ const handleTouchEnd = () => {
                     style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 2 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] font-medium text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Smart Banking for <br/> {" "}
                     <span>Your </span><span className="font-bold ">Big Ideas.</span>
@@ -817,7 +817,7 @@ const handleTouchEnd = () => {
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-[34px]  lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Instant access to the funds, insights, and support you need
                     to take your business further.
@@ -850,7 +850,7 @@ const handleTouchEnd = () => {
                 </div>
 
                 <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
                       <img
@@ -925,7 +925,7 @@ const handleTouchEnd = () => {
                   <p
                     className={`${
                       activeIndex === 3 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] font-bold text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] font-bold text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
                     Your Wealth, <br />{" "}
                     <span className=" " style={{ fontWeight: 450 }}>
@@ -938,7 +938,7 @@ const handleTouchEnd = () => {
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Access high-end services and exclusive investments, all in
                     one seamless experience.
@@ -971,7 +971,7 @@ const handleTouchEnd = () => {
                 </div>
 
                 <div className="flex items-start absolute -bottom-20 lg:bottom-[-50%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
                       <img

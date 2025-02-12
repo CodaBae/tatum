@@ -77,7 +77,7 @@ const AccountPersonal = () => {
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp  lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp  lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Seamless Banking, <span className='font-bold'>Endless Smiles.</span>
                         </p>
@@ -106,7 +106,7 @@ const AccountPersonal = () => {
                         </div>
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-51.5%]" style={{zIndex:'99999'}}>
-                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                             <p className="flex items-center gap-2">
                             We are licensed by the Central Bank of Nigeria
                             <div className="lm:w-[30px]">
@@ -131,7 +131,7 @@ const AccountPersonal = () => {
                         </p>
                     </div>
                     {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-51.5%]'>
-                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 '>
+                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 '>
                             We are licensed by the Central Bank of Nigeria 
                             <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
                             All deposits are insured by

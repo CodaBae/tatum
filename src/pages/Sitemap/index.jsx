@@ -21,7 +21,7 @@ const Sitemap = () => {
         ref={sitemapRef}
     >
         <div className='bg-[#FFCC33] w-full h-[184px] lg:h-[314px]  flex flex-col items-center justify-center'>
-          <p className='font-bold text-[#002244] font-grava text-[32px] mt-[6%] lg:text-[75px]'>Sitemap</p>
+          <p className='font-bold text-[#002244] font-grava text-[34px] mt-[6%] lg:text-[75px]'>Sitemap</p>
         </div>
 
         <div className='w-full py-[56px] lg:py-[120px] px-5 lg:px-[56px] flex flex-col gap-[40px] md:gap-[120px]'>
@@ -29,7 +29,7 @@ const Sitemap = () => {
           <div className="flex flex-col md:flex-row items-start gap-[40px] lm:gap-[286px] ">
 
             <div className="flex flex-col gap-[32px] w-[144px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Company</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Company</p>
               <div className='flex flex-col gap-[30px]'>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
@@ -53,7 +53,7 @@ const Sitemap = () => {
             </div>
 
             <div className="flex flex-col gap-[32px] w-[183px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Services</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Services</p>
               <div className='flex flex-col gap-[30px]'>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
@@ -109,7 +109,7 @@ const Sitemap = () => {
             
 
             <div className="flex flex-col gap-[32px] w-[228px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Account</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Account</p>
               <div className='flex flex-col gap-[30px]'>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
@@ -137,7 +137,7 @@ const Sitemap = () => {
           <div className="flex flex-col md:flex-row items-start gap-[40px] lm:gap-[213px]">
 
             <div className="flex flex-col gap-[32px] w-[217px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Resources</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Resources</p>
               <div className='flex flex-col gap-[30px]'>
                 <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Blogs</p>
                 <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Press Release</p>
@@ -147,7 +147,7 @@ const Sitemap = () => {
             </div>
 
             <div className="flex flex-col gap-[32px] w-[167px]">
-              <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Support</p>
+              <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Support</p>
               <div className='flex flex-col gap-[30px]'>
                 <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>FAQ</p>
                 <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Video Tutorials</p>
@@ -156,7 +156,7 @@ const Sitemap = () => {
             </div>
 
             <div className="flex flex-col gap-[32px] w-[228px]">
-              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[32px] lg:leading-[40px] text-[#002244]'>Legal</p>
+              <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Legal</p>
               <div className='flex flex-col gap-[30px]'>
                 <p 
                   className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'
