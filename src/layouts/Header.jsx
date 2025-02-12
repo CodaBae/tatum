@@ -201,7 +201,7 @@ const Header = () => {
         }}
       />
       <div className="flex items-center gap-[32px]">
-        <p
+        {/* <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
           onClick={() =>
             navigate("/", {
@@ -210,7 +210,7 @@ const Header = () => {
           }
         >
           Home
-        </p>
+        </p> */}
 
         {/* About */}
         <div className="relative inline-block dropdown-wrapper">

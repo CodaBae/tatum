@@ -63,11 +63,10 @@ const AccountPrivacy = () => {
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
-
- className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
+            className='w-full overflow-hidden outline-none h-[794px] lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -76,7 +75,7 @@ const AccountPrivacy = () => {
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[1s%]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p style={{fontWeight:450}}
-                            className={`animate__animated animate__fadeInUp animate__delay-04s lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-bold leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-04s w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[32px] lm:text-[50px] lg:text-[75px] font-bold leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Exclusive <span className='font-medium' >Private Banking Services at Tatum</span>
                         </p>
@@ -116,7 +115,7 @@ const AccountPrivacy = () => {
                 <img 
                     src={Bentley} 
                     alt='Bentley' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[10%] lm:top-[10%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative -right-5 lm:right-[10%] lm:top-[10%] lg:w-[55%] `} 
                 />
             </div>
         </section>

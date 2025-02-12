@@ -219,13 +219,13 @@ const SME = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="lm:h-[100vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -237,9 +237,9 @@ const SME = () => {
               </p>
               <p
                 //
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[350px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we go beyond banking; we partner with you to
-                <br></br> unlock opportunities, drive growth, and ensure your
+                unlock opportunities, drive growth, and ensure your
                 success.
               </p>
               <div className="flex items-center mt-[32px] lg:mt-[12px] gap-3">
@@ -276,14 +276,28 @@ const SME = () => {
               </p>
             </div>
           </div>
-          <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
-            alt="Family"
-            className={`animate__animated  relative lm:top-[10%] lg:w-[43%] `}
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ? 
+            <div className="w-[300px]">
+              <img
+                src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+                alt="Family"
+                className={`animate__animated relative top-[13.5%] -right-3 lg:w-[43%] `}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img
+              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+              alt="Family"
+              className={`animate__animated relative lm:top-[10%] lg:w-[43%] `}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+            />
+          }
         </div>
       </section>
 
@@ -374,7 +388,7 @@ const SME = () => {
 
       {/* LOAN CALCULATOR SECTION */}
 
-      <div
+      {/* <div
         ref={loanRef}
         className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
         <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
@@ -393,7 +407,7 @@ const SME = () => {
                   <fieldset>
                     <legend className="sr-only">Select an Option</legend>
                     <div className="flex items-center">
-                      {/* Personal */}
+                      {/* Personal 
                       <label className="cursor-pointer  mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -411,7 +425,7 @@ const SME = () => {
                         </div>
                       </label>
 
-                      {/* Home */}
+                      {/* Home 
                       <label className="cursor-pointer relative mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -428,7 +442,7 @@ const SME = () => {
                         </div>
                       </label>
 
-                      {/* Car */}
+                      {/* Car 
                       <label className="cursor-pointer relative mr-2 last:mr-0">
                         <input
                           type="radio"
@@ -450,7 +464,7 @@ const SME = () => {
               </div>
               <div className="w-[289px] h-[372px] lg:w-[680px] lg:h-[402px] flex flex-col gap-[48px] ">
                 <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount */}
+                  {/* Label and current amount 
                   <div className="flex justify-between items-center mb-2">
                     <label className="font-semibold text-gray-700">
                       <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
@@ -464,7 +478,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <div className=" relative">
                     <input
                       type="range"
@@ -485,7 +499,7 @@ const SME = () => {
                     />
                   </div>
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -514,7 +528,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <input
                     type="range"
                     min={0}
@@ -531,7 +545,7 @@ const SME = () => {
                     }}
                   />
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -547,7 +561,7 @@ const SME = () => {
                 </div>
 
                 <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount */}
+                  {/* Label and current amount 
                   <div className="flex justify-between items-center mb-2">
                     <label className="font-semibold text-gray-700">
                       <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
@@ -561,7 +575,7 @@ const SME = () => {
                     </span>
                   </div>
 
-                  {/* Slider */}
+                  {/* Slider 
                   <input
                     type="range"
                     min={0}
@@ -578,7 +592,7 @@ const SME = () => {
                     }}
                   />
 
-                  {/* Min/Max Labels */}
+                  {/* Min/Max Labels 
                   <div className="flex justify-between text-sm text-gray-500 mt-2">
                     <span>
                       <p className="font-grava font-[350] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
@@ -649,7 +663,7 @@ const SME = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
         <div

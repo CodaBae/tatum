@@ -78,13 +78,13 @@ const Corporate = () => {
           style={{
             backgroundImage: `url(${
               isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
+          className="h-[732px] pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[100vh] max-sm:pt-[30%] ">
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
@@ -135,18 +135,32 @@ const Corporate = () => {
               </p>
             </div>
           </div>
-          <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
-            alt="Family"
-            className={`animate__animated  relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-          />
+          {
+            isMobile ?
+            <div className="w-[120%]">
+              <img
+                src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
+                alt="Family"
+                className={`animate__animated  relative right-14 lm:right-[30%] h-[383px] lm:top-[8%] lg:w-[75%] `}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-once="false"
+              />
+            </div>
+            :
+            <img
+              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
+              alt="Family"
+              className={`animate__animated  relative lm:right-[30%] lm:top-[8%] lg:w-[75%] `}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+            />
+          }
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
+      <div className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}
@@ -156,10 +170,11 @@ const Corporate = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]">
+          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
+        >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-medium text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Corporate Banking
               </p>
               <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -231,19 +246,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Fixed Income & Treasury Bills
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Wealth Management
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Structured Investment Portfolios
               </p>
             </div>
@@ -288,7 +303,7 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-med text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Treasury Management
             </p>
             <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -301,19 +316,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Cash & Liquidity Management
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Foreign Exchange Services
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Interest Rate Risk Management
               </p>
             </div>
@@ -350,7 +365,7 @@ const Corporate = () => {
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-med text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Trade Finance
             </p>
             <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -362,19 +377,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Letters of Credit & Guarantees
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Import & Export Financing
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Supply Chain Finance
               </p>
             </div>
@@ -419,7 +434,7 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-med text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-med text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Corporate Lending
             </p>
             <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -432,19 +447,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Term Loans & Working Capital Financing
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Equipment Financing
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Project & Infrastructure Financing
               </p>
             </div>
@@ -494,19 +509,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Co-Branded Financial Solutions
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Technology & Fintech Collaborations
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-med text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-med text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Industry-Specific Advisory
               </p>
             </div>

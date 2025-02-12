@@ -1,33 +1,32 @@
 .slick-dots li button:before {
-    font-size: 12px;
-  }
+  font-size: 12px;
+}
 
-  .slick-slide {
-    width: 164px;
+.slick-slide {
+  width: 164px;
 
-  }
+}
 
+.slick-slide > div {
+  margin: 0 -200px;
+  width: 350px;
+  display: flex;
+}
+
+
+@media screen and (min-width: 768px) {
   .slick-slide > div {
-    margin: 0 -200px;
+    margin: 0 -25px;
     width: 350px;
     display: flex;
   }
- 
-  
-  @media screen and (min-width: 768px) {
-    .slick-slide > div {
-      margin: 0 -25px;
-      width: 350px;
-      display: flex;
-    }
-  }
+}
 
-  @media screen and (min-width: 800px) {
-    .slick-slide > div{
-      margin: 0 -25px;
-      width: 400px;
-      display: flex;
-    }
+@media screen and (min-width: 800px) {
+  .slick-slide > div{
+    margin: 0 -25px;
+    width: 400px;
+    display: flex;
   }
+}
 
-  

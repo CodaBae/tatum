@@ -65,10 +65,10 @@ const AccountPersonal = () => {
     <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
 
- className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
+            className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -83,7 +83,7 @@ const AccountPersonal = () => {
                         </p>
                         <p 
                             // 
-                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[340px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Experience banking that keeps you smiling with our range 
                             of savings and current accounts, cards, and loans.
@@ -114,11 +114,22 @@ const AccountPersonal = () => {
                         </p>
                     </div>
                 </div>
-                <img 
-                    src={isMobile ? Alhaja : Alhaja} 
-                    alt='Family' 
-                    className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
+                {
+                    isMobile ? 
+                    <div className='w-[459px]'>
+                        <img 
+                            src={Alhaja} 
+                            alt='Family' 
+                            className={`animate__animated animate__fadeInRight relative right-4  `} 
+                        />
+                    </div>
+                    :
+                    <img 
+                        src={Alhaja} 
+                        alt='Family' 
+                        className={`animate__animated animate__fadeInRight relative  lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
                     />
+                }
             </div>
         </section>
 

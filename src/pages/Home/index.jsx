@@ -10,11 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules"; // Updated import
 import "swiper/css";
 import "swiper/css/pagination";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import Family from "../../assets/png/family.png";
-import Phone from "../../assets/png/phone.png";
-import Smile from "../../assets/png/smile.png";
-import Teach from "../../assets/png/teach.png";
 import Boy from "../../assets/png/boy.png";
 import Girl from "../../assets/png/girl.png";
 import Farmer from "../../assets/png/farmer.png";
@@ -40,6 +37,7 @@ import Online from "../../assets/svg/online.svg";
 import Arrow from "../../assets/svg/arrow_forward.svg";
 
 import "./css/CardEffect.css";
+import "./css/CardEffectMain.css";
 import "./css/SliderStyles.css";
 import "./css/CardScroll.css";
 import "./css/Dot.css";
@@ -48,88 +46,224 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CookieConsent from "../../CookieConsent";
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
+
+  const [currdeg, setCurrdeg] = useState(0);
+  const [isManualTransition, setIsManualTransition] = useState(false);
+  const [isPageVisible, setIsPageVisible] = useState(true);
 
   const formatter = new Intl.NumberFormat("en-US");
 
   const navigate = useNavigate();
 
-  const homeRef = useRef(null);
-  const { state } = useLocation();
-
-  //   useEffect(() => {
-  //     if (state?.section === "home" && homeRef.current) {
-  //       homeRef.current.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }, [state]);
-
-  const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
-
   const carouselRef = useRef(null);
-  const angleRef = useRef(0);
-  const isDraggingRef = useRef(false);
-  const startXRef = useRef(0);
+  const autoplayInterval = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startRotation = useRef(0);
+  const currdegRef = useRef(currdeg);
 
-  // Auto scroll
+  // Keep currdegRef in sync with state
   useEffect(() => {
-    const autoScrollInterval = setInterval(() => {
-      angleRef.current += 0.5; // Adjust auto-scroll speed
-      if (carouselRef.current) {
-        carouselRef.current.style.transition = "transform 0.3s ease";
-        carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-      }
-    }, 30); // Adjust interval for speed
+    currdegRef.current = currdeg;
+  }, [currdeg]);
 
-    return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
+  const updateRotation = (deg) => {
+    // Rotation is handled via style prop
+  };
+
+  const startAutoplay = () => {
+    if (!autoplayInterval.current && isPageVisible) {
+      setIsManualTransition(false);
+      autoplayInterval.current = setInterval(() => {
+        const newDeg = currdegRef.current - 0.3;
+        currdegRef.current = newDeg;
+        setCurrdeg(newDeg);
+      }, 16);
+    }
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayInterval.current) {
+      clearInterval(autoplayInterval.current);
+      autoplayInterval.current = null;
+    }
+  };
+
+  // Autoplay setup
+  useEffect(() => {
+    startAutoplay();
+    return () => stopAutoplay();
   }, []);
 
+  // Visibility change handler
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const visible = !document.hidden;
+      setIsPageVisible(visible);
+      
+      if (visible) {
+        if (!isDragging.current) {
+          setTimeout(() => {
+            setIsManualTransition(false);
+            startAutoplay();
+          }, 100);
+        }
+      } else {
+        stopAutoplay();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Mouse handlers
+  const handleRotate = (direction) => {
+    const newDeg = direction === 'n' ? currdeg - 60 : currdeg + 60;
+    setIsManualTransition(true);
+    setCurrdeg(newDeg);
+  };
+
   const handleMouseDown = (e) => {
-    e.preventDefault();
-    isDraggingRef.current = true;
-    startXRef.current = e.clientX || e.touches[0].clientX;
+    isDragging.current = true;
+    startX.current = e.pageX;
+    startRotation.current = currdegRef.current;
+    setIsManualTransition(false);
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-    document.addEventListener("touchmove", handleMouseMove, { passive: false });
-    document.addEventListener("touchend", handleMouseUp);
+    const handleMouseMove = (e) => {
+      if (!isDragging.current) return;
+      const dragDistance = e.pageX - startX.current;
+      const newDeg = startRotation.current + (dragDistance / 5);
+      setCurrdeg(newDeg);
+    };
+
+    const handleMouseUp = () => {
+      isDragging.current = false;
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mouseleave', handleMouseUp);
+      setIsManualTransition(true);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mouseleave', handleMouseUp);
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDraggingRef.current) return;
-    e.preventDefault();
+  const handleMouseEnterOrDown = () => {
+    stopAutoplay();
+  };
 
-    const currentX = e.clientX || e.touches[0].clientX;
-    const deltaX = currentX - startXRef.current;
-    angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
-
-    startXRef.current = currentX;
-
-    if (carouselRef.current) {
-      carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-      carouselRef.current.style.transition = "none";
+  const handleMouseLeaveOrUp = () => {
+    if (!isDragging.current && isPageVisible) {
+      setIsManualTransition(false);
+      startAutoplay();
     }
   };
 
-  const handleMouseUp = () => {
-    isDraggingRef.current = false;
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
-    document.removeEventListener("touchmove", handleMouseMove);
-    document.removeEventListener("touchend", handleMouseUp);
-  };
+  // Add touch handlers
+const handleTouchStart = (e) => {
+  isDragging.current = true;
+  startX.current = e.touches[0].pageX;
+  startRotation.current = currdegRef.current;
+  setIsManualTransition(false);
+  stopAutoplay();
+};
 
-  const handleWheel = (e) => {
-    e.preventDefault();
-    angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
+const handleTouchMove = (e) => {
+  if (!isDragging.current) return;
+  const dragDistance = e.touches[0].pageX - startX.current;
+  const newDeg = startRotation.current + (dragDistance / 3); // More sensitive for mobile
+  setCurrdeg(newDeg);
+};
 
-    if (carouselRef.current) {
-      carouselRef.current.style.transition = "transform 0.3s ease";
-      carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-    }
-  };
+const handleTouchEnd = () => {
+  isDragging.current = false;
+  setIsManualTransition(true);
+  if (isPageVisible) {
+    startAutoplay();
+  }
+};
+
+
+
+
+  // const carouselRef = useRef(null);
+  // const angleRef = useRef(0);
+  // const isDraggingRef = useRef(false);
+  // const startXRef = useRef(0);
+
+  // Auto scroll
+  // useEffect(() => {
+  //   const autoScrollInterval = setInterval(() => {
+  //     angleRef.current += 0.5; // Adjust auto-scroll speed
+  //     if (carouselRef.current) {
+  //       carouselRef.current.style.transition = "transform 0.3s ease";
+  //       carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //     }
+  //   }, 30); // Adjust interval for speed
+
+  //   return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
+  // }, []);
+
+  // const handleMouseDown = (e) => {
+  //   e.preventDefault();
+  //   isDraggingRef.current = true;
+  //   startXRef.current = e.clientX || e.touches[0].clientX;
+
+  //   document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mouseup", handleMouseUp);
+  //   document.addEventListener("touchmove", handleMouseMove, { passive: false });
+  //   document.addEventListener("touchend", handleMouseUp);
+  // };
+
+  // const handleMouseMove = (e) => {
+  //   if (!isDraggingRef.current) return;
+  //   e.preventDefault();
+
+  //   const currentX = e.clientX || e.touches[0].clientX;
+  //   const deltaX = currentX - startXRef.current;
+  //   angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
+
+  //   startXRef.current = currentX;
+
+  //   if (carouselRef.current) {
+  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //     carouselRef.current.style.transition = "none";
+  //   }
+  // };
+
+  // const handleMouseUp = () => {
+  //   isDraggingRef.current = false;
+  //   document.removeEventListener("mousemove", handleMouseMove);
+  //   document.removeEventListener("mouseup", handleMouseUp);
+  //   document.removeEventListener("touchmove", handleMouseMove);
+  //   document.removeEventListener("touchend", handleMouseUp);
+  // };
+
+  // const handleWheel = (e) => {
+  //   e.preventDefault();
+  //   angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
+
+  //   if (carouselRef.current) {
+  //     carouselRef.current.style.transition = "transform 0.3s ease";
+  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
+  //   }
+  // };
+
+  // const settings = {
+  //   // dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1
+  // };
 
   const settings = {
     // dots: true,
@@ -147,6 +281,7 @@ const Home = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+         
           // dots: true,
         },
       },
@@ -155,6 +290,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+      
         },
       },
       {
@@ -162,6 +298,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+    
           // dots: true
         },
       },
@@ -233,10 +370,9 @@ const Home = () => {
 
   return (
     <div
-      ref={homeRef}
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden"
     >
-      <div className="w-full h-full w-full overflow-hidden outline-none lm:h-[100vh] ">
+      <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
@@ -256,13 +392,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
                     : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -334,34 +470,83 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+                
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="lm:w-[70px]">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
+                {/* <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
+                  </p>
+                </div> */}
+
               </div>
-              <img
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"
-                alt="Family"
-                className={`${
-                  activeIndex === 0 ? "animate__animated " : ""
-                } relative md:right-14 bottom-0 lm:right-24 md:h-[28px] relative lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
-              />
+              {
+                isMobile ?
+                <div className="w-[400px]">
+                  <img
+                    key={activeIndex}
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                    src={"https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png"}
+                    alt="Family"
+                    className={`${
+                      activeIndex === 0 ? "animate__animated " : ""
+                    } relative md:right-14 bottom-0 lm:right-24 top-28 -right-2 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                  />
+                </div>
+                :
+                <img
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739269942/family_mobile_cizeg0.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739212376/file_28_1_1_vahr1z.webp"}
+                  alt="Family"
+                  className={`${
+                    activeIndex === 0 ? "animate__animated " : ""
+                  } relative md:right-14 bottom-0 lm:right-24 top-28 -right-5 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                />
+
+              }
             </div>
           </div>
 
@@ -370,13 +555,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
-                    : ""
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
+                    : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh]  pt-[40px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh]  pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -387,8 +572,8 @@ const Home = () => {
                       activeIndex === 1 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] text-left text-[32px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                   >
-                    Say Hello To Banking{" "}
-                    <span className="font-bold ">On The Go</span>
+                    Say Hello To {" "}
+                    <span className="font-bold block ">Banking On The Go</span>
                   </p>
                   <p
                     className={`${
@@ -449,36 +634,57 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
-                alt="Phone"
-                // style={{
-                //     display: isMobile ? "none" : "flex"
-                // }}
-                className={`${
-                  activeIndex === 1
-                    ? "animate__animated animate__zoomIn   animate__slow"
-                    : ""
-                } object-cover   md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
-                // animate__animated animate__fadeInUp animate__delay-10s
-              />
+              {
+                isMobile ?
+                <div className="w-[400px]">
+                  <img
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1739290246/phone_gt2kbz.png"
+                    alt="Phone"
+                    className={`${
+                      activeIndex === 1
+                        ? "animate__animated animate__zoomIn animate__slow"
+                        : ""
+                    } object-cover top-28 h-[350px] -right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                    // animate__animated animate__fadeInUp animate__delay-10s
+                  />
+                </div>
+                :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507834/5807348_1_ubm6ct.png"
+                  alt="Phone"
+                  className={`${
+                    activeIndex === 1
+                      ? "animate__animated animate__zoomIn   animate__slow"
+                      : ""
+                  } object-cover top-16 h-[550px] right-5 md:right-16 lm:right-[10rem] lm:h-[550px] lg:h-[1030px] relative lg:right-[33rem]`}
+                  // animate__animated animate__fadeInUp animate__delay-10s
+                />
+              }
             </div>
           </div>
 
@@ -487,13 +693,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                     : "https://res.cloudinary.com/code-idea/image/upload/v1739207398/Nav_Slide_s_wwtfon.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -504,8 +710,8 @@ const Home = () => {
                       activeIndex === 2 ? "animate__animated animate__fadeInUp animate__delay-04s" : " "
                     } font-grava text-[#002244] font-medium text-left text-[32px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
-                    Smart Banking for Your{" "}
-                    <span className="font-bold ">Big Ideas.</span>
+                    Smart Banking for <br/> {" "}
+                    <span>Your </span><span className="font-bold ">Big Ideas.</span>
                   </p>
                   <p
                     className={`${
@@ -543,36 +749,61 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
-                alt="Teach"
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                className={`${
-                  activeIndex === 2
-                    ? "animate__animated animate__slow"
-                    : ""
-                }  md:right-[8rem] lm:right-[20rem]  lg:h-[1000px] top-5 md:top-10 lg:top-20 lg:right-[40rem] relative`}
-              />
+              {
+                isMobile ? 
+                <div className="w-[600px] "> 
+                  <img
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
+                    alt="Teach"
+                    key={activeIndex}
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                    className={`${
+                      activeIndex === 2
+                        ? "animate__animated animate__slow"
+                        : ""
+                    }  md:right-[8rem] lm:right-[20rem] h-[500px] lg:h-[1000px] top-32 md:top-10 lg:top-20 lg:right-[40rem] relative`}
+                  />
+                </div> :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/file_34_1_owpqgw.png"
+                  alt="Teach"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 2
+                      ? "animate__animated animate__slow"
+                      : ""
+                  }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-10 lg:top-20 lg:right-[40rem] relative`}
+                />
+              }
             </div>
           </div>
 
@@ -581,13 +812,13 @@ const Home = () => {
               style={{
                 backgroundImage: `url(${
                   isMobile
-                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
+                    ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
                     : "https://res.cloudinary.com/code-idea/image/upload/v1739207738/Slide5_mgoygd.png"
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-auto lg:h-[91vh] pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -639,36 +870,63 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-                <div className="hidden lm:flex items-start absolute lg:bottom-[-55%]">
-                  <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-2 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
-                    />
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-55%]">
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-2">
+                    <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                      />
+                    </p>
+                    <p className="flex items-center gap-2">
+                      All deposits are insured by
+                      <div className="">
+                        <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                        />
+                      </div>
+                    </p>
                   </p>
                 </div>
+
               </div>
-              <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
-                alt="Smile"
-                key={activeIndex}
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-                className={`${
-                  activeIndex === 3
-                    ? "animate__animated "
-                    : ""
-                }  md:right-[8rem] lm:right-[14rem]  lg:h-[1000px] top-4 md:top-10 lg:top-5 lg:right-[25rem] relative`}
-              />
+              {
+                isMobile ?
+                <div className="w-[600px]">
+                  <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
+                  alt="Smile"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 3
+                      ? "animate__animated "
+                      : ""
+                  }  md:right-[8rem] lm:right-[14rem] -right-10 h-[550px] top-14 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                />
+                </div>
+                :
+                <img
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1736507863/wmremovxyz.png"
+                  alt="Smile"
+                  key={activeIndex}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                  className={`${
+                    activeIndex === 3
+                      ? "animate__animated "
+                      : ""
+                  }  md:right-[8rem] lm:right-[14rem] h-[550px] lg:h-[1000px] top-10 md:top-10 lg:top-5 lg:right-[25rem] relative`}
+                />
+              }
             </div>
           </div>
         </LandingCarousel>
@@ -687,7 +945,7 @@ const Home = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
               Personal Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -732,7 +990,7 @@ const Home = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               CORPORATE Banking
             </p>
             <p className="font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -785,7 +1043,7 @@ const Home = () => {
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               Business Banking
             </p>
             <p className="font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -829,7 +1087,7 @@ const Home = () => {
           data-aos="fade-right"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               PRIVATE Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -887,16 +1145,89 @@ const Home = () => {
           </p>
         </div>
         {/* Desktop Card Layout */}
-        {/* <div className='lm:flex items-center justify-center relative gap-4 hidden group transition'>
-               <img src={BlackCard} alt="BlackCard" className='w-[240px] h-[360px]' />
-               <img src={GreyCard} alt="GreyCard" className='w-[240px] h-[360px]' />
-               <img src={SilverCard} alt="SilverCard" className='w-[240px] h-[360px]' />
-               <img src={YellowCard} alt="YellowCard" className='w-[240px] h-[360px]' />
-               <img src={WhiteCard} alt="WhiteCard" className='w-[240px] h-[360px]' />
-            </div> */}
 
         {/* Rotating Card Effect (Desktop Only) */}
-        <div
+
+        <div className="hidden lm:flex items-center justify-center">
+          <div className="container">
+            <div 
+              ref={carouselRef}
+              className={`carousel ${isManualTransition ? 'manual-transition' : ''}`}
+              onMouseDown={handleMouseDown}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onMouseEnter={handleMouseEnterOrDown}
+              onMouseLeave={handleMouseLeaveOrUp}
+              style={{
+                transform: `rotateY(${currdeg}deg)`,
+                transition: isManualTransition ? 'transform 0.6s ease-out' : 'none',
+              }}
+              // onMouseDown={handleMouseDown}
+              // onMouseEnter={handleMouseEnterOrDown}
+              // onMouseLeave={handleMouseLeave}
+              // style={{
+              //   transform: `rotateY(${currdeg}deg)`,
+              //   WebkitTransform: `rotateY(${currdeg}deg)`,
+              //   MozTransform: `rotateY(${currdeg}deg)`,
+              //   OTransform: `rotateY(${currdeg}deg)`,
+              // }}
+            >
+                <div className="item a">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png" className="rounded-[24px]"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358151/black_back_ooqsvl.png" alt="card-1-back" className="rounded-[24px]"/>
+                    </div>
+                </div>
+                <div className="item b">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png" alt="card-2-front" className="rounded-[24px]"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358184/grey_back_inkn0r.png" className="rounded-[24px]"/>
+                    </div>
+                </div>
+                <div className="item c">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" className="rounded-[24px]"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" alt="card-3-back" className="rounded-[24px]" />
+                    </div>
+                </div>
+                <div className="item d">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png" alt="card-4-front" className="rounded-[24px]"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-4-back" className="rounded-[24px]"/>
+                    </div>
+                </div>
+                <div className="item e">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png" alt="card-5-front" className="rounded-[24px]"/>
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-5-back" className="rounded-[24px]"/>
+                    </div>
+                </div>
+                <div className="item f">
+                    <div className="card-face card-front">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" alt="card-6-front" className="rounded-[24px]" />
+                    </div>
+                    <div className="card-face card-back">
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" className="rounded-[24px]"/>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div className="next">Next</div>
+          <div className="prev">Prev</div>
+        </div>
+
+        {/* <div
           className="hidden lg:flex items-center justify-center"
           style={{ perspective: "2000px" }}
         >
@@ -927,44 +1258,52 @@ const Home = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile */}
         <div className="lm:hidden w-full">
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src={BlackCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
+              
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={GreyCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
+             
                 className="rounded-xl w-[50%] md:w-[100%]"
+            
               />
             </div>
-            <div className="slide-item flex justify-center">
+            <div className="slide-item flex justify-center" >
               <img
-                src={SilverCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
+              
                 className="rounded-xl w-[50%] md:w-[100%]"
+               
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={YellowCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
+        
                 className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={WhiteCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
           </Slider>
@@ -990,7 +1329,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
+      {/* <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
         <div className="flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3">
           <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
             Loan Calculator
@@ -1172,7 +1511,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="bg-[#FFFFFF] flex flex-col items-center px-5 lg:px-[55px] py-[72px] lg:h-[996px] gap-[60px]"
@@ -1438,49 +1777,50 @@ const Home = () => {
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                Loan calculator
+                Help and Support
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Easily calculate loan eligibility according to your current
-                salary.
+                Need help? Send us an email at <a href="info@tatumbank.com." className="underline">info@tatumbank.com.</a>
+                {" "}Our team is always on standby to assist, and resolve any issues.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
+              href="mailto:info@tatumbank.com."
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Try our loan calculator
+                Send an Email
               </p>
-            </button>
+            </a>
           </SwiperSlide>
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                FX Market Rate
+                Contact Us
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Stay updated with real-time FX rates and make smarter, timely
-                decisions in the global market.
+                Get in touch with us.
+                Our dedicated support team is available to assist you with any concerns. 
+                We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
+              href="mailto:info@tatumbank.com."
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check our FX rates
+                Send an Email
               </p>
-            </button>
+            </a>
           </SwiperSlide>
         </Swiper>
         {/* Tablets and Desktop Card Layout*/}
@@ -1627,71 +1967,51 @@ const Home = () => {
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                Loan calculator
+                Help & Support
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Easily calculate loan eligibility according to your current
-                salary.
+                Need help? Send us an email at <a href="mailto:info@tatumbank.com." className="underline">info@tatumbank.com.</a> 
+                {" "}Our team is always on standby to assist, and resolve any issues.
               </p>
             </div>
-            <button
-              className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+            <a
+              className="absolute  bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
-              onClick={() => {
-                navigate(
-                  "/digital",
-                  {
-                    state: {
-                      section: "digital",
-                    },
-                  },
-                  window.scrollTo(0, 0)
-                );
-              }}
+              href="mailto:info@tatumbank.com"
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Try our loan calculator
+                Send an Email
               </p>
-            </button>
+            </a>
           </div>
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
               <p className="text-lg font-medium font-grava text-[#002244]">
-                FX Market Rate
+                Contact Us
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Stay updated with real-time FX rates and make smarter, timely
-                decisions in the global market.
+                Get in touch with us.
+                Our dedicated support team is available to assist you with any concerns. 
+                We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <button
+            <a
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              type="button"
-              onClick={() => {
-                navigate(
-                  "/digital",
-                  {
-                    state: {
-                      section: "digital",
-                    },
-                  },
-                  window.scrollTo(0, 0)
-                );
-              }}
+              href="mailto:info@tatumbank.com"
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check our FX rates
+                Send an Email
               </p>
-            </button>
+            </a>
           </div>
         </div>
       </div>
