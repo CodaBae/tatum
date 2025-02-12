@@ -163,3 +163,7 @@
  
     width: 140px !important
 }
+
+.border-\[1\.5px\] {
+    border-width: 1.2px !important
+}
