@@ -334,7 +334,6 @@ const Home = () => {
 
   return (
     <div
-  
       className="w-full pt-[40px]  lg:pt-[80px] overflow-hidden"
     >
       <div className="w-full h-full overflow-hidden outline-none lm:h-[100vh] ">
@@ -910,7 +909,7 @@ const Home = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
               Personal Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -955,7 +954,7 @@ const Home = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               CORPORATE Banking
             </p>
             <p className="font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -1008,7 +1007,7 @@ const Home = () => {
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               Business Banking
             </p>
             <p className="font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -1052,7 +1051,7 @@ const Home = () => {
           data-aos="fade-right"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm">
               PRIVATE Banking
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">

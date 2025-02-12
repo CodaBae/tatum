@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import PersonalImg from "../../assets/png/personal.png";
 import Saver from "../../assets/png/saver.png";
@@ -79,13 +81,14 @@ const Personal = () => {
       {
         breakpoint: 320,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           // dots: true
         },
       },
     ],
   };
+
 
   useEffect(() => {
     if (state?.section === "faq" && faqRef.current) {
@@ -216,7 +219,7 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm">
               Savings Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -257,7 +260,7 @@ const Personal = () => {
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
               Current Account
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
@@ -309,7 +312,7 @@ const Personal = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]">
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm">
               Fixed Deposits
             </p>
             <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">

@@ -157,7 +157,7 @@ const Institutional = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-center leading-[21px] sm:text-left sm:leading-normal">
+            <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm text-center leading-[21px] sm:text-left sm:leading-normal">
               Our Institutional Banking Solutions
             </p>
             <div className="flex flex-col w-full gap-[18px]">
