@@ -445,7 +445,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("debit")}>
             <img
-              src={Debit}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
               alt="Debit"
               className={`${
                 clickedCard === "debit" ? "" : "opacity-70"
@@ -469,7 +469,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("credit")}>
             <img
-              src={Credit}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
               alt="Credit"
               className={`${
                 clickedCard === "credit" ? "" : "opacity-70"
@@ -493,7 +493,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("prepaid")}>
             <img
-              src={Prepaid}
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
               alt="Prepaid"
               className={`${
                 clickedCard === "prepaid" ? "" : "opacity-70"
@@ -520,35 +520,35 @@ const Personal = () => {
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src={BlackCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={GreyCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={SilverCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={YellowCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={WhiteCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
               />

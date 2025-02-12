@@ -159,15 +159,39 @@ const Home = () => {
     stopAutoplay();
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeaveOrUp = () => {
     if (!isDragging.current && isPageVisible) {
       setIsManualTransition(false);
       startAutoplay();
     }
   };
 
+  // Add touch handlers
+const handleTouchStart = (e) => {
+  isDragging.current = true;
+  startX.current = e.touches[0].pageX;
+  startRotation.current = currdegRef.current;
+  setIsManualTransition(false);
+  stopAutoplay();
+};
 
-  const cardImages = [BlackCard, GreyCard, SilverCard, YellowCard, WhiteCard];
+const handleTouchMove = (e) => {
+  if (!isDragging.current) return;
+  const dragDistance = e.touches[0].pageX - startX.current;
+  const newDeg = startRotation.current + (dragDistance / 3); // More sensitive for mobile
+  setCurrdeg(newDeg);
+};
+
+const handleTouchEnd = () => {
+  isDragging.current = false;
+  setIsManualTransition(true);
+  if (isPageVisible) {
+    startAutoplay();
+  }
+};
+
+
+
 
   // const carouselRef = useRef(null);
   // const angleRef = useRef(0);
@@ -232,6 +256,14 @@ const Home = () => {
   //   }
   // };
 
+  // const settings = {
+  //   // dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1
+  // };
+
   const settings = {
     // dots: true,
     infinite: true,
@@ -248,6 +280,7 @@ const Home = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+         
           // dots: true,
         },
       },
@@ -256,6 +289,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+      
         },
       },
       {
@@ -263,6 +297,7 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+    
           // dots: true
         },
       },
@@ -1112,68 +1147,77 @@ const Home = () => {
 
         {/* Rotating Card Effect (Desktop Only) */}
 
-        <div className="hidden lg:flex items-center justify-center">
+        <div className="hidden lm:flex items-center justify-center">
           <div className="container">
             <div 
-              // className="carousel"
               ref={carouselRef}
               className={`carousel ${isManualTransition ? 'manual-transition' : ''}`}
               onMouseDown={handleMouseDown}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
               onMouseEnter={handleMouseEnterOrDown}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={handleMouseLeaveOrUp}
               style={{
                 transform: `rotateY(${currdeg}deg)`,
-                WebkitTransform: `rotateY(${currdeg}deg)`,
-                MozTransform: `rotateY(${currdeg}deg)`,
-                OTransform: `rotateY(${currdeg}deg)`,
+                transition: isManualTransition ? 'transform 0.6s ease-out' : 'none',
               }}
+              // onMouseDown={handleMouseDown}
+              // onMouseEnter={handleMouseEnterOrDown}
+              // onMouseLeave={handleMouseLeave}
+              // style={{
+              //   transform: `rotateY(${currdeg}deg)`,
+              //   WebkitTransform: `rotateY(${currdeg}deg)`,
+              //   MozTransform: `rotateY(${currdeg}deg)`,
+              //   OTransform: `rotateY(${currdeg}deg)`,
+              // }}
             >
                 <div className="item a">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-1_q0ryzg.png"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-1-back"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358151/black_back_ooqsvl.png" alt="card-1-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item b">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-3_xw0eq3.png" alt="card-2-front"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png" alt="card-2-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358184/grey_back_inkn0r.png" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item c">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-2_yctunv.png"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-3-back"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" alt="card-3-back" className="rounded-[24px]" />
                     </div>
                 </div>
                 <div className="item d">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-5_imctz0.png" alt="card-4-front"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png" alt="card-4-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-4-back"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-4-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item e">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-1_q0ryzg.png" alt="card-5-front"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png" alt="card-5-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png" alt="card-5-back"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-5-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item f">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295374/card-2_yctunv.png" alt="card-6-front"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" alt="card-6-front" className="rounded-[24px]" />
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739295136/card-back_okdukq.png"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" className="rounded-[24px]"/>
                     </div>
                 </div>
             </div>
@@ -1220,37 +1264,45 @@ const Home = () => {
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src={BlackCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
                 alt="BlackCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
+              
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={GreyCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
                 alt="GreyCard"
+             
                 className="rounded-xl w-[50%] md:w-[100%]"
+            
               />
             </div>
-            <div className="slide-item flex justify-center">
+            <div className="slide-item flex justify-center" >
               <img
-                src={SilverCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
                 alt="SilverCard"
+              
                 className="rounded-xl w-[50%] md:w-[100%]"
+               
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={YellowCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
                 alt="YellowCard"
+        
                 className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src={WhiteCard}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[50%] md:w-[100%]"
+                // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
           </Slider>
