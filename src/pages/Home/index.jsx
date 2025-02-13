@@ -491,7 +491,7 @@ const handleTouchEnd = () => {
     <div
       className="w-full pt-[40px]  lg:pt-[80px] "
     >
-      <div className="w-full h-full outline-none lm:h-[100vh] ">
+      <div className="w-full outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
@@ -506,7 +506,7 @@ const handleTouchEnd = () => {
           swipeable={false} // Disable swiping for fade animation
           stopOnHover={false}
         >
-          <div className="h-full w-full outline-none">
+          <div className="overflow-y-auto lm:overflow-y-hidden w-full outline-none">
             <div
               style={{
                 backgroundImage: `url(${
@@ -619,7 +619,7 @@ const handleTouchEnd = () => {
               </div>
               {
                 isMobile ?
-                <div className="w-[400px]">
+                <div className="max-w-[400px]">
                   <img
                     key={activeIndex}
                     data-aos="fade-left"
