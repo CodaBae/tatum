@@ -11,7 +11,7 @@ import Partner from "../../assets/png/partner.png";
 import Trade from "../../assets/png/trade.png";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
@@ -138,7 +138,7 @@ const Corporate = () => {
                       <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                       />
                   </div>
                   </p>

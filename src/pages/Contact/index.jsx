@@ -8,7 +8,7 @@ import MapSmall from "../../assets/png/map_small.png"
 import MapBig from "../../assets/png/map_big.png"
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
 import { useLocation } from 'react-router-dom'
@@ -81,7 +81,7 @@ const Contact = () => {
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
-                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                                 />
                             </div>
                             </p>

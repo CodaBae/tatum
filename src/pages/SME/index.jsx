@@ -23,7 +23,7 @@ import carrots from "../../assets/jpg/carrots.jpg";
 import plusIcon from "../../assets/svg/plusIcon.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import CBN from "../../assets/svg/cbn.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import ball1 from "../../assets/svg/ball1.svg";
 import ball2 from "../../assets/svg/ball2.svg";
 import ball3 from "../../assets/svg/ball3.svg";
@@ -279,7 +279,7 @@ const SME = () => {
                       <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                       />
                   </div>
                   </p>

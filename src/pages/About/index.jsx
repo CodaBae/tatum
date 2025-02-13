@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import SlimStar from "../../assets/svg/slim_star.svg";
 import MissionStar from "../../assets/svg/mission_star.svg";
 import Moon from "../../assets/svg/moon.svg";
@@ -163,7 +163,7 @@ const About = () => {
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                     />
                   </div>
                 </p>
