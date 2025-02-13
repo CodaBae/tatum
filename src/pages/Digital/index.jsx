@@ -139,7 +139,7 @@ const Digital = () => {
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
                             <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
-                                Internet Banking – Bank with Easy, Anytime. 
+                                Internet Banking – Bank with Ease, Anytime. 
                             </p>
                             <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 Enjoy 24/7 access to your accounts with our secure and
