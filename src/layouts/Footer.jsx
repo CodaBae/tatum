@@ -35,7 +35,7 @@ const Footer = () => {
           <button
             className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg"
             type="button"
-            onClick={() => window.open("https://drive.google.com/file/d/14jcP7ONXG_PclDBeuHXqRus30RInzciA/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
 
           >
             <p className="font-grava text-[#FFCC33] text-base group-hover:text-[#002244]">
