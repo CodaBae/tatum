@@ -92,7 +92,7 @@ const Resources = () => {
                         <img
                         src={NDIC}
                         alt="NDIC"
-                        className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                        className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
                         />
                     </div>
                     </p>

@@ -1198,50 +1198,50 @@ const handleTouchEnd = () => {
               
                 <div className="item a">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358151/black_back_ooqsvl.png" alt="card-1-back" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739468935/black_card_back_ibhvow.png" alt="card-1-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item b">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png" alt="card-2-front" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739468972/afrigo_card_front_ezlerd.png" alt="card-2-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358184/grey_back_inkn0r.png" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739468979/afrigo_card_back_tvghzx.png" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item c">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" alt="card-3-back" className="rounded-[24px]" />
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469080/silver_card_back_rt9tta.png" alt="card-3-back" className="rounded-[24px]" />
                     </div>
                 </div>
                 <div className="item d">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png" alt="card-4-front" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png" alt="card-4-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-4-back" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469177/white_card_back_bpc5fr.png" alt="card-4-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item e">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png" alt="card-5-front" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png" alt="card-5-front" className="rounded-[24px]"/>
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358243/white_back_l9zyiq.png" alt="card-5-back" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469231/yellow_card_back_ljaal4.png" alt="card-5-back" className="rounded-[24px]"/>
                     </div>
                 </div>
                 <div className="item f">
                     <div className="card-face card-front">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png" alt="card-6-front" className="rounded-[24px]" />
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png" alt="card-6-front" className="rounded-[24px]" />
                     </div>
                     <div className="card-face card-back">
-                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739358215/silver_back_fdfvjx.png" className="rounded-[24px]"/>
+                        <img src="https://res.cloudinary.com/code-idea/image/upload/v1739469080/silver_card_back_rt9tta.png" className="rounded-[24px]"/>
                     </div>
                 </div>
             </div>
@@ -1288,7 +1288,7 @@ const handleTouchEnd = () => {
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
                 alt="BlackCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
               
@@ -1296,14 +1296,14 @@ const handleTouchEnd = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739468972/afrigo_card_front_ezlerd.png"
                 alt="GreyCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center" >
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png"
                 alt="SilverCard"
               
                 className="rounded-xl w-[45%] md:w-[100%]"
@@ -1312,7 +1312,7 @@ const handleTouchEnd = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
                 alt="YellowCard"
         
                 className="rounded-xl w-[45%] md:w-[100%]"
@@ -1321,7 +1321,7 @@ const handleTouchEnd = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
@@ -1832,7 +1832,7 @@ const handleTouchEnd = () => {
             </div>
             <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              onClick={() => navigate("/contact")}
+              onClick={() => {navigate("/contact"), window.scrollTo(0, 0)}}
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"

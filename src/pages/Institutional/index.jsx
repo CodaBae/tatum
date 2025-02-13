@@ -21,21 +21,26 @@ const Institutional = () => {
     const [openTabFour, setOpenTabFour] = useState(false)
 
   const { state } = useLocation();
-  const faqRef = useRef(null);
-  const InstitutionRef = useRef(null);
+
+  const publicRef = useRef(null);
+  const govRef = useRef(null);
+  const whyRef = useRef(null);
 
   const isMobile = window.innerWidth < 768;
 
   const navigate = useNavigate();
 
-//   useEffect(() => {
-//     if (state?.section === "faq" && faqRef.current) {
-//       faqRef.current.scrollIntoView({ behavior: "smooth" });
-//     }
-//     if (state?.section === "institution" && InstitutionRef.current) {
-//       InstitutionRef.current.scrollIntoView({ behavior: "smooth" });
-//     }
-//   }, [state]);
+  useEffect(() => {
+    if (state?.section === "public" && publicRef.current) {
+      publicRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "gov" && govRef.current) {
+      govRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "why" && whyRef.current) {
+      whyRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [state]);
 
   const handleTabOne = () => {
     setOpenTabOne(!openTabOne);
@@ -122,7 +127,7 @@ const Institutional = () => {
                       <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
                       />
                   </div>
                   </p>
@@ -170,7 +175,10 @@ const Institutional = () => {
         </div>
       </section>
 
-      <section className="bg-[#fff] md:h-auto lg:h-[1028px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+      <section 
+        ref={publicRef}
+        className="bg-[#fff] md:h-auto lg:h-[1028px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Sector}
@@ -311,7 +319,10 @@ const Institutional = () => {
         />
       </section>
 
-      <section className="bg-[#F9FAFB] md:h-[400px] lg:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]">
+      <section 
+        ref={govRef}
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
+      >
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]"
           data-aos="fade-right">
@@ -440,7 +451,9 @@ const Institutional = () => {
         </div>
       </section>
 
-      <section className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+      <section
+        ref={whyRef} 
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[581px]">
           <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
