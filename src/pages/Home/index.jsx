@@ -27,7 +27,7 @@ import Business from "../../assets/png/business.png";
 import Ceremony from "../../assets/png/ceremony.png";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Card from "../../assets/svg/credit_card.svg";
 import ATM from "../../assets/svg/atm.svg";
 import Loan from "../../assets/svg/loan.svg";
@@ -506,7 +506,7 @@ const handleTouchEnd = () => {
           swipeable={false} // Disable swiping for fade animation
           stopOnHover={false}
         >
-          <div className="overflow-y-auto lm:overflow-y-hidden w-full outline-none">
+          <div className="overflow-y-scroll h-full lm:overflow-y-hidden w-full outline-none">
             <div
               style={{
                 backgroundImage: `url(${
@@ -517,7 +517,7 @@ const handleTouchEnd = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+              className="h-[764px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -609,7 +609,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -629,7 +629,7 @@ const handleTouchEnd = () => {
                     alt="Family"
                     className={`${
                       activeIndex === 0 ? "animate__animated " : ""
-                    } relative md:right-14 bottom-0 lm:right-24 top-28 -right-2 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                    } relative md:right-14 -bottom-12 lm:right-24 top-28 -right-6 h-[400.01px] md:h-[28px]`}
                   />
                 </div>
                 :
@@ -750,7 +750,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px]  w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -865,7 +865,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -986,7 +986,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -1909,18 +1909,18 @@ const handleTouchEnd = () => {
                 We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <a
+            <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              href="mailto:info@tatumbank.com."
+              onClick={() => navigate("/contact")}
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Send an Email
+                Click here
               </p>
-            </a>
+            </button>
           </SwiperSlide>
         </Swiper>
         {/* Tablets and Desktop Card Layout*/}
@@ -2100,18 +2100,18 @@ const handleTouchEnd = () => {
                 We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <a
+            <button
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              href="mailto:info@tatumbank.com"
+              onClick={() => navigate("/contact")}
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Send an Email
+                Click here
               </p>
-            </a>
+            </button>
           </div>
         </div>
       </div>
