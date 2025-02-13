@@ -46,7 +46,7 @@ const Digital = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='lg:h-[100vh] h-[820px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='lg:h-[100vh] h-[790px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -96,11 +96,11 @@ const Digital = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
-                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                                className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                                 />
                             </div>
                             </p>

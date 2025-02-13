@@ -88,7 +88,7 @@ const AccountPrivacy = () => {
                         </p>
                         <div className='flex items-center mt-[12px] gap-3'>
                         <a
-                                className={`animate__animated animate__fadeInUp  block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                className={`animate__animated animate__fadeInUp block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                                 href='#section'
                             >
@@ -118,11 +118,11 @@ const AccountPrivacy = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
-                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                                className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                                 />
                             </div>
                             </p>

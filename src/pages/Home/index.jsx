@@ -459,7 +459,7 @@ const handleTouchEnd = () => {
                         : ""
                     } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
-                    Secure banking, low-interest loans, and profitable
+                    Secure banking, flexible loans, and profitable
                     investments for everyone.
                   </p>
                   <div
