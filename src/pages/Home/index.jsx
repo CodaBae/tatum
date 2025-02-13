@@ -305,80 +305,6 @@ const handleTouchEnd = () => {
   }
 };
 
-
-
-
-  // const carouselRef = useRef(null);
-  // const angleRef = useRef(0);
-  // const isDraggingRef = useRef(false);
-  // const startXRef = useRef(0);
-
-  // Auto scroll
-  // useEffect(() => {
-  //   const autoScrollInterval = setInterval(() => {
-  //     angleRef.current += 0.5; // Adjust auto-scroll speed
-  //     if (carouselRef.current) {
-  //       carouselRef.current.style.transition = "transform 0.3s ease";
-  //       carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //     }
-  //   }, 30); // Adjust interval for speed
-
-  //   return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
-  // }, []);
-
-  // const handleMouseDown = (e) => {
-  //   e.preventDefault();
-  //   isDraggingRef.current = true;
-  //   startXRef.current = e.clientX || e.touches[0].clientX;
-
-  //   document.addEventListener("mousemove", handleMouseMove);
-  //   document.addEventListener("mouseup", handleMouseUp);
-  //   document.addEventListener("touchmove", handleMouseMove, { passive: false });
-  //   document.addEventListener("touchend", handleMouseUp);
-  // };
-
-  // const handleMouseMove = (e) => {
-  //   if (!isDraggingRef.current) return;
-  //   e.preventDefault();
-
-  //   const currentX = e.clientX || e.touches[0].clientX;
-  //   const deltaX = currentX - startXRef.current;
-  //   angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
-
-  //   startXRef.current = currentX;
-
-  //   if (carouselRef.current) {
-  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //     carouselRef.current.style.transition = "none";
-  //   }
-  // };
-
-  // const handleMouseUp = () => {
-  //   isDraggingRef.current = false;
-  //   document.removeEventListener("mousemove", handleMouseMove);
-  //   document.removeEventListener("mouseup", handleMouseUp);
-  //   document.removeEventListener("touchmove", handleMouseMove);
-  //   document.removeEventListener("touchend", handleMouseUp);
-  // };
-
-  // const handleWheel = (e) => {
-  //   e.preventDefault();
-  //   angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
-
-  //   if (carouselRef.current) {
-  //     carouselRef.current.style.transition = "transform 0.3s ease";
-  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //   }
-  // };
-
-  // const settings = {
-  //   // dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1
-  // };
-
   const settings = {
     // dots: true,
     infinite: true,
@@ -604,7 +530,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -745,7 +671,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -860,7 +786,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -981,7 +907,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
