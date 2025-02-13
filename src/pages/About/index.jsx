@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import SlimStar from "../../assets/svg/slim_star.svg";
 import MissionStar from "../../assets/svg/mission_star.svg";
 import Moon from "../../assets/svg/moon.svg";
@@ -65,16 +65,19 @@ const About = () => {
   const team = [
     {
         name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
+        pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438322/sam_b_p98pwm.jpg",
         role: "Chairman, Board of Directors",
         bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association."
     },
     {
       name: "Niyi Adeseun",
       role: "Managing Director",
+      pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438876/niyi_full_doynv5.jpg",
       bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.",
     },
     {
         name: "George Okoh-Oboh",
+        pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
         role: "Executive Director",
         bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
     },
@@ -156,11 +159,11 @@ const About = () => {
                 </p>
                 <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                     />
                   </div>
                 </p>
@@ -488,9 +491,9 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src={HeadShot}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739438237/sam_rptg5m.jpg"
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-500 "
+                className="w-full h-[552px] object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
@@ -502,10 +505,10 @@ const About = () => {
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
-               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+               <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" style={{    marginTop: "-10%"}}>
                     <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
-                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+                <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
 
             <div className="flex flex-col gap-[4px]">
@@ -530,9 +533,9 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src={HeadShot}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739438868/niyi_head_kpig71.jpg"
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-500 "
+                className="w-full h-[552px] object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
@@ -544,10 +547,10 @@ const About = () => {
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
-               <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" >
+               <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" style={{    marginTop: "-10%"}}>
                     <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
-                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+                <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
             <div className="flex flex-col gap-[4px]">
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
@@ -571,9 +574,9 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src={HeadShot}
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739439233/george_head_omxel7.jpg"
                 alt="HeadShot"
-                className="w-full h-full object-cover transition-all duration-500 "
+                className="w-full h-[552px] object-cover transition-all duration-500 "
               />
 
               {/* Hover Overlay */}
@@ -585,10 +588,10 @@ const About = () => {
                 alt="ArrowClick"
                 className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
-                <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" style={{    marginTop: "-10%"}}>
+                <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle" style={{    marginTop: "-10%"}}>
                     <img src={Clip} alt='Clip' className='teamBase' />
                 </div>
-                <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+                <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
             <div className="flex flex-col gap-[4px]">
             <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">

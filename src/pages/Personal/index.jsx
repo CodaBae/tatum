@@ -23,7 +23,7 @@ import BlackCard from "../../assets/png/black_card.png";
 import WhiteCard from "../../assets/png/white_card.png";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 import Internet from "../../assets/svg/internet.svg";
 import Mobile from "../../assets/svg/mobile.svg";
@@ -184,11 +184,11 @@ const Personal = () => {
                 </p>
                 <p className="flex items-center gap-1" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px]  mt-0 lg:mt-1.5">
+                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                     />
                   </div>
                 </p>

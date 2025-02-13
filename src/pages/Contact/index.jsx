@@ -8,7 +8,7 @@ import MapSmall from "../../assets/png/map_small.png"
 import MapBig from "../../assets/png/map_big.png"
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
 import { useLocation } from 'react-router-dom'
@@ -51,7 +51,7 @@ const Contact = () => {
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  
-                      className={`text-[11px] lg:text-[14px] animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                             Contact Us
                         </p>
@@ -77,11 +77,11 @@ const Contact = () => {
                             </p>
                             <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                             All deposits are insured by
-                            <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                                 <img
                                 src={NDIC}
                                 alt="NDIC"
-                                className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                                className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                                 />
                             </div>
                             </p>

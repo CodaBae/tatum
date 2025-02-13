@@ -17,17 +17,12 @@ import Girl from "../../assets/png/girl.png";
 import Farmer from "../../assets/png/tailor.png";
 import SchoolGirl from "../../assets/png/school_girl.png";
 import Tiles from "../../assets/png/tile.png";
-import GreyCard from "../../assets/png/grey_card.png";
-import SilverCard from "../../assets/png/silver_card.png";
-import YellowCard from "../../assets/png/yellow_card.png";
-import BlackCard from "../../assets/png/black_card.png";
-import WhiteCard from "../../assets/png/white_card.png";
 import Staff from "../../assets/png/staff.png";
-import Business from "../../assets/png/business.png";
 import Ceremony from "../../assets/png/ceremony.png";
+import Business from "../../assets/png/business.png";
+import NDIC from "../../assets/svg/ndic.svg";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
 import Card from "../../assets/svg/credit_card.svg";
 import ATM from "../../assets/svg/atm.svg";
 import Loan from "../../assets/svg/loan.svg";
@@ -310,80 +305,6 @@ const handleTouchEnd = () => {
   }
 };
 
-
-
-
-  // const carouselRef = useRef(null);
-  // const angleRef = useRef(0);
-  // const isDraggingRef = useRef(false);
-  // const startXRef = useRef(0);
-
-  // Auto scroll
-  // useEffect(() => {
-  //   const autoScrollInterval = setInterval(() => {
-  //     angleRef.current += 0.5; // Adjust auto-scroll speed
-  //     if (carouselRef.current) {
-  //       carouselRef.current.style.transition = "transform 0.3s ease";
-  //       carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //     }
-  //   }, 30); // Adjust interval for speed
-
-  //   return () => clearInterval(autoScrollInterval); // Cleanup on component unmount
-  // }, []);
-
-  // const handleMouseDown = (e) => {
-  //   e.preventDefault();
-  //   isDraggingRef.current = true;
-  //   startXRef.current = e.clientX || e.touches[0].clientX;
-
-  //   document.addEventListener("mousemove", handleMouseMove);
-  //   document.addEventListener("mouseup", handleMouseUp);
-  //   document.addEventListener("touchmove", handleMouseMove, { passive: false });
-  //   document.addEventListener("touchend", handleMouseUp);
-  // };
-
-  // const handleMouseMove = (e) => {
-  //   if (!isDraggingRef.current) return;
-  //   e.preventDefault();
-
-  //   const currentX = e.clientX || e.touches[0].clientX;
-  //   const deltaX = currentX - startXRef.current;
-  //   angleRef.current += deltaX * 0.5; // Adjust rotation sensitivity
-
-  //   startXRef.current = currentX;
-
-  //   if (carouselRef.current) {
-  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //     carouselRef.current.style.transition = "none";
-  //   }
-  // };
-
-  // const handleMouseUp = () => {
-  //   isDraggingRef.current = false;
-  //   document.removeEventListener("mousemove", handleMouseMove);
-  //   document.removeEventListener("mouseup", handleMouseUp);
-  //   document.removeEventListener("touchmove", handleMouseMove);
-  //   document.removeEventListener("touchend", handleMouseUp);
-  // };
-
-  // const handleWheel = (e) => {
-  //   e.preventDefault();
-  //   angleRef.current += e.deltaY * 0.5; // Adjust scroll sensitivity
-
-  //   if (carouselRef.current) {
-  //     carouselRef.current.style.transition = "transform 0.3s ease";
-  //     carouselRef.current.style.transform = `rotateY(${angleRef.current}deg)`;
-  //   }
-  // };
-
-  // const settings = {
-  //   // dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1
-  // };
-
   const settings = {
     // dots: true,
     infinite: true,
@@ -491,7 +412,7 @@ const handleTouchEnd = () => {
     <div
       className="w-full pt-[40px]  lg:pt-[80px] "
     >
-      <div className="w-full h-full outline-none lm:h-[100vh] ">
+      <div className="w-full outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
           showArrows={false}
@@ -506,7 +427,7 @@ const handleTouchEnd = () => {
           swipeable={false} // Disable swiping for fade animation
           stopOnHover={false}
         >
-          <div className="h-full w-full outline-none">
+          <div className="overflow-y-scroll h-full lm:overflow-y-hidden w-full outline-none">
             <div
               style={{
                 backgroundImage: `url(${
@@ -517,7 +438,7 @@ const handleTouchEnd = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
+              className="h-[764px] lg:h-[91vh] pt-[64px] lm:pt-[40px]  px-5 lg:px-[60px] relative w-full flex flex-col lg:flex-row items-center gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -538,7 +459,7 @@ const handleTouchEnd = () => {
                         : ""
                     } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
-                    Secure banking, low-interest loans, and profitable
+                    Secure banking, flexible loans, and profitable
                     investments for everyone.
                   </p>
                   <div
@@ -609,7 +530,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -619,7 +540,7 @@ const handleTouchEnd = () => {
               </div>
               {
                 isMobile ?
-                <div className="w-[400px]">
+                <div className="max-w-[400px]">
                   <img
                     key={activeIndex}
                     data-aos="fade-left"
@@ -629,7 +550,7 @@ const handleTouchEnd = () => {
                     alt="Family"
                     className={`${
                       activeIndex === 0 ? "animate__animated " : ""
-                    } relative md:right-14 bottom-0 lm:right-24 top-28 -right-2 h-[400.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                    } relative md:right-14 -bottom-12 lm:right-24 top-28 -right-6 h-[400.01px] md:h-[28px]`}
                   />
                 </div>
                 :
@@ -750,7 +671,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -865,7 +786,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -986,7 +907,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -1909,18 +1830,18 @@ const handleTouchEnd = () => {
                 We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <a
+            <button
               className="absolute bottom-5 w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              href="mailto:info@tatumbank.com."
+              onClick={() => navigate("/contact")}
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Send an Email
+                Click here
               </p>
-            </a>
+            </button>
           </SwiperSlide>
         </Swiper>
         {/* Tablets and Desktop Card Layout*/}
@@ -2100,18 +2021,18 @@ const handleTouchEnd = () => {
                 We strive to respond as quickly as possible to ensure a smooth experience.
               </p>
             </div>
-            <a
+            <button
               className="absolute bottom-5 w-[80%] lg:w-[88%] h-[44px] lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
-              href="mailto:info@tatumbank.com"
+              onClick={() => navigate("/contact")}
             >
               <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Send an Email
+                Click here
               </p>
-            </a>
+            </button>
           </div>
         </div>
       </div>

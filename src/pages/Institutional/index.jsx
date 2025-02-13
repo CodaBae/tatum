@@ -11,7 +11,7 @@ import Kids from "../../assets/png/kids.png";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/svg/ndic.svg";
+import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 
 const Institutional = () => {
@@ -118,11 +118,11 @@ const Institutional = () => {
                   </p>
                   <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                       <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                       />
                   </div>
                   </p>
