@@ -51,7 +51,7 @@ const Contact = () => {
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  
-                      className={`text-[11px] lg:text-[14px] animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
                             Contact Us
                         </p>

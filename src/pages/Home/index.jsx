@@ -17,17 +17,12 @@ import Girl from "../../assets/png/girl.png";
 import Farmer from "../../assets/png/tailor.png";
 import SchoolGirl from "../../assets/png/school_girl.png";
 import Tiles from "../../assets/png/tile.png";
-import GreyCard from "../../assets/png/grey_card.png";
-import SilverCard from "../../assets/png/silver_card.png";
-import YellowCard from "../../assets/png/yellow_card.png";
-import BlackCard from "../../assets/png/black_card.png";
-import WhiteCard from "../../assets/png/white_card.png";
 import Staff from "../../assets/png/staff.png";
-import Business from "../../assets/png/business.png";
 import Ceremony from "../../assets/png/ceremony.png";
+import Business from "../../assets/png/business.png";
+import NDIC from "../../assets/png/ndic.png";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
-import NDIC from "../../assets/png/ndic.png";
 import Card from "../../assets/svg/credit_card.svg";
 import ATM from "../../assets/svg/atm.svg";
 import Loan from "../../assets/svg/loan.svg";
@@ -609,7 +604,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -750,7 +745,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px]  w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -865,7 +860,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -986,7 +981,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[18px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
