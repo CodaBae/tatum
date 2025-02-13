@@ -80,7 +80,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Our Story</p>
+                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Company Overview</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Who we are and what we do.
                       </p>
@@ -110,7 +110,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Services</p>
+                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Core Values</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Innovative services designed for you.
                       </p>
@@ -127,9 +127,26 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Our Team</p>
+                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Leadership</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Meet the people behind our success.
+                      </p>
+                    </div>
+                    <div
+                       onClick={() => {
+                        navigate("/about/careers", {
+                          // state: {
+                          //   section: "careers"
+                          // }
+                        })
+                        window.scrollTo(0,0); 
+                        handleClose()
+                      }}
+                      className="flex flex-col gap-1"
+                    >
+                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Careers</p>
+                      <p className="text-[#546B82] text-[10px] font-grava">
+                        Explore opportunities to grow with us
                       </p>
                     </div>
                   </div>
@@ -215,7 +232,7 @@ const MobileNavBar = ({ handleClose }) => {
                     >
                       <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Fixed Deposit</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        Safe, Secure and steadily rewarding
+                        Grow your money with guaranteed returnsSafe, Secure and steadily rewarding
                       </p>
                     </div>
                 </div>
@@ -263,7 +280,7 @@ const MobileNavBar = ({ handleClose }) => {
                   >
                     <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Payment solutions</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
-                      Payment processing services
+                      Payment Processing Services
                     </p>
                   </div>
                   <div
@@ -302,7 +319,7 @@ const MobileNavBar = ({ handleClose }) => {
                   >
                     <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faq</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
-                      Quick answers to your banking questions.
+                      Answers to your SME banking queries
                     </p>
                   </div>
 
@@ -394,13 +411,14 @@ const MobileNavBar = ({ handleClose }) => {
                   >
                     <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faq</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
-                      Quick answers to your banking questions.
+                      Expert answers to corporate bankimg queries
                     </p>
                   </div>
                 </div>
               )
             }
           </div>
+
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <p 
@@ -441,7 +459,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Investment Advisory</p>
+                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Exclusive Banking Benefits</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Smarter investment decisions
                     </p>
@@ -458,7 +476,7 @@ const MobileNavBar = ({ handleClose }) => {
                   >
                     <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Tatum Black Card</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
-                      The Ultimate Symbol of Prestige
+                      Flexible funding tailored to you
                     </p>
                   </div>
                   <div
@@ -469,9 +487,9 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faq</p>
+                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faqs</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
-                      Quick answers to your banking questions.
+                      Quick answers to your Private Banking queries.
                     </p>
                   </div>
                 </div>
@@ -491,17 +509,59 @@ const MobileNavBar = ({ handleClose }) => {
               >
                 Institutional
               </p>
-              {/* {openInstitutionalDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]' onClick={handleInstitutional}/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' onClick={handleInstitutional}/>} */}
+              {openInstitutionalDropdown ? <IoIosArrowUp className='text-[#141B34] text-[24px]' onClick={handleInstitutional}/> : <IoIosArrowDown className='text-[#141B34] text-[24px]' onClick={handleInstitutional}/>}
             </div>
-            {/* {
+            {
               openInstitutionalDropdown && (
-                <div className='flex flex-col gap-4 gap-6 '>
-                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Public Sector</p>
-                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Non-Government Institution Banking</p>
-                  <p onClick={() => {navigate("/Institutional"); window.scrollTo(0,0); handleClose()}} className="font-grava text-[#334E69] tracking-wide text-base uppercase">Why Choose Us</p>
+                <div className='flex flex-col gap-4' style={{marginLeft:'2%'}}>
+                  <div
+                    onClick={() => {
+                      navigate("/institutional", {
+                        state: { section: "public" },
+                      })
+                      // window.scrollTo(0,0); 
+                      handleClose()
+                    }}
+                    className="flex flex-col gap-1"
+                  >
+                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Public sector institution</p>
+                    <p className="text-[#546B82] text-[10px] font-grava">
+                      Insights and tips for smarter banking
+                    </p>
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/institutional", {
+                        state: { section: "gov" },
+                      })
+                      // window.scrollTo(0,0); 
+                      handleClose()
+                    }}
+                    className="flex flex-col gap-1"
+                  >
+                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Non-Government institution</p>
+                    <p className="text-[#546B82] text-[10px] font-grava">
+                      Stay updated on our news
+                    </p>
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/institutional", {
+                        state: { section: "why" },
+                      })
+                      // window.scrollTo(0,0); 
+                      handleClose()
+                    }}
+                    className="flex flex-col gap-1"
+                  >
+                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Why Choose Us</p>
+                    <p className="text-[#546B82] text-[10px] font-grava">
+                      Expert answers to corporate banking 
+                    </p>
+                  </div>
                 </div>
               )
-            } */}
+            }
           </div>
 
           {/* <div className="flex flex-col gap-4">

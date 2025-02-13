@@ -7,12 +7,17 @@ import { CiSearch } from "react-icons/ci";
 import Logo from "../assets/svg/logo.svg";
 import Padlock from "../assets/svg/padlock.svg";
 import Savings from "../assets/svg/savings.svg";
+import Bag from "../assets/svg/bag.svg";
+import VR from "../assets/svg/vr.svg";
 import Current from "../assets/svg/current.svg";
 import Card from "../assets/svg/card.svg";
 import Mortgage from "../assets/svg/mortgage.svg";
 import Insurance from "../assets/svg/insurance.svg";
 import Investment from "../assets/svg/investment.svg";
 import Leasing from "../assets/svg/leasing.svg";
+import Service from "../assets/svg/service.svg";
+import Leadership from "../assets/svg/leadership.svg";
+import TatumCard from "../assets/svg/tatum_card.svg";
 import Payroll from "../assets/svg/payroll.svg";
 import Risk from "../assets/svg/risk.svg";
 import Trade from "../assets/svg/trade.svg";
@@ -33,6 +38,8 @@ import Branch from "../assets/svg/branch.svg";
 import Media from "../assets/svg/media.svg";
 import Press from "../assets/svg/press.svg";
 import Faq from "../assets/svg/faq.svg";
+import Public from "../assets/svg/public.svg";
+import Gov from "../assets/svg/gov.svg";
 
 import "./css/Header.css";
 import { FiSearch } from "react-icons/fi";
@@ -43,8 +50,10 @@ const Header = () => {
   const [showCorporateDropdown, setShowCorporateDropdown] = useState(false);
   const [showSmeDropdown, setShowSmeDropdown] = useState(false);
   const [showPrivateDropdown, setShowPrivateDropdown] = useState(false);
+  const [showInstitutionalDropdown, setShowInstitutionalDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
   const [visible, setVisible] = useState(true);
+
   const lastScrollYRef = useRef(0);
   const isScrolling = useRef(false);
 
@@ -76,38 +85,7 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visible]);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Return early if already processing a scroll
-  //     if (isScrolling.current) return;
-      
-  //     isScrolling.current = true;
-  //     requestAnimationFrame(() => {
-  //       const currentScrollY = window.scrollY;
-  //       const scrollDirection = currentScrollY > lastScrollYRef.current ? 'down' : 'up';
   
-  //       // Always show header at top
-  //       if (currentScrollY <= 0) {
-  //         setVisible(true);
-  //       } else {
-  //         // Only update state if visibility needs to change
-  //         if (scrollDirection === 'down' && currentScrollY > 100 && visible) {
-  //           setVisible(false);
-  //         } else if (scrollDirection === 'up' && !visible) {
-  //           setVisible(true);
-  //         }
-  //       }
-  
-  //       lastScrollYRef.current = currentScrollY;
-  //       isScrolling.current = false;
-  //     });
-  //   };
-  
-  //   // Add passive scroll listener for better performance
-  //   window.addEventListener('scroll', handleScroll, { passive: true });
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [visible]); // Add visible to dependency array
-
   const handleMouseEnter = (menu) => {
     if (menu === "about") {
       setShowAboutDropdown(true);
@@ -116,6 +94,7 @@ const Header = () => {
       setShowSmeDropdown(false);
       setShowPrivateDropdown(false);
       setShowResourcesDropdown(false);
+      setShowInstitutionalDropdown(false);
     } else if (menu === "personal") {
       setShowPersonalDropdown(true);
       setShowAboutDropdown(false);
@@ -123,6 +102,7 @@ const Header = () => {
       setShowSmeDropdown(false);
       setShowPrivateDropdown(false);
       setShowResourcesDropdown(false);
+      setShowInstitutionalDropdown(false);
     } else if (menu === "corporate") {
       setShowCorporateDropdown(true);
       setShowPersonalDropdown(false);
@@ -130,6 +110,7 @@ const Header = () => {
       setShowSmeDropdown(false);
       setShowPrivateDropdown(false);
       setShowResourcesDropdown(false);
+      setShowInstitutionalDropdown(false);
     } else if (menu === "business") {
       setShowSmeDropdown(true);
       setShowCorporateDropdown(false);
@@ -137,6 +118,7 @@ const Header = () => {
       setShowAboutDropdown(false);
       setShowPrivateDropdown(false);
       setShowResourcesDropdown(false);
+      setShowInstitutionalDropdown(false);
     } else if (menu === "private") {
       setShowPrivateDropdown(true);
       setShowSmeDropdown(false);
@@ -144,14 +126,25 @@ const Header = () => {
       setShowPersonalDropdown(false);
       setShowAboutDropdown(false);
       setShowResourcesDropdown(false);
+      setShowInstitutionalDropdown(false);
     } else if (menu === "resources") {
       setShowResourcesDropdown(true);
+      setShowInstitutionalDropdown(false);
       setShowPrivateDropdown(false);
       setShowSmeDropdown(false);
       setShowCorporateDropdown(false);
       setShowPersonalDropdown(false);
       setShowAboutDropdown(false);
-    } else if (menu === "nil") {
+    } else if (menu === "institutional") {
+      setShowInstitutionalDropdown(true);
+      setShowResourcesDropdown(false);
+      setShowPrivateDropdown(false);
+      setShowSmeDropdown(false);
+      setShowCorporateDropdown(false);
+      setShowPersonalDropdown(false);
+      setShowAboutDropdown(false);
+    }  else if (menu === "nil") {
+      setShowInstitutionalDropdown(false);
       setShowResourcesDropdown(false);
       setShowPrivateDropdown(false);
       setShowSmeDropdown(false);
@@ -174,6 +167,8 @@ const Header = () => {
       setShowPrivateDropdown(false);
     } else if (menu === "resources") {
       setShowResourcesDropdown(false);
+    } else if (menu === "institutional") {
+      setShowInstitutionalDropdown(false);
     } else if (menu === "nil") {
       setShowResourcesDropdown(false);
     }
@@ -226,7 +221,7 @@ const Header = () => {
           </div>
           {showAboutDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[290px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-0 py-0 w-[566px] ${
                 showAboutDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("about")}
@@ -242,11 +237,11 @@ const Header = () => {
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Savings} alt="Savings" className="w-6 h-6" />
+                      <img src={Bag} alt="Bag" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        Our Story
+                        Company Overview
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Who we are and what we do.
@@ -263,7 +258,7 @@ const Header = () => {
                     }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Current} alt="Current" className="w-6 h-6" />
+                      <img src={VR} alt="VR" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
@@ -284,11 +279,11 @@ const Header = () => {
                     }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Card} alt="Card" className="w-6 h-6" />
+                      <img src={Service} alt="Service" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        Services
+                        Core Values
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Innovative services designed for you.
@@ -296,29 +291,58 @@ const Header = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/about", {
-                        state: {
-                          section: "teams"
-                        }
-                      })
-                    }}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Mortgage} alt="Mortgage" className="w-6 h-6" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        Our Team
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Meet the people behind our success.
-                      </p>
-                    </div>
-                  </div>
                 </div>
+                <div className="bg-[#E6E9E1] w-[0.1px] h-[198px]"></div>
+                  <div className="flex flex-col gap-4">
+                    <div
+                      className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                      onClick={() => {
+                        navigate("/about", {
+                          state: {
+                            section: "teams"
+                          }
+                        })
+                      }}
+                    >
+                      <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                        <img src={Leadership} alt="Leadership" className="w-6 h-6" />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                          Leadership
+                        </p>
+                        <p className="text-[#546B82] text-[10px] font-grava">
+                          Meet the people behind our success.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                      onClick={() => {
+                        navigate("/about/careers", {
+                          state: {
+                            section: "careers"
+                          }
+                        }),
+                        window.scrollTo(0, 0)
+                      }}
+                    >
+                      <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                        <img src={Estate} alt="Estate" className="w-6 h-6" />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                          Careers
+                        </p>
+                        <p className="text-[#546B82] text-[10px] font-grava">
+                          Explore opportunities to grow with us
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
               </div>
             </div>
           )}
@@ -345,7 +369,7 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "38vh" }}
+                style={{ height: "35vh" }}
               >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -397,7 +421,7 @@ const Header = () => {
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        Cards ( Debit, Credit, Virtual)
+                        Cards (Debit, Credit, Virtual)
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Seamless payments anywhere, anytime.
@@ -443,7 +467,7 @@ const Header = () => {
                         Fixed Deposit
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        Safe, Secure and steadily rewarding
+                        Grow your money with guaranteed returns
                       </p>
                     </div>
                   </div>
@@ -514,7 +538,7 @@ const Header = () => {
                         Payment solutions
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        Payment processing services
+                        Payment Processing Services
                       </p>
                     </div>
                   </div>
@@ -572,7 +596,7 @@ const Header = () => {
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        Quick answers to your banking questions.
+                        Answers to your SME banking queries
                       </p>
                     </div>
                   </div>
@@ -706,7 +730,7 @@ const Header = () => {
                         FAQ
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        Quick answers to your banking questions.
+                        Expert answers to corporate banking queries
                       </p>
                     </div>
                   </div>
@@ -730,14 +754,14 @@ const Header = () => {
           </p>
           {showPrivateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[312px] w-[605px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[512px] w-[320px] ${
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "35vh" }}
+                style={{ height: "50vh" }}
               >
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
@@ -772,7 +796,7 @@ const Header = () => {
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        Investment Advisory
+                        Exclusive Banking Benefits
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Smarter investment decisions
@@ -789,39 +813,41 @@ const Header = () => {
                     }
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Estate} alt="Estate" className="w-6 h-6" />
+                      <img src={TatumCard} alt="TatumCard" className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
                         Tatum Black Card
                       </p>
                       <p className="text-[#546B82] text-[10px] font-grava">
-                        The Ultimate Symbol of Prestige
+                        Flexible funding tailored to you
                       </p>
                     </div>
                   </div>
-                </div>
-                <div className="bg-[#E6E9E1] w-[0.1px] h-[182px]"></div>
-                <div className="flex flex-col gap-4">
-                  <div
-                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
-                    onClick={() => {
-                      navigate("/private", { state: { section: "faq" } });
-                    }}
-                  >
-                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Faq} alt="Faq" className="w-5 h-5" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
-                        FAQ
-                      </p>
-                      <p className="text-[#546B82] text-[10px] font-grava">
-                        Quick answers to your banking questions.
-                      </p>
+
+                  <div className="flex flex-col gap-4">
+                    <div
+                      className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                      onClick={() => {
+                        navigate("/private", { state: { section: "faq" } });
+                      }}
+                    >
+                      <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                        <img src={Faq} alt="Faq" className="w-5 h-5" />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                          FAQs
+                        </p>
+                        <p className="text-[#546B82] text-[10px] font-grava">
+                          Answers to your Private Banking queries
+                        </p>
+                      </div>
                     </div>
                   </div>
+
                 </div>
+      
               </div>
             </div>
           )}
@@ -831,16 +857,92 @@ const Header = () => {
         <div className="relative inline-block dropdown-wrapper">
           <p
             className="font-grava font-medium text-base text-[#002244] cursor-pointer"
-            onMouseEnter={() => handleMouseEnter("resources")}
-            // onClick={() => navigate("/resources", { state: {section: "resources"}})}
+            onMouseEnter={() => handleMouseEnter("institutional")}
             onClick={() => {
               navigate("/institutional"),
               window.scrollTo(0, 0)
             }}
           >
-            {/* Resources */}
             Institutional
           </p>
+          {showInstitutionalDropdown && (
+            <div
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[100px] w-[294px] ${
+                showInstitutionalDropdown ? "show" : ""
+              }`}
+              onMouseLeave={() => handleMouseLeave("institutional")}
+            >
+              <div
+                className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
+                style={{ height: "40vh" }} //35vh
+              >
+                <div className="flex flex-col gap-4 w-[390px]">
+                  <div
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/institutional", { state: { section: "public" } });
+                    }}
+                  >
+                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                      <img src={Public} alt="public" className="w-6 h-6" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                        Public Sector
+                      </p>
+                      <p className="text-[#546B82] text-[10px] font-grava whitespace-nowrap">
+                        Insights and tips for smarter banking
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                    onClick={() => {
+                      navigate("/institutional", {
+                        state: { section: "gov" },
+                      });
+                    }}
+                  >
+                    <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                      <img src={Gov} alt="Gov" className="w-6 h-6" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                        Non-Government institution Banking
+                      </p>
+                      <p className="text-[#546B82] text-[10px] font-grava">
+                        Non-Government Institution Banking
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <div
+                      className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
+                      onClick={() => {
+                        navigate("/institutional", { state: { section: "why" } });
+                      }}
+                    >
+                      <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
+                        <img src={Faq} alt="Faq" className="w-5 h-5" />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
+                          Why Choose Us
+                        </p>
+                        <p className="text-[#546B82] text-[10px] font-grava">
+                          Expert answers to corporate banking queries
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+               
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Help */}

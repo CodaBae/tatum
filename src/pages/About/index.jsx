@@ -126,7 +126,7 @@ const About = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[732px] lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="h-[786px] lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3.5%%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -163,7 +163,7 @@ const About = () => {
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
                     />
                   </div>
                 </p>
@@ -272,7 +272,7 @@ const About = () => {
       </section>
 
       <section
-        ref={servicesRef}
+       
         className="flex flex-col lg:flex-row items-start px-5 lm:px-[56px] gap-4 lg:gap-[32px]"
       >
         <div
@@ -349,6 +349,7 @@ const About = () => {
       </section>
 
       <section
+       ref={servicesRef}
         style={{
           backgroundImage: `url(${Core})`,
           backgroundRepeat: "no-repeat",
@@ -491,7 +492,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739438237/sam_rptg5m.jpg"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739462551/Samuel_T_gee3on.png"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -533,7 +534,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739438868/niyi_head_kpig71.jpg"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739462552/Niyi_wvx4wh.png"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -574,7 +575,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739439233/george_head_omxel7.jpg"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739462552/George_bpbbwv.png"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />

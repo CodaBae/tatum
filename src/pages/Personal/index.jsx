@@ -188,7 +188,7 @@ const Personal = () => {
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
                     />
                   </div>
                 </p>
@@ -488,7 +488,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("debit")}>
             <img
-              src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
               alt="Debit"
               className={`${
                 clickedCard === "debit" ? "" : "opacity-70"
@@ -512,7 +512,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("credit")}>
             <img
-              src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
               alt="Credit"
               className={`${
                 clickedCard === "credit" ? "" : "opacity-70"
@@ -536,7 +536,7 @@ const Personal = () => {
             className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
             onClick={() => handleClickCard("prepaid")}>
             <img
-              src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
+              src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
               alt="Prepaid"
               className={`${
                 clickedCard === "prepaid" ? "" : "opacity-70"
@@ -563,7 +563,7 @@ const Personal = () => {
           <Slider {...settings}>
             <div className="slide-item slick-slide flex">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358169/black_front_kd0xxb.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
                 alt="BlackCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
               
@@ -571,14 +571,14 @@ const Personal = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358199/grey_front_g4nrvw.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739468972/afrigo_card_front_ezlerd.png"
                 alt="GreyCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center" >
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358228/silver_front_ykhxbi.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png"
                 alt="SilverCard"
               
                 className="rounded-xl w-[45%] md:w-[100%]"
@@ -587,7 +587,7 @@ const Personal = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358278/yellow_front_y15to8.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
                 alt="YellowCard"
         
                 className="rounded-xl w-[45%] md:w-[100%]"
@@ -596,7 +596,7 @@ const Personal = () => {
             </div>
             <div className="slide-item flex justify-center">
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739358264/white_front_wqjsci.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
                 alt="WhiteCard"
                 className="rounded-xl w-[45%] md:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
