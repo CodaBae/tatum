@@ -34,41 +34,57 @@ const team = [
   {
     name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
     role: "Chairman, Board of Directors",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438322/sam_b_p98pwm.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739438237/sam_rptg5m.jpg",
     bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.",
   },
   {
     name: "Niyi Adeseun",
     role: "Managing Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438876/niyi_full_doynv5.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739438868/niyi_head_kpig71.jpg",
     bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. He has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. He was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until 2017. Niyi holds an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB).",
   },
   {
     name: "George Okoh-Oboh",
     role: "Executive Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739439233/george_head_omxel7.jpg",
     bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
   },
   {
     name: "Samuel Otseliu Zibiri, SAN",
     role: "Non-Executive Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439563/zib_full_ep7lyj.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739441604/zib_head_jngces.jpg",
     bio: "Samuel Otseliu Zibiri, SAN, is a distinguished Nigerian lawyer with a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co and has served as Secretary General of the Nigerian Bar Association, Abuja Branch. A Senior Advocate of Nigeria since 2011, he actively contributes to legal scholarship and human rights advocacy.",
   },
   {
     name: "Tonya Lawani",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739440129/tonya_full_wgbsap.jpg",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739440112/tonya_head_yb4uxl.jpg",
     role: "Non-Executive Director",
     bio: "Tonya Lawani is a seasoned entrepreneur with over 20 years of experience leading multiple businesses. As the Group Chief Executive of Seal Group, she oversees operations across industries such as manufacturing, hospitality, retail, and advertising. She founded Virgin Vie Angel Limited in 2005, ABC Inflatables Nigeria Limited, and The Virgin Hospitality Company. With a BSc in Economics and an MBA, she has attended executive education at Business School Netherlands and Harvard University.",
   },
   {
     name: "Francis Okosun",
     role: "Non-Executive Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739440632/francis_full_o940y2.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739440661/francis_head_v8uk6g.jpg",
     bio: "Francis Okosun is an accomplished real estate professional and the Senior Partner/CEO of Knight Frank Nigeria. With over two decades of experience, he has played a crucial role in maintaining Knight Frank's position as a leading estate surveying and valuation firm. He holds an MBA from Lagos State University and a Diploma in Estate Management from the Federal Polytechnic, Auchi. A Fellow of the Nigerian Institution of Estate Surveyors & Valuers, he has been recognized as the Real Estate Professional of the Year at the Nigeria BEMIS Honors Nite.",
   },
   {
     name: "Aminatu Dahiru Chiroma",
     role: "Non-Executive Director",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739440466/amina_head_d1tkq0.jpg",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739440486/amina_full_ykedrd.jpg",
     bio: "Aminatu Chiroma has a proven track record in fostering strong partnerships, streamlining operations, and implementing key performance metrics to enhance productivity. With expertise in project management, risk mitigation, and legal compliance, she has played a significant role in expanding market presence, optimizing supply chains, and integrating sustainable practices across international operations.",
   },
   {
     name: "Felix E. Igbinosa",
     role: "Independent Non-Executive Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739440930/felix_full_skyrye.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739440773/felix_mrt4mt.jpg",
     bio:  `
     Felix Igbinosa is a seasoned banker and professional with over three decades of Banking and Financial services experience. His expertise spans Banking Operations, Corporate Banking, Relationship Management, Internal Control, Audit, Information Technology, Corporate Services, General Administration and Project Management.
     
@@ -84,6 +100,8 @@ const team = [
     ` },
   {
     name: "Abimbola Izu",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739441042/bimbs_full_spelpc.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739441068/bimbs_head_napcqe.jpg",
     role: "Independent Non-Executive Director",
     bio: "Abimbola Izu is an accomplished legal and business professional with a distinguished career spanning law, finance, corporate governance, and advisory services. She holds a law degree from the University of Ife (now Obafemi Awolowo University) and an LLM from the University of Warwick, UK, where she was a Foreign and Commonwealth Office scholar.",
   },
@@ -138,9 +156,9 @@ const Management = () => {
                 <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
                   {/* Background Image */}
                   <img
-                    src={HeadShot}
+                    src={item.headshot}
                     alt="HeadShot"
-                    className="w-full h-full object-cover transition-all duration-500 "
+                    className="w-full h-[552px] object-cover transition-all duration-500 "
                   />
 
                   {/* Hover Overlay */}

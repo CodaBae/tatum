@@ -90,7 +90,7 @@ const TeamDetails = () => {
           className='flex flex-col lm:flex-row items-start gap-6 lg:gap-[55px]'
         >
           <div className="flex flex-col gap-[18px] w-[429px]">
-            <img src={HeadShot} alt='HeadShot' className='lm:w-[429px] w-[350px]' />
+            <img src={state?.team.pic} alt='HeadShot' className='lm:w-[429px] w-[350px]' />
             <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-[17px]'>
 
               <div className='flex flex-col items-start '>
