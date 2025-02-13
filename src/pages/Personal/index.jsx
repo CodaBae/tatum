@@ -184,11 +184,11 @@ const Personal = () => {
                 </p>
                 <p className="flex items-center gap-1" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px]  mt-0 lg:mt-1.5">
+                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                     <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                     />
                   </div>
                 </p>

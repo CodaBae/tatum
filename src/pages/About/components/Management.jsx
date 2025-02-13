@@ -170,10 +170,10 @@ const Management = () => {
                     alt="ArrowClick"
                     className="absolute w-12 h-12 inset-0 m-auto opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   />
-                  <div className="absolute -bottom-5 lg:-bottom-2 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                    <img src={Clip} alt="Clip" className="teamBase" />
-                  </div>
-                  <div className="absolute -bottom-2 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+                  <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+                    <img src={Clip} alt='Clip' className='teamBase' />
+                </div>
+                <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
                 </div>
                 <div className="flex flex-col gap-[4px]">
                   <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">

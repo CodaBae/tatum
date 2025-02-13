@@ -275,11 +275,11 @@ const SME = () => {
                   </p>
                   <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                   All deposits are insured by
-                  <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                       <img
                       src={NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
+                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[28px]"
                       />
                   </div>
                   </p>
@@ -307,9 +307,9 @@ const SME = () => {
             isMobile ? 
             <div className="w-[300px]">
               <img
-                src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+                src={'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
                 alt="Family"
-                className={`animate__animated relative top-[25.5%] -right-3 lg:w-[43%] `}
+                className={`animate__animated relative top-[29.5%] -right-10 lg:w-[43%] `}
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
@@ -317,7 +317,7 @@ const SME = () => {
             </div>
             :
             <img
-              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
+              src={'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
               alt="Family"
               className={`animate__animated relative lm:top-[10%] lg:w-[43%] `}
               data-aos="fade-left"
