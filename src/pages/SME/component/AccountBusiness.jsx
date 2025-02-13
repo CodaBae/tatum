@@ -141,7 +141,7 @@ const AccountBusiness = () => {
                 <img 
                     src={Smiling} 
                     alt='Family' 
-                    className={`animate__animated animate__fadeInRight relative top-[14%]  lm:right-[15%] lm:top-[10%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative top-[20%]  lm:right-[15%] lm:top-[10%] lg:w-[55%] `} 
                 />
             </div>
         </section>
