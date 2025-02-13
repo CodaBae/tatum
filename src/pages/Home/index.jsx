@@ -20,7 +20,7 @@ import Tiles from "../../assets/png/tile.png";
 import Staff from "../../assets/png/staff.png";
 import Ceremony from "../../assets/png/ceremony.png";
 import Business from "../../assets/png/business.png";
-import NDIC from "../../assets/png/ndic.png";
+import NDIC from "../../assets/svg/ndic.svg";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
 import Card from "../../assets/svg/credit_card.svg";
