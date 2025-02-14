@@ -479,7 +479,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 lm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lm:grid-cols-3 gap-10">
           {/* First Card with Hover Effect */}
           <div
             className="flex flex-col gap-6"

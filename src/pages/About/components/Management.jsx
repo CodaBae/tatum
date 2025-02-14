@@ -120,7 +120,7 @@ const Management = () => {
       <motion.div
         // data-aos="fade-up"
         // data-aos-duration="1000"
-        className="grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-4 lm:gap-5"
+        className="grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-5 lm:gap-10"
         variants={gridContainerVariants}
         initial="hidden"
         animate="show"
