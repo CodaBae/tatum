@@ -34,7 +34,7 @@ const Teams = () => {
     <div className="w-full overflow-hidden" ref={teamsRef}>
         <div 
             style={{
-                backgroundImage: `url(${isTab ? HeaderImgMobile : HeaderImg})`,
+                backgroundImage: "url(https://res.cloudinary.com/code-idea/image/upload/v1739531942/meeting_elj39a.jpg)",                          //`url(${isTab ? HeaderImgMobile : HeaderImg})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover" 
             }}

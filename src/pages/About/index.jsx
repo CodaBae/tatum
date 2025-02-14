@@ -492,7 +492,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739462551/Samuel_T_gee3on.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739531326/Samuel_head_dlvi63.jpg"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -534,7 +534,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739462552/Niyi_wvx4wh.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739530969/Niyi_head_oihrr0.jpg"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -575,7 +575,7 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739462552/George_bpbbwv.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
