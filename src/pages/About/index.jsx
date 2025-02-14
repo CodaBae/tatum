@@ -596,7 +596,7 @@ const About = () => {
             </div>
             <div className="flex flex-col gap-[4px]">
             <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                George Okoh-Oboh
+                George Oko-Oboh
               </p>
               <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Executive Director

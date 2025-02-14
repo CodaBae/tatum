@@ -46,18 +46,18 @@ const team = [
     bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. He has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. He was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until 2017. Niyi holds an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB).",
   },
   {
-    name: "George Okoh-Oboh",
+    name: "George Oko-Oboh",
     role: "Executive Director",
     pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531471/George_full_wm65x9.jpg",
     headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg",
-    bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
+    bio: "George Oko-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
   },
   {
-    name: "Samuel Otseliu Zibiri, SAN",
+    name: "Samuel Otseilu Zibiri, SAN",
     role: "Non-Executive Director",
     pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531124/Samuel_full_n376id.jpg",
     headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739531118/Samuel_head_hfkams.jpg",
-    bio: "Samuel Otseliu Zibiri, SAN, is a distinguished Nigerian lawyer with a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co and has served as Secretary General of the Nigerian Bar Association, Abuja Branch. A Senior Advocate of Nigeria since 2011, he actively contributes to legal scholarship and human rights advocacy.",
+    bio: "Samuel Otseilu Zibiri, SAN, is a distinguished Nigerian lawyer with a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co and has served as Secretary General of the Nigerian Bar Association, Abuja Branch. A Senior Advocate of Nigeria since 2011, he actively contributes to legal scholarship and human rights advocacy.",
   },
   {
     name: "Tonya Lawani",
