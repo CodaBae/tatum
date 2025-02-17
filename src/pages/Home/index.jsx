@@ -483,11 +483,12 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Open an account 
+                        {/* Open an account  */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
-                        className="mt-[1px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]"
+                        className="mt-[2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]"
                       />
                     </button>
 
@@ -649,7 +650,8 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="font-grava text-base text-[#002244] font-medium">
-                        Download App
+                        To be Available Soon
+                        {/* Download App */}
                       </p>
                     </button>
                   </div>
@@ -988,11 +990,12 @@ const handleTouchEnd = () => {
             }
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] "
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] "
             />
           </button>
         </div>
@@ -1033,11 +1036,12 @@ const handleTouchEnd = () => {
             }
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -1086,11 +1090,12 @@ const handleTouchEnd = () => {
             }}
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -1130,11 +1135,12 @@ const handleTouchEnd = () => {
             }}
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -1345,7 +1351,8 @@ const handleTouchEnd = () => {
           }}
         >
           <p className="transition-colors duration-500 ease-in-out text-[#002244] font-medium font-grava group-hover:text-[#FFCC33] text-sm lg:text-base">
-            Choose your Tatum Card
+            {/* Choose your Tatum Card */}
+            To be Available Soon
           </p>
         </button>
       </div>
@@ -1716,7 +1723,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Learn more
+                {/* Learn more */}
+                To be Available Soon
               </p>
             </button>
           </SwiperSlide>
@@ -1765,7 +1773,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Download our mobile app
+                To be Available Soon
+                {/* Download our mobile app */}
               </p>
             </button>
           </SwiperSlide>
@@ -1790,7 +1799,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Dial *911#
+                To be Available Soon
+                {/* Dial *911# */}
               </p>
             </button>
           </SwiperSlide>
@@ -1873,7 +1883,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Learn more
+                To be Available Soon
+                {/* Learn more */}
               </p>
             </button>
           </div>
@@ -1944,7 +1955,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Download our mobile app
+                To be Available Soon
+                {/* Download our mobile app */}
               </p>
             </button>
           </div>
@@ -1980,7 +1992,8 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Dial *911#
+                To be Available Soon
+                {/* Dial *911# */}
               </p>
             </button>
           </div>

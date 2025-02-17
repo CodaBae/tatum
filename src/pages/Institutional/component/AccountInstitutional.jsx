@@ -103,7 +103,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                     Learn more
                                 </p>
                                 <BsArrowRight size={100}  
-                                    className='w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                    className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
                         </div>
@@ -196,7 +196,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456268/TBL_Corporate_Form_1_eeem6o.pdf", "_blank")}
             >
                 <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
-                <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
         </section>

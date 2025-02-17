@@ -113,7 +113,7 @@ const Corporate = () => {
                   </p>
                   <BsArrowRight
                     size={100}
-                    className="w-5 h-5 mt-[-2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]"
+                    className="w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]"
                   />
                 </button>
               </div>
@@ -224,7 +224,7 @@ const Corporate = () => {
               </p>
               <BsArrowRight
                 size={100}
-                className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+                className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
               />
             </button>
           </div>
@@ -241,7 +241,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -303,7 +303,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -373,7 +373,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -434,7 +434,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -504,7 +504,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -566,7 +566,7 @@ const Corporate = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>

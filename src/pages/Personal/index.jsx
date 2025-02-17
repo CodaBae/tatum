@@ -163,7 +163,7 @@ const Personal = () => {
                   </p>
                   <BsArrowRight
                     size={100}
-                    className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                    className="w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]"
                   />
                 </button>
               </div>
@@ -280,11 +280,12 @@ const Personal = () => {
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -322,11 +323,12 @@ const Personal = () => {
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started
+              {/* Get started */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -378,7 +380,7 @@ const Personal = () => {
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -450,7 +452,7 @@ const Personal = () => {
               </p>
               <BsArrowRight
                 size={100}
-                className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] "
+                className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] "
               />
             </button>
           </div>
@@ -611,7 +613,8 @@ const Personal = () => {
             navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           }>
           <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
-            Get yours today
+            {/* Get yours today */}
+            To be Available Soon
           </p>
         </button>
       </div>
@@ -666,11 +669,12 @@ const Personal = () => {
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Get started now
+              {/* Get started now */}
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -705,11 +709,12 @@ const Personal = () => {
                   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                  Open an account
+                  {/* Open an account */}
+                  Find Out More
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                  className="w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]"
                 />
               </button>
             </div>
