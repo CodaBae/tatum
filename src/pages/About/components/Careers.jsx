@@ -185,7 +185,7 @@ const Careers = () => {
 
       {/* BENEFITS AND PERKS SECTION */}
 
-      <div className="relative w-full h-[1400px] lg:h-[1050px] sm:bg-[#002244] lg:bg-[#ffffff]">
+      <div className="relative w-full h-[1400px] lg:h-[1050px] bg-[#002244] lg:bg-[#ffffff]">
         <div>
           <img
             src={benefitsPerksBG}

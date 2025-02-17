@@ -176,7 +176,6 @@ const Header = () => {
 
   return (
     <div
-      // className="bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between  "
       className={`bg-[#fff] fixed z-50 w-full px-[46px] py-5 flex items-center justify-between transition-transform duration-500 ease-in-out ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}

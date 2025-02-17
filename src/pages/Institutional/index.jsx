@@ -591,7 +591,7 @@ const Institutional = () => {
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                  className="w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]"
                 />
               </button>
             </div>

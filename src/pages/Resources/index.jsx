@@ -1,26 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { BsArrowRight } from 'react-icons/bs';
 
-import Meeting from "../../assets/png/q_and_a.png";
 import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 
+import News from './components/News';
+import Press from './components/Press';
+import FormDowload from './components/FormDowload';
+import Media from './components/Media';
+
 const Resources = () => {
   const [openDropdownOne, setOpenDropdownOne] = useState(false)
   const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
-  const [openDropdownThree, setOpenDropdownThree] = useState(false)
+  const [openDropdownThree, setOpenDropdownThree] = useState(true)
+  const [activeTab, setActiveTab] = useState("news")
 
   const isMobile = window.innerWidth < 768
 
   const navigate = useNavigate() 
+  const { state } = useLocation();
 
   const resourcesRef = useRef(null);
   const faqRef = useRef(null);
 
-  const { state } = useLocation();
+  const handleTabChange = (value) => {  
+    setActiveTab(value)
+  }
+
+
 
   // useEffect(() => {
   //     if (state?.section === "resources" && resourcesRef.current) {
@@ -61,15 +70,14 @@ const Resources = () => {
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                   <p 
-                      className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp  lm:w-[669px] capitalize font-grava text-[#002244] font-[700] text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                   >
-                      Media & Publications
+                      Media & Resources
                   </p>
                   <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                      className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[350] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
-                      Learn about everything, from customer's success stories 
-                      to getting informed with our latest news.
+                      Learn about everything, from customer's success stories to getting informed with our latest news.
                   </p>
                 
               </div>
@@ -116,9 +124,9 @@ const Resources = () => {
               </div> */}
           </div>
           <img 
-            src="https://res.cloudinary.com/code-idea/image/upload/v1739214013/camera_man_br9idr.png"
+            src="https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"
             alt='Biz' 
-            className={`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-24 `} 
+            className={`animate__animated  relative -right-10 lm:right-0 w-[500vh] top-24 lm:top-auto  lm:h-[841px]  `} //top-24  lm:h-[741px] lm:right-52
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
@@ -127,47 +135,37 @@ const Resources = () => {
         </div>
       </section>
       
-      <section  className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
-          <div data-aos="fade-right" className="hidden md:block" >
-              <img 
-                  src={Meeting} 
-                  alt='Meeting' 
-                  className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-auto transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
-              />
-          </div>
-          <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
-              <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-                  <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Content Unavailable!</p>
-                  <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
-                    We're currently updating our resources to serve you better. 
-                    This doesn't mean we're not working – we're behind the scenes, 
-                    crafting exceptional content that will be worth the wait.
-                  </p>
-              </div>
-              <button
-                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[169px] lg:w-[200px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                type='button'
-                onClick={() => {
-                  navigate(
-                    "/",
-                    {
-                      state: { section: "home" },
-                    },
-                    window.scrollTo(0, 0)
-                  );
-                }}
-              >
-                  <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
-                  <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
-              </button>
-          </div>
-          <img 
-            src="https://res.cloudinary.com/code-idea/image/upload/v1739292199/chat_aql9uh.png" 
-            alt='Meeting' 
-            className='flex md:hidden w-[295px] h-[295px]' 
-            data-aos="fade-right" 
-          />
+      <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
+        <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>
+            <div className={`${activeTab === "news" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("news")}>
+                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[28px] whitespace-nowrap font-normal`}>
+                  Latest News
+                </p>
+            </div>
+            <div className={`${activeTab === "press" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("press")}>
+                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-normal`}>
+                    Press Releases
+                </p>
+            </div>
+            <div className={`${activeTab === "form" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("form")}>
+                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-normal`}>
+                    Form Downloads
+                </p>
+            </div>
+            <div className={`${activeTab === "media" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("media")}>
+                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-normal`}>
+                    Media Gallery
+                </p>
+            </div>
+        </div>
+        <>
+          {activeTab === "news" && <News />}
+          {activeTab === "press" && <Press />} 
+          {activeTab === "form" && <FormDowload />} 
+          {activeTab === "media" && <Media />} 
+        </>
       </section>
+      
       
       <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
