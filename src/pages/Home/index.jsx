@@ -1534,7 +1534,7 @@ const handleTouchEnd = () => {
         </div>
       </div> */}
 
-      <div
+      {/* <div
         className="bg-[#FFFFFF] flex flex-col items-center px-5 lg:px-[55px] py-[72px] lg:h-[996px] gap-[60px]"
         data-aos="fade-up"
       >
@@ -1671,7 +1671,7 @@ const handleTouchEnd = () => {
             Explore our resource centre
           </p>
         </button>
-      </div>
+      </div> */}
 
       <div
         className="bg-[#F9FAFB] flex flex-col pt-[56px] pb-[49.5px] lg:py-[80px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[88px]"

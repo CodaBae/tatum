@@ -232,7 +232,12 @@ const Contact = () => {
                 <p className='font-grava text-[28px] font-medium lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
                 <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
             </div>
-            <img src={isMobile ? MapSmall : MapBig} alt='map' className='' />
+            {/* <img src={isMobile ? MapSmall : MapBig} alt='map' className='' /> */}
+            <iframe
+                title="Google Map"
+                src={`https://www.google.com/maps?q=9.033,7.500&output=embed`}
+                className="w-full h-[304px] lm:h-[719px] rounded-lg"
+            ></iframe>
 
             <div className='w-full flex flex-col lm:flex-row gap-5'>
                 <div className='bg-[#FFFAEB] flex flex-col w-full lm:w-6/12 rounded-tl-[24px] rounded-br-[24px] h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
