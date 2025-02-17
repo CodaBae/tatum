@@ -420,7 +420,8 @@ const Private = () => {
               }}
             >
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-                Apply for the Tatum Black Card
+                {/* Apply for the Tatum Black Card */}
+                To be Available Soon
               </p>
               <BsArrowRight
                 size={100}
@@ -510,7 +511,8 @@ const Private = () => {
             }}
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Apply for the Tatum Black Card
+              {/* Apply for the Tatum Black Card */}
+              To be Available Soon
             </p>
             <BsArrowRight
               size={100}

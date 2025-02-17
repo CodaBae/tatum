@@ -67,20 +67,50 @@ const About = () => {
         name: "Samuel Tomi Ologunorisa, SAN, FCIArb (UK)",
         pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438322/sam_b_p98pwm.jpg",
         role: "Chairman, Board of Directors",
-        bio: "Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association."
+        bio: 
+          `<div class="flex flex-col gap-5">
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring "Selected Judgment & Ruling of Hon. Justice L.H. Gummi" and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>His career is marked by exceptional legal leadership, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally.</p>
+          </div>`
     },
     {
       name: "Niyi Adeseun",
       role: "Managing Director",
       pic: "https://res.cloudinary.com/code-idea/image/upload/v1739438876/niyi_full_doynv5.jpg",
-      bio: "Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank. Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB). He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.",
+      bio: 
+        `<div class="flex flex-col gap-5">
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Niyi Adeseun is a seasoned banker with over 33 years of experience in core banking operations, risk management, business development, and financial services. His career began in 1990 at Nigeria International Bank (now Citibank), and he has held senior roles in several notable Nigerian banks, including Oceanic Bank, Crystal Bank, Standard Trust Bank, Skye Bank, and Heritage Bank.</p>
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Notably, he was a key figure in the establishment of Heritage Bank in 2012, serving as Executive Director until his retirement in 2017. He is the Managing Director and CEO of Greenbond Finance Company Limited, which he co-founded in 2022. Niyi holds multiple advanced degrees, including an MBA from the University of Lagos, a Chartered Banker MBA from the University of Bangor, and is a Fellow of the Chartered Institute of Bankers (FCIB).</p>
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.</p>
+        </div>`
     },
     {
-        name: "George Okoh-Oboh",
-        pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
-        role: "Executive Director",
-        bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+      name: "Samuel Otseilu Zibiri, SAN",
+      role: "Non-Executive Director",
+      pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531124/Samuel_full_n376id.jpg",
+      bio: 
+        `<div class="flex flex-col gap-5">
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Ofseilu Zibiri, SAN, is a distinguished Nigerian lawyer with an extensive educational background and a distinguished career. He holds an LLB (Hons) from Ahmadu Bello University and a Diploma in International Commercial Arbitration from Jesus College, Oxford. </p>
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'> 
+            His professional journey began in 1987 as a Pupil Counsel and has since spanned various leadership roles,
+            including Managing Partner at Cosmic Chambers and Principal Partner at El-Shaddai Chambers. Zibiri has played significant roles within the Nigerian
+            Bar Association (NBA), including serving as Public Relations Officer, Vice Chairman, and currently as Chairman of the NBA Abuja Branch Disciplinary Committee. He has vast experience in litigation, corporate law, debt management,
+            and election petition tribunals, registered practitioner with the Securities and Exchange Commission (SEC), Zibiri specializes in debt recovery and
+            capital market matters.
+          </p>
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>
+            Fluent in multiple languages, including English, Afemal, Hausa, and
+            Yoruba, Zibir's career reflects his commitment to the ethical practice of law and his influential role in shaping the legal landscape in Nigeria.
+          </p>
+        </div>`
     },
+    // {
+    //     name: "George Okoh-Oboh",
+    //     pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
+    //     role: "Executive Director",
+    //     bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+    // },
   ];
 
   useEffect(() => {
@@ -470,7 +500,7 @@ const About = () => {
             }
           >
             <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
-              See all Team Members
+              See all Board Members
             </p>
             <img
               src={Arrow}
@@ -575,7 +605,8 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"
+                // src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739531118/Samuel_head_hfkams.jpg"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -596,10 +627,10 @@ const About = () => {
             </div>
             <div className="flex flex-col gap-[4px]">
             <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
-                George Oko-Oboh
+                Samuel Otseilu Zibiri, SAN
               </p>
               <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                Executive Director
+                Non Executive Director
               </p>
             </div>
           </div>

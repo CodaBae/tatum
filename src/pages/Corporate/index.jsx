@@ -9,6 +9,7 @@ import Treasury from "../../assets/png/treasury.png";
 import Lending from "../../assets/png/lending.png";
 import Partner from "../../assets/png/partner.png";
 import Trade from "../../assets/png/trade.png";
+import Layer from "../../assets/png/layer.png";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
@@ -109,7 +110,7 @@ const Corporate = () => {
                     },window.scrollTo(0, 0))
                   }>
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Open a Corporate Account
+                    Open a corporate account
                   </p>
                   <BsArrowRight
                     size={100}
@@ -669,6 +670,51 @@ const Corporate = () => {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
+          <div 
+              style={{
+                  backgroundImage: `url(${Layer})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover"
+              }}
+              className="w-full h-[600px] lm:h-[440px] rounded-xl"
+          >
+              <div 
+                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
+                  style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
+              >
+                  <div className='flex flex-col lm:w-[615px] lm:h-[312px] gap-5 lm:gap-[100px]'>
+                      <div className="flex flex-col  gap-[20px]">
+                          <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                            Let’s Build the Future of Your Business Together
+                          </p>
+                          <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                            Your business deserves a bank that believes in your dreams as much as you do. 
+                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-medium">Visit our nearest branch</span> to get started
+                          </p>
+                      </div>
+                      <button
+                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[228px] py-4 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                          type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
+                      >
+                      <p 
+                          className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                      >
+                          {/* Get started today. */}
+                          Find Out More
+                      </p>
+                      <BsArrowRight size={100}   
+                          className='w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
+                      />
+                      </button>
+                  </div>
+                  <div className="lm:w-[468px] lm:h-[312px]">
+                      <img src="https://res.cloudinary.com/code-idea/image/upload/v1739803749/shake_rib97r.png" alt="Meeting" className="" />
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
   );
