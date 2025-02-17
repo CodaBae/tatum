@@ -254,7 +254,7 @@ const SME = () => {
                   </p>
                   <BsArrowRight
                     size={100}
-                    className="text-5xl w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]"
+                    className="text-5xl w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]"
                   />
                 </button>
               </div>
@@ -401,7 +401,8 @@ const SME = () => {
                   navigate("/business/account",window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  Open an account
+                  {/* Open an account */}
+                  Find Out More
                 </p>
                 <BsArrowRight
                   size={100}
@@ -1063,13 +1064,14 @@ const SME = () => {
                   </div>
                   <button  onClick={() =>
                 navigate("/business/account",window.scrollTo(0, 0))
-              }className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
+              } className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
                     <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Get started now
+                      {/* Get started now */}
+                      Find Out More
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -1243,7 +1245,8 @@ const SME = () => {
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
             ">
-                  Open an account
+                  {/* Open an account */}
+                  Find Out More
                 </p>
                 <BsArrowRight
                   size={100}

@@ -139,10 +139,10 @@ const Sitemap = () => {
             <div className="flex flex-col gap-[32px] w-[217px]">
               <p className='font-grava font-medium text-[24px] leading-[30px] lg:text-[34px] lg:leading-[40px] text-[#002244]'>Resources</p>
               <div className='flex flex-col gap-[30px]'>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Blogs</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Press Release</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Media Gallery</p>
-                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer'>Branch & ATM Locator</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer' onClick={() => {navigate("/resources",);  window.scrollTo(0, 0) }}>Blogs</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer' onClick={() => {navigate("/resources",);  window.scrollTo(0, 0) }}>Press Release</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer' onClick={() => {navigate("/resources",);  window.scrollTo(0, 0) }}>Media Gallery</p>
+                <p className='text-base lg:text-[20px] text-[#002244] underline font-grava cursor-pointer' onClick={() => {navigate("/resources",);  window.scrollTo(0, 0) }}>Branch & ATM Locator</p>
               </div>
             </div>
 

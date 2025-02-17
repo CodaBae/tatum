@@ -31,6 +31,7 @@ const Footer = () => {
         <div className="lg:w-[664px] lg:h-[232px] flex flex-col items-center gap-[22px]">
         <p className="font-grava text-[27px] lg:text-[45px] font-semibold text-center leading-[35px] lg:leading-[60px] text-[#002244]">
             Stay smiling. <br /> Open an account today! 
+            {/* Stay smiling. <br /> Find out more   */}
           </p>
           <button
             className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg"

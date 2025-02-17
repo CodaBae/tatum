@@ -72,10 +72,11 @@ const Digital = () => {
                                 className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 onClick={() => {navigate("/personal/account");window.scrollTo(0, 0)}}
                             >
-                                Get started
+                                {/* Get started */}
+                                Find Out More
                             </p>
                             <BsArrowRight size={100}  
-                                className='w-5 h-5  text-[#FFCC33] group-hover:text-[#002244]' 
+                                className='w-5 h-5  mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
                             />
                             </button>
                         
@@ -152,7 +153,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to internet banking</p>
-                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#334E69] font-semibold tracking-[0.01em] leading-[25px]  text-[18px] mt-[16px] '>
@@ -198,7 +199,7 @@ const Digital = () => {
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to internet banking</p>
-                        <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 <img src={Talk} alt='Talk' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
@@ -217,7 +218,7 @@ const Digital = () => {
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register now</p>
-                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
@@ -277,7 +278,7 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-6'>
-                <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Download the App</p>
+                <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>To be Available Soon</p> {/* Download the App */}
                 <div className='flex items-center gap-2'>
                     <img src={Google} alt='Google' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
                     <img src={Apple} alt='Apple' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
@@ -289,7 +290,7 @@ const Digital = () => {
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
-                        src={'https://res.cloudinary.com/code-idea/image/upload/v1739210500/Group_48095584_1_l56aez.png'} 
+                        src='https://res.cloudinary.com/code-idea/image/upload/v1739794707/ussd_huhuf5.png' 
                         alt='Ussd' 
                         className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
                     />
@@ -310,7 +311,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to internet banking</p>
-                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
                         <p className='font-grava text-[#334E69] font-medium tracking-[25%] uppercase text-[13px] mt-[16px] '>
@@ -357,7 +358,7 @@ const Digital = () => {
         
                     </div>
                 </div>
-                <img src={'https://res.cloudinary.com/code-idea/image/upload/v1739210500/Group_48095584_1_l56aez.png'} alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+                <img src='https://res.cloudinary.com/code-idea/image/upload/v1739794707/ussd_huhuf5.png' alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-8'>
@@ -441,7 +442,7 @@ const Digital = () => {
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Learn more</p>
-                    <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
+                    <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
         </section>
@@ -471,7 +472,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Login to internet banking</p>
-                            <BsArrowRight size={100}   className='mt-[-2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
                         <div className='flex flex-col gap-[32px] mt-6'>
@@ -543,10 +544,11 @@ const Digital = () => {
                         <p 
                             className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                         >
-                            Get started today.
+                            {/* Get started today. */}
+                            Find Out More
                         </p>
                         <BsArrowRight size={100}   
-                            className='w-5 h-5 mt-[-2px] text-[#FFCC33] group-hover:text-[#002244]' 
+                            className='w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
                         />
                         </button>
                     </div>
