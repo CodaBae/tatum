@@ -1748,7 +1748,7 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check the nearest branch
+                Check the nearest center near you
               </p>
             </button>
           </SwiperSlide>
@@ -1919,7 +1919,7 @@ const handleTouchEnd = () => {
                 aria-hidden="true"
               ></span>
               <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
-                Check the nearest branch
+                Check the nearest center near you
               </p>
             </button>
           </div>

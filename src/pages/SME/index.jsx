@@ -406,7 +406,7 @@ const SME = () => {
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="text-5xl w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                  className="text-5xl w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
                 />
               </button>
             </div>
@@ -771,7 +771,7 @@ const SME = () => {
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="text-5xl  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                  className="text-5xl mt-[2px]  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
                 />
               </button>
             </div>
@@ -854,7 +854,7 @@ const SME = () => {
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -926,7 +926,7 @@ const SME = () => {
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -999,7 +999,7 @@ const SME = () => {
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl  text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -1251,7 +1251,7 @@ const SME = () => {
                 <BsArrowRight
                   size={100}
                   className="
-              w-5 h-5 
+              w-5 h-5 mt-[2px]
               transition-colors duration-500 ease-in-out 
               text-[#002244] group-hover:text-[#ffcc33]
             "
@@ -1398,7 +1398,7 @@ const SME = () => {
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="w-5 h-5 transition-colors duration-500 ease-in-out 
+                  className="w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out 
                                       text-[#FFCC33] group-hover:text-[#002244]"
                 />
               </button>

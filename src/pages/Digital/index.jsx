@@ -217,7 +217,7 @@ const Digital = () => {
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[4px] w-[159px] lm:w-[189px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register now</p>
+                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava group-hover:text-[#002244] text-[#FFCC33]'>Register Now</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 group-hover:text-[#002244] text-[#FFCC33]' />
                 </button>
             </div>
@@ -276,7 +276,7 @@ const Digital = () => {
                     />
                 </div>
             </div>
-            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
+            <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-6'>
                 <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>To be Available Soon</p> {/* Download the App */}
                 <div className='flex items-center gap-2'>
@@ -360,7 +360,7 @@ const Digital = () => {
                 </div>
                 <img src='https://res.cloudinary.com/code-idea/image/upload/v1739794707/ussd_huhuf5.png' alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
-            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
+            <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-8'>
     <p className='font-grava text-[#334E69] text-sm font-medium leading-4 tracking-widest uppercase'>
         Registration Guide
@@ -370,9 +370,6 @@ const Digital = () => {
         <p className='text-[#002244] font-medium font-grava text-base md:text-lg tracking-wide leading-6'>
             1. Dial *365# from your registered phone number.
         </p>
-    </div>
-
-    <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
         <p className='text-[#002244] font-medium font-grava text-base md:text-lg tracking-wide leading-6'>
             2. Follow the prompts to activate.
         </p>
@@ -380,6 +377,9 @@ const Digital = () => {
             3. Start transacting instantly!
         </p>
     </div>
+
+    {/* <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
+    </div> */}
 </div>
 
         </section>
@@ -429,14 +429,16 @@ const Digital = () => {
                     />
                 </div>
             </div>
-            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
+            <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-6'>
                 <p className='font-grava font-medium text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Card Services</p>
-                <div className='flex flex-col lm:flex-row items-start lm:items-center gap-6 lm:gap-[32px]'>
-                    <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
-                    <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
+                <div className='flex flex-col lm:flex-row gap-6'>
+                    {/* <div className='flex flex-col lm:flex-row items-start lm:items-center gap-6 lm:gap-[32px]'> */}
+                        <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
+                        <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
+                    {/* </div> */}
+                    <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
                 </div>
-                <p className='text-[#002244] font-medium font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
                 <button
                     className='transition-all duration-500 ease-in-out hover:bg-[#FFCC33] mt-[8px] w-[159px] lm:w-[174px]  h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#002244] flex items-center justify-center'
                     type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
