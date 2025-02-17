@@ -339,7 +339,7 @@ const SME = () => {
               Business Savings & Current Accounts
             </h1>
             <p className="font-grava font-[350] text-center w-[350px] sm:w-[429px] text-[16px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[24px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
-              Whether you’re a startup, SME, or enterprise, our flexible
+              Whether you’re a startup, SME, large enterprises or corporate, our flexible
               accounts offer:
             </p>
           </div>
