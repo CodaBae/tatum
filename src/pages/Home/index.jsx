@@ -475,9 +475,9 @@ const handleTouchEnd = () => {
                       } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/personal", {
                           state: {
-                            section: "digital",
+                            section: "personal",
                           },
                         })
                       }
@@ -498,9 +498,9 @@ const handleTouchEnd = () => {
                       } transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/about", {
                           state: {
-                            section: "digital",
+                            section: "about",
                           },
                         })
                       }
@@ -628,7 +628,8 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Explore our offerings
+                        {/* Explore our offerings */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
@@ -762,7 +763,8 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Get started with Business Banking
+                        {/* Get started with Business Banking */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
@@ -875,15 +877,16 @@ const handleTouchEnd = () => {
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/private", {
                           state: {
-                            section: "digital",
+                            section: "private",
                           },
                         })
                       }
                     >
                       <p className="font-medium transition-colors duration-500 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Get exclusive access
+                        {/* Get exclusive access */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}

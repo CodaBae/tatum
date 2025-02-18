@@ -111,6 +111,15 @@ const Footer = () => {
                 >
                   Contact
                 </p>
+                <p 
+                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  onClick={() => navigate("/investors", {
+                    state: { section: "investors" },
+                  },              window.scrollTo(0, 0)
+                  ) }
+                >
+                  Investor Relations
+                </p>
               </div>
             </div>
             <div className="flex flex-col gap-4 w-[126px]">

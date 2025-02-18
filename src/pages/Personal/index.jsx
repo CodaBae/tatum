@@ -153,13 +153,15 @@ const Personal = () => {
               {/* Button */}
               <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
-                  type="button"
+                  className={`animate__animated animate__fadeInUp animate__delay-10s block transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  // type="button"
+                  // href="#savings"
                   onClick={() =>
-                    navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-                  }>
+                    navigate("/personal", { state: { section: "savings" } },window.scrollTo(0, 0))
+                  }
+                >
                   <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Open a Personal Account
+                    Find Out More
                   </p>
                   <BsArrowRight
                     size={100}

@@ -26,6 +26,7 @@ const Corporate = () => {
   const isMobile = window.innerWidth < 768;
 
   const corporateRef = useRef(null);
+  const corpRef = useRef(null);
   const treasuryRef = useRef(null);
   const investmentRef = useRef(null);
   const tradeRef = useRef(null);
@@ -57,6 +58,9 @@ const Corporate = () => {
  
     if (state?.section === "treasury" && treasuryRef.current) {
       treasuryRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (state?.section === "corp" && corpRef.current) {
+      corpRef.current.scrollIntoView({ behavior: "smooth" });
     }
     if (state?.section === "trade" && tradeRef.current) {
       tradeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -105,12 +109,12 @@ const Corporate = () => {
                   className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
-                    navigate("/corporate/account", {
-                      state: { section: "account" },
+                    navigate("/corporate", {
+                      state: { section: "corp" },
                     },window.scrollTo(0, 0))
                   }>
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Open a corporate account
+                    Find Out More
                   </p>
                   <BsArrowRight
                     size={100}
@@ -188,7 +192,7 @@ const Corporate = () => {
         </div>
       </section>
 
-      <div className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lm:pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
+      <div ref={corpRef} className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lm:pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Corp}
@@ -221,7 +225,7 @@ const Corporate = () => {
                 },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-                Open a Corporate Account
+                Find Out More
               </p>
               <BsArrowRight
                 size={100}
@@ -238,7 +242,7 @@ const Corporate = () => {
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Open a Corporate Account
+              Find Out More
             </p>
             <BsArrowRight
               size={100}
@@ -500,8 +504,8 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Apply for a loan now
+            <p className="transition-colors duration-500 ease-in-out font-medium lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              To be Available Soon
             </p>
             <BsArrowRight
               size={100}

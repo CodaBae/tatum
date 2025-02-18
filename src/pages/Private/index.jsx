@@ -95,16 +95,16 @@ const Private = () => {
                   type="button"
                   onClick={() => {
                     navigate(
-                      "/private/account",
+                      "/private",
                       {
-                        state: { section: "account" },
+                        state: { section: "wealth" },
                       },
                       window.scrollTo(0, 0)
                     );
                   }}
                 >
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Open a Private Account
+                    Find Out More
                   </p>
                   <BsArrowRight
                     size={100}
@@ -357,7 +357,7 @@ const Private = () => {
             type="button"
           >
             <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Sign up for updates
+              To be Available Soon
             </p>
             <BsArrowRight
               size={100}

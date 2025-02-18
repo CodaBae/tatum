@@ -91,17 +91,20 @@ const About = () => {
       pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531124/Samuel_full_n376id.jpg",
       bio: 
         `<div class="flex flex-col gap-5">
-          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Ofseilu Zibiri, SAN, is a distinguished Nigerian lawyer with an extensive educational background and a distinguished career. He holds an LLB (Hons) from Ahmadu Bello University and a Diploma in International Commercial Arbitration from Jesus College, Oxford. </p>
+          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Ofseilu Zibiri, SAN, is a distinguished Nigerian lawyer with an extensive educational background and a distinguished career. He holds an LLB (Hons) from Ahmadu Bello University and a Diploma in International Commercial Arbitration from Jesus College, Oxford.</p>
           <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'> 
-            His professional journey began in 1987 as a Pupil Counsel and has since spanned various leadership roles,
-            including Managing Partner at Cosmic Chambers and Principal Partner at El-Shaddai Chambers. Zibiri has played significant roles within the Nigerian
-            Bar Association (NBA), including serving as Public Relations Officer, Vice Chairman, and currently as Chairman of the NBA Abuja Branch Disciplinary Committee. He has vast experience in litigation, corporate law, debt management,
-            and election petition tribunals, registered practitioner with the Securities and Exchange Commission (SEC), Zibiri specializes in debt recovery and
-            capital market matters.
+            His professional journey began in 1987 as a Pupil Counsel and has since spanned various leadership roles, 
+            including Managing Partner at Cosmic Chambers and Principal Partner at El-Shaddai Chambers. 
+            Zibiri has played significant roles within the Nigerian Bar Association (NBA), including serving as 
+            Public Relations Officer, Vice Chairman, and currently as Chairman of the NBA Abuja Branch Disciplinary 
+            Committee.
           </p>
           <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>
-            Fluent in multiple languages, including English, Afemal, Hausa, and
-            Yoruba, Zibir's career reflects his commitment to the ethical practice of law and his influential role in shaping the legal landscape in Nigeria.
+            He has vast experience in litigation, corporate law, debt management, and election petition tribunals. 
+            A registered practitioner with the Securities and Exchange Commission (SEC), Zibiri specializes in 
+            debt recovery and capital market matters. Fluent in multiple languages, including English, Afemai, Hausa, 
+            and Yoruba, Zibiri's career reflects his commitment to the ethical practice of law and his influential 
+            role in shaping the legal landscape in Nigeria.
           </p>
         </div>`
     },

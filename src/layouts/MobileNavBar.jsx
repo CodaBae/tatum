@@ -583,7 +583,7 @@ const MobileNavBar = ({ handleClose }) => {
           <p onClick={() => {navigate("/digital"); window.scrollTo(0,0); handleClose()}}  className="font-medium font-grava tracking-wide text-[#334E69] text-base capitalize">Digital Banking</p>
 
           <p onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className="font-medium font-grava tracking-wide text-[#334E69] text-base capitalize">Help & Support</p>
-          <p onClick={() => {navigate("/contact"); window.scrollTo(0,0); handleClose()}}  className="font-medium font-grava tracking-wide text-[#334E69] text-base capitalize">Contact us</p>
+          {/* <p onClick={() => {navigate("/contact"); window.scrollTo(0,0); handleClose()}}  className="font-medium font-grava tracking-wide text-[#334E69] text-base capitalize">Contact us</p> */}
        </div>
     </div>
   )

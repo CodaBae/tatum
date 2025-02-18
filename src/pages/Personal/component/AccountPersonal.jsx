@@ -88,12 +88,12 @@ const AccountPersonal = () => {
                             Experience banking that keeps you smiling with our range 
                             of savings and current accounts, cards, and loans.
                         </p>
-                        <div className='flex items-center mt-[12px] gap-3'>
-                        <a
-                            className={`animate__animated animate__fadeInUp  block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                            type='button'
-                            href='#section'
-                        >
+                        {/* <div className='flex items-center mt-[12px] gap-3'>
+                            <a
+                                className={`animate__animated animate__fadeInUp  block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                type='button'
+                                href='#section'
+                            >
                                 <p 
                                 className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 >
@@ -103,7 +103,7 @@ const AccountPersonal = () => {
                                     className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-51.5%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">

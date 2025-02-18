@@ -56,9 +56,7 @@ const Resources = () => {
   return (
     <div className='w-full overflow-hidden' ref={resourcesRef}>
 
-      <section 
-
- className='h-full w-full outline-none '>
+      <section className='h-full w-full outline-none '>
         <div 
             style={{
                 backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,

@@ -440,7 +440,7 @@ const Terms = () => {
 
           <div ref={contactRef} className="flex flex-col gap-4 mt-[48px]">
             <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-              11. CONTACT US
+              12. CONTACT US
             </p>
             <p className="font-[300] text-[#002244] font-grava text-base lg:text-[16px]">
               For any questions or concerns about these Terms, please contact us
