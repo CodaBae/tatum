@@ -1162,11 +1162,12 @@ const handleTouchEnd = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]"
+        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[950px] flex flex-col items-center justify-center lg:gap-[76px]"
       >
         <div className="w-[336px] lg:w-[697px] flex flex-col items-center gap-3">
           <p className="text-[#002244] font-medium text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
-            Rewards and Benefits, Every Time You Spend.
+            {/* Rewards and Benefits, Every Time You Spend. */}
+            Tatum Cards
           </p>
           <p className="text-sm lg:text-xl text-[#334E69] font-grava leading-[20px] lg:leading-[27px] text-center">
             Tatum cards keep up the pace, so your money is with you

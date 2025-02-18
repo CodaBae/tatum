@@ -659,82 +659,82 @@ const About = () => {
 
       </section>
 
-      <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
-      <div className="relative w-full h-min-auto rounded-xl">
-  {/* Background layer with reduced opacity */}
-  <div
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundImage: `url(${Layer})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      opacity: 1.3, // Reduced opacity from 0.2 to 0.1
-      zIndex: 0,
-      borderRadius:'5%'
-      
-    }}
-  />
-  
-  {/* Content container with enhanced visibility */}
-  <div
-    className="relative w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
-    style={{ 
-      backgroundColor: 'rgb(244 245 246 / 95%)', // Brighter background with slight transparency
-      zIndex: 1 // Ensures content stays above background
-    }}
-  >
-    {/* Left column */}
-    <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px]">
-      <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
-        Words from <span className="font-bold">our clients.</span>
-      </p>
-      <div className="flex items-center gap-4">
-        <div className="h-[1px] w-[230px] bg-[#002244]"></div>
-        <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
-          {formatNumber(activeIndex)}
-          <span className="text-[#8A99A9] font-[350]">
-            / {formatNumber(testimonials.length - 1)}
-          </span>
-        </p>
-      </div>
-    </div>
-
-    {/* Testimonials */}
-    <div className="flex flex-col gap-5 w-full lm:gap-[40px] lm:w-[766px] relative h-[300px]">
-      {testimonials.map((testimonial, index) => (
-        <div
-          key={index}
-          className={`absolute transition-all duration-500 ease-in-out ${
-            index === activeIndex
-              ? 'opacity-100 translate-x-0'
-              : 'opacity-0 translate-x-10'
-          }`}
-        >
-          <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[34px]  " style={{fontWeight:350}}>
-            {testimonial.text}
-          </p>
-
-          <br></br>
-          <div className="flex gap-4 mt-5">
-            <img src={Girl} alt="" className="w-[64px] h-[64px] rounded-full" />
-            <div className="flex flex-col gap-2">
-              <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
-                {testimonial.name}
+      <section className="px-5 lm:px-[56px] mb-[56px] hidden bg-[#fff]">
+        <div className="relative w-full h-min-auto rounded-xl">
+        
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `url(${Layer})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              opacity: 1.3, // Reduced opacity from 0.2 to 0.1
+              zIndex: 0,
+              borderRadius:'5%'
+              
+            }}
+          />
+          
+    
+          <div
+            className="relative w-full h-full rounded-xl px-5 lm:px-[56px] py-[48px] lm:py-[64px] flex flex-col lm:flex-row gap-10 lm:gap-0 justify-between items-center"
+            style={{ 
+              backgroundColor: 'rgb(244 245 246 / 95%)', // Brighter background with slight transparency
+              zIndex: 1 // Ensures content stays above background
+            }}
+          >
+            
+            <div className="flex flex-col gap-5 lm:gap-[80px] lm:w-[346px]">
+              <p className="font-grava text-[#002244] leading-[35px] lm:leading-[72px] font-medium text-[28px] lm:text-[60px]">
+                Words from <span className="font-bold">our clients.</span>
               </p>
-              <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
-                {testimonial.role}
-              </p>
+              <div className="flex items-center gap-4">
+                <div className="h-[1px] w-[230px] bg-[#002244]"></div>
+                <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
+                  {formatNumber(activeIndex)}
+                  <span className="text-[#8A99A9] font-[350]">
+                    / {formatNumber(testimonials.length - 1)}
+                  </span>
+                </p>
+              </div>
+            </div>
+
+           
+            <div className="flex flex-col gap-5 w-full lm:gap-[40px] lm:w-[766px] relative h-[300px]">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className={`absolute transition-all duration-500 ease-in-out ${
+                    index === activeIndex
+                      ? 'opacity-100 translate-x-0'
+                      : 'opacity-0 translate-x-10'
+                  }`}
+                >
+                  <p className="font-grava text-[#002244] leading-[26px] lm:leading-[49px] text-[20px] lm:text-[34px]  " style={{fontWeight:350}}>
+                    {testimonial.text}
+                  </p>
+
+                  <br></br>
+                  <div className="flex gap-4 mt-5">
+                    <img src={Girl} alt="" className="w-[64px] h-[64px] rounded-full" />
+                    <div className="flex flex-col gap-2">
+                      <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
+                        {testimonial.name}
+                      </p>
+                      <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
       </section>
 
       {/* <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
