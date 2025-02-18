@@ -86,8 +86,8 @@ const AccountPrivacy = () => {
                             wealth management, and dedicated relationship managers to help 
                             achieve your financial goals.
                         </p>
-                        <div className='flex items-center mt-[12px] gap-3'>
-                        <a
+                        {/* <div className='flex items-center mt-[12px] gap-3'>
+                            <a
                                 className={`animate__animated animate__fadeInUp block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                                 href='#section'
@@ -101,7 +101,7 @@ const AccountPrivacy = () => {
                                     className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-23.2%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">

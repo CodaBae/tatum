@@ -65,10 +65,8 @@ const AccountCorporate = () => {
     
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-        <section 
-
-className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
-<div 
+        <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
+        <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"})`,
                     backgroundRepeat: "no-repeat",
@@ -89,8 +87,8 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                         >
                             Experience comprehensive financial solutions designed for large corporations and multinationals.
                         </p>
-                        <div className='flex items-center mt-[12px] gap-3'>
-                        <button
+                        {/* <div className='flex items-center mt-[12px] gap-3'>
+                            <button
                                 className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                                 type='button'
                                 onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
@@ -104,7 +102,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                                     className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-28%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">

@@ -94,10 +94,11 @@ const Institutional = () => {
                   className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[rgb(0,34,68)] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                   type="button"
                   onClick={() =>
-                    navigate("/institutional/account", {
-                      state: { section: "account" },
+                    navigate("/institutional", {
+                      state: { section: "public" },
                     },window.scrollTo(0, 0))
-                  }>
+                  }
+                >
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     {/* Get Started */}
                     Find Out More

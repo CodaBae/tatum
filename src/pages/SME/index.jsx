@@ -247,10 +247,10 @@ const SME = () => {
                   className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center px-5 py-2`}
                   type="button"
                   onClick={() =>
-                    navigate("/business/account",window.scrollTo(0, 0))
+                    navigate("/business", {state: {section: "account"}}, window.scrollTo(0, 0))
                   }>
                   <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Open a Business Account
+                    Find Out More
                   </p>
                   <BsArrowRight
                     size={100}
@@ -398,7 +398,7 @@ const SME = () => {
                 } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center px-5 h-[59px]`}
                 type="button"
                 onClick={() =>
-                  navigate("/business/account",window.scrollTo(0, 0))
+                  navigate("/business/account", window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   {/* Open an account */}
@@ -933,7 +933,7 @@ const SME = () => {
               </div>
               <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
                 <img
-                  src={scrollImg2}
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1739870682/man_olznbf.jpg"
                   alt="Merchant services"
                   className="w-full h-full object-cover rounded-3xl"
                 />
@@ -1388,7 +1388,7 @@ const SME = () => {
               h-[51px] sm:h-[55px] lg:h-[59px] 
               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
               onClick={() =>
-                navigate("/business/account",window.scrollTo(0, 0))
+                navigate("/contact",window.scrollTo(0, 0))
               }>
                 <p
                   className="transition-colors duration-500 ease-in-out font-medium 

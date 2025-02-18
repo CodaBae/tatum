@@ -944,6 +944,21 @@ const Header = () => {
           )}
         </div>
 
+         {/* Digital */}
+         <p
+          className="font-grava font-medium text-base text-[#002244] cursor-pointer"
+          onClick={() =>
+            navigate("/digital", {
+              state: {
+                section: "digital",
+              },
+            })
+          }
+        >
+          Digital
+        </p>
+      
+
         {/* Help */}
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
@@ -955,8 +970,9 @@ const Header = () => {
         >
           Help & Support
         </p>
+      </div>
 
-        {/* Contact */}
+        {/* Contact
         <p
           className="font-grava font-medium text-base text-[#002244] cursor-pointer"
           onClick={() =>
@@ -969,7 +985,7 @@ const Header = () => {
         >
           Contact Us
         </p>
-      </div>
+      </div> */}
 
       <div className="flex items-center gap-[15px]">
         <FiSearch

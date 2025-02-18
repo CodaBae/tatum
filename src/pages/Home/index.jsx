@@ -47,13 +47,9 @@ const Home = () => {
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
 
-  // const [currdeg, setCurrdeg] = useState(0);
   const [isManualTransition, setIsManualTransition] = useState(false);
-  // const [isPageVisible, setIsPageVisible] = useState(true);
 
   const formatter = new Intl.NumberFormat("en-US");
-
-
   
 
   const navigate = useNavigate();
@@ -171,8 +167,6 @@ const Home = () => {
     }
   };
 }, [currdeg, isDragging, startX, startRotation, isPageVisible]);
-
-
 
 
   // const carouselRef = useRef(null);
@@ -475,9 +469,9 @@ const handleTouchEnd = () => {
                       } transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/personal", {
                           state: {
-                            section: "digital",
+                            section: "personal",
                           },
                         })
                       }
@@ -498,9 +492,9 @@ const handleTouchEnd = () => {
                       } transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/about", {
                           state: {
-                            section: "digital",
+                            section: "about",
                           },
                         })
                       }
@@ -628,7 +622,8 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Explore our offerings
+                        {/* Explore our offerings */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
@@ -762,7 +757,8 @@ const handleTouchEnd = () => {
                       }
                     >
                       <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Get started with Business Banking
+                        {/* Get started with Business Banking */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
@@ -875,15 +871,16 @@ const handleTouchEnd = () => {
                       } transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                       type="button"
                       onClick={() =>
-                        navigate("/digital", {
+                        navigate("/private", {
                           state: {
-                            section: "digital",
+                            section: "private",
                           },
                         })
                       }
                     >
                       <p className="font-medium transition-colors duration-500 ease-in-out text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                        Get exclusive access
+                        {/* Get exclusive access */}
+                        Find Out More
                       </p>
                       <BsArrowRight
                         size={100}
@@ -1159,11 +1156,12 @@ const handleTouchEnd = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[1050px] flex flex-col items-center justify-center  lg:gap-[76px]"
+        className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[950px] flex flex-col items-center justify-center lg:gap-[76px]"
       >
         <div className="w-[336px] lg:w-[697px] flex flex-col items-center gap-3">
           <p className="text-[#002244] font-medium text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
-            Rewards and Benefits, Every Time You Spend.
+            {/* Rewards and Benefits, Every Time You Spend. */}
+            Tatum Cards
           </p>
           <p className="text-sm lg:text-xl text-[#334E69] font-grava leading-[20px] lg:leading-[27px] text-center">
             Tatum cards keep up the pace, so your money is with you
