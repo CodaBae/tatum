@@ -47,13 +47,9 @@ const Home = () => {
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
 
-  // const [currdeg, setCurrdeg] = useState(0);
   const [isManualTransition, setIsManualTransition] = useState(false);
-  // const [isPageVisible, setIsPageVisible] = useState(true);
 
   const formatter = new Intl.NumberFormat("en-US");
-
-
   
 
   const navigate = useNavigate();
@@ -171,8 +167,6 @@ const Home = () => {
     }
   };
 }, [currdeg, isDragging, startX, startRotation, isPageVisible]);
-
-
 
 
   // const carouselRef = useRef(null);
