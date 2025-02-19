@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/grava');
 
+* {
+     font-variant-ligatures: none;
+ }
+
 /* @font-face {
     font-family: 'Grava'; /* Replace with your font name 
     src: url('/src/assets/fonts/Grava_Black.otf') format('otf');
