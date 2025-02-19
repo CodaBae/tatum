@@ -29,6 +29,7 @@ import AccountInstitutional from "../pages/Institutional/component/AccountInstit
 import Digital from "../pages/Digital";
 import Investors from "../pages/Investors";
 import Contact from "../pages/Contact";
+import InternetBanking from "../pages/Internet";
 
 export default function Routers() {
   return (
@@ -50,6 +51,7 @@ export default function Routers() {
         <Route path="/institutional/account" element={<AccountInstitutional />} />
         <Route path="digital" element={<Digital />} />
         <Route path="/investors" element={<Investors />} />
+        <Route path="/internet-banking" element={<InternetBanking />} />
         <Route path="private" element={<Private />} />
         <Route path="/private/account" element={<AccountPrivacy />} />
         <Route path="private/wealth-management" element={<Wealth />} />

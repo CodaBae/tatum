@@ -993,13 +993,13 @@ const Header = () => {
           onClick={() => {
             navigate("/help");
             window.scrollTo(0, 0);
-            handleClose();
+           
           }}
         />
         <button
           className="bg-[#FFCC33] w-[195px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group flex items-center justify-center transition-all duration-500 ease-in-out hover:bg-[#090540]"
           type="button"
-          onClick={() => navigate("digital", { state: { section: "digital" } })}
+          onClick={() => {navigate("/internet-banking"); window.scrollTo(0, 0)}}
         >
           <SlLock className="w-5 h-5 text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]" />
           <p className="font-medium text-base font-grava text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]">
