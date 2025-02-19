@@ -600,7 +600,11 @@ const Institutional = () => {
               </button>
             </div>
             <div className="lm:w-[468px] lm:h-[312px]">
-              <img src={Kids} alt="Kids" className="" />
+              <img 
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739959311/institution_zx64tn.jpg" 
+                alt="Kids" 
+                className="rounded-xl" 
+              />
             </div>
           </div>
         </div>

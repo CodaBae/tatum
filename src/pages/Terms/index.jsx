@@ -106,8 +106,8 @@ const Terms = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
-        <div className="hidden lg:flex flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]">
+      <div className="flex flex-col items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
+        <div className="hidden flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]">
           <p className="font-medium font-grava text-[#546B82] ">
             Table of content:
           </p>
@@ -256,28 +256,34 @@ const Terms = () => {
           </div>
         </div>
 
+        <div className="flex flex-col gap-5">
+          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
+          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-wide text-[#002244]">TERMS AND CONDITIONS</p>
+          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
+        </div>
+
         <div className="flex flex-col lg:flex-1 ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
             <div className="flex flex-col">
-              <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+              <p className="font-[350] leading-[25px] lm:leading-[34px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
                 Welcome to Tatum Bank Nigeria Limited website (“Tatum Bank” or
                 “The Bank”). By accessing or using this website (the "Site"),
                 you agree to comply with and be bound by the terms and
                 conditions (the "Terms") contained herein. Please read these
                 Terms and our Privacy Policy carefully. Our Privacy policy
                 explains how we collect, use, and protect your personal
-                information. The website is built to enable us communicate,
+                information. <span className="block mt-4"> The website is built to enable us communicate,
                 share information and offer our products and services as well as
-                interact with our customers and general users.
+                interact with our customers and general users. </span>
               </p>
             </div>
           </div>
 
           <div ref={userRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               1. User Conduct
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               By using this website, users accept that they will utilize the
               site solely for lawful purpose. Any attempt to gain unauthorized
               access to our systems, alter, damage, delete or modify the website
@@ -290,10 +296,10 @@ const Terms = () => {
           </div>
 
           <div ref={acceptanceRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               2. Acceptance of Terms and Updates
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               By accessing this Site, you confirm that you have read,
               understood, and agree to these Terms and any additional terms and
               conditions referenced herein. The Bank reserves the right to
@@ -305,10 +311,10 @@ const Terms = () => {
           </div>
 
           <div ref={serviceRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               3. Services Provided
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               The Site is intended to provide information about The Bank, its
               products and services. It may also include features such as online
               account management, application forms and other banking-related
@@ -322,10 +328,10 @@ const Terms = () => {
           </div>
 
           <div ref={eligibilityRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               4. Eligibility
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               This Site is intended for use by individuals who are 18 years or
               older and legally capable of entering binding agreements. By using
               this Site, you confirm that you are not a minor and you meet these
@@ -337,10 +343,10 @@ const Terms = () => {
           </div>
 
           <div ref={intellectRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               5. Intellectual Property
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               All content on this Site, including text, graphics, logos, images,
               and software, is the property of Tatum Bank or its licensors and
               is protected by copyright, trademark, and other intellectual
@@ -352,10 +358,10 @@ const Terms = () => {
           </div>
 
           <div ref={contentRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               6. User-Generated Content
             </p>
-            <ul className="list-disc font-[300] pl-7 lg:pl-14 text-[#002244] font-grava text-base lg:text-[16px] gap-2 flex flex-col">
+            <ul className="list-disc pl-7 lg:pl-14 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
               <li>
                 By submitting any content, including but not limited to
                 comments, feedback, or suggestions, to the website, you grant
@@ -371,10 +377,10 @@ const Terms = () => {
           </div>
 
           <div ref={partyRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               7. Third-Party Links
             </p>
-            <p className="text-[#002244] font-[300] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               The Site may contain links to third-party websites or services.
               Tatum Bank is not responsible for the content, policies, or
               practices of third-party sites and does not endorse them.
@@ -382,10 +388,10 @@ const Terms = () => {
           </div>
 
           <div ref={disclaimerRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               8. Disclaimer
             </p>
-            <ul className="list-disc font-[300] pl-7 lg:pl-14 text-[#002244] font-grava text-base lg:text-[16px] gap-2 flex flex-col">
+            <ul className="list-disc font-[300] pl-7 lg:pl-14 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
               <li>
                 The bank, it’s employees, agents, directors expressly disclaim
                 all warranties, express or implied, as to suitability and
@@ -403,10 +409,10 @@ const Terms = () => {
           </div>
 
           <div ref={limitationRef} className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               9. Limitation of Liability
             </p>
-            <p className="font-[300] text-[#002244] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               To the maximum extent permitted by law, Tatum Bank shall not be
               liable for any indirect, incidental, or consequential damages
               arising from your use of the Site.
@@ -416,10 +422,10 @@ const Terms = () => {
           <div
             ref={indemnificationRef}
             className="flex gap-2 flex-col mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               10. Indemnification
             </p>
-            <p className="font-[300] text-[#002244] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               You agree to indemnify and hold harmless Tatum Bank, its
               employees, agents, directors and affiliates from any claims,
               damages, or expenses arising from your use of the Site or
@@ -431,7 +437,7 @@ const Terms = () => {
             <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               11. Governing Law
             </p>
-            <p className="font-[300] text-[#002244] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               These Terms are governed by the laws of the Federal Republic of
               Nigeria. Any disputes arising from the use of this Site shall be
               resolved in the Nigerian courts.
@@ -439,15 +445,15 @@ const Terms = () => {
           </div>
 
           <div ref={contactRef} className="flex flex-col gap-4 mt-[48px]">
-            <p className="font-medium text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
               12. CONTACT US
             </p>
-            <p className="font-[300] text-[#002244] font-grava text-base lg:text-[16px]">
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
               For any questions or concerns about these Terms, please contact us
               at: <br />
               Tatum Bank Nigeria Limited
             </p>
-            <ul className="list-none font-[300] text-[#002244]  text-base lg:text-[16px] flex flex-col gap-2 font-grava">
+            <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] flex flex-col gap-2">
               <li>Address: --------------------</li>
               <li>Telephone: --------------------</li>
               <li>
