@@ -761,17 +761,17 @@ const SME = () => {
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] w-[129px] h-[44px] sm:w-[159px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                } transition-all duration-500 ease-in-out bg-[#EDEDED] group hover:bg-[#002244] w-[159px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate("/business/account",window.scrollTo(0, 0))
                 }>
-                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  Apply now
+                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                  To be Available Soon
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="text-5xl mt-[2px]  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
+                  className="text-5xl mt-[2px]  w-5 h-5 transition-colors duration-500 ease-in-out text-[#B0B0B0] group-hover:text-[#ffcc33]"
                 />
               </button>
             </div>
@@ -846,15 +846,19 @@ const SME = () => {
                       </p>
                     </div>
                   </div>
-                  <button  onClick={() =>
-                navigate("/business/account",window.scrollTo(0, 0))
-              }className="w-full sm:w-[254px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Request a POS system
+                  
+                  <button  
+                    onClick={() =>
+                    navigate("/business/account",window.scrollTo(0, 0))
+                    }
+                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                  >
+                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                      To be Available Soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -918,15 +922,16 @@ const SME = () => {
                       </p>
                     </div>
                   </div>
-                  <button  onClick={() =>
-                navigate("/business/account",window.scrollTo(0, 0))
-              }className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Sign up now
+                  <button  
+                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))}
+                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                  >
+                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                      To be Available Soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -991,15 +996,16 @@ const SME = () => {
                       </p>
                     </div>
                   </div>
-                  <button  onClick={() =>
-                navigate("/business/account",window.scrollTo(0, 0))
-              }className="w-full sm:w-[177px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
-                      Sign up now
+                  <button  
+                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))}
+                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                  >
+                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                      To be Available Soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -1062,16 +1068,18 @@ const SME = () => {
                       </p>
                     </div>
                   </div>
-                  <button  onClick={() =>
-                navigate("/business/account",window.scrollTo(0, 0))
-              } className="w-full sm:w-[208px] bg-[#ffcc33] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300">
-                    <p className="font-grava font-medium  sm:text-base text-[#002244] group-hover:text-[#ffcc33]">
+                  <button  
+                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))} 
+                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                  >
+                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
                       {/* Get started now */}
-                      Find Out More
+                      {/* Find Out More */}
+                      To be Available Soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#002244] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
                     />
                   </button>
                 </div>

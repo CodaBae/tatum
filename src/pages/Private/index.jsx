@@ -353,15 +353,15 @@ const Private = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
           >
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
               To be Available Soon
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -407,7 +407,7 @@ const Private = () => {
             </div>
 
             <button
-              className="transition-all duration-500 ease-in-out bg-[#FFCC33]  px-5 mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+              className="transition-all duration-500 ease-in-out bg-[#EDEDED]  px-5 mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
               onClick={() => {
                 navigate(
@@ -419,13 +419,13 @@ const Private = () => {
                 );
               }}
             >
-              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
                 {/* Apply for the Tatum Black Card */}
                 To be Available Soon
               </p>
               <BsArrowRight
                 size={100}
-                className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+                className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
               />
             </button>
 
@@ -498,7 +498,7 @@ const Private = () => {
           </div>
 
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#EDEDED] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
             type="button"
             onClick={() => {
               navigate(
@@ -510,13 +510,13 @@ const Private = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
               {/* Apply for the Tatum Black Card */}
               To be Available Soon
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>

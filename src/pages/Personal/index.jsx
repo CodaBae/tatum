@@ -153,7 +153,7 @@ const Personal = () => {
               {/* Button */}
               <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
                 <button
-                  className={`animate__animated animate__fadeInUp animate__delay-10s block transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
+                  className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
                   // type="button"
                   // href="#savings"
                   onClick={() =>
@@ -372,17 +372,17 @@ const Personal = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              Learn More
+            <p className="transition-colors duration-500 ease-in-out font-medium lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
+              To be Available Soon
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -450,11 +450,11 @@ const Personal = () => {
                 navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
               }>
               <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#98A2B3]">
-                Coming soon
+                To be Available Soon
               </p>
               <BsArrowRight
                 size={100}
-                className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] "
+                className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#98A2B3] "
               />
             </button>
           </div>
@@ -610,11 +610,11 @@ const Personal = () => {
         </div>
 
         <button
-          className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[2px] border-[#002244] rounded-tl-lg rounded-br-lg bg-[#002244] group hover:bg-[#fdf7e6]"
+          className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[2px] border-[#EDEDED] rounded-tl-lg rounded-br-lg bg-[#EDEDED] group hover:bg-[#fdf7e6]"
           onClick={() =>
             navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           }>
-          <p className="transition-colors duration-500 ease-in-out text-[#FFCC33] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
+          <p className="transition-colors duration-500 ease-in-out text-[#B0B0B0] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
             {/* Get yours today */}
             To be Available Soon
           </p>
@@ -625,7 +625,7 @@ const Personal = () => {
         ref={digitalRef}
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
-        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
+        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
