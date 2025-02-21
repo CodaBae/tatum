@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#fff] w-full px-5 lg:pl-[55px] lg:pr-[67px] pt-[61px] lg:pb-[10px] flex flex-col gap-[48px] lg:items-center">
-        <div className="flex flex-col lg:justify-center lg:flex-row gap-[40px] lg:gap-[74px]"> {/* lg:gap-[94px] */}
+        <div className="flex flex-col lg:justify-center lg:flex-row gap-[40px] lg:gap-[54px]"> {/* lg:gap-[94px] */}
           <div className="flex flex-col items-start gap-4 lg:w-[180px]">
             <div className="flex flex-col gap-3">
               <p className="font-grava text-[#002244] uppercase tracking-wide font-bo text-base">
