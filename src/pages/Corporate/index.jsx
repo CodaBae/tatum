@@ -696,7 +696,7 @@ const Corporate = () => {
                           </p>
                           <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 
-                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-medium">Visit our nearest branch</span> to get started
+                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-medium">Visit our nearest client centre</span> to get started
                           </p>
                       </div>
                       <button
