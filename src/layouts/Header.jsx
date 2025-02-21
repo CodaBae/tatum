@@ -361,7 +361,7 @@ const Header = () => {
           </div>
           {showPersonalDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0  w-[566px] ${
+              className={`dropdown-menu bg-[#fff] min-h-[280px] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[566px] ${
                 showPersonalDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("personal")}
