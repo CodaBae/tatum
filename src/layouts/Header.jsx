@@ -760,7 +760,7 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "55vh" }}
+                style={{ height: "53vh" }}
               >
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
