@@ -168,7 +168,7 @@ className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
                 <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
                 <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                     We offer secure online banking, 
-                    convenient branch services, 
+                    convenient client centre services, 
                     and reliable support whenever you need it.
                 </p>
             </div>

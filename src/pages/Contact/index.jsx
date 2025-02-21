@@ -230,12 +230,12 @@ const Contact = () => {
         <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
             <div className='flex flex-col gap-4 w-full items-center lm:w-[461px]'>
                 <p className='font-grava text-[28px] font-medium lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
-                <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
+                <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest Client Center and ATM locations for convenient and accessible banking services.</p>
             </div>
             {/* <img src={isMobile ? MapSmall : MapBig} alt='map' className='' /> */}
             <iframe
                 title="Google Map"
-                src={`https://www.google.com/maps?q=9.033,7.500&output=embed`}
+                src={`https://www.google.com/maps?q=9.033,7.500&output=embed&markers=9.033,7.500`}
                 className="w-full h-[304px] lm:h-[719px] rounded-lg"
             ></iframe>
 
@@ -252,7 +252,7 @@ const Contact = () => {
                     <img src={Locator} alt='Locator' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                     <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-medium'>Head Office</p>
-                    <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</p>
+                    <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3, Garki FCT Abuja</p>
                     </div>
                 </div>
             </div>

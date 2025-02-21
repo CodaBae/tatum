@@ -1733,7 +1733,7 @@ const handleTouchEnd = () => {
               Client Centres
               </p>
               <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
-                Simply enter your location and find our closest branch on the
+                Simply enter your location and find our closest client centre on the
                 map.
               </p>
             </div>
@@ -1893,7 +1893,7 @@ const handleTouchEnd = () => {
                 Client Centres
               </p>
               <p className="text-sm lg:text-base font-[350] font-grava text-[#002244]">
-                Simply enter your location and find our closest branch on the
+                Simply enter your location and find our closest client centre on the
                 map.
               </p>
             </div>

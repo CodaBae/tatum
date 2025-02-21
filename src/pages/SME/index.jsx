@@ -1381,7 +1381,7 @@ const SME = () => {
                       tracking-[0.2%] text-[#002244]">
                 Your business deserves a bank that believes in your dreams as
                 much as you do. Let’s talk about how Tatum Bank can empower you
-                to achieve more or Visit our nearest branch to get started
+                to achieve more or Visit our nearest client centre to get started
               </p>
             </div>
             <div className="flex">
