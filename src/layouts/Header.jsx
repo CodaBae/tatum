@@ -490,7 +490,7 @@ const Header = () => {
           </p>
           {showSmeDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out h-[360px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out min-h-[250px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}
@@ -619,7 +619,7 @@ const Header = () => {
           </p>
           {showCorporateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl h-[312px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl min-h-[250px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
                 showCorporateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("corporate")}
@@ -627,7 +627,7 @@ const Header = () => {
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
                 style={{ height: "35vh" }}
-              >
+              > 
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
@@ -753,7 +753,7 @@ const Header = () => {
           </p>
           {showPrivateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[512px] w-[320px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 min-h-[250px] w-[320px] ${
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}
@@ -866,7 +866,7 @@ const Header = () => {
           </p>
           {showInstitutionalDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 h-[100px] w-[294px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 min-h-[250px] rounded-xl mt-1 py-0 h-[100px] w-[294px] ${
                 showInstitutionalDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("institutional")}

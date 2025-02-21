@@ -525,7 +525,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[23px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -668,7 +668,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[23px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -784,7 +784,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[23px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
@@ -906,7 +906,7 @@ const handleTouchEnd = () => {
                         <img
                           src={NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[20px] w-[21px] md:h-[28px]"
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[23px] w-[21px] md:h-[28px]"
                         />
                       </div>
                     </p>
