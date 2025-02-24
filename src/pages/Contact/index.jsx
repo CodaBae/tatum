@@ -108,9 +108,9 @@ const Contact = () => {
                     isMobile ? 
                     <div className='w-[400px]'>
                         <img 
-                            src="https://res.cloudinary.com/code-idea/image/upload/v1739959339/contact_xqpwkp.png"
+                            src="https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"
                             alt='Biz' 
-                            className={`animate__animated  relative -left-2  h-[450px] top-32   `} // h-[500px]
+                            className={`animate__animated  relative -left-2  h-[450px] top-28`} // h-[500px]
                             data-aos="fade-left"
                             data-aos-duration="1000"
                             data-aos-once="false"
@@ -118,9 +118,9 @@ const Contact = () => {
                     </div>
                     :
                     <img 
-                        src={"https://res.cloudinary.com/code-idea/image/upload/v1739959339/contact_xqpwkp.png"}
+                        src="https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"
                         alt='Biz' 
-                        className={`animate__animated  relative  w-[786px] lm:right-60 h-[650px] lg:top-20`} //lm:right-28 -left-2 lg:top-20  lm:h-[811px] 
+                        className={`animate__animated  relative  w-[786px] lm:right-28 h-[650px] lg:top-20`} //lm:right-60  -left-2 lg:top-20  lm:h-[811px] 
                         data-aos="fade-left"
                         data-aos-duration="1000"
                         data-aos-once="false"
