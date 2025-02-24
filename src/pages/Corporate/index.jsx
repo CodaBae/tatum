@@ -611,7 +611,7 @@ const Corporate = () => {
             </div>
             {openTabOne && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                We provide industry-specific insights to help businesses make informed decisions.
               </p>
             )}
           </div>
@@ -630,7 +630,7 @@ const Corporate = () => {
             </div>
             {openTabTwo && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Our products are designed with your business needs in mind.
               </p>
             )}
           </div>
@@ -669,7 +669,7 @@ const Corporate = () => {
             {openTabFour && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Our dedicated corporate banking team is always available to
-                support you.
+                support you. 
               </p>
             )}
           </div>
@@ -692,7 +692,8 @@ const Corporate = () => {
                   <div className='flex flex-col lm:w-[615px] lm:h-[312px] gap-5 lm:gap-[100px]'>
                       <div className="flex flex-col  gap-[20px]">
                           <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
-                            Let’s Build the Future of Your Business Together
+                            {/* Let’s Build the Future of Your Business Together */}
+                            Let’s Take Your Business To The Next Level!
                           </p>
                           <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 

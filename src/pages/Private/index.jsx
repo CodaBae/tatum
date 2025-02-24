@@ -537,7 +537,7 @@ const Private = () => {
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
-            Why Choose Tatum <br /> Private Banking.
+            Why Tatum Private <br /> Banking?
           </p>
         </div>
         <div className="flex flex-col w-full lm:w-[710px]">
@@ -557,7 +557,7 @@ const Private = () => {
             </div>
             {openTabOne && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Bespoke financial solutions tailored for high-net worth individuals
               </p>
             )}
           </div>
@@ -577,7 +577,7 @@ const Private = () => {
             </div>
             {openTabTwo && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Dedicated relationship managers who understand your unique needs
               </p>
             )}
           </div>
