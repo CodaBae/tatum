@@ -482,7 +482,7 @@ const Institutional = () => {
             </div>
             {openTabOne && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Custom-built financial services for your institution's unique needs
               </p>
             )}
           </div>
@@ -501,7 +501,7 @@ const Institutional = () => {
             </div>
             {openTabTwo && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Robust digital platforms for seamless banking
               </p>
             )}
           </div>

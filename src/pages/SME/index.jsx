@@ -38,6 +38,7 @@ const SME = () => {
   const [openTabOne, setOpenTabOne] = useState(true);
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
+  const [openTabFour, setOpenTabFour] = useState(false);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -109,6 +110,10 @@ const SME = () => {
 
   const handleTabThree = () => {
     setOpenTabThree(!openTabThree);
+  };
+
+  const handleTabFour = () => {
+    setOpenTabFour(!openTabFour);
   };
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -1274,7 +1279,7 @@ const SME = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -1287,7 +1292,7 @@ const SME = () => {
             onClick={handleTabOne}>
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                Exclusive Access
+                We Understand Your Business
               </p>
               {openTabOne ? (
                 <img src={Minus} alt="Minus" className="" />
@@ -1297,7 +1302,7 @@ const SME = () => {
             </div>
             {openTabOne && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Whether you're just starting or expanding, we provide customized solutions that fit your unique needs 
               </p>
             )}
           </div>
@@ -1306,7 +1311,7 @@ const SME = () => {
             onClick={handleTabTwo}>
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                Unparalleled Service
+                Customer-Centric Approach 
               </p>
               {openTabTwo ? (
                 <img src={Minus} alt="Minus" className="" />
@@ -1316,7 +1321,8 @@ const SME = () => {
             </div>
             {openTabTwo && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                We don't just serve businesses; we build relationships. Our dedicated business banking team is always
+                available to support you.
               </p>
             )}
           </div>
@@ -1325,7 +1331,7 @@ const SME = () => {
             onClick={handleTabThree}>
             <div className="flex items-center justify-between">
               <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                Discreet & Secure
+                Technology-Driven Excellence
               </p>
               {openTabThree ? (
                 <img src={Minus} alt="Minus" className="" />
@@ -1335,7 +1341,26 @@ const SME = () => {
             </div>
             {openTabThree && (
               <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
+                Enjoy seamless, secure, and innovative banking tailored for your business. 
+              </p>
+            )}
+          </div>
+          <div
+            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
+            onClick={handleTabFour}>
+            <div className="flex items-center justify-between">
+              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+                We Keep You Smiling
+              </p>
+              {openTabFour ? (
+                <img src={Minus} alt="Minus" className="" />
+              ) : (
+                <img src={Plus} alt="Plus" className="" />
+              )}
+            </div>
+            {openTabFour && (
+              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+                With Tatum Bank, banking is effortless, rewarding, and stress-free.
               </p>
             )}
           </div>
