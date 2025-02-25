@@ -4,6 +4,7 @@ import { BsArrowRight } from 'react-icons/bs';
 //SVGS
 import NDIC from "../assets/svg/ndic.svg";
 import CBN from "../assets/svg/cbn_logo.svg";
+import { useNavigate } from 'react-router-dom';
 
     const HeroSection = ({ 
         bgMobile, 
@@ -17,6 +18,8 @@ import CBN from "../assets/svg/cbn_logo.svg";
         btnText 
     }) => {
         const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+        const navigate = useNavigate()
 
         useEffect(() => {
             const handleResize = () => {
