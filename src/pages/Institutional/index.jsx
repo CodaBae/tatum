@@ -361,7 +361,7 @@ const Institutional = () => {
                   },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 whitespace-nowrap ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Talk to our relationship managers
               </p>
               <BsArrowRight
