@@ -17,9 +17,10 @@ const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(true);
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const isTab = window.innerWidth < 1028;
-  const isMobile = window.innerWidth < 768;
+  
 
   const navigate = useNavigate();
 
@@ -57,6 +58,18 @@ const Private = () => {
     }
   }, [state]);
 
+  useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
   return (
     <div className="w-full overflow-hidden">
       <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
@@ -70,7 +83,7 @@ const Private = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
+          className="md:h-auto lg:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center pt-[93px] lg:pt-0 gap-0 max-sm: max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
@@ -165,7 +178,7 @@ const Private = () => {
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
             }
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative h-[400px] -top-6 -right-2 lm:right-5 lm:top-2 mt-24 lm:h-[688px] `}
+            className={`animate__animated animate__fadeInRight relative h-[400px] -top-10 -right-2 lm:right-5 md:top-5 lm:top-2 mt-24 lm:h-[688px] `}
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
@@ -241,10 +254,10 @@ const Private = () => {
             </button>
 
             <div className="flex flex-col gap-[20px] mt-6">
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Portfolio Management{" "}
@@ -253,10 +266,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Estate & Legacy Planning{" "}
@@ -265,10 +278,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Real Estate Advisory{" "}
@@ -277,10 +290,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Alternative Investments{" "}
@@ -407,7 +420,7 @@ const Private = () => {
             </div>
 
             <button
-              className="transition-all duration-500 ease-in-out bg-[#EDEDED]  px-5 mx-auto lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+              className="transition-all duration-500 ease-in-out bg-[#EDEDED]  px-5 mx-auto md:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
               onClick={() => {
                 navigate(
@@ -444,10 +457,10 @@ const Private = () => {
             </div>
 
             <div className="flex flex-col gap-[20px] mt-3">
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Global Concierge Services
@@ -456,10 +469,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Luxury Travel Perks{" "}
@@ -469,10 +482,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   High Spending Limits{" "}
@@ -481,10 +494,10 @@ const Private = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Exclusive Event Access{" "}
@@ -498,7 +511,7 @@ const Private = () => {
           </div>
 
           <button
-            className="transition-all duration-500 ease-in-out bg-[#EDEDED] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#EDEDED] mt-[28px] hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] md:flex items-center justify-center"
             type="button"
             onClick={() => {
               navigate(

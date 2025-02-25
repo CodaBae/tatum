@@ -30,11 +30,11 @@ import Mobile from "../../assets/svg/mobile.svg";
 import Ussd from "../../assets/svg/ussd_darker.svg";
 
 import "./css/Dot.css";
-import { IoIosArrowForward } from "react-icons/io";
 
 const Personal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [clickedCard, setClickedCard] = useState("debit");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const personalRef = useRef(null);
   const faqRef = useRef(null);
@@ -114,11 +114,21 @@ const Personal = () => {
     }
   }, [state]);
 
-  const isMobile = window.innerWidth < 768;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="overflow-hidden">
-      <section className="h-full w-full outline-none  lg:h-[120vh]">
+      <section className="h-full w-full outline-none lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -129,7 +139,7 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[120vh] h-[796px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
+          className="lg:h-[120vh] h-[796px] overflow-hidden  pl-5 lm:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] lg:pt-[0%] max-sm:pt-[10%]" //[694px]
         >
           <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[5%] z-30 gap-[64px] lg:gap-[69px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -172,7 +182,7 @@ const Personal = () => {
               </div>
             </div>
 
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-32%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 md:bottom-[-60%] lg:bottom-[-32%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                 <p className="flex items-center gap-1">
                   We are licensed by the Central Bank of Nigeria
@@ -198,29 +208,6 @@ const Personal = () => {
               </p>
             </div>
 
-            {/* <div className="flex items-start absolute -bottom-20 lg:bottom-[-41%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                <p className="flex items-center gap-2">
-                  We are licensed by the Central Bank of Nigeria
-                  <img
-                    src={CBN}
-                    alt="CBN"
-                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                  />
-                </p>
-                <p className="flex items-center gap-2">
-                  All deposits are insured by
-                  <div className=""> 
-                    <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[16px] w-[21px] md:h-[28px] lg:w-[60px]"
-                    />
-                  </div>
-                </p>
-              </p>
-            </div> */}
-
           </div>
           {
             isMobile ? 
@@ -238,15 +225,15 @@ const Personal = () => {
             </div>
             :
             <img
-            src={
-              "https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"
-            }
-            alt="Family"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-once="false"
-            className={`animate__animated relative -right-12 top-[0%] lm:right-[25%]  lm:top-[5%] lg:w-[90%] lg:h-[754px] `}
-          />
+              src={
+                "https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"
+              }
+              alt="Family"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-once="false"
+              className={`animate__animated relative -right-12  lg:right-[28%] w-[100%] lm:h-[60vh] lg:top-[5%] lg:w-[90%] lg:h-[754px] `}
+            />
           }
         </div>
       </section>
@@ -423,10 +410,10 @@ const Personal = () => {
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-between">
           <div
             data-aos="fade-right"
-            className="flex flex-col items-center md:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]">
+            className="flex flex-col items-center lg:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]">
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">
@@ -489,9 +476,9 @@ const Personal = () => {
         </div>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-[56px]">
+        <div className="hidden lm:flex items-center gap-[56px]">
           <div
-            className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
+            className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
             onClick={() => handleClickCard("debit")}>
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
@@ -515,7 +502,7 @@ const Personal = () => {
             </div>
           </div>
           <div
-            className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
+            className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
             onClick={() => handleClickCard("credit")}>
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
@@ -539,7 +526,7 @@ const Personal = () => {
             </div>
           </div>
           <div
-            className="flex flex-col gap-[32px] items-center w-[358px] cursor-pointer"
+            className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
             onClick={() => handleClickCard("prepaid")}>
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
@@ -571,7 +558,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
                 alt="BlackCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
               
               />
             </div>
@@ -579,7 +566,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739468972/afrigo_card_front_ezlerd.png"
                 alt="GreyCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center" >
@@ -587,7 +574,7 @@ const Personal = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png"
                 alt="SilverCard"
               
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
                
               />
             </div>
@@ -596,7 +583,7 @@ const Personal = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
                 alt="YellowCard"
         
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
@@ -604,7 +591,7 @@ const Personal = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
                 alt="WhiteCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
@@ -692,14 +679,14 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="w-full h-[531px] lm:h-[440px] rounded-xl">
+          className="w-full h-[531px] md:h-auto lg:h-[440px] rounded-xl">
           <div
-            className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
+            className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-5 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between lg:items-center"
             style={{
               backgroundColor: "rgb(244 245 246 / 95%)", // Brighter background with slight transparency
               zIndex: 1, // Ensures content stays above background
             }}>
-            <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
+            <div className="flex flex-col lg:w-[615px] lm:h-[312px] gap-[20px]">
               <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
@@ -725,7 +712,7 @@ const Personal = () => {
                 />
               </button>
             </div>
-            <div className="lm:w-[468px] lm:h-[312px]">
+            <div className="md:w-[468px] md:h-[312px] lg:w-[468px] lg:h-[312px]">
               <img src={Collab} alt="Collab" className="" />
             </div>
           </div>

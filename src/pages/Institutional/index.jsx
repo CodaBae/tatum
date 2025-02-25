@@ -19,14 +19,13 @@ const Institutional = () => {
     const [openTabTwo, setOpenTabTwo] = useState(false)
     const [openTabThree, setOpenTabThree] = useState(false)
     const [openTabFour, setOpenTabFour] = useState(false)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const { state } = useLocation();
 
   const publicRef = useRef(null);
   const govRef = useRef(null);
   const whyRef = useRef(null);
-
-  const isMobile = window.innerWidth < 768;
 
   const navigate = useNavigate();
 
@@ -57,6 +56,17 @@ const Institutional = () => {
     setOpenTabFour(!openTabFour);
   };
 
+   useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
 
 
   return (
@@ -72,7 +82,7 @@ const Institutional = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[120vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="lg:h-[120vh] md:h-auto overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] pt-0  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -110,7 +120,7 @@ const Institutional = () => {
                 </button>
               </div>
             </div>
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-24.9%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-18.9%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
@@ -235,10 +245,10 @@ const Institutional = () => {
             </p>
 
             <div className="flex flex-col gap-[20px] mt-6">
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Public Sector Financial Management{" "}
                   <span className="font-[300]  ">
@@ -247,10 +257,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Treasury & Liquidity Management{" "}
                   <span className="font-[300]  ">
@@ -258,10 +268,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Collections & Payment Solutions
                   <span className="font-[300]  ">
@@ -270,10 +280,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Payroll Management{" "}
                   <span className="font-[300]  ">
@@ -281,10 +291,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Digital Banking for Public Institutions{" "}
                   <span className="font-[300]">
@@ -325,7 +335,7 @@ const Institutional = () => {
 
       <section 
         ref={govRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
+        className="bg-[#F9FAFB] md:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
       >
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]"
@@ -367,10 +377,10 @@ const Institutional = () => {
             </p>
 
             <div className="flex flex-col gap-[20px] mt-6">
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Cash & Liquidity Management{" "}
                   <span className="font-[300]  ">
@@ -378,10 +388,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Collections & Payments{" "}
                   <span className="font-[300]  ">
@@ -390,10 +400,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Foreign Exchange & Trade Services
                   <span className="font-[300]  ">
@@ -402,10 +412,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Bespoke Loan & Financing Solutions{" "}
                   <span className="font-[300]  ">
@@ -413,10 +423,10 @@ const Institutional = () => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Multi-Channel Banking{" "}
                   <span className="font-[300]  ">
@@ -457,7 +467,7 @@ const Institutional = () => {
 
       <section
         ref={whyRef} 
-        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start mt-[56px] lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[581px]">
           <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
@@ -547,7 +557,7 @@ const Institutional = () => {
       </section>
 
       <section
-        className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col"
+        className="bg-[#fff] px-5 lm:px-[56px] py-[56px]  flex flex-col"
         style={{
           zIndex: 1,
         }}>
@@ -558,7 +568,7 @@ const Institutional = () => {
             backgroundSize: "cover",
             position: "relative", // Add relative positioning
           }}
-          className="w-full h-[621px] lm:h-[440px] rounded-xl">
+          className="w-full  md:h-auto lm:h-[440px] rounded-xl"> {/* h-[621px] */}
           {/* Overlay div for image opacity */}
           <div
             className="absolute inset-0 rounded-xl"
@@ -568,7 +578,7 @@ const Institutional = () => {
           />
 
           <div
-            className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row gap-[50px] justify-between items-center relative z-10"
+            className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row gap-[50px] lm:gap-0 lm:justify-between lg:items-center relative z-10"
             style={{
               backgroundColor: "rgba(249, 250, 251, 0.8)",
             }}>
@@ -599,11 +609,11 @@ const Institutional = () => {
                 />
               </button>
             </div>
-            <div className="lm:w-[468px] lm:h-[312px]">
+            <div className="lm:w-[468px] lm:h-[312px] ">
               <img 
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739959311/institution_zx64tn.jpg" 
                 alt="Kids" 
-                className="rounded-xl" 
+                className="rounded-xl md:h-[312px] lm:w-[468px] lm:h-[312px]" 
               />
             </div>
           </div>

@@ -46,6 +46,7 @@ const Home = () => {
   const [loanAmount, setLoanAmount] = useState(500000); // Initial loan amount
   const [repay, setRepay] = useState(3); // Initial repay amount
   const [interest, setInterest] = useState(4); // Initial Interest
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [isManualTransition, setIsManualTransition] = useState(false);
 
@@ -362,7 +363,18 @@ const handleTouchEnd = () => {
   };
 
   const isTab = window.innerWidth < 1028;
-  const isMobile = window.innerWidth < 768;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const fadeAnimationHandler = (props, state) => {
     const transitionTime = props.transitionTime + "ms";
@@ -409,8 +421,8 @@ const handleTouchEnd = () => {
       <div className="w-full outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
-          showArrows={false}
-          autoPlay={true}
+          showArrows={true}
+          autoPlay={false}
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
@@ -506,7 +518,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-45%]" style={{zIndex:'99999'}}>
+                <div className="flex items-start absolute -bottom-20 md:-bottom-32 lm:bottom-[-45%]" style={{zIndex:'99999'}}>
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -545,7 +557,7 @@ const handleTouchEnd = () => {
                     alt="Family"
                     className={`${
                       activeIndex === 0 ? "animate__animated " : ""
-                    } relative md:right-14 -bottom-12 lm:right-24 top-28 -right-6 h-[400.01px] md:h-[28px]`}
+                    } relative md:right-14 -bottom-12 lm:right-24 top-28 -right-6 h-[400.01px]`}
                   />
                 </div>
                 :
@@ -558,7 +570,7 @@ const handleTouchEnd = () => {
                   alt="Family"
                   className={`${
                     activeIndex === 0 ? "animate__animated " : ""
-                  } relative md:right-14 bottom-0 lm:right-24 top-28 -right-5 h-[560.01px] md:h-[28px] lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
+                  } relative md:right-14 bottom-0 lm:right-24 top-28 -right-5 h-[560.01px]  lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
                 />
 
               }
@@ -576,7 +588,7 @@ const handleTouchEnd = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-[794px] lg:h-[91vh]  pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh] md:pt-[93px] pt-[64px] px-5 lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -652,7 +664,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-40%]">
+                <div className="flex items-start absolute -bottom-20 md:-bottom-32 lg:bottom-[-40%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -716,7 +728,7 @@ const handleTouchEnd = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="bg-[#FFCC33] h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="bg-[#FFCC33] h-[794px] lg:h-[91vh] pt-[64px] md:pt-[93px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -768,7 +780,7 @@ const handleTouchEnd = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-35%]">
+                <div className="flex items-start absolute -bottom-20 md:-bottom-24 lg:bottom-[-35%]">
                   <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                       We are licensed by the Central Bank of Nigeria
@@ -819,7 +831,7 @@ const handleTouchEnd = () => {
                     activeIndex === 2
                       ? "animate__animated animate__slow"
                       : ""
-                  }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-10 lg:top-32 lg:right-[40rem] relative`}
+                  }  md:right-[8rem] lm:right-[20rem] h-[550px] lg:h-[1000px] top-24 md:top-12 lg:top-32 lg:right-[40rem] relative`}
                 />
               }
             </div>
@@ -836,7 +848,7 @@ const handleTouchEnd = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className="h-[794px] lg:h-[91vh] pt-[64px] lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
+              className="h-[794px] lg:h-[91vh] pt-[64px] md:pt-[93px]  lm:pt-[40px] px-5  lg:px-[60px] w-full flex flex-col lg:flex-row items-center relative gap-0"
             >
               <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 {" "}
@@ -943,7 +955,7 @@ const handleTouchEnd = () => {
                     activeIndex === 3
                       ? "animate__animated "
                       : ""
-                  }  md:right-[8rem] lm:right-[14rem] h-[550px] lg:h-[1000px] top-10 md:top-10 lg:top-14 lg:right-[25rem] relative`}
+                  }  md:right-[1rem] lm:right-[14rem] h-[550px] lg:h-[1000px] top-10 md:top-10  lg:top-14 lg:right-[25rem] relative`}
                 />
               }
             </div>
@@ -1187,15 +1199,6 @@ const handleTouchEnd = () => {
                 transform: `rotateY(${currdeg}deg)`,
                 transition: isManualTransition ? 'transform 0.6s ease-out' : 'none',
               }}
-              // onMouseDown={handleMouseDown}
-              // onMouseEnter={handleMouseEnterOrDown}
-              // onMouseLeave={handleMouseLeave}
-              // style={{
-              //   transform: `rotateY(${currdeg}deg)`,
-              //   WebkitTransform: `rotateY(${currdeg}deg)`,
-              //   MozTransform: `rotateY(${currdeg}deg)`,
-              //   OTransform: `rotateY(${currdeg}deg)`,
-              // }}
             >
 
 
@@ -1254,39 +1257,6 @@ const handleTouchEnd = () => {
           <div className="prev">Prev</div>
         </div>
 
-        {/* <div
-          className="hidden lg:flex items-center justify-center"
-          style={{ perspective: "2000px" }}
-        >
-          <div
-            ref={carouselRef}
-            className="relative w-[400px] h-[400px] flex items-center justify-center"
-            style={{
-              transformStyle: "preserve-3d",
-              cursor: "grab",
-            }}
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleMouseDown}
-            onWheel={handleWheel}
-          >
-            {cardImages.map((card, index) => {
-              const angle = (index * 360) / cardImages.length;
-              return (
-                <img
-                  key={index}
-                  src={card}
-                  alt="Card"
-                  className="absolute w-full h-[250px] transition-transform duration-500"
-                  style={{
-                    transform: `rotateY(${angle}deg) translateZ(300px)`,
-                    pointerEvents: "none",
-                  }}
-                />
-              );
-            })}
-          </div>
-        </div> */}
-
         {/* Mobile */}
         <div className="lm:hidden w-full">
           <Slider {...settings}>
@@ -1294,7 +1264,7 @@ const handleTouchEnd = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
                 alt="BlackCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lm:w-[100%]"
               
               />
             </div>
@@ -1302,7 +1272,7 @@ const handleTouchEnd = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739468972/afrigo_card_front_ezlerd.png"
                 alt="GreyCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lm:w-[100%]"
               />
             </div>
             <div className="slide-item flex justify-center" >
@@ -1310,7 +1280,7 @@ const handleTouchEnd = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png"
                 alt="SilverCard"
               
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lm:w-[100%]"
                
               />
             </div>
@@ -1319,7 +1289,7 @@ const handleTouchEnd = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
                 alt="YellowCard"
         
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lm:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>
@@ -1327,7 +1297,7 @@ const handleTouchEnd = () => {
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
                 alt="WhiteCard"
-                className="rounded-xl w-[45%] md:w-[100%]"
+                className="rounded-xl w-[45%] md:w-[75%] lm:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
             </div>

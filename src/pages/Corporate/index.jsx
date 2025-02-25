@@ -22,8 +22,8 @@ const Corporate = () => {
   const [openTabTwo, setOpenTabTwo] = useState(false)
   const [openTabThree, setOpenTabThree] = useState(false)
   const [openTabFour, setOpenTabFour] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const isMobile = window.innerWidth < 768;
 
   const corporateRef = useRef(null);
   const corpRef = useRef(null);
@@ -76,6 +76,18 @@ const Corporate = () => {
     }
   }, [state]);
 
+  useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
   return (
     <div className="w-full overflow-hidden" >
       <section className="h-full w-full overflow-hidden outline-none lg:h-[120vh]">
@@ -84,12 +96,12 @@ const Corporate = () => {
             backgroundImage: `url(${
               isMobile
                 ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
-                : "https://res.cloudinary.com/code-idea/image/upload/v1740430259/Slide_1_in0m5a.png"
+                : "https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"
             })`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[762px] pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lm:flex-row lm:items-center gap-0 lm:h-[120vh] max-sm:pt-[30%] ">
+          className="h-[762px] md:h-auto pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lg:flex-row lm:items-center gap-0 lg:h-[120vh] md:pt-[93px] lg:pt-0 max-sm:pt-[30%] ">
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
@@ -98,7 +110,7 @@ const Corporate = () => {
                 Powering Your <span className="font-bold">Business Growth</span>
               </p>
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-auto  md:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-auto md:w-[686px] lg:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we understand that businesses thrive when they
                 have the right financial partner—one that offers tailored
                 solutions, expert insights, and seamless banking services to
@@ -149,23 +161,6 @@ const Corporate = () => {
                   </p>
               </p>
             </div>
-            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-38.8%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
-
           </div>
           {
             isMobile ?
@@ -183,7 +178,7 @@ const Corporate = () => {
             <img
               src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
               alt="Family"
-              className={`animate__animated  relative lm:right-[32%] lm:top-[6%] lg:w-[75%] `}
+              className={`animate__animated  relative lg:right-[32%] md:top-[-14%] lm:top-[6%] lg:w-[75%] `}
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-once="false"
@@ -260,7 +255,7 @@ const Corporate = () => {
 
       <div
         ref={investmentRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
@@ -276,19 +271,19 @@ const Corporate = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[32px] mt-6">
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Fixed Income & Treasury Bills
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Wealth Management
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Structured Investment Portfolios
@@ -346,19 +341,19 @@ const Corporate = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[32px] mt-6">
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Cash & Liquidity Management
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Foreign Exchange Services
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Interest Rate Risk Management
@@ -392,7 +387,7 @@ const Corporate = () => {
 
       <div
         ref={tradeRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
@@ -407,19 +402,19 @@ const Corporate = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[32px] mt-6">
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Letters of Credit & Guarantees
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Import & Export Financing
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Supply Chain Finance
@@ -477,19 +472,19 @@ const Corporate = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[32px] mt-6">
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Term Loans & Working Capital Financing
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Equipment Financing
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Project & Infrastructure Financing
@@ -523,7 +518,7 @@ const Corporate = () => {
 
       <div
         ref={strategicRef}
-        className="bg-[#FFF] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
@@ -539,19 +534,19 @@ const Corporate = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[32px] mt-6">
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Co-Branded Financial Solutions
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Technology & Fintech Collaborations
               </p>
             </div>
-            <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Industry-Specific Advisory
@@ -683,13 +678,13 @@ const Corporate = () => {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover"
               }}
-              className="w-full h-[600px] lm:h-[440px] rounded-xl"
+              className="w-full h-auto lg:h-[440px] rounded-xl"
           >
               <div 
-                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] lm:py-[64px] flex flex-col lm:flex-row justify-between items-center"
+                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-5 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between items-start lg:items-center"
                   style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
               >
-                  <div className='flex flex-col lm:w-[615px] lm:h-[312px] gap-5 lm:gap-[50px]'>
+                  <div className='flex flex-col lm:w-[615px] lg:h-[312px] gap-5 lm:gap-[50px]'>
                       <div className="flex flex-col  gap-[20px]">
                           <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             {/* Let’s Build the Future of Your Business Together */}
@@ -715,8 +710,8 @@ const Corporate = () => {
                       />
                       </button>
                   </div>
-                  <div className="lm:w-[468px] lm:h-[312px]">
-                      <img src="https://res.cloudinary.com/code-idea/image/upload/v1739803749/shake_rib97r.png" alt="Meeting" className="" />
+                  <div className=" lm:w-[468px] lm:h-[312px]">
+                      <img src="https://res.cloudinary.com/code-idea/image/upload/v1739803749/shake_rib97r.png" alt="Meeting" className="w-[468px] lm:h-[312px] md:h-[300px]" />
                   </div>
               </div>
           </div>

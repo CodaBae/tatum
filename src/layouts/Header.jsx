@@ -368,9 +368,9 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "38vh" }}
+                // style={{ height: "38vh" }}
               >
-                <div className="flex flex-col gap-4 w-[237px]">
+                <div className="flex flex-col items-start gap-4 w-[237px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
@@ -490,14 +490,14 @@ const Header = () => {
           </p>
           {showSmeDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out min-h-[250px] shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[581px] ${
                 showSmeDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("business")}
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "35vh" }}
+                // style={{ height: "35vh" }}
               >
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -619,14 +619,14 @@ const Header = () => {
           </p>
           {showCorporateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl min-h-[250px] absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[585px] ${
                 showCorporateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("corporate")}
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "35vh" }}
+                // style={{ height: "35vh" }}
               > 
                 <div className="flex flex-col gap-4 w-[237px]">
                   <div
@@ -753,14 +753,14 @@ const Header = () => {
           </p>
           {showPrivateDropdown && (
             <div
-              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 min-h-[250px] w-[320px] ${
+              className={`dropdown-menu bg-[#fff] transition-all duration-500 ease-in-out shadow-2xl absolute -left-44 rounded-xl mt-1 py-0 w-[320px] ${
                 showPrivateDropdown ? "show" : ""
               }`}
               onMouseLeave={() => handleMouseLeave("private")}
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "53vh" }}
+                // style={{ height: "50vh" }}
               >
                 <div className="flex flex-col gap-4 w-[257px]">
                   <div
@@ -873,9 +873,9 @@ const Header = () => {
             >
               <div
                 className="block flex items-start gap-5 cursor-pointer px-6 py-5 text-BLUE-_200"
-                style={{ height: "40vh" }} //35vh
+                // style={{ height: "40vh" }} //35vh
               >
-                <div className="flex flex-col gap-4 w-[390px]">
+                <div className="flex flex-col items-start gap-4 w-[390px]">
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
@@ -883,7 +883,7 @@ const Header = () => {
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
-                      <img src={Public} alt="public" className="w-6 h-6" />
+                      <img src={TatumCard} alt="public" className="w-6 h-6" />  {/* src={Public} */}
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="text-[#002244] text-[14px] font-semibold leading-[18px] font-grava">
