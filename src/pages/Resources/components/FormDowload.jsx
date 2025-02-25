@@ -12,7 +12,7 @@ const FormDowload = () => {
                 <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Personal Account Form</p>
                 <button 
                     className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
-                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
+                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/* group-hover:text-[#FFCC33] */}
                     <img src={Download} alt='download' className='' />
@@ -45,7 +45,7 @@ const FormDowload = () => {
                 <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Private Account Form</p>
                 <button 
                     className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
-                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
+                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
                     <img src={Download} alt='download' className='' />
@@ -67,7 +67,7 @@ const FormDowload = () => {
                 <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Instant Account Form</p>
                 <button 
                     className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' // group hover:bg-[#002244]
-                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
+                    onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
                 >
                     <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/* group-hover:text-[#FFCC33] */}
                     <img src={Download} alt='download' className='' />
