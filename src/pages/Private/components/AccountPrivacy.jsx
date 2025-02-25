@@ -20,8 +20,8 @@ const AccountPrivacy = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    
-    const isMobile = window.innerWidth < 768 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+   
     const faqRef = useRef(null);
     const accountRef = useRef(null);
         
@@ -51,26 +51,29 @@ const AccountPrivacy = () => {
         setOpenDropdownThree(!openDropdownThree)
     }
             
-    // useEffect(() => {
-    //     if (state?.section === "faq" && faqRef.current) {
-    //         faqRef.current.scrollIntoView({ behavior: "smooth" });
-    //     }
-    //     if (state?.section === "account" && accountRef.current) {
-    //         accountRef.current.scrollIntoView({ behavior: "smooth" });
-    //     }
-    // }, [state]);
+    useEffect(() => {
+       const handleResize = () => {
+         setIsMobile(window.innerWidth < 768);
+       };
+   
+       window.addEventListener("resize", handleResize);
+   
+       return () => {
+         window.removeEventListener("resize", handleResize);
+       };
+     }, []);
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
-            className='w-full overflow-hidden outline-none h-[794px] lg:h-[100vh]'>
+            className='w-full overflow-hidden outline-none lg:h-[100vh]'>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
+                className=' h-[690px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lm:items-center gap-0 lg:h-[100vh] md:pt-[93px] pt-0 max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[1s%]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -103,7 +106,7 @@ const AccountPrivacy = () => {
                             </a>
                         </div> */}
                     </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-53.2%]" style={{zIndex:'99999'}}>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-45.2%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                             <p className="flex items-center gap-2">
                             We are licensed by the Central Bank of Nigeria
@@ -128,19 +131,11 @@ const AccountPrivacy = () => {
                             </p>
                         </p>
                     </div>
-                    {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-23.2%]'>
-                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 '>
-                            We are licensed by the Central Bank of Nigeria 
-                            <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                            All deposits are insured by
-                            <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
-                        </p>
-                    </div> */}
                 </div>
                 <img 
                     src={Bentley} 
                     alt='Bentley' 
-                    className={`animate__animated animate__fadeInRight relative -right-5 lm:right-[10%] lm:top-[10%] lg:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative -right-5 top-20 md:right-0 lg:right-[18%] md:top-[10%] lg:top-[-10%] lg:w-[55%] `} 
                 />
             </div>
         </section>
@@ -158,19 +153,19 @@ const AccountPrivacy = () => {
                 </p>
             </div>
 
-            <div className='flex flex-col lm:flex-row items-center gap-[30px]'>
+            <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={One} alt='One' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={One} alt='One' className='w-[205px] h-auto md:h-auto lg:h-[165px]' /> {/* [118px] */}
                     <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={Two} alt='Two' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={Two} alt='Two' className='w-[205px] h-auto md:h-auto lm:h-[165px]' />
                     <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
-                    <img src={Three} alt='Three' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={Three} alt='Three' className='w-[205px] h-auto md:h-auto lg:h-[165px]' />
                     <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>

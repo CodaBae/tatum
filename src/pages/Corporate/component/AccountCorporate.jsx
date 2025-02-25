@@ -21,8 +21,8 @@ const AccountCorporate = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    
-    const isMobile = window.innerWidth < 768 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
     const faqRef = useRef(null);
     const accountRef = useRef(null);
 
@@ -62,7 +62,19 @@ const AccountCorporate = () => {
             accountRef.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [state]); 
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
     
+        window.addEventListener("resize", handleResize);
+    
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
         <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
@@ -72,7 +84,7 @@ const AccountCorporate = () => {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[732px]  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
+                className='h-[732px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lm:items-center gap-0 lg:h-[100vh] pt-[93px] lg:pt-0 max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -136,14 +148,14 @@ const AccountCorporate = () => {
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png" 
                             alt='Building' 
-                            className={`animate__animated animate__fadeInRight relative right-[10%] -bottom-5 h-[394px] lg:w-[55%] `} 
+                            className={`animate__animated animate__fadeInRight relative right-[7%] -bottom-14 h-[394px] lg:w-[55%] `} 
                         />
                     </div>
                     :
                     <img 
                         src={Building} 
                         alt='Building' 
-                        className={`animate__animated animate__fadeInRight relative lm:right-[18%] lm:top-[1%] lg:w-[55%] `} 
+                        className={`animate__animated animate__fadeInRight relative lg:right-[18%] lm:top-[1%] lg:w-[55%] `} 
                     />
                 }
             </div>
@@ -162,19 +174,19 @@ const AccountCorporate = () => {
                 </p>
             </div>
 
-            <div className='flex flex-col lm:flex-row items-center gap-[30px]'>
+            <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={One} alt='One' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={One} alt='One' className='w-[205px] h-auto md:h-auto lg:h-[165px]' /> {/* [118px] */}
                     <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={Two} alt='Two' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={Two} alt='Two' className='w-[205px] h-auto md:h-auto lm:h-[165px]' />
                     <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
-                    <img src={Three} alt='Three' className='w-[205px] h-[118px] lm:h-[165px]' />
+                    <img src={Three} alt='Three' className='w-[205px] h-auto md:h-auto lg:h-[165px]' />
                     <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>

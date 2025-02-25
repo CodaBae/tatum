@@ -33,7 +33,7 @@ import "./card.css";
 import Lenis from "@studio-freight/lenis";
 
 const SME = () => {
-  const isMobile = window.innerWidth < 768;
+ const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [openTabOne, setOpenTabOne] = useState(true);
   const [openTabTwo, setOpenTabTwo] = useState(false);
@@ -217,9 +217,21 @@ const SME = () => {
     }
   }, [state]);
 
+  useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
   return (
     <div ref={smeRef} className="">
-      <section className="h-full w-full outline-none  lg:h-[120vh]">
+      <section className="h-full w-full outline-none lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -230,14 +242,14 @@ const SME = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="lg:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] lg:pt-0  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
                 className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
-                Powering Your <br /> Business{" "}
+                  Powering Your <br /> Business{" "}
                 <spen className="font-bold ">Supporting Your Dreams</spen>
               </p>
               <p
@@ -265,7 +277,7 @@ const SME = () => {
               </div>
             </div>
             
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-42%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 md:bottom-[-60%] lg:bottom-[-42%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                   <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
@@ -290,23 +302,6 @@ const SME = () => {
                   </p>
               </p>
             </div>
-            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-29.5%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
-
           </div>
           {
             isMobile ? 
@@ -314,7 +309,7 @@ const SME = () => {
               <img
                 src={'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
                 alt="Family"
-                className={`animate__animated relative top-[29.5%] -right-10 lg:w-[43%] `}
+                className={`animate__animated relative top-[29.5%] -right-10  `}
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
@@ -324,7 +319,7 @@ const SME = () => {
             <img
               src={'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
               alt="Family"
-              className={`animate__animated relative lm:top-[10%] right-24 lg:w-[43%] `}
+              className={`animate__animated relative md:top-[14%] lm:top-[10%] right-24 md:w-[50%] lg:w-[43%]`}
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-once="false"
@@ -698,7 +693,7 @@ const SME = () => {
         </div>
       </div> */}
 
-      <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
+      <div className="lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">    {/*h-[1000px]  */} 
         <div
           data-aos="fade-right"
           className="w-[309px] h-[317px] sm:w-[464px] sm:h-[476px] lg:w-[571px] lg:h-[585px] ">
@@ -706,7 +701,7 @@ const SME = () => {
         </div>
         <div
           data-aos="fade-left"
-          className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]"
+          className="w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]" //sm:h-[200.53px]
         >
           <div className="flex flex-col items-center gap-[16px] lg:w-[565px] lg:h-[197px] ">
             <h1 className="font-grava font-[400]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
@@ -767,7 +762,7 @@ const SME = () => {
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
                     : ""
-                } transition-all duration-500 ease-in-out bg-[#EDEDED] group hover:bg-[#002244] w-[159px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                } transition-all duration-500 ease-in-out bg-[#EDEDED] group hover:bg-[#002244] w-[199px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate("/business/account",window.scrollTo(0, 0))
@@ -1106,12 +1101,13 @@ const SME = () => {
       <div
         ref={advisoryRef}
         className="
-    h-[1019.45px] sm:h-[1120.45px] lg:h-[705px] 
-    bg-[#FFFFFF] 
-    flex flex-col-reverse lg:flex-row 
-    justify-between items-center 
-    py-[60px] pr-[101px] pl-[110px] sm:pr-[80px] sm:pl-[80px]
-  ">
+          h-[1019.45px] sm:h-[1120.45px] lg:h-[705px] 
+          bg-[#FFFFFF] 
+          flex flex-col-reverse lg:flex-row 
+          justify-between items-center 
+          py-[60px] pr-[101px] pl-[110px] sm:pr-[80px] sm:pl-[80px]
+        "
+      >
         {/* Image container */}
         <div
           className="
@@ -1125,7 +1121,7 @@ const SME = () => {
           className="
       w-[350px] sm:w-[450px] lg:w-[565px] 
       h-[550.45px] sm:h-[540px] lg:h-[534.53px] 
-      flex flex-col gap-[32px]
+      flex flex-col items-center lg:items-start gap-[32px]
     ">
           {/* Heading and paragraph */}
           <div
@@ -1162,7 +1158,7 @@ const SME = () => {
           {/* List items and button */}
           <div
             className="
-        flex flex-col items-center sm:items-start lg:items-start 
+        flex flex-col items-center  lg:items-start 
         gap-[48px] h-[255.53px]
       ">
             {/* Checkmark list */}
@@ -1375,11 +1371,11 @@ const SME = () => {
             zIndex: 1, // Ensures content stays above background
           }}
           className="overflow-hidden h-[682px] sm:h-[750px] lg:h-[440px] 
-               w-[90%] sm:w-[700px] lg:w-[90%] 
+               w-[90%]  lg:w-[90%] 
                rounded-[32px] py-[32px] sm:py-[48px] lg:py-[64px] 
                px-[20px] sm:px-[32px] lg:px-[64px] 
                gap-[48px] sm:gap-[80px] lg:gap-[133px] 
-               flex flex-col lg:flex-row bg-[#F9FAFB] justify-center items-center relative z-10">
+               flex flex-col lg:flex-row bg-[#F9FAFB] justify-center lg:items-center relative z-10">
           <div
             className="absolute inset-0 z-[-1]"
             style={{
@@ -1438,7 +1434,7 @@ const SME = () => {
               </button>
             </div>
           </div>
-          <div className="w-[310px] sm:w-[600px] sm:h-[500px] lg:h-[312px] lg:w-[468px] h-[312px]">
+          <div className="w-full sm:w-[600px] lg:h-[312px] lg:w-[468px] h-[312px]"> {/*  sm:h-[500px] */}
             <img
               src={smeCard5}
               alt=""

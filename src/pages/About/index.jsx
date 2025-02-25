@@ -35,6 +35,7 @@ import Layer from "../../assets/png/layer.png";
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const aboutRef = useRef(null);
   const missionRef = useRef(null);
@@ -139,7 +140,17 @@ const About = () => {
     }
   }, [state]);
 
-  const isMobile = window.innerWidth < 768;
+   useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
 
   return (
     <div
@@ -148,7 +159,7 @@ const About = () => {
       id="about"
     >
     <section 
-        className='h-full w-full overflow-hidden outline-none lm:h-[120vh]' >
+        className='h-full w-full overflow-hidden outline-none md:h-[100vh] lg:h-[120vh]' >
         <div
           style={{
             backgroundImage: `url(${
@@ -159,9 +170,9 @@ const About = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[786px] lm:h-[120vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="h-[786px] md:h-[100vh] lg:h-[120vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0  md:pt-[96px]  max-sm:pt-[30%]" //[694px]
         >
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3.5%%]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[3.5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p               
                 style={{fontWeight:450}}
@@ -203,31 +214,15 @@ const About = () => {
               </p>
             </div>
 
-            {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-80%]'>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
-
           </div>
           <img
             src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
             alt="Family"
             data-aos="fade-left"
+            loading="lazy"
             data-aos-duration="1000"
             // data-aos-once="false"
-            className={`${isMobile ? "top-12 -right-14" : "lm:-right-24 lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
+            className={`${isMobile ? "top-12 -right-14" : "lm:-right-24 lg:top-[35%]"} animate__animated relative lg:w-[57%] `} 
             //top-8
             />
         </div>
@@ -388,7 +383,7 @@ const About = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="h-auto lm:h-[916px] py-[56px] lg:py-[112px] px-5 lm:px-[87px] grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-5 lm:gap-[33px]"
+        className="h-auto lg:h-[916px] py-[56px] lg:py-[112px] px-5 lm:px-[87px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lm:gap-[33px]"
       >
         <div className="flex flex-col gap-5">
           <p className="font-grava font-medium text-[28px] lm:text-[60px] leading-[35px] lm:leading-[72px] text-[#002244]">
