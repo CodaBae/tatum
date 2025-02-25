@@ -258,7 +258,7 @@ const Personal = () => {
 
       <div
         ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] ">
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] justify-center py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Saver}
