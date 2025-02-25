@@ -12,6 +12,7 @@ import CBN from "../../../assets/svg/cbn_logo.svg";
 import NDIC from "../../../assets/png/ndic.png";
 import Plus from "../../../assets/svg/plus.svg";
 import Minus from "../../../assets/svg/minus.svg";
+import HeroSection from '../../../components/HeroSection';
 
 const AccountBusiness = () => {
     const [openTabOne, setOpenTabOne] = useState(false)
@@ -76,8 +77,19 @@ const AccountBusiness = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-        <section 
-
+        <section className="w-full h-full">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
+                title={`Take Your Business<br>To <span class='font-bold'>The Next Level</span>`}
+                content={"We provide startups, small and medium scale businesses with reliable financial solutions and support  for smooth business operations."} 
+                link={"/personal"} 
+                sectionName={"savings"} 
+                mainImgMobile={Smiling} 
+                mainImgDesktop={Smiling} 
+            />
+      </section>
+        {/* <section 
             className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
             <div 
                 style={{
@@ -100,22 +112,7 @@ const AccountBusiness = () => {
                             We provide startups, small and medium scale businesses with reliable 
                             financial solutions and support  for smooth business operations.
                         </p>
-                        {/* <div className='flex items-center mt-[12px] gap-3'>
-                            <button
-                                className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                type='button'
-                                onClick={() => sectionRef.current.scrollIntoView({ behavior: 'smooth' })}
-                            >
-                                <p 
-                                    className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                >
-                                    Learn more
-                                </p>
-                                <BsArrowRight size={100}  
-                                    className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
-                                />
-                            </button>
-                        </div> */}
+                      
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-51%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
@@ -149,7 +146,7 @@ const AccountBusiness = () => {
                     className={`animate__animated animate__fadeInRight relative top-[30%]  md:-right-[45%] lg:right-[15%] md:top-[20%] md:w-[55%] `} 
                 />
             </div>
-        </section>
+        </section> */}
 
         <section
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'

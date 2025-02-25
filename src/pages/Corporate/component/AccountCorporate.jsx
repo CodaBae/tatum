@@ -12,6 +12,7 @@ import CBN from "../../../assets/svg/cbn_logo.svg";
 import NDIC from "../../../assets/png/ndic.png";
 import Plus from "../../../assets/svg/plus.svg";
 import Minus from "../../../assets/svg/minus.svg";
+import HeroSection from '../../../components/HeroSection';
 
 
 const AccountCorporate = () => {
@@ -77,7 +78,20 @@ const AccountCorporate = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-        <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
+        
+        <section className="w-full h-full">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"} 
+                title={`Banking Excellence For <span class='font-bold'>Large Corporations</span>`}
+                content={"Experience comprehensive financial solutions designed for large corporations and multinationals."} 
+                link={"/personal"} 
+                sectionName={"savings"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png"} 
+                mainImgDesktop={Building} 
+            />
+        </section>
+        {/* <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
         <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"})`,
@@ -92,7 +106,7 @@ const AccountCorporate = () => {
                             className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                         >
                             Banking  Excellence For  <span className='font-bold'>Large Corporations</span>
-                            {/* <br/> */}
+                            {/* <br/> 
                         </p>
                         <p 
                             className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[629px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
@@ -114,7 +128,7 @@ const AccountCorporate = () => {
                                     className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </button>
-                        </div> */}
+                        </div> 
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-68%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
@@ -159,7 +173,7 @@ const AccountCorporate = () => {
                     />
                 }
             </div>
-        </section>
+        </section> */}
 
         <section
             ref={sectionRef}

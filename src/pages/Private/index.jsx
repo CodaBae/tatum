@@ -12,6 +12,7 @@ import Golfer from "../../assets/png/golfer.png";
 import Dining from "../../assets/png/dining.png";
 import Airplane from "../../assets/png/airplane.png";
 import Cards from "../../assets/png/atm_cards.png";
+import HeroSection from "../../components/HeroSection";
 
 const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(true);
@@ -72,7 +73,22 @@ const Private = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
+
+      <section className="w-full h-full ">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"} 
+          title={`Exclusive. Personalized. <br/> <span class="font-bold ">Exceptional </span>`}
+          content={"With privileged access to premium banking services, bespoke investment strategies, and the prestige of Tatum Private Banking, we keep you smiling—every step of the way."} 
+          link={"/private"} 
+          sectionName={"wealth"} 
+          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"} 
+          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"} 
+          btnText={"Find out more"} 
+        />
+      </section>
+
+      {/* <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -153,22 +169,7 @@ const Private = () => {
               </p>
             </div>
 
-            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-43%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
+          
 
           </div>
           <img
@@ -184,7 +185,7 @@ const Private = () => {
             data-aos-once="false"
           />
         </div>
-      </section>
+      </section> */}
 
       <div
         ref={wealthRef}

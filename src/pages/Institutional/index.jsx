@@ -13,6 +13,7 @@ import Minus from "../../assets/svg/minus.svg";
 import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
+import HeroSection from "../../components/HeroSection";
 
 const Institutional = () => {
     const [openTabOne, setOpenTabOne] = useState(true)
@@ -71,7 +72,21 @@ const Institutional = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <section className="w-full overflow-hidden outline-none  lg:h-[120vh]">
+      <section className="w-full h-full ">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"} 
+          title={` Empowering <br /> Institutions with <br /> <span class="font-bold">Financial Excellence</span>`}
+          content={"At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailored made banking solutions."} 
+          link={"/institutional"} 
+          sectionName={"public"} 
+          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/institutional_tatum_1_1_h6pymk.webp"} 
+          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281418/institutional_mobile_uife0m.png"} 
+          btnText={"Find out more"} 
+        />
+      </section>
+
+      {/* <section className="w-full overflow-hidden outline-none  lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -110,7 +125,7 @@ const Institutional = () => {
                   }
                 >
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    {/* Get Started */}
+                    {/* Get Started 
                     Find out more
                   </p>
                   <BsArrowRight
@@ -145,22 +160,7 @@ const Institutional = () => {
                   </p>
               </p>
             </div>
-            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-24.9%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
+     
           </div>
           {
             isMobile ? 
@@ -185,7 +185,7 @@ const Institutional = () => {
             />
           }
         </div>
-      </section>
+      </section> */}
 
       <section 
         ref={publicRef}

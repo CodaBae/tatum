@@ -10,6 +10,7 @@ import News from './components/News';
 import Press from './components/Press';
 import FormDowload from './components/FormDowload';
 import Media from './components/Media';
+import HeroSection from '../../components/HeroSection';
 
 const Resources = () => {
   const [openDropdownOne, setOpenDropdownOne] = useState(false)
@@ -55,8 +56,20 @@ const Resources = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={resourcesRef}>
+       <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
+                title={` <span class="font-bold"> Media & Resources<span> `}
+                content={'Learn about everything, from customer\'s success stories to getting informed with our latest news.'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"} 
+            />
+      </section>
 
-      <section className='h-full w-full outline-none'>
+      {/* <section className='h-full w-full outline-none'>
         <div 
             style={{
                 backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
@@ -104,22 +117,7 @@ const Resources = () => {
                     </p>
                 </p>
               </div>
-              {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-85.9%]">
-              <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-              </div> */}
+
           </div>
           <img 
             src="https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"
@@ -131,7 +129,7 @@ const Resources = () => {
           />
        
         </div>
-      </section>
+      </section> */}
       
       <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
         <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>

@@ -10,6 +10,7 @@ import Minus from "../../assets/svg/minus.svg";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
+import HeroSection from '../../components/HeroSection';
 
 const Help = () => {
   const [text, setText] = useState("")
@@ -45,9 +46,22 @@ const Help = () => {
   }
   return (
     <div className='w-full'>
-      <section 
+      <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
+                title={` <span class="font-bold">Help & Support<span> `}
+                content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"} 
+            />
+      </section>
+      
+      {/* <section 
 
-className='h-full w-full outline-none '>
+          className='h-full w-full outline-none '>
         <div 
           style={{
               backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
@@ -58,7 +72,7 @@ className='h-full w-full outline-none '>
         >
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-0 z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                {/* lm:pt-[50px] */}
+                {/* lm:pt-[50px] 
                   <p 
                       className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
                       >
@@ -99,22 +113,6 @@ className='h-full w-full outline-none '>
                 </p>
               </div>
 
-            {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-138%]">
-          <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                We are licensed by the Central Bank of Nigeria
-                <img
-                  src={CBN}
-                  alt="CBN"
-                  className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                />
-                All deposits are insured by
-                <img
-                  src={NDIC}
-                  alt="NDIC"
-                  className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                />
-              </p>
-            </div> */}
               
             
           </div>
@@ -144,7 +142,7 @@ className='h-full w-full outline-none '>
           }
 
         </div>
-      </section>
+      </section> */}
 
       <section className='flex flex-col items-center justify-center pt-[56px] lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
         <div className='w-10/12 lm:w-[878px] h-[52px] lm:h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>

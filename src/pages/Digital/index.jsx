@@ -17,6 +17,7 @@ import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 import { useNavigate } from "react-router-dom";
+import HeroSection from '../../components/HeroSection';
 
 const Digital = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -47,8 +48,21 @@ const Digital = () => {
 
   return (
     <div className='overflow-hidden'>
+        <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
+                title={`Seamless. Secure. <span class='font-bold'>Convenient. </span> `}
+                content={'Whether you\'re at home, at work, or on the go, our digital banking solutions are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling".'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
+                btnText={"Find out more"} 
+            />
+      </section>
 
-       <section 
+       {/* <section 
             className='h-full w-full outline-none  lg:h-[798px]'
         >
             <div 
@@ -87,7 +101,7 @@ const Digital = () => {
                                     className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
                                 
                                 >
-                                    {/* Get started */}
+                                    {/* Get started 
                                     Find out more
                                 </p>
                                 <BsArrowRight size={100}  
@@ -132,7 +146,7 @@ const Digital = () => {
                     data-aos-once="false"
                 />
             </div>
-        </section>
+        </section> */}
 
         <section ref={digiRef} className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>

@@ -5,6 +5,7 @@ import NDIC from "../../assets/svg/ndic.svg";
 import CBN from "../../assets/svg/cbn_logo.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
+import HeroSection from '../../components/HeroSection';
 
 const InternetBanking = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
@@ -31,7 +32,20 @@ const InternetBanking = () => {
     
   return (
     <div className='w-full'>
-        <section className='h-full w-full outline-none '>
+        <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
+                title={`Say hello to <br /> banking <span class='font-[700]'> on the go</span> `}
+                content={'Your money, your way. Experience banking that fits your lifestyle, not the other way around.'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
+            />
+      </section>
+
+        {/* <section className='h-full w-full outline-none '>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
@@ -89,7 +103,7 @@ const InternetBanking = () => {
                 data-aos-once="false"
             />
             </div>
-        </section>
+        </section> */}
 
         <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col lm:flex-row items-start lm:items-center gap-[40px] lm:gap-[150px]'>
             <div data-aos="fade-right">

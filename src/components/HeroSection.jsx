@@ -50,15 +50,15 @@ import { useNavigate } from 'react-router-dom';
                 <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[-6%]">
                 <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
                     <p
-                    className={`${"animate__animated animate__fadeInUp "
-                    } lg:w-[450px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                        className={`${"animate__animated animate__fadeInUp " //w-[450px]
+                        } lg:w-[831px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
                     >
                         <p dangerouslySetInnerHTML={{ __html: title }}/> {/* I used this because some header have break rule */}
                     </p>
                     <p
-                    className={`${
-                    "animate__animated animate__fadeInUp animate__delay-08s"
-                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                        className={`${
+                        "animate__animated animate__fadeInUp animate__delay-08s"
+                        } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     >
                         {content}
                     </p>
@@ -67,23 +67,27 @@ import { useNavigate } from 'react-router-dom';
                             "animate__animated animate__fadeInUp animate__delay-10s"
                         }`}
                     >
-                    <button
-                        className={`transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
-                        type="button"
-                        onClick={() => {
-                            navigate(link, {
-                                state: { section: `${sectionName}`}
-                            }), window.scrollTo(0, 0)}
+                        {
+                            btnText ?
+                                <button
+                                    className={`transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5`}
+                                    type="button"
+                                    onClick={() => {
+                                        navigate(link, {
+                                            state: { section: `${sectionName}`}
+                                        }), window.scrollTo(0, 0)}
+                                    }
+                                >
+                                    <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                                        {btnText}
+                                    </p>
+                                    <BsArrowRight
+                                        size={100}
+                                        className="mt-[2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]"
+                                    />
+                                </button>
+                            : null
                         }
-                    >
-                        <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                            {btnText}
-                        </p>
-                        <BsArrowRight
-                            size={100}
-                            className="mt-[2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]"
-                        />
-                    </button>
 
             
                     </div>
@@ -108,7 +112,7 @@ import { useNavigate } from 'react-router-dom';
                         <img
                             src={NDIC}
                             alt="NDIC"
-                            className="flex justify-start lm:inline-block mt-1 lg:mt-0 h-[23px] w-[21px] md:h-[28px]"
+                            className="flex justify-start lm:inline-block mt-1 lg:mt-0  h-[20px] w-[37px] md:w-[50px] md:h-[25px]" // h-[23px] w-[21px] md:h-[28px]
                         />
                         </div>
                     </p>
@@ -124,6 +128,7 @@ import { useNavigate } from 'react-router-dom';
                             data-aos-duration="1000"
                             data-aos-once="false"
                             src={mainImgMobile}
+                            loading='lazy'
                             alt="Family"
                             className={`relative md:right-14 -bottom-12 lm:right-24 top-28 -right-6 h-[400.01px]`}
                         />
@@ -135,6 +140,7 @@ import { useNavigate } from 'react-router-dom';
                         data-aos-once="false"
                         src={mainImgDesktop}
                         alt="MainImg"
+                        loading='lazy'
                         className={`relative md:right-14 bottom-0 lm:right-24 top-28 -right-5 h-[560.01px]  lg:right-[25%] lg:top-[3.5%] lm:h-[80vh]`}
                     />
                 }

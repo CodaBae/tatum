@@ -12,6 +12,7 @@ import CBN from "../../../assets/svg/cbn_logo.svg";
 import NDIC from "../../../assets/png/ndic.png";
 import Plus from "../../../assets/svg/plus.svg";
 import Minus from "../../../assets/svg/minus.svg";
+import HeroSection from '../../../components/HeroSection';
 
 const AccountPersonal = () => {
     const [openTabOne, setOpenTabOne] = useState(false)
@@ -66,7 +67,22 @@ const AccountPersonal = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-        <section 
+
+    <section className="w-full h-full">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
+          title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
+          content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
+          link={"/personal"} 
+          sectionName={"savings"} 
+          mainImgMobile={Alhaja} 
+          mainImgDesktop={Alhaja} 
+        />
+      </section>
+
+
+        {/* <section 
             className='h-full w-full overflow-hidden outline-none lg:h-[110vh]'>
             <div 
                 style={{
@@ -90,22 +106,7 @@ const AccountPersonal = () => {
                             Experience banking that keeps you smiling with our range 
                             of savings and current accounts, cards, and loans.
                         </p>
-                        {/* <div className='flex items-center mt-[12px] gap-3'>
-                            <a
-                                className={`animate__animated animate__fadeInUp  block animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                type='button'
-                                href='#section'
-                            >
-                                <p 
-                                className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                >
-                                    Learn more
-                                </p>
-                                <BsArrowRight size={100}  
-                                    className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
-                                />
-                            </a>
-                        </div> */}
+                       
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-81.5%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
@@ -150,7 +151,7 @@ const AccountPersonal = () => {
                     />
                 }
             </div>
-        </section>
+        </section> */}
 
         <section
             id='section'

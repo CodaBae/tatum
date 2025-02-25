@@ -5,6 +5,7 @@ import Download from "../../assets/svg/download.svg";
 
 import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
+import HeroSection from '../../components/HeroSection';
 
 const Investors = () => {
 
@@ -18,8 +19,20 @@ const Investors = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={resourcesRef}>
+         <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
+                title={` <span class="font-bold"> Investor Relations<span> `}
+                content={'Get the latest financial news, reports, and information for investors and shareholders.'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739872457/investors_udnzgp.png"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739872457/investors_udnzgp.png"} 
+            />
+      </section>
 
-        <section className='h-full w-full outline-none '>
+        {/* <section className='h-full w-full outline-none '>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
@@ -67,22 +80,7 @@ const Investors = () => {
                         </p>
                     </p>
                 </div>
-                {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-85.9%]">
-                <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                    We are licensed by the Central Bank of Nigeria
-                    <img
-                    src={CBN}
-                    alt="CBN"
-                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                    />
-                    All deposits are insured by
-                    <img
-                    src={NDIC}
-                    alt="NDIC"
-                    className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                    />
-                </p>
-                </div> */}
+       
             </div>
             <img 
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739872457/investors_udnzgp.png"
@@ -94,7 +92,7 @@ const Investors = () => {
             />
         
             </div>
-        </section>
+        </section> */}
         
         <section className='bg-[#fff] pt-[56px] lg:pt-[70px] pb-[56px] lg:pb-[70px] px-5 lg:px-[56px] flex flex-col gap-2'>
             <div className='bg-[#FCFCFD] rounded-[16px] px-4 lm:px-[32px] p-[32px] gap-[32px] flex flex-col'>

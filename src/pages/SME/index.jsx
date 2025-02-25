@@ -31,6 +31,7 @@ import "./styles.css";
 import "./card.css";
 
 import Lenis from "@studio-freight/lenis";
+import HeroSection from "../../components/HeroSection";
 
 const SME = () => {
  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -231,7 +232,20 @@ const SME = () => {
 
   return (
     <div ref={smeRef} className="">
-      <section className="h-full w-full outline-none lg:h-[120vh]">
+      <section className="w-full h-full">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"} 
+          title={`Powering Your <br /> Business <span class="font-bold ">Supporting Your Dreams</span>`}
+          content={"At Tatum Bank, we go beyond banking; we partner with you to unlock opportunities, drive growth, and ensure your success."} 
+          link={"/business"} 
+          sectionName={"account"} 
+          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp"} 
+          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp"} 
+          btnText={"Find out more"}
+        />
+      </section>
+      {/* <section className="h-full w-full outline-none lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -326,7 +340,7 @@ const SME = () => {
             />
           }
         </div>
-      </section>
+      </section> */}
 
       {/* CARDS */}
 

@@ -16,6 +16,7 @@ import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
+import HeroSection from "../../components/HeroSection";
 
 const Corporate = () => {
   const [openTabOne, setOpenTabOne] = useState(true)
@@ -90,7 +91,21 @@ const Corporate = () => {
 
   return (
     <div className="w-full overflow-hidden" >
-      <section className="h-full w-full overflow-hidden outline-none lg:h-[120vh]">
+      <section className="w-full h-full">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"} 
+          title={`Powering Your <br /> <span class="font-bold">Business Growth</span>`}
+          content={"At Tatum Bank, we understand that businesses thrive when they have the right financial partner—one that offers tailored solutions, expert insights, and seamless banking services to drive growth."} 
+          link={"/corporate"} 
+          sectionName={"corp"} 
+          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
+          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
+          btnText={"Find out more"}
+        />
+      </section>
+
+      {/* <section className="h-full w-full overflow-hidden outline-none lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -185,7 +200,7 @@ const Corporate = () => {
             />
           }
         </div>
-      </section>
+      </section> */}
 
       <div ref={corpRef} className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lm:pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">

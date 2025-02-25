@@ -32,6 +32,7 @@ import Girl from "../../assets/png/yellow_girl.png";
 import Unique from "../../assets/png/unique_bg.png";
 import HeadShot from "../../assets/png/headshot_mock_up.png";
 import Layer from "../../assets/png/layer.png";
+import HeroSection from "../../components/HeroSection";
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -158,8 +159,23 @@ const About = () => {
       ref={aboutRef}
       id="about"
     >
-    <section 
-        className='h-full w-full overflow-hidden outline-none md:h-[100vh] lg:h-[120vh]' >
+      <section
+        className="w-full h-full"
+      >
+        <HeroSection 
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"} 
+          title={` Welcome to <br /> <span class="font-bold">Tatum Bank</span>`}
+          content={"We are more than a financial institution—we are a trusted partner dedicated to safeguarding your financial wellbeing."} 
+          link={"/personal"} 
+          sectionName={"savings"} 
+          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp"} 
+          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp"} 
+        />
+      </section>
+    {/* <section 
+        className='h-full w-full overflow-hidden outline-none md:h-[100vh] lg:h-[120vh]' 
+      >
         <div
           style={{
             backgroundImage: `url(${
@@ -226,7 +242,7 @@ const About = () => {
             //top-8
             />
         </div>
-      </section>
+      </section> */}
 
       <section className="px-5 lm:px-[56px]" ref={missionRef}>
         <div className=" flex flex-col md:flex-row items-start justify-between ">

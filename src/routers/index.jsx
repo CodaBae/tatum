@@ -25,7 +25,7 @@ import Digital from "../pages/Digital";
 import Investors from "../pages/Investors";
 import Contact from "../pages/Contact";
 import InternetBanking from "../pages/Internet";
-import TestHero from "../pages/TestHero";
+
 
 export default function Routers() {
   return (
@@ -55,7 +55,7 @@ export default function Routers() {
         <Route path="terms" element={<Terms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
-        <Route path="/test" element={<TestHero/>} />
+
       </Route>
     </Routes>
   );

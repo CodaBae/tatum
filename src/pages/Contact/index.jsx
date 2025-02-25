@@ -12,6 +12,7 @@ import NDIC from "../../assets/png/ndic.png";
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
 import { useLocation } from 'react-router-dom'
+import HeroSection from '../../components/HeroSection'
 
 const Contact = () => {
     const [name, setName] = useState("")
@@ -36,8 +37,20 @@ const Contact = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={contactRef}>
+        <section className="w-full h-full ">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
+                title={` <span class="font-bold">Contact Us<span> `}
+                content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
+                link={"/digital"} 
+                sectionName={"digi"} 
+                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
+            />
+      </section>
 
-        <section 
+        {/* <section 
             className='h-full w-full outline-none'
         >
             <div 
@@ -87,22 +100,7 @@ const Contact = () => {
                             </p>
                         </p>
                     </div>
-                    {/* <div className="hidden lm:flex items-start absolute lg:bottom-[-94.9%]">
-                        <p className="text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 ">
-                            We are licensed by the Central Bank of Nigeria
-                            <img
-                            src={CBN}
-                            alt="CBN"
-                            className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                            />
-                            All deposits are insured by
-                            <img
-                            src={NDIC}
-                            alt="NDIC"
-                            className="inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]"
-                            />
-                        </p>
-                    </div> */}
+                 
                 </div>
                 {
                     isMobile ? 
@@ -128,7 +126,7 @@ const Contact = () => {
 
                 }
             </div>
-        </section>
+        </section> */}
 
         <section className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[175px]  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
             <div data-aos="fade-right" className="hidden md:block" >

@@ -965,7 +965,6 @@ const Header = () => {
           onClick={() => {
             navigate("/help");
             window.scrollTo(0, 0);
-            handleClose();
           }}
         >
           Help & Support

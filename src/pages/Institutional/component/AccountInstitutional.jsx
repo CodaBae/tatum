@@ -13,6 +13,7 @@ import CBN from "../../../assets/svg/cbn_logo.svg";
 import NDIC from "../../../assets/png/ndic.png";
 import Plus from "../../../assets/svg/plus.svg";
 import Minus from "../../../assets/svg/minus.svg";
+import HeroSection from '../../../components/HeroSection';
 
 const AccountInstitutional = () => {
     const [openTabOne, setOpenTabOne] = useState(false)
@@ -69,7 +70,20 @@ const AccountInstitutional = () => {
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
 
-        <section 
+        <section className="w-full h-full">
+            <HeroSection
+                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
+                title={`Empowering <br /> Institutions With <br /> <span class='font-bold'>Financial Solutions</span>`}
+                content={"Trusted banking solutions for NGOs, insurance companies, and financial institutions."} 
+                link={"/personal"} 
+                sectionName={"savings"} 
+                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"} 
+                mainImgDesktop={TempleMobile} 
+            />
+        </section>
+
+        {/* <section 
             className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'
         >
             <div 
@@ -95,22 +109,7 @@ const AccountInstitutional = () => {
                             Trusted banking solutions for NGOs, 
                             insurance companies, and financial institutions.
                         </p>
-                        {/* <div className='flex items-center mt-[12px] gap-3'>
-                            <button
-                                className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                type='button'
-                                onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
-                            >
-                                <p 
-                                className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                >
-                                    Learn more
-                                </p>
-                                <BsArrowRight size={100}  
-                                    className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
-                                />
-                            </button>
-                        </div> */}
+                     
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-40%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
@@ -155,7 +154,7 @@ const AccountInstitutional = () => {
                     />
                 }
             </div>
-        </section>
+        </section> */}
         
         <section
             ref={sectionRef}
