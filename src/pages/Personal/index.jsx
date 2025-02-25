@@ -30,6 +30,7 @@ import Mobile from "../../assets/svg/mobile.svg";
 import Ussd from "../../assets/svg/ussd_darker.svg";
 
 import "./css/Dot.css";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Personal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -117,7 +118,7 @@ const Personal = () => {
 
   return (
     <div className="overflow-hidden">
-      <section className="h-full w-full outline-none  lg:h-[100vh]">
+      <section className="h-full w-full outline-none  lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -128,7 +129,7 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] h-[796px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
+          className="lm:h-[120vh] h-[796px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[10%]" //[694px]
         >
           <div className="w-full  flex flex-col items-start relative pt-[64px] lm:pt-[5%] z-30 gap-[64px] lg:gap-[69px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -136,17 +137,17 @@ const Personal = () => {
               <p
                 style={{ fontWeight: 450 }}
                 className={`animate__animated animate__fadeInUp  lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}>
-                Personalized banking
-                <br />  that {" "}
+                Personalized <br />
+                Banking That {" "}
                 <span className="font-bold ">
-                  keeps you smiling
+                  Keeps You Smiling
                   {/* <br /> you smiling */}
                 </span>
               </p>
 
               {/* Second Text */}
               <p
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-[90%] md:w-[265px] lg:w-[737px] font-[300]   text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[90%] md:w-[265px] lg:w-[702px] font-[300]   text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
                 Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy.
               </p>
 
@@ -160,8 +161,8 @@ const Personal = () => {
                     navigate("/personal", { state: { section: "savings" } },window.scrollTo(0, 0))
                   }
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Find Out More
+                  <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    Find out more
                   </p>
                   <BsArrowRight
                     size={100}
@@ -171,7 +172,7 @@ const Personal = () => {
               </div>
             </div>
 
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-51%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-32%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                 <p className="flex items-center gap-1">
                   We are licensed by the Central Bank of Nigeria
@@ -244,7 +245,7 @@ const Personal = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            className={`animate__animated relative -right-12 top-[0%] lm:right-[25%]  lm:top-[5%] lg:w-[90%] lg:h-[954px] `}
+            className={`animate__animated relative -right-12 top-[0%] lm:right-[25%]  lm:top-[5%] lg:w-[90%] lg:h-[754px] `}
           />
           }
         </div>
@@ -281,9 +282,9 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
-              Find Out More
+              Find out more
             </p>
             <BsArrowRight
               size={100}
@@ -324,13 +325,13 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
-              Find Out More
+              Find out more
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -345,7 +346,7 @@ const Personal = () => {
 
       <div
         ref={fixedRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={
@@ -372,17 +373,18 @@ const Personal = () => {
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
-            onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-            }>
-            <p className="transition-colors duration-500 ease-in-out font-medium lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
-              To be Available Soon
+            // onClick={() =>
+            //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
+            // }
+          >
+            <p className="font-[500] text-[18px] font-grava text-[#B0B0B0] ">
+              To be available soon
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl font-medium ease-in-out w-5 h-5 text-[#B0B0B0]"
             />
           </button>
         </div>
@@ -449,8 +451,8 @@ const Personal = () => {
               onClick={() =>
                 navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#98A2B3]">
-                To be Available Soon
+              <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#98A2B3]">
+                To be available soon
               </p>
               <BsArrowRight
                 size={100}
@@ -610,13 +612,14 @@ const Personal = () => {
         </div>
 
         <button
-          className="transition-all duration-500 ease-in-out px-5 h-[44px] lg:h-[64px] flex items-center justify-center p-4 border-[2px] border-[#EDEDED] rounded-tl-lg rounded-br-lg bg-[#EDEDED] group hover:bg-[#fdf7e6]"
-          onClick={() =>
-            navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-          }>
-          <p className="transition-colors duration-500 ease-in-out text-[#B0B0B0] font-medium font-grava group-hover:text-[#002244] text-sm lg:text-base">
+          className="px-5 h-[44px] lg:h-[64px] flex items-center justify-center opacity-30 p-4 border border-[#002244] rounded-tl-lg rounded-br-lg "
+          // onClick={() =>
+          //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
+          // }
+        >
+          <p className=" text-[#002244] font-[500] font-grava text-sm lm:leading-6 lg:text-base">
             {/* Get yours today */}
-            To be Available Soon
+            To be available soon
           </p>
         </button>
       </div>
@@ -670,13 +673,13 @@ const Personal = () => {
             onClick={() =>
               navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started now */}
-              Find Out More
+              Find out more
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -697,22 +700,24 @@ const Personal = () => {
               zIndex: 1, // Ensures content stays above background
             }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
-              <p className="font-grava font-medium text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>
-              <p className="font-grava font-[300] text-sm text-16 lm:text-[18px] lg:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p className="font-grava font-[400] text-sm  lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
                 className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
-                  navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-                }>
-                <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  // navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
+                  navigate("/contact", { state: { section: "contact" } },window.scrollTo(0, 0))
+                }
+              >
+                <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   {/* Open an account */}
-                  Find Out More
+                  Contact us
                 </p>
                 <BsArrowRight
                   size={100}

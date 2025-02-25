@@ -39,7 +39,7 @@ const Footer = () => {
             onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
 
           >
-            <p className="font-grava text-[#FFCC33] text-base group-hover:text-[#002244]">
+            <p className="font-grava text-[#FFCC33] font-[500] lg:text-[18px] group-hover:text-[#002244]">
                 Download form
             </p>
           </button>
@@ -66,8 +66,8 @@ const Footer = () => {
               <img src={Facebook} alt="Facebook" className="cursor-pointer" />
             </div>
             <div className="flex flex-col gap-2">
-              <img src={Google} alt="Google" className="w-[140px] cursor-pointer" />
-              <img src={Apple} alt="Apple" className="w-[140px] cursor-pointer" />
+              <img src={Google} alt="Google" className="w-[140px] cursor-pointer opacity-30" />
+              <img src={Apple} alt="Apple" className="w-[140px] cursor-pointer opacity-30" />
             </div>
           </div>
           <div className="lg:w-[1044px] grid grid-cols-2  lg:flex items-start gap-[40px] lg:gap-[96px]">

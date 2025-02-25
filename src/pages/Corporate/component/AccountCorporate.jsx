@@ -68,7 +68,7 @@ const AccountCorporate = () => {
         <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
         <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -83,7 +83,7 @@ const AccountCorporate = () => {
                             {/* <br/> */}
                         </p>
                         <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[629px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Experience comprehensive financial solutions designed for large corporations and multinationals.
                         </p>
@@ -104,7 +104,7 @@ const AccountCorporate = () => {
                             </button>
                         </div> */}
                     </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-28%]" style={{zIndex:'99999'}}>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-68%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                             <p className="flex items-center gap-2">
                             We are licensed by the Central Bank of Nigeria
@@ -129,14 +129,6 @@ const AccountCorporate = () => {
                             </p>
                         </p>
                     </div>
-                    {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-28%]'>
-                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 '>
-                            We are licensed by the Central Bank of Nigeria 
-                            <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                            All deposits are insured by
-                            <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
-                        </p>
-                    </div> */}
                 </div>
                 {
                     isMobile ?
@@ -151,7 +143,7 @@ const AccountCorporate = () => {
                     <img 
                         src={Building} 
                         alt='Building' 
-                        className={`animate__animated animate__fadeInRight relative lm:right-[13%] lm:top-[10%] lg:w-[55%] `} 
+                        className={`animate__animated animate__fadeInRight relative lm:right-[18%] lm:top-[1%] lg:w-[55%] `} 
                     />
                 }
             </div>
@@ -162,7 +154,7 @@ const AccountCorporate = () => {
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
-                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
+                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
                 <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                     We offer secure online banking, 
                     convenient client centre services, 
@@ -170,20 +162,20 @@ const AccountCorporate = () => {
                 </p>
             </div>
 
-            <div className='flex flex-col lm:flex-row items-center gap-[50px]'>
+            <div className='flex flex-col lm:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:leading-[27px] tracking-[0.2%]'>Email your completed form to 📩<span className='underline'> accounts@tatumbank.com</span> </p>
+                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 
@@ -192,7 +184,7 @@ const AccountCorporate = () => {
                 type='button'
                 onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456268/TBL_Corporate_Form_1_eeem6o.pdf", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
+                <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
@@ -201,7 +193,7 @@ const AccountCorporate = () => {
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
                 <p className='ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]'>WHY CHOOSE US</p>
-                <p className='font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum <br />  Bank?</p>
+                <p className='font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum <br />  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>

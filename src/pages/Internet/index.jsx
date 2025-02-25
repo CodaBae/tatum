@@ -34,7 +34,7 @@ const InternetBanking = () => {
         <section className='h-full w-full outline-none '>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -43,7 +43,7 @@ const InternetBanking = () => {
             <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                     <p 
-                        className={`animate__animated animate__fadeInUp font-medium lm:w-[692px] capitalize font-grava text-[#002244]  text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                        className={`animate__animated animate__fadeInUp font-[500] lm:w-[692px] capitalize font-grava text-[#002244]  text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                     >
                         Say hello to <br /> banking <span className='font-[700]'> on the go</span>
                     </p>
@@ -54,7 +54,7 @@ const InternetBanking = () => {
                     </p>
                     
                 </div>
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-75.9%]" style={{zIndex:'99999'}}>
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-68.9%]" style={{zIndex:'99999'}}>
                     <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                         <p className="flex items-center gap-2">
                         We are licensed by the Central Bank of Nigeria
@@ -83,7 +83,7 @@ const InternetBanking = () => {
             <img 
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"
                 alt='Biz' 
-                className={`animate__animated  relative -left-5 lm:right-10 lm:left-auto w-full lm:w-[689px] top-44 lm:top-24   lm:h-[724px]  `} //top-24  lm:h-[741px] lm:right-52
+                className={`animate__animated  relative -left-5 lm:right-24 lm:left-auto w-full lm:w-[789px] top-28 lm:top-14 h-[386px] lm:h-[724px]  `} //top-24  lm:h-[741px] lm:right-52
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
@@ -101,7 +101,7 @@ const InternetBanking = () => {
             </div>
             <div className='flex flex-col items-start gap-5 lm:gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 items-start">
-                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
+                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
                     <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-left tracking-[0.2%]">
                         We're currently updating our website to serve you better. 
                         This doesn't mean we're not working – we're behind the scenes, 
@@ -121,7 +121,7 @@ const InternetBanking = () => {
                         );
                     }}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
+                    <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
@@ -129,13 +129,13 @@ const InternetBanking = () => {
 
         <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
             <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-                <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
+                <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
 
                 <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
 
                 <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>What do I need to open an account?</p>
+                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>What do I need to open an account?</p>
                     {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownOne && 
@@ -147,7 +147,7 @@ const InternetBanking = () => {
 
                 <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Are there any account opening fees?</p>
+                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Are there any account opening fees?</p>
                     {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownTwo && 
@@ -159,7 +159,7 @@ const InternetBanking = () => {
 
                 <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                     <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Can I manage my account on mobile?</p>
+                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Can I manage my account on mobile?</p>
                     {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     { openDropdownThree && 

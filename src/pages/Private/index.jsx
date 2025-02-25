@@ -59,7 +59,7 @@ const Private = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <section className="h-full w-full overflow-hidden outline-none  lg:h-[100vh]">
+      <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -70,7 +70,7 @@ const Private = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
+          className="lm:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm: max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5 ">
@@ -103,8 +103,8 @@ const Private = () => {
                     );
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Find Out More
+                  <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    Find out more
                   </p>
                   <BsArrowRight
                     size={100}
@@ -165,7 +165,7 @@ const Private = () => {
                 : "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
             }
             alt="Family"
-            className={`animate__animated animate__fadeInRight relative h-[400px] -top-6 -right-2 lm:-right-10 lm:top-10 mt-24 lm:h-[688px] `}
+            className={`animate__animated animate__fadeInRight relative h-[400px] -top-6 -right-2 lm:right-5 lm:top-2 mt-24 lm:h-[688px] `}
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
@@ -189,15 +189,15 @@ const Private = () => {
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] font-[500] tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Wealth Management Advisory
             </p>
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Your Wealth, Our{" "}
                 <span className="block md:inline-block">Expertise.</span>
               </p>
-              <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 At Tatum Bank, we go beyond banking—we curate personalized
                 wealth growth strategies that align with your financial
                 ambitions. Whether you seek investment diversification, estate
@@ -230,9 +230,9 @@ const Private = () => {
                 );
               }}
             >
-              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 {/* Get started */}
-                Find Out More
+                Find out more
               </p>
               <BsArrowRight
                 size={100}
@@ -244,7 +244,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Portfolio Management{" "}
@@ -256,7 +256,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Estate & Legacy Planning{" "}
@@ -268,7 +268,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Real Estate Advisory{" "}
@@ -280,7 +280,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Alternative Investments{" "}
@@ -305,13 +305,13 @@ const Private = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
-              Find Out More
+              Find out more
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -333,7 +333,7 @@ const Private = () => {
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col lm:flex-row items-center gap-2">
-              <p className="font-grava text-[#334E69] font-medium  uppercase text-sm">
+              <p className="font-grava text-[#334E69] font-[500] tracking-[0.25em]  uppercase text-sm">
                 Exclusive Banking Benefits
               </p>
               <div className="w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center">
@@ -342,7 +342,7 @@ const Private = () => {
                 </p>
               </div>
             </div>
-            <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               More Than Banking. A Lifestyle.
             </p>
             <p className="text-sm lm:text-[18px] font-grava font-[300] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
@@ -356,8 +356,8 @@ const Private = () => {
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
           >
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
-              To be Available Soon
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
+              To be available soon
             </p>
             <BsArrowRight
               size={100}
@@ -391,11 +391,11 @@ const Private = () => {
         >
           <div className="flex gap-5 lm:gap-[20px] flex-col">
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-              <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
+              <p className="font-grava text-[#334E69] font-[500] tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
                 Tatum Black Card
               </p>
               <div className="flex flex-col w-full gap-[18px]">
-                <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+                <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                   The Ultimate Symbol of Prestige
                 </p>
                 <p className="text-sm lm:text-[18px] font-grava text-[#002244] font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -419,9 +419,9 @@ const Private = () => {
                 );
               }}
             >
-              <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
                 {/* Apply for the Tatum Black Card */}
-                To be Available Soon
+                To be available soon
               </p>
               <BsArrowRight
                 size={100}
@@ -447,7 +447,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Global Concierge Services
@@ -459,7 +459,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Luxury Travel Perks{" "}
@@ -472,7 +472,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   High Spending Limits{" "}
@@ -484,7 +484,7 @@ const Private = () => {
               <div className="flex flex-col lm:flex-row items-center lm:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-medium text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Exclusive Event Access{" "}
@@ -510,9 +510,9 @@ const Private = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
               {/* Apply for the Tatum Black Card */}
-              To be Available Soon
+              To be available soon
             </p>
             <BsArrowRight
               size={100}
@@ -536,7 +536,7 @@ const Private = () => {
           <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
-          <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
+          <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
             Why Tatum Private <br /> Banking?
           </p>
         </div>
@@ -546,7 +546,7 @@ const Private = () => {
             onClick={handleTabOne}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Exclusive Access
               </p>
               {openTabOne ? (
@@ -566,7 +566,7 @@ const Private = () => {
             onClick={handleTabTwo}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Unparalleled Service
               </p>
               {openTabTwo ? (
@@ -586,7 +586,7 @@ const Private = () => {
             onClick={handleTabThree}
           >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Discreet & Secure
               </p>
               {openTabThree ? (
