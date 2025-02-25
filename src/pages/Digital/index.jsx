@@ -59,6 +59,8 @@ const Digital = () => {
                 mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
                 btnText={"Find out more"} 
+                styleP={{  marginTop: "-25%" }}
+                left={true}
             />
       </section>
 

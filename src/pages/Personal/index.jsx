@@ -69,7 +69,7 @@ const Personal = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-         
+
           // dots: true,
         },
       },
@@ -78,7 +78,6 @@ const Personal = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-      
         },
       },
       {
@@ -86,13 +85,12 @@ const Personal = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-    
+
           // dots: true
         },
       },
     ],
   };
-
 
   useEffect(() => {
     if (state?.section === "faq" && faqRef.current) {
@@ -131,19 +129,30 @@ const Personal = () => {
     <div className="overflow-hidden">
       <section className="w-full h-full ">
         <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"} 
+          bgMobile={
+            "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
+          }
+          bgDesktop={
+            "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
+          }
           title={` Personalized <br />
             Banking That 
             <span class="font-bold ">
               Keeps You Smiling
             </span>`}
-          content={"Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy."} 
-          link={"/personal"} 
-          sectionName={"savings"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"} 
-          btnText={"Find out more"} 
+          content={
+            "Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy."
+          }
+          link={"/personal"}
+          sectionName={"savings"}
+          mainImgDesktop={
+            "https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"
+          }
+          mainImgMobile={
+            "https://res.cloudinary.com/code-idea/image/upload/v1739379132/happy-african_pw87q1.png"
+          }
+          btnText={"Find out more"}
+          styleP={{ height: "130%", marginLeft: "40%", marginTop: "-15%" }}
         />
       </section>
       {/* <section className="h-full w-full outline-none lg:h-[120vh]">
@@ -258,7 +267,8 @@ const Personal = () => {
 
       <div
         ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] ">
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] "
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Saver}
@@ -268,7 +278,8 @@ const Personal = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]">
+          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] lm:ml-1 font-medium   text-[11px] lg:text-[14px] tracking-[0.25em] uppercase text-sm">
               Savings Account
@@ -285,8 +296,13 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-            }>
+              navigate(
+                "/personal/account",
+                { state: { section: "account" } },
+                window.scrollTo(0, 0)
+              )
+            }
+          >
             <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
@@ -307,10 +323,12 @@ const Personal = () => {
 
       <div
         ref={currentRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Current Account
@@ -328,8 +346,13 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-            }>
+              navigate(
+                "/personal/account",
+                { state: { section: "account" } },
+                window.scrollTo(0, 0)
+              )
+            }
+          >
             <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
@@ -351,7 +374,8 @@ const Personal = () => {
 
       <div
         ref={fixedRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+      >
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={
@@ -363,7 +387,8 @@ const Personal = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]">
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]"
+        >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
             <p className="font-grava text-[#334E69] font-medium lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Fixed Deposits
@@ -403,10 +428,11 @@ const Personal = () => {
 
       <div
         ref={loanRef}
-        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto">
+        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto"
+      >
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
-          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
               Loans
             </p>
             <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center text-[11px] lg:text-[14px]">
@@ -431,7 +457,8 @@ const Personal = () => {
         <div className="flex flex-col lg:flex-row items-center gap-5 lg:gap-0 justify-between">
           <div
             data-aos="fade-right"
-            className="flex flex-col items-center lg:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]">
+            className="flex flex-col items-center lg:items-start gap-[32px] w-[250px] md:w-[350px] lm:w-[514px]"
+          >
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
               <p className="font-grava font-medium text-base lm:text-[28px] leading-[35px] text-[#002244]">
@@ -454,8 +481,13 @@ const Personal = () => {
               className="transition-all duration-500 ease-in-out bg-[#F2F4F7] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
               type="button"
               onClick={() =>
-                navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-              }>
+                navigate(
+                  "/personal/account",
+                  { state: { section: "account" } },
+                  window.scrollTo(0, 0)
+                )
+              }
+            >
               <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#98A2B3]">
                 To be available soon
               </p>
@@ -497,7 +529,8 @@ const Personal = () => {
         <div className="hidden lm:flex items-center gap-[56px]">
           <div
             className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("debit")}>
+            onClick={() => handleClickCard("debit")}
+          >
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739469169/white_card_front_txnjsq.png"
               alt="Debit"
@@ -512,7 +545,8 @@ const Personal = () => {
                     clickedCard === "debit"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}></div>
+                  } w-6 h-6`}
+                ></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Debit cards
@@ -521,7 +555,8 @@ const Personal = () => {
           </div>
           <div
             className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("credit")}>
+            onClick={() => handleClickCard("credit")}
+          >
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
               alt="Credit"
@@ -536,7 +571,8 @@ const Personal = () => {
                     clickedCard === "credit"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}></div>
+                  } w-6 h-6`}
+                ></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Credit cards
@@ -545,7 +581,8 @@ const Personal = () => {
           </div>
           <div
             className="flex flex-col gap-[32px] items-center w-[258px] lg:w-[358px] cursor-pointer"
-            onClick={() => handleClickCard("prepaid")}>
+            onClick={() => handleClickCard("prepaid")}
+          >
             <img
               src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
               alt="Prepaid"
@@ -560,7 +597,8 @@ const Personal = () => {
                     clickedCard === "prepaid"
                       ? "bg-[#002244] rounded-full"
                       : "bg-transparent"
-                  } w-6 h-6`}></div>
+                  } w-6 h-6`}
+                ></div>
               </div>
               <p className="text-[#002244] font-grava font-medium">
                 Prepaid cards
@@ -577,7 +615,6 @@ const Personal = () => {
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739468477/black_card_front_okhfiz.png"
                 alt="BlackCard"
                 className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
-              
               />
             </div>
             <div className="slide-item flex justify-center">
@@ -587,20 +624,17 @@ const Personal = () => {
                 className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
               />
             </div>
-            <div className="slide-item flex justify-center" >
+            <div className="slide-item flex justify-center">
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469071/silver_card_front_n89kpq.png"
                 alt="SilverCard"
-              
                 className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
-               
               />
             </div>
             <div className="slide-item flex justify-center">
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739469219/yellow_card_front_le79ge.png"
                 alt="YellowCard"
-        
                 className="rounded-xl w-[45%] md:w-[75%] lg:w-[100%]"
                 // className="rounded-xl w-full max-w-[400px] mx-auto"
               />
@@ -631,9 +665,10 @@ const Personal = () => {
 
       <div
         ref={digitalRef}
-        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto">
+        className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
+      >
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
-        <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
+          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
@@ -676,8 +711,13 @@ const Personal = () => {
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-            }>
+              navigate(
+                "/personal/account",
+                { state: { section: "account" } },
+                window.scrollTo(0, 0)
+              )
+            }
+          >
             <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started now */}
               Find out more
@@ -697,19 +737,27 @@ const Personal = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="w-full h-[531px] md:h-auto lg:h-[440px] rounded-xl">
+          className="w-full h-[531px] md:h-auto lg:h-[440px] rounded-xl"
+        >
           <div
             className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-5 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between lg:items-center"
             style={{
               backgroundColor: "rgb(244 245 246 / 95%)", // Brighter background with slight transparency
               zIndex: 1, // Ensures content stays above background
-            }}>
+            }}
+          >
             <div className="flex flex-col lg:w-[615px] lm:h-[312px] gap-[20px]">
-              <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p
+                className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]"
+                style={{ color: "#002244" }}
+              >
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>
-              <p className="font-grava font-[400] text-sm  lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]" style={{color:'#002244'}}>
+              <p
+                className="font-grava font-[400] text-sm  lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]"
+                style={{ color: "#002244" }}
+              >
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
@@ -717,7 +765,11 @@ const Personal = () => {
                 type="button"
                 onClick={() =>
                   // navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
-                  navigate("/contact", { state: { section: "contact" } },window.scrollTo(0, 0))
+                  navigate(
+                    "/contact",
+                    { state: { section: "contact" } },
+                    window.scrollTo(0, 0)
+                  )
                 }
               >
                 <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">

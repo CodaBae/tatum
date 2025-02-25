@@ -102,6 +102,7 @@ const Corporate = () => {
           mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
           mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
           btnText={"Find out more"}
+          styleP={{  marginTop: "-15%", height: "100vh", }}
         />
       </section>
 

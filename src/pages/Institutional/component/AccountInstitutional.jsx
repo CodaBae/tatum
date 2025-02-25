@@ -80,6 +80,8 @@ const AccountInstitutional = () => {
                 sectionName={"savings"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"} 
                 mainImgDesktop={TempleMobile} 
+                styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
+
             />
         </section>
 

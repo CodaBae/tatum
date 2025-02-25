@@ -78,6 +78,9 @@ const AccountPersonal = () => {
           sectionName={"savings"} 
           mainImgMobile={Alhaja} 
           mainImgDesktop={Alhaja} 
+          styleP={{ height: "130%", paddingLeft: "3%", paddingLeft: "-5%" }}
+
+
         />
       </section>
 

@@ -82,9 +82,11 @@ const Private = () => {
           content={"With privileged access to premium banking services, bespoke investment strategies, and the prestige of Tatum Private Banking, we keep you smiling—every step of the way."} 
           link={"/private"} 
           sectionName={"wealth"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"} 
+          mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
+          mainImgDesktop={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
           btnText={"Find out more"} 
+          styleP={{ height: "150%", marginLeft: "45%", marginTop: "5%" }}
+
         />
       </section>
 

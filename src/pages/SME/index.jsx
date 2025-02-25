@@ -240,9 +240,12 @@ const SME = () => {
           content={"At Tatum Bank, we go beyond banking; we partner with you to unlock opportunities, drive growth, and ensure your success."} 
           link={"/business"} 
           sectionName={"account"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp"} 
+          mainImgMobile={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
+          mainImgDesktop={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
           btnText={"Find out more"}
+          styleP={{  marginTop: "-15%" }}
+          left={true}
+
         />
       </section>
       {/* <section className="h-full w-full outline-none lg:h-[120vh]">

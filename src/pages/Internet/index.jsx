@@ -42,6 +42,8 @@ const InternetBanking = () => {
                 sectionName={"digi"} 
                 mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
+                styleP={{ height: "120%", marginLeft: "25%", marginTop: "-10%" }}
+
             />
       </section>
 

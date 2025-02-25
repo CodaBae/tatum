@@ -89,6 +89,8 @@ const AccountCorporate = () => {
                 sectionName={"savings"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png"} 
                 mainImgDesktop={Building} 
+                styleP={{ height: "130%", marginLeft: "40%", marginTop: "-15%" }}
+
             />
         </section>
         {/* <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
