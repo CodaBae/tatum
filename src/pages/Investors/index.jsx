@@ -42,7 +42,7 @@ const Investors = () => {
                     </p>
                     
                 </div>
-                <div className="flex items-start absolute -bottom-20 lg:bottom-[-85.9%]" style={{zIndex:'99999'}}>
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-115.9%]" style={{zIndex:'99999'}}>
                     <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                         <p className="flex items-center gap-2">
                         We are licensed by the Central Bank of Nigeria

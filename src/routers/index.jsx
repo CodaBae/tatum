@@ -14,11 +14,6 @@ import Private from "../pages/Private";
 import Resources from "../pages/Resources";
 import PrivacyPolicy from "../pages/Privacy";
 import Terms from "../pages/Terms";
-import Wealth from "../pages/Private/components/Wealth";
-import Estate from "../pages/Private/components/Estate";
-import Investment from "../pages/Private/components/Investment";
-import Loan from "../pages/Private/components/Loan";
-import Custom from "../pages/Private/components/Custom";
 import Sitemap from "../pages/Sitemap";
 import AccountPersonal from "../pages/Personal/component/AccountPersonal";
 import AccountBusiness from "../pages/SME/component/AccountBusiness";
@@ -54,11 +49,6 @@ export default function Routers() {
         <Route path="/internet-banking" element={<InternetBanking />} />
         <Route path="private" element={<Private />} />
         <Route path="/private/account" element={<AccountPrivacy />} />
-        <Route path="private/wealth-management" element={<Wealth />} />
-        <Route path="private/investement-advisory" element={<Investment />} />
-        <Route path="private/estate-and-trust-planning" element={<Estate />} />
-        <Route path="private/personal-loans-and-credit" element={<Loan />} />
-        <Route path="private/custom-financial-solutions" element={<Custom />} />
         <Route path="resources" element={<Resources />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms" element={<Terms />} />

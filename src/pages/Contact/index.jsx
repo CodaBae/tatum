@@ -42,16 +42,16 @@ const Contact = () => {
         >
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-[794px] lm:h-[120vh] pt-[40px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
             >
                 <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p  
-                      className={`animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                      className={`animate__animated animate__fadeInUp lm:-ml-1 animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-[700] leading-[40px] lg:leading-[78px]`}
                       >
                             Contact Us
                         </p>
@@ -62,7 +62,7 @@ const Contact = () => {
                         </p>
                         
                     </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-94.9%]" style={{zIndex:'99999'}}>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-105.9%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                             <p className="flex items-center gap-2">
                             We are licensed by the Central Bank of Nigeria
@@ -120,7 +120,7 @@ const Contact = () => {
                     <img 
                         src="https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"
                         alt='Biz' 
-                        className={`animate__animated  relative  w-[786px] lm:right-28 h-[650px] lg:top-20`} //lm:right-60  -left-2 lg:top-20  lm:h-[811px] 
+                        className={`animate__animated  relative  w-[786px] lm:right-28 h-[650px] lg:top-16`} //lm:right-60  -left-2 lg:top-20  lm:h-[811px] 
                         data-aos="fade-left"
                         data-aos-duration="1000"
                         data-aos-once="false"
@@ -140,8 +140,8 @@ const Contact = () => {
             </div>
             <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase lm:ml-1.5'>CONTACT US</p>
-                    <p className='font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
+                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase lm:ml-1.5'>CONTACT US</p>
+                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
                     <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                         If you require any assistance regarding our company, 
                         businesses or exploits, please don’t hesitate to contact us. 
@@ -154,13 +154,13 @@ const Contact = () => {
 
         <section data-aos="fade-up"  data-aos-duration="3000" className='bg-[#F9FAFB] flex flex-col px-5 gap-[56px] lm:px-[56px] py-[56px] lm:py-[80px] '>
             <div className='flex flex-col gap-4 w-full lm:w-[354px]'>
-                <p className='font-grava text-[#002244] font-medium leading-[40px] lm:leading-[60px] text-[34px] lm:text-[48px] lm:-ml-1'>Get in Touch</p>
+                <p className='font-grava text-[#002244] font-[500] leading-[40px] lm:leading-[60px] text-[34px] lm:text-[48px] lm:-ml-1'>Get in Touch</p>
                 <p className='font-[350] font-grava text-[#002244] text-sm lm:text-[18px] '>Fill the form below and a member of our team will be in touch with you.</p>
             </div>
             <div className='flex  flex-col lm:flex-row items-center gap-[82px]'>
                 <div className='flex flex-col gap-[32px] w-full lm:w-7/12'>
                     <div className='flex flex-col gap-[14px]'>
-                        <label className='font-medium text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Name</label>
+                        <label className='font-[500] text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Name</label>
                         <input 
                             name='name'
                             value={name}
@@ -171,7 +171,7 @@ const Contact = () => {
                     </div>
                     <div className='flex flex-col lm:flex-row items-center gap-5'>
                         <div className='flex flex-col gap-[14px] w-full lm:w-6/12'>
-                            <label className='font-medium text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Phone Number</label>
+                            <label className='font-[500] text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Phone Number</label>
                             <input 
                                 name='phone'
                                 type='number'
@@ -182,7 +182,7 @@ const Contact = () => {
                             />
                         </div>
                         <div className='flex flex-col gap-[14px] w-full lm:w-6/12'>
-                            <label className='font-medium text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Email</label>
+                            <label className='font-[500] text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Email</label>
                             <input 
                                 name='email'
                                 value={email}
@@ -194,7 +194,7 @@ const Contact = () => {
 
                     </div>
                     <div className='flex flex-col gap-[14px]'>
-                        <label className='font-medium text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Subject</label>
+                        <label className='font-[500] text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Subject</label>
                         <input 
                             name='subject'
                             value={subject}
@@ -204,7 +204,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className='flex flex-col gap-[14px]'>
-                        <label className='font-medium text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Message</label>
+                        <label className='font-[500] text-[#334E69] font-grava text-[14px] lm:text-[18px] '>Message</label>
                         <textarea 
                             name='message'
                             value={message}
@@ -217,8 +217,8 @@ const Contact = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lg:w-[188px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                         type='button'
                     >
-                            <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
-                            <BsArrowRight size={100}  className='mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                            <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
+                            <BsArrowRight size={100}  className='mt-[2px] text-5xl transition-colors duration-500 font-[500] ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
                 </div>
                 <div className='flex flex-col w-full lm:w-4/12'>
@@ -229,7 +229,7 @@ const Contact = () => {
 
         <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
             <div className='flex flex-col gap-4 w-full items-center lm:w-[461px]'>
-                <p className='font-grava text-[28px] font-medium lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
+                <p className='font-grava text-[28px] font-[500] lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
                 <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest Client Center and ATM locations for convenient and accessible banking services.</p>
             </div>
             {/* <img src={isMobile ? MapSmall : MapBig} alt='map' className='' /> */}
@@ -243,7 +243,7 @@ const Contact = () => {
                 <div className='bg-[#FFFAEB] flex flex-col w-full lm:w-6/12 rounded-tl-[24px] rounded-br-[24px] h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
                     <img src={Chat} alt='Chat' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
-                    <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-medium'>General support:</p>
+                    <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>General support:</p>
                     <p className='font-[350] font-grava text-[#334E69] text-sm lm:text-[20px]'>info@tatumbank.com</p>
                     </div>
                 </div>
@@ -251,7 +251,7 @@ const Contact = () => {
                 <div className='bg-[#FFFAEB] flex flex-col rounded-tl-[24px] rounded-br-[24px] w-full lm:w-6/12  h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
                     <img src={Locator} alt='Locator' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
-                    <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-medium'>Head Office</p>
+                    <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>Head Office</p>
                     <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3, Garki FCT Abuja</p>
                     </div>
                 </div>

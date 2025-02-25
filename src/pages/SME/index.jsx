@@ -219,7 +219,7 @@ const SME = () => {
 
   return (
     <div ref={smeRef} className="">
-      <section className="h-full w-full outline-none  lg:h-[100vh]">
+      <section className="h-full w-full outline-none  lg:h-[120vh]">
         <div
           style={{
             backgroundImage: `url(${
@@ -230,7 +230,7 @@ const SME = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lm:h-[100vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="lm:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -242,7 +242,7 @@ const SME = () => {
               </p>
               <p
                 //
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-[350px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                className={`animate__animated animate__fadeInUp animate__delay-06s w-[350px]  md:w-[761px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we go beyond banking; we partner with you to
                 unlock opportunities, drive growth, and ensure your
                 success.
@@ -254,8 +254,8 @@ const SME = () => {
                   onClick={() =>
                     navigate("/business", {state: {section: "account"}}, window.scrollTo(0, 0))
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Find Out More
+                  <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    Find out more
                   </p>
                   <BsArrowRight
                     size={100}
@@ -324,7 +324,7 @@ const SME = () => {
             <img
               src={'https://res.cloudinary.com/code-idea/image/upload/v1739211382/business_banking_1_ujom76.webp'}
               alt="Family"
-              className={`animate__animated relative lm:top-[10%] lg:w-[43%] `}
+              className={`animate__animated relative lm:top-[10%] right-24 lg:w-[43%] `}
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-once="false"
@@ -405,9 +405,9 @@ const SME = () => {
                 onClick={() =>
                   navigate("/business/account", window.scrollTo(0, 0))
                 }>
-                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   {/* Open an account */}
-                  Find Out More
+                  Find out more
                 </p>
                 <BsArrowRight
                   size={100}
@@ -698,7 +698,7 @@ const SME = () => {
         </div>
       </div> */}
 
-      <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
+      <div className="h-[1000px] lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">
         <div
           data-aos="fade-right"
           className="w-[309px] h-[317px] sm:w-[464px] sm:h-[476px] lg:w-[571px] lg:h-[585px] ">
@@ -706,7 +706,8 @@ const SME = () => {
         </div>
         <div
           data-aos="fade-left"
-          className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]">
+          className=" sm:h-[200.53px] w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]"
+        >
           <div className="flex flex-col items-center gap-[16px] lg:w-[565px] lg:h-[197px] ">
             <h1 className="font-grava font-[400]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
               Business Loans - Funding Your Business Growth
@@ -772,7 +773,7 @@ const SME = () => {
                   navigate("/business/account",window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#ffcc33]">
-                  To be Available Soon
+                  To be available soon
                 </p>
                 <BsArrowRight
                   size={100}
@@ -859,7 +860,7 @@ const SME = () => {
                     className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
                   >
                     <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
-                      To be Available Soon
+                      To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
@@ -932,7 +933,7 @@ const SME = () => {
                     className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
                   >
                     <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
-                      To be Available Soon
+                      To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
@@ -1006,7 +1007,7 @@ const SME = () => {
                     className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
                   >
                     <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
-                      To be Available Soon
+                      To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
@@ -1079,8 +1080,8 @@ const SME = () => {
                   >
                     <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
                       {/* Get started now */}
-                      {/* Find Out More */}
-                      To be Available Soon
+                      {/* Find out more */}
+                      To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
@@ -1254,12 +1255,12 @@ const SME = () => {
                 <p
                   className="
               transition-colors duration-500 ease-in-out 
-              font-medium  sm:text-base lg:text-base 
+              font-[500]  sm:text-base lg:text-lg 
               font-grava 
               text-[#002244] group-hover:text-[#ffcc33]
             ">
                   {/* Open an account */}
-                  Find Out More
+                  Find out more
                 </p>
                 <BsArrowRight
                   size={100}
@@ -1279,10 +1280,10 @@ const SME = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.25em] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
-          <p className="font-medium text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
+          <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
             Why Choose Tatum <br /> Business Banking.
           </p>
         </div>
@@ -1291,7 +1292,7 @@ const SME = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
             onClick={handleTabOne}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 We Understand Your Business
               </p>
               {openTabOne ? (
@@ -1310,7 +1311,7 @@ const SME = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabTwo}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 Customer-Centric Approach 
               </p>
               {openTabTwo ? (
@@ -1330,7 +1331,7 @@ const SME = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabThree}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
                 Technology-Driven Excellence
               </p>
               {openTabThree ? (
@@ -1349,8 +1350,8 @@ const SME = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabFour}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                We Keep You Smiling
+              <p className="text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+                We Keep You Smiling!
               </p>
               {openTabFour ? (
                 <img src={Minus} alt="Minus" className="" />
@@ -1396,9 +1397,9 @@ const SME = () => {
             <div className="flex flex-col gap-[16px]">
               <h1
                 className="font-grava font-[500] text-[16px] sm:text-[22px] lg:text-[34px] 
-                       leading-[20px] sm:leading-[24px] lg:leading-[48px] 
+                       leading-[20px] sm:leading-[24px] whitespace-nowrap lg:leading-[48px] 
                        tracking-[0.2%] text-[#002244]">
-                Let’s Build the Future of Your Business Together
+                Let’s Build the Future of Your Business <br />Together
               </h1>
               <p
                 className="font-grava font-[350] text-[16px] sm:text-[20px] lg:text-[18px] 
@@ -1424,8 +1425,8 @@ const SME = () => {
                 navigate("/contact",window.scrollTo(0, 0))
               }>
                 <p
-                  className="transition-colors duration-500 ease-in-out font-medium 
-                        text-sm sm:text-base lg:text-base font-grava 
+                  className="transition-colors duration-500 ease-in-out font-[500] 
+                        text-sm sm:text-base lg:text-[18px] font-grava 
                         text-[#FFCC33] group-hover:text-[#002244]">
                   Call us today
                 </p>

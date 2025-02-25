@@ -56,14 +56,14 @@ const Resources = () => {
   return (
     <div className='w-full overflow-hidden' ref={resourcesRef}>
 
-      <section className='h-full w-full outline-none '>
+      <section className='h-full w-full outline-none'>
         <div 
             style={{
-                backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
-            className='h-[644px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+            className='h-[644px] lm:h-[794px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
         >
           <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
               <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -79,7 +79,7 @@ const Resources = () => {
                   </p>
                 
               </div>
-              <div className="flex items-start absolute -bottom-20 lg:bottom-[-85.9%]" style={{zIndex:'99999'}}>
+              <div className="flex items-start absolute -bottom-20 lg:bottom-[-105.9%]" style={{zIndex:'99999'}}>
                 <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                     <p className="flex items-center gap-2">
                     We are licensed by the Central Bank of Nigeria
@@ -124,7 +124,7 @@ const Resources = () => {
           <img 
             src="https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"
             alt='Biz' 
-            className={`animate__animated  relative -right-10 lm:right-0 w-[500vh] top-24 lm:top-auto  lm:h-[841px]  `} //top-24  lm:h-[741px] lm:right-52
+            className={`animate__animated  relative -right-10 lm:right-0 w-[500vh] top-24 lm:top-36 lm:h-[865px]  `} //top-24  lm:h-[741px] lm:right-52
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
@@ -167,13 +167,13 @@ const Resources = () => {
       
       <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-medium'>Frequently Asked Questions</p>
+          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
 
           <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
 
             <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>What do I need to open an account?</p>
+                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>What do I need to open an account?</p>
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownOne && 
@@ -185,7 +185,7 @@ const Resources = () => {
 
             <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Are there any account opening fees?</p>
+                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>Are there any account opening fees?</p>
                 {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               { openDropdownTwo && 
@@ -197,10 +197,10 @@ const Resources = () => {
 
             <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>Can I manage my account on mobile?</p>
                 {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-              { openDropdownThree && 
+              {openDropdownThree && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Yes! You can access your account on iOS and Android with the Tatum Mobile app.
                     </p>
@@ -210,7 +210,7 @@ const Resources = () => {
           </div>
 
           <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
-            <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-sm lg:text-[20px] underline text-[#002244]'>Help Center</span></p>
+            <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-sm lg:text-[20px] underline font-[500] text-[#002244]'>Help Center</span></p>
           </div>
         </div>
       </section>

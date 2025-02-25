@@ -148,7 +148,7 @@ const About = () => {
       id="about"
     >
     <section 
-        className='h-full w-full overflow-hidden outline-none lm:h-[100vh]' >
+        className='h-full w-full overflow-hidden outline-none lm:h-[120vh]' >
         <div
           style={{
             backgroundImage: `url(${
@@ -159,25 +159,25 @@ const About = () => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[786px] lm:h-[100vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
+          className="h-[786px] lm:h-[120vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0 max-sm:  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3.5%%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-              <p               style={{fontWeight:450}}
-
+              <p               
+                style={{fontWeight:450}}
                 className={`animate__animated animate__fadeInUp  lm:w-[450px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
               >
                 Welcome to <br /> <span className="font-bold">Tatum Bank</span>
               </p>
               <p
-                className={`animate__animated   animate__fadeInUp animate__delay-06s w-[280px]  md:w-[530px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                className={`animate__animated   animate__fadeInUp animate__delay-06s w-[280px]  md:w-[530px] lm:w-[571px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
                 We are more than a financial institution—we are a trusted
                 partner dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
 
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-80%]" style={{zIndex:'99999'}}>
+            <div className="flex items-start absolute -bottom-20 lg:bottom-[-70%]" style={{zIndex:'99999'}}>
               <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                 <p className="flex items-center gap-2">
                   We are licensed by the Central Bank of Nigeria
@@ -226,8 +226,8 @@ const About = () => {
             alt="Family"
             data-aos="fade-left"
             data-aos-duration="1000"
-            data-aos-once="false"
-            className={`${isMobile ? "top-12 -right-14" : "lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
+            // data-aos-once="false"
+            className={`${isMobile ? "top-12 -right-14" : "lm:-right-24 lm:top-[32%]"} animate__animated relative lg:w-[57%] `} 
             //top-8
             />
         </div>
@@ -489,7 +489,7 @@ const About = () => {
       </section>
 
       <section
-        className="px-5 lg:px-[56px] flex flex-col gap-[32px] lm:gap-[56px]"
+        className="px-5 lg:px-[56px] mb-[56px] lm:mb-[96px] flex flex-col gap-[32px] lm:gap-[56px]"
         ref={teamsRef}
       >
         <div className="flex items-center justify-between">
@@ -549,8 +549,8 @@ const About = () => {
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
               </p>
-              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                Non-Executive Director
+              <p className="font-grava text-[#002244] font-[400] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Chairman, Board of Directors
               </p>
             </div>
           </div>
@@ -590,7 +590,7 @@ const About = () => {
               <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Niyi Adeseun
               </p>
-              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[400] text-sm md:text-base tracking-[0.2%] leading-[24px]">
                 Managing Director
               </p>
             </div>
@@ -632,8 +632,8 @@ const About = () => {
             <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
                 Samuel Otseilu Zibiri, SAN
               </p>
-              <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
-                Non Executive Director
+              <p className="font-grava text-[#002244] font-[400] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                Non-Executive Director
               </p>
             </div>
           </div>

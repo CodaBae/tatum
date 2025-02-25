@@ -5,18 +5,6 @@ import { motion } from "framer-motion";
 import ArrowClick from "../../../assets/svg/arrow_click.svg";
 import Clip from "../../../assets/svg/clip_triangle.svg";
 
-import Man from "../../../assets/png/man.png";
-import HeadShot from "../../../assets/png/headshot_mock_up.png";
-
-import ManB from "../../../assets/png/man-b.jpg";
-import ManC from "../../../assets/png/man-c.jpg";
-import ManD from "../../../assets/png/man-d.jpg";
-import ManE from "../../../assets/png/man-e.jpg";
-import ManF from "../../../assets/png/man-f.jpg";
-import ManG from "../../../assets/png/man-g.jpg";
-import ManH from "../../../assets/png/man-h.jpg";
-import ManI from "../../../assets/png/man-i.jpg";
-
 const gridContainerVariants = {
   hidden: {
     opacity: 0,

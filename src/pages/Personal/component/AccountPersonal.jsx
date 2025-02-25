@@ -64,15 +64,14 @@ const AccountPersonal = () => {
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
         <section 
-
-            className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
+            className='h-full w-full overflow-hidden outline-none lg:h-[110vh]'>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className=' h-[764px]  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[100vh] max-sm:pt-[30%] ' //[694px]
+                className='h-[764px]  pl-5 lm:pl-[56px] relative w-full flex flex-col  lm:flex-row lm:items-center gap-0 lg:h-[110vh] max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -105,7 +104,7 @@ const AccountPersonal = () => {
                             </a>
                         </div> */}
                     </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-51.5%]" style={{zIndex:'99999'}}>
+                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-81.5%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
                             <p className="flex items-center gap-2">
                             We are licensed by the Central Bank of Nigeria
@@ -130,14 +129,6 @@ const AccountPersonal = () => {
                             </p>
                         </p>
                     </div>
-                    {/* <div className='hidden lm:flex items-start absolute lg:bottom-[-51.5%]'>
-                        <p className='text-[#002244] font-grava text-sm md:text-base flex items-center whitespace-nowrap gap-1 '>
-                            We are licensed by the Central Bank of Nigeria 
-                            <img src={CBN} alt='CBN' className='inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]'/>
-                            All deposits are insured by
-                            <img src={NDIC} alt='NDIC' className='inline-block mt-1 lg:mt-0 h-[16px] w-[60px] md:h-[28px]'/>
-                        </p>
-                    </div> */}
                 </div>
                 {
                     isMobile ? 
@@ -152,7 +143,7 @@ const AccountPersonal = () => {
                     <img 
                         src={Alhaja} 
                         alt='Family' 
-                        className={`animate__animated animate__fadeInRight relative lm:right-[23%] lm:top-[14%] lg:w-[75%] `} 
+                        className={`animate__animated animate__fadeInRight relative lm:right-[26%] lm:top-[8%] lg:w-[75%] `} 
                     />
                 }
             </div>
@@ -163,7 +154,7 @@ const AccountPersonal = () => {
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
-                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-medium leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
+                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
                 <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                     We offer secure online banking, 
                     convenient client centre services, 
@@ -171,20 +162,20 @@ const AccountPersonal = () => {
                 </p>
             </div>
 
-            <div className='flex flex-col lm:flex-row items-center gap-[50px]'>
+            <div className='flex flex-col lm:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lm:w-[190px] rotate-90 lm:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px] h-[118px] lm:h-[165px]' />
-                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:leading-[27px] tracking-[0.2%]'>Email your completed form to 📩<span className='underline'> accounts@tatumbank.com</span> </p>
+                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 
@@ -193,7 +184,7 @@ const AccountPersonal = () => {
                 type='button'
                 onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456120/Tatum_Bank_Ind_acct_opening_form_1_a3yhbu.pdf", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
+                <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
 
@@ -252,7 +243,7 @@ const AccountPersonal = () => {
                 <p className='font-grava text-[#475467] font-medium  lg:text-[20px]'>Are there any account opening fees?</p>
                 {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
-              { openDropdownTwo && 
+              {openDropdownTwo && 
                     <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         No, you do not pay any fees to open an account
                     </p>
