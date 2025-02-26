@@ -18,7 +18,7 @@ const Resources = () => {
   const [openDropdownThree, setOpenDropdownThree] = useState(true)
   const [activeTab, setActiveTab] = useState("news")
 
-  const isMobile = window.innerWidth < 768
+  const isMobile = window.innerWidth < 1100
 
   const navigate = useNavigate() 
   const { state } = useLocation();

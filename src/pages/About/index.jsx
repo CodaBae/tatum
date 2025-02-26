@@ -36,7 +36,7 @@ import HeroSection from "../../components/HeroSection";
 
 const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
   const aboutRef = useRef(null);
   const missionRef = useRef(null);
@@ -143,7 +143,7 @@ const About = () => {
 
    useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1100);
       };
   
       window.addEventListener("resize", handleResize);
@@ -159,41 +159,25 @@ const About = () => {
       ref={aboutRef}
       id="about"
     >
-      <section
-        className="w-full h-full"
-      >
-        <HeroSection 
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"} 
-          title={` Welcome to <br /> <span class="font-bold">Tatum Bank</span>`}
-          content={"We are more than a financial institution—we are a trusted partner dedicated to safeguarding your financial wellbeing."} 
-          link={"/personal"} 
-          sectionName={"savings"} 
-          mainImgMobile={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
-          mainImgDesktop={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
-          left={true}
-        />
-      </section>
-    {/* <section 
-        className='h-full w-full overflow-hidden outline-none md:h-[100vh] lg:h-[120vh]' 
-      >
+      {
+        isMobile ? 
+        // Mobile
+       <section 
+          className='h-full w-full overflow-hidden outline-none md:h-[100vh]' 
+        >
         <div
           style={{
-            backgroundImage: `url(${
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"
-            })`,
+            backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="h-[786px] md:h-[100vh] lg:h-[120vh] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0  md:pt-[96px]  max-sm:pt-[30%]" //[694px]
+          className="h-[786px] md:h-[100vh] overflow-hidden pl-5 relative w-full flex flex-col items-center gap-0  md:pt-[96px]  max-sm:pt-[30%]" //[694px]
         >
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lg:gap-[113px] lg:mt-[3.5%]">
+          <div className="w-full flex flex-col items-start relative z-30 gap-[64px]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p               
                 style={{fontWeight:450}}
-                className={`animate__animated animate__fadeInUp  lm:w-[450px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                className={`animate__animated animate__fadeInUp  lm:w-[450px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px]  font-medium leading-[40px] lm:leading-[55px] `}
               >
                 Welcome to <br /> <span className="font-bold">Tatum Bank</span>
               </p>
@@ -233,17 +217,34 @@ const About = () => {
 
           </div>
           <img
-            src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
+            src={'https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp'}
             alt="Family"
             data-aos="fade-left"
             loading="lazy"
             data-aos-duration="1000"
             // data-aos-once="false"
-            className={`${isMobile ? "top-12 -right-14" : "lm:-right-24 lg:top-[35%]"} animate__animated relative lg:w-[57%] `} 
+            className={`top-12 -right-14 lm:-right-24 lg:top-[35%] animate__animated relative lg:w-[57%] `} 
             //top-8
             />
         </div>
-      </section> */}
+      </section> 
+        :
+        // Desktop
+        <section className="w-full h-full">
+          <HeroSection 
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"} 
+            title={` Welcome to <br /> <span class="font-bold">Tatum Bank</span>`}
+            content={"We are more than a financial institution—we are a trusted partner dedicated to safeguarding your financial wellbeing."} 
+            link={"/personal"} 
+            sectionName={"savings"} 
+            mainImgMobile={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
+            mainImgDesktop={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
+            left={true}
+          />
+        </section>
+      }
+    
 
       <section className="px-5 lm:px-[56px]" ref={missionRef}>
         <div className=" flex flex-col md:flex-row items-start justify-between ">

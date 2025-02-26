@@ -18,7 +18,7 @@ const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(true);
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
   const isTab = window.innerWidth < 1028;
   
@@ -61,7 +61,7 @@ const Private = () => {
 
   useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1100);
       };
   
       window.addEventListener("resize", handleResize);
@@ -73,31 +73,13 @@ const Private = () => {
 
   return (
     <div className="w-full overflow-hidden">
-
-      <section className="w-full h-full ">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"} 
-          title={`Exclusive. Personalized. <br/> <span class="font-bold ">Exceptional </span>`}
-          content={"With privileged access to premium banking services, bespoke investment strategies, and the prestige of Tatum Private Banking, we keep you smiling—every step of the way."} 
-          link={"/private"} 
-          sectionName={"wealth"} 
-          mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
-          mainImgDesktop={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
-          btnText={"Find out more"} 
-          styleP={{ height: "150%", marginLeft: "45%", marginTop: "5%" }}
-
-        />
-      </section>
-
-      {/* <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
+      {
+        isMobile ? 
+        //Mobile
+        <section className="h-full w-full overflow-hidden outline-none  lg:h-[120vh]">
         <div
           style={{
-            backgroundImage: `url(${
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"
-            })`,
+            backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -170,16 +152,9 @@ const Private = () => {
                   </p>
               </p>
             </div>
-
-          
-
           </div>
           <img
-            src={
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"
-            }
+            src={"https://res.cloudinary.com/code-idea/image/upload/v1739211655/private_banking_1_rfixxb.webp"}
             alt="Family"
             className={`animate__animated animate__fadeInRight relative h-[400px] -top-10 -right-2 lm:right-5 md:top-5 lm:top-2 mt-24 lm:h-[688px] `}
             data-aos="fade-left"
@@ -187,7 +162,25 @@ const Private = () => {
             data-aos-once="false"
           />
         </div>
-      </section> */}
+      </section> 
+        :
+        //Desktop
+        <section className="w-full h-full ">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"} 
+            title={`Exclusive. Personalized. <br/> <span class="font-bold ">Exceptional </span>`}
+            content={"With privileged access to premium banking services, bespoke investment strategies, and the prestige of Tatum Private Banking, we keep you smiling—every step of the way."} 
+            link={"/private"} 
+            sectionName={"wealth"} 
+            mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
+            mainImgDesktop={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
+            btnText={"Find out more"} 
+            styleP={{ height: "150%", marginLeft: "45%", marginTop: "5%" }}
+
+          />
+        </section>
+      }
 
       <div
         ref={wealthRef}

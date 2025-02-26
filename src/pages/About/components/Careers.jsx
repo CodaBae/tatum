@@ -39,17 +39,24 @@ import HeroSection from "../../../components/HeroSection";
 
 const Careers = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100)
 
   const scrollableDivRef = useRef(null);
 
   const careersRef = useRef(null);
   const { state } = useLocation();
 
-  // useEffect(() => {
-  //   if (state?.section === "careers" && careersRef.current) {
-  //     careersRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  useEffect(() => {
+      const handleResize = () => {
+          setIsMobile(window.innerWidth < 1100);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+          window.removeEventListener("resize", handleResize);
+      };
+  }, []);
 
   useEffect(() => {
     let scrollInterval;
@@ -92,27 +99,15 @@ const Careers = () => {
     }
   };
 
-  const isMobile = window.innerWidth < 768
+
 
   return (
     <div ref={careersRef} className="overflow-hidden">
       {/* Hero section */}
-
-      <section className="w-full h-full ">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"} 
-          title={` <span class="font-bold ">Build Your <br />Future with Us</span>`}
-          content={"Working with Tatum Bank is more than just a career; it’s meaningful work that improves the lives of millions of people."} 
-          link={"#"} 
-          sectionName={"savings"} 
-          mainImgDesktop={heroImg} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
-          btnText={"View open positions"} 
-        />
-      </section>
-{/* 
-      <div className="relative w-full h-[630px] lg:h-[713px]  overflow-hidden bg-[#FFCC33]">
+      {
+        isMobile ? 
+        //Mobile
+        <div className="relative w-full h-[630px] lg:h-[713px]  overflow-hidden bg-[#FFCC33]">
         <img
           src={ball1}
           alt="ball"
@@ -155,7 +150,24 @@ const Careers = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div> 
+        :
+        //Desktop
+        <section className="w-full h-full ">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"} 
+            title={` <span class="font-bold ">Build Your <br />Future with Us</span>`}
+            content={"Working with Tatum Bank is more than just a career; it’s meaningful work that improves the lives of millions of people."} 
+            link={"#"} 
+            sectionName={"savings"} 
+            mainImgDesktop={heroImg} 
+            mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
+            btnText={"View open positions"} 
+          />
+        </section>
+      }
+
 
       {/* OPPOTUNITIES SECTION */}
 

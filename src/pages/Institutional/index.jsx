@@ -20,7 +20,7 @@ const Institutional = () => {
     const [openTabTwo, setOpenTabTwo] = useState(false)
     const [openTabThree, setOpenTabThree] = useState(false)
     const [openTabFour, setOpenTabFour] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
   const { state } = useLocation();
 
@@ -59,7 +59,7 @@ const Institutional = () => {
 
    useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1100);
       };
   
       window.addEventListener("resize", handleResize);
@@ -72,34 +72,17 @@ const Institutional = () => {
 
   return (
     <div className="w-full overflow-hidden">
-      <section className="w-full h-full ">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"} 
-          title={` Empowering <br /> Institutions with <br /> <span class="font-bold">Financial Excellence</span>`}
-          content={"At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailored made banking solutions."} 
-          link={"/institutional"} 
-          sectionName={"public"} 
-          mainImgDesktop={"https://framerusercontent.com/images/qYOFTBego7ZczScWMFQnCCyT7jU.png"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281418/institutional_mobile_uife0m.png"} 
-          btnText={"Find out more"} 
-          styleP={{ marginLeft: "27%", marginTop: "-10%" }}
-
-        />
-      </section>
-
-      {/* <section className="w-full overflow-hidden outline-none  lg:h-[120vh]">
+      {
+        isMobile ?
+        //Mobile
+        <section className="w-full overflow-hidden outline-none">
         <div
           style={{
-            backgroundImage: `url(${
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"
-                : "https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"
-            })`,
+            backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lg:h-[120vh] md:h-auto overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] pt-0  max-sm:pt-[30%]" //[694px]
+          className="md:h-auto overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] pt-0  max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
@@ -127,7 +110,7 @@ const Institutional = () => {
                   }
                 >
                   <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    {/* Get Started 
+                    {/* Get Started */}
                     Find out more
                   </p>
                   <BsArrowRight
@@ -187,7 +170,27 @@ const Institutional = () => {
             />
           }
         </div>
-      </section> */}
+      </section>
+        :
+        //Desktop
+        <section className="w-full h-full ">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"} 
+            title={` Empowering <br /> Institutions with <br /> <span class="font-bold">Financial Excellence</span>`}
+            content={"At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailored made banking solutions."} 
+            link={"/institutional"} 
+            sectionName={"public"} 
+            mainImgDesktop={"https://framerusercontent.com/images/qYOFTBego7ZczScWMFQnCCyT7jU.png"} 
+            mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281418/institutional_mobile_uife0m.png"} 
+            btnText={"Find out more"} 
+            styleP={{ marginLeft: "27%", marginTop: "-10%" }}
+          />
+        </section>
+
+      }
+
+  
 
       <section 
         ref={publicRef}

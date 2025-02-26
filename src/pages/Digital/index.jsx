@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import HeroSection from '../../components/HeroSection';
 
 const Digital = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
     const { state } = useLocation()
     const digitalRef = useRef(null)
     const digiRef = useRef(null)
@@ -36,7 +36,7 @@ const Digital = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1100);
         };
 
         window.addEventListener("resize", handleResize);
@@ -48,107 +48,110 @@ const Digital = () => {
 
   return (
     <div className='overflow-hidden'>
-        <section className="w-full h-full ">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
-                title={`Seamless. Secure. <span class='font-bold'>Convenient. </span> `}
-                content={'Whether you\'re at home, at work, or on the go, our digital banking solutions are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling".'} 
-                link={"/digital"} 
-                sectionName={"digi"} 
-                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
-                btnText={"Find out more"} 
-                styleP={{  marginTop: "-25%" }}
-                left={true}
-            />
-      </section>
-
-       {/* <section 
-            className='h-full w-full outline-none  lg:h-[798px]'
-        >
-            <div 
-                style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-                }}
-                className='lg:h-[798px] h-[790px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col md:pt-[60px] lg:pt-[40px] lg:flex-row items-center gap-0' //[694px]
-            >
-                <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
-                    <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                        <p  style={{fontWeight:450}}
-                            className={`animate__animated animate__fadeInUp font-bold animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
-                        >
-                            Seamless. Secure. <span className=''>Convenient. </span> 
-                        </p>
-                        <p              
-
-                            className={`animate__animated animate__fadeInUp animate__delay-06s md:w-[500px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
-                        >
-                            Whether you're at home, at work, or on the go, our digital banking solutions
-                            are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
-                        </p>
-                        <div className='flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3'>
-                            <button
-                                className={`animate__animated animate__fadeInUp animate__delay-10s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                onClick={() =>
-                                    navigate("/digital", {
-                                      state: { section: "digi" },
-                                    },window.scrollTo(0, 0))
-                                  }
-                                //animate__animated animate__fadeInUp animate__delay-10s
+        {
+            isMobile ? 
+            //Mobile
+            <section className='h-full w-full outline-none'>
+                <div 
+                    style={{
+                        backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover"
+                    }}
+                    className='h-[790px] lm:h-auto pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col md:pt-[60px] lg:pt-[40px] lg:flex-row items-center gap-0' //[694px]
+                >
+                    <div className='w-full  flex flex-col items-start relative pt-[64px] lm:pt-[3%] z-30 gap-[64px] lg:gap-[69px]'>
+                        <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                            <p  style={{fontWeight:450}}
+                                className={`animate__animated animate__fadeInUp font-bold animate__delay-04s lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                             >
-                                <p 
-                                    className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
-                                
+                                Seamless. Secure. <span className=''>Convenient. </span> 
+                            </p>
+                            <p              
+
+                                className={`animate__animated animate__fadeInUp animate__delay-06s md:w-[500px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            >
+                                Whether you're at home, at work, or on the go, our digital banking solutions
+                                are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
+                            </p>
+                            <div className='flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3'>
+                                <button
+                                    className={`animate__animated animate__fadeInUp animate__delay-10s  transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[175px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                    onClick={() =>
+                                        navigate("/digital", {
+                                        state: { section: "digi" },
+                                        },window.scrollTo(0, 0))
+                                    }
+                                    //animate__animated animate__fadeInUp animate__delay-10s
                                 >
-                                    {/* Get started 
-                                    Find out more
+                                    <p 
+                                        className='transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                    
+                                    >
+                                        {/* Get started */}
+                                        Find out more
+                                    </p>
+                                    <BsArrowRight size={100}  
+                                        className='w-5 h-5  mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
+                                    />
+                                </button>
+                            
+                            </div>
+                        </div>
+                        <div className="flex items-start absolute -bottom-20 md:bottom-[-56%] lg:bottom-[-44%]" style={{zIndex:'99999'}}>
+                            <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                                <p className="flex items-center gap-2">
+                                We are licensed by the Central Bank of Nigeria
+                                <div className="lm:w-[30px]">
+                                    <img
+                                    src={CBN}
+                                    alt="CBN"
+                                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                    tyle={{zIndex:'99999'}}
+                                    />
+                                </div>
                                 </p>
-                                <BsArrowRight size={100}  
-                                    className='w-5 h-5  mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
-                                />
-                            </button>
-                        
+                                <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                                All deposits are insured by
+                                <div className="lm:w-[60px] mt-1 lg:mt-1.5">
+                                    <img
+                                    src={NDIC}
+                                    alt="NDIC"
+                                    className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                                    />
+                                </div>
+                                </p>
+                            </p>
                         </div>
                     </div>
-                    <div className="flex items-start absolute -bottom-20 md:bottom-[-56%] lg:bottom-[-44%]" style={{zIndex:'99999'}}>
-                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                            <p className="flex items-center gap-2">
-                            We are licensed by the Central Bank of Nigeria
-                            <div className="lm:w-[30px]">
-                                <img
-                                src={CBN}
-                                alt="CBN"
-                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                                tyle={{zIndex:'99999'}}
-                                />
-                            </div>
-                            </p>
-                            <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
-                            All deposits are insured by
-                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
-                                <img
-                                src={NDIC}
-                                alt="NDIC"
-                                className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
-                                />
-                            </div>
-                            </p>
-                        </p>
-                    </div>
+                    <img 
+                        src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
+                        alt='Biz' 
+                        className={`animate__animated  relative -right-2 h-[400px] lg:right-44 top-[5.1rem] md:top-40 md:h-[450px] lm:h-[790px] lg:top-16`} 
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-once="false"
+                    />
                 </div>
-                <img 
-                    src={'https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp'} 
-                    alt='Biz' 
-                    className={`animate__animated  relative -right-2 h-[400px] lg:right-44 top-20 md:top-40 md:h-[450px] lm:h-[790px] lg:top-16`} 
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    data-aos-once="false"
+            </section>
+            :
+            //Desktop
+            <section className="w-full h-full ">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
+                    title={`Seamless. Secure. <span class='font-bold'>Convenient. </span> `}
+                    content={'Whether you\'re at home, at work, or on the go, our digital banking solutions are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling".'} 
+                    link={"/digital"} 
+                    sectionName={"digi"} 
+                    mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
+                    mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
+                    btnText={"Find out more"} 
+                    styleP={{  marginTop: "-25%" }}
+                    left={true}
                 />
-            </div>
-        </section> */}
+            </section>
+        }
 
         <section ref={digiRef} className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>

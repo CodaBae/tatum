@@ -22,7 +22,7 @@ const AccountInstitutional = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
    
     const faqRef = useRef(null);
     const accountRef = useRef(null);
@@ -56,7 +56,7 @@ const AccountInstitutional = () => {
                 
     useEffect(() => {
         const handleResize = () => {
-          setIsMobile(window.innerWidth < 768);
+          setIsMobile(window.innerWidth < 1100);
         };
     
         window.addEventListener("resize", handleResize);
@@ -69,94 +69,98 @@ const AccountInstitutional = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-
-        <section className="w-full h-full">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
-                title={`Empowering <br /> Institutions With <br /> <span class='font-bold'>Financial Solutions</span>`}
-                content={"Trusted banking solutions for NGOs, insurance companies, and financial institutions."} 
-                link={"/personal"} 
-                sectionName={"savings"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"} 
-                mainImgDesktop={TempleMobile} 
-                styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
-
-            />
-        </section>
-
-        {/* <section 
-            className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'
-        >
-            <div 
-                style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-                }}
-                className=' md:h-auto  pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lg:items-center gap-0 lg:h-[100vh] md:pt-[96px] lg:pt-0 max-sm:pt-[30%] ' //[694px]
+        {
+            isMobile ? 
+            //Mobile
+            <section 
+                className='h-full w-full overflow-hidden outline-none'
             >
-                <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
-                    <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                        <p 
-                            className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
-                        >
-                            Empowering <br /> 
-                            Institutions With <br />
-                            <span className='font-bold'>Financial Solutions</span>
-                        </p>
-                        <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[313px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
-                        >
-                            Trusted banking solutions for NGOs, 
-                            insurance companies, and financial institutions.
-                        </p>
-                     
-                    </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-40%]" style={{zIndex:'99999'}}>
-                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                            <p className="flex items-center gap-2">
-                            We are licensed by the Central Bank of Nigeria
-                            <div className="lm:w-[30px]">
-                                <img
-                                src={CBN}
-                                alt="CBN"
-                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                                tyle={{zIndex:'99999'}}
-                                />
-                            </div>
+                <div 
+                    style={{
+                        backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover"
+                    }}
+                    className=' md:h-auto  pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lg:items-center gap-0 lg:h-[100vh] md:pt-[96px] lg:pt-0 max-sm:pt-[30%] ' //[694px]
+                >
+                    <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
+                        <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                            <p 
+                                className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            >
+                                Empowering <br /> 
+                                Institutions With <br />
+                                <span className='font-bold'>Financial Solutions</span>
                             </p>
-                            <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
-                            All deposits are insured by
-                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
-                                <img
-                                src={NDIC}
-                                alt="NDIC"
-                                className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
-                                />
-                            </div>
+                            <p 
+                                className={`animate__animated animate__fadeInUp animate__delay-08s w-[313px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            >
+                                Trusted banking solutions for NGOs, 
+                                insurance companies, and financial institutions.
                             </p>
-                        </p>
+                        
+                        </div>
+                        <div className="flex items-start absolute -bottom-20 lg:bottom-[-40%]" style={{zIndex:'99999'}}>
+                            <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                                <p className="flex items-center gap-2">
+                                We are licensed by the Central Bank of Nigeria
+                                <div className="lm:w-[30px]">
+                                    <img
+                                    src={CBN}
+                                    alt="CBN"
+                                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                    tyle={{zIndex:'99999'}}
+                                    />
+                                </div>
+                                </p>
+                                <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                                All deposits are insured by
+                                <div className="lm:w-[60px] mt-1 lg:mt-1.5">
+                                    <img
+                                    src={NDIC}
+                                    alt="NDIC"
+                                    className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                                    />
+                                </div>
+                                </p>
+                            </p>
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                { isMobile ?
-                    <div className='w-[450px]'>
+                    { isMobile ?
+                        <div className='w-[450px]'>
+                            <img 
+                                src="https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"
+                                alt='Temple' 
+                                className={`animate__animated animate__fadeInRight relative right-8 top-14 lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
+                            />
+                        </div>
+                        :
                         <img 
-                            src="https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"
+                            src={TempleMobile} 
                             alt='Temple' 
-                            className={`animate__animated animate__fadeInRight relative right-8 top-14 lm:right-[15%] lm:top-[10%] lg:w-[75%] `} 
+                            className={`animate__animated animate__fadeInRight relative lg:right-[15%] lg:top-[10%] lg:w-[75%] `} 
                         />
-                    </div>
-                    :
-                    <img 
-                        src={TempleMobile} 
-                        alt='Temple' 
-                        className={`animate__animated animate__fadeInRight relative lg:right-[15%] lg:top-[10%] lg:w-[75%] `} 
-                    />
-                }
-            </div>
-        </section> */}
+                    }
+                </div>
+            </section>
+            : 
+            //Desktop
+            <section className="w-full h-full">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
+                    title={`Empowering <br /> Institutions With <br /> <span class='font-bold'>Financial Solutions</span>`}
+                    content={"Trusted banking solutions for NGOs, insurance companies, and financial institutions."} 
+                    link={"/personal"} 
+                    sectionName={"savings"} 
+                    mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281660/zeus_temple_uqlweg.png"} 
+                    mainImgDesktop={TempleMobile} 
+                    styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
+                />
+            </section>
+        }
+
         
         <section
             ref={sectionRef}

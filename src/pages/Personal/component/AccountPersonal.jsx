@@ -21,7 +21,7 @@ const AccountPersonal = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
   
     const faqRef = useRef(null);
     const accountRef = useRef(null);
@@ -67,24 +67,10 @@ const AccountPersonal = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-
-    <section className="w-full h-full">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
-          title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
-          content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
-          link={"/personal"} 
-          sectionName={"savings"} 
-          mainImgMobile={Alhaja} 
-          mainImgDesktop={Alhaja} 
-          styleP={{ height: "130%", paddingLeft: "3%", paddingLeft: "-5%" }}
-        />
-      </section>
-
-
-        {/* <section 
-            className='h-full w-full overflow-hidden outline-none lg:h-[110vh]'>
+    {
+        isMobile ? 
+        <section 
+            className='h-full w-full overflow-hidden outline-none'>
             <div 
                 style={{
                     backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
@@ -152,7 +138,23 @@ const AccountPersonal = () => {
                     />
                 }
             </div>
-        </section> */}
+        </section>
+        :
+        <section className="w-full h-full">
+            <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
+            title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
+            content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
+            link={"/personal"} 
+            sectionName={"savings"} 
+            mainImgMobile={Alhaja} 
+            mainImgDesktop={Alhaja} 
+            styleP={{ height: "130%", paddingLeft: "-5%" }} //paddingLeft: "3%"
+            />
+        </section>
+    }
+
 
         <section
             id='section'

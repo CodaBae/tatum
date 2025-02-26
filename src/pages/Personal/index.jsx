@@ -115,7 +115,7 @@ const Personal = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1100);
     };
 
     window.addEventListener("resize", handleResize);
@@ -163,8 +163,7 @@ const Personal = () => {
               <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
                 <button
                   className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center`}
-                  // type="button"
-                  // href="#savings"
+                  type="button"
                   onClick={() =>
                     navigate("/personal", { state: { section: "savings" } },window.scrollTo(0, 0))
                   }
@@ -255,10 +254,9 @@ const Personal = () => {
         </section>
       }
      
-
       <div
         ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] "
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px]  md:justify-center py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] "
       >
         <div data-aos="fade-right" className="hidden md:block">
           <img
