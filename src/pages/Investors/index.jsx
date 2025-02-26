@@ -106,6 +106,8 @@ const Investors = () => {
                     sectionName={"digi"} 
                     mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739872457/investors_udnzgp.png"} 
                     mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739872457/investors_udnzgp.png"} 
+                    styleP={{ height: "130%", marginLeft: "40%", marginTop: "10%" }}
+
                 />
             </section>
             
