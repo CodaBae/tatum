@@ -19,26 +19,13 @@ const HeroSection = ({
   styleP,
   left
 }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="h-full w-full outline-none">
       <div
         style={{
-          backgroundImage: `url(${isMobile ? bgMobile : bgDesktop})`,
+          backgroundImage: `url(${bgDesktop})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -99,7 +86,7 @@ const HeroSection = ({
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-once="false"
-            src={isMobile ? mainImgMobile : mainImgDesktop}
+            src={mainImgDesktop}
             alt="MainImg"
             style={styleP}
             loading="lazy"

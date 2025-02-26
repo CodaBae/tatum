@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BsArrowRight } from 'react-icons/bs';
 
 import NDIC from "../../assets/svg/ndic.svg";
@@ -11,8 +11,8 @@ const InternetBanking = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(true)
-
-    const isMobile = window.innerWidth < 768;
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
+    
 
     const faqRef = useRef(null); 
 
@@ -28,33 +28,32 @@ const InternetBanking = () => {
         setOpenDropdownThree(!openDropdownThree)
     }
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1100);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     
   return (
     <div className='w-full'>
-        <section className="w-full h-full ">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
-                title={`Say hello to <br /> banking <span class='font-[700]'> on the go</span> `}
-                content={'Your money, your way. Experience banking that fits your lifestyle, not the other way around.'} 
-                link={"/digital"} 
-                sectionName={"digi"} 
-                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
-                styleP={{ height: "120%", marginLeft: "25%", marginTop: "-10%" }}
-
-            />
-      </section>
-
-        {/* <section className='h-full w-full outline-none '>
+        {
+            isMobile ?
+            //Mobile 
+            <section className='h-full w-full outline-none '>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
+                    backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png)`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className='h-[744px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+                className='h-[744px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col  items-center gap-0' //[694px]
             >
             <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
@@ -105,7 +104,24 @@ const InternetBanking = () => {
                 data-aos-once="false"
             />
             </div>
-        </section> */}
+            </section> 
+            :
+            //Desktop
+            <section className="w-full h-full ">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
+                    title={`Say hello to <br /> banking <span class='font-[700]'> on the go</span> `}
+                    content={'Your money, your way. Experience banking that fits your lifestyle, not the other way around.'} 
+                    link={"/digital"} 
+                    sectionName={"digi"} 
+                    mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
+                    mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
+                    styleP={{ height: "120%", marginLeft: "25%", marginTop: "-10%" }}
+                />
+            </section>
+        }
+        
 
         <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col lm:flex-row items-start lm:items-center gap-[40px] lm:gap-[150px]'>
             <div data-aos="fade-right">

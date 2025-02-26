@@ -21,7 +21,7 @@ const AccountPrivacy = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
    
     const faqRef = useRef(null);
     const accountRef = useRef(null);
@@ -54,7 +54,7 @@ const AccountPrivacy = () => {
             
     useEffect(() => {
        const handleResize = () => {
-         setIsMobile(window.innerWidth < 768);
+         setIsMobile(window.innerWidth < 1100);
        };
    
        window.addEventListener("resize", handleResize);
@@ -66,26 +66,14 @@ const AccountPrivacy = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-        <section className="w-full h-full">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
-                title={`Exclusive  Banking <span class='font-[500]' >Services at Tatum</span>`}
-                content={"Enjoy priority and bespoke banking services, investment options, wealth management, and dedicated relationship managers to help achieve your financial goals."} 
-                link={"/personal"} 
-                sectionName={"savings"} 
-                mainImgMobile={Bentley} 
-                mainImgDesktop={Bentley} 
-                styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
-                
-
-            />
-        </section>
-        {/* <section 
+        {
+            isMobile ? 
+            //Mobile
+            <section 
             className='w-full overflow-hidden outline-none lg:h-[100vh]'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
+                    backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -120,7 +108,7 @@ const AccountPrivacy = () => {
                                     className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
                                 />
                             </a>
-                        </div> 
+                        </div> */}
                     </div>
                     <div className="flex items-start absolute -bottom-20 lg:bottom-[-45.2%]" style={{zIndex:'99999'}}>
                         <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
@@ -154,7 +142,23 @@ const AccountPrivacy = () => {
                     className={`animate__animated animate__fadeInRight relative -right-5 top-20 md:right-0 lg:right-[18%] md:top-[10%] lg:top-[-10%] lg:w-[55%] `} 
                 />
             </div>
-        </section> */}
+        </section> 
+            :
+            //Desktop
+            <section className="w-full h-full">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
+                    title={`Exclusive  Banking <span class='font-[500]' >Services at Tatum</span>`}
+                    content={"Enjoy priority and bespoke banking services, investment options, wealth management, and dedicated relationship managers to help achieve your financial goals."} 
+                    link={"/personal"} 
+                    sectionName={"savings"} 
+                    mainImgMobile={Bentley} 
+                    mainImgDesktop={Bentley} 
+                    styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
+                />
+            </section>
+        }
 
         <section
             id='section'

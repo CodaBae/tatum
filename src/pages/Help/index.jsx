@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { BsArrowRight } from "react-icons/bs";
 
@@ -19,10 +19,22 @@ const Help = () => {
   const [openDropdownThree, setOpenDropdownThree] = useState(false)
   const [openDropdownFour, setOpenDropdownFour] = useState(false)
   const [openDropdownFive, setOpenDropdownFive] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
+  const [isSmall, setIsSmall] = useState(window.innerWidth < 768);
 
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1100);
+            setIsSmall(window.innerWidth < 768);
+        };
 
-  const isMobile = window.innerWidth < 768
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []); 
 
   const handleDropdownOne= () => {
     setOpenDropdownOne(!openDropdownOne)
@@ -46,105 +58,104 @@ const Help = () => {
   }
   return (
     <div className='w-full'>
-      <section className="w-full h-full ">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
-                title={` <span class="font-bold">Help & Support<span> `}
-                content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
-                link={"/digital"} 
-                sectionName={"digi"} 
-                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"} 
-                styleP={{ height: "90vh", marginLeft: "16%", marginTop: "-11.5%" }}
-
-            />
-      </section>
-      
-      {/* <section 
-
-          className='h-full w-full outline-none '>
-        <div 
-          style={{
-              backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
-          }}
-          className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
-        >
-          <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-0 z-30 gap-[64px] lg:gap-[69px]'>
-              <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                {/* lm:pt-[50px] 
-                  <p 
-                      className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
-                      >
-                      Help & Support
-                  </p>
-                  <p 
-                      className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
-                  >
-                      If you require any assistance regarding our company, businesses or exploits, 
-                      please don’t hesitate to contact us..
-                  </p>
-                
-              </div>
-
-              <div className="flex items-start absolute -bottom-20 lg:bottom-[-138%]" style={{zIndex:'99999'}}>
-                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                    <p className="flex items-center gap-2">
-                    We are licensed by the Central Bank of Nigeria
-                    <div className="lm:w-[30px]">
-                        <img
-                        src={CBN}
-                        alt="CBN"
-                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                        tyle={{zIndex:'99999'}}
-                        />
-                    </div>
+      {
+        isMobile ?
+        //Mobile
+        <section className='h-full w-full outline-none '>
+          <div 
+            style={{
+                backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover"
+            }}
+            className='h-[794px] lm:h-[821px] pt-[40px] overflow-hidden pl-5 lg:pl-[56px] relative w-full flex flex-col lm:flex-row items-center gap-0' //[694px]
+          >
+            <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-0 z-30 gap-[64px] lg:gap-[69px]'>
+                <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                  {/* lm:pt-[50px] */}
+                    <p 
+                        className={`animate__animated animate__fadeInUp  lm:-ml-1 lm:w-[831px] capitalize font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bo leading-[40px] lg:leading-[78px]`}
+                        >
+                        Help & Support
                     </p>
-                    <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
-                    All deposits are insured by
-                    <div className="lm:w-[60px] mt-1 lg:mt-1.5">
-                        <img
-                        src={NDIC}
-                        alt="NDIC"
-                        className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
-                        />
-                    </div>
+                    <p 
+                        className={`animate__animated  animate__fadeInUp animate__delay-06s w-[350px] md:w-[265px] rotate-90 lg:rotate-0 lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    >
+                        If you require any assistance regarding our company, businesses or exploits, 
+                        please don’t hesitate to contact us..
                     </p>
-                </p>
+                  
+                </div>
+
+                <div className="flex items-start absolute -bottom-20 lg:bottom-[-138%]" style={{zIndex:'99999'}}>
+                  <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                      <p className="flex items-center gap-2">
+                      We are licensed by the Central Bank of Nigeria
+                      <div className="lm:w-[30px]">
+                          <img
+                          src={CBN}
+                          alt="CBN"
+                          className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                          tyle={{zIndex:'99999'}}
+                          />
+                      </div>
+                      </p>
+                      <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                      All deposits are insured by
+                      <div className="lm:w-[60px] mt-1 lg:mt-1.5">
+                          <img
+                          src={NDIC}
+                          alt="NDIC"
+                          className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                          />
+                      </div>
+                      </p>
+                  </p>
+                </div>
+            </div>
+
+            {
+              isSmall ? 
+              <div className='w-[450px]'>
+                <img 
+                  src="https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"
+                  alt='Biz' 
+                  className={`animate__animated  relative -right-2 lm:right-52 lm:h-[741px] -top-12`} 
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                />
               </div>
-
-              
-            
-          </div>
-
-          {
-            isMobile ? 
-            <div className='w-[450px]'>
+              :
               <img 
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"
                 alt='Biz' 
-                className={`animate__animated  relative -right-2 lm:right-52 lm:h-[741px] -top-12`} 
+                className={`animate__animated  relative -right-10 lm:right-64 w-[500vh]  lm:h-[720px] top-10 lg:top-8`}  
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
+                //{`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
               />
-            </div>
-            :
-            <img 
-              src="https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"
-              alt='Biz' 
-              className={`animate__animated  relative -right-10 lm:right-64 w-[500vh]  lm:h-[720px] top-10 lg:top-8`}  
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-once="false"
-              //{`animate__animated  relative -right-10 lm:right-52 w-[500vh]  lm:h-[741px] top-10 lg:top-5`} 
-            />
-          }
+            }
 
-        </div>
-      </section> */}
+          </div>
+        </section>
+        :
+        //Desktop
+        <section className="w-full h-full ">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
+            title={` <span class="font-bold">Help & Support<span> `}
+            content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
+            link={"/digital"} 
+            sectionName={"digi"} 
+            mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"} 
+            mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"} 
+            styleP={{ height: "90vh", marginLeft: "16%", marginTop: "-11.5%" }}
+          />
+        </section>
+      }
 
       <section className='flex flex-col items-center justify-center pt-[56px] lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
         <div className='w-10/12 lm:w-[878px] h-[52px] lm:h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>

@@ -22,7 +22,7 @@ const AccountCorporate = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
     const faqRef = useRef(null);
     const accountRef = useRef(null);
@@ -66,7 +66,7 @@ const AccountCorporate = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1100);
         };
     
         window.addEventListener("resize", handleResize);
@@ -78,104 +78,109 @@ const AccountCorporate = () => {
 
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
-        
-        <section className="w-full h-full">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"} 
-                title={`Banking Excellence For <span class='font-bold'>Large Corporations</span>`}
-                content={"Experience comprehensive financial solutions designed for large corporations and multinationals."} 
-                link={"/personal"} 
-                sectionName={"savings"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png"} 
-                mainImgDesktop={Building} 
-                styleP={{ height: "130%", marginLeft: "40%", marginTop: "-15%" }}
-
-            />
-        </section>
-        {/* <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
-        <div 
-                style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover"
-                }}
-                className='h-[732px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lm:items-center gap-0 lg:h-[100vh] pt-[93px] lg:pt-0 max-sm:pt-[30%] ' //[694px]
-            >
-                <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
-                    <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
-                        <p 
-                            className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
-                        >
-                            Banking  Excellence For  <span className='font-bold'>Large Corporations</span>
-                            {/* <br/> 
-                        </p>
-                        <p 
-                            className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[629px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
-                        >
-                            Experience comprehensive financial solutions designed for large corporations and multinationals.
-                        </p>
-                        {/* <div className='flex items-center mt-[12px] gap-3'>
-                            <button
-                                className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                                type='button'
-                                onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
+        {
+            isMobile ?
+            //Mobile
+            <section className='h-full w-full overflow-hidden outline-none lg:h-[100vh]'>
+                <div 
+                    style={{
+                        backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" : "https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover"
+                    }}
+                    className='h-[732px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lm:items-center gap-0 lg:h-[100vh] pt-[93px] lg:pt-0 max-sm:pt-[30%] ' //[694px]
+                >
+                    <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
+                        <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
+                            <p 
+                                className={`animate__animated animate__fadeInUp  w-[350px] lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
                             >
-                                <p 
-                                className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                Banking  Excellence For  <span className='font-bold'>Large Corporations</span>
+                                {/* <br/> */}
+                            </p>
+                            <p 
+                                className={`animate__animated animate__fadeInUp animate__delay-08s w-[300px]  md:w-[629px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
+                            >
+                                Experience comprehensive financial solutions designed for large corporations and multinationals.
+                            </p>
+                            {/* <div className='flex items-center mt-[12px] gap-3'>
+                                <button
+                                    className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[152px] lg:w-[174px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                                    type='button'
+                                    onClick={() => sectionRef.current.scrollIntoView({ behavior: "smooth" })}
                                 >
-                                    Learn more
+                                    <p 
+                                    className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                                    >
+                                        Learn more
+                                    </p>
+                                    <BsArrowRight size={100}  
+                                        className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
+                                    />
+                                </button>
+                            </div> */} 
+                        </div>
+                        <div className="flex items-start absolute -bottom-20 lg:bottom-[-68%]" style={{zIndex:'99999'}}>
+                            <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                                <p className="flex items-center gap-2">
+                                We are licensed by the Central Bank of Nigeria
+                                <div className="lm:w-[30px]">
+                                    <img
+                                    src={CBN}
+                                    alt="CBN"
+                                    className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                    tyle={{zIndex:'99999'}}
+                                    />
+                                </div>
                                 </p>
-                                <BsArrowRight size={100}  
-                                    className='w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]' 
-                                />
-                            </button>
-                        </div> 
-                    </div>
-                    <div className="flex items-start absolute -bottom-20 lg:bottom-[-68%]" style={{zIndex:'99999'}}>
-                        <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                            <p className="flex items-center gap-2">
-                            We are licensed by the Central Bank of Nigeria
-                            <div className="lm:w-[30px]">
-                                <img
-                                src={CBN}
-                                alt="CBN"
-                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                                tyle={{zIndex:'99999'}}
-                                />
-                            </div>
+                                <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                                All deposits are insured by
+                                <div className="lm:w-[60px] mt-1 lg:mt-1.5">
+                                    <img
+                                    src={NDIC}
+                                    alt="NDIC"
+                                    className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                                    />
+                                </div>
+                                </p>
                             </p>
-                            <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
-                            All deposits are insured by
-                            <div className="lm:w-[60px] mt-1 lg:mt-1.5">
-                                <img
-                                src={NDIC}
-                                alt="NDIC"
-                                className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
-                                />
-                            </div>
-                            </p>
-                        </p>
+                        </div>
                     </div>
-                </div>
-                {
-                    isMobile ?
-                    <div className='w-[120%]'>
+                    {
+                        isMobile ?
+                        <div className='w-[120%]'>
+                            <img 
+                                src="https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png" 
+                                alt='Building' 
+                                className={`animate__animated animate__fadeInRight relative right-[7%] -bottom-14 h-[394px] lg:w-[55%] `} 
+                            />
+                        </div>
+                        :
                         <img 
-                            src="https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png" 
+                            src={Building} 
                             alt='Building' 
-                            className={`animate__animated animate__fadeInRight relative right-[7%] -bottom-14 h-[394px] lg:w-[55%] `} 
+                            className={`animate__animated animate__fadeInRight relative lg:right-[18%] lm:top-[1%] lg:w-[55%] `} 
                         />
-                    </div>
-                    :
-                    <img 
-                        src={Building} 
-                        alt='Building' 
-                        className={`animate__animated animate__fadeInRight relative lg:right-[18%] lm:top-[1%] lg:w-[55%] `} 
-                    />
-                }
-            </div>
-        </section> */}
+                    }
+                </div>
+            </section>
+            :
+            //Desktop
+            <section className="w-full h-full">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740435307/Slide_2_ymfoim.png"} 
+                    title={`Banking Excellence For <span class='font-bold'>Large Corporations</span>`}
+                    content={"Experience comprehensive financial solutions designed for large corporations and multinationals."} 
+                    link={"/personal"} 
+                    sectionName={"savings"} 
+                    mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739279830/athena_rxr0ik.png"} 
+                    mainImgDesktop={Building} 
+                    styleP={{ height: "130%", marginLeft: "40%", marginTop: "-15%" }}
+
+                />
+            </section>
+        }
 
         <section
             ref={sectionRef}

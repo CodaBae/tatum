@@ -34,7 +34,7 @@ import Lenis from "@studio-freight/lenis";
 import HeroSection from "../../components/HeroSection";
 
 const SME = () => {
- const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+ const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
   const [openTabOne, setOpenTabOne] = useState(true);
   const [openTabTwo, setOpenTabTwo] = useState(false);
@@ -220,7 +220,7 @@ const SME = () => {
 
   useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1100);
       };
   
       window.addEventListener("resize", handleResize);
@@ -232,40 +232,23 @@ const SME = () => {
 
   return (
     <div ref={smeRef} className="">
-      <section className="w-full h-full">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"} 
-          title={`Powering Your <br /> Business <span class="font-bold ">Supporting Your Dreams</span>`}
-          content={"At Tatum Bank, we go beyond banking; we partner with you to unlock opportunities, drive growth, and ensure your success."} 
-          link={"/business"} 
-          sectionName={"account"} 
-          mainImgMobile={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
-          mainImgDesktop={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
-          btnText={"Find out more"}
-          styleP={{  marginTop: "-15%" }}
-          left={true}
-
-        />
-      </section>
-      {/* <section className="h-full w-full outline-none lg:h-[120vh]">
+      {
+        isMobile ?
+        //Mobile
+        <section className="h-full w-full outline-none">
         <div
           style={{
-            backgroundImage: `url(${
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
-                : "https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"
-            })`,
+            backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="lg:h-[120vh] h-[794px] overflow-hidden  pl-5 lg:pl-[56px] relative w-full flex flex-col lg:flex-row items-center gap-0 md:pt-[93px] lg:pt-0  max-sm:pt-[30%]" //[694px]
+          className="h-[794px] overflow-hidden  pl-5  relative w-full flex flex-col items-center gap-0 md:pt-[93px] max-sm:pt-[30%]" //[694px]
         >
           <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[5%]">
             <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
               <p
                 style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
+                className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px]  leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
                   Powering Your <br /> Business{" "}
                 <spen className="font-bold ">Supporting Your Dreams</spen>
               </p>
@@ -276,7 +259,7 @@ const SME = () => {
                 unlock opportunities, drive growth, and ensure your
                 success.
               </p>
-              <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3">
+              <div className="flex items-center mt-[10px] mb-[-5%]  gap-3">
                 <button
                   className={`animate__animated animate__fadeInUp animate__delay-10s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg h-[54px] gap-2 flex items-center justify-center px-5 py-2`}
                   type="button"
@@ -343,7 +326,27 @@ const SME = () => {
             />
           }
         </div>
-      </section> */}
+      </section> 
+        :
+        //Desktop
+        <section className="w-full h-full">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"} 
+            title={`Powering Your <br /> Business <span class="font-bold ">Supporting Your Dreams</span>`}
+            content={"At Tatum Bank, we go beyond banking; we partner with you to unlock opportunities, drive growth, and ensure your success."} 
+            link={"/business"} 
+            sectionName={"account"} 
+            mainImgMobile={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
+            mainImgDesktop={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
+            btnText={"Find out more"}
+            styleP={{  marginTop: "-15%" }}
+            left={true}
+
+          />
+        </section>
+      }
+      
 
       {/* CARDS */}
 

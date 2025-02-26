@@ -21,7 +21,7 @@ const AccountBusiness = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
     const [openDropdownTwo, setOpenDropdownTwo] = useState(false)
     const [openDropdownThree, setOpenDropdownThree] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
 
         const faqRef = useRef(null);
@@ -65,7 +65,7 @@ const AccountBusiness = () => {
 
          useEffect(() => {
             const handleResize = () => {
-              setIsMobile(window.innerWidth < 768);
+              setIsMobile(window.innerWidth < 1100);
             };
         
             window.addEventListener("resize", handleResize);
@@ -77,35 +77,24 @@ const AccountBusiness = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-        <section className="w-full h-full">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
-                title={`Take Your Business<br>To <span class='font-bold'>The Next Level</span>`}
-                content={"We provide startups, small and medium scale businesses with reliable financial solutions and support  for smooth business operations."} 
-                link={"/personal"} 
-                sectionName={"savings"} 
-                mainImgMobile={Smiling} 
-                mainImgDesktop={Smiling} 
-                styleP={{ height: "130%", marginLeft: "0%", marginTop: "-15%" }}
-                left={true}
-
-            />
-      </section>
-        {/* <section 
-            className='h-full w-full overflow-hidden outline-none  lg:h-[100vh]'>
+        {
+            isMobile ? 
+            //Mobile
+            <section 
+                className='h-full w-full overflow-hidden outline-none'
+            >
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png" : "https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"})`,
+                    backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png)`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-                className=' h-[794px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col  lg:flex-row lg:items-center gap-0 lg:h-[100vh] md:pt-[93px] pt-0 max-sm:pt-[30%] ' //[694px]
+                className=' h-[794px] md:h-auto pl-5 lm:pl-[56px] relative w-full flex flex-col gap-0  md:pt-[93px] pt-0 max-sm:pt-[30%] ' //[694px]
             >
                 <div className='w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px]'>
                     <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                         <p 
-                            className={`animate__animated animate__fadeInUp  lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}
+                            className={`animate__animated animate__fadeInUp  lm:w-[873px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] font-medium leading-[40px] lm:leading-[55px]`}
                         >
                             Take Your Business<br></br>   To <span className='font-bold'>The Next Level</span>
                         </p>
@@ -125,7 +114,7 @@ const AccountBusiness = () => {
                                 <img
                                 src={CBN}
                                 alt="CBN"
-                                className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                                className="inline-flex w-[12px] h-[16px]  md:h-[28px]"
                                 tyle={{zIndex:'99999'}}
                                 />
                             </div>
@@ -146,10 +135,29 @@ const AccountBusiness = () => {
                 <img 
                     src={Smiling} 
                     alt='Family' 
-                    className={`animate__animated animate__fadeInRight relative top-[30%]  md:-right-[45%] lg:right-[15%] md:top-[20%] md:w-[55%] `} 
+                    className={`animate__animated animate__fadeInRight relative top-[30%]  md:-right-[45%]  md:top-[20%] md:w-[55%] `} 
                 />
             </div>
-        </section> */}
+        </section>
+            :
+            //Desktop
+            <section className="w-full h-full">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
+                    title={`Take Your Business<br>To <span class='font-bold'>The Next Level</span>`}
+                    content={"We provide startups, small and medium scale businesses with reliable financial solutions and support  for smooth business operations."} 
+                    link={"/personal"} 
+                    sectionName={"savings"} 
+                    mainImgMobile={Smiling} 
+                    mainImgDesktop={Smiling} 
+                    styleP={{ height: "130%", marginLeft: "0%", marginTop: "-15%" }}
+                    left={true}
+
+                />
+        </section>
+
+        }
 
         <section
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'

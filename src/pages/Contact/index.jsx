@@ -20,8 +20,9 @@ const Contact = () => {
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("")
     const [message, setMessage] = useState("")
-
-    const isMobile = window.innerWidth < 768
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100)
+    const [isSmall, setIsSmall] = useState(window.innerWidth < 768)
+    
 
     const contactRef = useRef(null)
     const { state } = useLocation()
@@ -32,30 +33,28 @@ const Contact = () => {
     //     }
     // }, [state])
 
-        
-       
-
+       useEffect(() => {
+            const handleResize = () => {
+                setIsMobile(window.innerWidth < 1100);
+                setIsSmall(window.innerWidth < 768);
+            };
+    
+            window.addEventListener("resize", handleResize);
+    
+            return () => {
+                window.removeEventListener("resize", handleResize);
+            };
+        }, []);
+    
   return (
     <div className='w-full overflow-hidden' ref={contactRef}>
-        <section className="w-full h-full ">
-            <HeroSection
-                bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-                bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
-                title={` <span class="font-bold">Contact Us<span> `}
-                content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
-                link={"/digital"} 
-                sectionName={"digi"} 
-                mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
-                mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
-            />
-      </section>
-
-        {/* <section 
-            className='h-full w-full outline-none'
-        >
+        {
+            isMobile ? 
+            //Mobile
+            <section className='h-full w-full outline-none'>
             <div 
                 style={{
-                    backgroundImage: `url(${isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"  : "https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"})`,
+                    backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
@@ -103,7 +102,7 @@ const Contact = () => {
                  
                 </div>
                 {
-                    isMobile ? 
+                    isSmall ? 
                     <div className='w-[400px]'>
                         <img 
                             src="https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"
@@ -126,8 +125,23 @@ const Contact = () => {
 
                 }
             </div>
-        </section> */}
-
+        </section>
+            :
+            // Desktop
+            <section className="w-full h-full ">
+                <HeroSection
+                    bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+                    bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
+                    title={` <span class="font-bold">Contact Us<span> `}
+                    content={'If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..'} 
+                    link={"/digital"} 
+                    sectionName={"digi"} 
+                    mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
+                    mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
+                />
+            </section>
+        }
+        
         <section className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[175px]  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
             <div data-aos="fade-right" className="hidden md:block" >
                 <img 

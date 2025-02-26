@@ -23,7 +23,7 @@ const Corporate = () => {
   const [openTabTwo, setOpenTabTwo] = useState(false)
   const [openTabThree, setOpenTabThree] = useState(false)
   const [openTabFour, setOpenTabFour] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
 
 
   const corporateRef = useRef(null);
@@ -79,7 +79,7 @@ const Corporate = () => {
 
   useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobile(window.innerWidth < 1100);
       };
   
       window.addEventListener("resize", handleResize);
@@ -91,117 +91,119 @@ const Corporate = () => {
 
   return (
     <div className="w-full overflow-hidden" >
-      <section className="w-full h-full">
-        <HeroSection
-          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"} 
-          title={`Powering Your <br /> <span class="font-bold">Business Growth</span>`}
-          content={"At Tatum Bank, we understand that businesses thrive when they have the right financial partner—one that offers tailored solutions, expert insights, and seamless banking services to drive growth."} 
-          link={"/corporate"} 
-          sectionName={"corp"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
-          btnText={"Find out more"}
-          styleP={{  marginTop: "-15%", height: "100vh", }}
-        />
-      </section>
-
-      {/* <section className="h-full w-full overflow-hidden outline-none lg:h-[120vh]">
-        <div
-          style={{
-            backgroundImage: `url(${
-              isMobile
-                ? "https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png" 
-                : "https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"
-            })`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="h-[762px] md:h-auto pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col lg:flex-row lm:items-center gap-0 lg:h-[120vh] md:pt-[93px] lg:pt-0 max-sm:pt-[30%] ">
-          <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
-            <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
-              <p
-                style={{ fontWeight: 450 }}
-                className={`animate__animated animate__fadeInUp  w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] lg:text-[75px] font-medium leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
-                Powering Your <span className="font-bold">Business Growth</span>
-              </p>
-              <p
-                className={`animate__animated animate__fadeInUp animate__delay-06s w-auto md:w-[686px] lg:w-[786px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
-                At Tatum Bank, we understand that businesses thrive when they
-                have the right financial partner—one that offers tailored
-                solutions, expert insights, and seamless banking services to
-                drive growth.
-              </p>
-              <div className="flex items-center mt-[12px] gap-3">
-                <button
-                  className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
-                  type="button"
-                  onClick={() =>
-                    navigate("/corporate", {
-                      state: { section: "corp" },
-                    },window.scrollTo(0, 0))
-                  }>
-                  <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
-                    Find out more
-                  </p>
-                  <BsArrowRight
-                    size={100}
-                    className="w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]"
-                  />
-                </button>
+      {
+        isMobile ? 
+        //Mobile
+        <section className="h-full w-full overflow-hidden outline-none">
+          <div
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+            className="h-[762px] md:h-auto pl-5 pr-5 lm:pr-0 lm:pl-[56px] relative w-full flex flex-col  lm:items-center gap-0  md:pt-[93px] max-sm:pt-[30%] ">
+            <div className="w-full flex flex-col items-start relative z-30 gap-[64px] lm:gap-[113px] lm:mt-[3%]">
+              <div className="flex w-full flex-col items-start gap-2 lg:gap-5">
+                <p
+                  style={{ fontWeight: 450 }}
+                  className={`animate__animated animate__fadeInUp  w-auto lm:w-[786px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px] font-medium leading-[40px] lm:leading-[55px]`}>
+                  Powering Your <span className="font-bold">Business Growth</span>
+                </p>
+                <p
+                  className={`animate__animated animate__fadeInUp animate__delay-06s w-auto md:w-[686px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
+                  At Tatum Bank, we understand that businesses thrive when they
+                  have the right financial partner—one that offers tailored
+                  solutions, expert insights, and seamless banking services to
+                  drive growth.
+                </p>
+                <div className="flex items-center mt-[12px] gap-3">
+                  <button
+                    className={`animate__animated animate__fadeInUp animate__delay-08s transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                    type="button"
+                    onClick={() =>
+                      navigate("/corporate", {
+                        state: { section: "corp" },
+                      },window.scrollTo(0, 0))
+                    }>
+                    <p className="transition-colors duration-500 ease-in-out font-[500]  font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      Find out more
+                    </p>
+                    <BsArrowRight
+                      size={100}
+                      className="w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#FFCC33] group-hover:text-[#002244]"
+                    />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="flex items-start absolute -bottom-20 lg:bottom-[-40.8%]" style={{zIndex:'99999'}}>
+                <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
+                    <p className="flex items-center gap-2">
+                    We are licensed by the Central Bank of Nigeria
+                    <div className="lm:w-[30px]">
+                        <img
+                        src={CBN}
+                        alt="CBN"
+                        className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
+                        tyle={{zIndex:'99999'}}
+                        />
+                    </div>
+                    </p>
+                    <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
+                    All deposits are insured by
+                    <div className="lm:w-[60px] mt-1 lg:mt-1.5">
+                        <img
+                        src={NDIC}
+                        alt="NDIC"
+                        className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                        />
+                    </div>
+                    </p>
+                </p>
               </div>
             </div>
-            
-            <div className="flex items-start absolute -bottom-20 lg:bottom-[-40.8%]" style={{zIndex:'99999'}}>
-              <p className="text-[#002244] font-grava text-sm md:text-base flex flex-col lm:flex-row lm:items-center whitespace-nowrap gap-1">
-                  <p className="flex items-center gap-2">
-                  We are licensed by the Central Bank of Nigeria
-                  <div className="lm:w-[30px]">
-                      <img
-                      src={CBN}
-                      alt="CBN"
-                      className="inline-flex w-[12px] h-[16px] lg:w-[21px] md:h-[28px]"
-                      tyle={{zIndex:'99999'}}
-                      />
-                  </div>
-                  </p>
-                  <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
-                  All deposits are insured by
-                  <div className="lm:w-[60px] mt-1 lg:mt-1.5">
-                      <img
-                      src={NDIC}
-                      alt="NDIC"
-                      className="flex justify-start lm:inline-block h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
-                      />
-                  </div>
-                  </p>
-              </p>
-            </div>
-          </div>
-          {
-            isMobile ?
-            <div className="w-[120%]">
+            {
+              isMobile ?
+              <div className="w-[120%]">
+                <img
+                  src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
+                  alt="Family"
+                  className={`animate__animated  relative  right-14 lm:right-[30%] h-[383px] top-[8%] `}
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-once="false"
+                />
+              </div>
+              :
               <img
                 src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
                 alt="Family"
-                className={`animate__animated  relative right-14 lm:right-[30%] h-[383px] top-[8%] `}
+                className={`animate__animated  relative lg:right-[32%] md:top-[-14%] lm:top-[6%] lg:w-[75%] `}
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 data-aos-once="false"
               />
-            </div>
-            :
-            <img
-              src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
-              alt="Family"
-              className={`animate__animated  relative lg:right-[32%] md:top-[-14%] lm:top-[6%] lg:w-[75%] `}
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-once="false"
-            />
-          }
-        </div>
-      </section> */}
+            }
+          </div>
+        </section>
+        :
+        //Desktop
+        <section className="w-full h-full">
+          <HeroSection
+            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"} 
+            title={`Powering Your <br /> <span class="font-bold">Business Growth</span>`}
+            content={"At Tatum Bank, we understand that businesses thrive when they have the right financial partner—one that offers tailored solutions, expert insights, and seamless banking services to drive growth."} 
+            link={"/corporate"} 
+            sectionName={"corp"} 
+            mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
+            mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
+            btnText={"Find out more"}
+            styleP={{  marginTop: "-15%", height: "100vh", }}
+          />
+        </section>
+      }
+      
 
       <div ref={corpRef} className="bg-[#F9FAFB] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lm:pl-[110px]  lg:pt-[0px] lg:pb-[0px] lg:pr-[110px] ">
         <div data-aos="fade-right" className="hidden md:block">
