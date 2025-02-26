@@ -27,8 +27,8 @@ const Footer = () => {
           backgroundSize: "cover",
           backgroundPosition:"center"
         }}
-        className="flex w-full h-[270px] lg:h-[374px] flex-col items-center justify-center">
-        <div className="lg:w-[664px] lg:h-[232px] flex flex-col items-center gap-[22px]">
+        className="flex w-full h-[270px] lg:h-[342px] flex-col items-center justify-center">
+        <div className="lg:w-[664px]  flex flex-col items-center gap-[22px]">
         <p className="font-grava text-[27px] lg:text-[45px] font-semibold text-center leading-[35px] lg:leading-[60px] text-[#002244]">
             Stay smiling. <br /> Open an account today! 
             {/* Stay smiling. <br /> Find out more   */}
@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="flex flex-col lg:justify-center lg:flex-row gap-[40px] lg:gap-[54px]"> {/* lg:gap-[94px] */}
           <div className="flex flex-col items-start gap-4 lg:w-[180px]">
             <div className="flex flex-col gap-3">
-              <p className="font-grava text-[#002244] uppercase tracking-wide font-bo text-base">
+              <p className="font-grava text-[#002244] uppercase tracking-wide font-[500] text-base">
                 Contact us
               </p>
               <a 
@@ -63,7 +63,7 @@ const Footer = () => {
               <img src={Instagram} alt="Instagram" className="cursor-pointer" />
               <img src={Twitter} alt="Twitter" className="cursor-pointer" />
               <img src={LinkedIn} alt="LinkedIn" className="cursor-pointer" />
-              <img src={Facebook} alt="Facebook" className="cursor-pointer" />
+              {/* <img src={Facebook} alt="Facebook" className="cursor-pointer" /> */}
             </div>
             <div className="flex flex-col gap-2">
               <img src={Google} alt="Google" className="w-[140px] cursor-pointer opacity-30" />
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-[1044px] grid grid-cols-2  lg:flex items-start gap-[40px] lg:gap-[96px]">
             <div className="flex flex-col gap-4 w-[85px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 COMPANY
               </p>
               <div className="flex flex-col gap-4">
@@ -123,7 +123,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 w-[126px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 SERVICES
               </p>
               <div className="flex flex-col gap-4">
@@ -180,7 +180,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 w-[156px]">
-              <p className="font-grava text-base text-[#002244] tracking-wide font-bo">
+              <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 LEGAL
               </p>
               <div className="flex flex-col gap-4">
@@ -211,7 +211,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 w-[97px]">
-              <p className="font-grava text-base tracking-wide text-[#002244] font-bo">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-[500]">
                 SUPPORT
               </p>
               <div className="flex flex-col gap-4">
@@ -257,12 +257,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 w-[196px]">
-              <p className="font-grava text-base tracking-wide text-[#002244] font-bo">
+              <p className="font-grava text-base tracking-wide text-[#002244] font-[500]">
                 ADDRESS
               </p>
               <div className="flex flex-col gap-4">
                 <p className="font-grava text-[#002244] text-sm cursor-pointer font-300">
-                  Plot 1088, Cadastral Zone AO1, Area 3,Garki FCT  <br /> Abuja
+                  Plot 1088, Cadastral <br /> Zone A01, Kaura<br /> Namoda Street,<br /> Area 3, Garki, Abuja.
                 </p>
               </div>
             </div>

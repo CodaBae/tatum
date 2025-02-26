@@ -230,9 +230,8 @@ const Header = () => {
                   <div
                     className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                     onClick={() => {
-                      navigate("about", {
-                        state: { section: "mission-and-vision" },
-                      });
+                      navigate("/about"),
+                      window.scrollTo(0, 0)
                     }}
                   >
                     <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">
@@ -296,11 +295,11 @@ const Header = () => {
                     <div
                       className="flex flex-row gap-2 hover:bg-[#FFCC3314] hover:rounded-lg p-2 cursor-pointer"
                       onClick={() => {
-                        navigate("/about", {
+                        navigate("/about/teams", {
                           state: {
                             section: "teams"
                           }
-                        })
+                        }), window.scrollTo(0, 0)
                       }}
                     >
                       <div className="rounded-lg w-[40px] h-[40px] bg-[#FFFAEB] flex items-center justify-center">

@@ -178,17 +178,17 @@ const AccountInstitutional = () => {
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-auto md:h-auto lg:h-[165px]' /> {/* [118px] */}
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-auto md:h-auto lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px] h-auto md:h-auto lg:h-[165px]' />
-                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
+                    <p className='font-grava font-[400] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 

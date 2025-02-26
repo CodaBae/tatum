@@ -188,27 +188,25 @@ const AccountCorporate = () => {
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
                 <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
-                <p className='font-[350] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
-                    We offer secure online banking, 
-                    convenient client centre services, 
-                    and reliable support whenever you need it.
+                <p className='font-[400] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
+                    Get access to strategic advisory, global trade support, and customized banking services that match your scale.
                 </p>
             </div>
 
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-auto md:h-auto lg:h-[165px]' /> {/* [118px] */}
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-auto md:h-auto lm:h-[165px]' />
-                    <p className='font-grava text-sm lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px] h-auto md:h-auto lg:h-[165px]' />
-                    <p className='font-grava text-sm text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
+                    <p className='font-grava font-[400] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 
@@ -231,10 +229,10 @@ const AccountCorporate = () => {
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Tailored Financial Solutions</p>
+                    <p className='text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Tailored Financial Solutions</p>
                     {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabOne && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabOne && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         We offer bespoke corporate banking services, 
                         including customized credit facilities, treasury management, 
                         and seamless cross-border transactions to support your business growth
@@ -242,20 +240,20 @@ const AccountCorporate = () => {
                 </div>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Seamless Digital Banking</p>
+                    <p className='text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Seamless Digital Banking</p>
                     {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabTwo && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabTwo && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         Our cutting-edge digital platforms ensure secure, real-time payments, collections, 
                         and cash flow optimization, giving your business the agility to operate globally with ease.
                     </p>}
                 </div>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Dedicated Relationship Management</p>
+                    <p className='text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Dedicated Relationship Management</p>
                     {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabThree && <p className='font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabThree && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         Gain access to industry-leading financial experts who provide proactive insights, 
                         strategic advisory, and hands-on support to help your business thrive in an evolving market.
                     </p>}

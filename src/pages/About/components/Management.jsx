@@ -27,7 +27,7 @@ const team = [
     bio:  
       `<div class="flex flex-col gap-5">
         <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Tomi Ologunorisa, SAN, is a distinguished Nigerian lawyer with a career spanning over three decades. He holds a Bachelor of Laws from the University of Lagos and a Diploma in International Commercial Arbitration from Oxford University. Since 1989, he has been the Principal Partner at Sam Ologunorisa (SAN) & Co in Abuja and has served as Secretary General of the Nigerian Bar Association, Abuja Branch, since 1994. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.</p>
-        <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring "Selected Judgment & Ruling of Hon. Justice L.H. Gummi" and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.</p>
+        <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Ologunorisa is a passionate advocate for human rights, having chaired the NBA Abuja FCT Human Rights Committee since 1994, and has contributed significantly to legal scholarship, including authoring <span class="italics">"Selected Judgment & Ruling of Hon. Justice L.H. Gummi" </span> and serving as a consultant to the NYSC Law Reports. A Senior Advocate of Nigeria (SAN) since 2011, he is also an active member of international legal bodies like the African Bar Association and the International Bar Association.</p>
         <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>His career is marked by exceptional legal leadership, advocacy, and a commitment to promoting human rights and legal standards both in Nigeria and globally.</p>
       </div>`
   },
@@ -142,16 +142,9 @@ const team = [
 const Management = () => {
   const navigate = useNavigate();
 
-  const { state } = useLocation();
-
-  const isTab = window.innerWidth < 1028;
-  const isMobile = window.innerWidth < 768;
-
   return (
     <div className="w-full pt-6 lg:pt-[48px] overflow-hidden">
       <motion.div
-        // data-aos="fade-up"
-        // data-aos-duration="1000"
         className="grid grid-cols-1 md:grid-cols-2 lm:grid-cols-3 gap-5 lm:gap-10"
         variants={gridContainerVariants}
         initial="hidden"
@@ -160,11 +153,6 @@ const Management = () => {
         {team.map((item, index) => {
           return (
             <motion.div
-              // style={{
-              //     backgroundImage: `url(${HeadShot})`,
-              //     backgroundRepeat: "no-repeat",
-              //     backgroundSize: isMobile ? "contain" : "cover"
-              // }}
               variants={gridSquareVariants}
               className="flex flex-col gap-6"
               // className='h-[472px] lg:h-[529px] relative flex flex-col w-full cursor-pointer group transition-transform ease-in-out hover:-translate-y-3 '
@@ -208,7 +196,7 @@ const Management = () => {
                 <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
                 </div>
                 <div className="flex flex-col gap-[4px]">
-                  <p className="font-grava font-semibold text-[#002244] text-[18px] md:text-[20px]">
+                  <p className="font-grava font-semibold tracking-[0.01em] text-[#002244] text-[18px] md:text-[20px]">
                     {item.name}
                   </p>
                   <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
@@ -216,18 +204,6 @@ const Management = () => {
                   </p>
                 </div>
               </div>
-              {/* <div className='absolute bottom-14 lm:bottom-5 w-full'>
-                    <div className='w-[90%] mx-auto py-3 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFFC9] to-[#FFFFFFE5] flex flex-col items-center justify-center gap-2 rounded-tl-2xl rounded-br-2xl'>
-                        <p className='font-semibold text-[#002244] text-lg lg:text-[20px] font-grava'>Aminatu Dahiru Chiroma</p>
-                        <p className='font-[350] text-[#002244] text-sm lg:text-base font-grava'>Non-Executive Director</p>
-                    </div>
-
-                           {/* Bottom Left Clip 
-                    <div className="absolute -bottom-5 lg:-bottom-5 right-0 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
-                        <img src={Clip} alt='Clip' className='' />
-                    </div>
-                    <div className="absolute -bottom-5 right-0 w-[47.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
-                </div> */}
             </motion.div>
           );
         })}

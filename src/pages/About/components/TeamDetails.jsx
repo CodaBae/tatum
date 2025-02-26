@@ -35,13 +35,13 @@ const TeamDetails = () => {
     <div className='w-full overflow-hidden'>
           
           {/* Desktop Hero Section  */}
-      <div className='h-[182px] hidden lm:flex justify-end items-end relative bg-[#FFCC33]'>
+      <div className='h-[160px] hidden lm:flex justify-end items-end relative bg-[#FFCC33]'>
         <div 
           className='absolute bottom-6 right-14 hidden md:flex items-center gap-3 w-[270px] cursor-pointer group' 
           onClick={() => navigate('/about/teams')}
         >
           <MdKeyboardBackspace className='w-5 h-5 mt-0.5 text-[#002244] transition-all duration-500 group-hover:mr-2' />
-          <p className='font-grava text-[#002244] text-[20px] font-medium whitespace-nowrap'>Back to leadership team</p>
+          <p className='font-grava text-[#002244] text-[20px] font-[500] whitespace-nowrap'>Back to leadership team</p>
         </div>
       </div>
         
@@ -95,7 +95,7 @@ const TeamDetails = () => {
 
               <div className='flex flex-col items-start '>
                 <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
-                <p className='text-[#002244] font-semibold text-[34px] leading-[51px] font-grava '>{state?.team.name}</p>
+                <p className='text-[#002244] font-semibold text-[24px] leading-[34px] font-grava '>{state?.team.name}</p>
               </div>
 
               <div className='flex items-center gap-3'>
