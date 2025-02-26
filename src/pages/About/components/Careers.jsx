@@ -164,6 +164,8 @@ const Careers = () => {
             mainImgDesktop={heroImg} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
             btnText={"View open positions"} 
+            styleP={{ height: "110%", marginLeft: "40%", marginTop: "40%" }}
+
           />
         </section>
       }

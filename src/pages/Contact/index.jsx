@@ -138,6 +138,8 @@ const Contact = () => {
                     sectionName={"digi"} 
                     mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
                     mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740397436/customer-call_jznewu.png"} 
+                    styleP={{ height: "130%", marginLeft: "40%", marginTop: "5%" }}
+
                 />
             </section>
         }
