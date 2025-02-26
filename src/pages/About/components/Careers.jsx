@@ -161,10 +161,10 @@ const Careers = () => {
             content={"Working with Tatum Bank is more than just a career; it’s meaningful work that improves the lives of millions of people."} 
             link={"#"} 
             sectionName={"savings"} 
-            mainImgDesktop={heroImg} 
+            mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740570327/man_on_phone_spj2pr.png"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
             btnText={"View open positions"} 
-            styleP={{ height: "110%", marginLeft: "40%", marginTop: "40%" }}
+            styleP={{ height: "110%", marginLeft: "40%", marginTop: "5%" }}
 
           />
         </section>
