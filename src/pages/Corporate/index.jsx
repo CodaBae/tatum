@@ -222,7 +222,7 @@ const Corporate = () => {
               <p className="font-[500] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Corporate Banking
               </p>
-              <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 Whether you're looking to optimize cash flow, expand your
                 operations, or navigate global trade, we are here to support
                 your ambitions with expertise, innovation, and reliability.
@@ -281,7 +281,7 @@ const Corporate = () => {
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Investment Services
             </p>
-            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Secure and grow your capital with our diverse investment offerings
               tailored to corporate clients. Our expert advisors provide
               strategic insights to help you maximize returns while minimizing
@@ -312,8 +312,8 @@ const Corporate = () => {
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/corporate/account", {
-                state: { section: "account" },
+              navigate("/contact", {
+                state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
@@ -351,7 +351,7 @@ const Corporate = () => {
             <p className="font-[500] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Treasury Management
             </p>
-            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Stay ahead with efficient liquidity management, risk mitigation,
               and cash flow optimization designed for today’s dynamic business
               environment. Our treasury solutions ensure that your capital works
@@ -382,8 +382,8 @@ const Corporate = () => {
             className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
-              navigate("/corporate/account", {
-                state: { section: "account" },
+              navigate("/contact", {
+                state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
             <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
@@ -413,7 +413,7 @@ const Corporate = () => {
             <p className="font-[500] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Trade Finance
             </p>
-            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Expand your business with seamless international and domestic
               trade solutions. From import/export financing to letters of
               credit, we ensure your transactions are secure and hassle-free.
@@ -482,7 +482,7 @@ const Corporate = () => {
             <p className="font-[500] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Corporate Lending
             </p>
-            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Fuel your growth with customized financing solutions that align
               with your business goals. Whether you need working capital, asset
               financing, or expansion funding, we offer flexible loan structures
@@ -510,19 +510,15 @@ const Corporate = () => {
             </div>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out lm:mt-[32px] bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
-            onClick={() =>
-              navigate("/corporate/account", {
-                state: { section: "account" },
-              },window.scrollTo(0, 0))
-            }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#B0B0B0] group-hover:text-[#FFCC33]">
+          >
+            <p className=" font-[500] lg:text-[18px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#B0B0B0] "
             />
           </button>
         </div>
@@ -544,7 +540,7 @@ const Corporate = () => {
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Strategic Partnerships
             </p>
-            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               We believe in the power of collaborations that drive innovation
               and mutual growth. Our partnership solutions provide enterprises
               with access to exclusive financial products, industry insights,
@@ -601,7 +597,7 @@ const Corporate = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="ttext-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -708,9 +704,9 @@ const Corporate = () => {
                             {/* Let’s Build the Future of Your Business Together */}
                             Let’s Take Your Business To The Next Level!
                           </p>
-                          <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 
-                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-medium">Visit our nearest client centre</span> to get started
+                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-[500]">Visit our nearest client centre</span> to get started
                           </p>
                       </div>
                       <button

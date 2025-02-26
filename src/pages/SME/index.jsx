@@ -358,9 +358,8 @@ const SME = () => {
             <h1 className="font-grava font-[500] w-[350px] sm:w-[429px] text-center text-[28px] leading-[35px] tracking-[0.2%] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244]">
               Business Savings & Current Accounts
             </h1>
-            <p className="font-grava font-[350] text-center w-[350px] sm:w-[429px] text-[16px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[24px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
-              Whether you’re a startup, SME, large enterprises or corporate, our flexible
-              accounts offer:
+            <p className="font-grava font-[350] text-center w-[350px] sm:w-[429px] lg:w-[497px] text-[16px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[24px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+              Whether you're a startup, SME, or enterprise, our flexible accounts are designed to power up your business.
             </p>
           </div>
 
@@ -380,7 +379,7 @@ const SME = () => {
                     <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
                       Savings Accounts
                     </h1>
-                    <p className="font-grava font-[300] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[400] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
                       Competitive interest rates to grow your reserves.
                     </p>
                   </div>
@@ -400,7 +399,7 @@ const SME = () => {
                     <h1 className="font-grava font-[500]  text-[16px] sm:text-[16px] leading-[20px]   lg:text-[28px] lg:leading-[35px]  text-[#002244]">
                       Current Accounts
                     </h1>
-                    <p className="font-grava font-[300] text-center w-[350px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
+                    <p className="font-grava font-[400] text-center w-[330px] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-[#002244]">
                       Seamless transactions, overdraft options, and
                       multi-currency support.
                     </p>
@@ -713,7 +712,7 @@ const SME = () => {
         </div>
       </div> */}
 
-      <div className="lg:h-[705px] bg-[#FFFFFF] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">    {/*h-[1000px]  */} 
+      <div ref={loanRef} className="lg:h-[705px] bg-[#F9FAFB] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">    {/*h-[1000px]  */} 
         <div
           data-aos="fade-right"
           className="w-[309px] h-[317px] sm:w-[464px] sm:h-[476px] lg:w-[571px] lg:h-[585px] ">
@@ -724,7 +723,7 @@ const SME = () => {
           className="w-[350px] sm:w-[565px] lg:h-[424.53px] flex flex-col gap-[32px]" //sm:h-[200.53px]
         >
           <div className="flex flex-col items-center gap-[16px] lg:w-[565px] lg:h-[197px] ">
-            <h1 className="font-grava font-[400]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
+            <h1 className="font-grava font-[500]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
               Business Loans - Funding Your Business Growth
             </h1>
             <p className="font-grava font-[350] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-center lg:text-start text-[#002244]">
@@ -778,21 +777,17 @@ const SME = () => {
             </div>
             <div className="w-[full] h-[100%] flex justify-center lg:justify-start items-end">
               <button
-                className={`${
-                  activeIndex === 2
-                    ? "animate__animated animate__slow animate__fadeInUp"
-                    : ""
-                } transition-all duration-500 ease-in-out bg-[#EDEDED] group hover:bg-[#002244] w-[199px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                className={`
+                  animate__animated animate__slow animate__fadeInUp
+                  bg-[#EDEDED] cursor-default w-[199px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
-                onClick={() =>
-                  navigate("/business/account",window.scrollTo(0, 0))
-                }>
-                <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#B0B0B0] group-hover:text-[#ffcc33]">
+              >
+                <p className=" font-[500] lg:text-base font-grava text-[#B0B0B0] ">
                   To be available soon
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="text-5xl mt-[2px]  w-5 h-5 transition-colors duration-500 ease-in-out text-[#B0B0B0] group-hover:text-[#ffcc33]"
+                  className="text-5xl mt-[2px]  w-5 h-5  text-[#B0B0B0]"
                 />
               </button>
             </div>
@@ -807,10 +802,10 @@ const SME = () => {
         className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col  relative min-h-[200vh]">
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
-            <h1 className="font-grava font-medium w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
+            <h1 className="font-grava font-[500] w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
               Payment Solutions - Making Every Transaction Seamless
             </h1>
-            <p className="font-grava font-light text-center w-[318px] sm:w-[450px] lg:w-[538px] text-sm sm:text-base lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[27px] text-[#002244]">
+            <p className="font-grava font-[400] text-center w-[318px] sm:w-[450px] lg:w-[538px] text-sm sm:text-base lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[27px] text-[#002244]">
               We provide secure, fast, and efficient payment solutions that
               enable you to manage transactions effortlessly.
             </p>
@@ -834,16 +829,16 @@ const SME = () => {
                 height: " fit-content",
               }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                <div className="flex flex-col gap-4 sm:gap-[12px]">
+                  <h1 className="font-grava font-[500] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
                     POS Services
                   </h1>
-                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                  <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                     POS & Merchant Services for easy customer payments
                   </p>
                 </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px]">
-                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
                     {/* List items */}
                     <div className="flex gap-2 items-start">
                       <img
@@ -851,7 +846,7 @@ const SME = () => {
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Sell Smarter with our Advanced POS Systems
                       </p>
                     </div>
@@ -861,7 +856,7 @@ const SME = () => {
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Secure card processing, real-time sales analytics, and
                         inventory sync.
                       </p>
@@ -869,17 +864,14 @@ const SME = () => {
                   </div>
                   
                   <button  
-                    onClick={() =>
-                    navigate("/business/account",window.scrollTo(0, 0))
-                    }
-                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
-                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -912,23 +904,23 @@ const SME = () => {
                 height: " fit-content",
               }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                <div className="flex flex-col gap-4 sm:gap-[12px]">
+                  <h1 className="font-grava font-[500] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
                     Merchant Services
                   </h1>
-                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                  <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                     Accept Payments Anywhere, Anytime
                   </p>
                 </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px]">
-                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
                     <div className="flex gap-2 items-start">
                       <img
                         src={goodMark}
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Payment gateways, QR codes, and card terminals.
                       </p>
                     </div>
@@ -938,21 +930,20 @@ const SME = () => {
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Advanced security to protect your revenue.
                       </p>
                     </div>
                   </div>
                   <button  
-                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))}
-                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
-                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-[500] sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -986,23 +977,23 @@ const SME = () => {
               }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
                 <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                    Online & Mobile Transfers
+                  <h1 className="font-grava font-[500] text-2xl sm:text-4xl leading-[30px] sm:leading-[1.2em] text-[#002244]">
+                    Online & Mobile Transfers for seamless banking 
                   </h1>
-                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    Stay in control of your finances with our cutting-edge
-                    digital banking solutions.
+                  <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    Stay in control of your finances with our cutting-edge digital banking solutions, 
+                    designed to simplify operations and enhance efficiency.
                   </p>
                 </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px]">
-                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
                     <div className="flex gap-2 items-start">
                       <img
                         src={goodMark}
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Internet & Mobile Banking
                       </p>
                     </div>
@@ -1012,21 +1003,20 @@ const SME = () => {
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         24/7 Account Access & Monitoring
                       </p>
                     </div>
                   </div>
                   <button  
-                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))}
-                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
-                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
+                    <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -1041,6 +1031,7 @@ const SME = () => {
             </div>
           </motion.div>
         </div>
+
         {/* Card 4 - Payroll Management */}
         <div ref={container} className="cardContainer">
           <motion.div
@@ -1059,22 +1050,22 @@ const SME = () => {
               }}>
               <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
                 <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-medium text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
+                  <h1 className="font-grava font-[500] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
                     Payroll Management
                   </h1>
-                  <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    Manage salaries, taxes, and benefits with ease.
+                  <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                    Payroll Management to pay salaries on time, handle taxes, and manage employee benefits—all with ease.
                   </p>
                 </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px]">
-                  <div className="flex flex-col gap-6 sm:gap-[32px] items-start">
+                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
                     <div className="flex gap-2 items-start">
                       <img
                         src={goodMark}
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Bulk Payment Processing
                       </p>
                     </div>
@@ -1084,23 +1075,20 @@ const SME = () => {
                         className="w-6 h-6 sm:w-7 sm:h-7"
                         alt="checkmark"
                       />
-                      <p className="font-grava font-light text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                      <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
                         Advanced security to protect your revenue.
                       </p>
                     </div>
                   </div>
                   <button  
-                    onClick={() => navigate("/business/account",window.scrollTo(0, 0))} 
-                    className="w-full sm:w-[254px] bg-[#EDEDED] hover:bg-[#002244] group py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center transition-all duration-300"
+                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
-                    <p className="font-grava font-medium  sm:text-base text-[#B0B0B0] group-hover:text-[#ffcc33]">
-                      {/* Get started now */}
-                      {/* Find out more */}
+                    <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
                     </p>
                     <BsArrowRight
                       size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] group-hover:text-[#ffcc33] w-5 h-5"
+                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
                     />
                   </button>
                 </div>
@@ -1296,7 +1284,7 @@ const SME = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.25em] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[400]  leading-5 tracking-[0.25em] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -1423,16 +1411,13 @@ const SME = () => {
                       tracking-[0.2%] text-[#002244]">
                 Your business deserves a bank that believes in your dreams as
                 much as you do. Let’s talk about how Tatum Bank can empower you
-                to achieve more or Visit our nearest client centre to get started
+                to achieve more or <span className="underline font-[500]">Visit our nearest client centre</span> to get started
               </p>
             </div>
             <div className="flex">
               <button
-                className={`${
-                  activeIndex === 2
-                    ? "animate__animated animate__slow animate__fadeInUp"
-                    : ""
-                } transition-all duration-500 ease-in-out bg-[#002244] group 
+                className={`animate__animated animate__slow animate__fadeInUp
+                  transition-all duration-500 ease-in-out bg-[#002244] group 
               hover:bg-[#FFCC33]  
               w-[154px] sm:w-[170px] lg:w-[183px] 
               h-[51px] sm:h-[55px] lg:h-[59px] 
@@ -1442,7 +1427,7 @@ const SME = () => {
               }>
                 <p
                   className="transition-colors duration-500 ease-in-out font-[500] 
-                        text-sm sm:text-base lg:text-[18px] font-grava 
+                        text-[14px] sm:text-base lg:text-[18px] font-grava 
                         text-[#FFCC33] group-hover:text-[#002244]">
                   Call us today
                 </p>
