@@ -87,6 +87,9 @@ const AccountBusiness = () => {
                 sectionName={"savings"} 
                 mainImgMobile={Smiling} 
                 mainImgDesktop={Smiling} 
+                styleP={{ height: "130%", marginLeft: "0%", marginTop: "-15%" }}
+                left={true}
+
             />
       </section>
         {/* <section 

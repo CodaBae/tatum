@@ -169,8 +169,9 @@ const About = () => {
           content={"We are more than a financial institution—we are a trusted partner dedicated to safeguarding your financial wellbeing."} 
           link={"/personal"} 
           sectionName={"savings"} 
-          mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211090/Adobe_Express_-_file_10_1_ycolam.webp"} 
+          mainImgMobile={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
+          mainImgDesktop={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
+          left={true}
         />
       </section>
     {/* <section 

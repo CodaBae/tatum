@@ -56,6 +56,8 @@ const Help = () => {
                 sectionName={"digi"} 
                 mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739217338/hands_flbj3u.png"} 
+                styleP={{ height: "90vh", marginLeft: "16%", marginTop: "-11.5%" }}
+
             />
       </section>
       

@@ -76,6 +76,9 @@ const AccountPrivacy = () => {
                 sectionName={"savings"} 
                 mainImgMobile={Bentley} 
                 mainImgDesktop={Bentley} 
+                styleP={{ height: "130", paddingLeft: "30%", marginTop: "-10%" }}
+                
+
             />
         </section>
         {/* <section 

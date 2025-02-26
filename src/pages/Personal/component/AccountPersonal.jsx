@@ -68,18 +68,19 @@ const AccountPersonal = () => {
   return (
     <div className='w-full overflow-hidden' ref={accountRef}>
 
-        <section className="w-full h-full">
-            <HeroSection
-            bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
-            bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
-            title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
-            content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
-            link={"/personal"} 
-            sectionName={"savings"} 
-            mainImgMobile={Alhaja} 
-            mainImgDesktop={Alhaja} 
-            />
-        </section>
+    <section className="w-full h-full">
+        <HeroSection
+          bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
+          bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
+          title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
+          content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
+          link={"/personal"} 
+          sectionName={"savings"} 
+          mainImgMobile={Alhaja} 
+          mainImgDesktop={Alhaja} 
+          styleP={{ height: "130%", paddingLeft: "3%", paddingLeft: "-5%" }}
+        />
+      </section>
 
 
         {/* <section 

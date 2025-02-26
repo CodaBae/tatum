@@ -80,9 +80,11 @@ const Institutional = () => {
           content={"At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailored made banking solutions."} 
           link={"/institutional"} 
           sectionName={"public"} 
-          mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/institutional_tatum_1_1_h6pymk.webp"} 
+          mainImgDesktop={"https://framerusercontent.com/images/qYOFTBego7ZczScWMFQnCCyT7jU.png"} 
           mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739281418/institutional_mobile_uife0m.png"} 
           btnText={"Find out more"} 
+          styleP={{ marginLeft: "27%", marginTop: "-10%" }}
+
         />
       </section>
 

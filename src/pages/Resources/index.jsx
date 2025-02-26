@@ -66,6 +66,7 @@ const Resources = () => {
                 sectionName={"digi"} 
                 mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"} 
                 mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"} 
+                left={true}
             />
       </section>
 
