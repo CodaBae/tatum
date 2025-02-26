@@ -22,7 +22,7 @@ const HeroSection = ({
   const navigate = useNavigate();
 
   return (
-    <div className="h-full w-full outline-none">
+    <div className="h-full w-full overflow-hidden outline-none">
       <div
         style={{
           backgroundImage: `url(${bgDesktop})`,
