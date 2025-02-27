@@ -12,7 +12,7 @@ const AccordionItem = ({ question, answer,  defaultOpen = false }) => {
     >
       {/* Question and Icon */}
       <div className="flex items-center justify-between">
-        <p className="font-grava text-[#475467] font-[500] lg:text-[20px]">
+        <p className="font-grava text-[#475467] font-[500] text-[14px] lg:text-[20px]">
           {question}
         </p>
         <img src={isOpen ? Minus : Plus} alt="toggle-icon" />
@@ -32,10 +32,5 @@ const AccordionItem = ({ question, answer,  defaultOpen = false }) => {
   );
 };
 
-// const Accordion = () => {
-//   return (
-    
-//   );
-// };
 
 export default AccordionItem;

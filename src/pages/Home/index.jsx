@@ -1677,7 +1677,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
                 {/* Learn more */}
                 To be available soon
               </p>
@@ -1702,7 +1702,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[500]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
                 Check the nearest center near you
               </p>
             </button>
@@ -1727,7 +1727,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[400] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Download our mobile app */}
               </p>
@@ -1753,7 +1753,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10  font-[400] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Dial *911# */}
               </p>
@@ -1780,7 +1780,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[500] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10  font-[400] lg:text-base font-grava text-[#002244]">
                 Visit Help Center
               </p>
             </button>
@@ -1804,7 +1804,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-medium  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
                 Reach Out
               </p>
             </button>

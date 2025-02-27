@@ -164,26 +164,26 @@ const AccountPrivacy = () => {
             id='section'
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
-            <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
+            <div className='flex flex-col items-center lm:w-[612px] h-[82px] lm:h-[130px] gap-4 mx-auto'>
                 <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
-                <p className='font-[400] font-grava text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
+                <p className='font-[400] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                  Open your account today and enjoy bespoke banking services tailored for you.
                 </p>
             </div>
 
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={One} alt='One' className='w-[205px] h-auto md:h-auto lg:h-[165px]' /> {/* [118px] */}
+                    <img src={One} alt='One' className='w-[205px] h-[118px] md:h-auto lg:h-[165px]' /> {/* [118px] */}
                     <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
-                    <img src={Two} alt='Two' className='w-[205px] h-auto md:h-auto lm:h-[165px]' />
+                    <img src={Two} alt='Two' className='w-[205px] h-[118px] md:h-auto lm:h-[165px]' />
                     <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
-                    <img src={Three} alt='Three' className='w-[205px] h-auto md:h-auto lg:h-[165px]' />
+                    <img src={Three} alt='Three' className='w-[205px]  h-[118px] md:h-auto lg:h-[165px]' />
                     <p className='font-grava font-[400] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
@@ -202,7 +202,7 @@ const AccountPrivacy = () => {
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
                 <p className='text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]'>WHY CHOOSE US</p>
-                <p className='font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum <br />  Bank?</p>
+                <p className='font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
