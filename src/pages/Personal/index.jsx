@@ -168,7 +168,7 @@ const Personal = () => {
                     navigate("/personal", { state: { section: "savings" } },window.scrollTo(0, 0))
                   }
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Find out more
                   </p>
                   <BsArrowRight
@@ -292,7 +292,7 @@ const Personal = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -342,7 +342,7 @@ const Personal = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -398,7 +398,7 @@ const Personal = () => {
             //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             // }
           >
-            <p className="font-[500] text-[18px] font-grava text-[#B0B0B0] ">
+            <p className="font-[400]  lg:text-[18px] font-grava text-[#B0B0B0] ">
               To be available soon
             </p>
             <BsArrowRight
@@ -470,7 +470,7 @@ const Personal = () => {
               className="cursor-default bg-[#F2F4F7] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
               type="button"
             >
-              <p className=" font-[500] lg:text-[18px] font-grava text-[#98A2B3]">
+              <p className=" font-[400]  lg:text-[18px] font-grava text-[#98A2B3]">
                 To be available soon
               </p>
               <BsArrowRight
@@ -697,7 +697,7 @@ const Personal = () => {
               ), window.scrollTo(0, 0) }
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started now */}
               Find out more
             </p>
@@ -751,7 +751,7 @@ const Personal = () => {
                   )
                 }
               >
-                <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                <p className="transition-colors duration-500 ease-in-out font-[400] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   {/* Open an account */}
                   Contact us
                 </p>

@@ -266,7 +266,7 @@ const SME = () => {
                   onClick={() =>
                     navigate("/business", {state: {section: "account"}}, window.scrollTo(0, 0))
                   }>
-                  <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Find out more
                   </p>
                   <BsArrowRight
@@ -419,7 +419,7 @@ const SME = () => {
                 onClick={() =>
                   navigate("/business/account", window.scrollTo(0, 0))
                 }>
-                <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#ffcc33]">
+                <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#ffcc33]">
                   {/* Open an account */}
                   Find out more
                 </p>

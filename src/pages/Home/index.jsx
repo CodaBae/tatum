@@ -488,7 +488,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Open an account  */}
                         Find out more
                       </p>
@@ -633,7 +633,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Explore our offerings */}
                         Find out more
                       </p>
@@ -768,7 +768,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Get started with Business Banking */}
                         Find out more
                       </p>
@@ -998,7 +998,7 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1044,7 +1044,7 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1098,7 +1098,7 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1143,7 +1143,7 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1963,7 +1963,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[500] lg:text-[18px] font-grava text-[#002244]">
+              <p className="relative z-10 font-[400]  lg:text-[18px] font-grava text-[#002244]">
                 Visit Help Centre
               </p>
             </button>
@@ -1987,7 +1987,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[500]  lg:text-[18px] font-grava text-[#002244]">
+              <p className="relative z-10 font-[400]  lg:text-[18px] font-grava text-[#002244]">
                 Reach Out
               </p>
             </button>

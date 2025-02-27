@@ -144,7 +144,7 @@ const Contact = () => {
             </section>
         }
         
-        <section className='bg-[#fff] md:h-[400px] lg:h-[789px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[175px]  py-[56px] px-5 lg:py-[102px] lg:px-[80px]'>
+        <section className='bg-[#fff] md:h-[400px] lg:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-[175px]  py-[56px] px-5 lg:py-[56px] lg:px-[80px]'>
             <div data-aos="fade-right" className="hidden md:block" >
                 <img 
                     src={Call} 
@@ -154,9 +154,9 @@ const Contact = () => {
             </div>
             <div className='flex flex-col items-center md:items-start gap-[40px] w-full md:w-[350px] lm:w-[498px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-sm leading-[30px] lg:leading-[18px] tracking-widest uppercase lm:ml-1.5'>CONTACT US</p>
+                    <p className='font-[400] text-[#002244] font-grava text-center md:text-left text-[14px] leading-[30px] lg:leading-[18px] tracking-[0.25em] uppercase lm:ml-1.5'>CONTACT US</p>
                     <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
-                    <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                    <p className="text-[14px] lm:text-[18px] font-grava font-[350] text-[#002244] leading-[27px] text-center md:text-left tracking-[0.2%]">
                         If you require any assistance regarding our company, 
                         businesses or exploits, please don’t hesitate to contact us. 
                         We would be more than happy to help you out.
@@ -169,7 +169,7 @@ const Contact = () => {
         <section data-aos="fade-up"  data-aos-duration="3000" className='bg-[#F9FAFB] flex flex-col px-5 gap-[56px] lm:px-[56px] py-[56px] lm:py-[80px] '>
             <div className='flex flex-col gap-4 w-full lm:w-[354px]'>
                 <p className='font-grava text-[#002244] font-[500] leading-[40px] lm:leading-[60px] text-[34px] lm:text-[48px] lm:-ml-1'>Get in Touch</p>
-                <p className='font-[350] font-grava text-[#002244] text-sm lm:text-[18px] '>Fill the form below and a member of our team will be in touch with you.</p>
+                <p className='font-[400] font-grava text-[#002244] text-[14px] lm:text-[18px] '>Fill the form below and a member of our team will be in touch with you.</p>
             </div>
             <div className='flex  flex-col lm:flex-row items-center gap-[82px]'>
                 <div className='flex flex-col gap-[32px] w-full lm:w-7/12'>
@@ -179,7 +179,7 @@ const Contact = () => {
                             name='name'
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            placeholder='Enter name'
+                            placeholder='Enter first and last name'
                             className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[64px]'
                         />
                     </div>
@@ -191,7 +191,7 @@ const Contact = () => {
                                 type='number'
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
-                                placeholder='Enter Phone'
+                                placeholder='Enter your phone number'
                                 className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[64px]'
                             />
                         </div>
@@ -201,7 +201,7 @@ const Contact = () => {
                                 name='email'
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder='Enter email'
+                                placeholder='johndoe@gmail.com'
                                 className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[64px]'
                             />
                         </div>
@@ -213,7 +213,7 @@ const Contact = () => {
                             name='subject'
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
-                            placeholder='Enter Subject'
+                            placeholder='Enter contact subject'
                             className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[64px]'
                         />
                     </div>
@@ -223,7 +223,7 @@ const Contact = () => {
                             name='message'
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            placeholder='Enter message here'
+                            placeholder='Enter your message here'
                             className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[190px] lm:h-[256px]'
                         ></textarea>
                     </div>
@@ -231,7 +231,7 @@ const Contact = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lg:w-[188px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                         type='button'
                     >
-                            <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-base font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Send message</p>
                             <BsArrowRight size={100}  className='mt-[2px] text-5xl transition-colors duration-500 font-[500] ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
                 </div>
@@ -241,7 +241,7 @@ const Contact = () => {
             </div>
         </section>
 
-        <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[136px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
+        <section data-aos="fade-up"   data-aos-duration="3000"  className='flex px-5 py-[112px] lm:py-[112px] lm:px-[56px] flex-col items-center justify-center gap-[56px]'>
             <div className='flex flex-col gap-4 w-full items-center lm:w-[461px]'>
                 <p className='font-grava text-[28px] font-[500] lm:text-[48px] text-[#002244] leading-[35px] lm:leading-[60px]'>Our Office Locator</p>
                 <p className='font-[350] font-grava text-center text-[#002244] text-sm lm:text-[18px] leading-5 lm:leading-[27px]'>Find our nearest Client Center and ATM locations for convenient and accessible banking services.</p>
@@ -258,7 +258,7 @@ const Contact = () => {
                     <img src={Chat} alt='Chat' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                     <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>General support:</p>
-                    <p className='font-[350] font-grava text-[#334E69] text-sm lm:text-[20px]'>info@tatumbank.com</p>
+                    <p className='font-[350] font-grava text-[#334E69] text-[14px] lm:text-[20px]'>info@tatumbank.com</p>
                     </div>
                 </div>
                 
@@ -266,7 +266,7 @@ const Contact = () => {
                     <img src={Locator} alt='Locator' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                     <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>Head Office</p>
-                    <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3, Garki FCT Abuja</p>
+                    <p className='font-[350] font-grava text-[#334E69] text-center text-[14px] lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3, Garki FCT Abuja</p>
                     </div>
                 </div>
             </div>

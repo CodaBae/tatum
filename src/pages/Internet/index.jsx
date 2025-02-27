@@ -6,6 +6,7 @@ import CBN from "../../assets/svg/cbn_logo.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 import HeroSection from '../../components/HeroSection';
+import AccordionItem from '../../components/AccordionItem';
 
 const InternetBanking = () => {
     const [openDropdownOne, setOpenDropdownOne] = useState(false)
@@ -134,7 +135,7 @@ const InternetBanking = () => {
             <div className='flex flex-col items-start gap-5 lm:gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 items-start">
                     <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
-                    <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-left tracking-[0.2%]">
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-left tracking-[0.2%]">
                         We're currently updating our website to serve you better. 
                         This doesn't mean we're not working – we're behind the scenes, 
                         crafting exceptional content that will be worth the wait.
@@ -153,7 +154,7 @@ const InternetBanking = () => {
                         );
                     }}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
+                    <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
@@ -164,48 +165,64 @@ const InternetBanking = () => {
                 <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
 
                 <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
-
-                <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
-                    <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>What do I need to open an account?</p>
-                    {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                    <div className="space-y-5">
+                        <AccordionItem
+                            question="What do I need to open an account?"
+                            answer="Just a government-issued ID and your account opening is processed."
+                            defaultOpen={true}
+                        />
+                        <AccordionItem
+                            question="Are there any account opening fees?"
+                            answer="No, you do not pay any fees to open an account."
+                        />
+                        <AccordionItem
+                            question="Can I manage my account on mobile?"
+                            answer="Yes! You can access your account on iOS and Android with the Tatum Mobile app."
+                        />
                     </div>
-                    { openDropdownOne && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                            Just a government-issued ID and your account opening is processed.
-                        </p>
-                    }
-                </div>
+                    
 
-                <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
-                    <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Are there any account opening fees?</p>
-                    {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                    {/* <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
+                        <div className='flex items-center justify-between'>
+                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>What do I need to open an account?</p>
+                        {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                        </div>
+                        { openDropdownOne && 
+                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                                Just a government-issued ID and your account opening is processed.
+                            </p>
+                        }
                     </div>
-                    { openDropdownTwo && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                            No, you do not pay any fees to open an account
-                        </p>
-                    }
-                </div>
 
-                <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
-                    <div className='flex items-center justify-between'>
-                    <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Can I manage my account on mobile?</p>
-                    {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                    <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
+                        <div className='flex items-center justify-between'>
+                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Are there any account opening fees?</p>
+                        {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                        </div>
+                        { openDropdownTwo && 
+                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                                No, you do not pay any fees to open an account
+                            </p>
+                        }
                     </div>
-                    { openDropdownThree && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                            Yes! You can access your account on iOS and Android with the Tatum Mobile app.
-                        </p>
-                    }
-                </div>
+
+                    <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
+                        <div className='flex items-center justify-between'>
+                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Can I manage my account on mobile?</p>
+                        {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+                        </div>
+                        { openDropdownThree && 
+                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                                Yes! You can access your account on iOS and Android with the Tatum Mobile app.
+                            </p>
+                        }
+                    </div> */}
 
                 </div>
-
+{/* 
                 <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
                 <p className='font-grava text-xs lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-sm lg:text-[20px] underline text-[#002244]'>Help Center</span></p>
-                </div>
+                </div> */}
             </div>
         </section>
 
