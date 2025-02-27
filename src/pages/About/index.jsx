@@ -535,7 +535,7 @@ const About = () => {
               },window.scrollTo(0, 0));
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-[387px] md:h-auto group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739531326/Samuel_head_dlvi63.jpg"
@@ -577,7 +577,7 @@ const About = () => {
               },window.scrollTo(0, 0));
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 src="https://res.cloudinary.com/code-idea/image/upload/v1739530969/Niyi_head_oihrr0.jpg"
@@ -618,7 +618,7 @@ const About = () => {
               },window.scrollTo(0, 0));
             }}
           >
-            <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
                 // src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"

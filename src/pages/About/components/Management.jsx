@@ -173,7 +173,7 @@ const Management = () => {
                 }}
                 
               >
-                <div className="relative w-auto cursor-pointer h-auto  group overflow-hidden rounded-lg">
+                <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
                   {/* Background Image */}
                   <img
                     src={item.headshot}

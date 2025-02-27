@@ -352,7 +352,7 @@ const Careers = () => {
                   </div>
                 </div>
                 <div>
-                  <button className="pb-[4px]  border-b-[1px] border-[#002244]">
+                  <button className="pb-[4px]  border-0 lg:border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Apply for an Internship
                       <span className="mt-[1px] ml-[6px]">
@@ -395,7 +395,7 @@ const Careers = () => {
                   </div>
                 </div>
                 <div className="pt-[25px]">
-                  <button className="pb-[4px]  border-b-[1px] border-[#002244]">
+                  <button className="pb-[4px] border-0 lg:border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">
@@ -437,7 +437,7 @@ const Careers = () => {
                   </div>
                 </div>
                 <div className="pt-[25px]">
-                  <button className="pb-[4px]  border-b-[1px] border-[#002244]">
+                  <button className="pb-[4px]  border-0 lg:border-b-[1px] border-[#002244]">
                     <p className="font-grava font-[500] text-[14px] leading-[20px] tracking-[0.2%] sm:text-[18px] sm:leading-[27px] sm:tracking-[0.2%] text-[#002244] flex justify-start">
                       Find opportunities
                       <span className="mt-[1px] ml-[6px]">

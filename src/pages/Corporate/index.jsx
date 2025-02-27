@@ -168,7 +168,7 @@ const Corporate = () => {
                 <img
                   src={isMobile ? 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp' : 'https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp'}
                   alt="Family"
-                  className={`animate__animated  relative  right-14 lm:right-[30%] h-[383px] top-[8%] `}
+                  className={`animate__animated  relative  right-14 lm:right-[30%] h-[383px] top-[7%] `}
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   data-aos-once="false"
@@ -695,22 +695,22 @@ const Corporate = () => {
               className="w-full h-auto lg:h-[440px] rounded-xl"
           >
               <div 
-                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-5 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between items-start lg:items-center"
+                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-10 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between items-start lg:items-center"
                   style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
               >
                   <div className='flex flex-col lm:w-[615px] lg:h-[312px] gap-5 lm:gap-[50px]'>
                       <div className="flex flex-col  gap-[20px]">
-                          <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[500] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             {/* Let’s Build the Future of Your Business Together */}
                             Let’s Take Your Business To The Next Level!
                           </p>
-                          <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 
                             Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-[500]">Visit our nearest client centre</span> to get started
                           </p>
                       </div>
                       <button
-                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[228px] lm:w-[180px] py-4 rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lm:w-[180px] py-4 rounded-tl-lg rounded-br-lg h-[51px] lg:h-[58px] gap-2 flex items-center justify-center`}
                           type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                       >
                       <p 

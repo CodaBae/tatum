@@ -727,7 +727,7 @@ const Personal = () => {
           >
             <div className="flex flex-col lg:w-[615px] lm:h-[312px] gap-[20px]">
               <p
-                className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]"
+                className="font-grava font-[500] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]"
                 style={{ color: "#002244" }}
               >
                 At Tatum Bank, we are committed to providing you personalized

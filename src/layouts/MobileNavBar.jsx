@@ -72,10 +72,8 @@ const MobileNavBar = ({ handleClose }) => {
                   <div className='flex flex-col gap-4 ' style={{marginLeft:'2%'}}>
                     <div
                        onClick={() => {
-                        navigate("about", {
-                          state: { section: "mission-and-vision" },
-                        });
-                        // window.scrollTo(0,0); 
+                        navigate("about");
+                        window.scrollTo(0,0); 
                         handleClose()
                       }}
                       className="flex flex-col gap-1"
@@ -117,12 +115,12 @@ const MobileNavBar = ({ handleClose }) => {
                     </div>
                     <div
                        onClick={() => {
-                        navigate("/about", {
+                        navigate("/about/teams", {
                           state: {
                             section: "teams"
                           }
                         })
-                        // window.scrollTo(0,0); 
+                        window.scrollTo(0,0); 
                         handleClose()
                       }}
                       className="flex flex-col gap-1"

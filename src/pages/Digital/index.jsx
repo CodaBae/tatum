@@ -165,7 +165,7 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[500] w-[318px] md:w-auto mx-auto text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Internet Banking – Bank with Ease, Anytime. 
                             </p>
                             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -174,13 +174,13 @@ const Digital = () => {
                             </p>
                         </div>
                         
-                        <button
+                        {/* <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
                             <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
-                        </button>
+                        </button> */}
 
                         <p className='font-grava text-[#002244] font-semibold tracking-[0.01em] leading-[25px] text-[18px] mt-[16px] '>
                             Features & Login
@@ -232,12 +232,12 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
             <div className='flex flex-col gap-[32px]'>
-                <p className='font-grava text-[#334E69] text-[13px] font-[500] leading-[16px] tracking-[0.25em] uppercase text-[11px] lg:text-[14px]'>Registration Guide</p>
+                <p className='font-grava text-[#334E69] font-[500] leading-[16px] tracking-[0.25em] uppercase text-[12px] lg:text-[14px]'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>1. Getting started is easy!</p>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>2. Visit our Internet Banking portal.</p>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>3. Click "Register Now" and follow the steps.</p>
-                    <p className='text-[#002244] font-medium font-grava text-[20px] tracking-[1.4%] leading-[25px]'>3. Secure your login details and start banking instantly!</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>1. Getting started is easy!</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>2. Visit our Internet Banking portal.</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>3. Click "Register Now" and follow the steps.</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>3. Secure your login details and start banking instantly!</p>
                 </div>
                 <button
                     className='mt-[4px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
@@ -288,7 +288,7 @@ const Digital = () => {
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava whitespace-nowrap font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Secure biometric login (Fingerprint/Face ID)
                         </p>
                     </div>
@@ -324,7 +324,7 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[500] text-[#002244] w-[278px] md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 *365# - Dial, Transact and Smile
                             </p>
                             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -393,13 +393,13 @@ const Digital = () => {
                 </p>
     
                 <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
-                    <p className='text-[#002244] font-[500] font-grava text-base md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[500] font-grava whitespace-nowrap text-[14px] md:text-lg tracking-wide leading-6'>
                         1. Dial *365# from your registered phone number.
                     </p>
-                    <p className='text-[#002244] font-[500] font-grava text-base md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[500] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
                         2. Follow the prompts to activate.
                     </p>
-                    <p className='text-[#002244] font-[500] font-grava text-base md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[500] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
                         3. Start transacting instantly!
                     </p>
                 </div>
@@ -578,7 +578,7 @@ const Digital = () => {
                             </p>
                         </div>
                         <button
-                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[163px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[163px] rounded-tl-lg rounded-br-lg h-[51px] lm:h-[58px] gap-2 flex items-center justify-center`}
                             type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
                         <p 

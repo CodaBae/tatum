@@ -864,7 +864,7 @@ const SME = () => {
                   </div>
                   
                   <button  
-                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
                     <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
@@ -936,7 +936,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button  
-                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
                     <p className="font-grava font-[500] sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
@@ -1009,7 +1009,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button  
-                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
                     <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
@@ -1081,7 +1081,7 @@ const SME = () => {
                     </div>
                   </div>
                   <button  
-                    className="w-full sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
                   >
                     <p className="font-grava font-[500]  sm:text-[18px] text-[#B0B0B0]">
                       To be available soon
