@@ -122,7 +122,7 @@ const Investors = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244]'>Download</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='' />
                     </button>
                 </div>
@@ -133,7 +133,7 @@ const Investors = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='' />
                     </button>
                 </div>
@@ -144,7 +144,7 @@ const Investors = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244] 
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='' />
                     </button>
                 </div>
@@ -155,7 +155,7 @@ const Investors = () => {
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lm:w-[148px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244]'>Download</p> {/*  group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='' />
                     </button>
                 </div>

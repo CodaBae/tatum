@@ -237,7 +237,7 @@ const Corporate = () => {
                   state: { section: "account" },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Find out more
               </p>
               <BsArrowRight
@@ -254,7 +254,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Find out more
             </p>
             <BsArrowRight
@@ -316,7 +316,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -386,7 +386,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -447,7 +447,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start trading smarter
             </p>
             <BsArrowRight
@@ -513,7 +513,7 @@ const Corporate = () => {
             className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
           >
-            <p className=" font-[500] lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className=" font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
@@ -575,7 +575,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px]] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with us
             </p>
             <BsArrowRight
@@ -714,7 +714,7 @@ const Corporate = () => {
                           type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                       >
                       <p 
-                          className='transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                          className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
                       >
                           {/* Get started today. */}
                           Call us today

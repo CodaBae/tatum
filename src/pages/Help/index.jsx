@@ -157,17 +157,17 @@ const Help = () => {
         </section>
       }
 
-      <section className='flex flex-col items-center justify-center pt-[56px] lg:pt-[110px] lg:pb-[88px]  gap-[56px] lm:gap-[72px]'>
+      <section className='flex flex-col items-center justify-center pt-[56px] lg:pt-[110px] lg:pb-[16px]  gap-[56px] lm:gap-[72px]'>
         <div className='w-10/12 lm:w-[878px] h-[52px] lm:h-[75px] rounded-2xl border flex items-center justify-between border-[#EAECF0] py-6 px-[32px]'>
           <input 
             className='w-8/12 text-[#546B82] text-[18px] outline-none font-grava font-[350]'
             type='text'
-            placeholder='Enter keyword...'
+            placeholder='Enter keywords...'
             value={text}
             name="search"
             onChange={(e) => setText(e.target.value)}
           />
-          <FiSearch className="w-5 h-5 text-[#002244] " />
+          <FiSearch className="w-[22px] h-[22px] text-[#002244] " />
         </div>
         <img src={Line} alt='Line' className='w-[80%]' />
 
@@ -176,107 +176,143 @@ const Help = () => {
         >
           <div className='flex flex-col items-center gap-2 lm:gap-4'>
             <p className='font-grava font-[500] text-[21px] lm:text-[48px] leading-[60px] tracking-[0.2%] text-[#002244]'>FAQs</p>
-            <p className='font-[350] font-grava text-sm text-[#334E69]'>Have a question? We’re here to help.</p>
+            <p className='font-[350] font-grava text-[14px] text-[#334E69]'>Have a question? We’re here to help.</p>
           </div>
 
           <div className='flex flex-col gap-6 w-full'>
-            <div 
+            {/* <div 
               onClick={handleDropdownOne} 
               className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
             >
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>How can I contact Tatum Bank?</p>
+                <p className='font-grava text-[#334E69] font-[500] lg:text-[20px]'>How can I contact Tatum Bank?</p>
                
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p 
+                      className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'
+                    >
                         If you have any questions or need assistance, please email us at:
                         info@tatumbank.com
                         You can also visit our head office for in-person support during business hours.
 
                     </p>
                 }
+            </div> */}
+            <div 
+              onClick={handleDropdownOne} 
+              className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform"
+            >
+              <div className="flex items-center justify-between">
+                <p className="font-grava text-[#334E69] font-[500] lg:text-[20px]">How can I contact Tatum Bank?</p>
+                {openDropdownOne ? <img src={Minus} alt="Minus" /> : <img src={Plus} alt="Plus" />}
+              </div>
+
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openDropdownOne ? "max-h-[200px] opacity-100" : "h-[0px] opacity-0 hidden"
+                }`}
+              >
+                <p className="font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+                  If you have any questions or need assistance, please email us at: info@tatumbank.com.
+                  You can also visit our head office for in-person support during business hours.
+                </p>
+              </div>
             </div>
+            
 
             <div 
               onClick={handleDropdownTwo} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
+              className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform"
             >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>How do I open an account with Tatum Bank?
-                </p>
-                {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              <div className="flex items-center justify-between">
+                <p className="font-grava text-[#334E69] font-[500] lg:text-[20px]">How do I open an account with Tatum Bank?</p>
+                {openDropdownTwo ? <img src={Minus} alt="Minus" /> : <img src={Plus} alt="Plus" />}
               </div>
-                { openDropdownTwo && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        You can open an account online via our website or visit our office. Required documents include:
 
-                        A valid ID (NIN, International Passport, or Driver’s License).
-                        Proof of address (utility bill or bank statement).
-                        Two passport photographs.
-                        BVN (Bank Verification Number).
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openDropdownTwo ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0 hidden"
+                }`}
+              >
+                <p className="font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+                  You can open an account online via our website or visit our office. Required documents include:
 
-                    </p>
-                }
+                  A valid ID (NIN, International Passport, or Driver’s License).
+                  Proof of address (utility bill or bank statement).
+                  Two passport photographs.
+                  BVN (Bank Verification Number).
+                </p>
+              </div>
             </div>
 
             <div 
               onClick={handleDropdownThree} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
+              className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform"
             >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)?                </p>
-                {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              <div className="flex items-center justify-between">
+                <p className="font-grava text-[#334E69] font-[500] lg:text-[20px]">Is Tatum Bank regulated by the Central Bank of Nigeria (CBN)? </p>
+                {openDropdownThree ? <img src={Minus} alt="Minus" /> : <img src={Plus} alt="Plus" />}
               </div>
-                { openDropdownThree && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Yes, Tatum Bank is fully licensed and regulated by the Central Bank of Nigeria (CBN) and insured by the Nigeria Deposit Insurance Corporation (NDIC).
 
-                    </p>
-                }
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openDropdownThree ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0 hidden"
+                }`}
+              >
+                <p className="font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+                  Yes, Tatum Bank is fully licensed and regulated by the Central Bank of Nigeria (CBN) and insured by the Nigeria Deposit Insurance Corporation (NDIC).
+                </p>
+              </div>
             </div>
 
             <div 
               onClick={handleDropdownFour} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
+              className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform"
             >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>Where is Tatum Bank located?                </p>
-                {openDropdownFour ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              <div className="flex items-center justify-between">
+                <p className="font-grava text-[#334E69] font-[500] lg:text-[20px]">Where is Tatum Bank located?  </p>
+                {openDropdownFour ? <img src={Minus} alt="Minus" /> : <img src={Plus} alt="Plus" />}
               </div>
-                { openDropdownFour && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        Currently, we operate solely from our head office in Abuja, but we are expanding soon. Stay updated via our website and social media channels. <br />
-Our head office is at:  <br />
-Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
 
-                    </p>
-                }
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openDropdownFour ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0 hidden"
+                }`}
+              >
+                <p className="font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+                  Currently, we operate solely from our head office in Abuja, but we are expanding soon. Stay updated via our website and social media channels. <br />
+                  Our head office is at:  <br />
+                  Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
+                </p>
+              </div>
             </div>
 
             <div 
               onClick={handleDropdownFive} 
-              className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'
+              className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform"
             >
-              <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>What types of banking services does Tatum Bank offer?
-                </p>
-                {openDropdownFive ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
+              <div className="flex items-center justify-between">
+                <p className="font-grava text-[#334E69] font-[500] lg:text-[20px]">What types of banking services does Tatum Bank offer?</p>
+                {openDropdownFive ? <img src={Minus} alt="Minus" /> : <img src={Plus} alt="Plus" />}
               </div>
-                { openDropdownFive && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
-                        We offer five core segments:   <br />
-•⁠  ⁠Personal Banking: For individuals   <br />
-•⁠  ⁠Business Banking: For SMEs   <br />
-•⁠  ⁠Institutional Banking: For organizations   <br />
-•⁠  ⁠Corporate Banking: For larger enterprises   <br />
-•⁠  ⁠Private Banking: For high-net-worth clients <br />
 
-                    </p>
-                }
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openDropdownFive ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0 hidden"
+                }`}
+              >
+                <p className="font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+                    We offer five core segments:   <br />
+                    •⁠  ⁠Personal Banking: For individuals   <br />
+                    •⁠  ⁠Business Banking: For SMEs   <br />
+                    •⁠  ⁠Institutional Banking: For organizations   <br />
+                    •⁠  ⁠Corporate Banking: For larger enterprises   <br />
+                    •⁠  ⁠Private Banking: For high-net-worth clients <br />
+                </p>
+              </div>
             </div>
-
            
           </div>
 
@@ -290,7 +326,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
               type='button'
                onClick={() => navigate("/", {state: {section: "home"}})}
             >
-                <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
+                <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
             </button>
           </div>
@@ -299,12 +335,12 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
 
       </section>
       
-      <section className='w-full px-5 lm:px-[56px] py-[56px] lm:py-[80px] flex flex-col lm:flex-row items-center gap-5'> 
+      <section className='w-full px-5 lm:px-[56px] py-[56px] lm:pt-[56px] lm:pb-[102px] flex flex-col lm:flex-row items-center gap-5'> 
           <div className='bg-[#FFFAEB] flex flex-col w-full lm:w-6/12 rounded-tl-[24px] rounded-br-[24px] h-[234px] lm:h-[338px] items-center justify-center gap-[32px]'>
               <img src={Chat} alt='Chat' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
               <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                 <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>General support:</p>
-                <p className='font-[350] font-grava text-[#334E69] text-sm lm:text-[20px]'>info@tatumbank.com</p>
+                <p className='font-[350] font-grava text-[#334E69] text-[14px] lm:text-[20px]'>info@tatumbank.com</p>
               </div>
           </div>
 
@@ -312,7 +348,7 @@ Plot 1088, Cadastral Zone AO1, Area 3, Garki, FCT Abuja. <br />
               <img src={Locator} alt='Locator' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
               <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                 <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] font-[500]'>Head Office</p>
-                <p className='font-[350] font-grava text-[#334E69] text-center text-sm lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</p>
+                <p className='font-[350] font-grava text-[#334E69] text-center text-[14px] lm:leading-[26px] leading-5 lm:text-[20px]'>Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</p>
               </div>
           </div>
 

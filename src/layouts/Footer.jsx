@@ -39,7 +39,7 @@ const Footer = () => {
             onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
 
           >
-            <p className="font-grava text-[#FFCC33] font-[500] lg:text-[18px] group-hover:text-[#002244]">
+            <p className="font-grava text-[#FFCC33] font-[400]  lg:text-[18px] group-hover:text-[#002244]">
                 Download form
             </p>
           </button>
@@ -202,10 +202,10 @@ const Footer = () => {
                 >
                   Terms of service
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p className="font-grava text-[#002244] text-sm whitespace-nowrap">
                   Whistle blower
                 </p>
-                <p className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer">
+                <p className="font-grava text-[#002244] text-sm whitespace-nowrap">
                   Anti-Money Laundering
                 </p>
               </div>

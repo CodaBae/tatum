@@ -51,7 +51,7 @@ const HeroSection = ({
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[500] lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     {btnText}
                   </p>
                   <BsArrowRight

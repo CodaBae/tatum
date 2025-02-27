@@ -257,19 +257,19 @@ const Terms = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
-          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-wide text-[#002244]">TERMS AND CONDITIONS</p>
-          <p className="font-grava font-medium text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-wide text-[#002244]">TERMS AND CONDITIONS</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
         </div>
 
         <div className="flex flex-col lg:flex-1 ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
             <div className="flex flex-col">
               <p className="font-[350] leading-[25px] lm:leading-[34px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-                Welcome to Tatum Bank Nigeria Limited website (“Tatum Bank” or
-                “The Bank”). By accessing or using this website (the "Site"),
+                Welcome to Tatum Bank Nigeria Limited website (<span className="font-[500]">“Tatum Bank” or
+                “The Bank”</span>). By accessing or using this website (the <span className="font-[500]">"Site"</span>),
                 you agree to comply with and be bound by the terms and
-                conditions (the "Terms") contained herein. Please read these
+                conditions (the <span className="font-[500]">"Terms"</span>) contained herein. Please read these
                 Terms and our Privacy Policy carefully. Our Privacy policy
                 explains how we collect, use, and protect your personal
                 information. <span className="block mt-4"> The website is built to enable us communicate,

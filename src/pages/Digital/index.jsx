@@ -153,7 +153,7 @@ const Digital = () => {
             </section>
         }
 
-        <section ref={digiRef} className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
+        <section ref={digiRef} className='bg-[#fff] md:h-auto lg:h-[1094px] flex flex-col gap-[40px]  md:gap-[32px]  py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <img 
@@ -168,7 +168,7 @@ const Digital = () => {
                             <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Internet Banking – Bank with Ease, Anytime. 
                             </p>
-                            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 Enjoy 24/7 access to your accounts with our secure and
                                 intuitive Internet Banking platform.
                             </p>
@@ -178,11 +178,11 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-semibold tracking-[0.01em] leading-[25px]  text-[18px] mt-[16px] '>
+                        <p className='font-grava text-[#002244] font-semibold tracking-[0.01em] leading-[25px] text-[18px] mt-[16px] '>
                             Features & Login
                         </p>
         
@@ -221,10 +221,10 @@ const Digital = () => {
         
                     </div>
                     <button
-                        className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
+                        className='transition-all cursor-default duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
+                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
                         <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
@@ -243,7 +243,7 @@ const Digital = () => {
                     className='mt-[4px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                     type='button' 
                 >
-                    <p className='font-[500] lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                 </button>
             </div>
@@ -256,7 +256,7 @@ const Digital = () => {
                     <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                         Tatum Mobile App – Bank on the Move
                     </p>
-                    <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
                         Your bank is now in your pocket! Enjoy effortless banking on the go—wherever, whenever. 
                         Our Mobile Banking is designed to fit your lifestyle, keeping you connected, in control, 
                         and always smiling.
@@ -327,7 +327,7 @@ const Digital = () => {
                             <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 *365# - Dial, Transact and Smile
                             </p>
-                            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 No internet? No problem! Our USSD service lets you bank with just a simple dial.
                             </p>
                         </div>
@@ -336,11 +336,11 @@ const Digital = () => {
                             className='mt-[4px] w-[199px] lm:hidden h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                             type='button'
                         >
-                            <p className='font-[500] lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                            <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                             <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                         </button>
 
-                        <p className='font-grava text-[#334E69] font-[500] tracking-[25%] uppercase text-[13px] mt-[16px] '>
+                        <p className='font-grava text-[#002244] font-[500] tracking-[25%] text-[13px] lg:text-[20px] mt-[16px] '>
                             Features
                         </p>
         
@@ -388,8 +388,8 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-8'>
-                <p className='font-grava text-[#334E69] text-sm font-medium leading-4 tracking-widest uppercase'>
-                    Registration Guide
+                <p className='font-grava text-[#334E69] text-[14px] font-[500] leading-4 tracking-widest uppercase'>
+                    HOW TO REGISTER
                 </p>
     
                 <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
@@ -405,10 +405,10 @@ const Digital = () => {
                 </div>
 
                 <button
-                    className='mt-[4px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
+                    className='mt-[4px] w-[199px] cursor-default lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-[500] lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                 </button>
             </div>
@@ -422,16 +422,16 @@ const Digital = () => {
                     <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                         ATM & Card Services – Banking designed for your convenience.
                     </p>
-                    <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
                         Access your funds securely with our ATM and card solutions.
                     </p>
                 </div>
 
-                <p className='font-grava text-[#334E69] font-[500] tracking-[25%] uppercase text-[13px] mt-[16px] '>
+                <p className='font-grava text-[#334E69] font-[500] tracking-[25%]  text-[13px] lg:text-[20px] mt-[12px] '>
                     Features
                 </p>
 
-                <div className='flex flex-col gap-[32px] mt-6'>
+                <div className='flex flex-col gap-[32px] mt-[12px]'>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
                         <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
@@ -465,16 +465,16 @@ const Digital = () => {
                 <p className='font-grava font-[500] text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Card Services</p>
                 <div className='flex flex-col lm:flex-row gap-6'>
                     {/* <div className='flex flex-col lm:flex-row items-start lm:items-center gap-6 lm:gap-[32px]'> */}
-                        <p className='text-[#002244] font-[500] font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
-                        <p className='text-[#002244] font-[500] font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
+                        <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
+                        <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
                     {/* </div> */}
-                    <p className='text-[#002244] font-[500] font-grava text-sm lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
+                    <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
                 </div>
                 <button
                     className='mt-[8px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#EDEDED] flex items-center justify-center'
                     type='button' //lm:w-[174px] w-[159px]
                 >
-                    <p className='font-[500]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5 text-[#B0B0B0]' />
                 </button>
             </div>
@@ -502,9 +502,9 @@ const Digital = () => {
                         
                         <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                            type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
+                            type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
@@ -533,7 +533,7 @@ const Digital = () => {
                                     Report suspicious activities immediately
                                 </p>
                             </div>
-                            <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
+                            <div className='flex flex-col md:flex-row items-center lg:mt-[16px] md:items-start gap-3'>
                                 <p className='font-grava font-[500] text-[#002244] text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Need Help? 
                                 </p>
@@ -542,7 +542,7 @@ const Digital = () => {
                                 className='transition-all duration-500 hidden lm:flex ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] md:w-[251px] md:h-[56px] h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] items-center justify-center'
                                 type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                             >
-                                <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
+                                <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
                                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                             </button>
                         </div>
@@ -553,7 +553,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
+        <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[58px] flex flex-col">
             <div 
                 style={{
                     backgroundImage: `url(${Layer})`,
@@ -571,7 +571,7 @@ const Digital = () => {
                             <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
                                 Tatum Bank – We Keep You Smiling.
                             </p>
-                            <p className="font-grava font-[300] text-sm lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                            <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                                 At Tatum Bank, we keep you smiling with banking that fits your lifestyle! 
                                 Choose the digital banking solution that works for you and enjoy seamless, 
                                 secure, and stress-free transactions.
@@ -582,7 +582,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
                         <p 
-                            className='transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                            className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
                         >
                             {/* Get started today. */}
                             Contact us

@@ -236,9 +236,9 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="font-grava font-[500] text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
-          <p className="font-grava font-[500] text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">DATA PRIVACY POLICY </p>
-          <p className="font-grava font-[500] text-[19px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">DATA PRIVACY POLICY </p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
         </div>
 
         <div className="flex flex-col lg:flex-1">
@@ -248,19 +248,19 @@ const PrivacyPolicy = () => {
                 1. INTRODUCTION/SCOPE
               </p>
               <p className="font-[350] text-[#002244] font-grava text-base lg:text-[19px] lg:leading-[28px] leading-6">
-                Welcome to Tatum Bank Limited (“Tatum Bank”, “The Bank”).
+                Welcome to Tatum Bank Limited (<span className="font-[500]">“Tatum Bank”, “The Bank”</span>).
                 Protecting your personal and financial information with the bank
-                is a top priority for us. This Privacy Policy (“Policy”) guide
+                is a top priority for us. This Privacy Policy (<span className="font-[500]">“Policy”</span>) guide
                 how the bank complies with the data privacy principles in
-                processing the Personally Identifiable Information (PII) of our
+                processing the Personally Identifiable Information (<span className="font-[500]">PII</span>) of our
                 customers, visitors, staff, vendors, users of our product and
-                services, other third parties and stakeholders (data subjects).
+                services, other third parties and stakeholders (<span className="font-[500]">data subjects</span>).
                 It also highlights the rights and obligation of the data
                 subject. The Policy is prepared in accordance with the
-                provisions of the Nigeria Data Protection Regulation (NDPR) and
-                Nigeria Data Protection Act (NDPA), and by extension, the EU
-                General Data Protection Regulation (GDPR), Central Bank of
-                Nigeria (CBN) cybersecurity and IT standards as applicable.
+                provisions of the Nigeria Data Protection Regulation (<span className="font-[500]">NDPR</span>) and
+                Nigeria Data Protection Act (<span className="font-[500]">NDPA</span>), and by extension, the EU
+                General Data Protection Regulation (<span className="font-[500]">GDPR</span>), Central Bank of
+                Nigeria (<span className="font-[500]">CBN</span>) cybersecurity and IT standards as applicable.
               </p>
             </div>
             <div className="flex flex-col gap-4">

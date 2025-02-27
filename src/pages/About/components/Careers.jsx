@@ -168,7 +168,7 @@ const Careers = () => {
 
           />
         </section>
-      }
+      } 
 
 
       {/* OPPOTUNITIES SECTION */}

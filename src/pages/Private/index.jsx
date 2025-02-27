@@ -116,7 +116,7 @@ const Private = () => {
                     );
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Find out more
                   </p>
                   <BsArrowRight
@@ -239,7 +239,7 @@ const Private = () => {
                 );
               }}
             >
-              <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 {/* Get started */}
                 Find out more
               </p>
@@ -314,7 +314,7 @@ const Private = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -365,7 +365,7 @@ const Private = () => {
             className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
           >
-            <p className=" font-[500]  lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className=" font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
@@ -419,7 +419,7 @@ const Private = () => {
               className="bg-[#EDEDED] cursor-default px-5 mx-auto md:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2  flex items-center justify-center"
               type="button"
             >
-              <p className=" font-[500]  lg:text-[18px] font-grava text-[#B0B0B0] ">
+              <p className=" font-[400]  lg:text-[18px] font-grava text-[#B0B0B0] ">
                 {/* Apply for the Tatum Black Card */}
                 To be available soon
               </p>
@@ -501,7 +501,7 @@ const Private = () => {
             className=" bg-[#EDEDED] mt-[28px] cursor-default hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 md:flex items-center justify-center"
             type="button"
           >
-            <p className="font-[500] lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className="font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]">
               {/* Apply for the Tatum Black Card */}
               To be available soon
             </p>
