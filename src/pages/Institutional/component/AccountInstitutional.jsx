@@ -191,12 +191,12 @@ const AccountInstitutional = () => {
             </div>
 
             <button
-                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[175px] lg:w-[194px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className=' p-4 bg-[#EDEDED] w-auto cursor-default h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center'
                 type='button'
-                onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456268/TBL_Corporate_Form_1_eeem6o.pdf", "_blank")}
+                // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456268/TBL_Corporate_Form_1_eeem6o.pdf", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
-                <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='font-[400] lg:text-[18px] font-grava text-[#B0B0B0]'>Account opening available soon</p>
+                <BsArrowRight size={100}   className='mt-[2px] text-5xl  font-medium text-[#B0B0B0] w-5 h-5' />
             </button>
 
         </section>

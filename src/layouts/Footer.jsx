@@ -30,17 +30,17 @@ const Footer = () => {
         className="flex w-full h-[270px] lg:h-[342px] flex-col items-center justify-center">
         <div className="lg:w-[664px]  flex flex-col items-center gap-[22px]">
         <p className="font-grava text-[27px] lg:text-[45px] font-semibold text-center leading-[35px] lg:leading-[60px] text-[#002244]">
-            Stay smiling. <br /> Open an account today! 
+            Stay smiling. <br /> Bank with Tatum! 
             {/* Stay smiling. <br /> Find out more   */}
           </p>
           <button
-            className="bg-[#002244] w-[220px] h-[60px] p-3 group hover:bg-[#FFCC33]  hover:border-[1.5px] hover:border-[#002244] rounded-tl-lg rounded-br-lg"
+            className="bg-[#EDEDED] w-auto cursor-default h-[60px] p-3 rounded-tl-lg rounded-br-lg" // hover:bg-[#FFCC33] group hover:border-[#002244]  hover:border-[1.5px]
             type="button"
-            onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
+            // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
 
           >
-            <p className="font-grava text-[#FFCC33] font-[400]  lg:text-[18px] group-hover:text-[#002244]">
-                Download form
+            <p className="font-grava font-[400] text-[#B0B0B0]  lg:text-[18px] "> {/*  text-[#FFCC33] group-hover:text-[#002244]*/}
+                Account opening available soon
             </p>
           </button>
         </div>
