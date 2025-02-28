@@ -187,12 +187,12 @@ const AccountPersonal = () => {
             </div>
 
             <button
-                className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[175px] lg:w-[194px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
+                className=' bg-[#EDEDED] w-auto h-[54px] rounded-tl-lg rounded-br-lg cursor-default gap-2 p-4 flex items-center justify-center'
                 type='button'
-                onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
+                // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
             >
-                <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Download form</p>
-                <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                <p className='font-[400] text-[#B0B0B0] lg:text-[18px] font-grava '>Account opening available soon</p>
+                <BsArrowRight size={100}   className='mt-[2px] text-5xl text-[#B0B0B0] font-medium w-5 h-5 ' />
             </button>
 
         </section>

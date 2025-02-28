@@ -463,7 +463,7 @@ const handleTouchEnd = () => {
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[265px] lg:w-[530px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[265px] lg:w-[530px] font-[300] text-[14px] font-grava lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Secure banking, flexible loans, and profitable
                     investments for everyone.
@@ -607,7 +607,7 @@ const handleTouchEnd = () => {
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp animate__delay-08s "
                         : ""
-                    } font-[350] font-grava text-sm lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } font-[350] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     // animate__animated animate__fadeInUp animate__delay-08s
                   >
                     Your money, your way. Experience banking that fits your
@@ -747,7 +747,7 @@ const handleTouchEnd = () => {
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-[34px]  lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[350] font-grava text-[14px] lg:text-[25px]   lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Instant access to the funds, insights, and support you need
                     to take your business further.
@@ -869,7 +869,7 @@ const handleTouchEnd = () => {
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-sm lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[350] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Access high-end services and exclusive investments, all in
                     one seamless experience.

@@ -319,7 +319,7 @@ const Help = () => {
           <div className='bg-[#FFFAEB] w-full lg:w-[1014px] rounded-[16px] px-5 lm:px-[32px] mt-[32px] flex flex-col lm:flex-row items-center gap-[32px] lm:gap-0 justify-between py-10 lm:py-[52px]'>
             <div className='flex flex-col w-[310px] lm:w-full items-center lm:items-start gap-2'>
               <p className='font-grava font-[500] text-[#002244] text-[18px] lm:text-[28px] leading-[27px] lm:leading-[35px] '>Still have questions?</p>
-              <p className='font-[400] text-[#334E69] font-grava w-[264px] md:w-auto mx-auto text-center lm:text-left text-[12px]  lg:text-[20px]'>Can’t find the answer you’re looking for? Please get in touch with our team.</p>
+              <p className='font-[400] text-[#334E69] font-grava w-[264px] md:w-auto mx-auto lm:mx-0 text-center lm:text-left text-[12px]  lg:text-[20px]'>Can’t find the answer you’re looking for? Please get in touch with our team.</p>
             </div>
             <button
               className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[186px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
