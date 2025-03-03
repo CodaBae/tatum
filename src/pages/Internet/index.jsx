@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { BsArrowRight } from 'react-icons/bs';
+import { useNavigate } from "react-router-dom"
 
 import NDIC from "../../assets/svg/ndic.svg";
 import CBN from "../../assets/svg/cbn_logo.svg";
@@ -16,6 +17,8 @@ const InternetBanking = () => {
     
 
     const faqRef = useRef(null); 
+
+    const navigate = useNavigate()
 
     const handleDropdownOne = () => {
         setOpenDropdownOne(!openDropdownOne)
