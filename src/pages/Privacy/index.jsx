@@ -1168,7 +1168,7 @@ const PrivacyPolicy = () => {
                 Kindly contact us if you have any questions/enquiry about this
                 Privacy Policy
               </p>
-              <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]flex flex-col gap-2 font-grava">
+              <ul className="list-none font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]flex flex-col gap-2 font-grava">
                 <li>
                   Email: {" "}
                   <span className="underline">
