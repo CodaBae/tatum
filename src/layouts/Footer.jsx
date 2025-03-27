@@ -195,6 +195,15 @@ const Footer = () => {
                 </p>
                 <p 
                   className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/cookie-policy", {
+                    state: { section: "cookie" },
+                  },              window.scrollTo(0, 0)
+                  )}
+                >
+                  Cookie policy
+                </p>
+                <p 
+                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/terms", {
                     state: { section: "terms" },
                   },              window.scrollTo(0, 0)
