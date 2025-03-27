@@ -11,7 +11,7 @@ import CBN from "../../assets/svg/cbn_logo.svg";
 import NDIC from "../../assets/png/ndic.png";
 import Chat from "../../assets/svg/chat.svg";
 import Locator from "../../assets/svg/locator.svg";
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import HeroSection from '../../components/HeroSection'
 
 const Contact = () => {
@@ -26,6 +26,8 @@ const Contact = () => {
 
     const contactRef = useRef(null)
     const { state } = useLocation()
+
+    const navigate = useNavigate()
 
     // useEffect(() => {
     //     if (state?.section === "contact" && contactRef.current) {
@@ -226,6 +228,18 @@ const Contact = () => {
                             placeholder='Enter your message here'
                             className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-full px-6 font-grava py-5 h-[190px] lm:h-[256px]'
                         ></textarea>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <input 
+                            name='subject'
+                            type='checkbox'
+                            onChange={() => {}}
+                            className='border outline-none text-[#546B82] bg-[#F9FAFB] border-[#B0BAC5] rounded-lg w-5 h-5 '
+                        />
+                        <p className='font-[400] font-grava text-[14px] text-[#002244] leading-[1.4em]'>
+                            By ticking this box, I consent to Tatum Bank making use of my information to process my request 
+                            in accordance with the <span className='font-[500] underline cursor-pointer font-grava' onClick={() => {navigate("/privacy-policy"), window.scrollTo(0, 0)}}>Privacy Policy.</span>
+                        </p>
                     </div>
                     <button
                         className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-full lg:w-[188px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
