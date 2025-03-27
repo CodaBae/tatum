@@ -1176,7 +1176,7 @@ const PrivacyPolicy = () => {
                   </span> or{" "}
                   <span className="underline">dpo@tatumbank.com</span>
                 </li>
-                <li>Address: xxxxxxxxxxxxxxxx</li>
+                <li>Address: Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</li>
                 <li>Telephone: xxxxxxxxxxxxxxxx</li>
               </ul>
             </div>
