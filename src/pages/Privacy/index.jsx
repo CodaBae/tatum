@@ -283,7 +283,20 @@ const PrivacyPolicy = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-                1.2 Policy Statement:{" "}
+                1.2 Roles and Responsibilities{" "}
+              </p>
+              <p className="font-[350] text-[#002244] font-grava text-base lg:leading-[28px] leading-6 lg:text-[19px]">
+                Tatum Bank Data Protection Officer (DPO) is responsible for ensuring that this Privacy Notice 
+                remains accurate and up-to-date. The DPO also ensures that data subjects are informed 
+                before their personal data is collected or processed by Tatum Bank, including data collected via our 
+                website. All Tatum Bank employees and staff interacting with personal data must seek the consent of 
+                data subjects before processing their personal data securely and ensure that this Privacy Notice is 
+                brought to the attention of data subjects at the point of data collection.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+                1.3 Policy Statement:{" "}
               </p>
               <p className="font-[350] text-[#002244] font-grava text-base lg:leading-[28px] leading-6 lg:text-[19px]">
                 At Tatum Bank, we are committed to maintaining the
@@ -293,7 +306,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-                1.3 Purpose and Scope of this Policy
+                1.4 Purpose and Scope of this Policy
               </p>
               <div className="flex gap-2 flex-col">
                 <p className="font-[350] text-[#002244] font-grava lg:leading-[28px] leading-6 text-base lg:text-[19px]">
@@ -328,7 +341,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-                1.4 Our Legal Obligations.{" "}
+                1.5 Our Legal Obligations.{" "}
               </p>
               <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
                 We process your data in compliance with applicable laws, which
@@ -339,7 +352,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
-                1.5 Your Consent/Agreement.{" "}
+                1.6 Your Consent/Agreement.{" "}
               </p>
               <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
                 By using our services or accessing our platforms, you consent to
@@ -348,7 +361,7 @@ const PrivacyPolicy = () => {
                 please refrain from using our services.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
                 1.6 How to Contact Us.{" "}
               </p>
@@ -366,7 +379,7 @@ const PrivacyPolicy = () => {
                   Address: ..............................................
                 </span>
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -390,10 +403,10 @@ const PrivacyPolicy = () => {
               </p>
               <table className="w-[95%] px-5">
                 <tr className="border border-[#002244]">
-                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Type of Data
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
                     Description of Data
                   </th>
                 </tr>
@@ -500,7 +513,7 @@ const PrivacyPolicy = () => {
                   We collect personal data through various channels, including:
                   <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
                     <li>
-                      Direct Interactions: When you open an account or apply for
+                      <span className="font-semibold">Direct Interactions:</span> When you open an account or apply for
                       our services. When you fill out forms on our website,
                       mobile app or other systems. Through customer service
                       interactions (calls, emails, or chats).
@@ -508,20 +521,18 @@ const PrivacyPolicy = () => {
                   </ul>
                 </p>
                 <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  Automated Technologies:
                   <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
                     <li>
-                      Cookies and analytics tools to track website usage and
+                      <span className="font-semibold">Automated Technologies:</span> Cookies and analytics tools to track website usage and
                       improve functionality. Automated systems that monitor
                       transactions for fraud prevention and compliance.
                     </li>
                   </ul>
                 </p>
                 <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  Third Parties:
                   <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
                     <li>
-                      Credit bureaus or financial institutions for
+                      <span className="font-semibold">Third Parties:</span> Credit bureaus or financial institutions for
                       creditworthiness checks. Regulatory databases for
                       compliance with Know Your Customer (KYC) and Anti-Money
                       Laundering (AML) requirements.
@@ -604,6 +615,48 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
             </div>
+            <div className="flex flex-col mt-[26px] gap-5">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                Every processing purpose has at least one lawful basis 
+                for processing to safeguard the rights of the data subjects, as listed below:
+              </p>
+              <table className="w-[95%]  px-5">
+                <tr className="border h-[60px] border-[#002244]">
+                  <th className="text-left w-[55%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                    Purpose of Processing
+                  </th>
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                    Lawful Basis of Processing
+                  </th>
+                </tr>
+                <tr className="border h-[100px] border-[#002244] ">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Account creation, identity verification and maintenance of records
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    Contract
+                  </td>
+                </tr>
+                <tr className="border h-[100px] border-[#002244]">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Vendor validation/information processing
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    Contract
+                  </td>
+                </tr>
+                <tr className="border h-[100px] border-[#002244]">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Employment
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    Contract
+                  </td>
+                </tr>          
+              </table>
+
+            </div>
+
           </div>
 
           <div ref={purposeRef} className="flex flex-col gap-4 mt-[48px]">
@@ -622,12 +675,12 @@ const PrivacyPolicy = () => {
               </p>
               <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
                 <li className="font-[350]">
-                  To provide banking services to you – The data collected will
+                  <span className="font-[500]">To provide banking services to you</span> – The data collected will
                   enable us to authenticate you and authorize access to our
                   services on the various channels.
                 </li>
                 <li className="font-[350]">
-                  Communication - The information collected will enable us to
+                  <span className="font-[500]">Communication</span> - The information collected will enable us to
                   contact you through email, short message services (SMS)/text
                   messages, phone call and push notifications. Sending important
                   updates, such as changes to our services, policies, or terms.
@@ -637,7 +690,7 @@ const PrivacyPolicy = () => {
                   concerns.
                 </li>
                 <li className="font-[350]">
-                  Advertising and Marketing - We serve you tailored
+                  <span className="font-[500]">Advertising and Marketing</span> - We serve you tailored
                   advertisements through our apps and other channels based on
                   your preferences and account activity (with your consent where
                   required). Conducting surveys and feedback requests to improve
@@ -646,30 +699,30 @@ const PrivacyPolicy = () => {
                   promoting our services.
                 </li>
                 <li className="font-[350]">
-                  Customer Support - We use the data needed to investigate,
+                  <span className="font-[500]">Customer Support</span> - We use the data needed to investigate,
                   respond to, and resolve complaints and service issues.
                 </li>
                 <li className="font-[350]">
-                  For Analytics and Research - Analyzing user behavior and
+                  <span className="font-[500]">For Analytics and Research</span> - Analyzing user behavior and
                   trends to optimize our services. Conducting research for
                   product development and market analysis. Generating
                   statistical reports, using anonymized or aggregated data, to
                   inform business decisions
                 </li>
                 <li className="font-[350]">
-                  For Business Operations - Facilitating internal audits, risk
+                  <span className="font-[500]">For Business Operations</span> - Facilitating internal audits, risk
                   management, and compliance processes. Supporting mergers,
                   acquisitions, or other corporate transactions, subject to
                   confidentiality safeguards.
                 </li>
                 <li className="font-[350]">
-                  Security and Fraud prevention - Tatum Bank will use your data
+                  <span className="font-[500]">Security and Fraud prevention</span> - Tatum Bank will use your data
                   for security purposes or to investigate possible fraud or
                   other violations of our Terms and Conditions or this Privacy
                   Policy and/or attempts to harm our customers and/or visitors
                 </li>
                 <li className="font-[350]">
-                  Legal and Regulatory Obligations - Meeting mandatory reporting
+                  <span className="font-[500]">Legal and Regulatory Obligations</span> - Meeting mandatory reporting
                   requirements to regulatory authorities like the Central Bank
                   of Nigeria (CBN) and Nigerian Financial Intelligence Unit
                   (NFIU). Conducting Anti-Money Laundering (AML), Combating the
@@ -678,7 +731,7 @@ const PrivacyPolicy = () => {
                   laws and other statutory requirements.
                 </li>
                 <li className="font-[350]">
-                  Your Rights: We ensure that your data is used only for the
+                  <span className="font-[500]">Your Rights</span> - We ensure that your data is used only for the
                   purposes outlined above, in compliance with applicable laws
                   and regulations. You have the right to:
                   <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
@@ -711,10 +764,10 @@ const PrivacyPolicy = () => {
                 share your data.
               </p>
             </div>
-            <ul className="list-disc pl-5 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-3 flex flex-col">
+            <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-3 flex flex-col">
               <li className="font-[500]">
                 Parties with Whom We May Share Your Data.
-                <ul className="list-decimal pl-5 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] mt-3 gap-2 flex flex-col">
+                <ul className="list-decimal pl-5  font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] mt-3 gap-2 flex flex-col">
                   <li>
                     <span className="font-[500]">Regulatory Authorities:</span> We are required to share your data
                     with regulatory bodies, such as the Central Bank of Nigeria
@@ -748,13 +801,6 @@ const PrivacyPolicy = () => {
                     with our obligations.
                   </li>
                 </ul>
-              </li>
-              <li>
-                <span className="font-[500]">Data Sharing for Marketing Purposes -</span> 
-                We will never sell your data
-                to third parties for marketing purposes. With your explicit
-                consent, we may share limited information with marketing
-                partners to deliver personalized offers or promotions.
               </li>
               <li>
                 <span className="font-[500]">Cross-Border Data Transfers -</span> If your data needs to be transferred
@@ -805,16 +851,25 @@ const PrivacyPolicy = () => {
                 controls to secure the data and continually review our internal
                 information technology systems to ensure they are adequately
                 secured and procedures to deal with any suspected data breach
-                are in place. In the unlikely event of a data breach, The Bank
-                will take necessary steps to mitigate any loss or destruction of
-                data and, if appropriate, will notify you and any applicable
-                authority of such a breach. We will regularly review and enhance
-                our security policies and technologies to adapt to evolving
-                threats and ensure ongoing protection. As a data subject, you
-                have the responsibility to keep safe your user credential and
-                password/PIN use to access our website, mobile and internet
-                banking app, and other services. The password should not be
-                shared or disclosed to anyone.
+                are in place. 
+                <span className="block mt-5">
+                  In the unlikely event of a data breach, The Bank
+                  will take necessary steps to mitigate any loss or destruction of
+                  data and, if appropriate, will notify you and any applicable
+                  authority of such a breach.
+                </span> 
+                <span className="block mt-5">
+                  We will regularly review and enhance
+                  our security policies and technologies to adapt to evolving
+                  threats and ensure ongoing protection. 
+                </span>
+                <span className="mt-5 block">
+                  As a data subject, you
+                  have the responsibility to keep safe your user credential and
+                  password/PIN use to access our website, mobile and internet
+                  banking app, and other services. The password should not be
+                  shared or disclosed to anyone.
+                </span>
               </p>
             </div>
           </div>
@@ -831,21 +886,21 @@ const PrivacyPolicy = () => {
                 laws:
               </p>
             </div>
-            <ul className="list-decimal pl-5 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+            <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
               <li>
-                Right to Access - You have the right to request access to the
+                <span className="font-[500]">Right to Access</span> - You have the right to request access to the
                 personal data we hold about you. This includes understanding how
                 your data is being used and obtaining copies of your
                 information.
               </li>
               <li>
-                Right to Rectification - If you believe any information, we hold
+                <span className="font-[500]">Right to Rectification</span> - If you believe any information, we hold
                 is inaccurate or incomplete, you have the right to request
                 corrections or updates. We will update your information promptly
                 upon verification of your request.
               </li>
               <li>
-                Right to Erasure (Right to Be Forgotten) - You may request that
+                <span className="font-[500]">Right to Erasure (Right to Be Forgotten)</span> - You may request that
                 we delete your personal data where it is no longer necessary for
                 the purpose it was collected or you withdraw your consent and
                 there is no other legal basis for processing or the data was
@@ -853,58 +908,104 @@ const PrivacyPolicy = () => {
                 to comply with legal or regulatory obligations.
               </li>
               <li>
-                Right to Restrict Processing - You have the right to request
+                <span className="font-[500]">Right to Restrict Processing</span> - You have the right to request
                 that we limit the processing of your data if you contest the
                 accuracy of the data or you object to the processing and we are
                 evaluating your request or the processing is unlawful, but you
                 prefer restriction over deletion.
               </li>
               <li>
-                Right to Data Portability - You may request a copy of your data
+                <span className="font-[500]">Right to Data Portability</span> - You may request a copy of your data
                 in a structured, machine-readable format. Where technically
                 feasible, we can transfer your data directly to another service
                 provider at your request.
               </li>
               <li>
-                Right to Object - You have the right to object to the processing
+                <span className="font-[500]">Right to Object</span> - You have the right to object to the processing
                 of your data for direct marketing purposes or automated
                 decision-making, including profiling.
               </li>
               <li>
-                Right to Withdraw Consent - Where we rely on your consent for
+                <span className="font-[500]">Right to Withdraw Consent</span> - Where we rely on your consent for
                 processing, you can withdraw it at any time without affecting
                 the lawfulness of prior processing.
               </li>
               <li>
-                Right to Be Informed - You have the right to be informed about
+                <span className="font-[500]">Right to Be Informed</span> - You have the right to be informed about
                 how your data is collected, used, shared, and stored in a clear
                 and transparent manner.
               </li>
               <li>
-                Right to Lodge a Complaint - If you believe your rights have
+                <span className="font-[500]">Right to Lodge a Complaint</span> - If you believe your rights have
                 been violated, you have the right to lodge a complaint with: Our
                 Data Protection Officer (DPO) using the contact details below
-                and the relevant data protection authority, such as the National
-                Information Technology Development Agency (NITDA) in Nigeria.
-              </li>
-              <li>
-                How to Exercise Your Rights To exercise any of your rights,
-                please contact us using the information provided below:
-                <span className="block mt-1 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  Email: <span className="underline">dpo@tatumbank.com </span>
-                </span>
-                <span className="block mt-1 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  Phone: -------------
-                </span>
-                <span className="block mt-1 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  Address: -------------------
-                </span>
-                <span className="block mt-1 text-[#002244] font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  We will respond to your request in accordance with applicable
-                  laws.
-                </span>
+                and the relevant data protection authority, such as the Nigeria Data Protection Commission (NDPC)
               </li>
             </ul>
+            <div className="flex flex-col gap-5">
+              <table className="w-[100%] mt-[26px] px-5">
+                <tr className="border h-[60px] border-[#002244]">
+                  <th className="text-left w-[35%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                    Description
+                  </th>
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava border border-y-0 border-l-0">
+                    Data Protection Officer (DPO)
+                  </th>
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                    Supervisory Authority
+                  </th>
+                </tr>
+                <tr className="border h-[100px] border-[#002244] ">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Contact Name
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                    Fidelis Elogie
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    Nigeria Data Protection Commission (NDPC)
+                  </td>
+                </tr>
+                <tr className="border h-[100px] border-[#002244]">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Address
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                    Plot 1088, Cadestral Zone A01, Area 3, Garki FCT Abuja
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    No 12 Clement Isong Street, Asokoro, Abuja, Nigeria
+                  </td>
+                </tr>
+                <tr className="border h-[100px] border-[#002244]">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Email
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                    dpo@tatumbank.com
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    info@ndpc.gov.ng
+                  </td>
+                </tr>  
+                <tr className="border h-[100px] border-[#002244]">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    Phone Number
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                    +234 (0) 703 075 1962
+                  </td>
+                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                    +234 (0) 916 061 5551
+                  </td>
+                </tr>          
+              </table>
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                Please be informed that <span className="font-[450] cursor-pointer"><a href="mailto:dpo@tatumbank.com">dpo@tatumbank.com </a></span>  
+                is a designated email that addresses data privacy complaints,
+                requests, and inquiries <span className="font-[650]">ONLY</span>
+              </p>
+            </div>
           </div>
 
           <div ref={cookiesRef} className="flex flex-col gap-4 mt-[40px]">
@@ -937,24 +1038,24 @@ const PrivacyPolicy = () => {
               </p>
               <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
                 <li>
-                  Strictly Necessary Cookies: - These cookies are essential for
+                  <span className="font-[500]">Strictly Necessary Cookies</span> - These cookies are essential for
                   the operation of our website and services. Eg..Authentication,
                   login sessions, and fraud detection. Without these cookies,
                   some features of our platform may not function properly.
                 </li>
                 <li>
-                  Performance Cookies: - These cookies collect information about
+                  <span className="font-[500]">Performance Cookies</span> - These cookies collect information about
                   how you use our website, such as the pages you visit, and any
                   errors encountered. The purpose is to improve the
                   functionality and user experience of our website.
                 </li>
                 <li>
-                  Marketing and Analytics Cookies: - These cookies track your
+                  <span className="font-[500]">Marketing and Analytics Cookies</span> - These cookies track your
                   interactions with our website to provide personalized
                   advertisements or recommendations.
                 </li>
                 <li>
-                  Third-Party Cookies: - Some cookies may be placed by trusted
+                  <span className="font-[500]">Third-Party Cookies</span> - Some cookies may be placed by trusted
                   third-party services integrated into our platform (e.g.,
                   payment processors, social media platforms).
                 </li>
