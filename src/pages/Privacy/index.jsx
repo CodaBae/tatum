@@ -654,7 +654,6 @@ const PrivacyPolicy = () => {
                   </td>
                 </tr>          
               </table>
-
             </div>
 
           </div>
