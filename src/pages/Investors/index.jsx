@@ -123,7 +123,7 @@ const Investors = () => {
                         // onClick={() => window.open("", "_blank")}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
-                        {/* <img src={Download} alt='download' className='' /> */}
+                        <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
@@ -134,7 +134,7 @@ const Investors = () => {
                         // onClick={() => window.open("", "_blank")}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
-                        {/* <img src={Download} alt='download' className='' /> */}
+                        <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
@@ -145,7 +145,7 @@ const Investors = () => {
                         // onClick={() => window.open("", "_blank")}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
-                        {/* <img src={Download} alt='download' className='' /> */}
+                        <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
@@ -156,7 +156,7 @@ const Investors = () => {
                         // onClick={() => window.open("", "_blank")}
                     >
                         <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
-                        {/* <img src={Download} alt='download' className='' /> */}
+                        <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
            

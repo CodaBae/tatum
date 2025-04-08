@@ -1174,8 +1174,8 @@ const handleTouchEnd = () => {
           <p className="text-[#002244] font-[500] text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
            Your Money, <span className="block text-center">Everywhere You Go</span> 
           </p>
-          <p className="text-sm lg:text-xl text-[#334E69] lg:w-[456px] font-grava leading-[20px] lg:leading-[27px] text-center">
-            Tatum cards keep up the pace, so you are always connected to your finances .
+          <p className="text-[14px] lg:text-xl text-[#334E69] lg:w-[456px] font-grava font-[300] leading-[20px] lg:leading-[27px] text-center">
+            Tatum cards keep up the pace, so you're always connected to your finances .
           </p>
         </div>
         {/* Desktop Card Layout */}
@@ -1818,7 +1818,7 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 Debit/Credit Cards
               </p>
-              <p className="text-sm lg:text-base font-grava font-[400] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
                 Enjoy a card that never flops. Our Debit and credit cards are
                 reliable and secure.
               </p>
@@ -1850,7 +1850,7 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 Client Centres
               </p>
-              <p className="text-sm lg:text-base font-[350] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
                 Simply enter your location and find our closest client centre on the
                 map.
               </p>
@@ -1885,7 +1885,7 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 Online Banking
               </p>
-              <p className="text-sm lg:text-base font-[400] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
                 Manage your accounts, pay bills, transfer funds, and track
                 transactions anytime, anywhere. Our user-friendly mobile app
                 serves you no matter where life takes you.
@@ -1911,7 +1911,7 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 USSD Banking
               </p>
-              <p className="text-sm lg:text-base font-[400] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
                 No internet? No problem. Access your account, check balances, 
                 and perform essential transactions using our simple *365#. 
                 It is quick, secure, and reliable.
@@ -1948,11 +1948,9 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 Help & Support
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
                 Access our comprehensive knowledge base for instant answers. 
                 Find guides, tutorials, and FAQs to help you navigate our platform with ease.
-                {/* Need help? Send us an email at <a href="mailto:info@tatumbank.com." className="underline">info@tatumbank.com.</a> 
-                {" "}Our team is always on standby to assist, and resolve any issues. */}
               </p>
             </div>
             <button
@@ -1974,7 +1972,7 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[500] font-grava text-[#002244]">
                 Contact Us
               </p>
-              <p className="text-sm lg:text-base font-grava font-[400] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
                 Get in touch with our dedicated support team available 24/7. 
                 We're here to help through chat, call, or email for all your questions and concerns.
               </p>

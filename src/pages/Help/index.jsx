@@ -176,7 +176,7 @@ const Help = () => {
         >
           <div className='flex flex-col items-center gap-2 lm:gap-4'>
             <p className='font-grava font-[500] text-[21px] lm:text-[48px] leading-[60px] tracking-[0.2%] text-[#002244]'>FAQs</p>
-            <p className='font-[350] font-grava text-[14px] text-[#334E69]'>Have a question? We’re here to help.</p>
+            <p className='font-[350] font-grava text-[14px] lm:text-[18px] text-[#334E69]'>Have a question? We’re here to help.</p>
           </div>
 
           <div className='flex flex-col gap-6 w-full'>

@@ -45,7 +45,7 @@ const Teams = () => {
                 className="bg-[#FFCC33] absolute -bottom-8 flex items-center justify-center w-[90%] md:w-[493px] h-[66px] gap-4 rounded-tl-lg rounded-br-lg py-5 px-10"
             >
                 <p 
-                    className="font-[350] font-grava text-[#002244] text-sm lm:text-[20px] cursor-pointer"
+                    className="font-[350] font-grava text-[#002244] text-[14px] lm:text-[20px] cursor-pointer"
                     onClick={() => navigate("/", {
                         state: { section: "home" },
                     })}
@@ -54,7 +54,7 @@ const Teams = () => {
                 </p>
                 <img src={Forward} alt="forward" className=""/>
                 <p 
-                    className="font-[350] font-grava text-[#002244] whitespace-nowrap text-sm lm:text-[20px] cursor-pointer"
+                    className="font-[350] font-grava text-[#002244] whitespace-nowrap text-[14px] lm:text-[20px] cursor-pointer"
                     onClick={() => navigate("/about", {
                         state: { section: "about" },
                     })}

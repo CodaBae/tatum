@@ -77,7 +77,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4">
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about", {
                     state: { section: "about" },
                   },              window.scrollTo(0, 0)
@@ -85,7 +85,7 @@ const Footer = () => {
                 >
                   About us
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                <p className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/about/careers", {
                     state: { section: "careers" },
                   },              window.scrollTo(0, 0)
@@ -94,7 +94,7 @@ const Footer = () => {
                   Careers
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
                   },              window.scrollTo(0, 0)
@@ -103,7 +103,7 @@ const Footer = () => {
                   Blogs
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/contact", {
                     state: { section: "contact" },
                   },              window.scrollTo(0, 0)
@@ -112,7 +112,7 @@ const Footer = () => {
                   Contact
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/investors", {
                     state: { section: "investors" },
                   },              window.scrollTo(0, 0)
@@ -128,7 +128,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4">
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/personal", {
                     state: { section: "personal" },
                   },              window.scrollTo(0, 0)
@@ -137,7 +137,7 @@ const Footer = () => {
                   Personal Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/business", {
                     state: { section: "business" },
                   },              window.scrollTo(0, 0)
@@ -146,7 +146,7 @@ const Footer = () => {
                   Business Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/corporate", {
                     state: { section: "corporate" },
                   },              window.scrollTo(0, 0)
@@ -155,7 +155,7 @@ const Footer = () => {
                   Corporate Banking
                 </p>
                 <p 
-                  className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                  className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => navigate("/private", {
                     state: { section: "private" },
                   },              window.scrollTo(0, 0)
@@ -163,14 +163,14 @@ const Footer = () => {
                 >
                   Private Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                <p className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => {navigate("/institutional", {
                     state: { section: "institution" },
                   }); window.scrollTo(0, 0)}}
                 >
                   Institutional Banking
                 </p>
-                <p className="font-grava text-[#002244] whitespace-nowrap text-sm cursor-pointer font-300"
+                <p className="font-grava text-[#002244] underline hover:no-underline whitespace-nowrap text-sm cursor-pointer font-300"
                   onClick={() => {navigate("/digital", {
                     state: { section: "digital" },
                   }); window.scrollTo(0, 0)}}
@@ -185,7 +185,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4">
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/privacy-policy", {
                     state: { section: "privacy" },
                   },              window.scrollTo(0, 0)
@@ -194,7 +194,7 @@ const Footer = () => {
                   Privacy policy
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/cookie-policy", {
                     state: { section: "cookie" },
                   },              window.scrollTo(0, 0)
@@ -203,7 +203,7 @@ const Footer = () => {
                   Cookie policy
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/terms", {
                     state: { section: "terms" },
                   },              window.scrollTo(0, 0)
@@ -225,13 +225,13 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-4">
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
                   FAQ
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
                   },              window.scrollTo(0, 0)
@@ -240,7 +240,7 @@ const Footer = () => {
                   Video Tutorials
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/resources", {
                     state: { section: "resources" },
                   },              window.scrollTo(0, 0)
@@ -249,13 +249,13 @@ const Footer = () => {
                   Media
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
                   Help Center
                 </p>
                 <p 
-                  className="font-grava text-[#002244] text-sm whitespace-nowrap cursor-pointer"
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/sitemap", {
                     state: { section: "site" },
                   },              window.scrollTo(0, 0)

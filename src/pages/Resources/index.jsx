@@ -150,25 +150,25 @@ const Resources = () => {
 
       {/*  */}
       
-      <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
+      <section className='bg-[#fff] pt-[56px]  pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
         <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>
             <div className={`${activeTab === "news" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("news")}>
-                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[28px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
                   Latest News
                 </p>
             </div>
             <div className={`${activeTab === "press" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("press")}>
-                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
                     Press Releases
                 </p>
             </div>
             <div className={`${activeTab === "form" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("form")}>
-                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
                     Form Downloads
                 </p>
             </div>
             <div className={`${activeTab === "media" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("media")}>
-                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[26px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
                     Media Gallery
                 </p>
             </div>

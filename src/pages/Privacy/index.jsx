@@ -101,7 +101,14 @@ const PrivacyPolicy = () => {
     <div
       ref={privacyRef}
       className="w-full mb-[56px] lg:mb-[120px] overflow-hidden">
-      <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:z-10 justify-center">
+      <div 
+        style={{ 
+          backgroundImage: `url(https://framerusercontent.com/images/NUH4eUyFO0g76XT8Hd1XgCyLmUU.png)`, 
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-[#FFCC33] w-full h-[184px] lg:h-[294px] flex items-center lg:z-10 justify-center"
+      >
         <p className="font-bold text-[#002244] font-grava text-[34px] lg:text-[75px] mt-[44px] lg:mt-[6%] ">
           Privacy Policy
         </p>
