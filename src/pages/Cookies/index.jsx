@@ -33,6 +33,9 @@ const CookiePolicy = () => {
 
   useEffect(() => {
 
+    if (tabName === "intro" && introductionRef.current) {
+      introductionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
     if (tabName === "data" && dataCollectionRef.current) {
       dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -244,10 +247,9 @@ const CookiePolicy = () => {
             </div>
           </div>
         </div>
+  
 
-       
-
-        <div className="flex flex-col lg:flex-1">
+        <div className="flex flex-col lg:h-[800px] lg:overflow-y-auto lg:flex-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"> {/*  "flex flex-col lg:h-[800px] lg:overflow-y-scroll lg:flex-1" */}
           <div ref={introductionRef} className="flex gap-[40px] flex-col">
             <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
@@ -562,6 +564,7 @@ const CookiePolicy = () => {
           </div>
 
         </div>
+
       </div>
     </div>
   );
