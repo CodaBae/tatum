@@ -45,8 +45,8 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="bg-[#fff] w-full px-5 lg:pl-[55px] lg:pr-[67px] pt-[61px] lg:pb-[10px] flex flex-col gap-[48px] lg:items-center">
-        <div className="flex flex-col lg:justify-center lg:flex-row gap-[40px] lg:gap-[54px]"> {/* lg:gap-[94px] */}
+      <div className="bg-[#fff] w-full px-5 lg:pl-[56px] lg:pr-[56px] pt-[61px] lg:pb-5 flex flex-col gap-[48px] lg:items-center">
+        <div className="flex flex-col lg:justify-center lg:flex-row gap-[40px] lg:gap-[96px]"> {/* lg:gap-[54px]  */}
           <div className="flex flex-col items-start gap-4 lg:w-[180px]">
             <div className="flex flex-col gap-3">
               <p className="font-grava text-[#002244] uppercase tracking-wide font-[500] text-base">
@@ -70,8 +70,8 @@ const Footer = () => {
               <img src={Apple} alt="Apple" className="w-[140px] cursor-pointer opacity-30" />
             </div>
           </div>
-          <div className="lg:w-[1044px] grid grid-cols-2  lg:flex items-start gap-[40px] lg:gap-[96px]">
-            <div className="flex flex-col gap-4 w-[85px]">
+          <div className="lg:w-[1044px] grid grid-cols-2  lg:flex items-start gap-[40px] lg:gap-[104px]"> {/* lg:gap-[96px]  */}
+            <div className="flex flex-col gap-4 w-auto"> {/* lg:w-[85px] w-[114.53px]*/}
               <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 COMPANY
               </p>
@@ -122,7 +122,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[126px]">
+            <div className="flex flex-col gap-4 w-auto"> {/* lg:w-[126px] w-[135.34px]*/}
               <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 SERVICES
               </p>
@@ -179,7 +179,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[156px]">
+            <div className="flex flex-col gap-4 w-auto"> {/* lg:w-[156px] w-[155.05px]*/}
               <p className="font-grava text-base text-[#002244] tracking-wide font-[500]">
                 LEGAL
               </p>
@@ -219,7 +219,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[97px]">
+            <div className="flex flex-col gap-4 w-auto"> {/* lg:w-[97px] w-[97px]*/}
               <p className="font-grava text-base tracking-wide text-[#002244] font-[500]">
                 SUPPORT
               </p>
@@ -228,16 +228,7 @@ const Footer = () => {
                   className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
-                  FAQ
-                </p>
-                <p 
-                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
-                  onClick={() => navigate("/resources", {
-                    state: { section: "resources" },
-                  },              window.scrollTo(0, 0)
-                  ) }
-                >
-                  Video Tutorials
+                  Help Center
                 </p>
                 <p 
                   className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
@@ -250,10 +241,20 @@ const Footer = () => {
                 </p>
                 <p 
                   className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/resources", {
+                    state: { section: "resources" },
+                  },              window.scrollTo(0, 0)
+                  ) }
+                >
+                  Video Tutorials
+                </p>
+                <p 
+                  className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
-                  Help Center
+                  FAQ
                 </p>
+                
                 <p 
                   className="font-grava text-[#002244] underline hover:no-underline text-sm whitespace-nowrap cursor-pointer"
                   onClick={() => navigate("/sitemap", {
@@ -265,7 +266,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[196px]">
+            <div className="flex flex-col gap-4 w-auto"> {/* lg:w-[196px] */}
               <p className="font-grava text-base tracking-wide text-[#002244] font-[500]">
                 ADDRESS
               </p>
@@ -277,25 +278,26 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="h-[0.5px] bg-[#d7dce2] w-full"></div>
-        <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[21px] lastF">
-          <img
-            src={Logo}
-            alt="Logo"
-            className="w-[109px] h-[44px] cursor-pointer"
-            onClick={() => navigate("/", {
-              state: { section: "home" },
-            },              window.scrollTo(0, 0)
-            )}
-          />
-       
-          <div className="flex flex-col gap-1 x">
-            <p className="text-xs text-[#002244] flex lg:justify-end font-grava font-300" >
-              &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
-            </p>
-            <p className="text-xs text-[#002244] font-grava font-300">
-              Licensed by the Central Bank of Nigeria. All deposits are insured by NDIC. All rights reserved
-            </p>
+        <div className="border border-[#d7dce2] border-b-0 border-x-0 w-full pt-5"> {/* h-[0.5px] bg-[#d7dce2] w-full */}
+          <div className="flex flex-col lm:flex-row items-center w-full justify-between gap-[21px] ">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-[109px] h-[44px] cursor-pointer"
+              onClick={() => navigate("/", {
+                state: { section: "home" },
+              },              window.scrollTo(0, 0)
+              )}
+            />
+        
+            <div className="flex flex-col gap-1 x">
+              <p className="text-xs text-[#002244] flex lg:justify-end font-grava font-[400]" >
+                &copy; {new Date().getFullYear()}. Tatum Bank Ltd. RC RC7745719
+              </p>
+              <p className="text-xs text-[#002244] font-grava font-[400]">
+                Licensed by the Central Bank of Nigeria. All deposits are insured by NDIC. All rights reserved
+              </p>
+            </div>
           </div>
         </div>
       </div>

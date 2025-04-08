@@ -251,10 +251,10 @@ const PrivacyPolicy = () => {
         <div className="flex flex-col lg:flex-1">
           <div ref={introductionRef} className="flex gap-[40px] flex-col">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] tracking-[0.01em] text-[#002244] font-grava">
                 1. INTRODUCTION/SCOPE
               </p>
-              <p className="font-[350] text-[#002244] font-grava text-base lg:text-[19px] lg:leading-[28px] leading-6">
+              <p className="font-[400] text-[#002244] font-grava text-base lg:text-[18px] lg:leading-[150%] leading-6">
                 Welcome to Tatum Bank Limited (<span className="font-[500]">“Tatum Bank”, “The Bank”</span>).
                 Protecting your personal and financial information with the bank
                 is a top priority for us. This Privacy Policy (<span className="font-[500]">“Policy”</span>) guide
@@ -271,10 +271,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244]  tracking-[0.01em] font-grava">
                 1.1 About Tatum Bank Limited{" "}
               </p>
-              <p className="font-[350] text-[#002244] font-grava text-base lg:leading-[28px] leading-6 lg:text-[19px]">
+              <p className="font-[400] text-[#002244] font-grava text-base lg:leading-[150%] tracking-[0.01em] leading-6 lg:text-[18px]">
                 Tatum Bank Limited is licensed by the Central Bank of Nigeria
                 (CBN), the regulatory authority, to provide banking and
                 financial services to a wide variety of customers, institutions,
@@ -289,10 +289,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.2 Roles and Responsibilities{" "}
               </p>
-              <p className="font-[350] text-[#002244] font-grava text-base lg:leading-[28px] leading-6 lg:text-[19px]">
+              <p className="font-[400] text-[#002244] font-grava text-base lg:leading-[150%] tracking-[0.01em] leading-6 lg:text-[18px]">
                 Tatum Bank Data Protection Officer (DPO) is responsible for ensuring that this Privacy Notice 
                 remains accurate and up-to-date. The DPO also ensures that data subjects are informed 
                 before their personal data is collected or processed by Tatum Bank, including data collected via our 
@@ -302,42 +302,42 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.3 Policy Statement:{" "}
               </p>
-              <p className="font-[350] text-[#002244] font-grava text-base lg:leading-[28px] leading-6 lg:text-[19px]">
+              <p className="font-[400] text-[#002244] font-grava text-base lg:leading-[150%] tracking-[0.01em] leading-6 lg:text-[18px]">
                 At Tatum Bank, we are committed to maintaining the
                 confidentiality and security of your personal data. We process
                 your data in compliance with applicable laws and regulations.
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.4 Purpose and Scope of this Policy
               </p>
               <div className="flex gap-2 flex-col">
-                <p className="font-[350] text-[#002244] font-grava lg:leading-[28px] leading-6 text-base lg:text-[19px]">
+                <p className="font-[400] text-[#002244] font-grava lg:leading-[150%] tracking-[0.01em] leading-6 text-base lg:text-[18px]">
                   The purpose of the Privacy Policy is to:
                 </p>
-                <ul className="list-disc pl-5 text-[#002244] font-grava lg:leading-[28px] leading-6 text-base lg:text-[19px] gap-2 flex flex-col">
-                  <li className="font-grava font-[350]">
+                <ul className="list-disc pl-5 text-[#002244] font-grava lg:leading-[150%] tracking-[0.01em] leading-6 text-base lg:text-[18px] gap-2 flex flex-col">
+                  <li className="font-grava font-[400]">
                     Clearly explain the types of data we collect and why we
                     collect it.
                   </li>
-                  <li className="font-grava font-[350]">
+                  <li className="font-grava font-[400]">
                     Describe your rights regarding your data and how you can
                     exercise them.
                   </li>
-                  <li className="font-grava font-[350]">
+                  <li className="font-grava font-[400]">
                     Provide transparency about how we protect your privacy.{" "}
                   </li>
                 </ul>
               </div>
               <div className="flex gap-5 flex-col">
-                <p className="font-[500] text-[#002244] leading-[25px] lm:leading-[30px] font-grava text-base lg:text-[19px]">
+                <p className="font-[500] text-[#002244] leading-[25px] lm:leading-[30px] font-grava text-base lg:text-[20px]">
                   Scope of This Policy.
                 </p>
-                <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                   This policy covers personal and financial information
                   collected through our website, mobile and online applications,
                   physical branches, and customer service interactions as well
@@ -347,10 +347,10 @@ const PrivacyPolicy = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.5 Our Legal Obligations.{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We process your data in compliance with applicable laws, which
                 include - Nigeria Data Protection Regulation (NDPR), Central
                 Bank of Nigeria (CBN) cybersecurity and IT standards and other
@@ -358,10 +358,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.6 Your Consent/Agreement.{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 By using our services or accessing our platforms, you consent to
                 the collection, use, and sharing of your data as described in
                 this Privacy Policy. If you do not agree with this policy,
@@ -369,20 +369,20 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             {/* <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 1.6 How to Contact Us.{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 If you have questions or concerns about this Privacy Policy or
                 how your data is handled, please contact our Data Protection
                 Officer (DPO):
-                <span className="block mt-1 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <span className="block mt-1 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                   Email: <span className="underline">DPO@TatumBank.com </span>
                 </span>
-                <span className="block mt-1 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <span className="block mt-1 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                   Phone: ..............................................
                 </span>
-                <span className="block mt-1 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <span className="block mt-1 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                   Address: ..............................................
                 </span>
               </p>
@@ -393,10 +393,10 @@ const PrivacyPolicy = () => {
             ref={dataCollectionRef}
             className="flex flex-col gap-[40px] mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2. DATA COLLECTION
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 To provide secure and efficient banking and financial services,
                 we collect and process various types of personal data (i.e.
                 Personally Identifiable information-PII). Below is a detailed
@@ -405,23 +405,23 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2.1 Types of Data We Collect.
               </p>
               <table className="w-[95%] px-5">
                 <tr className="border border-[#002244]">
-                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Type of Data
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
                     Description of Data
                   </th>
                 </tr>
                 <tr className="border border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Personal Identifiable Information (PII)
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Full name, gender, marital status, title, date of birth, and
                     nationality. Identification documents, national
                     identification number (NIN), BVN (Bank Verification Number),
@@ -429,39 +429,39 @@ const PrivacyPolicy = () => {
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Contact details
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Contact details Contact details such as phone number, email
                     address, and residential address.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Financial Information
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Bank account details, transaction history, credit/debit card
                     information, Loan applications, credit history, and payment
                     records.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Behavioral Data
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Browsing activity on our platform (e.g., pages viewed, links
                     clicked), Responses to promotional campaigns or surveys,
                     feedbacks.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Technical Data
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Details of devices used to access our website and online
                     services e.g., Internet Protocol (IP) address, time zone
                     setting and location, operating system, browser type, device
@@ -470,10 +470,10 @@ const PrivacyPolicy = () => {
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350]  border-y-0 text-[#002244] border-l-0">
+                  <td className="p-2 border font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400]  border-y-0 text-[#002244] border-l-0">
                     Others
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     CCTV/Video footage when you access our premises or use our
                     ATMs and telephone conversations via calls made to our
                     operating centers.
@@ -482,10 +482,10 @@ const PrivacyPolicy = () => {
               </table>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2.2 Why We Collect Your Data
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Every processing purpose has a lawful basis, and the rights of
                 the data subjects are safeguarded. Specifically, the data we
                 collect from you serves the following purposes:
@@ -512,13 +512,13 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2.3 How We Collect Data.{" "}
               </p>
               <div className="flex flex-col gap-4">
-                <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                   We collect personal data through various channels, including:
-                  <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                  <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                     <li>
                       <span className="font-semibold">Direct Interactions:</span> When you open an account or apply for
                       our services. When you fill out forms on our website,
@@ -527,8 +527,8 @@ const PrivacyPolicy = () => {
                     </li>
                   </ul>
                 </p>
-                <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
+                  <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                     <li>
                       <span className="font-semibold">Automated Technologies:</span> Cookies and analytics tools to track website usage and
                       improve functionality. Automated systems that monitor
@@ -536,8 +536,8 @@ const PrivacyPolicy = () => {
                     </li>
                   </ul>
                 </p>
-                <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
-                  <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+                <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
+                  <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                     <li>
                       <span className="font-semibold">Third Parties:</span> Credit bureaus or financial institutions for
                       creditworthiness checks. Regulatory databases for
@@ -549,10 +549,10 @@ const PrivacyPolicy = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2.4 Sensitive Data{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Certain types of sensitive data, such as biometric information
                 (e.g., fingerprints or facial recognition) may be collected for
                 enhanced security and authentication. This is done in strict
@@ -560,10 +560,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 2.5 Protecting Children’s Privacy{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We do not intentionally collect, use, or share information that
                 could reasonably be used to identify children without prior
                 parental/guardian consent consistent with applicable laws.
@@ -573,22 +573,22 @@ const PrivacyPolicy = () => {
 
           <div ref={personalRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 3. LAWFUL BASIS FOR COLLECTING AND PROCESSING PERSONAL DATA
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We process your personal data in line with the relevant Data
                 Protection Laws and based on the following legal basis:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
-                <li className="font-[350]">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
+                <li className="font-[400]">
                   <span className="font-[500] ">Consent - </span>
                   Where you have consented to our processing of your personal
                   data for one or more specific reasons. Such consent is given
                   by you through your continuous use of the Services and our
                   website.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">
                     Performance of a contract -
                   </span>
@@ -596,26 +596,26 @@ const PrivacyPolicy = () => {
                   to which you are a party to and in order to take necessary
                   steps at your request prior to entering into such a contract.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">
                     Legal obligation that the bank is required to meet -
                   </span>
                   E.g. where processing of personal data is required by law.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Legitimate interest -</span>
                   To protect legitimate interests of data subjects, including
                   the protection of rights and freedom of the Data Subject and
                   carry out the purposes of our business.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Vital interest -</span>
                   In order to process data for data subjects when they are in
                   critical life threatening situations where they may not be
                   able to provide consent for data processing, and which may be
                   vital for the subjects survival.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Public interest -</span>
                   When the bank is mandated to carry out such processing in the
                   interest of the public.
@@ -623,40 +623,40 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
             <div className="flex flex-col mt-[26px] gap-5">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Every processing purpose has at least one lawful basis 
                 for processing to safeguard the rights of the data subjects, as listed below:
               </p>
               <table className="w-[95%]  px-5">
                 <tr className="border h-[60px] border-[#002244]">
-                  <th className="text-left w-[55%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[55%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Purpose of Processing
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
                     Lawful Basis of Processing
                   </th>
                 </tr>
                 <tr className="border h-[100px] border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Account creation, identity verification and maintenance of records
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Vendor validation/information processing
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Employment
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>          
@@ -667,10 +667,10 @@ const PrivacyPolicy = () => {
 
           <div ref={purposeRef} className="flex flex-col gap-4 mt-[48px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 4. PURPOSE OF DATA USE
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We will collect and process only required information from you
                 in a manner that complies with the Nigeria Data Protection
                 Regulation (NDPR/A) and by extension EU’s General Data
@@ -679,13 +679,13 @@ const PrivacyPolicy = () => {
                 and financial services. Below, we outline the specific purposes
                 for which your data is used:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
-                <li className="font-[350]">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
+                <li className="font-[400]">
                   <span className="font-[500]">To provide banking services to you</span> – The data collected will
                   enable us to authenticate you and authorize access to our
                   services on the various channels.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Communication</span> - The information collected will enable us to
                   contact you through email, short message services (SMS)/text
                   messages, phone call and push notifications. Sending important
@@ -695,7 +695,7 @@ const PrivacyPolicy = () => {
                   regarding transactions, account activity, or security
                   concerns.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Advertising and Marketing</span> - We serve you tailored
                   advertisements through our apps and other channels based on
                   your preferences and account activity (with your consent where
@@ -704,30 +704,30 @@ const PrivacyPolicy = () => {
                   invitations, promotions, and communications solely for
                   promoting our services.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Customer Support</span> - We use the data needed to investigate,
                   respond to, and resolve complaints and service issues.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">For Analytics and Research</span> - Analyzing user behavior and
                   trends to optimize our services. Conducting research for
                   product development and market analysis. Generating
                   statistical reports, using anonymized or aggregated data, to
                   inform business decisions
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">For Business Operations</span> - Facilitating internal audits, risk
                   management, and compliance processes. Supporting mergers,
                   acquisitions, or other corporate transactions, subject to
                   confidentiality safeguards.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Security and Fraud prevention</span> - Tatum Bank will use your data
                   for security purposes or to investigate possible fraud or
                   other violations of our Terms and Conditions or this Privacy
                   Policy and/or attempts to harm our customers and/or visitors
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Legal and Regulatory Obligations</span> - Meeting mandatory reporting
                   requirements to regulatory authorities like the Central Bank
                   of Nigeria (CBN) and Nigerian Financial Intelligence Unit
@@ -736,19 +736,19 @@ const PrivacyPolicy = () => {
                   financing (CPF) checks. Retaining records to comply with tax
                   laws and other statutory requirements.
                 </li>
-                <li className="font-[350]">
+                <li className="font-[400]">
                   <span className="font-[500]">Your Rights</span> - We ensure that your data is used only for the
                   purposes outlined above, in compliance with applicable laws
                   and regulations. You have the right to:
-                  <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
-                    <li className="font-[350]">
+                  <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
+                    <li className="font-[400]">
                       Inquire about how your data is used.
                     </li>
-                    <li className="font-[350]">
+                    <li className="font-[400]">
                       Object to certain uses of your data, such as for marketing
                       purposes.
                     </li>
-                    <li className="font-[350]">
+                    <li className="font-[400]">
                       Withdraw consent for specific activities, where
                       applicable.
                     </li>
@@ -760,20 +760,20 @@ const PrivacyPolicy = () => {
 
           <div ref={sharingRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 5. DATA SHARING AND DISCLOSURE
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We are committed to protecting your personal data and will only
                 share it in ways that comply with applicable laws and
                 regulations. Below is an outline of how and with whom we may
                 share your data.
               </p>
             </div>
-            <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-3 flex flex-col">
+            <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-3 flex flex-col">
               <li className="font-[500]">
                 Parties with Whom We May Share Your Data.
-                <ul className="list-decimal pl-5  font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] mt-3 gap-2 flex flex-col">
+                <ul className="list-decimal pl-5  font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] mt-3 gap-2 flex flex-col">
                   <li>
                     <span className="font-[500]">Regulatory Authorities:</span> We are required to share your data
                     with regulatory bodies, such as the Central Bank of Nigeria
@@ -826,10 +826,10 @@ const PrivacyPolicy = () => {
 
           <div ref={storageRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 6. DATA STORAGE AND RETENTION
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We store most of your personal data securely in our internal
                 systems, backup media and the Cloud. The personal data you
                 provide will be retain while your account is active and in
@@ -842,10 +842,10 @@ const PrivacyPolicy = () => {
 
           <div ref={securityRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 7. DATA SECURITY MEASURES
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We have implemented appropriate organizational and technical
                 security measures to protect your personal data with the bank.
                 These measures include encryption of data using
@@ -882,17 +882,17 @@ const PrivacyPolicy = () => {
 
           <div ref={rightsRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 8. DATA SUBJECT RIGHTS{" "}
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We are committed to ensuring transparency and empowering you
                 with control over your personal data. As a user of our services,
                 you have the following rights under applicable data protection
                 laws:
               </p>
             </div>
-            <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+            <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
               <li>
                 <span className="font-[500]">Right to Access</span> - You have the right to request access to the
                 personal data we hold about you. This includes understanding how
@@ -951,62 +951,62 @@ const PrivacyPolicy = () => {
             <div className="flex flex-col gap-5">
               <table className="w-[100%] mt-[26px] px-5">
                 <tr className="border h-[60px] border-[#002244]">
-                  <th className="text-left w-[35%] font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[35%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Description
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava border border-y-0 border-l-0">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava border border-y-0 border-l-0">
                     Data Protection Officer (DPO)
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
                     Supervisory Authority
                   </th>
                 </tr>
                 <tr className="border h-[100px] border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Contact Name
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
                     Fidelis Elogie
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     Nigeria Data Protection Commission (NDPC)
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Address
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
                     Plot 1088, Cadestral Zone A01, Area 3, Garki FCT Abuja
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     No 12 Clement Isong Street, Asokoro, Abuja, Nigeria
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Email
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
                     dpo@tatumbank.com
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     info@ndpc.gov.ng
                   </td>
                 </tr>  
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
                     Phone Number
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
                     +234 (0) 703 075 1962
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
                     +234 (0) 916 061 5551
                   </td>
                 </tr>          
               </table>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Please be informed that <span className="font-[450] cursor-pointer"><a href="mailto:dpo@tatumbank.com">dpo@tatumbank.com </a></span>  
                 is a designated email that addresses data privacy complaints,
                 requests, and inquiries <span className="font-[650]">ONLY</span>
@@ -1016,10 +1016,10 @@ const PrivacyPolicy = () => {
 
           <div ref={cookiesRef} className="flex flex-col gap-4 mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 9. USE OF COOKIES
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Our website and mobile applications use cookies and similar
                 tracking technologies to enhance your experience, provide
                 personalized services, and improve security. Below, we explain
@@ -1028,10 +1028,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-grava font-[500] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[500] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 What Are Cookies?
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Cookies are small files generated by the web servers and stored
                 on your device (computer, smartphone, tablet) when you visit our
                 website or use our applications. They help us recognize your
@@ -1039,10 +1039,10 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 The types of Cookies we use are:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
                 <li>
                   <span className="font-[500]">Strictly Necessary Cookies</span> - These cookies are essential for
                   the operation of our website and services. Eg..Authentication,
@@ -1068,10 +1068,10 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 We use cookies for various purposes, including:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
                 <li>
                   <span className="font-[500]">Personalization:</span>
                   To provide tailored content and advertisements based on your
@@ -1095,12 +1095,12 @@ const PrivacyPolicy = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 You have the option to manage your cookie preferences. Most web
                 browsers allow you to control cookies through their settings.
                 You can:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
                 <li>
                   Enabling or disabling the cookies (though not recommended).
                 </li>
@@ -1115,10 +1115,10 @@ const PrivacyPolicy = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 How We Use Tracking Technologies:
               </p>
-              <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px] gap-2 flex flex-col">
+              <ul className="list-disc pl-5 font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
                 <li>To secure and authenticate your sessions.</li>
                 <li>To detect and prevent fraudulent activities.</li>
                 <li>To analyze website traffic and usage patterns</li>
@@ -1134,14 +1134,14 @@ const PrivacyPolicy = () => {
             </div>
 
             <div className="flex">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 <span className="font-[500]">Cookie Preferences -</span> You can manage your cookie preferences through our website or
                 app settings by opting in or out of non-essential cookies.
               </p>
             </div>
 
             <div className="flex flex-col gap-1">
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 <span className="font-[500]">Consent -</span>
                 By using our website or mobile app, you consent to the use of
                 cookies and tracking technologies as described in this policy.
@@ -1153,10 +1153,10 @@ const PrivacyPolicy = () => {
 
           <div ref={updatesRef} className="flex gap-4 flex-col mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 10. UPDATES TO THE POLICY
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Our Privacy Policy may be updated from time to time in line with
                 applicable laws, regulations and best practices. Changes to the
                 Privacy Policy will be updated and the “Effective date” of this
@@ -1167,14 +1167,14 @@ const PrivacyPolicy = () => {
 
           <div ref={contactRef} className="flex gap-4 flex-col mt-[40px]">
             <div className="flex flex-col gap-4">
-              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[24px] text-[#002244] tracking-wide font-grava">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-wide font-grava">
                 11. CONTACT US
               </p>
-              <p className="font-grava font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]">
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]">
                 Kindly contact us if you have any questions/enquiry about this
                 Privacy Policy
               </p>
-              <ul className="list-none font-[350] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[19px]flex flex-col gap-2 font-grava">
+              <ul className="list-none font-[400] leading-[25px] lm:leading-[30px] text-[#002244] text-base lg:text-[18px]flex flex-col gap-2 font-grava">
                 <li>
                   Email: {" "}
                   <span className="underline">
