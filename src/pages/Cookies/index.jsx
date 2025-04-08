@@ -120,7 +120,7 @@ const CookiePolicy = () => {
 
       <div className="flex items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
         <div className="hidden lg:flex flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]">
-          <p className="font-[300] font-grava text-[#546B82] ">
+          <p className="font-[500] text-[20px] leading-[25px] tracking-[0.01em] font-grava text-[#546B82] ">
             Table of content:
           </p>
           <div className="flex flex-col gap-4">
