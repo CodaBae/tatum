@@ -243,9 +243,9 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">DATA PRIVACY POLICY </p>
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
+          <p className="font-grava font-[500] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
+          <p className="font-grava font-[500] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">DATA PRIVACY POLICY </p>
+          <p className="font-grava font-[500] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">Effective Date: January 2025</p>
         </div>
 
         <div className="flex flex-col lg:flex-1">
@@ -410,18 +410,18 @@ const PrivacyPolicy = () => {
               </p>
               <table className="w-[95%] px-5">
                 <tr className="border border-[#002244]">
-                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[40%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Type of Data
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] font-grava">
                     Description of Data
                   </th>
                 </tr>
                 <tr className="border border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Personal Identifiable Information (PII)
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Full name, gender, marital status, title, date of birth, and
                     nationality. Identification documents, national
                     identification number (NIN), BVN (Bank Verification Number),
@@ -429,39 +429,39 @@ const PrivacyPolicy = () => {
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Contact details
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Contact details Contact details such as phone number, email
                     address, and residential address.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Financial Information
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Bank account details, transaction history, credit/debit card
                     information, Loan applications, credit history, and payment
                     records.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Behavioral Data
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Browsing activity on our platform (e.g., pages viewed, links
                     clicked), Responses to promotional campaigns or surveys,
                     feedbacks.
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Technical Data
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Details of devices used to access our website and online
                     services e.g., Internet Protocol (IP) address, time zone
                     setting and location, operating system, browser type, device
@@ -470,10 +470,10 @@ const PrivacyPolicy = () => {
                   </td>
                 </tr>
                 <tr className="border border-[#002244]">
-                  <td className="p-2 border font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400]  border-y-0 text-[#002244] border-l-0">
+                  <td className="p-2 border font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400]  border-y-0 text-[#002244] border-l-0">
                     Others
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     CCTV/Video footage when you access our premises or use our
                     ATMs and telephone conversations via calls made to our
                     operating centers.
@@ -629,34 +629,34 @@ const PrivacyPolicy = () => {
               </p>
               <table className="w-[95%]  px-5">
                 <tr className="border h-[60px] border-[#002244]">
-                  <th className="text-left w-[55%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[55%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Purpose of Processing
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] font-grava">
                     Lawful Basis of Processing
                   </th>
                 </tr>
                 <tr className="border h-[100px] border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Account creation, identity verification and maintenance of records
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Vendor validation/information processing
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Employment
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Contract
                   </td>
                 </tr>          
@@ -951,57 +951,57 @@ const PrivacyPolicy = () => {
             <div className="flex flex-col gap-5">
               <table className="w-[100%] mt-[26px] px-5">
                 <tr className="border h-[60px] border-[#002244]">
-                  <th className="text-left w-[35%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
+                  <th className="text-left w-[35%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] text-[#002244] p-2 border border-y-0 border-l-0">
                     Description
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava border border-y-0 border-l-0">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] font-grava border border-y-0 border-l-0">
                     Data Protection Officer (DPO)
                   </th>
-                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[500] font-grava">
+                  <th className="text-left p-2 text-[#002244] text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[500] font-grava">
                     Supervisory Authority
                   </th>
                 </tr>
                 <tr className="border h-[100px] border-[#002244] ">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Contact Name
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border border-y-0 border-l-0">
                     Fidelis Elogie
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     Nigeria Data Protection Commission (NDPC)
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Address
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border border-y-0 border-l-0">
                     Plot 1088, Cadestral Zone A01, Area 3, Garki FCT Abuja
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     No 12 Clement Isong Street, Asokoro, Abuja, Nigeria
                   </td>
                 </tr>
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Email
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border border-y-0 border-l-0">
                     dpo@tatumbank.com
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     info@ndpc.gov.ng
                   </td>
                 </tr>  
                 <tr className="border h-[100px] border-[#002244]">
-                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border-l-0">
+                  <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border-l-0">
                     Phone Number
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244] border border-y-0 border-l-0">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244] border border-y-0 border-l-0">
                     +234 (0) 703 075 1962
                   </td>
-                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[400] text-[#002244]">
+                  <td className="p-2 font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[150%] tracking-[0.2%] lm:tracking-[0.01em] font-[400] text-[#002244]">
                     +234 (0) 916 061 5551
                   </td>
                 </tr>          
