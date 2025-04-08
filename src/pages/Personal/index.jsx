@@ -276,7 +276,7 @@ const Personal = () => {
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Grow your savings effortlessly
             </p>
-            <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.2%]">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.2%]">
               Our savings account helps you move your money with ease, offering
               security and successful transactions every single time
             </p>
@@ -325,7 +325,7 @@ const Personal = () => {
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Enjoy simplified <br /> transactions daily
             </p>
-            <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Manage your finances effortlessly with a current account. Enjoy
               unlimited transactions, seamless online banking, and quick access
               to funds on the go.
@@ -385,7 +385,7 @@ const Personal = () => {
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Safe, secure and steadily rewarding
             </p>
-            <p className="text-sm lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] text-[#002244] lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Grow your money with guaranteed returns. Our fixed deposits offer
               security, attractive interest rates, and flexible tenures for
               steady, risk-free earnings.
@@ -734,16 +734,15 @@ const Personal = () => {
                 banking, tailored to your needs and lifestyle.
               </p>
               <p
-                className="font-grava font-[400] text-sm  lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]"
+                className="font-grava font-[400] text-[14px] lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]"
                 style={{ color: "#002244" }}
               >
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
-                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-opacity-0 hover:border-[1.5px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
-                  // navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
                   navigate(
                     "/contact",
                     { state: { section: "contact" } },
@@ -757,7 +756,7 @@ const Personal = () => {
                 </p>
                 <BsArrowRight
                   size={100}
-                  className="w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]"
+                  className="w-5 h-5 mt-[2px] text-[#FFCC33]" //group-hover:text-[#002244]
                 />
               </button>
             </div>

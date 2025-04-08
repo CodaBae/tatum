@@ -102,7 +102,14 @@ const CookiePolicy = () => {
     <div
       ref={cookieRef}
       className="w-full mb-[56px] lg:mb-[120px] overflow-hidden">
-      <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px] flex items-center lg:z-10 justify-center">
+      <div 
+        style={{ 
+          backgroundImage: `url(https://framerusercontent.com/images/NUH4eUyFO0g76XT8Hd1XgCyLmUU.png)`, 
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-[#FFCC33] w-full h-[184px] lg:h-[294px] flex items-center lg:z-10 justify-center"
+      >
         <p className="font-bold text-[#002244] font-grava text-[34px] lg:text-[75px] mt-[44px] lg:mt-[6%] ">
           Cookie Policy
         </p>
@@ -368,41 +375,32 @@ const CookiePolicy = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr className="border h-[100px] border-[#002244] ">
-                    <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
+                    <tr className="border border-[#002244]">
+                      <td
+                        rowSpan={2}
+                        className="p-2 border border-y-0  font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0 align-center"
+                      >
                         Strictly Necessary Cookies
-                    </td>
-                    <td className="border border-r border-y-0 border-l-0">
-                        <div className=" space-y-4">
-                            <p className="font-grava p-2 text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
-                                Core
-                            </p>
-                            <hr />
-                            <p className="font-grava p-2 text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
-                                Technical performance
-                            </p>
-                        </div>
-                    </td>
-                    <td className="">
-                        <div className="flex flex-col">
-                            <p className="font-grava p-2 text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
-                                These Cookies are essential for enabling fundamental Website features, 
-                                such as ensuring secure logins. For instance, when you use your Tatum account 
-                                to sign into a website, we securely store the time of your login and a unique 
-                                encrypted ID on your device as a Cookie. This Cookie enables you to navigate 
-                                seamlessly across different pages of the Website without needing to sign in repeatedly.
-                            </p>
-                            <hr />
-                            <p className="font-grava p-2 text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
-                                Among their various purposes, Tatum employs these Cookies for identifying 
-                                browsing challenges, enhancing technical performance and usability, 
-                                estimating server requirements, ensuring the accurate presentation of the Website, 
-                                and facilitating load balancing. These measures are crucial to maintain the continuous 
-                                uptime and functionality of our websites.
-                            </p>
-                        </div>
-                    </td>
+                      </td>
+                      <td className="border border-r border-y-0 border-l-0 p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">Core</td>
+                      <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                        These Cookies are essential for enabling fundamental Website features, 
+                        such as ensuring secure logins. For instance, when you use your Tatum account to sign into 
+                        a website, we securely store the time of your login and a unique encrypted ID on your device 
+                        as a Cookie. This Cookie enables you to navigate seamlessly across different pages of the 
+                        Website without needing to sign in repeatedly.
+                      </td>
                     </tr>
+                    <tr className="border border-[#002244]">
+                      <td className="border border-r border-y-0 border-l-0 p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">Technical performance</td>
+                      <td className="p-2 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244]">
+                        Among their various purposes, Tatum employs these Cookies for identifying browsing challenges, 
+                        enhancing technical performance and usability, estimating server requirements, 
+                        ensuring the accurate presentation of the Website, and facilitating load balancing. 
+                        These measures are crucial to maintain the continuous uptime and functionality of our websites.
+                      </td>
+                    </tr>
+
                     <tr className="border h-[100px] border-[#002244]">
                     <td className="p-2 border border-y-0 font-grava text-[14px] lm:text-[19px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[350] text-[#002244] border-l-0">
                         Functional Cookies

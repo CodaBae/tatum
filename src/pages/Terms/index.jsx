@@ -100,9 +100,16 @@ const Terms = () => {
       data-aos="fade-up"
       data-aos-duration="3000"
       ref={termsRef}>
-      <div className="bg-[#FFCC33] w-full h-[184px] lg:h-[314px]  flex flex-col items-center justify-center">
+      <div 
+        style={{ 
+            backgroundImage: `url(https://framerusercontent.com/images/NUH4eUyFO0g76XT8Hd1XgCyLmUU.png)`, 
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+        }}
+        className="bg-[#FFCC33] w-full h-[184px] lg:h-[294px]  flex flex-col items-center justify-center"
+      >
         <p className="font-bold text-[#002244] font-grava text-[34px] mt-[6%] lg:text-[75px]  ">
-          Terms and Conditions
+          Terms of Service
         </p>
       </div>
 

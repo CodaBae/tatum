@@ -230,7 +230,7 @@ const Digital = () => {
                 </div>
                 <img src={Talk} alt='Talk' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
             </div>
-            <div className='bg-[#EAECF0] w-full h-[0.5px]'></div>
+            <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-grava text-[#334E69] font-[500] leading-[16px] tracking-[0.25em] uppercase text-[12px] lg:text-[14px]'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
@@ -495,7 +495,7 @@ const Digital = () => {
                             <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Security Tips – Bank Smart, Stay Safe
                             </p>
-                            <p className="text-sm lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 Your security is our priority. Here’s how to protect yourself while banking online
                             </p>
                         </div>
@@ -578,17 +578,17 @@ const Digital = () => {
                             </p>
                         </div>
                         <button
-                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[163px] rounded-tl-lg rounded-br-lg h-[51px] lm:h-[58px] gap-2 flex items-center justify-center`}
+                            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group  hover:bg-opacity-0 hover:border-[1.5px] hover:border-[#002244] w-[163px] rounded-tl-lg rounded-br-lg h-[51px] lm:h-[58px] gap-2 flex items-center justify-center`}
                             type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
                         <p 
-                            className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                            className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]' 
                         >
                             {/* Get started today. */}
                             Contact us
                         </p>
                         <BsArrowRight size={100}   
-                            className='w-5 h-5 mt-[2px] text-[#FFCC33] group-hover:text-[#002244]' 
+                            className='w-5 h-5 mt-[2px] text-[#FFCC33]' 
                         />
                         </button>
                     </div>

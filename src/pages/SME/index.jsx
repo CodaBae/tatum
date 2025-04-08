@@ -805,7 +805,7 @@ const SME = () => {
             <h1 className="font-grava font-[500] w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
               Payment Solutions - Making Every Transaction Seamless
             </h1>
-            <p className="font-grava font-[400] text-center w-[318px] sm:w-[450px] lg:w-[538px] text-sm sm:text-base lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[27px] text-[#002244]">
+            <p className="font-grava font-[400] text-center w-[318px] sm:w-[450px] lg:w-[538px] text-[14px] sm:text-base lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[27px] text-[#002244]">
               We provide secure, fast, and efficient payment solutions that
               enable you to manage transactions effortlessly.
             </p>
@@ -1417,9 +1417,9 @@ const SME = () => {
             <div className="flex">
               <button
                 className={`animate__animated animate__slow animate__fadeInUp
-                  transition-all duration-500 ease-in-out bg-[#002244] group 
-              hover:bg-[#FFCC33]  
-              w-[154px] sm:w-[170px] lg:w-[183px] 
+                  transition-all duration-500 ease-in-out border bg-[#002244] group 
+              hover:bg-opacity-0  hover:border-[#002244]
+              w-[154px] sm:w-[170px] lg:w-[219px] 
               h-[51px] sm:h-[55px] lg:h-[59px] 
               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
               onClick={() =>
@@ -1434,7 +1434,7 @@ const SME = () => {
                 <BsArrowRight
                   size={100}
                   className="w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out 
-                                      text-[#FFCC33] group-hover:text-[#002244]"
+                                      text-[#FFCC33] " //group-hover:text-[#002244]
                 />
               </button>
             </div>

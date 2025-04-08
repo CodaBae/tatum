@@ -196,10 +196,10 @@ const Management = () => {
                 <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
                 </div>
                 <div className="flex flex-col gap-[4px]">
-                  <p className="font-grava font-semibold tracking-[0.01em] text-[#002244] text-[18px] md:text-[20px]">
+                  <p className="font-grava font-semibold tracking-[0.01em] text-[#002244] text-[18px] md:text-[20px] lm:text-[27px]">
                     {item.name}
                   </p>
-                  <p className="font-grava text-[#002244] font-[300] text-sm md:text-base tracking-[0.2%] leading-[24px]">
+                  <p className="font-grava text-[#002244] font-[300] text-[14px] md:text-base lm:text-[21px] tracking-[0.2%] leading-[24px]">
                     {item.role}
                   </p>
                 </div>
