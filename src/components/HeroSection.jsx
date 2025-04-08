@@ -36,7 +36,7 @@ const HeroSection = ({
             <p className="animate__animated animate__fadeInUp lg:w-[831px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]">
               <p dangerouslySetInnerHTML={{ __html: title }} />
             </p>
-            <p className="animate__animated animate__fadeInUp animate__delay-08s md:w-[265px] lg:w-[731px]  font-[350] text-[14px] font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]">
+            <p className="animate__animated animate__fadeInUp animate__delay-08s md:w-[265px] lg:w-[731px]  font-[300] text-[14px] font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34px]">
               {content}
             </p>
             <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 animate__animated animate__fadeInUp animate__delay-10s">
@@ -51,7 +51,7 @@ const HeroSection = ({
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     {btnText}
                   </p>
                   <BsArrowRight

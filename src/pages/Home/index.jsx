@@ -488,7 +488,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Open an account  */}
                         Find out more
                       </p>
@@ -607,7 +607,7 @@ const handleTouchEnd = () => {
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp animate__delay-08s "
                         : ""
-                    } font-[350] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } font-[300] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     // animate__animated animate__fadeInUp animate__delay-08s
                   >
                     Your money, your way. Experience banking that fits your
@@ -633,7 +633,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Explore our offerings */}
                         Find out more
                       </p>
@@ -747,7 +747,7 @@ const handleTouchEnd = () => {
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-[14px] lg:text-[25px]   lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[300] font-grava text-[14px] lg:text-[25px]   lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Instant access to the funds, insights, and support you need
                     to take your business further.
@@ -768,7 +768,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Get started with Business Banking */}
                         Find out more
                       </p>
@@ -869,7 +869,7 @@ const handleTouchEnd = () => {
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[350] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[350px] font-[300] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                   >
                     Access high-end services and exclusive investments, all in
                     one seamless experience.
@@ -890,7 +890,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="font-[500] transition-colors duration-500 ease-in-out lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="font-[450] transition-colors duration-500 ease-in-out lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Get exclusive access */}
                         Find out more
                       </p>
@@ -998,7 +998,7 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1044,7 +1044,7 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1098,7 +1098,7 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1143,7 +1143,7 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -1171,7 +1171,7 @@ const handleTouchEnd = () => {
         className="bg-[#FFFAEB] py-[56px] gap-[40px] lg:h-[907px] flex flex-col items-center justify-center lg:gap-[76px]"
       >
         <div className="w-[336px] lg:w-[697px] flex flex-col items-center gap-3">
-          <p className="text-[#002244] font-[500] text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
+          <p className="text-[#002244] font-[450] text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
            Your Money, <span className="block text-center">Everywhere You Go</span> 
           </p>
           <p className="text-[14px] lg:text-xl text-[#334E69] lg:w-[456px] font-grava font-[300] leading-[20px] lg:leading-[27px] text-center">
@@ -1305,7 +1305,7 @@ const handleTouchEnd = () => {
         <button
           className="px-5 h-[44px] lg:h-[64px] flex items-center cursor-default justify-center opacity-40 p-4 border-[1.5px] border-[#002244] rounded-tr-lg rounded-bl-lg"
         >
-          <p className=" text-[#002244] font-[500] font-grava text-[14px] lg:text-[18px]">
+          <p className=" text-[#002244] font-[450] font-grava text-[14px] lg:text-[18px]">
             {/* Choose your Tatum Card */}
             To be available soon
           </p>
@@ -1661,10 +1661,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Debit/Credit Cards
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 Enjoy a card that never flops. Our Debit and credit cards are
                 reliable and secure.
               </p>
@@ -1677,7 +1677,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[300]  lg:text-base font-grava text-[#002244]">
                 {/* Learn more */}
                 To be available soon
               </p>
@@ -1686,10 +1686,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Client Centres
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 Simply enter your location and find our closest client centre on the
                 map.
               </p>
@@ -1702,7 +1702,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[300]  lg:text-base font-grava text-[#002244]">
                 Check the nearest center near you
               </p>
             </button>
@@ -1710,10 +1710,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Online} alt="Online" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Online Banking
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 Manage your accounts, pay bills, transfer funds, and track
                 transactions anytime, anywhere. Our user-friendly mobile app
                 serves you no matter where life takes you.
@@ -1727,7 +1727,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[400] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[300] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Download our mobile app */}
               </p>
@@ -1736,10 +1736,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={USSD} alt="USSD" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 USSD Banking
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 No internet? No problem. Access your account, check balances, 
                 and perform essential transactions using our simple *365#. 
                 It is quick, secure, and reliable.
@@ -1753,7 +1753,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10  font-[400] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10  font-[300] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Dial *911# */}
               </p>
@@ -1762,10 +1762,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Help and Support
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 Access our comprehensive knowledge base for instant answers. 
                 Find guides, tutorials, and FAQs to help you navigate our platform with ease.
                 {/* Need help? Send us an email at <a href="info@tatumbank.com." className="underline">info@tatumbank.com.</a>
@@ -1780,7 +1780,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10  font-[400] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10  font-[300] lg:text-base font-grava text-[#002244]">
                 Visit Help Center
               </p>
             </button>
@@ -1788,10 +1788,10 @@ const handleTouchEnd = () => {
           <SwiperSlide className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Contact Us
               </p>
-              <p className="text-sm lg:text-base font-grava font-[350] text-[#002244]">
+              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 Get in touch with our dedicated support team available 24/7. 
                 We're here to help through chat, call, or email for all your questions and concerns.
               </p>
@@ -1804,7 +1804,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[400]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[300]  lg:text-base font-grava text-[#002244]">
                 Reach Out
               </p>
             </button>
@@ -1815,10 +1815,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Debit/Credit Cards
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
                 Enjoy a card that never flops. Our Debit and credit cards are
                 reliable and secure.
               </p>
@@ -1838,7 +1838,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[450] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Learn more */}
               </p>
@@ -1847,10 +1847,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto ">
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Client Centres
               </p>
-              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
                 Simply enter your location and find our closest client centre on the
                 map.
               </p>
@@ -1874,7 +1874,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[500] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[450] lg:text-base font-grava text-[#002244]">
                 Check the nearest center near you
               </p>
             </button>
@@ -1882,10 +1882,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col p-[26px] bg-[#fff]  h-[332px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Online} alt="Online" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Online Banking
               </p>
-              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
                 Manage your accounts, pay bills, transfer funds, and track
                 transactions anytime, anywhere. Our user-friendly mobile app
                 serves you no matter where life takes you.
@@ -1899,7 +1899,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500]  lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[450]  lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Download our mobile app */}
               </p>
@@ -1908,10 +1908,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={USSD} alt="USSD" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 USSD Banking
               </p>
-              <p className="text-[14px] lg:text-base font-[400] font-grava text-[#002244]">
+              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
                 No internet? No problem. Access your account, check balances, 
                 and perform essential transactions using our simple *365#. 
                 It is quick, secure, and reliable.
@@ -1936,7 +1936,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[500] lg:text-base font-grava text-[#002244]">
+              <p className="relative z-10 font-[450] lg:text-base font-grava text-[#002244]">
                 To be available soon
                 {/* Dial *911# */}
               </p>
@@ -1945,10 +1945,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] md:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Help & Support
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
                 Access our comprehensive knowledge base for instant answers. 
                 Find guides, tutorials, and FAQs to help you navigate our platform with ease.
               </p>
@@ -1961,7 +1961,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[400]  lg:text-[18px] font-grava text-[#002244]">
+              <p className="relative z-10 font-[300]  lg:text-[18px] font-grava text-[#002244]">
                 Visit Help Centre
               </p>
             </button>
@@ -1969,10 +1969,10 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[500] font-grava text-[#002244]">
+              <p className="text-lg font-[450] font-grava text-[#002244]">
                 Contact Us
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[400] text-[#002244]">
+              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
                 Get in touch with our dedicated support team available 24/7. 
                 We're here to help through chat, call, or email for all your questions and concerns.
               </p>
@@ -1985,7 +1985,7 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[400]  lg:text-[18px] font-grava text-[#002244]">
+              <p className="relative z-10 font-[300]  lg:text-[18px] font-grava text-[#002244]">
                 Reach Out
               </p>
             </button>

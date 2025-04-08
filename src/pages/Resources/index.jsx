@@ -88,7 +88,7 @@ const Resources = () => {
                           Media & Resources
                       </p>
                       <p 
-                          className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[350] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                          className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[300] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                       >
                           Learn about everything, from customer's success stories to getting informed with our latest news.
                       </p>
@@ -153,22 +153,22 @@ const Resources = () => {
       <section className='bg-[#fff] pt-[56px]  pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
         <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>
             <div className={`${activeTab === "news" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("news")}>
-                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
                   Latest News
                 </p>
             </div>
             <div className={`${activeTab === "press" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("press")}>
-                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
                     Press Releases
                 </p>
             </div>
             <div className={`${activeTab === "form" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("form")}>
-                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
                     Form Downloads
                 </p>
             </div>
             <div className={`${activeTab === "media" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("media")}>
-                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[400]`}>
+                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
                     Media Gallery
                 </p>
             </div>
@@ -184,7 +184,7 @@ const Resources = () => {
       
       <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
+          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-[450]'>Frequently Asked Questions</p>
 
           <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
 
@@ -206,11 +206,11 @@ const Resources = () => {
 
             {/* <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>What do I need to open an account?</p>
+                <p className='font-grava text-[#475467] font-[450]  lg:text-[20px]'>What do I need to open an account?</p>
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownOne && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Just a government-issued ID and your account opening is processed.
                     </p>
                 }
@@ -218,11 +218,11 @@ const Resources = () => {
 
             <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>Are there any account opening fees?</p>
+                <p className='font-grava text-[#475467] font-[450]  lg:text-[20px]'>Are there any account opening fees?</p>
                 {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               { openDropdownTwo && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         No, you do not pay any fees to open an account
                     </p>
                 }
@@ -230,11 +230,11 @@ const Resources = () => {
 
             <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
               <div className='flex items-center justify-between'>
-                <p className='font-grava text-[#475467] font-[500]  lg:text-[20px]'>Can I manage my account on mobile?</p>
+                <p className='font-grava text-[#475467] font-[450]  lg:text-[20px]'>Can I manage my account on mobile?</p>
                 {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               {openDropdownThree && 
-                    <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Yes! You can access your account on iOS and Android with the Tatum Mobile app.
                     </p>
                 }
@@ -243,7 +243,7 @@ const Resources = () => {
           </div>
 
           <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
-            <p className='font-grava text-[14px] lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-[14px] lg:text-[20px]  font-[500] text-[#002244]'>Help Center</span></p>
+            <p className='font-grava text-[14px] lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-[14px] lg:text-[20px]  font-[450] text-[#002244]'>Help Center</span></p>
           </div>
         </div>
       </section>

@@ -207,15 +207,15 @@ const Institutional = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-[500] lm:ml-1 tracking-[0.25em] uppercase text-[14px] text-center leading-[21px] sm:text-left sm:leading-normal">
+            <p className="font-grava text-[#334E69] font-[450] lm:ml-1 tracking-[0.25em] uppercase text-[14px] text-center leading-[21px] sm:text-left sm:leading-normal">
               Our Institutional Banking Solutions
             </p>
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Public Sector Institutional{" "}
                 <span className="block md:inline-block">Banking.</span>
               </p>
-              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 Efficient financial management is critical to delivering public
                 services effectively. Our banking solutions help government
                 agencies, ministries, and public enterprises manage funds
@@ -233,7 +233,7 @@ const Institutional = () => {
                   },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 {/* Get started */}
                 Find out more
               </p>
@@ -253,10 +253,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Public Sector Financial Management{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Simplified revenue collection, budgeting, and fund
                     disbursement solutions.
                   </span>
@@ -265,10 +265,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Treasury & Liquidity Management{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Optimized cash flow for enhanced financial planning.
                   </span>
                 </p>
@@ -276,10 +276,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Collections & Payment Solutions
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     - Automated tax collections, school fees payments, and bulk
                     payments.
                   </span>
@@ -288,10 +288,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Payroll Management{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Secure salary disbursements and pension processing.
                   </span>
                 </p>
@@ -299,10 +299,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Digital Banking for Public Institutions{" "}
-                  <span className="font-[350]">
+                  <span className="font-[300]">
                     {" "}
                     – Secure salary disbursements and pension processing.
                   </span>
@@ -320,7 +320,7 @@ const Institutional = () => {
                 },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               {/* Get started */}
               Find out more
             </p>
@@ -346,10 +346,10 @@ const Institutional = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]"
           data-aos="fade-right">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
               Non-Government Institution Banking
             </p>
-            <p className="text-[14px] lm:text-[18px] font-grava font-[350] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] font-grava font-[300] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               We provide customized banking solutions for NGOs, educational
               institutions, healthcare providers, and international
               organizations, ensuring secure transactions and efficient fund
@@ -366,7 +366,7 @@ const Institutional = () => {
                   },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 whitespace-nowrap ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 whitespace-nowrap ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Talk to our relationship managers
               </p>
               <BsArrowRight
@@ -385,10 +385,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Cash & Liquidity Management{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Ensure funds are readily available for operational needs.
                   </span>
                 </p>
@@ -396,10 +396,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Collections & Payments{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Seamless donor fund processing, school tuition payments,
                     and supplier transactions.
                   </span>
@@ -408,10 +408,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Foreign Exchange & Trade Services
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Smooth cross-border transactions for international
                     organizations.
                   </span>
@@ -420,10 +420,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Bespoke Loan & Financing Solutions{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     – Access tailored credit facilities to support growth.
                   </span>
                 </p>
@@ -431,10 +431,10 @@ const Institutional = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}>
                   Multi-Channel Banking{" "}
-                  <span className="font-[350]  ">
+                  <span className="font-[300]  ">
                     {" "}
                     – Bank anytime, anywhere via our secure digital platforms.
                   </span>
@@ -453,7 +453,7 @@ const Institutional = () => {
               },window.scrollTo(0, 0))}
             }
             >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to our relationship managers
             </p>
             <BsArrowRight
@@ -478,7 +478,7 @@ const Institutional = () => {
           <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
-          <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
+          <p className="font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
             Why Choose Tatum <br /> Bank  for Institutional Banking?
           </p>
         </div>
@@ -487,7 +487,7 @@ const Institutional = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
             onClick={handleTabOne}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Tailored Solutions
               </p>
               {openTabOne ? (
@@ -497,7 +497,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabOne && (
-              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Custom-built financial services for your institution's unique needs
               </p>
             )}
@@ -506,7 +506,7 @@ const Institutional = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabTwo}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Secure & Efficient Transactions
               </p>
               {openTabTwo ? (
@@ -516,7 +516,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabTwo && (
-              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Robust digital platforms for seamless banking
               </p>
             )}
@@ -525,7 +525,7 @@ const Institutional = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabThree}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Dedicated Relationship Managers
               </p>
               {openTabThree ? (
@@ -535,7 +535,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabThree && (
-              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Expert financial guidance and personalized service.
               </p>
             )}
@@ -544,7 +544,7 @@ const Institutional = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabFour}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Innovative Payment & Collection Systems
               </p>
               {openTabFour ? (
@@ -554,7 +554,7 @@ const Institutional = () => {
               )}
             </div>
             {openTabFour && (
-              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Simplified revenue and fund management solutions.
               </p>
             )}
@@ -590,10 +590,10 @@ const Institutional = () => {
             }}>
             <div className="flex flex-col lm:w-[615px] lm:h-[312px] gap-[20px]">
               {/* ... rest of your content ... */}
-              <p className="font-grava font-[500] text-[#002244] text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]">
+              <p className="font-grava font-[450] text-[#002244] text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]">
                 Experience institutional banking built for efficiency.
               </p>
-              <p className="font-grava font-[350] text-[#002244] text-[14px] lm:text-[18px] leading-[27px]  tracking-[0.2%]">
+              <p className="font-grava font-[300] text-[#002244] text-[14px] lm:text-[18px] leading-[27px]  tracking-[0.2%]">
                 Contact us to explore solutions tailored to your institution.
               </p>
               <button
@@ -607,7 +607,7 @@ const Institutional = () => {
                   },window.scrollTo(0, 0))}
                 }
                 >
-                <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   Contact us
                 </p>
                 <BsArrowRight

@@ -165,10 +165,10 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] w-[318px] md:w-auto mx-auto text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[450] w-[318px] md:w-auto mx-auto text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Internet Banking – Bank with Ease, Anytime. 
                             </p>
-                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 Enjoy 24/7 access to your accounts with our secure and
                                 intuitive Internet Banking platform.
                             </p>
@@ -178,7 +178,7 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button> */}
 
@@ -189,31 +189,31 @@ const Digital = () => {
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 View account balances and statements
                             </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 Transfer funds seamlessly
                             </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                             <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                            <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                 Pay bills and schedule payments
                             </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] text-center lm:mt-1 md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] text-center lm:mt-1 md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Request and manage your chequebooks
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] text-center lm:mt-1 md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] text-center lm:mt-1 md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Set up standing orders and manage beneficiaries
                                 </p>
                             </div>
@@ -224,7 +224,7 @@ const Digital = () => {
                         className='transition-all cursor-default duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:w-[274px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center'
                         type='button'  onClick={() => navigate("/personal/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
+                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Find out more</p>
                         <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
@@ -232,7 +232,7 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-[32px]'>
-                <p className='font-grava text-[#334E69] font-[500] leading-[16px] tracking-[0.25em] uppercase text-[12px] lg:text-[14px]'>Registration Guide</p>
+                <p className='font-grava text-[#334E69] font-[450] leading-[16px] tracking-[0.25em] uppercase text-[12px] lg:text-[14px]'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
                     <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>1. Getting started is easy!</p>
                     <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-[25px]'>2. Visit our Internet Banking portal.</p>
@@ -243,7 +243,7 @@ const Digital = () => {
                     className='mt-[4px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                     type='button' 
                 >
-                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                 </button>
             </div>
@@ -253,42 +253,42 @@ const Digital = () => {
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                    <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                         Tatum Mobile App – Bank on the Move
                     </p>
-                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
                         Your bank is now in your pocket! Enjoy effortless banking on the go—wherever, whenever. 
                         Our Mobile Banking is designed to fit your lifestyle, keeping you connected, in control, 
                         and always smiling.
                     </p>
                 </div>
 
-                <p className='font-grava text-[#334E69] font-[500] tracking-[25%] uppercase text-[13px] mt-[16px] '>
+                <p className='font-grava text-[#334E69] font-[450] tracking-[25%] uppercase text-[13px] mt-[16px] '>
                     Features
                 </p>
 
                 <div className='flex flex-col gap-[32px] mt-6'>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Transfer funds with ease
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Pay bills and top up airtime
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Track transactions in real-time
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava whitespace-nowrap font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava whitespace-nowrap font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Secure biometric login (Fingerprint/Face ID)
                         </p>
                     </div>
@@ -304,7 +304,7 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-6'>
-                <p className='font-grava font-[500] text-[13px] text-[#334E69] uppercase tracking-[0.25em] leading-4'>To be available soon</p> {/* Download the App */}
+                <p className='font-grava font-[450] text-[13px] text-[#334E69] uppercase tracking-[0.25em] leading-4'>To be available soon</p> {/* Download the App */}
                 <div className='flex items-center gap-2'>
                     <img src={Google} alt='Google' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
                     <img src={Apple} alt='Apple' className='w-[135px] h-[40px] lm:w-[175px] lm:h-[52px] opacity-50' />
@@ -324,10 +324,10 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] text-[#002244] w-[278px] md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[450] text-[#002244] w-[278px] md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 *365# - Dial, Transact and Smile
                             </p>
-                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 No internet? No problem! Our USSD service lets you bank with just a simple dial.
                             </p>
                         </div>
@@ -336,11 +336,11 @@ const Digital = () => {
                             className='mt-[4px] w-[199px] lm:hidden h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                             type='button'
                         >
-                            <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                            <p className='font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                             <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                         </button>
 
-                        <p className='font-grava text-[#002244] font-[500] tracking-[25%] text-[13px] lg:text-[20px] mt-[16px] '>
+                        <p className='font-grava text-[#002244] font-[450] tracking-[25%] text-[13px] lg:text-[20px] mt-[16px] '>
                             Features
                         </p>
         
@@ -353,25 +353,25 @@ const Digital = () => {
                             </div> */}
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Send money instantly
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Pay bills on the go
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Buy airtime for yourself and others
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Check balances and mini statements
                                 </p>
                             </div>
@@ -388,18 +388,18 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-8'>
-                <p className='font-grava text-[#334E69] text-[14px] font-[500] leading-4 tracking-widest uppercase'>
+                <p className='font-grava text-[#334E69] text-[14px] font-[450] leading-4 tracking-widest uppercase'>
                     HOW TO REGISTER
                 </p>
     
                 <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
-                    <p className='text-[#002244] font-[500] font-grava whitespace-nowrap text-[14px] md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[450] font-grava whitespace-nowrap text-[14px] md:text-lg tracking-wide leading-6'>
                         1. Dial *365# from your registered phone number.
                     </p>
-                    <p className='text-[#002244] font-[500] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[450] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
                         2. Follow the prompts to activate.
                     </p>
-                    <p className='text-[#002244] font-[500] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
+                    <p className='text-[#002244] font-[450] font-grava text-[14px] md:text-lg tracking-wide leading-6'>
                         3. Start transacting instantly!
                     </p>
                 </div>
@@ -408,7 +408,7 @@ const Digital = () => {
                     className='mt-[4px] w-[199px] cursor-default lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
                     type='button'
                 >
-                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' />
                 </button>
             </div>
@@ -419,34 +419,34 @@ const Digital = () => {
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
                 <div className='flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
+                    <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]'>
                         ATM & Card Services – Banking designed for your convenience.
                     </p>
-                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
                         Access your funds securely with our ATM and card solutions.
                     </p>
                 </div>
 
-                <p className='font-grava text-[#334E69] font-[500] tracking-[25%]  text-[13px] lg:text-[20px] mt-[12px] '>
+                <p className='font-grava text-[#334E69] font-[450] tracking-[25%]  text-[13px] lg:text-[20px] mt-[12px] '>
                     Features
                 </p>
 
                 <div className='flex flex-col gap-[32px] mt-[12px]'>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Cash withdrawals & deposits
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row items-center lm:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             Balance inquiry & mini statements
                         </p>
                     </div>
                     <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                         <img src={Check} alt="Check" className='' />
-                        <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                        <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                             PIN change for added security
                         </p>
                     </div>
@@ -462,19 +462,19 @@ const Digital = () => {
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-6'>
-                <p className='font-grava font-[500] text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Card Services</p>
+                <p className='font-grava font-[450] text-[13px] text-[#334E69] uppercase tracking-widest leading-4'>Card Services</p>
                 <div className='flex flex-col lm:flex-row gap-6'>
                     {/* <div className='flex flex-col lm:flex-row items-start lm:items-center gap-6 lm:gap-[32px]'> */}
-                        <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
-                        <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
+                        <p className='text-[#002244] font-[450] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>1. Debit, Credit & Prepaid Cards.</p>
+                        <p className='text-[#002244] font-[450] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>2. Contactless Payments.</p>
                     {/* </div> */}
-                    <p className='text-[#002244] font-[500] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
+                    <p className='text-[#002244] font-[450] font-grava text-[14px] lm:text-[20px] tracking-[1.4%] leading-5 lm:leading-[25px]'>3. Card Management via Mobile App</p>
                 </div>
                 <button
                     className='mt-[8px] w-[199px] lm:w-[254px] h-[58px] rounded-tl-lg rounded-br-lg gap-2 group bg-[#EDEDED] flex items-center justify-center'
                     type='button' //lm:w-[174px] w-[159px]
                 >
-                    <p className='font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
+                    <p className='font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>To be available soon</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5 text-[#B0B0B0]' />
                 </button>
             </div>
@@ -492,10 +492,10 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 Security Tips – Bank Smart, Stay Safe
                             </p>
-                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 Your security is our priority. Here’s how to protect yourself while banking online
                             </p>
                         </div>
@@ -504,37 +504,37 @@ const Digital = () => {
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
                             type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
                         <div className='flex flex-col gap-[32px] mt-6'>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Never share your PIN, OTP, or password
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Enable biometric login for extra security
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Always log out after each session
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
-                                <p className='font-grava font-[500] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Report suspicious activities immediately
                                 </p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center lg:mt-[16px] md:items-start gap-3'>
-                                <p className='font-grava font-[500] text-[#002244] text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
+                                <p className='font-grava font-[450] text-[#002244] text-center md:text-left lm:text-[20px] leading-[25px] tracking-[1.4%]'>
                                     Need Help? 
                                 </p>
                             </div>
@@ -542,7 +542,7 @@ const Digital = () => {
                                 className='transition-all duration-500 hidden lm:flex ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] md:w-[251px] md:h-[56px] h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] items-center justify-center'
                                 type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                             >
-                                <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
+                                <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
                                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                             </button>
                         </div>
@@ -568,10 +568,10 @@ const Digital = () => {
                 >
                     <div className='flex flex-col lm:w-[615px] lm:h-[312px] gap-5 lm:gap-[100px]'>
                         <div className="flex flex-col  gap-[20px]">
-                            <p className="font-grava font-[500] text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                            <p className="font-grava font-[450] text-[20px] leading-[20px] lm:text-[34px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
                                 Tatum Bank – We Keep You Smiling.
                             </p>
-                            <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                            <p className="font-grava font-[300] text-[14px] lm:text-[18px] leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                                 At Tatum Bank, we keep you smiling with banking that fits your lifestyle! 
                                 Choose the digital banking solution that works for you and enjoy seamless, 
                                 secure, and stress-free transactions.
@@ -582,7 +582,7 @@ const Digital = () => {
                             type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
                         >
                         <p 
-                            className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]' 
+                            className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]' 
                         >
                             {/* Get started today. */}
                             Contact us
