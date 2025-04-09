@@ -31,6 +31,7 @@ import Ussd from "../../assets/svg/ussd_darker.svg";
 
 import "./css/Dot.css";
 import HeroSection from "../../components/HeroSection";
+import Buttons from "../../components/Buttons";
 
 const Personal = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -232,13 +233,13 @@ const Personal = () => {
             bgDesktop={
               "https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"
             }
-            title={` Personalized <br />
+            title={` <p class="leading-[105%]">Personalized <br />
               Banking That 
               <span class="font-bold ">
                 Keeps You Smiling
-              </span>`}
+              </span></p>`}
             content={
-              "Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy."
+              `<p class="leading-[34.1px]">Explore tailored solutions that fit your lifestyle, empower <br /> your goals, and make banking a joy.</p>`
             }
             link={"/personal"}
             sectionName={"savings"}
@@ -256,7 +257,7 @@ const Personal = () => {
      
       <div
         ref={saveRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px]  md:justify-center py-[56px] px-5  lg:pt-[160px] lg:pb-[88px] lg:pr-[110px] "
+        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] lg:gap-[175px]  md:justify-center py-[56px] px-5  lg:pt-[60px] lg:pb-[60px] lg:pl-[110px] lg:pr-[101px] "
       >
         <div data-aos="fade-right" className="hidden md:block">
           <img
@@ -270,37 +271,22 @@ const Personal = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] text-[11px] lg:text-[14px] tracking-[0.25em] uppercase text-sm">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.25em] leading-[130%] text-[11px] lg:text-[14px]">
               Savings Account
             </p>
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Grow your savings effortlessly
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.2%]">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.01em]">
               Our savings account helps you move your money with ease, offering
               security and successful transactions every single time
             </p>
           </div>
-          <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
-            type="button"
-            onClick={() =>
-              navigate(
-                "/personal/account",
-                { state: { section: "account" } },
-                window.scrollTo(0, 0)
-              )
-            }
-          >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              {/* Get started */}
-              Find out more
-            </p>
-            <BsArrowRight
-              size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
-            />
-          </button>
+          <Buttons 
+            text="Find out more"
+            link="/personal/account"
+            sect="account"
+          />
         </div>
         <img
           data-aos="fade-right"
@@ -312,45 +298,30 @@ const Personal = () => {
 
       <div
         ref={currentRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]"
       >
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-[500] lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.25em] leading-[130%] text-[11px] lg:text-[14px] ">
               Current Account
             </p>
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Enjoy simplified <br /> transactions daily
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Manage your finances effortlessly with a current account. Enjoy
               unlimited transactions, seamless online banking, and quick access
               to funds on the go.
             </p>
           </div>
-          <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
-            type="button"
-            onClick={() =>
-              navigate(
-                "/personal/account",
-                { state: { section: "account" } },
-                window.scrollTo(0, 0)
-              )
-            }
-          >
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              {/* Get started */}
-              Find out more
-            </p>
-            <BsArrowRight
-              size={100}
-              className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
-            />
-          </button>
+          <Buttons 
+            text="Find out more"
+            link="/personal/account"
+            sect="account"
+          />
         </div>
         <div data-aos="fade-left">
           <img
@@ -363,7 +334,7 @@ const Personal = () => {
 
       <div
         ref={fixedRef}
-        className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]"
+        className="bg-[#fff] md:h-[400px] lg:h-[692px] flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] py-[56px] px-5 lg:py-[60px] lg:pr-[93px] lg:pl-[105px]"
       >
         <div data-aos="fade-right" className="hidden md:block">
           <img
@@ -379,13 +350,13 @@ const Personal = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-[500] lm:ml-1 tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] font-[500] lm:ml-1 tracking-[0.25em] uppercase text-[11px] lg:text-[14px] ">
               Fixed Deposits
             </p>
             <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Safe, secure and steadily rewarding
             </p>
-            <p className="text-[14px] text-[#002244] lm:text-[18px] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] text-[#002244] lm:text-[18px] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Grow your money with guaranteed returns. Our fixed deposits offer
               security, attractive interest rates, and flexible tenures for
               steady, risk-free earnings.
@@ -417,7 +388,7 @@ const Personal = () => {
 
       <div
         ref={loanRef}
-        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] items-center gap-10 lm:gap-[56px] w-full h-auto"
+        className="bg-[#F9FAFB] flex flex-col py-[56px] px-5 lm:px-0 lm:py-[72px] lg:px-[101px] items-center gap-10 lm:gap-[56px] w-full h-auto"
       >
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
@@ -425,7 +396,7 @@ const Personal = () => {
               Loans
             </p>
             <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center text-[11px] lg:text-[14px]">
-              <p className="font-grava text-[12px] font-[500] text-[#546B82] uppercase leading-[12px]">
+              <p className="font-grava text-[12px] font-[500] text-[#546B82] uppercase leading-[100%] tracking-[0.01em]">
                 to be available soon
               </p>
             </div>
@@ -502,7 +473,7 @@ const Personal = () => {
           <p className="font-grava text-[#002244] font-[500] text-[24px] leading-[30px] lm:text-[48px] lm:leading-[60px]">
             Tatum Cards
           </p>
-          <p className="font-[350] font-grava text-[#334E69] text-sm leading-[20px] lm:text-[18px] lm:leading-[27px]">
+          <p className="font-[350] font-grava text-[#334E69] text-[14px] leading-[20px] lm:text-[18px] lm:leading-[27px]">
             The perfect card for every moment
           </p>
         </div>
@@ -530,7 +501,7 @@ const Personal = () => {
                   } w-6 h-6`}
                 ></div>
               </div>
-              <p className="text-[#002244] font-grava font-medium">
+              <p className="text-[#002244] lg:text-[18px] leading-[27px] font-grava font-medium">
                 Debit cards
               </p>
             </div>
@@ -556,7 +527,7 @@ const Personal = () => {
                   } w-6 h-6`}
                 ></div>
               </div>
-              <p className="text-[#002244] font-grava font-medium">
+              <p className="text-[#002244] lg:text-[18px] leading-[27px] font-grava font-medium">
                 Credit cards
               </p>
             </div>
@@ -582,7 +553,7 @@ const Personal = () => {
                   } w-6 h-6`}
                 ></div>
               </div>
-              <p className="text-[#002244] font-grava font-medium">
+              <p className="text-[#002244] lg:text-[18px] leading-[27px] font-grava font-medium">
                 Prepaid cards
               </p>
             </div>
@@ -638,7 +609,7 @@ const Personal = () => {
           //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           // }
         >
-          <p className=" text-[#002244] font-[500] font-grava text-[14px] lm:leading-6 lg:text-[18px]">
+          <p className=" text-[#002244] font-[500] font-grava text-[14px] lm:leading-6 lg:text-[16px]">
             To be available soon
           </p>
         </button>
@@ -649,7 +620,7 @@ const Personal = () => {
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
       >
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
-          <p className="font-grava text-[#002244] font-[500]  capitalize text-sm  lg:text-[18px] ">
+          <p className="font-grava text-[#002244] font-[500]  capitalize text-[14px] leading-[27px]  lg:text-[18px] ">
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
@@ -687,8 +658,12 @@ const Personal = () => {
               </p>
             </div>
           </div>
-
-          <button
+          <Buttons 
+            text="Find out more"
+            link="/digital"
+            sect=""
+          />
+          {/* <button
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[63px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() => {
@@ -698,18 +673,18 @@ const Personal = () => {
             }
           >
             <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              {/* Get started now */}
+         
               Find out more
             </p>
             <BsArrowRight
               size={100}
               className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
-          </button>
+          </button> */}
         </div>
       </div>
 
-      <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
+      <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[59px] flex flex-col">
         <div
           style={{
             backgroundImage: `url(${Layer})`,
@@ -740,7 +715,7 @@ const Personal = () => {
                 Ready to Experience Banking That Truly Keeps You Smiling?
               </p>
               <button
-                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-opacity-0 hover:border-[1.5px] hover:border-[#002244] px-5 w-fit rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
+                className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-opacity-0 hover:border-[1.5px] hover:border-[#002244] px-5 w-fit lg:w-[219px] rounded-tl-lg rounded-br-lg h-[58px] gap-2 flex items-center justify-center`}
                 type="button"
                 onClick={() =>
                   navigate(

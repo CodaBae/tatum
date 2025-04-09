@@ -155,7 +155,7 @@ const About = () => {
 
   return (
     <div
-      className="w-full flex flex-col gap-[56px] lm:gap-[96px] overflow-hidden"
+      className="w-full flex flex-col overflow-hidden"
       ref={aboutRef}
       id="about"
     >
@@ -230,12 +230,12 @@ const About = () => {
       </section> 
         :
         // Desktop
-        <section className="w-full h-full">
+        <section className="w-full ">
           <HeroSection 
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"} 
             title={` Welcome to <br /> <span class="font-bold">Tatum Bank</span>`}
-            content={"We are more than a financial institution—we are a trusted partner dedicated to safeguarding your financial wellbeing."} 
+            content={`We are more than a financial institution—we are <span class="block">a trusted partner dedicated to safeguarding your </span> financial wellbeing.`} 
             link={"/personal"} 
             sectionName={"savings"} 
             mainImgMobile={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 
@@ -245,154 +245,152 @@ const About = () => {
         </section>
       }
     
-
-      <section className="px-5 lm:px-[56px]" ref={missionRef}>
-        <div className=" flex flex-col md:flex-row items-start justify-between ">
-          <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[15px] lg:pr-[59px]">
-            <div className="flex items-center justify-between">
-              <p className="text-[#002244] font-grava font-bo text-[28px] lg:text-[56px] tracking-wider">
-                Our Story
-              </p>
-              {/* <img
-                src={SlimStar}
-                alt="SlimStar"
-                className="w-[48px] h-[55px] hidden lg:block"
-              /> */}
-            </div>
-            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
-              Inspired by our name, Tatum, a refined form of the Latin word
-              Tutum, meaning "a safe place" or "refuge," we are committed to
-              being a secure and dependable guardian of your financial goals and
-              aspirations.
+    <section className="px-5 lm:px-[56px] lm:h-[643px] pt-[50px]" ref={missionRef}>
+      <div className=" flex flex-col md:flex-row items-start justify-between ">
+        <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[15px] lg:pr-[59px]">
+          <div className="flex items-center justify-between">
+            <p className="text-[#002244] font-grava font-bo text-[28px] lg:text-[56px] tracking-wider">
+              Our Story
             </p>
-            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
-              Our journey is rooted in the promise to provide a safe haven where
-              customers can confidently entrust their finances. We deliver on
-              this promise through innovative products, advanced technology, and
-              unparalleled service designed to support every step of your
-              financial journey.
-            </p>
-            <p className="text-[#002244] font-[300] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
-              At Tatum Bank,{" "}
-              <span className="font-semibold italic">We Keep You Smiling.</span>
-            </p>
+            {/* <img
+              src={SlimStar}
+              alt="SlimStar"
+              className="w-[48px] h-[55px] hidden lg:block"
+            /> */}
           </div>
-          <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
-            <div className="items-start lm:items-center flex flex-col gap-6 lg:pt-0 pb-[38px] md:pl-5   lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
-              <img
-                src={Telescope}
-                alt="MissionStar"
-                className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
-              />
-              <div className="flex flex-col items-start lm:items-center gap-3">
-                <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                   Vision.
-                </p>
-                <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
-                  To be Nigeria's preferred financial services provider
-                </p>
-              </div>
+          <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
+            Inspired by our name, Tatum, a refined form of the Latin word
+            Tutum, meaning "a safe place" or "refuge," we are committed to
+            being a secure and dependable guardian of your financial goals and
+            aspirations.
+          </p>
+          <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
+            Our journey is rooted in the promise to provide a safe haven where
+            customers can confidently entrust their finances. We deliver on
+            this promise through innovative products, advanced technology, and
+            unparalleled service designed to support every step of your
+            financial journey.
+          </p>
+          <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
+            At Tatum Bank,{" "}
+            <span className="font-semibold italic">We Keep You Smiling.</span>
+          </p>
+        </div>
+        <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
+          <div className="items-start lm:items-center flex flex-col gap-6 lg:pt-0 pb-[38px] md:pl-5   lm:border-dashed lm:border-[1px] lm:border-x-0 lm:border-t-0 lm:border-[#C9C9C9]">
+            <img
+              src={Telescope}
+              alt="MissionStar"
+              className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
+            />
+            <div className="flex flex-col items-start lm:items-center gap-3">
+              <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                  Vision.
+              </p>
+              <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                To be Nigeria's preferred financial services provider
+              </p>
             </div>
-            <div className="items-start flex flex-col gap-6 relative lm:items-center lm:pt-[38px] md:pl-5 lg:pl-[60px]">
-              <img
-                src={Microphone}
-                alt="Moon"
-                className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
-              />
-              <div className="flex flex-col items-start lm:items-center gap-3">
-                <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                  Mission Statement 
-                </p>
-                <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[300] leading-[150%] tracking-[0.336px]">
-                  To meet our customer's financial needs 
-                  through innovative 
-                  technology  driven  products and services  <br></br>delivered with ease
-                </p>
-                {/* <div className="hidden lm:flex items-end justify-end absolute -bottom-14 right-0">
-                  <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
-                </div> */}
+          </div>
+          <div className="items-start flex flex-col gap-6 relative lm:items-center lm:pt-[38px] md:pl-5 lg:pl-[60px]">
+            <img
+              src={Microphone}
+              alt="Moon"
+              className="w-[40px] h-[40px] md:w-[66px] md:h-[66px]"
+            />
+            <div className="flex flex-col items-start lm:items-center gap-3">
+              <p className="font-grava text-[#002244] font-[550] leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
+                Mission Statement 
+              </p>
+              <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
+                To meet our customer's financial needs 
+                through innovative 
+                technology  driven  products and services  <br></br>delivered with ease
+              </p>
+              <div className="hidden lm:flex items-end justify-end absolute -bottom-20 right-0">
+                <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section
-       
-        className="flex flex-col lg:flex-row items-start px-5 lm:px-[56px] gap-4 lg:gap-[32px]"
+    <div className="w-full flex flex-col gap-[56px]  overflow-hidden lm:gap-[92px] ">
+
+    <section className="flex flex-col lg:flex-row items-start lg:h-auto px-5 lm:px-[56px] gap-4 lg:gap-[32px]">
+      <div
+        style={{
+          backgroundImage: `url(${Aunty})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
       >
-        <div
-          style={{
-            backgroundImage: `url(${Aunty})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-          className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
-        >
-          <div className="lm:w-[64px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
-            <div
-              className="bg-[#fff] flex items-center p-2 cursor-pointer rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
-              data-aos="fade-up"
-              data-aos-delay="0"
-              onClick={() => {
-                navigate("/digital")
-                window.scrollTo(0, 0)
-              }}
-            >
-              <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500]  w-[211px] lm:leading-[24px] text-[14px] lm:text-[20px]">
-                Gen Z-Focused Solutions
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2  lm:w-[340px] cursor-pointer"
-              onClick={() => {
-                navigate("/digital")
-                window.scrollTo(0, 0)
-              }}
-            >
-              <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
-                Cutting-Edge Digital Banking
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="400"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] cursor-pointer gap-2 w-[203px] lm:w-[287px]"
-              onClick={() => {
-                navigate("/personal/account")
-                window.scrollTo(0, 0)
-              }}
-            >
-              <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
-                Accessible and Inclusive
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="600"
-              className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]"
-              onClick={() => {
-                navigate("/personal/account")
-                window.scrollTo(0, 0)
-              }}
-            >
-              <img src={Check} alt="Check" className="" />
-              <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
-                Financial Literacy Advocacy
-              </p>
-            </div>
+        <div className="lm:w-[64px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
+          <div
+            className="bg-[#fff] flex items-center p-2 cursor-pointer rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
+            data-aos="fade-up"
+            data-aos-delay="0"
+            onClick={() => {
+              navigate("/digital")
+              window.scrollTo(0, 0)
+            }}
+          >
+            <img src={Check} alt="Check" className="" />
+            <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500]  w-[211px] lm:leading-[24px] text-[14px] lm:text-[20px]">
+              Gen Z-Focused Solutions
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2  lm:w-[340px] cursor-pointer"
+            onClick={() => {
+              navigate("/digital")
+              window.scrollTo(0, 0)
+            }}
+          >
+            <img src={Check} alt="Check" className="" />
+            <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
+              Cutting-Edge Digital Banking
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="bg-[#fff] flex items-center p-2 rounded-[32px] cursor-pointer gap-2 w-[203px] lm:w-[287px]"
+            onClick={() => {
+              navigate("/personal/account")
+              window.scrollTo(0, 0)
+            }}
+          >
+            <img src={Check} alt="Check" className="" />
+            <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
+              Accessible and Inclusive
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="bg-[#fff] flex items-center p-2 rounded-[32px] gap-2 w-[230px] lm:w-[326px]"
+            onClick={() => {
+              navigate("/personal/account")
+              window.scrollTo(0, 0)
+            }}
+          >
+            <img src={Check} alt="Check" className="" />
+            <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
+              Financial Literacy Advocacy
+            </p>
           </div>
         </div>
-        <div className="flex flex-col gap-4 lg:gap-[33px] lg:w-[452px]">
-          <img src={Play} alt="Play" className="lg:w-[452px] lg:h-[412px]" />
-          <img src={Learn} alt="Learn" className="lg:w-[452px] lg:h-[412px]" />
-        </div>
-      </section>
+      </div>
+      <div className="flex flex-col gap-4 lg:gap-[33px] lg:w-[452px]">
+        <img src={Play} alt="Play" className="lg:w-[452px] lg:h-[412px]" />
+        <img src={Learn} alt="Learn" className="lg:w-[452px] lg:h-[412px]" />
+      </div>
+    </section>
 
       <section
        ref={servicesRef}
@@ -410,7 +408,7 @@ const About = () => {
               Core <br /> Values
             </span> <span className="font-bold">(TECII)</span>
           </p>
-          <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[300] leading-6 lm:leading-[30px] tracking-[0.336px]">
+          <p className="font-grava text-base lm:text-[24px] text-[#002244] font-[350] leading-6 lm:leading-[30px] tracking-[0.336px]">
             Our values are intrinsic to how we operate and how we serve our
             customers to deliver exemplary financial services.
           </p>
@@ -425,7 +423,7 @@ const About = () => {
             <p className="text-[#002244] font-[500] font-grava text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Teamwork
             </p>
-            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[400] leading-5 lm:leading-[28px] font-grava">
+            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
               By combining our diverse strengths and perspectives, we create
               exceptional experiences together.
             </p>
@@ -441,7 +439,7 @@ const About = () => {
             <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Excellence
             </p>
-            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[400] leading-5 lm:leading-[28px] font-grava">
+            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
               We reimagine banking with creative solutions that make your
               financial journey rewarding.
             </p>
@@ -458,7 +456,7 @@ const About = () => {
             <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Customer-Centricity
             </p>
-            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[400] leading-5 lm:leading-[28px] font-grava">
+            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
               Your dreams and satisfaction drive our decisions, making banking
               worth smiling about.
             </p>
@@ -475,7 +473,7 @@ const About = () => {
             <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Integrity
             </p>
-            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[400] leading-5 lm:leading-[28px] font-grava">
+            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
               We build trust through transparent actions that brighten your
               banking experience.
             </p>
@@ -492,17 +490,15 @@ const About = () => {
             <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Innovation
             </p>
-            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[400] leading-5 lm:leading-[28px] font-grava">
+            <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
               With creativity and forward-thinking, we transform banking into something truly remarkable.
             </p>
           </div>
         </div>
-
-        
       </section>
 
       <section
-        className="px-5 lg:px-[56px] mb-[56px] lm:mb-[96px] flex flex-col gap-[32px] lm:gap-[56px]"
+        className="px-5 lg:px-[56px] mb-[56px] lm:mb-[62px] flex flex-col gap-[32px] lm:gap-[56px]"
         ref={teamsRef}
       >
         <div className="flex items-center justify-between">
@@ -515,7 +511,7 @@ const About = () => {
               navigate("/about/teams", { state: { section: "teams" } }, window.scrollTo(0, 0))
             }
           >
-            <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
+            <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[130%] tracking-[0.01em] font-[400]">
               See all Board Members
             </p>
             <img
@@ -558,11 +554,11 @@ const About = () => {
                 <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
 
-            <div className="flex flex-col gap-[4px]">
-              <p className="font-grava font-semibold text-[#002244] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px]">
-                Samuel Tomi Ologunorisa, SAN, <br /> FCIArb (UK)
+            <div className="flex flex-col gap-[5px]">
+              <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
+                Samuel Tomi Ologunorisa, SAN, FCIArb (UK) {/* <br /> */}
               </p>
-              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21px] tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
                 Chairman, Board of Directors
               </p>
             </div>
@@ -599,11 +595,11 @@ const About = () => {
                 </div>
                 <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
-            <div className="flex flex-col gap-[4px]">
-              <p className="font-grava font-semibold text-[#002244] tracking-[0.01em] text-[18px] md:text-[20px] lm:text-[23px]">
+            <div className="flex flex-col gap-[5px]">
+              <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
                 Niyi Adeseun
               </p>
-              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21px] tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
                 Managing Director
               </p>
             </div>
@@ -641,11 +637,11 @@ const About = () => {
                 </div>
                 <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
-            <div className="flex flex-col gap-[4px]">
-            <p className="font-grava font-semibold text-[#002244] tracking-[0.01em] text-[18px] md:text-[20px] lm:text-[23px]">
+            <div className="flex flex-col gap-[5px]">
+            <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
                 Samuel Otseilu Zibiri, SAN
               </p>
-              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21px] tracking-[0.2%] leading-[24px]">
+              <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
                 Non-Executive Director
               </p>
             </div>
@@ -660,7 +656,7 @@ const About = () => {
           }
           className="lm:hidden flex justify-center p-4 items-center gap-3 bg-[#FFCC33] rounded-tr-[16px] rounded-bl-[16px] h-[52px]"
         >
-          <p className="text-[#19352D] text-[14px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%] font-400">
+          <p className="text-[#19352D] text-[14px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[0.01em] font-400">
             See all Team Members
           </p>
           <img
@@ -669,7 +665,6 @@ const About = () => {
             className="w-[28px] h-[20px] transition-all duration-500 group-hover:ml-2"
           />
         </button>
-
       </section>
 
       <section className="px-5 lm:px-[56px] mb-[56px] hidden bg-[#fff]">
@@ -707,7 +702,7 @@ const About = () => {
               </p>
               <div className="flex items-center gap-4">
                 <div className="h-[1px] w-[230px] bg-[#002244]"></div>
-                <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">
+                <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[0.01em]">
                   {formatNumber(activeIndex)}
                   <span className="text-[#8A99A9] font-[350]">
                     / {formatNumber(testimonials.length - 1)}
@@ -735,7 +730,7 @@ const About = () => {
                   <div className="flex gap-4 mt-5">
                     <img src={Girl} alt="" className="w-[64px] h-[64px] rounded-full" />
                     <div className="flex flex-col gap-2">
-                      <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">
+                      <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[0.01em]">
                         {testimonial.name}
                       </p>
                       <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
@@ -749,6 +744,12 @@ const About = () => {
           </div>
         </div>
       </section>
+
+    </div>
+
+
+
+
 
       {/* <section className="px-5 lm:px-[56px] mb-[56px] bg-[#fff]">
             <div
@@ -770,7 +771,7 @@ const About = () => {
                         </p>
                         <div className="flex items-center gap-4">
                             <div className="h-[1px] w-[230px] bg-[#002244]"></div>
-                            <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[1.4%]">01 <span className="text-[#8A99A9] font-[350] opacity- 0"></span>/ 03</p>
+                            <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[0.01em]">01 <span className="text-[#8A99A9] font-[350] opacity- 0"></span>/ 03</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 lm:gap-[40px] lm:w-[766px]">
@@ -781,7 +782,7 @@ const About = () => {
                         <div className="flex gap-4">
                             <img src={Girl} alt="" className="w-[64px] h-[64px]" />
                             <div className="flex flex-col gap-2">
-                                <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[1.4%]">Jennifer monye</p>
+                                <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[0.01em]">Jennifer monye</p>
                                 <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">Business Owner</p>
                             </div>
                         </div>
@@ -804,7 +805,7 @@ const About = () => {
                         Our<span className="font-bold"> Unique Selling Points</span>  </p>
                 </div>
                 <div className="flex items-center gap-6 group">
-                    <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[1.4%]">Contact us</p>
+                    <p className="text-[#19352D] text-[20px] cursor-pointer group-hover:mr-2 font-grava leading-[26px] tracking-[0.01em]">Contact us</p>
                     <img src={Arrow} alt="Arrow" className="w-[56px] h-[40px] transition-all duration-500 group-hover:ml-2" />
                 </div>
             </div>

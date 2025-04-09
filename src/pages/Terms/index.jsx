@@ -99,7 +99,8 @@ const Terms = () => {
       className="w-full mb-[56px] lg:mb-[120px] overflow-hidden"
       data-aos="fade-up"
       data-aos-duration="3000"
-      ref={termsRef}>
+      ref={termsRef}
+    >
       <div 
         style={{ 
             backgroundImage: `url(https://framerusercontent.com/images/NUH4eUyFO0g76XT8Hd1XgCyLmUU.png)`, 

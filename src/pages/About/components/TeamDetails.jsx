@@ -8,6 +8,7 @@ import Man from "../../../assets/png/man.png"
 import HeadShot from "../../../assets/png/headshot_mock_up.png"
 
 
+import Clip from "../../../assets/svg/clip_triangle.svg";
 import InstagramWhite from "../../../assets/svg/instagram_white.svg"
 import TwitterWhite from "../../../assets/svg/twitter_white.svg"
 import LinkedInWhite from "../../../assets/svg/linkedin_white.svg"
@@ -37,11 +38,11 @@ const TeamDetails = () => {
           {/* Desktop Hero Section  */}
       <div className='h-[160px] hidden lm:flex justify-end items-end relative bg-[#FFCC33]'>
         <div 
-          className='absolute bottom-6 right-14 hidden md:flex items-center gap-3 w-[270px] cursor-pointer group' 
+          className='absolute bottom-6 right-1 hidden md:flex items-center gap-3 w-[270px] cursor-pointer group' 
           onClick={() => navigate('/about/teams')}
         >
           <MdKeyboardBackspace className='w-5 h-5 mt-0.5 text-[#002244] transition-all duration-500 group-hover:mr-2' />
-          <p className='font-grava text-[#002244] text-[20px] font-[500] whitespace-nowrap'>Back to leadership team</p>
+          <p className='font-grava text-[#002244] leading-[25px] tracking-[0.01em] text-[16px] font-[400] whitespace-nowrap'>Back to leadership team</p>
         </div>
       </div>
         
@@ -83,33 +84,44 @@ const TeamDetails = () => {
 
       </div>
 
-      <div className='flex flex-col gap-4 lg:gap-[40px] px-5 lg:px-[56px] pt-[40px] lg:pt-[80px] pb-[56px] lg:pb-[120px]'>
+      <div className='flex flex-col gap-4 lg:gap-[40px] px-5 lg:pl-[50px] lg:pr-[59px] pt-[40px] lg:py-[74px] pb-[56px]'>
         <div 
           data-aos="fade-up" 
           data-aos-duration="1000"
           className='flex flex-col lm:flex-row items-start gap-6 lg:gap-[55px]'
         >
           <div className="flex flex-col gap-[18px] w-[429px]">
-            <img src={state?.team.pic} alt='HeadShot' className='lm:w-[429px] w-[350px]' />
-            <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-[17px]'>
+            <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
+              <img
+                src={state?.team.pic}
+                alt="HeadShot"
+                className="lm:w-[429px] w-[350px] rounded-[24px]"
+              />
+              <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+                <img src={Clip} alt='Clip' className='teamBase' />
+              </div>
+              <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+            </div>
+            {/* <img src={state?.team.pic} alt='HeadShot' className='' /> */}
+            <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-3'>
 
               <div className='flex flex-col items-start '>
-                <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
-                <p className='text-[#002244] font-semibold text-[24px] leading-[34px] font-grava '>{state?.team.name}</p>
+                <p className='font-[350] text-[18.88px] text-[#002244] leading-[26px] lm:leading-[32.82px] font-grava '>{state?.team.role}</p>
+                <p className='text-[#002244] font-[600] text-[24px] leading-[34px] font-grava '>{state?.team.name}</p>
               </div>
 
               <div className='flex items-center gap-3'>
-                <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
-                  <img src={InstagramWhite} alt='InstagramWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
+                <div className='h-[40px] w-[40px] lg:h-[35px] lg:w-[35px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
+                  <img src={InstagramWhite} alt='InstagramWhite' className='w-5 h-5' />
                 </div>
-                <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
-                  <img src={TwitterWhite} alt='TwitterWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
+                <div className='h-[40px] w-[40px] lg:h-[35px] lg:w-[35px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
+                  <img src={TwitterWhite} alt='TwitterWhite' className='w-5 h-5 ' />
                 </div>
-                <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
-                  <img src={LinkedInWhite} alt='LinkedInWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
+                <div className='h-[40px] w-[40px] lg:h-[35px] lg:w-[35px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
+                  <img src={LinkedInWhite} alt='LinkedInWhite' className='w-5 h-5 ' />
                 </div>
-                <div className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
-                  <img src={FacebookWhite} alt='FacebookWhite' className='w-5 h-5 lg:w-6 lg:h-6' />
+                <div className='h-[40px] w-[40px] lg:h-[35px] lg:w-[35px] rounded-full bg-[#002244] flex items-center justify-center cursor-pointer'>
+                  <img src={FacebookWhite} alt='FacebookWhite' className='w-5 h-5 ' />
                 </div>
               </div>
 

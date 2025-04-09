@@ -176,7 +176,7 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-[#fff] fixed z-50 w-full px-[46px] h-[80px] py-5 flex items-center justify-between transition-transform duration-500 ease-in-out ${
+      className={`bg-[#fff] fixed z-50 w-full px-[56px] h-[80px] py-[13px] flex items-center justify-between transition-transform duration-500 ease-in-out ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     
@@ -194,7 +194,7 @@ const Header = () => {
           window.scrollTo(0, 0)
         }}
       />
-      <div className="flex items-center gap-[32px]">
+      <div className="flex items-center gap-[31px]">
         {/* <p
           className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
           onClick={() =>
