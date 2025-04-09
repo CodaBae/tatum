@@ -62,12 +62,12 @@ const InternetBanking = () => {
             <div className='w-full  flex flex-col items-start relative pt-[88px] lm:pt-[50px] z-30 gap-[64px] lg:gap-[69px]'>
                 <div className='flex w-full flex-col items-start gap-2 lg:gap-5'>
                     <p 
-                        className={`animate__animated animate__fadeInUp font-[500] lm:w-[692px] capitalize font-grava text-[#002244]  text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                        className={`animate__animated animate__fadeInUp font-[450] lm:w-[692px] capitalize font-grava text-[#002244]  text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
                     >
                         Say hello to <br /> banking <span className='font-[700]'> on the go</span>
                     </p>
                     <p 
-                        className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[692px] font-[350] text-sm font-grava lg:text-[25px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                        className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[692px] font-[300] text-sm font-grava lg:text-[25px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     >
                         Your money, your way. Experience banking that fits your lifestyle, not the other way around.
                     </p>
@@ -137,8 +137,8 @@ const InternetBanking = () => {
             </div>
             <div className='flex flex-col items-start gap-5 lm:gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 items-start">
-                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
-                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-left tracking-[0.2%]">
+                    <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-left tracking-[0.2%]">
                         We're currently updating our website to serve you better. 
                         This doesn't mean we're not working – we're behind the scenes, 
                         crafting exceptional content that will be worth the wait.
@@ -157,7 +157,7 @@ const InternetBanking = () => {
                         );
                     }}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
+                    <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
@@ -165,7 +165,7 @@ const InternetBanking = () => {
 
         <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
             <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-                <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
+                <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] font-[450]'>Frequently Asked Questions</p>
 
                 <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
                     <div className="space-y-5">
@@ -187,11 +187,11 @@ const InternetBanking = () => {
 
                     {/* <div onClick={handleDropdownOne} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                         <div className='flex items-center justify-between'>
-                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>What do I need to open an account?</p>
+                        <p className='font-grava text-[#475467] font-[450] lg:text-[20px]'>What do I need to open an account?</p>
                         {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                         </div>
                         { openDropdownOne && 
-                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                            <p className='font-[300] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
                                 Just a government-issued ID and your account opening is processed.
                             </p>
                         }
@@ -199,11 +199,11 @@ const InternetBanking = () => {
 
                     <div onClick={handleDropdownTwo} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                         <div className='flex items-center justify-between'>
-                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Are there any account opening fees?</p>
+                        <p className='font-grava text-[#475467] font-[450] lg:text-[20px]'>Are there any account opening fees?</p>
                         {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                         </div>
                         { openDropdownTwo && 
-                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                            <p className='font-[300] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
                                 No, you do not pay any fees to open an account
                             </p>
                         }
@@ -211,11 +211,11 @@ const InternetBanking = () => {
 
                     <div onClick={handleDropdownThree} className='flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-transform duration-500 ease-in-out transform'>
                         <div className='flex items-center justify-between'>
-                        <p className='font-grava text-[#475467] font-[500] lg:text-[20px]'>Can I manage my account on mobile?</p>
+                        <p className='font-grava text-[#475467] font-[450] lg:text-[20px]'>Can I manage my account on mobile?</p>
                         {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                         </div>
                         { openDropdownThree && 
-                            <p className='font-[350] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
+                            <p className='font-[300] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]'>
                                 Yes! You can access your account on iOS and Android with the Tatum Mobile app.
                             </p>
                         }

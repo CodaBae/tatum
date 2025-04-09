@@ -78,7 +78,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Company Overview</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Company Overview</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Who we are and what we do.
                       </p>
@@ -93,7 +93,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Mission and Vision</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Mission and Vision</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Innovation driving our purpose.
                       </p>
@@ -108,7 +108,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Core Values</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Core Values</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Innovative services designed for you.
                       </p>
@@ -125,7 +125,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Leadership</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Leadership</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Meet the people behind our success.
                       </p>
@@ -142,7 +142,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Careers</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Careers</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Explore opportunities to grow with us
                       </p>
@@ -176,7 +176,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Savings Accounts</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Savings Accounts</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Flexible options to grow your savings.
                       </p>
@@ -189,7 +189,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Current Accounts</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Current Accounts</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Easy solutions for daily banking.
                       </p>
@@ -202,7 +202,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Cards ( Debit, Credit, Virtual)</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Cards ( Debit, Credit, Virtual)</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Seamless payments anywhere, anytime.
                       </p>
@@ -215,7 +215,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Loans and Mortgages</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Loans and Mortgages</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Tailored financing to achieve your goals.
                       </p>
@@ -228,7 +228,7 @@ const MobileNavBar = ({ handleClose }) => {
                       }}
                       className="flex flex-col gap-1"
                     >
-                      <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Fixed Deposit</p>
+                      <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Fixed Deposit</p>
                       <p className="text-[#546B82] text-[10px] font-grava">
                         Grow your money with guaranteed returnsSafe, Secure and steadily rewarding
                       </p>
@@ -263,7 +263,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Business Accounts</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Business Accounts</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Simplify your business finances.
                     </p>
@@ -276,7 +276,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Payment solutions</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Payment solutions</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Payment Processing Services
                     </p>
@@ -289,7 +289,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Loans and Credit Lines</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Loans and Credit Lines</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Flexible funding for growth
                     </p>
@@ -302,7 +302,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Financial Planning and Advisory</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Financial Planning and Advisory</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Expert guidance for smart decisions
                     </p>
@@ -315,7 +315,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faq</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Faq</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Answers to your SME banking queries
                     </p>
@@ -353,7 +353,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Treasury Management</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Treasury Management</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Maximize cash flow and returns.
                     </p>
@@ -366,7 +366,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Trade Finance</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Trade Finance</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Simplify global trade transactions
                     </p>
@@ -381,7 +381,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Investment Banking</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Investment Banking</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Strategic insights for growth
                     </p>
@@ -394,7 +394,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Corporate Lending and Leasing</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Corporate Lending and Leasing</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Flexible financing for enterprises
                     </p>
@@ -407,7 +407,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faq</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Faq</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Expert answers to corporate bankimg queries
                     </p>
@@ -442,7 +442,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Wealth Management</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Wealth Management</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Solution to grow and protect your wealth
                     </p>
@@ -457,7 +457,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Exclusive Banking Benefits</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Exclusive Banking Benefits</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Smarter investment decisions
                     </p>
@@ -472,7 +472,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Tatum Black Card</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Tatum Black Card</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Flexible funding tailored to you
                     </p>
@@ -485,7 +485,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Faqs</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Faqs</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Quick answers to your Private Banking queries.
                     </p>
@@ -522,7 +522,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Public sector institution</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Public sector institution</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Insights and tips for smarter banking
                     </p>
@@ -537,7 +537,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Non-Government institution</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Non-Government institution</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Stay updated on our news
                     </p>
@@ -552,7 +552,7 @@ const MobileNavBar = ({ handleClose }) => {
                     }}
                     className="flex flex-col gap-1"
                   >
-                    <p className="font-grava tracking-wide font-[350] text-[#334E69] text-base capitalize">Why Choose Us</p>
+                    <p className="font-grava tracking-wide font-[300] text-[#334E69] text-base capitalize">Why Choose Us</p>
                     <p className="text-[#546B82] text-[10px] font-grava">
                       Expert answers to corporate banking 
                     </p>
@@ -570,10 +570,10 @@ const MobileNavBar = ({ handleClose }) => {
             {
               openResourcesDropdown && (
                 <div className='flex flex-col gap-4 gap-6 mt-3'>
-                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">Blog</p>
-                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">Press Release</p>
-                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">Media Gallery</p>
-                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[350] text-[#334E69] text-base uppercase">Branch & ATM Locator</p>
+                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[300] text-[#334E69] text-base uppercase">Blog</p>
+                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[300] text-[#334E69] text-base uppercase">Press Release</p>
+                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[300] text-[#334E69] text-base uppercase">Media Gallery</p>
+                  <p onClick={() => {navigate("/resources"); window.scrollTo(0,0); handleClose()}} className="font-grava tracking-wide font-[300] text-[#334E69] text-base uppercase">Branch & ATM Locator</p>
                 </div>
               )
             }

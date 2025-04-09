@@ -327,6 +327,7 @@ const About = () => {
         }}
         className="w-full lg:w-[844px] h-[428px] md:h-[600px] lg:h-[859px] relative rounded-tr-3xl rounded-br-3xl"
       >
+
         <div className="lm:w-[64px] flex flex-col gap-[14px] absolute bottom-8 left-4 lm:left-8">
           <div
             className="bg-[#fff] flex items-center p-2 cursor-pointer rounded-[32px] gap-2 w-[211px] lm:w-[296px]"
@@ -383,6 +384,7 @@ const About = () => {
             <p className="font-grava text-[#002244] leading-[20px] whitespace-nowrap font-[500] lm:leading-[24px] text-[14px] lm:text-[20px]">
               Financial Literacy Advocacy
             </p>
+
           </div>
         </div>
       </div>
@@ -420,10 +422,12 @@ const About = () => {
         >
           <img src={Treasure} alt="Treasure" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-[500] font-grava text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-[450] font-grava text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Teamwork
             </p>
+
             <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+
               By combining our diverse strengths and perspectives, we create
               exceptional experiences together.
             </p>
@@ -436,10 +440,12 @@ const About = () => {
         >
           <img src={Business} alt="Business" className="w-[59px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-[450] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Excellence
             </p>
+
             <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+
               We reimagine banking with creative solutions that make your
               financial journey rewarding.
             </p>
@@ -453,10 +459,12 @@ const About = () => {
         >
           <img src={Pie} alt="Pie" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-[450] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Customer-Centricity
             </p>
+
             <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+
               Your dreams and satisfaction drive our decisions, making banking
               worth smiling about.
             </p>
@@ -470,10 +478,12 @@ const About = () => {
         >
           <img src={People} alt="People" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-[450] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Integrity
             </p>
+
             <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+
               We build trust through transparent actions that brighten your
               banking experience.
             </p>
@@ -487,10 +497,12 @@ const About = () => {
         >
           <img src={Settings} alt="Settings" className="w-[83px] h-[64px]" />
           <div className="flex flex-col gap-4">
-            <p className="text-[#002244] font-grava font-[500] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
+            <p className="text-[#002244] font-grava font-[450] text-[18px] lm:text-[24px] leading-[27px] lm:leading-[30px] tracking-[0.336px]">
               Innovation
             </p>
+
             <p className="text-[14px] lm:text-[20px] text-[#002244] font-[350] leading-5 lm:leading-[33px] font-grava">
+
               With creativity and forward-thinking, we transform banking into something truly remarkable.
             </p>
           </div>
@@ -558,7 +570,9 @@ const About = () => {
               <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
                 Samuel Tomi Ologunorisa, SAN, FCIArb (UK) {/* <br /> */}
               </p>
+
               <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
+
                 Chairman, Board of Directors
               </p>
             </div>
@@ -599,7 +613,9 @@ const About = () => {
               <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
                 Niyi Adeseun
               </p>
+
               <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
+
                 Managing Director
               </p>
             </div>
@@ -641,7 +657,9 @@ const About = () => {
             <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
                 Samuel Otseilu Zibiri, SAN
               </p>
+
               <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
+
                 Non-Executive Director
               </p>
             </div>
@@ -704,7 +722,7 @@ const About = () => {
                 <div className="h-[1px] w-[230px] bg-[#002244]"></div>
                 <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[0.01em]">
                   {formatNumber(activeIndex)}
-                  <span className="text-[#8A99A9] font-[350]">
+                  <span className="text-[#8A99A9] font-[300]">
                     / {formatNumber(testimonials.length - 1)}
                   </span>
                 </p>
@@ -733,7 +751,7 @@ const About = () => {
                       <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[0.01em]">
                         {testimonial.name}
                       </p>
-                      <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">
+                      <p className="font-[300] font-grava text-[#002244] text-sm lm:text-base">
                         {testimonial.role}
                       </p>
                     </div>
@@ -771,7 +789,9 @@ const About = () => {
                         </p>
                         <div className="flex items-center gap-4">
                             <div className="h-[1px] w-[230px] bg-[#002244]"></div>
+
                             <p className="text-[#002244] font-grava text-base lm:text-[20px] leading-[26px] tracking-[0.01em]">01 <span className="text-[#8A99A9] font-[350] opacity- 0"></span>/ 03</p>
+
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 lm:gap-[40px] lm:w-[766px]">
@@ -782,8 +802,10 @@ const About = () => {
                         <div className="flex gap-4">
                             <img src={Girl} alt="" className="w-[64px] h-[64px]" />
                             <div className="flex flex-col gap-2">
+
                                 <p className="font-grava text-[#002244] font-semibold text-[20px] leading-[25px] tracking-[0.01em]">Jennifer monye</p>
                                 <p className="font-[350] font-grava text-[#002244] text-sm lm:text-base">Business Owner</p>
+
                             </div>
                         </div>
                     </div>

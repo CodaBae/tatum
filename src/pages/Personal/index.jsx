@@ -169,7 +169,7 @@ const Personal = () => {
                     navigate("/personal", { state: { section: "savings" } },window.scrollTo(0, 0))
                   }
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                  <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                     Find out more
                   </p>
                   <BsArrowRight
@@ -271,22 +271,28 @@ const Personal = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[498px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+
             <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.25em] leading-[130%] text-[11px] lg:text-[14px]">
+
               Savings Account
             </p>
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Grow your savings effortlessly
             </p>
+
             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.01em]">
+
               Our savings account helps you move your money with ease, offering
               security and successful transactions every single time
             </p>
           </div>
+
           <Buttons 
             text="Find out more"
             link="/personal/account"
             sect="account"
           />
+
         </div>
         <img
           data-aos="fade-right"
@@ -305,23 +311,29 @@ const Personal = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+
             <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.25em] leading-[130%] text-[11px] lg:text-[14px] ">
+
               Current Account
             </p>
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Enjoy simplified <br /> transactions daily
             </p>
+
             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+
               Manage your finances effortlessly with a current account. Enjoy
               unlimited transactions, seamless online banking, and quick access
               to funds on the go.
             </p>
           </div>
+
           <Buttons 
             text="Find out more"
             link="/personal/account"
             sect="account"
           />
+
         </div>
         <div data-aos="fade-left">
           <img
@@ -350,13 +362,17 @@ const Personal = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[580px]"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
+
             <p className="font-grava text-[#334E69] font-[500] lm:ml-1 tracking-[0.25em] uppercase text-[11px] lg:text-[14px] ">
+
               Fixed Deposits
             </p>
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Safe, secure and steadily rewarding
             </p>
+
             <p className="text-[14px] text-[#002244] lm:text-[18px] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+
               Grow your money with guaranteed returns. Our fixed deposits offer
               security, attractive interest rates, and flexible tenures for
               steady, risk-free earnings.
@@ -369,7 +385,7 @@ const Personal = () => {
             //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
             // }
           >
-            <p className="font-[400]  lg:text-[18px] font-grava text-[#B0B0B0] ">
+            <p className="font-[300]  lg:text-[18px] font-grava text-[#B0B0B0] ">
               To be available soon
             </p>
             <BsArrowRight
@@ -392,16 +408,18 @@ const Personal = () => {
       >
         <div className="flex gap-3 flex-col lm:w-[627px] mx-auto">
           <div className="flex items-center justify-center gap-2">
-            <p className="font-grava text-[#334E69] font-[500] tracking-[0.25em] uppercase text-[11px]  lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] font-[450] tracking-[0.25em] uppercase text-[11px]  lg:text-[14px] ">
               Loans
             </p>
             <div className="w-[172px] rounded-[16px] h-[29px] bg-[#FFEFC0] flex flex-col items-center justify-center text-[11px] lg:text-[14px]">
+
               <p className="font-grava text-[12px] font-[500] text-[#546B82] uppercase leading-[100%] tracking-[0.01em]">
+
                 to be available soon
               </p>
             </div>
           </div>
-          <p className="font-[500] font-grava text-[#002244] text-[28px] leading-[35px] lm:text-[48px] lm:leading-[60px] tracking-[0.2%] text-center">
+          <p className="font-[450] font-grava text-[#002244] text-[28px] leading-[35px] lm:text-[48px] lm:leading-[60px] tracking-[0.2%] text-center">
             Empowering your dreams, every step of the way.
           </p>
         </div>
@@ -421,19 +439,19 @@ const Personal = () => {
           >
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-base lm:text-[28px] leading-[35px] text-[#002244]">
+              <p className="font-grava font-[450] text-base lm:text-[28px] leading-[35px] text-[#002244]">
                 Personal Loans
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-base lm:text-[28px] whitespace-nowrap leading-[35px] text-[#002244]">
+              <p className="font-grava font-[450] text-base lm:text-[28px] whitespace-nowrap leading-[35px] text-[#002244]">
                 Mortgage Loans
               </p>
             </div>
             <div className="flex flex-col lm:flex-row items-center gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-base lm:text-[28px] leading-[35px] text-[#002244]">
+              <p className="font-grava font-[450] text-base lm:text-[28px] leading-[35px] text-[#002244]">
                 Auto Loans
               </p>
             </div>
@@ -441,7 +459,7 @@ const Personal = () => {
               className="cursor-default bg-[#F2F4F7] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group  flex items-center justify-center"
               type="button"
             >
-              <p className=" font-[400]  lg:text-[18px] font-grava text-[#98A2B3]">
+              <p className=" font-[300]  lg:text-[18px] font-grava text-[#98A2B3]">
                 To be available soon
               </p>
               <BsArrowRight
@@ -470,10 +488,12 @@ const Personal = () => {
         className="bg-[#FFFAEB] py-[96px] gap-[40px] lm:px-[20%] lg:h-auto flex flex-col items-center justify-center lg:gap-[112px]" //[845px]
       >
         <div className="flex flex-col w-[296px] mx-auto gap-3 items-center">
-          <p className="font-grava text-[#002244] font-[500] text-[24px] leading-[30px] lm:text-[48px] lm:leading-[60px]">
+          <p className="font-grava text-[#002244] font-[450] text-[24px] leading-[30px] lm:text-[48px] lm:leading-[60px]">
             Tatum Cards
           </p>
+
           <p className="font-[350] font-grava text-[#334E69] text-[14px] leading-[20px] lm:text-[18px] lm:leading-[27px]">
+
             The perfect card for every moment
           </p>
         </div>
@@ -609,7 +629,9 @@ const Personal = () => {
           //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
           // }
         >
+
           <p className=" text-[#002244] font-[500] font-grava text-[14px] lm:leading-6 lg:text-[16px]">
+
             To be available soon
           </p>
         </button>
@@ -620,10 +642,12 @@ const Personal = () => {
         className="bg-[#F9FAFB] py-[56px] px-5 lm:px-0 lm:py-[72px] flex flex-col gap-[40px] lm:gap-[80px] items-center justify-center h-auto"
       >
         <div className="flex flex-col items-center lm:w-[627px] gap-3">
+
           <p className="font-grava text-[#002244] font-[500]  capitalize text-[14px] leading-[27px]  lg:text-[18px] ">
+
             Digital Banking
           </p>
-          <p className="font-grava text-[24px] lm:text-[48px] text-center font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
+          <p className="font-grava text-[24px] lm:text-[48px] text-center font-[450] leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
             Everyday banking, anytime, anywhere.
           </p>
         </div>
@@ -637,7 +661,7 @@ const Personal = () => {
                   className="w-[29px] h-[36px]"
                 />
               </div>
-              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[500] leading-[25px] tracking-[0.28px]">
+              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[450] leading-[25px] tracking-[0.28px]">
                 Internet Banking
               </p>
             </div>
@@ -645,7 +669,7 @@ const Personal = () => {
               <div className="w-[72px] h-[72px] rounded-[36px] bg-[#FFFAEB] flex flex-col items-center justify-center">
                 <img src={Mobile} alt="Mobile" className="w-[29px] h-[36px]" />
               </div>
-              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[500] leading-[25px] tracking-[0.28px]">
+              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[450] leading-[25px] tracking-[0.28px]">
                 Tatum Mobile App
               </p>
             </div>
@@ -653,7 +677,7 @@ const Personal = () => {
               <div className="w-[72px] h-[72px] rounded-[36px] bg-[#FFFAEB] flex flex-col items-center justify-center">
                 <img src={Ussd} alt="Ussd" className="w-[29px] h-[36px]" />
               </div>
-              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[500] leading-[25px] tracking-[0.28px]">
+              <p className="font-grava text-[#002244] text-base lm:text-[20px] font-[450] leading-[25px] tracking-[0.28px]">
                 USSD
               </p>
             </div>
@@ -672,8 +696,10 @@ const Personal = () => {
               ), window.scrollTo(0, 0) }
             }
           >
+
             <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
          
+
               Find out more
             </p>
             <BsArrowRight
@@ -702,14 +728,14 @@ const Personal = () => {
           >
             <div className="flex flex-col lg:w-[615px] lm:h-[312px] gap-[20px]">
               <p
-                className="font-grava font-[500] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]"
+                className="font-grava font-[450] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]"
                 style={{ color: "#002244" }}
               >
                 At Tatum Bank, we are committed to providing you personalized
                 banking, tailored to your needs and lifestyle.
               </p>
               <p
-                className="font-grava font-[400] text-[14px] lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]"
+                className="font-grava font-[300] text-[14px] lm:text-[18px] leading-[20px] lg:leading-[27px] lm:w-[389px] tracking-[0.2%]"
                 style={{ color: "#002244" }}
               >
                 Ready to Experience Banking That Truly Keeps You Smiling?
@@ -725,7 +751,7 @@ const Personal = () => {
                   )
                 }
               >
-                <p className="transition-colors duration-500 ease-in-out font-[400] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                <p className="transition-colors duration-500 ease-in-out font-[300] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   {/* Open an account */}
                   Contact us
                 </p>

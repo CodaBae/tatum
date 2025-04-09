@@ -125,7 +125,7 @@ const Corporate = () => {
                         state: { section: "corp" },
                       },window.scrollTo(0, 0))
                     }>
-                    <p className="transition-colors duration-500 ease-in-out font-[500]  font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                    <p className="transition-colors duration-500 ease-in-out font-[450]  font-grava text-[#FFCC33] group-hover:text-[#002244]">
                       Find out more
                     </p>
                     <BsArrowRight
@@ -219,10 +219,10 @@ const Corporate = () => {
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-[500] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-[450] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Corporate Banking
               </p>
-              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 Whether you're looking to optimize cash flow, expand your
                 operations, or navigate global trade, we are here to support
                 your ambitions with expertise, innovation, and reliability.
@@ -237,7 +237,7 @@ const Corporate = () => {
                   state: { section: "account" },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Find out more
               </p>
               <BsArrowRight
@@ -254,7 +254,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Find out more
             </p>
             <BsArrowRight
@@ -278,10 +278,10 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Investment Services
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Secure and grow your capital with our diverse investment offerings
               tailored to corporate clients. Our expert advisors provide
               strategic insights to help you maximize returns while minimizing
@@ -291,19 +291,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Fixed Income & Treasury Bills
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Wealth Management
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Structured Investment Portfolios
               </p>
             </div>
@@ -316,7 +316,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -348,10 +348,10 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Treasury Management
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Stay ahead with efficient liquidity management, risk mitigation,
               and cash flow optimization designed for today’s dynamic business
               environment. Our treasury solutions ensure that your capital works
@@ -361,19 +361,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Cash & Liquidity Management
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Foreign Exchange Services
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Interest Rate Risk Management
               </p>
             </div>
@@ -386,7 +386,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -410,10 +410,10 @@ const Corporate = () => {
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Trade Finance
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Expand your business with seamless international and domestic
               trade solutions. From import/export financing to letters of
               credit, we ensure your transactions are secure and hassle-free.
@@ -422,19 +422,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Letters of Credit & Guarantees
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Import & Export Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Supply Chain Finance
               </p>
             </div>
@@ -447,7 +447,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start trading smarter
             </p>
             <BsArrowRight
@@ -479,10 +479,10 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Corporate Lending
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Fuel your growth with customized financing solutions that align
               with your business goals. Whether you need working capital, asset
               financing, or expansion funding, we offer flexible loan structures
@@ -492,19 +492,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Term Loans & Working Capital Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Equipment Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Project & Infrastructure Financing
               </p>
             </div>
@@ -513,7 +513,7 @@ const Corporate = () => {
             className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
           >
-            <p className=" font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className=" font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
@@ -537,10 +537,10 @@ const Corporate = () => {
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
           data-aos="fade-right">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Strategic Partnerships
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[350] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               We believe in the power of collaborations that drive innovation
               and mutual growth. Our partnership solutions provide enterprises
               with access to exclusive financial products, industry insights,
@@ -550,19 +550,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Co-Branded Financial Solutions
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Technology & Fintech Collaborations
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Industry-Specific Advisory
               </p>
             </div>
@@ -575,7 +575,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px]] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px]] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with us
             </p>
             <BsArrowRight
@@ -597,10 +597,10 @@ const Corporate = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[350] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
-          <p className="font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
+          <p className="font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
             Why Choose Tatum <br /> Corporate Banking.
           </p>
         </div>
@@ -609,7 +609,7 @@ const Corporate = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
             onClick={handleTabOne}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Expert Financial Advisory
               </p>
               {openTabOne ? (
@@ -619,7 +619,7 @@ const Corporate = () => {
               )}
             </div>
             {openTabOne && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 We provide industry-specific insights to help businesses make informed decisions.
               </p>
             )}
@@ -628,7 +628,7 @@ const Corporate = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabTwo}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Tailored Solutions
               </p>
               {openTabTwo ? (
@@ -638,7 +638,7 @@ const Corporate = () => {
               )}
             </div>
             {openTabTwo && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Our products are designed with your business needs in mind.
               </p>
             )}
@@ -647,7 +647,7 @@ const Corporate = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabThree}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Technology-Driven Banking
               </p>
               {openTabThree ? (
@@ -657,7 +657,7 @@ const Corporate = () => {
               )}
             </div>
             {openTabThree && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Enjoy seamless banking with cutting-edge digital solutions.
               </p>
             )}
@@ -666,7 +666,7 @@ const Corporate = () => {
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabFour}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[500] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
                 Reliable Support
               </p>
               {openTabFour ? (
@@ -676,7 +676,7 @@ const Corporate = () => {
               )}
             </div>
             {openTabFour && (
-              <p className="font-[350] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 Our dedicated corporate banking team is always available to
                 support you. 
               </p>
@@ -700,13 +700,13 @@ const Corporate = () => {
               >
                   <div className='flex flex-col lm:w-[615px] lg:h-[312px] gap-5 lm:gap-[50px]'>
                       <div className="flex flex-col  gap-[20px]">
-                          <p className="font-grava font-[500] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[450] text-[20px] leading-[25px] lm:text-[32px] lm:leading-[48px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             {/* Let’s Build the Future of Your Business Together */}
                             Let’s Take Your Business To The Next Level!
                           </p>
-                          <p className="font-grava font-[350] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 
-                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-[500]">Visit our nearest client centre</span> to get started
+                            Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-[450]">Visit our nearest client centre</span> to get started
                           </p>
                       </div>
                       <button
@@ -714,7 +714,7 @@ const Corporate = () => {
                           type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                       >
                       <p 
-                          className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                          className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
                       >
                           {/* Get started today. */}
                           Call us today

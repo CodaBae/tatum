@@ -50,7 +50,7 @@ const Investors = () => {
                             Investor Relations
                         </p>
                         <p 
-                            className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[350] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                            className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[300] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
                             Get the latest financial news, reports, and information for investors and shareholders.
                         </p>
@@ -122,7 +122,7 @@ const Investors = () => {
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
@@ -133,7 +133,7 @@ const Investors = () => {
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
@@ -144,7 +144,7 @@ const Investors = () => {
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
@@ -155,7 +155,7 @@ const Investors = () => {
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>

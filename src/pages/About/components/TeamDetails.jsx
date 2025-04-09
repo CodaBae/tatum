@@ -42,7 +42,9 @@ const TeamDetails = () => {
           onClick={() => navigate('/about/teams')}
         >
           <MdKeyboardBackspace className='w-5 h-5 mt-0.5 text-[#002244] transition-all duration-500 group-hover:mr-2' />
+
           <p className='font-grava text-[#002244] leading-[25px] tracking-[0.01em] text-[16px] font-[400] whitespace-nowrap'>Back to leadership team</p>
+
         </div>
       </div>
         
@@ -55,7 +57,7 @@ const TeamDetails = () => {
 
             <div className='flex flex-col items-center gap-2 lg:gap-4'>
               <p className='text-[#002244] font-semibold text-[34px] leading-[32px] text-center lg:text-[48px] font-grava lg:leading-[48px]'>{state?.team.name}</p>
-              <p className='font-[350] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
+              <p className='font-[300] text-[20px] text-[#002244] leading-[26px] font-grava '>{state?.team.role}</p>
             </div>
 
             <div className='flex items-center gap-3'>
@@ -108,6 +110,7 @@ const TeamDetails = () => {
               <div className='flex flex-col items-start '>
                 <p className='font-[350] text-[18.88px] text-[#002244] leading-[26px] lm:leading-[32.82px] font-grava '>{state?.team.role}</p>
                 <p className='text-[#002244] font-[600] text-[24px] leading-[34px] font-grava '>{state?.team.name}</p>
+
               </div>
 
               <div className='flex items-center gap-3'>

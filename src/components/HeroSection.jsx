@@ -39,6 +39,7 @@ const HeroSection = ({
             <p className="animate__animated animate__fadeInUp animate__delay-08s md:w-[265px] lg:w-[731px]  font-[400] text-[14px] font-grava lg:text-[25px] text-left tracking-[0.01em] text-[#002244] leading-[20px] lg:leading-[155%]">
               {/* {content} */}
               <p dangerouslySetInnerHTML={{ __html: content }} />
+
             </p>
             <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 animate__animated animate__fadeInUp animate__delay-10s">
               {btnText && (
@@ -53,6 +54,7 @@ const HeroSection = ({
                   }}
                 >
                   <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+
                     {btnText}
                   </p>
                   <BsArrowRight

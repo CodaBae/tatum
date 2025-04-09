@@ -196,7 +196,7 @@ const Header = () => {
       />
       <div className="flex items-center gap-[31px]">
         {/* <p
-          className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
+          className="font-grava font-[450] text-base text-[#002244] cursor-pointer"
           onClick={() =>
             navigate("/", {
               state: { section: "home" },
@@ -210,7 +210,7 @@ const Header = () => {
         <div className="relative inline-block dropdown-wrapper">
           <div
             onMouseEnter={() => handleMouseEnter("about")}
-            className="block font-grava font-[500] text-base text-[#002244] cursor-pointer focus:outline-none"
+            className="block font-grava font-[450] text-base text-[#002244] cursor-pointer focus:outline-none"
             onClick={() => {
               navigate("/about"),
               window.scrollTo(0, 0)
@@ -350,7 +350,7 @@ const Header = () => {
         <div className="relative inline-block dropdown-wrapper">
           <div
             onMouseEnter={() => handleMouseEnter("personal")}
-            className="block font-grava font-[500] text-base text-[#002244] cursor-pointer focus:outline-none"
+            className="block font-grava font-[450] text-base text-[#002244] cursor-pointer focus:outline-none"
             onClick={() =>{
               navigate("/personal"),
               window.scrollTo(0, 0)
@@ -478,7 +478,7 @@ const Header = () => {
         {/* Business fka Sme */}
         <div className="relative inline-block dropdown-wrapper">
           <p
-            className="block font-grava font-[500] text-base text-[#002244] cursor-pointer focus:outline-none"
+            className="block font-grava font-[450] text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("business")}
             onClick={() =>{
               navigate("/business"),
@@ -607,7 +607,7 @@ const Header = () => {
         {/* Corporate */}
         <div className="relative inline-block dropdown-wrapper">
           <p
-            className="block font-grava font-[500] text-base text-[#002244] cursor-pointer focus:outline-none"
+            className="block font-grava font-[450] text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("corporate")}
             onClick={() => {
               navigate("/corporate"),
@@ -741,7 +741,7 @@ const Header = () => {
         {/* Private */}
         <div className="relative inline-block dropdown-wrapper">
           <p
-            className="block font-grava font-[500] text-base text-[#002244] cursor-pointer focus:outline-none"
+            className="block font-grava font-[450] text-base text-[#002244] cursor-pointer focus:outline-none"
             onMouseEnter={() => handleMouseEnter("private")}
             onClick={() => {
               navigate("/private"),
@@ -854,7 +854,7 @@ const Header = () => {
         {/* institutional */}
         <div className="relative inline-block dropdown-wrapper">
           <p
-            className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
+            className="font-grava font-[450] text-base text-[#002244] cursor-pointer"
             onMouseEnter={() => handleMouseEnter("institutional")}
             onClick={() => {
               navigate("/institutional"),
@@ -945,7 +945,7 @@ const Header = () => {
 
          {/* Digital */}
          <p
-          className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
+          className="font-grava font-[450] text-base text-[#002244] cursor-pointer"
           onClick={() =>
             navigate("/digital", {
               state: {
@@ -960,7 +960,7 @@ const Header = () => {
 
         {/* Help */}
         <p
-          className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
+          className="font-grava font-[450] text-base text-[#002244] cursor-pointer"
           onClick={() => {
             navigate("/help");
             window.scrollTo(0, 0);
@@ -972,7 +972,7 @@ const Header = () => {
 
         {/* Contact
         <p
-          className="font-grava font-[500] text-base text-[#002244] cursor-pointer"
+          className="font-grava font-[450] text-base text-[#002244] cursor-pointer"
           onClick={() =>
             navigate("/contact", {
               state: {
@@ -1000,7 +1000,7 @@ const Header = () => {
           onClick={() => {navigate("/internet-banking"); window.scrollTo(0, 0)}}
         >
           <SlLock className="w-5 h-5 text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]" />
-          <p className="font-[500] text-base font-grava text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]">
+          <p className="font-[450] text-base font-grava text-[#090540] transition-colors duration-500 ease-in-out group-hover:text-[#FFCC33]">
             Internet Banking
           </p>
         </button>

@@ -164,8 +164,8 @@ const AccountBusiness = () => {
             ref={sectionRef}
         >
             <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
-                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[500] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
-                <p className='font-[400] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
+                <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[450] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
+                <p className='font-[300] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                     Open a business account and enjoy access to loans, digital banking solutions, 
                     and financial advisory support to help your business grow.
                 </p>
@@ -174,17 +174,17 @@ const AccountBusiness = () => {
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-[118px] md:h-auto lg:h-[165px]' /> {/* [118px] */}
-                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-[118px] md:h-auto lm:h-[165px]' />
-                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
                 <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px]  h-[118px] md:h-auto lg:h-[165px]' />
-                    <p className='font-grava font-[400] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
+                    <p className='font-grava font-[300] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 
@@ -193,7 +193,7 @@ const AccountBusiness = () => {
                 type='button'
                 // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1739456268/TBL_Corporate_Form_1_eeem6o.pdf", "_blank")}
             >
-                <p className=' font-[400]  lg:text-[18px] font-grava text-[#B0B0B0] '>Account opening available soon</p>
+                <p className=' font-[300]  lg:text-[18px] font-grava text-[#B0B0B0] '>Account opening available soon</p>
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl  text-[#B0B0B0]  font-medium w-5 h-5 ' />
             </button>
 
@@ -202,15 +202,15 @@ const AccountBusiness = () => {
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
                 <p className='text-[#002244] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]'>WHY CHOOSE US</p>
-                <p className='font-[500] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
+                <p className='font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Seamless Banking</p>
+                    <p className='text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Seamless Banking</p>
                     {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabOne && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabOne && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         Enjoy easy access to business-friendly digital banking solutions, 
                         from hassle-free transactions to instant payments, 
                         all tailored to keep your business running smoothly.
@@ -218,10 +218,10 @@ const AccountBusiness = () => {
                 </div>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava font-[500] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Financing & Growth Support</p>
+                    <p className='text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]'>Financing & Growth Support</p>
                     {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabTwo && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabTwo && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         Gain access to competitive loan options, 
                         credit facilities, 
                         and expert business advisory services designed to help your business thrive.
@@ -229,10 +229,10 @@ const AccountBusiness = () => {
                 </div>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base font-[500] lm:text-[20px] leading-[25px] tracking-[0.2%]'>Secure and Reliable Transactions</p>
+                    <p className='text-[#546B82] font-grava text-base font-[450] lm:text-[20px] leading-[25px] tracking-[0.2%]'>Secure and Reliable Transactions</p>
                     {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
-                    {openTabThree && <p className='font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
+                    {openTabThree && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>
                         Bank with confidence using our advanced security features, 
                         ensuring your business transactions are protected 24/7.
                     </p>}
@@ -253,7 +253,7 @@ const AccountBusiness = () => {
                     {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                     { openDropdownOne && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                             Just a government-issued ID and your account opening is processed.
                         </p>
                     }
@@ -265,7 +265,7 @@ const AccountBusiness = () => {
                     {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                   { openDropdownTwo && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                             No, you do not pay any fees to open an account
                         </p>
                     }
@@ -277,7 +277,7 @@ const AccountBusiness = () => {
                     {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                   </div>
                   { openDropdownThree && 
-                        <p className='font-[350] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                        <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                             Yes! You can access your account on iOS and Android with the Tatum Mobile app.
                         </p>
                     }
