@@ -421,7 +421,7 @@ const handleTouchEnd = () => {
       <div className="w-full outline-none lm:h-[100vh] ">
         <LandingCarousel
           interval={5000}
-          showArrows={false}
+          showArrows={false} //
           autoPlay={true}
           showIndicators={false}
           showStatus={false}
@@ -451,7 +451,7 @@ const handleTouchEnd = () => {
                   <p
                     className={`${
                       activeIndex === 0 ? "animate__animated animate__fadeInUp " : " "
-                    } lg:w-[450px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bold leading-[40px] lg:leading-[78px]`}
+                    } lg:w-[450px] font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-bold leading-[40px] lg:leading-[105%]`}
                   >
                     Your Smile, <br />{" "}
                     <span className="" style={{ fontWeight: 450 }}>
@@ -463,7 +463,7 @@ const handleTouchEnd = () => {
                       activeIndex === 0
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[265px] lg:w-[530px] font-[300] text-[14px] font-grava lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                    } md:w-[265px] lg:w-[530px] font-[400] text-[14px] font-grava lg:text-[25px] text-left text-[#002244] leading-[20px] lg:leading-[34.1px]`}
                   >
                     Secure banking, flexible loans, and profitable
                     investments for everyone.
@@ -488,7 +488,9 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+
+                      <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+
                         {/* Open an account  */}
                         Find out more
                       </p>
@@ -501,7 +503,7 @@ const handleTouchEnd = () => {
                     <button
                       className={`${
                         activeIndex === 0 ? "" : ""
-                      } transition hover:border-b-0 cursor-pointer outline-none border border-x-0 border-t-0`}
+                      } transition hover:border-b-0 cursor-pointer outline-none border-[#002244] border border-x-0 border-t-0`}
                       type="button"
                       onClick={() =>
                         navigate("/about", {
@@ -511,8 +513,8 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="font-grava text-sm whitespace-nowrap lg:text-base text-[#002244] font-medium">
-                        Learn More
+                      <p className="font-grava text-[14px] whitespace-nowrap lg:text-[16px] text-[#002244] font-[500]">
+                        Learn more
                       </p>
                     </button>
                   </div>
@@ -597,17 +599,19 @@ const handleTouchEnd = () => {
                     style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 1 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-medium leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] text-left text-[34px] lg:text-[75px] font-[500] leading-[40px] lg:leading-[105%]`}
                   >
                     Say Hello To {" "}
-                    <span className="font-bold block ">Banking On The Go</span>
+                    <span className="block ">Banking <span className="font-bold">On The Go</span></span>
                   </p>
                   <p
                     className={`${
                       activeIndex === 1
                         ? "animate__animated animate__fadeInUp animate__delay-08s "
                         : ""
-                    } font-[300] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+
+                    } font-[400] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34.1px]`}
+
                     // animate__animated animate__fadeInUp animate__delay-08s
                   >
                     Your money, your way. Experience banking that fits your
@@ -656,7 +660,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="font-grava text-base text-[#002244] font-medium">
+                      <p className="font-grava text-base text-[#002244] font-[500]">
                         To be available soon
                         {/* Download App */}
                       </p>
@@ -737,7 +741,7 @@ const handleTouchEnd = () => {
                     style={{ fontWeight: 450 }}
                     className={`${
                       activeIndex === 2 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] font-medium text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] font-[500] text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[105%]`}
                   >
                     Smart Banking for <br/> {" "}
                     <span>Your </span><span className="font-bold ">Big Ideas.</span>
@@ -747,7 +751,9 @@ const handleTouchEnd = () => {
                       activeIndex === 2
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[300] font-grava text-[14px] lg:text-[25px]   lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+
+                    } md:w-[350px] font-[400] font-grava text-[14px] lg:text-[25px] lg:w-[623px] text-left text-[#002244] leading-[20px] lg:leading-[34.1px]`}
+
                   >
                     Instant access to the funds, insights, and support you need
                     to take your business further.
@@ -856,7 +862,7 @@ const handleTouchEnd = () => {
                   <p
                     className={`${
                       activeIndex === 3 ? "animate__animated animate__fadeInUp " : " "
-                    } font-grava text-[#002244] font-bold text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[78px]`}
+                    } font-grava text-[#002244] font-bold text-left text-[34px] lg:text-[75px] leading-[40px] lg:leading-[105%]`}
                   >
                     Your Wealth, <br />{" "}
                     <span className=" " style={{ fontWeight: 450 }}>
@@ -869,7 +875,9 @@ const handleTouchEnd = () => {
                       activeIndex === 3
                         ? "animate__animated animate__fadeInUp animate__delay-08s"
                         : ""
-                    } md:w-[350px] font-[300] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+
+                    } md:w-[350px] font-[400] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34.1px]`}
+
                   >
                     Access high-end services and exclusive investments, all in
                     one seamless experience.
@@ -963,7 +971,7 @@ const handleTouchEnd = () => {
         </LandingCarousel>
       </div>
 
-      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:pt-[0px] lg:pb-[88px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:pt-[0px] lg:pb-[60px] lg:pr-[106px] lg:pl-[91px]"> {/* lg:h-min */}
         <div data-aos="fade-right" className="hidden md:block ">
           <img
             src={Boy}
@@ -975,16 +983,16 @@ const handleTouchEnd = () => {
           data-aos="fade-left"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
-          <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center ">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium tracking-[0.25em] uppercase text-sm  text-[11px] lg:text-[14px]">
+          <div className="flex flex-col gap-2 md:gap-[21px] md:items-start items-center ">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] tracking-[0.2em] uppercase leading-[130%] text-[11px] lg:text-[14px]">
               Personal Banking
             </p>
-            <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Interest-ing savings account to make your goals achievable.
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5  lg:w-[190.63px]  h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate(
@@ -998,13 +1006,15 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
               {/* Get started */}
               Find out more
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] "
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-[500] ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33] "
             />
           </button>
         </div>
@@ -1016,21 +1026,21 @@ const handleTouchEnd = () => {
         />
       </div>
 
-      <div className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#F9FAFB] md:h-[400px] lg:h-[698px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[93px] lg:pl-[105px]"> {/* lg:h-[705px] */}
         <div
           data-aos="fade-right"
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
         >
-          <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
+          <div className="flex flex-col gap-2 md:gap-[14px] md:items-start items-center">
+            <p className="font-grava text-[#475466] lm:ml-1 leading-[130%] font-[500] uppercase tracking-[0.2em] text-[11px] lg:text-[14px]">
               CORPORATE Banking
             </p>
-            <p className="font-medium w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] w-[296px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Streamlined services for complex business needs.
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 lg:w-[190.63px] h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() =>
               navigate(
@@ -1044,13 +1054,15 @@ const handleTouchEnd = () => {
               )
             }
           >
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
               {/* Get started */}
               Find out more
             </p>
             <BsArrowRight
               size={100}
-              className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
+              className="mt-[2px] text-5xl   transition-colors duration-500 font-[500] ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
           </button>
         </div>
@@ -1063,7 +1075,7 @@ const handleTouchEnd = () => {
         </div>
       </div>
 
-      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+      <div className="bg-[#fff] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Farmer}
@@ -1072,19 +1084,19 @@ const handleTouchEnd = () => {
           />
         </div>
         <div
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px] lg:w-[571px]"
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.2em] leading-[130%] text-[11px] lg:text-[14px]">
               Business Banking
             </p>
-            <p className="font-medium w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] w-[298px] lm:w-full text-[#002244] font-grava text-center md:text-left text-[24px] tracking-[-0.01em] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Empowering small businesses with loans, tools, and expert support.
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5  lg:w-[190.63px]  h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() => {
               navigate(
@@ -1098,7 +1110,9 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
+            <p className="transition-colors duration-500 ease-in-out font-[500] text-[14px] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
               {/* Get started */}
               Find out more
             </p>
@@ -1115,21 +1129,22 @@ const handleTouchEnd = () => {
           data-aos="fade-right"
         />
       </div>
-      <div className="bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+
+      <div className="bg-[#F9FAFB] h-[649px] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[106px] lg:pl-[112px]">
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[498px]"
           data-aos="fade-right"
         >
           <div className="flex flex-col gap-2 md:gap-3 md:items-start items-center">
-            <p className="font-grava text-[#334E69] lm:ml-1 font-medium uppercase tracking-[0.25em] text-sm text-[11px] lg:text-[14px]">
+            <p className="font-grava text-[#334E69] lm:ml-1 font-[500] uppercase tracking-[0.2em] leading-[130%] text-[11px] lg:text-[14px]">
               PRIVATE Banking
             </p>
-            <p className="font-medium text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
               Exclusive wealth management for discerning clients.
             </p>
           </div>
           <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className="transition-all duration-500 ease-in-out bg-[#FFCC33] lg:w-[190.63px] px-5 h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
             type="button"
             onClick={() => {
               navigate(
@@ -1143,7 +1158,9 @@ const handleTouchEnd = () => {
               );
             }}
           >
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+
               {/* Get started */}
               Find out more
             </p>
@@ -1174,7 +1191,7 @@ const handleTouchEnd = () => {
           <p className="text-[#002244] font-[450] text-[24px] font-grava md:text-5xl lg:text-[48px] leading-[30px] md:leading-[40px] lg:leading-[60px] text-center">
            Your Money, <span className="block text-center">Everywhere You Go</span> 
           </p>
-          <p className="text-[14px] lg:text-xl text-[#334E69] lg:w-[456px] font-grava font-[300] leading-[20px] lg:leading-[27px] text-center">
+          <p className="text-[14px] lg:text-[18px] text-[#334E69] lg:w-[456px] font-grava font-[400] leading-[20px] lg:leading-[27px] text-center">
             Tatum cards keep up the pace, so you're always connected to your finances .
           </p>
         </div>
@@ -1303,9 +1320,11 @@ const handleTouchEnd = () => {
         </div>
 
         <button
-          className="px-5 h-[44px] lg:h-[64px] flex items-center cursor-default justify-center opacity-40 p-4 border-[1.5px] border-[#002244] rounded-tr-lg rounded-bl-lg"
+          className="px-5 h-[44px] lg:h-[64px] lg:mt-8 flex items-center cursor-default justify-center opacity-50 p-4 border-[1.5px] border-[#002244] rounded-tl-lg rounded-br-lg"
         >
-          <p className=" text-[#002244] font-[450] font-grava text-[14px] lg:text-[18px]">
+
+          <p className=" text-[#002244] font-[500] font-grava text-[14px] lg:text-[16px]">
+
             {/* Choose your Tatum Card */}
             To be available soon
           </p>
@@ -1314,10 +1333,10 @@ const handleTouchEnd = () => {
 
       {/* <div className="bg-[#F9FAFB] flex items-center flex-col w-full px-5 py-[56px] gap-[40px] lg:h-[877px] lg:pt-[72px] lg:pb-[112px] lg:px-[56px]">
         <div className="flex flex-col items-center w-full lg:w-[653px] lg:h-[99px] gap-3">
-          <p className="font-grava text-[#334E69] font-medium uppercase tracking-[0.25em] text-sm">
+          <p className="font-grava text-[#334E69] font-[500] uppercase tracking-[0.2em] text-sm">
             Loan Calculator
           </p>
-          <p className="font-grava text-[#002244] text-[24px] lg:text-[48px] whitespace-nowrap font-medium ">
+          <p className="font-grava text-[#002244] text-[24px] lg:text-[48px] whitespace-nowrap font-[500] ">
             Instant loan, instant benefits
           </p>
         </div>
@@ -1325,17 +1344,17 @@ const handleTouchEnd = () => {
           <div className="bg-[#FFFFFF] rounded-2xl flex flex-col py-[32px] px-5 gap-[40px] mx-auto w-full  lg:w-[728px]">
             <div className="flex items-center gap-3">
               <div className="transition ease-in-out delay-150 duration-500 w-[105px] md:w-[113px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center rounded-tl-lg rounded-br-lg bg-[#FFCC33]">
-                <p className="text-[#002244] font-medium font-grava text-sm md:text-base">
+                <p className="text-[#002244] font-[500] font-grava text-sm md:text-base">
                   Personal
                 </p>
               </div>
               <div className="transition ease-in-out delay-150 duration-500 w-[88px] md:w-[93px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border-[1.5px] border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
-                <p className="text-[#002244] font-medium font-grava text-sm md:text-base">
+                <p className="text-[#002244] font-[500] font-grava text-sm md:text-base">
                   Home
                 </p>
               </div>
               <div className="transition ease-in-out delay-150 duration-500 w-[75px] cursor-pointer h-[48px] p-1 flex flex-col items-center justify-center bg-transparent border border-[#98A2B3] hover:border-[#FFCC33] rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33]">
-                <p className="text-[#002244] font-medium font-grava text-sm md:text-base">
+                <p className="text-[#002244] font-[500] font-grava text-sm md:text-base">
                   Car
                 </p>
               </div>
@@ -1477,7 +1496,7 @@ const handleTouchEnd = () => {
                     );
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out font-grava text-[#002244] text-[18px] font-medium">
+                  <p className="transition-colors duration-500 ease-in-out font-grava text-[#002244] text-[18px] font-[500]">
                     Apply now
                   </p>
                 </button>
@@ -1501,7 +1520,7 @@ const handleTouchEnd = () => {
         data-aos="fade-up"
       >
         <div className="flex flex-col items-center gap-3 w-[300px] lg:w-[434px]">
-          <p className="font-medium text-[#002244] font-grava text-[24px] lg:text-[48px] ">
+          <p className="font-[500] text-[#002244] font-grava text-[24px] lg:text-[48px] ">
             Tatum Insights.
           </p>
           <p className="text-sm lg:text-[18px] text-center text-[#334E69] font-grava leading-[20px] lg:leading-[27px]">
@@ -1518,11 +1537,11 @@ const handleTouchEnd = () => {
                   Press release
                 </p>
               </div>
-              <p className="font-medium text-[#909CAB] font-grava">
+              <p className="font-[500] text-[#909CAB] font-grava">
                 December 30, 2024
               </p>
             </div>
-            <p className="font-medium text-[#001F3E] text-xl font-grava">
+            <p className="font-[500] text-[#001F3E] text-xl font-grava">
               Tatum Bank Launches in February 2024, Redefining Digital Banking
             </p>
             <p className="text-sm lg:text-base text-[#667085] font-grava leading-[24px]">
@@ -1552,11 +1571,11 @@ const handleTouchEnd = () => {
               <div className="bg-[#F2F4F7] w-[54px] rounded-lg p-2">
                 <p className="font-grava text-[#002244] text-sm">Blog</p>
               </div>
-              <p className="font-medium text-[#909CAB] font-grava">
+              <p className="font-[500] text-[#909CAB] font-grava">
                 December 30, 2024
               </p>
             </div>
-            <p className="font-medium text-[#001F3E] text-xl font-grava">
+            <p className="font-[500] text-[#001F3E] text-xl font-grava">
               Tips for Growing Your Business in a Digital World
             </p>
             <p className="text-sm lg:text-base text-[#667085] font-grava leading-[24px]">
@@ -1585,11 +1604,11 @@ const handleTouchEnd = () => {
               <div className="bg-[#F2F4F7] w-[66px] rounded-lg p-2">
                 <p className="font-grava text-[#002244] text-sm">Media</p>
               </div>
-              <p className="font-medium text-[#909CAB] font-grava">
+              <p className="font-[500] text-[#909CAB] font-grava">
                 December 30, 2024
               </p>
             </div>
-            <p className="font-medium text-[#001F3E] text-xl font-grava">
+            <p className="font-[500] text-[#001F3E] text-xl font-grava">
               Tatum Bank celebrates grand opening with ribbon-cutting ceremony
             </p>
             <p className="text-sm lg:text-base text-[#667085] font-grava leading-[24px]">
@@ -1629,17 +1648,17 @@ const handleTouchEnd = () => {
             );
           }}
         >
-          <p className="transition-colors duration-500 ease-in-out font-medium text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
+          <p className="transition-colors duration-500 ease-in-out font-[500] text-base font-grava text-[#090540] group-hover:text-[#FFCC33]">
             Explore our resource centre
           </p>
         </button>
       </div> */}
 
       <div
-        className="bg-[#F9FAFB] flex flex-col pt-[56px] pb-[49.5px] lg:py-[80px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[88px]"
+        className="bg-[#F9FAFB] flex flex-col pt-[56px]  pb-[49.5px] lg:pt-[75px] lg:pb-[75px] gap-[49.5px] lg:gap-[32px] items-center px-5 lg:px-[56px]"
         data-aos="fade-up"
       >
-        <p className="font-medium text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]">
+        <p className="font-[500] text-[24px] lg:text-[48px] font-grava w-[300px] lg:w-full text-center text-[#002244]">
           Find what you need instantly.
         </p>
         {/* Mobile Card View */}
@@ -1670,14 +1689,16 @@ const handleTouchEnd = () => {
               </p>
             </div>
             <button
-              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] opacity-40 border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] opacity-20 border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
             >
               {/* <span
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span> */}
-              <p className="relative z-10 font-[300]  lg:text-base font-grava text-[#002244]">
+
+              <p className="relative z-10 font-[400]  lg:text-[16px] font-grava text-[#002244]">
+
                 {/* Learn more */}
                 To be available soon
               </p>
@@ -1689,8 +1710,10 @@ const handleTouchEnd = () => {
               <p className="text-lg font-[450] font-grava text-[#002244]">
                 Client Centres
               </p>
-              <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
-                Simply enter your location and find our closest client centre on the
+
+              <p className="text-[14px] lg:text-base font-grava font-[350] text-[#002244]">
+                Simply enter your location and find our closest Client Centres on the
+
                 map.
               </p>
             </div>
@@ -1720,7 +1743,7 @@ const handleTouchEnd = () => {
               </p>
             </div>
             <button
-              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] opacity-40 border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] lg:h-[54px] opacity-20 border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
             >
               {/* <span
@@ -1746,7 +1769,7 @@ const handleTouchEnd = () => {
               </p>
             </div>
             <button
-              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] opacity-40 lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[356px] opacity-20 lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
             >
               {/* <span
@@ -1810,21 +1833,24 @@ const handleTouchEnd = () => {
             </button>
           </SwiperSlide>
         </Swiper>
+
         {/* Tablets and Desktop Card Layout*/}
         <div className="hidden  w-full overflow-x-auto space-x-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Card} alt="Card" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 Debit/Credit Cards
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+
                 Enjoy a card that never flops. Our Debit and credit cards are
                 reliable and secure.
               </p>
             </div>
             <button
-              className="absolute cursor-default bottom-5 w-[80%] h-[44px] lg:w-[88%] opacity-40 lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute cursor-default bottom-5 w-[80%] h-[44px] lg:w-[88%] opacity-20 lg:h-[54px] border border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               // onClick={() => {
               //   navigate("/personal", {
@@ -1847,11 +1873,13 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] h-[332px] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto ">
             <img src={ATM} alt="ATM" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 Client Centres
               </p>
-              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
-                Simply enter your location and find our closest client centre on the
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+                Simply enter your location and find our closest Client Centres on the
+
                 map.
               </p>
             </div>
@@ -1874,7 +1902,9 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[450] lg:text-base font-grava text-[#002244]">
+
+              <p className="relative z-10 font-[500] lg:text-base leading-6 font-grava text-[#002244]">
+
                 Check the nearest center near you
               </p>
             </button>
@@ -1882,17 +1912,19 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col p-[26px] bg-[#fff]  h-[332px] lg:h-[356px] relative rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Online} alt="Online" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 Online Banking
               </p>
-              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+
                 Manage your accounts, pay bills, transfer funds, and track
                 transactions anytime, anywhere. Our user-friendly mobile app
                 serves you no matter where life takes you.
               </p>
             </div>
             <button
-              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border opacity-40 border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute bottom-5 cursor-default w-[80%] h-[44px] lg:w-[88%] lg:h-[54px] border opacity-20 border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
             >
               {/* <span
@@ -1908,17 +1940,19 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={USSD} alt="USSD" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 USSD Banking
               </p>
-              <p className="text-[14px] lg:text-base font-[300] font-grava text-[#002244]">
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+
                 No internet? No problem. Access your account, check balances, 
                 and perform essential transactions using our simple *365#. 
                 It is quick, secure, and reliable.
               </p>
             </div>
             <button
-              className="absolute bottom-5 w-[80%] cursor-default lg:w-[88%] h-[44px] lg:h-[54px] border opacity-40 border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
+              className="absolute bottom-5 w-[80%] cursor-default lg:w-[88%] h-[44px] lg:h-[54px] border opacity-20 border-[#002244] rounded-tl-lg rounded-br-lg flex items-center justify-center overflow-hidden group"
               type="button"
               // onClick={() => {
               //   navigate(
@@ -1945,10 +1979,12 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] md:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={Loan} alt="Loan" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 Help & Support
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+
                 Access our comprehensive knowledge base for instant answers. 
                 Find guides, tutorials, and FAQs to help you navigate our platform with ease.
               </p>
@@ -1961,7 +1997,9 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[300]  lg:text-[18px] font-grava text-[#002244]">
+
+              <p className="relative z-10 font-[500] lg:text-base leading-6 font-grava text-[#002244]">
+
                 Visit Help Centre
               </p>
             </button>
@@ -1969,10 +2007,12 @@ const handleTouchEnd = () => {
           <div className="flex-shrink-0 flex flex-col relative p-[26px] bg-[#fff] lg:h-[356px] rounded-[24px] gap-[40px] w-[85%] sm:w-[80%] md:w-auto">
             <img src={FX} alt="FX" className="w-[43px] h-[35px]" />
             <div className="flex flex-col gap-3">
-              <p className="text-lg font-[450] font-grava text-[#002244]">
+
+              <p className="text-[20px] tracking-[0.01em] leading-[30px] font-[500] font-grava text-[#002244]">
                 Contact Us
               </p>
-              <p className="text-[14px] lg:text-base font-grava font-[300] text-[#002244]">
+              <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
+
                 Get in touch with our dedicated support team available 24/7. 
                 We're here to help through chat, call, or email for all your questions and concerns.
               </p>
@@ -1985,7 +2025,9 @@ const handleTouchEnd = () => {
                 className="absolute inset-0 bg-[#FFCC33] transition-all duration-500 ease-in-out scale-x-0 origin-left group-hover:scale-x-100"
                 aria-hidden="true"
               ></span>
-              <p className="relative z-10 font-[300]  lg:text-[18px] font-grava text-[#002244]">
+
+              <p className="relative z-10 font-[500] lg:text-base leading-6 font-grava text-[#002244]">
+
                 Reach Out
               </p>
             </button>

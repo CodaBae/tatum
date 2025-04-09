@@ -191,13 +191,15 @@ const AccountPersonal = () => {
                 type='button'
                 // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
             >
-                <p className='font-[300] text-[#B0B0B0] lg:text-[18px] font-grava '>Account opening available soon</p>
+
+                <p className='font-[500] text-[#B0B0B0] lg:text-[18px] leading-[27px] font-grava '>Account opening available soon</p>
+
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl text-[#B0B0B0] font-medium w-5 h-5 ' />
             </button>
 
         </section>
 
-        <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
+        <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:h-min lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
                 <p className='text-[#002244] font-[300] text-[11px] leading-5 tracking-[0.2%] font-grava lg:text-[14px]'>WHY CHOOSE US</p>
                 <p className='font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
@@ -205,7 +207,9 @@ const AccountPersonal = () => {
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
                     <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base font-[450] lm:text-[20px] leading-[25px] tracking-[0.2%]'>Secure & Reliable</p>
+
+                    <p className='text-[#546B82] font-grava text-base font-[500] lm:text-[20px] leading-[25px] tracking-[-0.01em]'>Secure & Reliable</p>
+
                     {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
                     </div>
                     {openTabOne && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Your data is protected with industry-leading encryption.</p>}
