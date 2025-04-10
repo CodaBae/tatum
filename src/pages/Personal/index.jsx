@@ -751,7 +751,7 @@ const Personal = () => {
                   )
                 }
               >
-                <p className="transition-colors duration-500 ease-in-out font-[300] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                <p className="transition-colors duration-500 ease-in-out font-[500] text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                   {/* Open an account */}
                   Contact us
                 </p>
