@@ -12,7 +12,9 @@ import Golfer from "../../assets/png/golfer.png";
 import Dining from "../../assets/png/dining.png";
 import Airplane from "../../assets/png/airplane.png";
 import Cards from "../../assets/png/atm_cards.png";
+
 import HeroSection from "../../components/HeroSection";
+import Buttons from "../../components/Buttons";
 
 const Private = () => {
   const [openTabOne, setOpenTabOne] = useState(true);
@@ -30,6 +32,11 @@ const Private = () => {
   const investRef = useRef(null);
   const cardRef = useRef(null);
   const faqRef = useRef(null);
+  const contentRef1 = useRef(null)
+  const contentRef2 = useRef(null)
+  const contentRef3 = useRef(null)
+
+
   const { state } = useLocation();
 
   const handleTabOne = () => {
@@ -170,7 +177,7 @@ const Private = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"} 
             title={`Exclusive. Personalized. <br/> <span class="font-bold ">Exceptional </span>`}
-            content={"With privileged access to premium banking services, bespoke investment strategies, and the prestige of Tatum Private Banking, we keep you smiling—every step of the way."} 
+            content={`<p class="tracking-[0.01em] whitespace-nowrap">With privileged access to premium banking services, bespoke investment <span class="block"> strategies, and the prestige of Tatum Private Banking, we keep you </span> smiling—every step of the way.</p>`} 
             link={"/private"} 
             sectionName={"wealth"} 
             mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
@@ -184,7 +191,7 @@ const Private = () => {
 
       <div
         ref={wealthRef}
-        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:pt-[110px] lg:pb-[88px]  lg:pr-[110px] lg:pl-[86px]"
+        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5  lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
       >
         <div data-aos="fade-right" className="hidden md:block">
           <img
@@ -194,19 +201,19 @@ const Private = () => {
           />
         </div>
         <div
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
+          className="flex flex-col items-center md:items-start gap-[48px] w-full md:w-[350px] lm:w-[565px]"
           data-aos="fade-left"
         >
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-            <p className="font-grava text-[#334E69] font-[450] tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
+            <p className="font-grava text-[#334E69] font-[500] leading-[130%] tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] ">
               Wealth Management Advisory
             </p>
             <div className="flex flex-col w-full gap-[18px]">
-              <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+              <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Your Wealth, Our{" "}
                 <span className="block md:inline-block">Expertise.</span>
               </p>
-              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 At Tatum Bank, we go beyond banking—we curate personalized
                 wealth growth strategies that align with your financial
                 ambitions. Whether you seek investment diversification, estate
@@ -226,7 +233,14 @@ const Private = () => {
               Our Expertise Covers:
             </p>
 
-            <button
+            <Buttons 
+              link="/private/account"
+              sect="account"
+              text="Find out more"
+              className="lm:hidden flex"
+            />
+
+            {/* <button
               className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] px-5 lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
               onClick={() => {
@@ -240,24 +254,24 @@ const Private = () => {
               }}
             >
               <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
-                {/* Get started */}
+             
                 Find out more
               </p>
               <BsArrowRight
                 size={100}
                 className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
               />
-            </button>
+            </button> */}
 
             <div className="flex flex-col gap-[20px] mt-6">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Portfolio Management{" "}
-                  <span className="font-[300]  ">
+                  <span className="font-[400]  ">
                     – Tailored investment strategies for sustainable growth.
                   </span>
                 </p>
@@ -265,11 +279,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Estate & Legacy Planning{" "}
-                  <span className="font-[300]">
+                  <span className="font-[400]">
                     – Secure your legacy with expert guidance.
                   </span>
                 </p>
@@ -277,11 +291,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Real Estate Advisory{" "}
-                  <span className="font-[300] ">
+                  <span className="font-[400] ">
                     – Strategic insights for profitable investments.
                   </span>
                 </p>
@@ -289,11 +303,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
                   style={{ lineHeight: "27px" }}
                 >
                   Alternative Investments{" "}
-                  <span className="font-[300]">
+                  <span className="font-[400]">
                     – Access exclusive opportunities in private equity, hedge
                     funds, and more.
                   </span>
@@ -301,7 +315,16 @@ const Private = () => {
               </div>
             </div>
           </div>
-          <button
+
+          <Buttons 
+            link="/private/account"
+            sect="account"
+            text="Find out more"
+            className="hidden lm:flex"
+          />
+
+
+          {/* <button
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
             type="button"
             onClick={() => {
@@ -315,14 +338,15 @@ const Private = () => {
             }}
           >
             <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
-              {/* Get started */}
+       
               Find out more
             </p>
             <BsArrowRight
               size={100}
               className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
-          </button>
+          </button> */}
+
         </div>
         <img
           src={Dining}
@@ -334,7 +358,7 @@ const Private = () => {
 
       <div
         ref={investRef}
-        className="bg-[#F9FAFB] md:h-[400px] lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]"
+        className="bg-[#F9FAFB] md:h-[400px] lg:h-min flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5  lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
       >
         <div
           className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
@@ -351,10 +375,10 @@ const Private = () => {
                 </p>
               </div>
             </div>
-            <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]">
+            <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
               More Than Banking. A Lifestyle.
             </p>
-            <p className="text-[14px] lm:text-[18px] font-grava font-[300] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] font-grava font-[400] lm:mt-[2px] text-[#002244] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Our Private Banking clients enjoy a world of privileges, from
               preferential rates to VIP lifestyle benefits. Stay tuned for the
               launch of our exclusive suite of bespoke banking experiences,
@@ -362,10 +386,10 @@ const Private = () => {
             </p>
           </div>
           <button
-            className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+            className="lm:mt-[28px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
           >
-            <p className=" font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className=" font-[500]  lg:text-[18px] lg:leading-[27px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
@@ -385,7 +409,7 @@ const Private = () => {
 
       <div
         ref={cardRef}
-        className="bg-[#fff] md:h-auto lg:h-[873px] flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]"
+        className="bg-[#fff] md:h-auto lg:h-min flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[101px] lg:pl-[110px]"
       >
         <div data-aos="fade-right" className="hidden md:block">
           <img
@@ -400,14 +424,14 @@ const Private = () => {
         >
           <div className="flex gap-5 lm:gap-[20px] flex-col">
             <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
-              <p className="font-grava text-[#334E69] font-[450] tracking-[0.25em] uppercase text-[14px]  lg:text-[14px] ">
+              <p className="font-grava text-[#334E69] font-[500] tracking-[0.25em] uppercase text-[14px] ">
                 Tatum Black Card
               </p>
               <div className="flex flex-col w-full gap-[18px]">
-                <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
+                <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                   The Ultimate Symbol of Prestige
                 </p>
-                <p className="text-[14px] lm:text-[18px] font-grava text-[#002244] font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                <p className="text-[14px] lm:text-[18px] font-grava text-[#002244] font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                   Designed for the elite few, the Tatum Black Card is more than
                   just a payment solution—it’s a statement of status and access
                   to unparalleled privileges worldwide.
@@ -429,15 +453,15 @@ const Private = () => {
               />
             </button>
 
-            <div className="flex flex-col lm:flex-row items-center gap-2">
+            <div className="flex flex-col lm:flex-row items-center lg:mt-3 gap-2">
               <p
-                className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[0.01em]"
-                style={{ lineHeight: "27px" }}
+                className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]"
+                style={{ lineHeight: "25px" }}
               >
                 Exclusive Benefits:
               </p>
               <div className="w-[121px] h-[29px] bg-[#FFEFC0] rounded-[16px] flex items-center justify-center">
-                <p className="uppercase text-[#546B82] text-[12px] tracking-wide font-grava font-semibold">
+                <p className="uppercase text-[#546B82] text-[10px] leading-[100%] tracking-wide font-grava font-semibold">
                   coming soon
                 </p>
               </div>
@@ -447,11 +471,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[27px] tracking-[0.01em]"
                   style={{ lineHeight: "27px" }}
                 >
                   Global Concierge Services
-                  <span className="font-[300] ">
+                  <span className="font-[400] ">
                     – 24/7 personalized assistance, anywhere in the world.
                   </span>
                 </p>
@@ -459,11 +483,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[27px] tracking-[0.01em]"
                   style={{ lineHeight: "27px" }}
                 >
                   Luxury Travel Perks{" "}
-                  <span className="font-[300] ">
+                  <span className="font-[400] ">
                     – First-class upgrades, VIP airport lounges, and premium
                     hotel benefits.
                   </span>
@@ -472,11 +496,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[27px] tracking-[0.01em]"
                   style={{ lineHeight: "27px" }}
                 >
                   High Spending Limits{" "}
-                  <span className="font-[300] ">
+                  <span className="font-[400] ">
                     – Unmatched flexibility for high-value transactions.
                   </span>
                 </p>
@@ -484,11 +508,11 @@ const Private = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
                 <img src={Check} alt="Check" className="" />
                 <p
-                  className="font-grava font-[450] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[1.4%]"
+                  className="font-grava font-[500] text-[#002244] text-center md:text-left text-base lm:text-[18px] leading-[27px] tracking-[0.01em]"
                   style={{ lineHeight: "27px" }}
                 >
                   Exclusive Event Access{" "}
-                  <span className="font-[300]">
+                  <span className="font-[400]">
                     – Invitations to premium experiences, from fashion shows to
                     private auctions..
                   </span>
@@ -498,10 +522,10 @@ const Private = () => {
           </div>
 
           <button
-            className=" bg-[#EDEDED] mt-[28px] cursor-default hidden w-[272px] lg:w-[318px] h-[54px] rounded-tl-lg rounded-br-lg gap-2 md:flex items-center justify-center"
+            className="bg-[#EDEDED] mt-[28px] cursor-default hidden w-[272px] lg:w-[242px] h-[57px] rounded-tl-lg rounded-br-lg gap-2 md:flex items-center justify-center"
             type="button"
           >
-            <p className="font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className="font-[500]  lg:text-[18px] font-grava text-[#B0B0B0]">
               {/* Apply for the Tatum Black Card */}
               To be available soon
             </p>
@@ -521,10 +545,10 @@ const Private = () => {
 
       <div
         ref={faqRef}
-        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]"
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:pt-[120px] lm:pb-[88px] lm:px-[59px] xl:px-[100px]"
       >
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#002244] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#002244] font-[400] text-[14px] leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -532,7 +556,45 @@ const Private = () => {
           </p>
         </div>
         <div className="flex flex-col w-full lm:w-[710px]">
+
           <div
+              className={`${openTabTwo ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0`}
+              onClick={handleTabOne}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Exclusive Access
+                </p>
+                {openTabOne ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef1}
+                style={{
+                  maxHeight: openTabOne
+                    ? `${contentRef1.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabTwo ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabOne ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Bespoke financial solutions tailored for high-net worth individuals
+                </p>
+              </div>
+            </div>
+
+      
+
+
+          {/* <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
             onClick={handleTabOne}
           >
@@ -551,47 +613,76 @@ const Private = () => {
                 Bespoke financial solutions tailored for high-net worth individuals
               </p>
             )}
-          </div>
+          </div> */}
+
           <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabTwo}
-          >
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
-                Unparalleled Service
-              </p>
-              {openTabTwo ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+              className={`${openTabTwo ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabTwo}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Unparalleled Service
+                </p>
+                {openTabTwo ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef2}
+                style={{
+                  maxHeight: openTabTwo
+                    ? `${contentRef2.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabTwo ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabTwo ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                      Dedicated relationship managers who understand your unique needs
+                </p>
+              </div>
             </div>
-            {openTabTwo && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Dedicated relationship managers who understand your unique needs
-              </p>
-            )}
-          </div>
+
           <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabThree}
-          >
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              className={`${openTabThree ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabThree}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
                 Discreet & Secure
-              </p>
-              {openTabThree ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+                </p>
+                {openTabThree ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef3}
+                style={{
+                  maxHeight: openTabThree
+                    ? `${contentRef3.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabThree ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabThree ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Confidentiality and personalized attention at every level
+                </p>
+              </div>
             </div>
-            {openTabThree && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Confidentiality and personalized attention at every level
-              </p>
-            )}
-          </div>
+
         </div>
       </div>
     </div>

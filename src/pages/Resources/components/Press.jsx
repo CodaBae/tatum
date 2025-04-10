@@ -13,7 +13,7 @@ const Press = () => {
     
   return (
     <div className='w-full'>
-        <section  className='bg-[#fff] flex flex-col md:flex-row items-center gap-[40px] md:gap-0  pt-6 px-5 lg:pt-[48px] lg:pb-0 '>
+        <section  className='bg-[#fff] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 lg:h-[585px] pt-6 px-5 lg:py-[36px]'>
                 <div data-aos="fade-right"  >
                     <img 
                         src={isMobile ? "https://res.cloudinary.com/code-idea/image/upload/v1739786787/meeting_mobile_f8sc3t.png" : `${Meeting}`} 
@@ -22,9 +22,9 @@ const Press = () => {
                     />
                 </div>
                 <div className='flex flex-col items-start gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
-                    <div className="flex flex-col gap-2 md:gap-3 items-start">
+                    <div className="flex flex-col gap-2 md:gap-[16px] items-start">
                         <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Content Unavailable!</p>
-                        <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-left tracking-[0.2%]">
+                        <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-left tracking-[0.2%]">
                             We're currently updating our resources to serve you better. 
                             This doesn't mean we're not working – we're behind the scenes, 
                             crafting exceptional content that will be worth the wait.
@@ -43,8 +43,8 @@ const Press = () => {
                         );
                     }}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
-                        <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
+                        <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] lg:leading-[27px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
+                        <BsArrowRight size={100}   className='mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                     </button>
                 </div>
                 {/* <img 

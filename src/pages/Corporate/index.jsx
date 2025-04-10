@@ -16,7 +16,9 @@ import NDIC from "../../assets/png/ndic.png";
 import Check from "../../assets/svg/check.svg";
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
+
 import HeroSection from "../../components/HeroSection";
+import Buttons from "../../components/Buttons";
 
 const Corporate = () => {
   const [openTabOne, setOpenTabOne] = useState(true)
@@ -34,6 +36,10 @@ const Corporate = () => {
   const lendingRef = useRef(null);
   const strategicRef = useRef(null);
   const faqRef = useRef(null);
+  const contentRef1 = useRef(null);
+  const contentRef2 = useRef(null);
+  const contentRef3 = useRef(null);
+  const contentRef4 = useRef(null);
 
   const { state } = useLocation();
 
@@ -193,7 +199,7 @@ const Corporate = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"} 
             title={`Powering Your <br /> <span class="font-bold">Business Growth</span>`}
-            content={"At Tatum Bank, we understand that businesses thrive when they have the right financial partner—one that offers tailored solutions, expert insights, and seamless banking services to drive growth."} 
+            content={`<p class="leading-[36.1px] whitespace-nowrap">At Tatum Bank, we understand that businesses thrive when they <span class="block">have the right financial partner—one that offers tailored solutions,</span> expert insights, and seamless banking services to drive growth.</p>`} 
             link={"/corporate"} 
             sectionName={"corp"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 
@@ -215,21 +221,28 @@ const Corporate = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="flex flex-col items-center md:items-start gap-5 w-full md:w-[350px] lm:w-[565px]"
+          className="flex flex-col items-center md:items-start gap-5 lg:gap-[48px] w-full md:w-[350px] lm:w-[565px]"
         >
-          <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
+          <div className="flex flex-col gap-2 md:gap-4  md:items-start items-center">
             <div className="flex flex-col w-full gap-[18px]">
               <p className="font-[450] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
                 Corporate Banking
               </p>
-              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 Whether you're looking to optimize cash flow, expand your
                 operations, or navigate global trade, we are here to support
                 your ambitions with expertise, innovation, and reliability.
               </p>
             </div>
 
-            <button
+            <Buttons 
+              text="Find out more"
+              link="/corporate/account"
+              sect="account"
+              className="lm:hidden"
+            />
+
+            {/* <button
               className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] px-5 lm:hidden h-[54px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
               onClick={() =>
@@ -244,9 +257,17 @@ const Corporate = () => {
                 size={100}
                 className="mt-[2px] text-5xl transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
               />
-            </button>
+            </button> */}
           </div>
-          <button
+
+          <Buttons 
+              text="Find out more"
+              link="/corporate/account"
+              sect="account"
+              className="hidden lm:flex"
+            />
+
+          {/* <button
             className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[28px] hidden lm:px-5 h-[59px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] lm:flex items-center justify-center"
             type="button"
             onClick={() =>
@@ -261,7 +282,7 @@ const Corporate = () => {
               size={100}
               className="mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]"
             />
-          </button>
+          </button> */}
         </div>
         <img
           src={Corp}
@@ -273,15 +294,15 @@ const Corporate = () => {
 
       <div
         ref={investmentRef}
-        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]">
         <div
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]"
           data-aos="fade-right">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Investment Services
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Secure and grow your capital with our diverse investment offerings
               tailored to corporate clients. Our expert advisors provide
               strategic insights to help you maximize returns while minimizing
@@ -291,19 +312,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Fixed Income & Treasury Bills
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Asset & Wealth Management
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Structured Investment Portfolios
               </p>
             </div>
@@ -316,7 +337,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] leading-[27px] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -336,7 +357,7 @@ const Corporate = () => {
 
       <div
         ref={treasuryRef}
-        className="bg-[#F9FAFB] md:h-auto  flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#F9FAFB] md:h-auto  flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Treasury}
@@ -351,7 +372,7 @@ const Corporate = () => {
             <p className="font-[450] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Treasury Management
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Stay ahead with efficient liquidity management, risk mitigation,
               and cash flow optimization designed for today’s dynamic business
               environment. Our treasury solutions ensure that your capital works
@@ -386,7 +407,7 @@ const Corporate = () => {
                 state: { section: "contact" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Talk to an advisor
             </p>
             <BsArrowRight
@@ -405,15 +426,15 @@ const Corporate = () => {
 
       <div
         ref={tradeRef}
-        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]">
         <div
           data-aos="fade-right"
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]">
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <p className="font-[450] text-[#002244] font-grava text-center lm:-ml-1 md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Trade Finance
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Expand your business with seamless international and domestic
               trade solutions. From import/export financing to letters of
               credit, we ensure your transactions are secure and hassle-free.
@@ -422,19 +443,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Letters of Credit & Guarantees
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Import & Export Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[450] text-[#002244] text-center lm:mt-1 lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Supply Chain Finance
               </p>
             </div>
@@ -447,7 +468,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Start trading smarter
             </p>
             <BsArrowRight
@@ -467,7 +488,7 @@ const Corporate = () => {
 
       <div
         ref={lendingRef}
-        className="bg-[#F9FAFB] md:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#F9FAFB] md:h-auto flex flex-col md:flex-row items-center gap-[40px] md:gap-[93px] md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]">
         <div data-aos="fade-right" className="hidden md:block">
           <img
             src={Lending}
@@ -482,29 +503,29 @@ const Corporate = () => {
             <p className="font-[450] text-[#002244] font-grava lm:-ml-1 text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Corporate Lending
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               Fuel your growth with customized financing solutions that align
               with your business goals. Whether you need working capital, asset
               financing, or expansion funding, we offer flexible loan structures
               to keep your business moving forward.
             </p>
           </div>
-          <div className="flex flex-col gap-[32px] mt-6">
+          <div className="flex flex-col gap-[32px] mt-3">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Term Loans & Working Capital Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Asset & Equipment Financing
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Project & Infrastructure Financing
               </p>
             </div>
@@ -513,7 +534,7 @@ const Corporate = () => {
             className="lm:mt-[32px] cursor-default bg-[#EDEDED] px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
             type="button"
           >
-            <p className=" font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]">
+            <p className=" font-[500] lg:leading-[27px] lg:text-[18px] font-grava text-[#B0B0B0]">
               To be available soon
             </p>
             <BsArrowRight
@@ -532,15 +553,15 @@ const Corporate = () => {
 
       <div
         ref={strategicRef}
-        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[88px] lg:pr-[110px] lg:pl-[86px]">
+        className="bg-[#FFF] md:h-auto lg:h-[705px] flex flex-col md:flex-row items-center gap-[40px] md:gap-0 md:justify-between py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]">
         <div
-          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[514px]"
+          className="flex flex-col items-center md:items-start gap-5 w-[250px] md:w-[350px] lm:w-[565px]"
           data-aos="fade-right">
           <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
             <p className="font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[60px]">
               Strategic Partnerships
             </p>
-            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
+            <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
               We believe in the power of collaborations that drive innovation
               and mutual growth. Our partnership solutions provide enterprises
               with access to exclusive financial products, industry insights,
@@ -550,19 +571,19 @@ const Corporate = () => {
           <div className="flex flex-col gap-[32px] mt-6">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Co-Branded Financial Solutions
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[0.01em]">
                 Technology & Fintech Collaborations
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3">
               <img src={Check} alt="Check" className="" />
-              <p className="font-grava font-[450] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
+              <p className="font-grava font-[500] text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[20px] leading-[25px] tracking-[1.4%]">
                 Industry-Specific Advisory
               </p>
             </div>
@@ -575,7 +596,7 @@ const Corporate = () => {
                 state: { section: "account" },
               },window.scrollTo(0, 0))
             }>
-            <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px]] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+            <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px]] font-grava text-[#002244] group-hover:text-[#FFCC33]">
               Partner with us
             </p>
             <BsArrowRight
@@ -595,9 +616,9 @@ const Corporate = () => {
 
       <div
         ref={faqRef}
-        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
+        className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start justify-between lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px] xl:px-[100px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300] text-sm leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[400] text-[14px] leading-5 tracking-[0.2%] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -605,97 +626,158 @@ const Corporate = () => {
           </p>
         </div>
         <div className="flex flex-col w-full lm:w-[710px]">
+
           <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
-            onClick={handleTabOne}>
+            className={`${openTabOne ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0`}
+            onClick={handleTabOne}
+          >
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
+              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
                 Expert Financial Advisory
               </p>
               {openTabOne ? (
-                <img src={Minus} alt="Minus" className="" />
+                <img src={Minus} alt="Minus" />
               ) : (
-                <img src={Plus} alt="Plus" className="" />
+                <img src={Plus} alt="Plus" />
               )}
             </div>
-            {openTabOne && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                We provide industry-specific insights to help businesses make informed decisions.
-              </p>
-            )}
-          </div>
+
+              <div
+                ref={contentRef1}
+                style={{
+                  maxHeight: openTabOne
+                    ? `${contentRef1.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabOne ? "" : " mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabOne ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  We provide industry-specific insights to help businesses make informed decisions.
+                </p>
+              </div>
+            </div>
+
           <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabTwo}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
-                Tailored Solutions
-              </p>
-              {openTabTwo ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+            className={`${openTabTwo ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+            onClick={handleTabTwo}
+          >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Tailored Solutions
+                </p>
+                {openTabTwo ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef2}
+                style={{
+                  maxHeight: openTabTwo
+                    ? `${contentRef2.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabTwo ? "" : "mb-5"}  overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabTwo ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Our products are designed with your business needs in mind.
+                </p>
+              </div>
             </div>
-            {openTabTwo && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Our products are designed with your business needs in mind.
-              </p>
-            )}
-          </div>
-          <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabThree}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
-                Technology-Driven Banking
-              </p>
-              {openTabThree ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+
+            <div
+              className={`${openTabThree ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabThree}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Technology-Driven Banking 
+                </p>
+                {openTabThree ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef3}
+                style={{
+                  maxHeight: openTabThree
+                    ? `${contentRef3.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabThree ? "" : "mb-5"}  overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabThree ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Enjoy seamless banking with cutting-edge digital solutions.
+                </p>
+              </div>
             </div>
-            {openTabThree && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Enjoy seamless banking with cutting-edge digital solutions.
-              </p>
-            )}
-          </div>
-          <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabFour}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%]">
-                Reliable Support
-              </p>
-              {openTabFour ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+
+            <div
+              className={`${openTabFour ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabFour}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Reliable Support
+                </p>
+                {openTabFour ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef4}
+                style={{
+                  maxHeight: openTabFour
+                    ? `${contentRef4.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`mb-5 overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabFour ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Our dedicated corporate banking team is always available to
+                  support you.
+                </p>
+              </div>
             </div>
-            {openTabFour && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Our dedicated corporate banking team is always available to
-                support you. 
-              </p>
-            )}
-          </div>
+
         </div>
       </div>
 
-      <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[120px] flex flex-col">
+      <div className="bg-[#fff] px-5 lm:px-[56px] py-[56px] lm:py-[60px] flex flex-col">
           <div 
               style={{
                   backgroundImage: `url(${Layer})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover"
               }}
-              className="w-full h-auto lg:h-[440px] rounded-xl"
+              className="w-full h-auto lg:h-[440px] rounded-[32px]"
           >
               <div 
-                  className="w-full h-full rounded-xl px-5 lm:px-[56px] py-[32px] gap-10 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between items-start lg:items-center"
+                  className="w-full h-full rounded-[32px] px-5 lm:px-[56px] py-[32px] gap-10 lg:gap-0 lm:py-[64px] flex flex-col lg:flex-row justify-between items-start lg:items-center"
                   style={{ backgroundColor: 'rgba(249, 250, 251, 0.9)' }}
               >
                   <div className='flex flex-col lm:w-[615px] lg:h-[312px] gap-5 lm:gap-[50px]'>
@@ -704,19 +786,19 @@ const Corporate = () => {
                             {/* Let’s Build the Future of Your Business Together */}
                             Let’s Take Your Business To The Next Level!
                           </p>
-                          <p className="font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
+                          <p className="font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%]" style={{color:'#002244'}}> 
                             Your business deserves a bank that believes in your dreams as much as you do. 
                             Let’s talk about how Tatum Bank can empower you to achieve more or <span className="underline text-[#002244] font-[450]">Visit our nearest client centre</span> to get started
                           </p>
                       </div>
                       <button
-                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lm:w-[180px] py-4 rounded-tl-lg rounded-br-lg h-[51px] lg:h-[58px] gap-2 flex items-center justify-center`}
+                          className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33]  w-[190px] lm:w-[180px] py-4 rounded-tl-lg rounded-br-lg h-[51px] lg:h-[58px] gap-2 flex items-center justify-center`}
                           type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                       >
                       <p 
-                          className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                          className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
                       >
-                          {/* Get started today. */}
+                       
                           Call us today
                       </p>
                       <BsArrowRight size={100}   

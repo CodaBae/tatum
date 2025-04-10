@@ -26,6 +26,9 @@ const AccountPersonal = () => {
     const faqRef = useRef(null);
     const accountRef = useRef(null);
     const sectionRef = useRef(null);
+    const contentRef1 = useRef(null);
+    const contentRef2 = useRef(null);
+    const contentRef3 = useRef(null);
 
     const { state } = useLocation()
 
@@ -160,9 +163,9 @@ const AccountPersonal = () => {
             id='section'
             className='bg-[#FFFAEB] flex flex-col h-auto items-center py-[56px] lm:py-[88px] px-5 lm:px-[56px] gap-[48px] lm:gap-[96px] w-full'
         >
-            <div className='flex flex-col items-center lm:w-[612px] h-[130px] gap-4 mx-auto'>
+            <div className='flex flex-col items-center lm:w-[612px] h-auto gap-4 mx-auto'>
                 <p className="font-grava text-[24px] lm:text-[48px] text-[#002244] font-[450] leading-[30px] lm:leading-[60px] tracking-[0.2%]">How to Open Your Account</p>
-                <p className='font-[300] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
+                <p className='font-[400] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] text-center text-[#002244]'>
                     We offer secure online banking, 
                     convenient client centre services, 
                     and reliable support whenever you need it.
@@ -172,22 +175,22 @@ const AccountPersonal = () => {
             <div className='flex flex-col lg:flex-row items-center gap-[30px]'>
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={One} alt='One' className='w-[205px] h-[118px] md:h-auto lg:h-[165px]' /> {/* [118px] */}
-                    <p className='font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%] text-[#002244]'>Click “Download Form” below.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] lg:mb-10 rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[250px]'>
                     <img src={Two} alt='Two' className='w-[205px] h-[118px] md:h-auto lm:h-[165px]' />
-                    <p className='font-grava font-[300] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
+                    <p className='font-grava font-[400] text-[14px] lm:text-[18px] leading-5 lm:leading-[27px] tracking-[0.2%] lm:whitespace-nowrap text-[#002244]'>Fill out the PDF manually.</p>
                 </div>
-                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] rotate-90 lg:rotate-0' />
+                <img src={Line} alt='Line' className='w-[49px] lg:w-[190px] lg:mb-10 rotate-90 lg:rotate-0' />
                 <div className='flex flex-col items-center gap-6 w-[262px]'>
                     <img src={Three} alt='Three' className='w-[205px]  h-[118px] md:h-auto lg:h-[165px]' />
-                    <p className='font-grava font-[300] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
+                    <p className='font-grava font-[400] text-[14px] text-center lm:text-[18px] text-[#002244] leading-5 lm:whitespace-nowrap lm:leading-[27px] tracking-[0.2%]'>Email your completed form to <span className='block'>📩  <span className='underline'>accounts@tatumbank.com</span></span> </p>
                 </div>
             </div>
 
             <button
-                className=' bg-[#EDEDED] w-auto h-[54px] rounded-tl-lg rounded-br-lg cursor-default gap-2 p-4 flex items-center justify-center'
+                className=' bg-[#EDEDED] w-auto h-[57px] rounded-tl-lg rounded-br-lg cursor-default gap-2 p-4 flex items-center justify-center'
                 type='button'
                 // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
             >
@@ -201,33 +204,114 @@ const AccountPersonal = () => {
 
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:h-min lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
-                <p className='text-[#002244] font-[300] text-[11px] leading-5 tracking-[0.2%] font-grava lg:text-[14px]'>WHY CHOOSE US</p>
+                <p className='text-[#002244] font-[400] text-[11px] leading-5 tracking-[0.2%] font-grava lg:text-[14px]'>WHY CHOOSE US</p>
                 <p className='font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
-                <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5' onClick={handleTabOne}>
-                    <div className='flex items-center justify-between'>
+                <div
+                    className={`${openTabOne ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col  cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0`}
+                    onClick={handleTabOne}
+                >
+                <div className="flex items-center justify-between">
+                    <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                        Secure & Reliable
+                    </p>
+                    {openTabOne ? (
+                    <img src={Minus} alt="Minus" />
+                    ) : (
+                    <img src={Plus} alt="Plus" />
+                    )}
+                </div>
 
-                    <p className='text-[#546B82] font-grava text-base font-[500] lm:text-[20px] leading-[25px] tracking-[-0.01em]'>Secure & Reliable</p>
+                <div
+                    ref={contentRef1}
+                    style={{
+                    maxHeight: openTabOne
+                        ? `${contentRef1.current?.scrollHeight}px`
+                        : "0px",
+                    }}
+                    className={`${openTabOne ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+                >
+                    <p
+                    className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                        openTabOne ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                    } transition-opacity transition-transform duration-500 ease-in-out`}
+                    >
+                        Your data is protected with industry-leading encryption.
+                    </p>
+                </div>
+            </div>
 
-                    {openTabOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
-                    </div>
-                    {openTabOne && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Your data is protected with industry-leading encryption.</p>}
-                </div>
-                <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabTwo}>
-                    <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base font-[450] lm:text-[20px] leading-[25px] tracking-[0.2%]'>24/7 Support</p>
-                    {openTabTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
-                    </div>
-                    {openTabTwo && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Reach our dedicated contact center team anytime for assistance.</p>}
-                </div>
-                <div className='flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]' onClick={handleTabThree}>
-                    <div className='flex items-center justify-between'>
-                    <p className='text-[#546B82] font-grava text-base font-[450] lm:text-[20px] leading-[25px] tracking-[0.2%]'>Tailored Solutions</p>
-                    {openTabThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
-                    </div>
-                    {openTabThree && <p className='font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]'>Accounts designed for individuals, startups, and enterprises.</p>}
-                </div>
+               
+            <div
+              className={`${openTabTwo ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabTwo}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                    24/7 Support
+                </p>
+                {openTabTwo ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef2}
+                style={{
+                  maxHeight: openTabTwo
+                    ? `${contentRef2.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabTwo ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabTwo ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                    Reach our dedicated contact center team anytime for assistance.
+                </p>
+              </div>
+            </div>
+            
+            
+            <div
+              className={`${openTabThree ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabThree}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                    Tailored Solutions
+                </p>
+                {openTabThree ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef3}
+                style={{
+                  maxHeight: openTabThree
+                    ? `${contentRef3.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabThree ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabThree ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                   Accounts designed for individuals, startups, and enterprises.
+                </p>
+              </div>
+            </div>
+
             </div>
         </section>
 

@@ -32,6 +32,7 @@ import "./card.css";
 
 import Lenis from "@studio-freight/lenis";
 import HeroSection from "../../components/HeroSection";
+import Buttons from "../../components/Buttons";
 
 const SME = () => {
  const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
@@ -40,6 +41,11 @@ const SME = () => {
   const [openTabTwo, setOpenTabTwo] = useState(false);
   const [openTabThree, setOpenTabThree] = useState(false);
   const [openTabFour, setOpenTabFour] = useState(false);
+
+  const contentRef1 = useRef(null);
+  const contentRef2 = useRef(null);
+  const contentRef3 = useRef(null);
+  const contentRef4 = useRef(null);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -249,7 +255,7 @@ const SME = () => {
               <p
                 style={{ fontWeight: 450 }}
                 className={`animate__animated animate__fadeInUp  lm:w-[833px] font-grava text-[#002244] text-left text-[34px] lm:text-[50px]  leading-[40px] lm:leading-[55px] lg:leading-[78px]`}>
-                  Powering Your <br /> Business{" "}
+                  Powering Your <br /> Business, {" "}
                 <spen className="font-bold ">Supporting Your Dreams</spen>
               </p>
               <p
@@ -333,8 +339,8 @@ const SME = () => {
           <HeroSection
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209791/Slide_2_2_ekpalr.png"} 
-            title={`Powering Your <br /> Business <span class="font-bold ">Supporting Your Dreams</span>`}
-            content={"At Tatum Bank, we go beyond banking; we partner with you to unlock opportunities, drive growth, and ensure your success."} 
+            title={`<span class="leading-[105%]">Powering Your <br /> Business, <span class="font-bold ">Supporting Your Dreams</span></span>`}
+            content={`<p class="leading-[34.1px] whitespace-nowrap">At Tatum Bank, we go beyond banking; we partner with you to <span class="block"> unlock opportunities, drive growth, and ensure your success.</span></p>`} 
             link={"/business"} 
             sectionName={"account"} 
             mainImgMobile={"https://framerusercontent.com/images/N9YZp61YAlG8btmizwhy867eyI.png"} 
@@ -352,7 +358,7 @@ const SME = () => {
 
       <div
         ref={accountRef}
-        className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1227px]">
+        className="flex flex-col justify-center items-center gap-[20px] h-[1353.53px] sm:h-[1700.53px] lg:h-[1228px]">
         <div className="flex flex-col items-center gap-[72px] ">
           <div className="flex flex-col items-center gap-[16px]">
             <h1 className="font-grava font-[450] w-[350px] sm:w-[429px] text-center text-[28px] leading-[35px] tracking-[0.2%] sm:text-[36px] sm:leading-[42px] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244]">
@@ -409,7 +415,12 @@ const SME = () => {
             </div>
 
             <div className="flex justify-center">
-              <button
+              <Buttons 
+                text="Find out more"
+                link="/business/account"
+                sect=""
+              />
+              {/* <button
                 className={`${
                   activeIndex === 2
                     ? "animate__animated animate__slow animate__fadeInUp"
@@ -420,14 +431,14 @@ const SME = () => {
                   navigate("/business/account", window.scrollTo(0, 0))
                 }>
                 <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  {/* Open an account */}
+                  {/* Open an account 
                   Find out more
                 </p>
                 <BsArrowRight
                   size={100}
                   className="text-5xl w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
                 />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -726,7 +737,7 @@ const SME = () => {
             <h1 className="font-grava font-[450]  text-[24px] sm:text-5xl leading-[30px]   lg:text-[40px] lg:leading-[50px] tracking-[1.4%] lg:tracking-[0.2%] text-center lg:text-start  text-[#002244]">
               Business Loans - Funding Your Business Growth
             </h1>
-            <p className="font-grava font-[300] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-center lg:text-start text-[#002244]">
+            <p className="font-grava font-[400] text-[16px] sm:text-[16px] leading-[20px] tracking-[0.2%]  lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%] text-center lg:text-start text-[#002244]">
               Need capital to expand, restock, or invest in new opportunities?
               Our tailored loan solutions ensure you have the financial backing
               to keep your business moving forward.
@@ -779,10 +790,10 @@ const SME = () => {
               <button
                 className={`
                   animate__animated animate__slow animate__fadeInUp
-                  bg-[#EDEDED] cursor-default w-[199px] h-[44px] sm:w-[199px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
+                  bg-[#EDEDED] cursor-default w-[199px] h-[44px] sm:w-[199px] lg:w-[242px] sm:h-[59.5px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
                 type="button"
               >
-                <p className=" font-[450] lg:text-base font-grava text-[#B0B0B0] ">
+                <p className=" font-[450] lg:text-[18px] lg:leading-[27px] font-grava text-[#B0B0B0] ">
                   To be available soon
                 </p>
                 <BsArrowRight
@@ -799,7 +810,7 @@ const SME = () => {
 
       <div
         ref={paymentRef}
-        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col  relative min-h-[200vh]">
+        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col lg:gap-[64px]  relative min-h-[200vh]">
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
             <h1 className="font-grava font-[450] w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
@@ -812,299 +823,304 @@ const SME = () => {
           </div>
         </div>
 
-        {/* Card 1 - POS Services */}
-        <div ref={container} className="cardContainer">
-          <motion.div
-            style={{
-              top: `calc(-5vh + ${0 * 25}px)`,
-            }}
-            className="card1">
-            <div
-              className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+        <div className="flex flex-col gap-[100px] mt-[80px]">
+
+          {/* Card 1 - POS Services */}
+          <div ref={container} className=""> {/* cardContainer */}
+            <motion.div
               style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: " fit-content",
-              }}>
-              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[12px]">
-                  <h1 className="font-grava font-[450] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                    POS Services
-                  </h1>
-                  <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    POS & Merchant Services for easy customer payments
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                    {/* List items */}
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Sell Smarter with our Advanced POS Systems
-                      </p>
-                    </div>
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Secure card processing, real-time sales analytics, and
-                        inventory sync.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <button  
-                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                  >
-                    <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                      To be available soon
+                top: `calc(-5vh + ${0 * 25}px)`,
+              }}
+              className="card1">
+              <div
+                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: " fit-content",
+                }}>
+                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                  <div className="flex flex-col gap-4 sm:gap-[12px]">
+                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
+                      POS Services
+                    </h1>
+                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
+                      POS & Merchant Services for easy customer payments
                     </p>
-                    <BsArrowRight
-                      size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                    />
-                  </button>
+                  </div>
+                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
+                      {/* List items */}
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Sell Smarter with our Advanced POS Systems
+                        </p>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Secure card processing, real-time sales analytics, and
+                          inventory sync.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <button  
+                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    >
+                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
+                        To be available soon
+                      </p>
+                      <BsArrowRight
+                        size={100}
+                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                  <img
+                    src={scrollImg1}
+                    alt="POS system"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
                 </div>
               </div>
-              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                <img
-                  src={scrollImg1}
-                  alt="POS system"
-                  className="w-full h-full object-cover rounded-3xl"
-                />
+            </motion.div>
+          </div>
+
+          {/* Card 2 - Merchant Services */}
+          <div ref={container} className=""> {/* cardContainer */}
+            <motion.div
+              style={{
+                top: `calc(-5vh + ${1 * 25}px)`,
+              }}
+              className="card1">
+              <div
+                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: " fit-content",
+                }}>
+                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                  <div className="flex flex-col gap-4 sm:gap-[12px]">
+                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
+                      Merchant Services
+                    </h1>
+                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
+                      Accept Payments Anywhere, Anytime
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Payment gateways, QR codes, and card terminals.
+                        </p>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Advanced security to protect your revenue.
+                        </p>
+                      </div>
+                    </div>
+                    <button  
+                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    >
+                      <p className="font-grava font-[450] sm:text-[18px] text-[#B0B0B0]">
+                        To be available soon
+                      </p>
+                      <BsArrowRight
+                        size={100}
+                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                  <img
+                    src="https://res.cloudinary.com/code-idea/image/upload/v1739870682/man_olznbf.jpg"
+                    alt="Merchant services"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Card 3 - Online & Mobile Transfers */}
+          <div ref={container} className=""> {/* cardContainer */}
+            <motion.div
+              style={{
+                top: `calc(-5vh + ${2 * 25}px)`,
+              }}
+              className="card1">
+              <div
+                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: " fit-content",
+                }}>
+                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                  <div className="flex flex-col gap-4 sm:gap-[16px]">
+                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[1.2em] text-[#002244]">
+                      Online & Mobile Transfers for seamless banking 
+                    </h1>
+                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
+                      Stay in control of your finances with our cutting-edge digital banking solutions, 
+                      designed to simplify operations and enhance efficiency.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Internet & Mobile Banking
+                        </p>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          24/7 Account Access & Monitoring
+                        </p>
+                      </div>
+                    </div>
+                    <button  
+                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    >
+                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
+                        To be available soon
+                      </p>
+                      <BsArrowRight
+                        size={100}
+                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                  <img
+                    src={scrollImg3}
+                    alt="Mobile banking"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Card 4 - Payroll Management */}
+          <div ref={container} className=""> {/* cardContainer */}
+            <motion.div
+              style={{
+                top: `calc(-5vh + ${3 * 25}px)`,
+              }}
+              className="card1">
+              <div
+                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: " fit-content",
+                }}>
+                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
+                  <div className="flex flex-col gap-4 sm:gap-[16px]">
+                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
+                      Payroll Management
+                    </h1>
+                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
+                      Payroll Management to pay salaries on time, handle taxes, and manage employee benefits—all with ease.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Bulk Payment Processing
+                        </p>
+                      </div>
+                      <div className="flex gap-2 items-start">
+                        <img
+                          src={goodMark}
+                          className="w-6 h-6 sm:w-7 sm:h-7"
+                          alt="checkmark"
+                        />
+                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                          Advanced security to protect your revenue.
+                        </p>
+                      </div>
+                    </div>
+                    <button  
+                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                    >
+                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
+                        To be available soon
+                      </p>
+                      <BsArrowRight
+                        size={100}
+                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                  <img
+                    src={scrollImg4}
+                    alt="Payroll management"
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
         </div>
 
-        {/* Card 2 - Merchant Services */}
-        <div ref={container} className="cardContainer">
-          <motion.div
-            style={{
-              top: `calc(-5vh + ${1 * 25}px)`,
-            }}
-            className="card1">
-            <div
-              className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: " fit-content",
-              }}>
-              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[12px]">
-                  <h1 className="font-grava font-[450] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                    Merchant Services
-                  </h1>
-                  <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    Accept Payments Anywhere, Anytime
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Payment gateways, QR codes, and card terminals.
-                      </p>
-                    </div>
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Advanced security to protect your revenue.
-                      </p>
-                    </div>
-                  </div>
-                  <button  
-                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                  >
-                    <p className="font-grava font-[450] sm:text-[18px] text-[#B0B0B0]">
-                      To be available soon
-                    </p>
-                    <BsArrowRight
-                      size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                <img
-                  src="https://res.cloudinary.com/code-idea/image/upload/v1739870682/man_olznbf.jpg"
-                  alt="Merchant services"
-                  className="w-full h-full object-cover rounded-3xl"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card 3 - Online & Mobile Transfers */}
-        <div ref={container} className="cardContainer">
-          <motion.div
-            style={{
-              top: `calc(-5vh + ${2 * 25}px)`,
-            }}
-            className="card1">
-            <div
-              className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: " fit-content",
-              }}>
-              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-[450] text-2xl sm:text-4xl leading-[30px] sm:leading-[1.2em] text-[#002244]">
-                    Online & Mobile Transfers for seamless banking 
-                  </h1>
-                  <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    Stay in control of your finances with our cutting-edge digital banking solutions, 
-                    designed to simplify operations and enhance efficiency.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Internet & Mobile Banking
-                      </p>
-                    </div>
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        24/7 Account Access & Monitoring
-                      </p>
-                    </div>
-                  </div>
-                  <button  
-                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                  >
-                    <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                      To be available soon
-                    </p>
-                    <BsArrowRight
-                      size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                <img
-                  src={scrollImg3}
-                  alt="Mobile banking"
-                  className="w-full h-full object-cover rounded-3xl"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card 4 - Payroll Management */}
-        <div ref={container} className="cardContainer">
-          <motion.div
-            style={{
-              top: `calc(-5vh + ${3 * 25}px)`,
-            }}
-            className="card1">
-            <div
-              className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: " fit-content",
-              }}>
-              <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                <div className="flex flex-col gap-4 sm:gap-[16px]">
-                  <h1 className="font-grava font-[450] text-2xl sm:text-4xl leading-[30px] sm:leading-[50px] text-[#002244]">
-                    Payroll Management
-                  </h1>
-                  <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                    Payroll Management to pay salaries on time, handle taxes, and manage employee benefits—all with ease.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                  <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Bulk Payment Processing
-                      </p>
-                    </div>
-                    <div className="flex gap-2 items-start">
-                      <img
-                        src={goodMark}
-                        className="w-6 h-6 sm:w-7 sm:h-7"
-                        alt="checkmark"
-                      />
-                      <p className="font-grava font-[300] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                        Advanced security to protect your revenue.
-                      </p>
-                    </div>
-                  </div>
-                  <button  
-                    className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                  >
-                    <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                      To be available soon
-                    </p>
-                    <BsArrowRight
-                      size={100}
-                      className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                    />
-                  </button>
-                </div>
-              </div>
-              <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                <img
-                  src={scrollImg4}
-                  alt="Payroll management"
-                  className="w-full h-full object-cover rounded-3xl"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
       {/* Scroll section ends */}
+      </div>
 
       <div
         ref={advisoryRef}
@@ -1151,7 +1167,7 @@ const SME = () => {
             </h1>
             <p
               className="
-          font-grava font-[300] 
+          font-grava font-[400] 
           text-center lg:text-start 
           text-[14px] sm:text-[16px] lg:text-[18px] 
           leading-[20px] sm:leading-[24px] lg:leading-[27px] 
@@ -1238,43 +1254,11 @@ const SME = () => {
 
             {/* CTA button */}
             <div className="w-full h-full flex justify-center sm:justify-start items-end">
-              <button
-                className={`
-            ${
-              activeIndex === 2
-                ? "animate__animated animate__slow animate__fadeInUp"
-                : ""
-            }
-            transition-all duration-500 ease-in-out 
-            bg-[#ffcc33] group hover:bg-[#002244] 
-            w-[178px] sm:w-[190px] lg:w-[210px] 
-            h-[44px] sm:h-[59.5px] 
-            rounded-tl-lg rounded-br-lg gap-2 
-            flex items-center justify-center
-          `}
-                type="button"
-                onClick={() =>
-                  navigate("/business/account",window.scrollTo(0, 0))
-                }>
-                <p
-                  className="
-              transition-colors duration-500 ease-in-out 
-              font-[450]  sm:text-base lg:text-lg 
-              font-grava 
-              text-[#002244] group-hover:text-[#ffcc33]
-            ">
-                  {/* Open an account */}
-                  Find out more
-                </p>
-                <BsArrowRight
-                  size={100}
-                  className="
-              w-5 h-5 mt-[2px]
-              transition-colors duration-500 ease-in-out 
-              text-[#002244] group-hover:text-[#ffcc33]
-            "
-                />
-              </button>
+              <Buttons 
+                text="Find out more"
+                link="/business/account"
+                sect=""
+              />
             </div>
           </div>
         </div>
@@ -1284,7 +1268,7 @@ const SME = () => {
         ref={faqRef}
         className="bg-[#F9FAFB] flex flex-col lm:flex-row items-start lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]">
         <div className="flex flex-col gap-6 w-full lm:w-[448px]">
-          <p className="text-[#334E69] font-[300]  leading-5 tracking-[0.25em] font-grava text-[11px] lg:text-[14px]">
+          <p className="text-[#334E69] font-[500]  leading-5 tracking-[0.25em] font-grava text-[11px] lg:text-[14px]">
             WHY CHOOSE US
           </p>
           <p className="font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]">
@@ -1292,69 +1276,151 @@ const SME = () => {
           </p>
         </div>
         <div className="flex flex-col w-full lm:w-[710px]">
-          <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pb-5"
-            onClick={handleTabOne}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                We Understand Your Business
-              </p>
-              {openTabOne ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+          
+           <div
+              className={`${openTabOne ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0`}
+              onClick={handleTabOne}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  We Understand Your Business
+                </p>
+                {openTabOne ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef1}
+                style={{
+                  maxHeight: openTabOne
+                    ? `${contentRef1.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabOne ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabOne ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Whether you're just starting or expanding, we provide customized
+                  solutions that fit your unique needs
+                </p>
+              </div>
             </div>
-            {openTabOne && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Whether you're just starting or expanding, we provide customized solutions that fit your unique needs 
-              </p>
-            )}
-          </div>
-          <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabTwo}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                Customer-Centric Approach 
-              </p>
-              {openTabTwo ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+
+            <div
+              className={`${openTabTwo ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabTwo}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Customer-Centric Approach 
+                </p>
+                {openTabTwo ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef2}
+                style={{
+                  maxHeight: openTabTwo
+                    ? `${contentRef2.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabTwo ? "" : "mb-5"}  overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabTwo ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  We don't just serve businesses; we build relationships. Our dedicated business banking team is always
+                  available to support you.
+                </p>
+              </div>
             </div>
-            {openTabTwo && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                We don't just serve businesses; we build relationships. Our dedicated business banking team is always
-                available to support you.
-              </p>
-            )}
-          </div>
-          <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabThree}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
-                Technology-Driven Excellence
-              </p>
-              {openTabThree ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
+
+            <div
+              className={`${openTabThree ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabThree}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  Technology-Driven Excellence  
+                </p>
+                {openTabThree ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef3}
+                style={{
+                  maxHeight: openTabThree
+                    ? `${contentRef3.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabThree ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabThree ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  Enjoy seamless, secure, and innovative banking tailored for your business.
+                </p>
+              </div>
             </div>
-            {openTabThree && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                Enjoy seamless, secure, and innovative banking tailored for your business. 
-              </p>
-            )}
-          </div>
-          <div
+
+            <div
+              className={`${openTabFour ? "lg:pb-[38px] gap-[8px]" : ""} flex flex-col cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 pt-[32px]`}
+              onClick={handleTabFour}
+            >
+              <div className="flex items-center justify-between">
+                <p className="text-[#546B82] font-grava font-[450] text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
+                  We Keep You Smiling! 
+                </p>
+                {openTabFour ? (
+                  <img src={Minus} alt="Minus" />
+                ) : (
+                  <img src={Plus} alt="Plus" />
+                )}
+              </div>
+
+              <div
+                ref={contentRef4}
+                style={{
+                  maxHeight: openTabFour
+                    ? `${contentRef4.current?.scrollHeight}px`
+                    : "0px",
+                }}
+                className={`${openTabFour ? "" : "mb-5"} overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <p
+                  className={`font-[400] font-grava tracking-[-0.01em] text-base lm:text-[18px] leading-[27px] lg:leading-[1.5em] text-[#334E69] ${
+                    openTabFour ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+                  } transition-opacity transition-transform duration-500 ease-in-out`}
+                >
+                  With Tatum Bank, banking is effortless, rewarding, and stress-free.
+                </p>
+              </div>
+            </div>
+          
+
+          {/* <div
             className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
             onClick={handleTabFour}>
             <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[0.2%] font-350">
+              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
                 We Keep You Smiling!
               </p>
               {openTabFour ? (
@@ -1364,11 +1430,11 @@ const SME = () => {
               )}
             </div>
             {openTabFour && (
-              <p className="font-[300] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
+              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
                 With Tatum Bank, banking is effortless, rewarding, and stress-free.
               </p>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -1400,13 +1466,13 @@ const SME = () => {
                     flex flex-col gap-[40px] lg:justify-between ">
             <div className="flex flex-col gap-[16px]">
               <h1
-                className="font-grava font-[450] text-[16px] sm:text-[22px] lg:text-[34px] 
+                className="font-grava font-[500] text-[16px] sm:text-[22px] lg:text-[32px] 
                        leading-[20px] sm:leading-[24px] whitespace-nowrap lg:leading-[48px] 
                        tracking-[0.2%] text-[#002244]">
                 Let’s Build the Future of Your Business <br />Together
               </h1>
               <p
-                className="font-grava font-[300] text-[16px] sm:text-[20px] lg:text-[18px] 
+                className="font-grava font-[400] text-[16px] sm:text-[20px] lg:text-[18px] 
                       leading-[20px] sm:leading-[24px] lg:leading-[27px] 
                       tracking-[0.2%] text-[#002244]">
                 Your business deserves a bank that believes in your dreams as

@@ -8,7 +8,7 @@ export default {
       md: "768px",
       lm: "1024px",
       lg: "1280px",
-      xl: "1536px",
+      xl: "1436px",
     },
 
     fontFamily: {

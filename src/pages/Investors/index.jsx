@@ -114,48 +114,48 @@ const Investors = () => {
         }
         
     
-        <section className='bg-[#fff] pt-[56px] lg:pt-[70px] pb-[56px] lg:pb-[70px] px-5 lg:px-[56px] flex flex-col gap-2'>
-            <div className='bg-[#FCFCFD] rounded-[16px] px-4 lm:px-[32px] p-[32px] gap-[32px] flex flex-col'>
+        <section className='bg-[#fff] pt-[56px] lg:py-[74px] pb-[56px] px-5  flex flex-col gap-2'>
+            <div className='bg-[#FCFCFD] rounded-[16px] px-4 p-[32px]  h-min lg:w-[91%] lg:mx-auto  gap-[32px] flex flex-col'>
                 <div className='flex flex-col items-start lm:flex-row lm:items-center justify-between  gap-4 lm:gap-auto'>
-                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Annual Reports</p>
+                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[0.01em] leading-[18px] lm:leading-[130%]'>Annual Reports</p>
                     <button 
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
                 <div className='flex flex-col items-start lm:flex-row lm:items-center justify-between  gap-4 lm:gap-auto'>
-                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Shareholders Subscriber Form</p>
+                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[0.01em] leading-[18px] lm:leading-[130%]'>Shareholders Subscriber Form</p>
                     <button 
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
                 <div className='flex flex-col items-start lm:flex-row lm:items-center justify-between  gap-4 lm:gap-auto'>
-                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Corporate Governance Documents</p>
+                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[0.01em] leading-[18px] lm:leading-[130%]'>Corporate Governance Documents</p>
                     <button 
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
                 <div className='h-[1px] w-full bg-[#EAECF0]'></div>
                 <div className='flex flex-col items-start lm:flex-row lm:items-center justify-between  gap-4 lm:gap-auto'>
-                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[1.4%] leading-[18px] lm:leading-[26px]'>Investor FAQs</p>
+                    <p className='font-grava text-[#002244] text-[14px] lm:text-[20px] tracking-[0.01em] leading-[18px] lm:leading-[130%]'>Investor FAQs</p>
                     <button 
                         className='cursor-default bg-[#EDEDED]  w-full lm:w-auto h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center px-5 py-4 justify-center lm:justify-between' //group hover:bg-[#002244]
                         // onClick={() => window.open("", "_blank")}
                     >
-                        <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
+                        <p className='transition-colors duration-500 ease-in-out font-[500] lg:text-[18px] font-grava text-[#B0B0B0]'>Coming soon</p> {/* group-hover:text-[#FFCC33] */}
                         <img src={Download} alt='download' className='opacity-30' />
                     </button>
                 </div>
