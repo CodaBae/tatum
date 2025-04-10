@@ -408,7 +408,7 @@ const PrivacyPolicy = () => {
               <p className="font-[450] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
                 2.1 Types of Data We Collect.
               </p>
-              <table className="w-[95%] px-5">
+              <table className="w-[100%] px-5">
                 <tr className="border border-[#cfd4dc]">
                   <th className="text-left w-[40%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[450] text-[#002244] p-4 border border-y-0 border-l-0 border-[#cfd4dc]" >
                     Type of Data
@@ -627,7 +627,7 @@ const PrivacyPolicy = () => {
                 Every processing purpose has at least one lawful basis 
                 for processing to safeguard the rights of the data subjects, as listed below:
               </p>
-              <table className="w-[95%]  px-5">
+              <table className="w-[100%]  px-5">
                 <tr className="border h-[60px] border-[#cfd4dc]">
                   <th className=" border-[#cfd4dc] text-left w-[55%] font-grava text-[14px] lm:text-[18px] leading-5 lm:leading-[28px] tracking-[0.2%] lm:tracking-[1.4%] font-[450] text-[#002244] p-4 border border-y-0 border-l-0">
                     Purpose of Processing

@@ -637,7 +637,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Explore our offerings */}
                         Find out more
                       </p>
@@ -774,7 +774,7 @@ const handleTouchEnd = () => {
                         })
                       }
                     >
-                      <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
+                      <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
                         {/* Get started with Business Banking */}
                         Find out more
                       </p>
