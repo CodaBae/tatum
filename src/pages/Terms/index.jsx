@@ -114,7 +114,7 @@ const Terms = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
+      <div className="flex flex-col items-start gap-[40px] px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
         <div className="hidden flex-col bg-[#F9FAFB]  w-[396px] rounded-lg p-6 gap-[27px]">
           <p className="font-medium font-grava text-[#546B82] ">
             Table of content:
@@ -264,15 +264,13 @@ const Terms = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
-
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">TATUM BANK NIGERIA LIMITED WEBSITE</p>
+        <div className="flex flex-col gap-[19px]">
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">TATUM BANK NIGERIA LIMITED WEBSITE</p>
           <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">TERMS AND CONDITIONS</p>
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[1.4%] text-[#002244]">Effective Date: January 2025</p>
-
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">Effective Date: January 2025</p>
         </div>
 
-        <div className="flex flex-col lg:flex-1 ">
+        <div className="flex flex-col gap-[40px] lg:flex-1 ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
             <div className="flex flex-col">
 
@@ -291,7 +289,7 @@ const Terms = () => {
             </div>
           </div>
 
-          <div ref={userRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={userRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               1. User Conduct
@@ -309,7 +307,7 @@ const Terms = () => {
             </p>
           </div>
 
-          <div ref={acceptanceRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={acceptanceRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               2. Acceptance of Terms and Updates
@@ -318,7 +316,7 @@ const Terms = () => {
 
               By accessing this Site, you confirm that you have read,
               understood, and agree to these Terms and any additional terms and
-              conditions referenced herein. <span className="block mt-5">The Bank reserves the right to
+              conditions referenced herein. <span className="block mt-4">The Bank reserves the right to
               update or modify these Terms at any time without prior notice. The
               latest version will be posted on the Site with the "Effective
               Date" updated accordingly. Continued use of the Site constitutes
@@ -326,7 +324,7 @@ const Terms = () => {
             </p>
           </div>
 
-          <div ref={serviceRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={serviceRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               3. Services Provided
@@ -345,7 +343,7 @@ const Terms = () => {
             </p>
           </div>
 
-          <div ref={eligibilityRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={eligibilityRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               4. Eligibility
@@ -363,33 +361,36 @@ const Terms = () => {
           </div>
 
 
-            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              5. Intellectual Property
-            </p>
-            <p className="font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+          </div>
+          <div className="flex flex-col gap-4">
+              <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
+                5. Intellectual Property
+              </p>
+              <p className="font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
 
-              All content on this Site, including text, graphics, logos, images,
-              and software, is the property of Tatum Bank or its licensors and
-              is protected by copyright, trademark, and other intellectual
-              property laws. It is prohibited to reproduce, distribute, or use
-              any content without prior written permission by The Bank. Any
-              violation shall be regarded as infringement on our rights and
-              offenders may be prosecuted.
-            </p>
+                All content on this Site, including text, graphics, logos, images,
+                and software, is the property of Tatum Bank or its licensors and
+                is protected by copyright, trademark, and other intellectual
+                property laws. It is prohibited to reproduce, distribute, or use
+                any content without prior written permission by The Bank. Any
+                violation shall be regarded as infringement on our rights and
+                offenders may be prosecuted.
+              </p>
+
           </div>
 
-          <div ref={contentRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={contentRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               6. User-Generated Content
             </p>
-            <div className=" font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
+            <div className=" font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
 
               By submitting any content, including but not limited to
               comments, feedback, or suggestions, to the website, you grant
               the Bank a non-exclusive, royalty-free and perpetual license to
               use, reproduce, modify and distribute such content.
-              <span className="block mt-4">
+              <span className="block">
                 You represent and warrant that you have necessary rights and
                 permissions to submit such content and that it does not infringe
                 the rights of others.
@@ -397,7 +398,7 @@ const Terms = () => {
             </div>
           </div>
 
-          <div ref={partyRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={partyRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               7. Third-Party Links
@@ -410,12 +411,12 @@ const Terms = () => {
             </p>
           </div>
 
-          <div ref={disclaimerRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={disclaimerRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               8. Disclaimer
             </p>
-            <div className="font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-2 flex flex-col">
+            <div className="font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
 
               The bank, it’s employees, agents, directors expressly disclaim
               all warranties, express or implied, as to suitability and
@@ -423,7 +424,7 @@ const Terms = () => {
               content offered on the website. Also, the bank does not warrant
               that the website or any website linked to or from it will be
               free of interruption, delay, failure, error, or omission.
-              <span className="block mt-4">
+              <span className="block">
                 Tatum Bank shall not be held liable for any damage arising from
                 your use of the content, product or services presented on this
                 website.
@@ -431,7 +432,7 @@ const Terms = () => {
             </div>
           </div>
 
-          <div ref={limitationRef} className="flex gap-2 flex-col mt-[48px]">
+          <div ref={limitationRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               9. Limitation of Liability
@@ -446,7 +447,7 @@ const Terms = () => {
 
           <div
             ref={indemnificationRef}
-            className="flex gap-2 flex-col mt-[48px]">
+            className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               10. Indemnification
@@ -460,7 +461,7 @@ const Terms = () => {
             </p>
           </div>
 
-          {/* <div ref={lawRef} className="flex gap-2 flex-col mt-[48px]">
+          {/* <div ref={lawRef} className="flex gap-4 flex-col ">
             <p className="font-medium text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               11. Governing Law
             </p>
@@ -473,7 +474,7 @@ const Terms = () => {
             </p>
           </div> */}
 
-          <div ref={contactRef} className="flex flex-col gap-4 mt-[48px]">
+          <div ref={contactRef} className="flex flex-col gap-4 ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
               11. CONTACT US
@@ -482,7 +483,7 @@ const Terms = () => {
               For any questions or concerns about these Terms, please contact us
               at: Tatum Bank Nigeria Limited
             </p>
-            <ul className="list-none font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] flex flex-col gap-2">
+            <ul className="list-none font-grava font-[400] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] flex flex-col gap-3">
 
               <li>Address: Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</li>
               <li>Phone Number: xxxxxxxxxx</li>

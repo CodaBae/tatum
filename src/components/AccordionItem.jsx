@@ -8,11 +8,11 @@ const AccordionItem = ({ question, answer,  defaultOpen = false }) => {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className="flex flex-col cursor-pointer gap-4 px-4 py-[18px] lg:p-[32px] border border-[#546B82] rounded-[16px] w-full h-auto transition-all duration-500 ease-in-out"
+      className={`${defaultOpen ? "lg:pt-[14px] lg:pb-[16px] lg:pl-[18px] lg:pr-[14px]   gap-[8px]" : " lg:pb-[16px] lg:pr-[14px] lg:pl-[18px]  "} flex flex-col cursor-pointer px-4 py-[18px]  border border-[#546B82] rounded-[16px] w-full h-auto transition-all duration-500 ease-in-out`}
     >
       {/* Question and Icon */}
       <div className="flex items-center justify-between">
-        <p className="font-grava text-[#475467] font-[450] text-[14px] lg:text-[20px]">
+        <p className="font-grava text-[#475467] font-[500] tracking-[-0.01em] text-[14px] lg:text-[20px]">
           {question}
         </p>
         <img src={isOpen ? Minus : Plus} alt="toggle-icon" />
@@ -24,7 +24,7 @@ const AccordionItem = ({ question, answer,  defaultOpen = false }) => {
           isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0 hidden"
         }`}
       >
-        <p className="font-[300] font-grava tracking-[1.4%] text-[14px] lm:text-[20px] leading-[26px] text-[#334E69]">
+        <p className="font-[400] font-grava tracking-[-0.01em] text-[14px] lm:text-[18px] leading-[1.5em] text-[#334E69]">
           {answer}
         </p>
       </div>

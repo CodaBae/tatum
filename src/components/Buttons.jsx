@@ -2,13 +2,13 @@ import React from 'react'
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom"
 
-const Buttons = ({ text, link, sect }) => {
+const Buttons = ({ text, link, sect, className }) => {
 
     const navigate = useNavigate() 
 
   return (
         <button
-            className="transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 lm:w-[190.63px] h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
+            className={`${className} transition-all duration-500 ease-in-out bg-[#FFCC33] px-5 lm:w-[190.63px] h-[57px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center`}
             type="button"
             onClick={() =>
                 navigate(link, { state: { section: sect } }, window.scrollTo(0, 0))

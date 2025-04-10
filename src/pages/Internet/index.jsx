@@ -115,8 +115,8 @@ const InternetBanking = () => {
                 <HeroSection
                     bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png"} 
                     bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
-                    title={`Say hello to <br /> banking <span class='font-[700]'> on the go</span> `}
-                    content={'Your money, your way. Experience banking that fits your lifestyle, not the other way around.'} 
+                    title={`Say Hello To <br /> Banking <span class='font-[700]'> On The Go</span> `}
+                    content={`<p class="leading-[34.1px]">Your money, your way. Experience banking that fits your lifestyle, not the other way around.</p>`} 
                     link={"/digital"} 
                     sectionName={"digi"} 
                     mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 
@@ -127,7 +127,7 @@ const InternetBanking = () => {
         }
         
 
-        <section className='bg-[#fff] pt-[56px] lg:pt-[102px] pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col lm:flex-row items-start lm:items-center gap-[40px] lm:gap-[150px]'>
+        <section className='bg-[#fff] pt-[56px] lg:pt-[102px] lg:h-min pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col lm:flex-row items-start lm:items-center gap-[40px] lm:gap-[150px]'>
             <div data-aos="fade-right">
                 <img 
                     src={"https://res.cloudinary.com/code-idea/image/upload/v1739957492/construction_u5txc9.png"} 
@@ -137,8 +137,8 @@ const InternetBanking = () => {
             </div>
             <div className='flex flex-col items-start gap-5 lm:gap-[40px] w-full md:w-[350px] lm:w-[611px]' data-aos="fade-left" >
                 <div className="flex flex-col gap-2 md:gap-3 items-start">
-                    <p className='font-[450] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
-                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[300] leading-[27px] text-left tracking-[0.2%]">
+                    <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>Under Construction!</p>
+                    <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-left tracking-[0.01em]">
                         We're currently updating our website to serve you better. 
                         This doesn't mean we're not working – we're behind the scenes, 
                         crafting exceptional content that will be worth the wait.
@@ -157,7 +157,7 @@ const InternetBanking = () => {
                         );
                     }}
                 >
-                    <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
+                    <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Visit Homepage</p>
                     <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                 </button>
             </div>
@@ -165,7 +165,7 @@ const InternetBanking = () => {
 
         <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
             <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-                <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] font-[450]'>Frequently Asked Questions</p>
+                <p className='text-[24px] lg:text-[48px] font-grava text-[#002244] leading-[60px] font-[450]'>Frequently Asked Questions</p>
 
                 <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
                     <div className="space-y-5">

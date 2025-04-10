@@ -88,7 +88,7 @@ const Resources = () => {
                           Media & Resources
                       </p>
                       <p 
-                          className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[300] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
+                          className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[663px] font-[400] text-sm font-grava lg:text-[24px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                       >
                           Learn about everything, from customer's success stories to getting informed with our latest news.
                       </p>
@@ -138,7 +138,7 @@ const Resources = () => {
                 bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
                 bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
                 title={` <span class="font-bold"> Media & Resources<span> `}
-                content={'Learn about everything, from customer\'s success stories to getting informed with our latest news.'} 
+                content={`<span class="text-[24px]">Learn about everything, from customer\'s success stories to getting informed with our latest news.</span>`} 
                 link={"/digital"} 
                 sectionName={"digi"} 
                 mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739786262/young-man_dadzln.png"} 
@@ -150,25 +150,25 @@ const Resources = () => {
 
       {/*  */}
       
-      <section className='bg-[#fff] pt-[56px]  pb-[56px] lg:pb-[102px] px-5 lg:px-[56px] flex flex-col gap-2'>
-        <div className='flex items-center gap-5 lg:gap-[32px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>
+      <section className='bg-[#fff] pt-[56px]  pb-[56px] lg:pb-0 px-5 lg:px-[80px] flex flex-col gap-2'>
+        <div className='flex items-center gap-5 lg:gap-[53px] border border-[#D0D5DD] overflow-x-auto border-x-0 border-t-0'>
             <div className={`${activeTab === "news" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer `} onClick={() => handleTabChange("news")}>
-                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
+                <p className={`${activeTab === "news" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] lg:leading-[28px] whitespace-nowrap font-[400]`}>
                   Latest News
                 </p>
             </div>
             <div className={`${activeTab === "press" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("press")}>
-                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
+                <p className={`${activeTab === "press" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] lg:leading-[28px] whitespace-nowrap font-[400]`}>
                     Press Releases
                 </p>
             </div>
             <div className={`${activeTab === "form" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("form")}>
-                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
+                <p className={`${activeTab === "form" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] lg:leading-[28px] whitespace-nowrap font-[400]`}>
                     Form Downloads
                 </p>
             </div>
             <div className={`${activeTab === "media" ? "border-[4px] border-x-0 border-t-0 border-b-[#FFCC33]" : ""} lg:w-auto flex items-start py-3 cursor-pointer`} onClick={() => handleTabChange("media")}>
-                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] whitespace-nowrap font-[300]`}>
+                <p className={`${activeTab === "media" ? "text-[#002244]" : "text-[#B0BAC5]"} font-grava text-base lg:text-[20px] lg:leading-[28px] whitespace-nowrap font-[400]`}>
                     Media Gallery
                 </p>
             </div>
@@ -182,9 +182,9 @@ const Resources = () => {
       </section>
       
       
-      <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-0 py-[56px] lg:py-[112px] items-center justify-center'>
+      <section ref={faqRef} className='bg-[#F9FAFB] flex w-full px-5 lg:px-[280px] py-[56px] lg:py-[112px] items-center justify-center'>
         <div className='w-full lg:w-[878px] mx-auto flex flex-col items-center'>
-          <p className='text-[24px] lg:text-[40px] font-grava text-[#002244] font-[450]'>Frequently Asked Questions</p>
+          <p className='text-[24px] lg:text-[48px] lg:leading-[60px] font-grava text-[#002244] font-[500]'>Frequently Asked Questions</p>
 
           <div className='mt-[32px] lg:mt-[56px] flex flex-col gap-6 w-full'>
 
@@ -210,7 +210,7 @@ const Resources = () => {
                 {openDropdownOne ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
                 { openDropdownOne && 
-                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[400] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Just a government-issued ID and your account opening is processed.
                     </p>
                 }
@@ -222,7 +222,7 @@ const Resources = () => {
                 {openDropdownTwo ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               { openDropdownTwo && 
-                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[400] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         No, you do not pay any fees to open an account
                     </p>
                 }
@@ -234,7 +234,7 @@ const Resources = () => {
                 {openDropdownThree ? <img src={Minus} alt='Minus' className='' /> : <img src={Plus} alt='Plus' className='' />}
               </div>
               {openDropdownThree && 
-                    <p className='font-[300] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
+                    <p className='font-[400] font-grava tracking-[1.4%] text-sm lm:text-[20px] leading-[26px] text-[#334E69]'>
                         Yes! You can access your account on iOS and Android with the Tatum Mobile app.
                     </p>
                 }
@@ -242,8 +242,8 @@ const Resources = () => {
 
           </div>
 
-          <div className='flex items-center mt-6 lg:mt-[32px] justify-center'>
-            <p className='font-grava text-[14px] lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-[14px] lg:text-[20px]  font-[450] text-[#002244]'>Help Center</span></p>
+          <div className='flex items-center mt-6 lg:mt-2 justify-center'>
+            <p className='font-grava text-[14px] lg:text-[18px] text-[#334E69]'>Have more questions? Visit our <span onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}}  className='text-[14px] lg:text-[18px]  font-[500] text-[#002244]'>Help Center</span></p>
           </div>
         </div>
       </section>
