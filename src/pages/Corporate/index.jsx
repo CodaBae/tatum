@@ -796,7 +796,7 @@ const Corporate = () => {
                           type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
                       >
                       <p 
-                          className='transition-colors duration-500 ease-in-out font-[400]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
+                          className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
                       >
                        
                           Call us today
