@@ -2,21 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const CookiePolicy = () => {
-  const [activeTab, setActiveTab] = useState(1);
-  const [tabName, setTabName] = useState("intro");
+  const [activeTab, setActiveTab] = useState(0);
+  const [tabName, setTabName] = useState("");
 
   const cookieRef = useRef(null);
   const { state } = useLocation();
   const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   if (state?.section === "privacy" && cookieRef.current) {
-  //     cookieRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [state]);
+  console.log(activeTab, "Ryan")
+  console.log(tabName, "dapper")
 
-  const handleClickedTab = (value) => {
+  const handleClickedTab = (value, num) => {
     setTabName(value);
+    setActiveTab(num)
   };
 
   const introductionRef = useRef(null);
@@ -32,39 +30,50 @@ const CookiePolicy = () => {
   const contactRef = useRef(null);
 
   useEffect(() => {
+    if (state?.section === "cookie") {
+         setActiveTab(0)
+    }
+  }, [state]);
 
+  useEffect(() => {
+
+    const scrollOptions = { behavior: "smooth" };
+
+    if (tabName === "" && introductionRef.current) {
+      cookieRef.current.scrollIntoView(scrollOptions);
+    }
     if (tabName === "intro" && introductionRef.current) {
-      introductionRef.current.scrollIntoView({ behavior: "smooth" });
+      introductionRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "data" && dataCollectionRef.current) {
-      dataCollectionRef.current.scrollIntoView({ behavior: "smooth" });
+      dataCollectionRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "personal" && personalRef.current) {
-      personalRef.current.scrollIntoView({ behavior: "smooth" });
+      personalRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "purpose" && purposeRef.current) {
-      purposeRef.current.scrollIntoView({ behavior: "smooth" });
+      purposeRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "sharing" && sharingRef.current) {
-      sharingRef.current.scrollIntoView({ behavior: "smooth" });
+      sharingRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "storage" && storageRef.current) {
-      storageRef.current.scrollIntoView({ behavior: "smooth" });
+      storageRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "security" && securityRef.current) {
-      securityRef.current.scrollIntoView({ behavior: "smooth" });
+      securityRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "rights" && rightsRef.current) {
-      rightsRef.current.scrollIntoView({ behavior: "smooth" });
+      rightsRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "cookies" && cookiesRef.current) {
-      cookiesRef.current.scrollIntoView({ behavior: "smooth" });
+      cookiesRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "updates" && updatesRef.current) {
-      updatesRef.current.scrollIntoView({ behavior: "smooth" });
+      updatesRef.current.scrollIntoView(scrollOptions);
     }
     if (tabName === "contact" && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
+      contactRef.current.scrollIntoView(scrollOptions);
     }
   }, [tabName]);
 
@@ -85,13 +94,15 @@ const CookiePolicy = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+            console.log(entry.target, "mix")
           if (entry.isIntersecting) {
             const index = sectionRefs.indexOf(entry.target);
+            console.log(index, "mimi")
             if (index !== -1) setActiveTab(index + 1);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 }
     );
 
     sectionRefs.forEach((section) => {
@@ -125,7 +136,7 @@ const CookiePolicy = () => {
           </p>
           <div className="flex flex-col gap-4">
             <div
-              onClick={() => handleClickedTab("intro")}
+              onClick={() => handleClickedTab("intro", 1)}
               className={`${
                 activeTab === 1
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -136,7 +147,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("data")}
+              onClick={() => handleClickedTab("data", 2)}
               className={`${
                 activeTab === 2
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -147,7 +158,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("personal")}
+              onClick={() => handleClickedTab("personal", 3)}
               className={`${
                 activeTab === 3
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -158,7 +169,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("purpose")}
+              onClick={() => handleClickedTab("purpose", 4)}
               className={`${
                 activeTab === 4
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -169,7 +180,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("sharing")}
+              onClick={() => handleClickedTab("sharing", 5)}
               className={`${
                 activeTab === 5
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -180,7 +191,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("storage")}
+              onClick={() => handleClickedTab("storage", 6)}
               className={`${
                 activeTab === 6
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -191,18 +202,18 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("security")}
+              onClick={() => handleClickedTab("security", 7)}
               className={`${
                 activeTab === 7
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
                   : ""
               } cursor-pointer  h-[48px] py-3 px-4`}>
-              <p className="font-grava text-[#546B82] text-base">
+              <p className="font-grava text-[#546B82] text-base whitespace-nowrap">
                 4.1 How to Disable Cookies on Your Browser 
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("rights")}
+              onClick={() => handleClickedTab("rights", 8)}
               className={`${
                 activeTab === 8
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -213,7 +224,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("cookies")}
+              onClick={() => handleClickedTab("cookies", 9)}
               className={`${
                 activeTab === 9
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -224,7 +235,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("updates")}
+              onClick={() => handleClickedTab("updates", 10)}
               className={`${
                 activeTab === 10
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -235,7 +246,7 @@ const CookiePolicy = () => {
               </p>
             </div>
             <div
-              onClick={() => handleClickedTab("contact")}
+              onClick={() => handleClickedTab("contact", 11)}
               className={`${
                 activeTab === 11
                   ? "border-[3px] border-y-0 bg-[#F2F4F7] border-r-0 border-l-[#FFCC33] rounded-lg"
@@ -248,7 +259,6 @@ const CookiePolicy = () => {
           </div>
         </div>
   
-
         <div className="flex flex-col lg:h-[800px] lg:overflow-y-auto lg:flex-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"> {/*  "flex flex-col lg:h-[800px] lg:overflow-y-scroll lg:flex-1" */}
           <div ref={introductionRef} className="flex gap-[40px] flex-col">
             <div className="flex flex-col gap-4">
@@ -275,7 +285,8 @@ const CookiePolicy = () => {
 
           <div
             ref={dataCollectionRef}
-            className="flex flex-col  mt-[20px]">
+            className="flex flex-col  mt-[20px]"
+            >
             <div className="flex flex-col gap-4">
               <p className="font-[450] leading-[25px] lm:leading-[30px] text-[20px] lg:text-[22px] text-[#002244] tracking-[0.01em] font-grava">
                 2.0 What are Cookies
@@ -564,8 +575,8 @@ const CookiePolicy = () => {
           </div>
 
         </div>
-
       </div>
+
     </div>
   );
 };
