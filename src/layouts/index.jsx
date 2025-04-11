@@ -10,12 +10,6 @@ const PageLayout = () => {
   const location = useLocation()
 
 
-  // Reset scroll and show header on route change
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location.pathname]);
-
-
   return (
     <div className="w-full overflow-x-hidden">
         <div className='hidden lg:block'>

@@ -26,6 +26,7 @@ import Investors from "../pages/Investors";
 import Contact from "../pages/Contact";
 import InternetBanking from "../pages/Internet";
 import CookiePolicy from "../pages/Cookies";
+// import CookiePolicy from "../pages/Cookies/Cook";
 
 
 export default function Routers() {

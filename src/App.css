@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
+
 .font-medium {
     font-weight: 400;
     line-height: 105% 
