@@ -324,7 +324,7 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-4 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
-                            <p className='font-[500] text-[#002244] w-[278px] whitespace-nowrap md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
+                            <p className='font-[500] text-[#002244] w-[278px] lm:whitespace-nowrap md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
                                 *365# - Dial, Transact and Smile
                             </p>
                             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
@@ -503,9 +503,9 @@ const Digital = () => {
                         
                         <button
                             className='transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] w-[234px] lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
-                            type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
+                            type='button'  onClick={() => {navigate("/contact", { state: {section: "contact"}}),window.scrollTo(0, 0)}}
                         >
-                            <p className='transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
+                            <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 Support</p>
                             <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
                         </button>
         
@@ -541,7 +541,7 @@ const Digital = () => {
                             </div>
                             <button
                                 className='transition-all duration-500 hidden lm:flex ease-in-out bg-[#FFCC33] mt-[11px] w-[234px] md:w-[251px] md:h-[56px] h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] items-center justify-center'
-                                type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
+                                type='button'  onClick={() => {navigate("/contact", { state: {section: "contact"}}),window.scrollTo(0, 0)}}
                             >
                                 <p className='transition-colors duration-500 ease-in-out font-[500] leading-[27px]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Call our 24/7 support</p>
                                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
@@ -580,7 +580,8 @@ const Digital = () => {
                         </div>
                         <button
                             className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group  hover:bg-opacity-0 hover:border-[1.5px] hover:border-[#002244] w-[163px] rounded-tl-lg rounded-br-lg h-[51px] lm:h-[58px] gap-2 flex items-center justify-center`}
-                            type='button'  onClick={() => navigate("/contact", { state: {section: "contact"}},window.scrollTo(0, 0))}
+                            type='button'  
+                            onClick={() => {navigate("/contact", { state: {section: "contact"}}),window.scrollTo(0, 0)}}
                         >
                         <p 
                             className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] leading-6 font-grava text-[#FFCC33] group-hover:text-[#002244]' 

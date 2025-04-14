@@ -1488,9 +1488,11 @@ const SME = () => {
               w-[154px] sm:w-[170px] lg:w-[219px] 
               h-[51px] sm:h-[55px] lg:h-[59px] 
               rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-              onClick={() =>
-                navigate("/contact",window.scrollTo(0, 0))
-              }>
+              onClick={() => {
+                navigate("/contact"),
+                window.scrollTo(0, 0)
+                }}
+              >
                 <p
                   className="transition-colors duration-500 ease-in-out font-[450] 
                         text-[14px] sm:text-base lg:text-[18px] font-grava 
