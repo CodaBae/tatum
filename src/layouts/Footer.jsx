@@ -220,6 +220,15 @@ const Footer = () => {
                 >
                   Terms of service
                 </p>
+                <p 
+                  className="font-grava text-[#002244] underline hover:no-underline text-[14px] whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/mobile/terms", {
+                    state: { section: "terms" },
+                  },              window.scrollTo(0, 0)
+                  )}
+                >
+                  Mobile App Terms <br /> & Conditions
+                </p>
                 <p className="font-grava text-[#002244] text-[14px] whitespace-nowrap">
                   Whistle blower
                 </p>
