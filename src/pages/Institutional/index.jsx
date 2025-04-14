@@ -239,7 +239,7 @@ const Institutional = () => {
                   },
                 },window.scrollTo(0, 0))
               }>
-              <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
+              <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 {/* Get started */}
                 Find out more
               </p>
@@ -377,13 +377,13 @@ const Institutional = () => {
             <button
               className="transition-all duration-500 ease-in-out bg-[#FFCC33] mt-[4px] px-5 lm:hidden h-[44px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center"
               type="button"
-              onClick={() =>
-                navigate("/institutional/account", {
+              onClick={() => {
+                navigate("/contact", { // /institutional/account
                   state: {
-                    section: "account",
+                    section: "contact", //account
                   },
-                },window.scrollTo(0, 0))
-              }>
+                }),window.scrollTo(0, 0)
+              }}>
               <p className="transition-colors duration-500 whitespace-nowrap ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
                 Talk to our relationship managers
               </p>
@@ -473,7 +473,7 @@ const Institutional = () => {
                 state: {
                   section: "contact",
                 },
-              },window.scrollTo(0, 0))}
+              }),window.scrollTo(0, 0)}
             }
             >
             <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]">
@@ -768,8 +768,8 @@ const Institutional = () => {
                   navigate("/contact", {
                     state: {
                       section: "contact",
-                    },
-                  },window.scrollTo(0, 0))}
+                    }
+                  }),window.scrollTo(0, 0)}
                 }
                 >
                 <p className="transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">

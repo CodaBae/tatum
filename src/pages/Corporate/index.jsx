@@ -793,7 +793,9 @@ const Corporate = () => {
                       </div>
                       <button
                           className={`animate__animated animate__slow animate__fadeInUp transition-all duration-500 ease-in-out bg-[#002244] group hover:bg-[#FFCC33]  w-[190px] lm:w-[180px] py-4 rounded-tl-lg rounded-br-lg h-[51px] lg:h-[58px] gap-2 flex items-center justify-center`}
-                          type='button'  onClick={() => navigate("/corporate/account", { state: {section: "account"}},window.scrollTo(0, 0))}
+                          type='button'  
+                          onClick={() => {navigate("/contact", { state: {section: "contact"}}), window.scrollTo(0, 0)}}
+                          // /corporate/account { state: {section: "account"}}
                       >
                       <p 
                           className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]'
