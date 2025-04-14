@@ -120,7 +120,7 @@ const MobileTerms = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
             }}
-            className="bg-[#FFCC33] w-full h-[254px]  lg:h-[320px]  flex flex-col items-center justify-center" //lg:h-[294px] 
+            className="bg-[#FFCC33] w-full h-[254px] px-5 lm:px-0 lg:h-[320px]  flex flex-col items-center justify-center" //lg:h-[294px] 
         >
             <p className="font-bold text-[#002244] text-center font-grava text-[34px] mt-[6%] lg:text-[71px] leading-[125%]  ">
                 Terms and Conditions for {isMobile ? null : <br />}
