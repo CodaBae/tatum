@@ -26,6 +26,7 @@ import Investors from "../pages/Investors";
 import Contact from "../pages/Contact";
 import InternetBanking from "../pages/Internet";
 import CookiePolicy from "../pages/Cookies";
+import MobileTerms from "../pages/MobileTerms";
 // import CookiePolicy from "../pages/Cookies/Cook";
 
 
@@ -56,6 +57,7 @@ export default function Routers() {
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="cookie-policy" element={<CookiePolicy />} />
         <Route path="terms" element={<Terms />} />
+        <Route path="/mobile/terms" element={<MobileTerms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
 
