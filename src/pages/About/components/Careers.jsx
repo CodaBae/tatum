@@ -132,10 +132,10 @@ const Careers = () => {
             work that improves the lives of millions of people.
           </p>
           <button
-            className={`animate__animated animate__slow animate__fadeInUp transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
+            className={`animate__animated animate__slow animate__fadeInUp cursor-default transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
             type="button">
             <p className="transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-              View open positions
+              Coming Soon
             </p>
             <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
           </button>
@@ -163,7 +163,7 @@ const Careers = () => {
             sectionName={"savings"} 
             mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740570327/man_on_phone_spj2pr.png"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
-            btnText={"View open positions"} 
+            btnText={"Coming Soon"} 
             styleP={{ height: "110%", marginLeft: "40%", marginTop: "5%" }}
 
           />

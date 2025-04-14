@@ -325,7 +325,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffcc33] h-[10px] w-full"></div>
+      <div className="bg-[#ffcc33] h-[10px] w-full mt-3 lm:mt-0"></div>
     </>
   );
 };
