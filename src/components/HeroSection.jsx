@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 // SVGS
 import NDIC from "../assets/svg/ndic.svg";
 import CBN from "../assets/svg/cbn_logo.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HeroSection = ({
   bgMobile,
@@ -20,6 +20,8 @@ const HeroSection = ({
   left
 }) => {
   const navigate = useNavigate();
+
+  const location = useLocation();
 
   return (
     <div className="h-full w-full overflow-hidden outline-none">
@@ -44,7 +46,7 @@ const HeroSection = ({
             <div className="flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 animate__animated animate__fadeInUp animate__delay-10s">
               {btnText && (
                 <button
-                  className="transition-all duration-500 ease-in-out hover:border-[1.5px] hover:border-[#002244] lm:w-[194.63px] rounded-tl-lg rounded-br-lg h-[57px] gap-2 flex items-center justify-center bg-[#002244] group hover:bg-[#FFCC33] p-5"
+                  className={`${location.pathname === "/about/careers" ? "bg-[#EDEDED]" : "bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244]"} transition-all duration-500 ease-in-out  lm:w-[194.63px] rounded-tl-lg rounded-br-lg h-[57px] gap-2 flex items-center justify-center p-5`}
                   type="button"
                   onClick={() => {
                     navigate(link, {
@@ -53,13 +55,12 @@ const HeroSection = ({
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <p className="transition-colors duration-500 ease-in-out whitespace-nowrap font-[500]  lg:text-[18px] font-grava text-[#FFCC33] group-hover:text-[#002244]">
-
+                  <p className={`${location.pathname === "/about/careers" ? "text-[#B0B0B0]" : " text-[#FFCC33] group-hover:text-[#002244]"} transition-colors duration-500 ease-in-out whitespace-nowrap font-[500] lg:text-[18px] font-grava`}>
                     {btnText}
                   </p>
                   <BsArrowRight
                     size={100}
-                    className="mt-[2px] transition-colors duration-500 ease-in-out w-5 h-5 text-[#FFCC33] group-hover:text-[#002244]"
+                    className={`${location.pathname === "/about/careers" ? "text-[#B0B0B0]" : "text-[#FFCC33] group-hover:text-[#002244]"} mt-[2px] transition-colors duration-500 ease-in-out w-5 h-5 `}
                   />
                 </button>
               )}

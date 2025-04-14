@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 import Line from "../../assets/svg/line_b.svg"
 import Plus from "../../assets/svg/plus.svg";
@@ -22,6 +23,7 @@ const Help = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
   const [isSmall, setIsSmall] = useState(window.innerWidth < 768);
 
+  const navigate = useNavigate()
 
     useEffect(() => {
         const handleResize = () => {
@@ -324,7 +326,8 @@ const Help = () => {
             <button
               className='transition-all duration-500 ease-in-out bg-[#FFCC33] w-[150px] lg:w-[186px] h-[56px] rounded-tl-lg rounded-br-lg gap-2 group hover:bg-[#002244] flex items-center justify-center'
               type='button'
-               onClick={() => navigate("/", {state: {section: "home"}})}
+              // onClick={() => navigate("/", {state: {section: "home"}})}
+              onClick={() => {navigate("/contact", { state: {section: "contact"}}),window.scrollTo(0, 0)}}
             >
                 <p className='transition-colors duration-500 ease-in-out font-[500]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#FFCC33]'>Get in touch</p>
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl   transition-colors duration-500 font-medium ease-in-out w-5 h-5 text-[#002244] group-hover:text-[#FFCC33]' />
