@@ -132,13 +132,28 @@ const Careers = () => {
             work that improves the lives of millions of people.
           </p>
           <button
+            className="bg-[#EDEDED] cursor-default px-5 h-[54px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+            type="button"
+            // onClick={() =>
+            //   navigate("/personal/account", { state: { section: "account" } },window.scrollTo(0, 0))
+            // }
+          >
+            <p className="font-[300]  lg:text-[18px] font-grava text-[#B0B0B0] ">
+              To be available soon
+            </p>
+            <BsArrowRight
+              size={100}
+              className="mt-[2px] text-5xl font-medium ease-in-out w-5 h-5 text-[#B0B0B0]"
+            />
+          </button>
+          {/* <button
             className={`animate__animated animate__slow animate__fadeInUp cursor-default transition-all duration-300 ease-in-out bg-[#002244] group hover:bg-[#FFCC33] hover:border-[1.5px] hover:border-[#002244] w-[190px] lg:w-[243px] rounded-tl-lg rounded-br-lg h-[59px] gap-2 flex items-center justify-center`}
             type="button">
             <p className="transition-colors duration-300 ease-in-out font-medium  lg:text-base font-grava text-[#FFCC33] group-hover:text-[#002244]">
-              Coming Soon
+              To be available Soon
             </p>
             <BsArrowRight size={100}   className="text-5xl  w-5 h-5 mt-[1px] transition-colors duration-300 ease-in-out text-[#FFCC33] group-hover:text-[#002244]" />
-          </button>
+          </button> */}
         </div>
         <div className="animate__animated animate__fadeInRight absolute  bottom-[-80px] lm:bottom-[-40px] right-[-25px] lg:top-[80px] lg:right-[35px] lg:z-10">
           <div className="relative">
@@ -163,7 +178,7 @@ const Careers = () => {
             sectionName={"savings"} 
             mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740570327/man_on_phone_spj2pr.png"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
-            btnText={"Coming Soon"} 
+            btnText={"To be available Soon"} 
             styleP={{ height: "110%", marginLeft: "40%", marginTop: "5%" }}
 
           />
