@@ -208,7 +208,7 @@ const About = () => {
                     <img
                       src="https://framerusercontent.com/images/8RboGMFeYPRw74A3ZLlxVzosFE.png" //{NDIC}
                       alt="NDIC"
-                      className="flex justify-start lm:inline-block  h-[23px] md:w-[50px] md:h-[25px]"
+                      className="flex justify-start lm:inline-block h-[23px] md:w-[50px] md:h-[25px]"
                     />
                   </div>
                 </p>
