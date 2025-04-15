@@ -536,7 +536,7 @@ const handleTouchEnd = () => {
                     </p>
                     <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                       All deposits are insured by
-                      <div className="w-5 lm:w-[60px] mt-0 lg:mt-1.5">
+                      <div className="w-[60px] lm:w-[60px] mt-0 lg:mt-1.5">
                         <img
                           src="https://framerusercontent.com/images/8RboGMFeYPRw74A3ZLlxVzosFE.png" //{NDIC}
                           alt="NDIC"
