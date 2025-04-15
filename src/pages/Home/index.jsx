@@ -536,11 +536,11 @@ const handleTouchEnd = () => {
                     </p>
                     <p className="flex items-center gap-2" tyle={{zIndex:'99999'}}>
                       All deposits are insured by
-                      <div className="lm:w-[60px] mt-0 lg:mt-1.5">
+                      <div className="w-[60px] lm:w-[60px] mt-0 lg:mt-1.5">
                         <img
                           src="https://framerusercontent.com/images/8RboGMFeYPRw74A3ZLlxVzosFE.png" //{NDIC}
                           alt="NDIC"
-                          className="flex justify-start lm:inline-block mt-1 lg:mt-0 w-2 h-[25px] md:w-[21px] md:h-[28px]" // h-[23px] 
+                          className="flex justify-start lm:inline-block mt-1 lg:mt-0  h-[25px] md:w-[21px] md:h-[28px]" // h-[23px] 
                         />
                       </div>
                     </p>
