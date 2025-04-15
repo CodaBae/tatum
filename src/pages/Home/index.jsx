@@ -538,7 +538,7 @@ const handleTouchEnd = () => {
                       All deposits are insured by
                       <div className="lm:w-[60px] mt-0 lg:mt-1.5">
                         <img
-                          src={NDIC}
+                          src="https://framerusercontent.com/images/8RboGMFeYPRw74A3ZLlxVzosFE.png" //{NDIC}
                           alt="NDIC"
                           className="flex justify-start lm:inline-block mt-1 lg:mt-0 w-[50px] h-[25px] md:w-[21px] md:h-[28px]" // h-[23px] 
                         />
