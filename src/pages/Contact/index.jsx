@@ -93,9 +93,9 @@ const Contact = () => {
                             All deposits are insured by
                             <div className="lm:w-[60px] mt-1 lg:mt-1.5">
                                 <img
-                                src={NDIC}
+                                src="https://framerusercontent.com/images/8RboGMFeYPRw74A3ZLlxVzosFE.png" //{NDIC}
                                 alt="NDIC"
-                                className="flex justify-start lm:inline-block  h-[20px] w-[37px] md:w-[50px] md:h-[25px]"
+                                className="flex justify-start lm:inline-block  h-[23px] md:w-[50px] md:h-[25px]"
                                 />
                             </div>
                             </p>
