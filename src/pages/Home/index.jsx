@@ -612,11 +612,9 @@ const handleTouchEnd = () => {
                         : ""
 
                     } font-[400] font-grava text-[14px] lg:text-[25px]  text-left text-[#002244] leading-[20px] lg:leading-[34.1px]`}
-
-                    // animate__animated animate__fadeInUp animate__delay-08s
                   >
-                    Your money, your way. Experience banking that fits your
-                    lifestyle, not the other way around.
+                    Your money, your way. Experience banking that seamlessly fits into your lifestyle, 
+                    for your convenience.
                   </p>
                   <div
                     className={`flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3 ${

@@ -184,8 +184,8 @@ const About = () => {
               <p
                 className={`animate__animated   animate__fadeInUp animate__delay-06s w-[280px]  md:w-[530px] lm:w-[571px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
-                We are more than a financial institution—we are a trusted
-                partner dedicated to safeguarding your financial wellbeing.
+                We are more than a financial institution; we are your trusted partner 
+                dedicated to safeguarding your financial wellbeing.
               </p>
             </div>
 
@@ -235,7 +235,7 @@ const About = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209567/Slide_3_1_eei8jr.png"} 
             title={` Welcome to <br /> <span class="font-bold">Tatum Bank</span>`}
-            content={`We are more than a financial institution—we are <span class="block">a trusted partner dedicated to safeguarding your </span> financial wellbeing.`} 
+            content={`We are more than a financial institution; we are your<span class="block"> trusted partner dedicated to safeguarding your </span> financial wellbeing.`} 
             link={"/personal"} 
             sectionName={"savings"} 
             mainImgMobile={"https://framerusercontent.com/images/Mu86Y79csh9l6TTNfaBOTXmk.png"} 

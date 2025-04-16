@@ -105,9 +105,8 @@ const Private = () => {
                 //
                 className={`animate__animated animate__fadeInUp animate__delay-06s w-[300px]  md:w-[833px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
               >
-                With privileged access to premium banking services, bespoke
-                investment strategies, and the prestige of Tatum Private
-                Banking, we keep you smiling—every step of the way.
+                With privileged access to premium banking services, bespoke investment strategies, 
+                and the prestige of Tatum Private Banking, we keep you smiling every step of the way.
               </p>
               <div className="flex items-center mt-[12px] gap-3">
                 <button
@@ -177,7 +176,7 @@ const Private = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209917/Slide_3_2_hcvtic.png"} 
             title={`Exclusive. Personalized. <br/> <span class="font-bold ">Exceptional </span>`}
-            content={`<p class="tracking-[0.01em] whitespace-nowrap">With privileged access to premium banking services, bespoke investment <span class="block"> strategies, and the prestige of Tatum Private Banking, we keep you </span> smiling—every step of the way.</p>`} 
+            content={`<p class="tracking-[0.01em] whitespace-nowrap">With privileged access to premium banking services, bespoke investment <span class="block"> strategies, and the prestige of Tatum Private Banking, we keep you </span> smiling every step of the way.</p>`} 
             link={"/private"} 
             sectionName={"wealth"} 
             mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
@@ -210,15 +209,13 @@ const Private = () => {
             </p>
             <div className="flex flex-col w-full gap-[18px]">
               <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
-                Your Wealth, Our{" "}
-                <span className="block md:inline-block">Expertise.</span>
+                Managing Your Wealth, {" "}
+                <span className="block md:inline-block">Our Expertise.</span>
               </p>
               <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
-                At Tatum Bank, we go beyond banking—we curate personalized
-                wealth growth strategies that align with your financial
-                ambitions. Whether you seek investment diversification, estate
-                planning, or asset protection, our seasoned advisors craft
-                bespoke solutions that optimize your wealth.
+                At Tatum Bank, we go beyond banking we curate personalized wealth growth strategies that align 
+                with your financial ambitions. Whether you seek investment diversification, estate planning, 
+                or asset protection, our seasoned advisors craft bespoke solutions that optimize your wealth.
               </p>
             </div>
 
@@ -432,9 +429,8 @@ const Private = () => {
                   The Ultimate Symbol of Prestige
                 </p>
                 <p className="text-[14px] lm:text-[18px] font-grava text-[#002244] font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
-                  Designed for the elite few, the Tatum Black Card is more than
-                  just a payment solution—it’s a statement of status and access
-                  to unparalleled privileges worldwide.
+                  Designed for the elite few, the Tatum Black Card is more than just a payment solution, 
+                  it’s a statement of status and access to unparalleled privileges worldwide.
                 </p>
               </div>
             </div>
