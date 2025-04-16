@@ -118,7 +118,7 @@ const Corporate = () => {
                 <p
                   className={`animate__animated animate__fadeInUp animate__delay-06s w-auto md:w-[686px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                   At Tatum Bank, we understand that businesses thrive when they
-                  have the right financial partner—one that offers tailored
+                  have the right financial partner, one that offers tailored
                   solutions, expert insights, and seamless banking services to
                   drive growth.
                 </p>
@@ -199,7 +199,7 @@ const Corporate = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740493265/cb_bg_m5ohdd.png"} 
             title={`Powering Your <br /> <span class="font-bold">Business Growth</span>`}
-            content={`<p class="leading-[36.1px] whitespace-nowrap">At Tatum Bank, we understand that businesses thrive when they <span class="block">have the right financial partner—one that offers tailored solutions,</span> expert insights, and seamless banking services to drive growth.</p>`} 
+            content={`<p class="leading-[36.1px] whitespace-nowrap">At Tatum Bank, we understand that businesses thrive when they <span class="block">have the right financial partner, one that offers tailored solutions,</span> expert insights, and seamless banking services to drive growth.</p>`} 
             link={"/corporate"} 
             sectionName={"corp"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739211618/Corporate_banking_1_f9nnyk.webp"} 

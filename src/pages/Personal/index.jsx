@@ -157,7 +157,7 @@ const Personal = () => {
               {/* Second Text  */}
               <p
                 className={`animate__animated animate__fadeInUp animate__delay-06s w-[90%] md:w-[265px] lg:w-[702px] font-[300]   text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}>
-                Explore tailored solutions that fit your lifestyle, empower your goals, and make banking a joy.
+                Explore tailored solutions that fit your lifestyle, empower your goals and enjoy a seamless banking experience.
               </p>
 
               {/* Button */}
@@ -239,7 +239,7 @@ const Personal = () => {
                 Keeps You Smiling
               </span></p>`}
             content={
-              `<p class="leading-[34.1px]">Explore tailored solutions that fit your lifestyle, empower <br /> your goals, and make banking a joy.</p>`
+              `<p class="leading-[34.1px]">Explore tailored solutions that fit your lifestyle, empower <br /> your goals and enjoy a seamless banking experience.</p>`
             }
             link={"/personal"}
             sectionName={"savings"}
@@ -281,9 +281,9 @@ const Personal = () => {
             </p>
 
             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lg:leading-[27px] text-center md:text-left tracking-[0.01em]">
-
-              Our savings account helps you move your money with ease, offering
-              security and successful transactions every single time
+              Enjoy a secure and rewarding way to save. Don't just save, earn while you do.
+              {/* Our savings account helps you move your money with ease, offering
+              security and successful transactions every single time */}
             </p>
           </div>
 
@@ -321,10 +321,12 @@ const Personal = () => {
             </p>
 
             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
-
-              Manage your finances effortlessly with a current account. Enjoy
+              Manage your finances effortlessly with a current account. 
+              Enjoy flexible banking and instant access to your funds, 
+              anytime, anywhere with a Tatum current account.
+              {/* Manage your finances effortlessly with a current account. Enjoy
               unlimited transactions, seamless online banking, and quick access
-              to funds on the go.
+              to funds on the go. */}
             </p>
           </div>
 
@@ -648,7 +650,8 @@ const Personal = () => {
             Digital Banking
           </p>
           <p className="font-grava text-[24px] lm:text-[48px] text-center font-[450] leading-[30px] lm:leading-[60px] tracking-[0.2%] text-[#002244]">
-            Everyday banking, anytime, anywhere.
+            {/* Everyday banking, anytime, anywhere. */}
+            Bank with ease, anytime, anywhere.
           </p>
         </div>
         <div className="flex flex-col gap-[72px] items-center w-full">

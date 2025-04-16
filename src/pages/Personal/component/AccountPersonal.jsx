@@ -205,7 +205,7 @@ const AccountPersonal = () => {
         <section className='bg-[#FFF] flex flex-col lm:flex-row items-start lm:h-min lm:gap-[64px] gap-[48px] py-[56px] px-5 lm:py-[80px] lm:px-[59px]'>
             <div className='flex flex-col gap-6 w-full lm:w-[448px]'>
                 <p className='text-[#002244] font-[400] text-[11px] leading-5 tracking-[0.2%] font-grava lg:text-[14px]'>WHY CHOOSE US</p>
-                <p className='font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Join Tatum {isMobile ? null : <br />}  Bank?</p>
+                <p className='font-[450] text-[#002244] font-grava text-[24px] lm:text-[48px] leading-[30px] lm:leading-[60px] tracking-[0.2%]'>Why Bank with  {isMobile ? null : <br />}  Tatum?</p>
             </div>
             <div className='flex flex-col w-full lm:w-[810px]'>
                 <div

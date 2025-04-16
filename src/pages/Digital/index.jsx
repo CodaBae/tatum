@@ -254,10 +254,10 @@ const Digital = () => {
                 <div className='flex flex-col items-center md:items-start gap-4 w-[250px] md:w-[350px] lm:w-[565px]' data-aos="fade-right" >
                 <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                     <p className='font-[500] whitespace-nowrap text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
-                        Tatum Mobile App – Bank on <span className="block">the Move</span>
+                        Tatum Mobile App – Effortless <span className="block">Banking On The Go</span>
                     </p>
                     <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[20px] lm:leading-[27px] text-center md:text-left tracking-[0.2%] w-[318px] lm:w-full">
-                        Your bank is now in your pocket! Enjoy effortless banking on the go—wherever, whenever. 
+                        Your bank is now in your pocket! Enjoy effortless banking on the go, wherever, whenever. 
                         Our Mobile Banking is designed to fit your lifestyle, keeping you connected, in control, 
                         and always smiling.
                     </p>

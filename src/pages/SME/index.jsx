@@ -1067,7 +1067,7 @@ const SME = () => {
                       Payroll Management
                     </h1>
                     <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Payroll Management to pay salaries on time, handle taxes, and manage employee benefits—all with ease.
+                      Pay salaries on time, handle taxes, and manage employee benefits, all with ease.
                     </p>
                   </div>
                   <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">

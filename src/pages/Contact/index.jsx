@@ -159,10 +159,11 @@ const Contact = () => {
                     <p className='font-[300] text-[#002244] font-grava text-center md:text-left text-[14px] leading-[30px] lg:leading-[130%] tracking-[0.25em] uppercase lm:ml-1.5'>CONTACT US</p>
                     <p className='font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[48px] leading-[30px] lg:leading-[60px]'>Got questions, complaints, or feedback?</p>
                     <p className="text-[14px] lm:whitespace-nowrap lm:text-[20px] font-grava font-[400] text-[#002244] leading-[27px] text-center md:text-left tracking-[0.2%]">
-                        If you require any assistance regarding our company,
+                        {/* If you require any assistance regarding our company,
                         <span className="lg:block">businesses or exploits, please don’t hesitate to</span> 
                         contact us. We would be more than happy to help 
-                        <span className="lg:block">you out.</span> 
+                        <span className="lg:block">you out.</span>  */}
+                        We would be more than happy to help <span className="lg:block">you out.</span>
                     </p>
                 </div>
             </div>
