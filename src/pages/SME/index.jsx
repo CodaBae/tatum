@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import smeHeroImg from "../../assets/svg/smeHeroImg.svg";
 import { BsArrowRight } from "react-icons/bs";
-import { FaPlus, FaMinus } from "react-icons/fa";
-import line from "../../assets/svg/line.svg";
+
 import smeCard1 from "../../assets/jpg/smeCard1.jpg";
 import smeCard2 from "../../assets/jpg/smeCard2.jpg";
 import smeCard5 from "../../assets/jpg/smeCard5.jpg";
@@ -14,20 +12,18 @@ import scrollImg1 from "../../assets/jpg/scrollImg1.jpg";
 import scrollImg2 from "../../assets/jpg/scrollImg2.jpg";
 import scrollImg3 from "../../assets/jpg/scrollImg3.jpg";
 import scrollImg4 from "../../assets/jpg/scrollImg4.jpg";
-import { useTransform, motion, useScroll } from "framer-motion";
+
 
 import Plus from "../../assets/svg/plus.svg";
 import Minus from "../../assets/svg/minus.svg";
 
-import carrots from "../../assets/jpg/carrots.jpg";
-import plusIcon from "../../assets/svg/plusIcon.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import CBN from "../../assets/svg/cbn.svg";
 import NDIC from "../../assets/png/ndic.png";
 import ball1 from "../../assets/svg/ball1.svg";
 import ball2 from "../../assets/svg/ball2.svg";
 import ball3 from "../../assets/svg/ball3.svg";
-import "./styles.css";
+// import "./styles.css";
 import "./card.css";
 
 import Lenis from "@studio-freight/lenis";
@@ -47,63 +43,82 @@ const SME = () => {
   const contentRef3 = useRef(null);
   const contentRef4 = useRef(null);
 
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
 
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true
+    });
 
-    function raf(time) {
+    // Scroll animation loop
+    const raf = time => {
       lenis.raf(time);
       requestAnimationFrame(raf);
-    }
-
+    };
     requestAnimationFrame(raf);
-  });
 
-  const projects = [
+    // Scroll tracking for stacking logic
+    lenis.on("scroll", () => {
+      if (!containerRef.current) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+      console.log("Container is in view:", isInView);
+
+      if (isInView) {
+        // This is where you add your custom stacking or animation logic
+        console.log("StackingCards is in view!");
+      }
+    });
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  // Card data
+  const cards = [
     {
-      title: "Matthias Leidinger",
-      description:
-        "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-      src: "rock.jpg",
-      link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-      color: "#BBACAF",
+      title: "POS Services",
+      description: "POS & Merchant Services for easy customer payments",
+      points: [
+        "Sell Smarter with our Advanced POS Systems",
+        "Secure card processing, real-time sales analytics, and inventory sync.",
+      ],
+      image: scrollImg1,
+      bgImage:
+        "https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png",
     },
     {
-      title: "Clément Chapillon",
-      description:
-        "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-      src: "tree.jpg",
-      link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-      color: "#977F6D",
+      title: "Merchant Services",
+      description: "Accept Payments Anywhere, Anytime",
+      points: [
+        "Payment gateways, QR codes, and card terminals.",
+        "Advanced security to protect your revenue.",
+      ],
+      image: scrollImg2,
+      bgImage:
+        "https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png",
     },
     {
-      title: "Zissou",
-      description:
-        "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-      src: "water.jpg",
-      link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-      color: "#C2491D",
+      title: "Online & Mobile Transfers",
+      description: "Stay in control of your finances with our cutting-edge digital banking solutions.",
+      points: ["Internet & Mobile Banking", "24/7 Account Access & Monitoring"],
+      image: scrollImg3,
+      bgImage:
+        "https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png",
     },
     {
-      title: "Mathias Svold and Ulrik Hasemann",
-      description:
-        "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-      src: "house.jpg",
-      link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-      color: "#B62429",
-    },
-    {
-      title: "Mark Rammers",
-      description:
-        "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
-      src: "cactus.jpg",
-      link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-      color: "#88A28D",
+      title: "Payroll Management",
+      description: "Pay salaries on time, handle taxes, and manage employee benefits.",
+      points: ["Bulk Payment Processing", "Advanced security to protect your revenue."],
+      image: scrollImg4,
+      bgImage:
+        "https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png",
     },
   ];
 
@@ -123,81 +138,12 @@ const SME = () => {
     setOpenTabFour(!openTabFour);
   };
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const [loanAmount, setLoanAmount] = useState(100000);
-
-  const [repayPeriod, setRepayPeriod] = useState(3);
-
-  const [interest, setInterest] = useState(4);
-
-  const handleChange = (e) => {
-    setLoanAmount(Number(e.target.value));
-  };
-
-  const handleRepayChange = (e) => {
-    setRepayPeriod(Number(e.target.value));
-  };
-
-  const handleInterest = (e) => {
-    setInterest(Number(e.target.value));
-  };
 
   const navigate = useNavigate();
 
   const smeRef = useRef(null);
 
   const paymentRef = useRef(null);
-  const cardsRef = useRef([]);
-
-  useEffect(() => {
-    const cards = cardsRef.current;
-
-    // Apply padding and scaling effects
-    cards.forEach((card, index) => {
-      const offsetTop = 20 + index * 20; // Adjust overlap amount
-      card.style.paddingTop = `${offsetTop}px`;
-
-      if (index === cards.length - 1) return;
-
-      const toScale = 1 - (cards.length - 1 - index) * 0.1; // Scale down effect
-      const nextCard = cards[index + 1];
-      const cardInner = card.querySelector(".card__inner");
-
-      const handleScroll = () => {
-        const rect = nextCard.getBoundingClientRect();
-        const percentageY = Math.max(
-          0,
-          Math.min(1, (window.innerHeight - rect.top) / window.innerHeight)
-        );
-
-        cardInner.style.transform = `scale(${valueAtPercentage({
-          from: 1,
-          to: toScale,
-          percentage: percentageY,
-        })})`;
-        cardInner.style.filter = `brightness(${valueAtPercentage({
-          from: 1,
-          to: 0.6,
-          percentage: percentageY,
-        })})`;
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    });
-  }, []);
-
-  // Helper function to calculate values at a percentage
-  const valueAtPercentage = ({ from, to, percentage }) => {
-    return from + (to - from) * percentage;
-  };
-
-  // Variants for Framer Motion animations
-  const cardVariants = {
-    offscreen: { opacity: 0, y: 50 },
-    onscreen: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const accountRef = useRef(null);
   const loanRef = useRef(null);
@@ -235,6 +181,8 @@ const SME = () => {
         window.removeEventListener("resize", handleResize);
       };
     }, []);
+
+
 
   return (
     <div ref={smeRef} className="">
@@ -420,308 +368,10 @@ const SME = () => {
                 link="/business/account"
                 sect=""
               />
-              {/* <button
-                className={`${
-                  activeIndex === 2
-                    ? "animate__animated animate__slow animate__fadeInUp"
-                    : ""
-                } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center px-5 h-[59px]`}
-                type="button"
-                onClick={() =>
-                  navigate("/business/account", window.scrollTo(0, 0))
-                }>
-                <p className="transition-colors duration-500 ease-in-out font-[300]  lg:text-[18px] font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                  {/* Open an account 
-                  Find out more
-                </p>
-                <BsArrowRight
-                  size={100}
-                  className="text-5xl w-5 h-5 mt-[2px] transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
-                />
-              </button> */}
             </div>
           </div>
         </div>
       </div>
-
-      {/* LOAN CALCULATOR SECTION */}
-
-      {/* <div
-        ref={loanRef}
-        className="pt-[56px]  h-[1300px] lg:h-[937px] bg-[#F9FAFB] flex justify-center lg:items-center">
-        <div className="flex flex-col items-center gap-[40px] w-[100%] h-[753px] ">
-          <div className=" flex flex-col items-center w-[836px] gap-[12px] ">
-          <p className="font-grava text-[#334E69] font-medium tracking-[0.25em] uppercase text-sm text-[11px] lg:text-[14px] lg:text-[14px] ">
-              Loan Calculator
-            </p>
-            <h1 className="font-grava font-[300] w-[350px] sm:w-[500px] lg:w-[836px] text-[24px] leading-[30px] tracking-[1.4%] sm:text-[34px] sm:leading-[40px] sm:tracking-[0.8%] lg:text-[48px] lg:leading-[60px] lg:tracking-[0.2%] text-[#002244] text-center">
-              Get instant loan estimates and choose the right financing plan.
-            </h1>
-          </div>
-          <div className=" flex flex-col lg:flex-row gap-[20px]">
-            <div className="w-[350px] lg:w-[728px] flex flex-col items-center bg-[#ffffff] h-[554px] py-[32px] px-[24px] gap-[40px] rounded-[12px] ">
-              <div className="flex w-[100%] justify-start ">
-                <form className=" ">
-                  <fieldset>
-                    <legend className="sr-only">Select an Option</legend>
-                    <div className="flex items-center">
-                      {/* Personal 
-                      <label className="cursor-pointer  mr-2 last:mr-0">
-                        <input
-                          type="radio"
-                          name="option"
-                          value="personal"
-                          className="peer sr-only"
-                          defaultChecked
-                        />
-                        <div
-                          className="px-[24px] py-[12px] w-[113px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none  ">
-                          <p className="font-grava font-[450] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
-                            Personal
-                          </p>
-                        </div>
-                      </label>
-
-                      {/* Home 
-                      <label className="cursor-pointer relative mr-2 last:mr-0">
-                        <input
-                          type="radio"
-                          name="option"
-                          value="home"
-                          className="peer sr-only"
-                        />
-                        <div
-                          className="px-[24px] py-[12px] w-[93px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
-                          <p className="font-grava font-[450] text-center text-[16px] leading-[24px] tracking-[0.2%] text-[#002244]">
-                            Home
-                          </p>
-                        </div>
-                      </label>
-
-                      {/* Car 
-                      <label className="cursor-pointer relative mr-2 last:mr-0">
-                        <input
-                          type="radio"
-                          name="option"
-                          value="car"
-                          className="peer sr-only"
-                        />
-                        <div
-                          className="px-[24px] py-[12px] w-[75px] h-[48px] rounded-tl-[8px] rounded-br-[8px] border border-[#002244] text-[#002244] 
-                            peer-checked:bg-[#FFCC33] peer-checked:border-none">
-                          <p className="font-grava font-[450] text-center text-[16px] leading-[24px] tracking-[0.2%]  text-[#002244]">
-                            Car
-                          </p>
-                        </div>
-                      </label>
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-              <div className="w-[289px] h-[372px] lg:w-[680px] lg:h-[402px] flex flex-col gap-[48px] ">
-                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount 
-                  <div className="flex justify-between items-center mb-2">
-                    <label className="font-semibold text-gray-700">
-                      <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                        Loan amount
-                      </p>
-                    </label>
-                    <span className="text-gray-600">
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        NGN 500,000
-                      </p>
-                    </span>
-                  </div>
-
-                  {/* Slider 
-                  <div className=" relative">
-                    <input
-                      type="range"
-                      min={0}
-                      max={1500000}
-                      step={1000}
-                      value={loanAmount}
-                      onChange={handleChange}
-                      className=" my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
-                      style={{
-                        background: `linear-gradient(to right, #FFCC33 ${(
-                          (loanAmount / 1500000) *
-                          95
-                        ).toFixed(2)}%, #F2F4F7 ${
-                          (loanAmount / 1500000) * 100
-                        }%)`,
-                      }}
-                    />
-                  </div>
-
-                  {/* Min/Max Labels 
-                  <div className="flex justify-between text-sm text-gray-500 mt-2">
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        NGN {loanAmount.toLocaleString()}
-                      </p>
-                    </span>
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        NGN 1,500,000
-                      </p>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  <div className="flex justify-between items-center mb-2">
-                    <label className="font-semibold text-gray-700">
-                      <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                        You want to re-pay it over
-                      </p>
-                    </label>
-                    <span className="text-gray-600">
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        12 Months
-                      </p>
-                    </span>
-                  </div>
-
-                  {/* Slider 
-                  <input
-                    type="range"
-                    min={0}
-                    max={48}
-                    step={1}
-                    value={repayPeriod}
-                    onChange={handleRepayChange}
-                    className="my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
-                    style={{
-                      background: `linear-gradient(to right, #FFCC33 ${(
-                        (repayPeriod / 48) *
-                        95
-                      ).toFixed(2)}%, #F2F4F7 ${(repayPeriod / 48) * 100}%)`,
-                    }}
-                  />
-
-                  {/* Min/Max Labels 
-                  <div className="flex justify-between text-sm text-gray-500 mt-2">
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        {repayPeriod.toLocaleString()} Month(s)
-                      </p>
-                    </span>
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        48 Months
-                      </p>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="w-[289px] h-[92px]  lg:w-[680px] lg:h-[102px] flex flex-col gap-[16px] ">
-                  {/* Label and current amount 
-                  <div className="flex justify-between items-center mb-2">
-                    <label className="font-semibold text-gray-700">
-                      <p className="font-grava font-[600] text-[16px] leading-[24px] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                        Interest Rate
-                      </p>
-                    </label>
-                    <span className="text-gray-600">
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        2.4%
-                      </p>
-                    </span>
-                  </div>
-
-                  {/* Slider 
-                  <input
-                    type="range"
-                    min={0}
-                    max={24}
-                    step={1}
-                    value={interest}
-                    onChange={handleInterest}
-                    className=" my-slider w-full h-2 rounded-lg appearance-none cursor-pointer"
-                    style={{
-                      background: `linear-gradient(to right, #FFCC33 ${(
-                        (interest / 24) *
-                        95
-                      ).toFixed(2)}%, #F2F4F7 ${(interest / 24) * 100}%)`,
-                    }}
-                  />
-
-                  {/* Min/Max Labels 
-                  <div className="flex justify-between text-sm text-gray-500 mt-2">
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        {interest.toLocaleString()}%
-                      </p>
-                    </span>
-                    <span>
-                      <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                        24%
-                      </p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-[350px] h-[454px] lg:w-[580px] lg:h-[554px] flex flex-col gap-[22px] ">
-              <div className="w-[350px] h-[160px] lg:w-[580px] lg:h-[245px] flex bg-[#ffffff] py-[46px] px-[28px] justify-between lg:gap-[102px] lg:justify-center items-center rounded-[12px] ">
-                <div>
-                  <h1 className="font-grava font-[450] text-[16px] leading-[24px] lg:font-[600] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                    Monthly Payments
-                  </h1>
-                  <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                    NGN 50,000
-                  </p>
-                </div>
-                <img src={line} alt="" />
-                <div>
-                  <h1 className="font-grava font-[450] text-[16px] leading-[24px] lg:font-[600] lg:text-[18px] lg:leading-[27px] tracking-[0.2%]  text-[#002244]">
-                    Total Payments
-                  </h1>
-                  <p className="font-grava font-[300] text-[14px] leading-[20px] tracking-[0.2%] lg:text-[18px] lg:leading-[27px] lg:tracking-[0.2%]  text-[#002244]">
-                    NGN 50,000
-                  </p>
-                </div>
-              </div>
-              <div className="w-[350px] h-[272px] lg:w-[580px] lg:h-[287px] flex flex-col gap-[40px] lg:gap-[56px] bg-[#ffffff] rounded-[12px] py-[32px] px-[24px] ">
-                <div className="flex flex-col items-center gap-[24px] ">
-                  <button
-                    className={`${
-                      activeIndex === 2
-                        ? "animate__animated animate__slow animate__fadeInUp"
-                        : ""
-                    } transition-all duration-500 ease-in-out bg-[#ffcc33] group hover:bg-[#002244]  w-[302px] h-[56px]  lg:w-[532px] sm:h-[67px] rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center`}
-                    type="button"
-                    onClick={() =>
-                      navigate("/business/account",window.scrollTo(0, 0))
-                    }>
-                    <p className="transition-colors duration-500 ease-in-out font-medium  lg:text-base font-grava text-[#002244] group-hover:text-[#ffcc33]">
-                      Apply now
-                    </p>
-                    <BsArrowRight
-                      size={100}
-                      className="text-5xl  w-5 h-5 transition-colors duration-500 ease-in-out text-[#002244] group-hover:text-[#ffcc33]"
-                    />
-                  </button>
-
-                  <p className="font-grava font-[300] text-center text-[16px] w-[532px] leading-[24px] tracking-[0.2%]  text-[#002244] cursor-pointer  ">
-                    Check eligibility
-                  </p>
-                </div>
-                <div className="w-[302px] h-[64px]  lg:w-[532px] lg:h-[52px] border-t-[1px] border-[#E6E9EC] pt-[24px] lg:pt-0 flex items-end">
-                  <p className="font-grava font-[300] text-center text-[14px] w-[532px] leading-[20px] tracking-[0.2%]  text-[#546B82]">
-                    Terms & conditions applied. Actual installments may differ.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div ref={loanRef} className="lg:h-[705px] bg-[#F9FAFB] flex lg:flex-row flex-col-reverse  justify-between gap-[96px] items-center py-[48px] px-[20px] sm:py-[60px] sm:pr-[101px] sm:pl-[110px] ">    {/*h-[1000px]  */} 
         <div
@@ -806,320 +456,95 @@ const SME = () => {
         </div>
       </div>
 
-      {/* Scroll section starts */}
-
+      
+      
       <div
-        ref={paymentRef}
-        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col lg:gap-[64px]  relative min-h-[200vh]">
+        ref={containerRef}
+        className="py-8 px-4 sm:py-[88px] sm:px-[56px] flex flex-col   relative"
+      >
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
             <h1 className="font-grava font-[450] w-[318px] sm:w-[500px] lg:w-[754px] text-2xl sm:text-3xl lg:text-[48px] leading-[30px] sm:leading-[40px] lg:leading-[60px] text-center text-[#002244]">
               Payment Solutions - Making Every Transaction Seamless
             </h1>
             <p className="font-grava font-[300] text-center w-[318px] sm:w-[450px] lg:w-[538px] text-[14px] sm:text-base lg:text-[18px] leading-[20px] sm:leading-[24px] lg:leading-[27px] text-[#002244]">
-              We provide secure, fast, and efficient payment solutions that
-              enable you to manage transactions effortlessly.
+              We provide secure, fast, and efficient payment solutions that enable you to manage transactions effortlessly.
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-[100px] mt-[80px]">
+        <div 
+          ref={containerRef}
+          className="card-stack " 
+          style={{
+            height: `${cards.length * 100}vh`, // Adjust height based on number of cards
+          }}
+        >
+          {cards.map((card, index) => {
 
-          {/* Card 1 - POS Services */}
-          <div ref={container} className=""> {/* cardContainer */}
-            <motion.div
-              style={{
-                top: `calc(-5vh + ${0 * 25}px)`,
-              }}
-              className="card1">
+            return (
               <div
-                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
+                key={index}
+                className="card-container"
                 style={{
-                  backgroundImage:
-                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279498_vbfddc.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: " fit-content",
-                }}>
-                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                  <div className="flex flex-col gap-4 sm:gap-[12px]">
-                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
-                      POS Services
-                    </h1>
-                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
-                      POS & Merchant Services for easy customer payments
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                      {/* List items */}
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Sell Smarter with our Advanced POS Systems
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Secure card processing, real-time sales analytics, and
-                          inventory sync.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <button  
-                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                    >
-                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                        To be available soon
+                  top: `${index * 6 + 10}vh`,
+                  zIndex: cards.length + index,
+                  position: "sticky",
+                }}
+              >
+                <div
+                  className="card-inner"
+                  style={{
+                    backgroundImage: `url(${card.bgImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="w-full  flex flex-col gap-6 sm:gap-[32px]">
+                    <div className="flex flex-col gap-4 sm:gap-[12px]">
+                      <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
+                        {card.title}
+                      </h1>
+                      <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
+                        {card.description}
                       </p>
-                      <BsArrowRight
-                        size={100}
-                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                      />
-                    </button>
+                    </div>
+                    <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
+                      <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
+                        {card.points.map((point, i) => (
+                          <div key={i} className="flex gap-2 items-start">
+                            <img src={goodMark} className="w-6 h-6 sm:w-7 sm:h-7" alt="checkmark" />
+                            <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
+                              {point}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                      <button
+                        className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
+                      >
+                        <p className="font-grava font-[450] sm:text-[18px] text-[#B0B0B0]">
+                          To be available soon
+                        </p>
+                        <BsArrowRight
+                          size={20}
+                          className="text-[#B0B0B0]"
+                        />
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                  <img
-                    src={scrollImg1}
-                    alt="POS system"
-                    className="w-full h-full object-cover rounded-3xl"
-                  />
+                  <div className="w-full h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover rounded-3xl"
+                    />
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
-
-          {/* Card 2 - Merchant Services */}
-          <div ref={container} className=""> {/* cardContainer */}
-            <motion.div
-              style={{
-                top: `calc(-5vh + ${1 * 25}px)`,
-              }}
-              className="card1">
-              <div
-                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
-                style={{
-                  backgroundImage:
-                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279316_c2szw1.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: " fit-content",
-                }}>
-                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                  <div className="flex flex-col gap-4 sm:gap-[12px]">
-                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
-                      Merchant Services
-                    </h1>
-                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Accept Payments Anywhere, Anytime
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Payment gateways, QR codes, and card terminals.
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Advanced security to protect your revenue.
-                        </p>
-                      </div>
-                    </div>
-                    <button  
-                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                    >
-                      <p className="font-grava font-[450] sm:text-[18px] text-[#B0B0B0]">
-                        To be available soon
-                      </p>
-                      <BsArrowRight
-                        size={100}
-                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                  <img
-                    src="https://res.cloudinary.com/code-idea/image/upload/v1739870682/man_olznbf.jpg"
-                    alt="Merchant services"
-                    className="w-full h-full object-cover rounded-3xl"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Card 3 - Online & Mobile Transfers */}
-          <div ref={container} className=""> {/* cardContainer */}
-            <motion.div
-              style={{
-                top: `calc(-5vh + ${2 * 25}px)`,
-              }}
-              className="card1">
-              <div
-                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl card__inner"
-                style={{
-                  backgroundImage:
-                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_buwox2.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: " fit-content",
-                }}>
-                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                  <div className="flex flex-col gap-4 sm:gap-[16px]">
-                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[1.2em] text-[#002244]">
-                      Online & Mobile Transfers for seamless banking 
-                    </h1>
-                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Stay in control of your finances with our cutting-edge digital banking solutions, 
-                      designed to simplify operations and enhance efficiency.
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Internet & Mobile Banking
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          24/7 Account Access & Monitoring
-                        </p>
-                      </div>
-                    </div>
-                    <button  
-                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                    >
-                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                        To be available soon
-                      </p>
-                      <BsArrowRight
-                        size={100}
-                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                  <img
-                    src={scrollImg3}
-                    alt="Mobile banking"
-                    className="w-full h-full object-cover rounded-3xl"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Card 4 - Payroll Management */}
-          <div ref={container} className=""> {/* cardContainer */}
-            <motion.div
-              style={{
-                top: `calc(-5vh + ${3 * 25}px)`,
-              }}
-              className="card1">
-              <div
-                className="w-full lg:w-[100%] bg-[#F9FAFB] flex flex-col lg:flex-row justify-between items-center py-8 sm:py-[50px] px-4 sm:px-[48px] rounded-tl-3xl rounded-br-3xl"
-                style={{
-                  backgroundImage:
-                    "url('https://res.cloudinary.com/code-idea/image/upload/v1739051008/Frame_1171279318_1_tom8hu.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: " fit-content",
-                }}>
-                <div className="w-full sm:w-[557px] flex flex-col gap-6 sm:gap-[32px]">
-                  <div className="flex flex-col gap-4 sm:gap-[16px]">
-                    <h1 className="font-grava font-[450] text-2xl sm:text-4xl lg:text-[40px] leading-[30px] sm:leading-[50px] text-[#002244]">
-                      Payroll Management
-                    </h1>
-                    <p className="font-grava font-[400] text-base sm:text-lg lg:text-[18px] leading-[20px] sm:leading-[27px] text-[#002244]">
-                      Pay salaries on time, handle taxes, and manage employee benefits, all with ease.
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-8 sm:gap-[48px] lg:gap-[80px]">
-                    <div className="flex flex-col gap-6 sm:gap-[16px] items-start">
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Bulk Payment Processing
-                        </p>
-                      </div>
-                      <div className="flex gap-2 items-start">
-                        <img
-                          src={goodMark}
-                          className="w-6 h-6 sm:w-7 sm:h-7"
-                          alt="checkmark"
-                        />
-                        <p className="font-grava font-[400] text-base sm:text-lg leading-[20px] sm:leading-[27px] text-[#002244]">
-                          Advanced security to protect your revenue.
-                        </p>
-                      </div>
-                    </div>
-                    <button  
-                      className="w-[217px] sm:w-[254px] cursor-default bg-[#EDEDED] py-3 sm:py-4 rounded-tl-lg rounded-br-lg gap-2 flex items-center justify-center"
-                    >
-                      <p className="font-grava font-[450]  sm:text-[18px] text-[#B0B0B0]">
-                        To be available soon
-                      </p>
-                      <BsArrowRight
-                        size={100}
-                        className="text-5xl mt-[2px] text-[#B0B0B0] w-5 h-5"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full sm:w-[516px] h-[45vh] sm:h-[385px] mt-8 lg:mt-0">
-                  <img
-                    src={scrollImg4}
-                    alt="Payroll management"
-                    className="w-full h-full object-cover rounded-3xl"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
+            );
+          })}
         </div>
-
-      {/* Scroll section ends */}
       </div>
 
       <div
@@ -1414,27 +839,7 @@ const SME = () => {
                 </p>
               </div>
             </div>
-          
-
-          {/* <div
-            className="flex flex-col gap-6 cursor-pointer border border-[#E6E9EC] border-x-0 border-t-0 py-[32px]"
-            onClick={handleTabFour}>
-            <div className="flex items-center justify-between">
-              <p className="text-[#546B82] font-[450] font-grava text-base lm:text-[20px] leading-[25px] tracking-[-0.01em]">
-                We Keep You Smiling!
-              </p>
-              {openTabFour ? (
-                <img src={Minus} alt="Minus" className="" />
-              ) : (
-                <img src={Plus} alt="Plus" className="" />
-              )}
-            </div>
-            {openTabFour && (
-              <p className="font-[400] font-grava tracking-[0.2%] text-base lm:text-[18px] leading-[27px] text-[#334E69]">
-                With Tatum Bank, banking is effortless, rewarding, and stress-free.
-              </p>
-            )}
-          </div> */}
+        
         </div>
       </div>
 
