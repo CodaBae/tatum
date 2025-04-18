@@ -460,7 +460,7 @@ const SME = () => {
       
       <div
         ref={containerRef}
-        className=" py-[44px] px-4 sm:py-[88px] sm:px-[56px] flex flex-col   relative"
+        className=" px-4 py-[88px] sm:px-[56px] flex flex-col   relative"
       >
         <div className="flex flex-col items-center gap-12 sm:gap-[72px]">
           <div className="flex flex-col items-center gap-4 sm:gap-[16px]">
