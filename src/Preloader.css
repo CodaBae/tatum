@@ -13,7 +13,7 @@
     z-index: 9999; /* Ensures it appears on top */
   }
   
-  .container {
+  .containerP {
     display: flex;
     align-items: center;
     font-size: 2.5rem;

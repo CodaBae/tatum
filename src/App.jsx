@@ -35,7 +35,7 @@ function App() {
     <div className="app-container">
       {isLoading && (
         <div className="preloader">
-          <div className="container">
+          <div className="containerP">
             <div className="static-text">We Keep You</div>
             <div className="rolling-text">
               <span>Winning</span>
