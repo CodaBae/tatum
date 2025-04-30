@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:w-[1044px] grid grid-cols-2  lg:grid-cols-5 items-start gap-[40px] lg:gap-[94px]"> {/* lg:gap-[96px]  */}
+          <div className="lg:w-auto grid grid-cols-2  lg:grid-cols-5 items-start gap-[40px] lg:gap-[51px]"> {/* lg:gap-[94px] lg:w-[1044px] */}
             <div className="flex flex-col gap-6 lg:w-[114.53px]"> {/* lg:w-[85px] w-[114.53px]*/}
               <p className="font-grava text-base text-[#002244] tracking-[0.05em] leading-6 font-[500]">
 
@@ -287,14 +287,14 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-6 lg:w-[196px]"> {/* lg:w-[196px] */}
+            <div className="flex flex-col gap-6 lg:w-[216px]"> {/* lg:w-[196px] */}
               <p className="font-grava text-base tracking-[0.05em] leading-6 text-[#002244] font-[500]">
 
                 ADDRESS
               </p>
               <div className="flex flex-col gap-[13px]">
                 <p className="font-grava text-[#002244] text-[14px] cursor-pointer font-[400]">
-                  Plot 1088, Cadastral <br /> Zone A01, Kaura<br /> Namoda Street,<br /> Area 3, Garki, Abuja.
+                  Plot 1088, Cadastral Zone A01,<br /> Kaura Namoda Street, Area 3,<br /> Garki, Abuja.
                 </p>
               </div>
             </div>
