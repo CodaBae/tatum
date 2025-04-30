@@ -259,21 +259,19 @@ const About = () => {
             /> */}
           </div>
           <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
-            Inspired by our name, Tatum, a refined form of the Latin word
-            Tutum, meaning "a safe place" or "refuge," we are committed to
-            being a secure and dependable guardian of your financial goals and
-            aspirations.
+            Inspired by our name, Tatum—a refined form of the Latin word Tutum, 
+            meaning "a safe place" or "refuge"—we are committed to being a secure 
+            and dependable guardian of your financial goals and aspirations.
           </p>
           <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
-            Our journey is rooted in the promise to provide a safe haven where
-            customers can confidently entrust their finances. We deliver on
-            this promise through innovative products, advanced technology, and
-            unparalleled service designed to support every step of your
-            financial journey.
+            Our journey is rooted in the promise to provide a safe haven where customers 
+            can confidently entrust their finances. We deliver on this promise through 
+            innovative products, advanced technology, and unparalleled service, designed 
+            to support every step of your financial journey.
           </p>
           <p className="text-[#002244] font-[350] font-grava leading-[24px] lg:leading-[155%] text-base lg:text-[18px] tracking-[0.336px]">
             At Tatum Bank,{" "}
-            <span className="font-semibold italic">We Keep You Smiling.</span>
+            <span className="font-semibold italic">we keep you smiling.</span>
           </p>
         </div>
         <div className="flex flex-col w-full md:w-6/12 pt-[32px] lm:py-[32px] lm:border-dashed lm:border-[1px] lm:border-r-0 lm:border-y-0 lm:border-[#C9C9C9]">
@@ -285,7 +283,7 @@ const About = () => {
             />
             <div className="flex flex-col items-start lm:items-center gap-3">
               <p className="font-grava text-[#002244] font-semibold leading-[30px] tracking-[0.336px] text-[18px] lm:text-[24px]">
-                  Vision.
+                  Vision
               </p>
               <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
                 To be Nigeria's preferred financial services provider
@@ -303,9 +301,9 @@ const About = () => {
                 Mission Statement 
               </p>
               <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
-                To meet our customer's financial needs 
-                through innovative 
-                technology  driven  products and services  <br></br>delivered with ease
+                "To meet our customers' financial needs 
+                through innovative, 
+                technology-driven products and services, <br></br>delivered with ease."
               </p>
               <div className="hidden lm:flex items-end justify-end absolute -bottom-20 right-0">
                 <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
