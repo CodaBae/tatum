@@ -7,6 +7,8 @@ import LinkedIn from "../assets/svg/linkedin.svg";
 import Twitter from "../assets/svg/twitter.svg";
 import Logo from "../assets/svg/logo.svg";
 
+import IndividualForm from "../assets/pdf/individual_form.pdf" 
+
 import Apple from "../assets/png/apple-store.png";
 import Google from "../assets/png/google-play-store.png";
 import World from "../assets/png/world.png";
@@ -32,18 +34,19 @@ const Footer = () => {
           <p className="font-grava text-[27px] lg:text-[47px] font-[500] tracking-[-0.02em] text-center leading-[35px] lg:leading-[120%] text-[#002244]">
             Stay smiling. <br /> Bank with Tatum! 
           </p>
-          <button
-            className="bg-[#EDEDED] w-auto cursor-default h-[60px] p-3 rounded-tl-lg rounded-br-lg" // hover:bg-[#FFCC33] group hover:border-[#002244]  hover:border-[1.5px]
-            type="button"
+          <a
+            className=" bg-[#002244] w-auto flex flex-col items-center justify-center cursor-pointer h-[60px] p-3 rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33] group hover:border-[#002244]  hover:border-[1.5px]" // bg-[#EDEDED]
             // onClick={() => window.open("https://res.cloudinary.com/code-idea/image/upload/v1740499249/TBL_Individual_Account_Opening_Form_wrhhls.ai", "_blank")}
-
+            href={IndividualForm}
+            target="_blank"
+            rel="noopener noreferrer"
           >
 
-            <p className="font-grava font-[500] text-[#B0B0B0]  lg:text-[18px] "> {/*  text-[#FFCC33] group-hover:text-[#002244]*/}
-
-                Account opening available soon
+            <p className="font-grava font-[500]  text-[#FFCC33] group-hover:text-[#002244]  lg:text-[18px] "> {/* text-[#B0B0B0] */}
+              Download Form
+                {/* Account opening available soon */}
             </p>
-          </button>
+          </a>
         </div>
       </div>
       <div className="bg-[#fff] w-full px-5 lg:pl-[56px] lg:pr-[56px] pt-[61px] lg:pb-6 flex flex-col gap-[30px] lg:items-center">
@@ -57,10 +60,14 @@ const Footer = () => {
               </p>
               <a 
                 href="mailto:info@tatumbank.com"
-                className="font-grava text-[#002244] block font-[400] text-[14px] leading-5 "
+                className="font-grava text-[#002244] block font-[400] text-[14px] leading-5"
               >
                 info@tatumbank.com
               </a>
+              <p className="font-grava text-[#002244] block font-[400] text-[14px] leading-5">
+                <span className="block whitespace-nowrap">Tatum Helpline Contact</span>
+                07000077770
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <img src={Instagram} alt="Instagram" className="cursor-pointer" />

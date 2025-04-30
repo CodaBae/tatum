@@ -311,8 +311,8 @@ const PrivacyPolicy = () => {
               </p>
             </div>
             <ul className="list-disc pl-5 font-grava font-[350] leading-[25px] lm:leading-[150%] text-[#002244] text-base lg:text-[18px] flex flex-col">
-              <li>Email: </li>
-              <li>Phone: </li>
+              <li>Email: info@tatumbank.com </li>
+              <li>Phone: 07000077770</li>
               <li>Address:  Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3 Garki, Abuja.</li>
               <li>Website: www.tatumbank.com</li>
             </ul>

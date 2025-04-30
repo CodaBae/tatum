@@ -275,7 +275,10 @@ const Contact = () => {
                     <img src={Chat} alt='Chat' className='w-[48px] h-[48px] lm:w-[80px] lm:h-[80px]' />
                     <div className='flex flex-col items-center gap-3 w-[304px] lm:w-[481px]'>
                         <p className='font-grava text-[#002244] text-[18px] lm:text-[24px] tracking-[0.01em] font-[450]'>General support:</p>
-                        <p className='font-[300] font-grava text-[#334E69] text-[14px] tracking-[0.01em] leading-[130%] lm:text-[20px]'>info@tatumbank.com</p>
+                        <div className='flex flex-col items-center gap-1'>
+                            <p className='font-[300] font-grava text-[#334E69] text-[14px] tracking-[0.01em] leading-[130%] lm:text-[20px]'>info@tatumbank.com</p>
+                            <p className='font-[300] font-grava text-[#334E69] text-[14px] tracking-[0.01em] leading-[130%] lm:text-[20px]'>07000077770</p>
+                        </div>
                     </div>
                 </div>
                 

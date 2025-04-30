@@ -8,6 +8,8 @@ import Two from "../../../assets/png/two.png";
 import Three from "../../../assets/png/three.png";
 import Line from "../../../assets/png/line.png";
 
+import IndividualForm from "../../../assets/pdf/individual_form.pdf" 
+
 import CBN from "../../../assets/svg/cbn_logo.svg";
 import NDIC from "../../../assets/png/ndic.png";
 import Plus from "../../../assets/svg/plus.svg";
@@ -189,6 +191,17 @@ const AccountPersonal = () => {
                 </div>
             </div>
 
+            <a
+              className=" bg-[#002244] w-auto flex flex-col items-center justify-center cursor-pointer h-[60px] p-3 rounded-tl-lg rounded-br-lg hover:bg-[#FFCC33] group   " // bg-[#EDEDED] w-[326.27px]
+              href={IndividualForm}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="font-grava font-[500]  text-[#FFCC33] group-hover:text-[#002244]  lg:text-[18px] "> {/* text-[#B0B0B0] */}
+                  Download Form
+              </p>
+            </a>
+{/* 
             <button
                 className=' bg-[#EDEDED] w-auto h-[57px] rounded-tl-lg rounded-br-lg cursor-default gap-2 p-4 flex items-center justify-center'
                 type='button'
@@ -198,7 +211,7 @@ const AccountPersonal = () => {
                 <p className='font-[500] text-[#B0B0B0] lg:text-[18px] leading-[27px] font-grava '>Account opening available soon</p>
 
                 <BsArrowRight size={100}   className='mt-[2px] text-5xl text-[#B0B0B0] font-medium w-5 h-5 ' />
-            </button>
+            </button> */}
 
         </section>
 
