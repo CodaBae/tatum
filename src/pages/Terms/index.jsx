@@ -486,7 +486,7 @@ const Terms = () => {
             <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] flex flex-col gap-3">
 
               <li>Address: Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</li>
-              <li>Phone Number: xxxxxxxxxx</li>
+              <li>Phone Number: 07000077770</li>
               <li>
                 Email: <span className="underline">Info@tatumbank.com</span>
               </li>
