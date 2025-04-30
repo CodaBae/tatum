@@ -249,7 +249,7 @@ const About = () => {
       <div className=" flex flex-col md:flex-row items-start justify-between ">
         <div className="flex flex-col gap-4 lm:gap-5 w-full  md:w-6/12  lm:py-[15px] lg:pr-[59px]">
           <div className="flex items-center justify-between">
-            <p className="text-[#002244] font-grava font-bo text-[28px] lg:text-[56px] tracking-wider">
+            <p className="text-[#002244] font-grava font-[600]  text-[28px] lg:text-[56px] tracking-wider"> {/* font-bo */}
               Our Story
             </p>
             {/* <img
@@ -286,7 +286,7 @@ const About = () => {
                   Vision
               </p>
               <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
-                To be Nigeria's preferred financial services provider
+                To be Nigeria's preferred financial services provider.
               </p>
             </div>
           </div>
