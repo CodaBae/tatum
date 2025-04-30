@@ -212,7 +212,7 @@ const Private = () => {
                 "Managing your wealth, {" "}
                 <span className="block md:inline-block">Our Expertise"</span>
               </p>
-              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
+              <p className="text-[14px] italic lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                 - "At Tatum Bank, we go beyond banking; we curate personalized wealth growth strategies that align 
                 with your financial ambitions. Whether you seek investment diversification, estate planning, 
                 or asset protection, our seasoned advisors craft bespoke solutions that optimize your wealth."
