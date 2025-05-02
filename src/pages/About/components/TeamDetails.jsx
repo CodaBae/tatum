@@ -93,7 +93,7 @@ const TeamDetails = () => {
           className='flex flex-col lm:flex-row items-start gap-6 lg:gap-[55px]'
         >
           <div className="flex flex-col gap-[18px] w-[429px]">
-            <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
+            <div className="relative w-auto cursor-pointer lg:h-[387px] md:h-auto  group overflow-hidden rounded-lg">
               <img
                 src={state?.team.pic}
                 alt="HeadShot"
