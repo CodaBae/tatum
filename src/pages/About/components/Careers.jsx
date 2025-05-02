@@ -173,13 +173,14 @@ const Careers = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739209666/Slide_2_1_qjbpgq.png"} 
             title={` <span class="font-bold ">Build Your <br />Future with Us</span>`}
-            content={"Working with Tatum Bank is more than just a career; it’s meaningful work that improves the lives of millions of people."} 
+            content={"Working with Tatum Bank is more than just a career; it’s meaningful work that improves the lives of millions of <br />people."} 
             link={"#"} 
+
             sectionName={"savings"} 
             mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740570327/man_on_phone_spj2pr.png"} 
             mainImgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739277059/man_on_phone_cndrwb.png"} 
             btnText={"To be available Soon"} 
-            styleP={{ height: "110%", marginLeft: "40%", marginTop: "5%" }}
+            styleP={{ height: "170%", marginLeft: "40%", marginTop: "12%",  }}
 
           />
         </section>

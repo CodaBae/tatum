@@ -149,7 +149,7 @@ const Help = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1736507687/Slide_rn3tcj.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1736507610/Slide_2_avjdnz.png"} 
             title={` <span class="font-bold">Help & Support<span> `}
-            content={'If you require any assistance regarding our Bank\'s businesses or exploits, please don’t hesitate to contact us.'} 
+            content={'If you require any assistance regarding our Bank\'s <br /> businesses or exploits, please don’t hesitate to contact us.'} 
             link={"/digital"} 
             sectionName={"digi"} 
             mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739295233/hands_2_lxguos.png"} 

@@ -158,7 +158,7 @@ const AccountPersonalSavings = () => {
             sectionName={"savings"} 
             mainImgMobile={Alhaja} 
             mainImgDesktop={Alhaja} 
-            styleP={{ height: "130%", paddingLeft: "-5%" }} //paddingLeft: "3%"
+            styleP={{ height: "130%", paddingLeft: "-5%", }} //paddingLeft: "3%", 
             />
         </section>
     }
