@@ -15,7 +15,7 @@ import Resources from "../pages/Resources";
 import PrivacyPolicy from "../pages/Privacy";
 import Terms from "../pages/Terms";
 import Sitemap from "../pages/Sitemap";
-import AccountPersonal from "../pages/Personal/component/AccountPersonal";
+import AccountPersonalCurrent from "../pages/Personal/component/AccountPersonalCurrent";
 import AccountBusiness from "../pages/SME/component/AccountBusiness";
 import AccountCorporate from "../pages/Corporate/component/AccountCorporate";
 import AccountPrivacy from "../pages/Private/components/AccountPrivacy";
@@ -27,6 +27,7 @@ import Contact from "../pages/Contact";
 import InternetBanking from "../pages/Internet";
 import CookiePolicy from "../pages/Cookies";
 import MobileTerms from "../pages/MobileTerms";
+import AccountPersonalSavings from "../pages/Personal/component/AccountPersonalSavings";
 // import CookiePolicy from "../pages/Cookies/Cook";
 
 
@@ -42,7 +43,8 @@ export default function Routers() {
         <Route path="business" element={<SME />} />
         <Route path="/business/account" element={<AccountBusiness />} />
         <Route path="personal" element={<Personal />} />
-        <Route path="personal/account" element={<AccountPersonal />} />
+        <Route path="personal/account/current" element={<AccountPersonalCurrent />} />
+        <Route path="personal/account/savings" element={<AccountPersonalSavings />} />
         <Route path="corporate" element={<Corporate />} />
         <Route path="corporate/account" element={<AccountCorporate />} />
         <Route path="help" element={<Help />} />

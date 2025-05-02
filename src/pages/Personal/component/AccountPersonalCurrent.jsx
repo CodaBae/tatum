@@ -16,7 +16,7 @@ import Plus from "../../../assets/svg/plus.svg";
 import Minus from "../../../assets/svg/minus.svg";
 import HeroSection from '../../../components/HeroSection';
 
-const AccountPersonal = () => {
+const AccountPersonalCurrent = () => {
     const [openTabOne, setOpenTabOne] = useState(false)
     const [openTabTwo, setOpenTabTwo] = useState(false)
     const [openTabThree, setOpenTabThree] = useState(false)
@@ -96,7 +96,7 @@ const AccountPersonal = () => {
                             className={`animate__animated animate__fadeInUp animate__delay-08s w-[340px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}
                         >
                             Experience banking that keeps you smiling with our range 
-                            of savings and current accounts, cards, and loans.
+                            of current accounts, cards, and loans.
                         </p>
                        
                     </div>
@@ -150,7 +150,7 @@ const AccountPersonal = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210754/Slide_1_hncexz.png"} 
             title={` Seamless Banking, <span class='font-bold'>Endless Smiles.</span>`}
-            content={"Experience banking that keeps you smiling with our range of savings and current accounts, cards, and loans."} 
+            content={"Experience banking that keeps you smiling with our range of current accounts, cards, and loans."} 
             link={"/personal"} 
             sectionName={"savings"} 
             mainImgMobile={Alhaja} 
@@ -384,4 +384,4 @@ const AccountPersonal = () => {
 
 }
 
-export default AccountPersonal
+export default AccountPersonalCurrent

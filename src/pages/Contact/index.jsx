@@ -72,7 +72,7 @@ const Contact = () => {
                         <p 
                             className={`animate__animated  animate__fadeInUp animate__delay-06s w-[300px] md:w-[265px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                         >
-                            If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us..
+                            If you require any assistance regarding our company, businesses or exploits, please don’t hesitate to contact us.
                         </p>
                         
                     </div>

@@ -69,7 +69,7 @@ const InternetBanking = () => {
                     <p 
                         className={`animate__animated  animate__fadeInUp animate__delay-06s md:w-[265px] lg:w-[692px] font-[300] text-sm font-grava lg:text-[25px] text-[14px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                     >
-                        Your money, your way. Experience banking that fits your lifestyle, not the other way around.
+                        Your money, your way. Experience banking that fits your lifestyle!
                     </p>
                     
                 </div>
@@ -116,7 +116,7 @@ const InternetBanking = () => {
                     bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1740415901/slide_ib_mobile_d1leny.png"} 
                     bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740415878/slide_ib_desktop_bzw3af.png"} 
                     title={`Say Hello To <br /> Banking <span class='font-[700]'> On The Go</span> `}
-                    content={`<p class="leading-[34.1px]">Your money, your way. Experience banking that fits your lifestyle, not the other way around.</p>`} 
+                    content={`<p class="leading-[34.1px]">Your money, your way. Experience banking that fits your lifestyle!</p>`} 
                     link={"/digital"} 
                     sectionName={"digi"} 
                     mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739956611/couple_f6bcnm.png"} 

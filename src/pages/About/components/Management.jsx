@@ -43,13 +43,17 @@ const team = [
         <p class='font-grava font-[350] text-[#002244] text-lg lg:text-[18px] leading-[27px] lg:leading-[1.6em]'>He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.</p>
       </div>`
   },
-  // {
-  //   name: "George Oko-Oboh",
-  //   role: "Executive Director",
-  //   pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531471/George_full_wm65x9.jpg",
-  //   headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg",
-  //   bio: "George Oko-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'",
-  // },
+  {
+    name: "Mr George Oko-Oboh",
+    role: "Executive Director",
+    pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531471/George_full_wm65x9.jpg",
+    headshot: "https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg",
+    bio: `<div class="flex flex-col gap-5">
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Mr George Oko-Oboh is a results-driven and highly accomplished Executive Director with over two decades of experience in the banking industry, including senior leadership roles in various Banks. Known for his strategic vision, integrity, and a relentless focus on achieving organizational excellence. A dynamic leader with strong communication skills and a deep commitment to fostering collaboration and organizational success.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Mr George is equipped with a solid educational background, including a Doctorate of Philosophy in Business Administration from Prowess University, Delaware, and a Chartered Banker MBA from the University of Bangor, UK, complemented by an MBA in General Management from the University of Abuja. Additionally, he holds a BSc in Banking & Finance. His commitment to professional development is demonstrated by various certifications, including fellowship status in the Chartered Institute of Bankers Nigeria (CIBN) and the Chartered Institute of Information and Strategy Management (CIISM). He has also attended specialized training programs such as Strategic Negotiations at Harvard Business School and Senior Management Programs.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>With an unwavering commitment to leadership and continuous learning, he remains focused on shaping business strategies that drive sustained success and foster a high-performance culture.</p>
+          </div>`
+  },
   {
     name: "Samuel Otseilu Zibiri, SAN",
     role: "Non-Executive Director",

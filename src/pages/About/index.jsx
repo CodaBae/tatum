@@ -87,35 +87,40 @@ const About = () => {
           <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>He possesses vast financial management, project structuring, and corporate finance expertise across sectors such as real estate and fintech. Niyi is also an alumnus of esteemed institutions like INSEAD and Harvard Business School.</p>
         </div>`
     },
-    {
-      name: "Samuel Otseilu Zibiri, SAN",
-      role: "Non-Executive Director",
-      pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531124/Samuel_full_n376id.jpg",
-      bio: 
-        `<div class="flex flex-col gap-5">
-          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Ofseilu Zibiri, SAN, is a distinguished Nigerian lawyer with an extensive educational background and a distinguished career. He holds an LLB (Hons) from Ahmadu Bello University and a Diploma in International Commercial Arbitration from Jesus College, Oxford.</p>
-          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'> 
-            His professional journey began in 1987 as a Pupil Counsel and has since spanned various leadership roles, 
-            including Managing Partner at Cosmic Chambers and Principal Partner at El-Shaddai Chambers. 
-            Zibiri has played significant roles within the Nigerian Bar Association (NBA), including serving as 
-            Public Relations Officer, Vice Chairman, and currently as Chairman of the NBA Abuja Branch Disciplinary 
-            Committee.
-          </p>
-          <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>
-            He has vast experience in litigation, corporate law, debt management, and election petition tribunals. 
-            A registered practitioner with the Securities and Exchange Commission (SEC), Zibiri specializes in 
-            debt recovery and capital market matters. Fluent in multiple languages, including English, Afemai, Hausa, 
-            and Yoruba, Zibiri's career reflects his commitment to the ethical practice of law and his influential 
-            role in shaping the legal landscape in Nigeria.
-          </p>
-        </div>`
-    },
     // {
-    //     name: "George Okoh-Oboh",
-    //     pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
-    //     role: "Executive Director",
-    //     bio: "George Okoh-Oboh is the Group Managing Director of Binani Group of Companies, with decades of experience leading teams and driving organizational growth. She is the Founder and CEO of Exon Energy Resources and Exon Gold and Trading Limited, with expertise in energy and precious metals industries. She holds an advanced Postgraduate Diploma in Business Leadership and Management and has been recognized with industry awards, including the 'Beacon of Hope for Africa’s Development' and 'West African Merit Award.'"
+    //   name: "Samuel Otseilu Zibiri, SAN",
+    //   role: "Non-Executive Director",
+    //   pic: "https://res.cloudinary.com/code-idea/image/upload/v1739531124/Samuel_full_n376id.jpg",
+    //   bio: 
+    //     `<div class="flex flex-col gap-5">
+    //       <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Samuel Ofseilu Zibiri, SAN, is a distinguished Nigerian lawyer with an extensive educational background and a distinguished career. He holds an LLB (Hons) from Ahmadu Bello University and a Diploma in International Commercial Arbitration from Jesus College, Oxford.</p>
+    //       <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'> 
+    //         His professional journey began in 1987 as a Pupil Counsel and has since spanned various leadership roles, 
+    //         including Managing Partner at Cosmic Chambers and Principal Partner at El-Shaddai Chambers. 
+    //         Zibiri has played significant roles within the Nigerian Bar Association (NBA), including serving as 
+    //         Public Relations Officer, Vice Chairman, and currently as Chairman of the NBA Abuja Branch Disciplinary 
+    //         Committee.
+    //       </p>
+    //       <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>
+    //         He has vast experience in litigation, corporate law, debt management, and election petition tribunals. 
+    //         A registered practitioner with the Securities and Exchange Commission (SEC), Zibiri specializes in 
+    //         debt recovery and capital market matters. Fluent in multiple languages, including English, Afemai, Hausa, 
+    //         and Yoruba, Zibiri's career reflects his commitment to the ethical practice of law and his influential 
+    //         role in shaping the legal landscape in Nigeria.
+    //       </p>
+    //     </div>`
     // },
+    {
+        name: "Mr George Okoh-Oboh",
+        pic: "https://res.cloudinary.com/code-idea/image/upload/v1739439246/george_full_cergcx.jpg",
+        role: "Executive Director",
+        bio: 
+          `<div class="flex flex-col gap-5">
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Mr George Oko-Oboh is a results-driven and highly accomplished Executive Director with over two decades of experience in the banking industry, including senior leadership roles in various Banks. Known for his strategic vision, integrity, and a relentless focus on achieving organizational excellence. A dynamic leader with strong communication skills and a deep commitment to fostering collaboration and organizational success.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>Mr George is equipped with a solid educational background, including a Doctorate of Philosophy in Business Administration from Prowess University, Delaware, and a Chartered Banker MBA from the University of Bangor, UK, complemented by an MBA in General Management from the University of Abuja. Additionally, he holds a BSc in Banking & Finance. His commitment to professional development is demonstrated by various certifications, including fellowship status in the Chartered Institute of Bankers Nigeria (CIBN) and the Chartered Institute of Information and Strategy Management (CIISM). He has also attended specialized training programs such as Strategic Negotiations at Harvard Business School and Senior Management Programs.</p>
+            <p class='font-grava font-[300] text-[#002244] text-lg lg:text-[19px] leading-[27px] lg:leading-[1.5em]'>With an unwavering commitment to leadership and continuous learning, he remains focused on shaping business strategies that drive sustained success and foster a high-performance culture.</p>
+          </div>`
+    },
   ];
 
   useEffect(() => {
@@ -631,8 +636,8 @@ const About = () => {
             <div className="relative w-auto cursor-pointer h-[387px] md:h-auto  group overflow-hidden rounded-lg">
               {/* Background Image */}
               <img
-                // src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"
-                src="https://res.cloudinary.com/code-idea/image/upload/v1739531118/Samuel_head_hfkams.jpg"
+                src="https://res.cloudinary.com/code-idea/image/upload/v1739531460/George_head_em2hcr.jpg"
+                // src="https://res.cloudinary.com/code-idea/image/upload/v1739531118/Samuel_head_hfkams.jpg"
                 alt="HeadShot"
                 className="w-full h-[552px] object-cover transition-all duration-500 "
               />
@@ -653,12 +658,13 @@ const About = () => {
             </div>
             <div className="flex flex-col gap-[5px]">
             <p className="font-grava font-semibold text-[#002244] leading-6 lm:leading-[34.18px] text-[18px] tracking-[0.01em] md:text-[20px] lm:text-[23px] lg:text-[27.35px]">
-                Samuel Otseilu Zibiri, SAN
+                {/* Samuel Otseilu Zibiri, SAN */}
+                Mr George Oko-Oboh
               </p>
 
               <p className="font-grava text-[#002244] font-[400] text-[14px] md:text-base lm:text-[21.88px] tracking-[0.2%] leading-[32.82px]">
 
-                Non-Executive Director
+                Executive Director
               </p>
             </div>
           </div>

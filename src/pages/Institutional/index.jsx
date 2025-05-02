@@ -102,7 +102,7 @@ const Institutional = () => {
               <p
                 className={`animate__animated animate__fadeInUp animate__delay-06s w-[340px]  md:w-[749px] font-[300] text-sm font-grava md:text-[25px] text-left text-[#002244] leading-[20px] md:leading-[34px]`}>
                 At Tatum Bank, we understand the unique financial needs of
-                institutions and are committed to providing tailored made
+                institutions and are committed to providing tailor made
                 banking solutions.
               </p>
               <div className="flex items-center mt-[12px] gap-3">
@@ -184,7 +184,7 @@ const Institutional = () => {
             bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
             bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739210005/Slide_4_tf472w.png"} 
             title={`<p class="leading-[105%]">Empowering <br /> Institutions with <br /> <span class="font-bold">Financial Excellence</span></p>`}
-            content={`<p class="text-[24px] ">At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailored made banking solutions.</p>`} 
+            content={`<p class="text-[24px] ">At Tatum Bank, we understand the unique financial needs of institutions and are committed to providing tailor made banking solutions.</p>`} 
             link={"/institutional"} 
             sectionName={"public"} 
             mainImgDesktop={"https://framerusercontent.com/images/qYOFTBego7ZczScWMFQnCCyT7jU.png"} 

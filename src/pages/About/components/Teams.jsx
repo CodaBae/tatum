@@ -9,6 +9,10 @@ import Director from './Director';
 
 const Teams = () => {
     const [activeTab, setActiveTab] = useState("board")
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1100);
+
+
+   
 
     const navigate = useNavigate()
 
@@ -19,6 +23,18 @@ const Teams = () => {
         setActiveTab(value)
     }
 
+    useEffect(() => {
+          const handleResize = () => {
+            setIsMobile(window.innerWidth < 1100);
+          };
+      
+          window.addEventListener("resize", handleResize);
+      
+          return () => {
+            window.removeEventListener("resize", handleResize);
+          };
+        }, []);
+
   
 
     // useEffect(() => {   
@@ -27,8 +43,7 @@ const Teams = () => {
     //     }
     // }, [state])
 
-    const isTab = window.innerWidth < 1028;
-    const isMobile = window.innerWidth < 768;  
+
 
   return (
     <div className="w-full overflow-hidden" ref={teamsRef}>
@@ -36,7 +51,9 @@ const Teams = () => {
             style={{
                 backgroundImage: "url(https://res.cloudinary.com/code-idea/image/upload/v1739531942/meeting_elj39a.jpg)",                          //`url(${isTab ? HeaderImgMobile : HeaderImg})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "cover" 
+                backgroundSize: "cover",
+                height: `${isMobile ? "434px" : "693px"}`,
+                backgroundPosition: "center",  
             }}
             className="w-full h-[434px] md:h-[693px] flex relative justify-center"
         > 

@@ -289,7 +289,7 @@ const Personal = () => {
 
           <Buttons 
             text="Find out more"
-            link="/personal/account"
+            link="/personal/account/savings"
             sect="account"
           />
 
@@ -332,7 +332,7 @@ const Personal = () => {
 
           <Buttons 
             text="Find out more"
-            link="/personal/account"
+            link="/personal/account/current"
             sect="account"
           />
 
