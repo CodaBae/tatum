@@ -82,7 +82,7 @@ const HeroSection = ({
               : {
                   height: "92vh",
                   overflow: "hidden",
-                  paddingTop: "11%",
+                  paddingTop: `${location.pathname === "/personal/account/savings" || location.pathname === "/personal/account/current" ? "7%" : "11%"}`,
                 }
           }
         >

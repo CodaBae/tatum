@@ -182,7 +182,7 @@ const Private = () => {
             mainImgMobile={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
             mainImgDesktop={"https://framerusercontent.com/images/ExmGLhhfgX67COL5ILw0YCJP1Y.png"} 
             btnText={"Find out more"} 
-            styleP={{ height: "150%", marginLeft: "45%", marginTop: "5%" }}
+            styleP={{ height: "170%", marginLeft: "45%", marginTop: "5%" }}
 
           />
         </section>
@@ -209,13 +209,13 @@ const Private = () => {
             </p>
             <div className="flex flex-col w-full gap-[18px]">
               <p className="font-[500] text-[#002244] font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]">
-                "Managing your wealth, {" "}
-                <span className="block md:inline-block">Our Expertise"</span>
+                Managing your wealth, Our {" "}
+                <span className="block md:inline-block">Expertise</span>
               </p>
-              <p className="text-[14px] italic lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
-                - "At Tatum Bank, we go beyond banking; we curate personalized wealth growth strategies that align 
+              <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
+                At Tatum Bank, we go beyond banking; we curate personalized wealth growth strategies that align 
                 with your financial ambitions. Whether you seek investment diversification, estate planning, 
-                or asset protection, our seasoned advisors craft bespoke solutions that optimize your wealth."
+                or asset protection, our seasoned advisors craft bespoke solutions that optimize your wealth.
               </p>
             </div>
 

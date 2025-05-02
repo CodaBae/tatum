@@ -295,7 +295,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="items-start flex flex-col gap-6 relative lm:items-center lm:pt-[38px] md:pl-5 lg:pl-[60px]">
+          <div className="items-start flex flex-col gap-6 relative lm:items-center lm:pt-[38px] md:pl-5 ">
             <img
               src={Microphone}
               alt="Moon"

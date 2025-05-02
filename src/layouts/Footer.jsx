@@ -70,9 +70,15 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <img src={Instagram} alt="Instagram" className="cursor-pointer" />
-              <img src={Twitter} alt="Twitter" className="cursor-pointer" />
-              <img src={LinkedIn} alt="LinkedIn" className="cursor-pointer" />
+              <a href=" https://www.instagram.com/tatumbankng/" target="_blank" rel="noopener noreferrer">
+                <img src={Instagram} alt="Instagram" className="cursor-pointer" />
+              </a>
+              <a href="https://x.com/tatumbankng" target="_blank" rel="noopener noreferrer">
+                <img src={Twitter} alt="Twitter" className="cursor-pointer" />
+              </a>
+              <a href=" https://www.linkedin.com/company/tatumbankng/" target="_blank" rel="noopener noreferrer">
+                <img src={LinkedIn} alt="LinkedIn" className="cursor-pointer" />
+              </a>
               {/* <img src={Facebook} alt="Facebook" className="cursor-pointer" /> */}
             </div>
             <div className="flex flex-col gap-2">
