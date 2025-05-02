@@ -220,7 +220,7 @@ const Private = () => {
             </div>
 
             <p
-              className="font-grava font-bo text-[#002244] text-center lm:text-left text-base lm:text-[18px]  tracking-[1.4%]"
+              className="font-grava font-[500] text-[#002244] text-center lm:text-left text-base lm:text-[20px]  tracking-[0.01em]"
               style={{
                 lineHeight: "27px",
                 marginTop: "2%",
