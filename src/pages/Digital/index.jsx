@@ -7,7 +7,8 @@ import Talk from "../../assets/png/talk.png";
 import Phone from "../../assets/png/phone_b.png";
 import Apple from "../../assets/png/apple-store.png";
 import Google from "../../assets/png/google-play-store.png";
-import Ussd from "../../assets/png/ussd_service.png";
+import BgCurve from "../../assets/png/bg_curve.png";
+import Ussd from "../../assets/png/ussd_code.png";
 import Atm from "../../assets/png/atm.png";
 import Security from "../../assets/png/security.png";
 import Layer from "../../assets/png/layer.png";
@@ -71,8 +72,8 @@ const Digital = () => {
 
                                 className={`animate__animated animate__fadeInUp animate__delay-06s md:w-[500px] lg:w-[737px] font-[300] text-sm font-grava lg:text-[25px] text-[34px]  text-left text-[#002244] leading-[20px] lg:leading-[34px]`}
                             >
-                                Whether you're at home, at work, or on the go, our digital banking solutions
-                                are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling”.
+                                Whether at home, at work, or on the go, our digital banking solutions
+                                are designed to make your life easier. At Tatum Bank, "We Keep You Smiling”.
                             </p>
                             <div className='flex items-center mt-[10px] mb-[-5%] lg:mt-[12px] gap-3'>
                                 <button
@@ -141,7 +142,7 @@ const Digital = () => {
                     bgMobile={"https://res.cloudinary.com/code-idea/image/upload/v1739270902/bg_mobile_areyrd.png"} 
                     bgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1740439020/Slide_2_1_lua8lb.png"} 
                     title={`Seamless. Secure. <span class='font-bold'>Convenient. </span> `}
-                    content={'Whether you\'re at home, at work, or on the go, our digital banking solutions are designed to make your life easier. Because at Tatum Bank, "We Keep You Smiling".'} 
+                    content={'Whether at home, at work, or on the go, our digital banking solutions are designed to make your life easier. At Tatum Bank, "We Keep You Smiling".'} 
                     link={"/digital"} 
                     sectionName={"digi"} 
                     mainImgDesktop={"https://res.cloudinary.com/code-idea/image/upload/v1739211619/businessman-looking-tablet_23-2148634753_1_rehuca.webp"} 
@@ -234,10 +235,10 @@ const Digital = () => {
             <div className='flex flex-col gap-[32px]'>
                 <p className='font-grava text-[#334E69] font-[500] leading-[130%] tracking-[0.25em] uppercase text-[12px] lg:text-[13px]'>Registration Guide</p>
                 <div className='flex flex-wrap gap-[32px]'>
-                    <p className='text-[#002244] tracking-[0.01em] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>1. Getting started is easy!</p>
-                    <p className='text-[#002244] tracking-[0.01em] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>2. Visit our Internet Banking portal.</p>
-                    <p className='text-[#002244] tracking-[0.01em] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>3. Click "Register Now" and follow the steps.</p>
-                    <p className='text-[#002244] tracking-[0.01em] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>3. Secure your login details and start banking instantly!</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>1. Getting started is easy!</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>2. Visit our Internet Banking portal.</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>3. Click "Register Now" and follow the steps.</p>
+                    <p className='text-[#002244] font-medium font-grava text-[14px] lm:text-[18px] tracking-[0.01em] leading-[25px]'>3. Secure your login details and start banking instantly!</p>
                 </div>
                 <button
                     className='w-[199px] lm:w-[210.63px] h-[60px] rounded-tl-lg rounded-br-lg gap-2 bg-[#EDEDED] flex items-center justify-center'
@@ -315,17 +316,34 @@ const Digital = () => {
         <section className='bg-[#fff] md:h-auto flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'> {/* lg:h-[932px] */}
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
-                    <img 
-                        src='https://res.cloudinary.com/code-idea/image/upload/v1739794707/ussd_huhuf5.png' 
-                        alt='Ussd' 
-                        className='hidden md:flex w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[571px] lg:h-[585px] transition-transform duration-500 ease-in-out transform hover:scale-105 ' 
-                    />
+                    <div
+                        style={{
+                            backgroundImage: `url(${BgCurve})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                        }}
+                        className=' hidden md:flex flex-col items-center justify-center w-[295px] h-[295px] lm:w-[350px] lm:h-[350px] lg:w-[546px] lg:h-[546px] transition-transform duration-500 ease-in-out transform hover:scale-105'
+                    >
+                        <div className='flex items-center flex-col gap-[47px] w-[366px]'>
+                            <img
+                                src={Ussd} 
+                                alt='Ussd' 
+                                className='w-[366px] h-[176px]'
+                            />
+                            <p className='font-grava text-[20px] leading-[130%] tracking-[1.4%] text-center text-[#002244] font-[400]'>
+                                No internet? No problem! Our USSD service lets you bank with just a simple dial.
+                            </p>
+                            <p className='font-grava text-[20px] leading-[25px] tracking-[1.4%] text-center text-[#002244] font-[700]'>
+                                Dial *950# to Get Started!
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className='flex flex-col items-center md:items-start gap-4 w-full md:w-[350px] lm:w-[565px]' data-aos="fade-left" >
                     <div className="flex flex-col gap-2 md:gap-4 md:items-start items-center">
                         <div className='flex flex-col w-full gap-[18px]'>
                             <p className='font-[500] text-[#002244] w-[278px] lm:whitespace-nowrap md:w-auto mx-auto font-grava text-center md:text-left text-[24px] lg:text-[40px] leading-[30px] lg:leading-[50px]'>
-                                *365# - Dial, Transact and Smile
+                                *950# - Dial, Transact and Smile
                             </p>
                             <p className="text-[14px] lm:text-[18px] text-[#002244] font-grava font-[400] leading-[27px] text-center md:text-left tracking-[0.2%]">
                                 No internet? No problem! Our USSD service lets you bank with just a simple dial.
@@ -377,14 +395,35 @@ const Digital = () => {
                             </div>
                             {/* <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
                                 <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[18px] leading-[25px] tracking-[0.01em]'>
-                                    Dial *365# to get started!
+                                    Dial *950# to get started!
                                 </p>
                             </div> */}
                         </div>
         
                     </div>
                 </div>
-                <img src='https://res.cloudinary.com/code-idea/image/upload/v1739794707/ussd_huhuf5.png' alt='Ussd' className='flex md:hidden w-[295px] h-[295px]' data-aos="fade-right" />
+                <div
+                    style={{
+                        backgroundImage: `url(${BgCurve})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                    }}
+                    className=' md:hidden flex flex-col items-center justify-center w-[295px] h-[295px] transition-transform duration-500 ease-in-out transform hover:scale-105'
+                >
+                    <div className='flex items-center flex-col gap-[27px] w-[266px]'>
+                        <img
+                            src={Ussd} 
+                            alt='Ussd' 
+                            className='w-[166px] h-[76px]'
+                        />
+                        <p className='font-grava text-sm leading-[130%] tracking-[1.4%] text-center text-[#002244] font-[400]'>
+                            No internet? No problem! Our USSD service lets you bank with just a simple dial.
+                        </p>
+                        <p className='font-grava text-sm leading-[25px] tracking-[1.4%] text-center text-[#002244] font-[700]'>
+                            Dial *950# to Get Started!
+                        </p>
+                    </div>
+                </div>
             </div>
             <div className='bg-[#EAECF0] w-full h-[1px]'></div>
             <div className='flex flex-col gap-8'>
@@ -394,7 +433,7 @@ const Digital = () => {
     
                 <div className='flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8'>
                     <p className='text-[#002244] font-[500] font-grava whitespace-nowrap text-[14px] md:text-[20px] tracking-[0.01em] leading-[25px]'>
-                        1. Dial *365# from your registered phone number.
+                        1. Dial *950# from your registered phone number.
                     </p>
                     <p className='text-[#002244] font-[500] font-grava text-[14px] md:text-[20px] tracking-[0.01em] leading-[25px]'>
                         2. Follow the prompts to activate.
