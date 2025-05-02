@@ -307,8 +307,8 @@ const About = () => {
               </p>
               <p className="font-grava text-base text-left lm:text-center lg:text-[18px] text-[#002244] font-[350] leading-[150%] tracking-[0.336px]">
                 "To meet our customers' financial needs 
-                through innovative, 
-                technology-driven products and services, <br></br>delivered with ease."
+                through {isMobile ? null : <br></br>} innovative, 
+                technology-driven products and services, {isMobile ? null : <br></br>} delivered with ease."
               </p>
               <div className="hidden lm:flex items-end justify-end absolute -bottom-20 right-0">
                 <img src={Shape} alt="Shape" className="w-[48px] h-[66px]" />
@@ -319,7 +319,7 @@ const About = () => {
       </div>
     </section>
 
-    <div className="w-full flex flex-col gap-[56px]  overflow-hidden lm:gap-[92px] ">
+    <div className="w-full flex flex-col gap-[56px] mt-8 lg:mt-0  overflow-hidden lm:gap-[92px] ">
 
     <section className="flex flex-col lg:flex-row items-start lg:h-auto px-5 lm:px-[56px] gap-4 lg:gap-[32px]">
       <div
