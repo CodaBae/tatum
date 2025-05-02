@@ -102,7 +102,7 @@ const TeamDetails = () => {
               <div className=" absolute -bottom-3 right-20 lg:-bottom-2 h-[45.32px]  lg:-right-1 lg:w-[47.87px] lg:h-[53.32px] z-10 clip-path-triangle">
                 <img src={Clip} alt='Clip' className='teamBase' />
               </div>
-              <div className=" absolute -bottom-2 right-20 lg:-bottom-2 lg:right-0 w-[44px] lg:w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+              <div className=" absolute -bottom-2 right-[4.5rem] lg:-bottom-2 lg:right-0 w-[50px] h-[55px] lg:w-[40.87px] lg:h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
             <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-3'>
 
