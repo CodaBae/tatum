@@ -313,7 +313,7 @@ const Digital = () => {
             </div>
         </section>
 
-        <section className='bg-[#fff] md:h-auto flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'> {/* lg:h-[932px] */}
+        {/* <section className='bg-[#fff] md:h-auto flex flex-col gap-[40px]  md:gap-[48px]  py-[56px] px-5 lg:py-[60px] lg:pr-[101px] lg:pl-[110px]'> {/* lg:h-[932px] 
             <div className='flex flex-col md:flex-row  items-center gap-[40px] md:gap-[93px] md:justify-between'>
                 <div data-aos="fade-right" className="hidden md:block" >
                     <div
@@ -363,12 +363,6 @@ const Digital = () => {
                         </p>
         
                         <div className='flex flex-col gap-[21px] mt-[16px]'>
-                            {/* <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
-                            <img src={Check} alt="Check" className='' />
-                            <p className='font-grava font-medium text-[#002244] lm:mt-1 text-center lm:text-left text-base lm:text-[18px] leading-[25px] tracking-[0.01em]'>
-                                View account balances and statements
-                            </p>
-                            </div> */}
                             <div className='flex flex-col md:flex-row items-center md:items-start gap-3'>
                                 <img src={Check} alt="Check" className='' />
                                 <p className='font-grava font-[450] text-[#002244] lm:mt-1 text-center md:text-left text-base lm:text-[18px] leading-[25px] tracking-[0.01em]'>
@@ -393,11 +387,6 @@ const Digital = () => {
                                     Check balances and mini statements
                                 </p>
                             </div>
-                            {/* <div className='flex flex-col lm:flex-row items-center lm:items-start gap-3'>
-                                <p className='font-grava font-medium text-[#002244] text-center lm:text-left lm:text-[18px] leading-[25px] tracking-[0.01em]'>
-                                    Dial *950# to get started!
-                                </p>
-                            </div> */}
                         </div>
         
                     </div>
@@ -448,11 +437,10 @@ const Digital = () => {
                     type='button' 
                 >
                     <p className='font-[500]  lg:text-[18px] leading-[27px] font-grava text-[#B0B0B0]'>To be available soon</p>
-                    {/* <BsArrowRight size={100}  className='mt-[2px] text-5xl font-medium ease-in-out w-5 h-5  text-[#B0B0B0]' /> */}
                 </button>
             </div>
 
-        </section>
+        </section> */}
 
         <section className='bg-[#F9FAFB] md:h-auto lg:h-min flex flex-col gap-[48px] py-[60px] px-5  lg:pr-[101px] lg:pl-[110px]'>
             <div className='flex flex-col md:flex-row items-center gap-[40px] lm:gap-[93px] justify-between'>
