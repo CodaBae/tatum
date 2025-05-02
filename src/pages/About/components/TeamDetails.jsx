@@ -99,12 +99,11 @@ const TeamDetails = () => {
                 alt="HeadShot"
                 className="lm:w-[429px] w-[350px] rounded-[24px]"
               />
-              <div className="absolute -bottom-5 lg:-bottom-2 -right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
+              <div className=" absolute -bottom-8 right-20 lg:-bottom-2   lg:-right-1 w-[47.87px] h-[53.32px] z-10 clip-path-triangle">
                 <img src={Clip} alt='Clip' className='teamBase' />
               </div>
-              <div className="absolute -bottom-2 right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
+              <div className=" absolute -bottom-4 right-20 lg:-bottom-2 lg:right-0 w-[40.87px] h-[53.32px]  bg-white clip-path-triangle"></div>
             </div>
-            {/* <img src={state?.team.pic} alt='HeadShot' className='' /> */}
             <div className='w-[429px] hidden lm:flex flex-col items-start gap-6 lg:gap-3'>
 
               <div className='flex flex-col items-start '>
