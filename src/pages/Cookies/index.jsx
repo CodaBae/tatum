@@ -351,7 +351,7 @@ const CookiePolicy = () => {
                 could potentially limit your browsing experience on the Tatum website, particularly 
                 with regard to essential features like logging in to your profile and navigating webpages etc. 
                 Tatum does not share cookie information with any other website, nor do we sell this data to any 
-                third party without your consent.
+                third party.
               </p>
             </div>
           </div>
