@@ -63,6 +63,38 @@ const NotFound = () => {
   );
 };
 
+const ForbiddenDirectoryBrowsing = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 px-4 text-center">
+      <div className="p-6 max-w-md w-full bg-white rounded-xl shadow-lg">
+        <div className="flex justify-center mb-4">
+          <svg 
+            className="w-24 h-24 text-[#002244]" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="1.5" 
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" 
+            />
+          </svg>
+        </div>
+        <div className="text-7xl md:text-8xl font-bold text-blue-500 text-[#002244] font-grava">403.14</div>
+        <h1 className="mt-4 text-xl md:text-2xl font-semibold text-gray-800 text-[#002244] font-grava">Directory Browsing Forbidden</h1>
+        <p className="mt-2 text-gray-600 text-[#002244] font-grava">The web server is configured to not list the contents of this directory.</p>
+        <a style={{background: "#ffcc33",
+}} href="/" className="text-[#002244] font-grava mt-6 inline-block px-5 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-sm md:text-base font-semibold">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const Unauthorized = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
@@ -140,6 +172,9 @@ export default function Routers() {
         
         {/* Unauthorized route */}
         <Route path="unauthorized" element={<Unauthorized />} />
+
+        <Route path="forbidden-directory" element={<ForbiddenDirectoryBrowsing />} />
+
         
         {/* 404 route - this should be the last route */}
         <Route path="*" element={<NotFound />} />
