@@ -265,7 +265,7 @@ const Terms = () => {
         </div>
 
         <div className="flex flex-col gap-[19px]">
-          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">TATUM BANK NIGERIA LIMITED WEBSITE</p>
+          <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">TATUM BANK LIMITED WEBSITE</p>
           <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">TERMS AND CONDITIONS</p>
           <p className="font-grava font-[500] text-[20px] leading-[28px] tracking-[0.01em] text-[#002244]">Effective Date: January 2025</p>
         </div>
@@ -275,7 +275,7 @@ const Terms = () => {
             <div className="flex flex-col">
 
               <p className="font-[350] leading-[25px] lm:leading-[150%] text-[18px]  text-[#002244] tracking-[0.01em] font-grava">
-                Welcome to Tatum Bank Nigeria Limited website (<span className="font-[500]">“Tatum Bank” or
+                Welcome to Tatum Bank Limited website (<span className="font-[500]">“Tatum Bank” or
                 “The Bank”</span>). By accessing or using this website (the <span className="font-[500]">"Site"</span>),
 
                 you agree to comply with and be bound by the terms and
@@ -418,14 +418,14 @@ const Terms = () => {
             </p>
             <div className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
 
-              The bank, it’s employees, agents, directors expressly disclaim
+              The bank, its employees, agents, directors expressly disclaim
               all warranties, express or implied, as to suitability and
               fitness for a particular purpose for all products, services or
               content offered on the website. Also, the bank does not warrant
               that the website or any website linked to or from it will be
               free of interruption, delay, failure, error, or omission.
               <span className="block">
-                Tatum Bank shall not be held liable for any damage arising from
+                Tatum Bank shall not be held liable for any damages arising from
                 your use of the content, product or services presented on this
                 website.
               </span>
@@ -481,7 +481,7 @@ const Terms = () => {
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
               For any questions or concerns about these Terms, please contact us
-              at: Tatum Bank Nigeria Limited
+              at: Tatum Bank Limited
             </p>
             <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] flex flex-col gap-3">
 
