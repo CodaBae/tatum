@@ -52,19 +52,34 @@ const PrivacyPolicy = () => {
       <div className="flex flex-col items-start gap-8 px-5 lg:px-16 pt-[56px] lg:pt-[64px] bg-[#fff] relative">
 
         <div className="flex flex-col gap-5">
-          <p className="font-grava font-[450] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">TATUM BANK NIGERIA LIMITED</p>
+          <p className="font-grava font-[450] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">TATUM BANK LIMITED</p>
           <p className="font-grava font-[450] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">DATA PRIVACY POLICY </p>
           <p className="font-grava font-[450] text-[20px] leading-[150%] tracking-[0.01em] text-[#002244]">Effective Date: March 4th, 2025.</p>
         </div>
 
         <div className="flex flex-col lg:flex-1">
-          <div ref={introductionRef} className="flex flex-col">
+          <div className="flex gap-4 flex-col">
+            <div className="flex flex-col">
+
+              <p className="font-[350] leading-6 lm:leading-[150%] lg:text-[18px]  text-[#002244] tracking-[0.01em] font-grava">
+                We may revise and update this privacy policy from time to time in our sole discretion. All changes are effective immediately
+                when we post them, and apply to all access to and use of our service.
+               
+              <span className="block mt-4"> 
+                Your continued use of the Site following the posting of revised <span className="font-[450]">Terms of Use</span> means that you accept and agree to the changes.
+                You are expected to check this page from time to time so you are aware of any changes, as they are binding to you.
+              </span>
+              </p>
+            </div>
+          </div>
+
+          <div ref={introductionRef} className="flex flex-col mt-[33px]">
             <div className="flex flex-col gap-4">
               <p className="font-[450] leading-[25px] lm:leading-[30px] text-[20px] tracking-[0.01em] text-[#002244] font-grava">
                 1. Introduction
               </p>
               <p className="font-[350] text-[#002244] font-grava tracking-[0.01em] text-base lg:text-[18px] lg:leading-[150%] leading-6">
-                Tatum Bank Ltd ("we," "our," "us") is committed to protecting the privacy, security, and 
+                Tatum Bank Ltd is committed to protecting the privacy, security, and  {/* ("we," "our," "us") */}
                 confidentiality of our customers' personal data in compliance with the Nigeria Data 
                 Protection Regulation (NDPR), the Central Bank of Nigeria (CBN) Consumer Protection Framework, 
                 the Consumer Protection Agency of Nigeria, the Payment Card Industry Data Security Standard (PCI-DSS), 

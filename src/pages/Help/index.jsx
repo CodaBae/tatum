@@ -241,7 +241,7 @@ const Help = () => {
                 <p className="font-[400] font-grava tracking-[-0.01em] text-[14px] lm:text-[18px] leading-[1.5em] text-[#334E69]">
                   You can open an account online via our website or visit our office. Required documents include:
 
-                  A valid ID (NIN, International Passport, or Driver’s License).
+                  A valid ID (NIN, International Passport, Voter's Card or Driver’s License).
                   Proof of address (utility bill or bank statement).
                   Two passport photographs.
                   BVN (Bank Verification Number).

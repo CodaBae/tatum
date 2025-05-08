@@ -148,9 +148,9 @@ const MobileTerms = () => {
                     </p>
                     <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
                         1.3. These Terms and Conditions comply with Nigerian laws, including the <span className="font-[450]"> CBN Regulatory
-                        Framework</span> for Mobile Money Services, the <span className="font-[450]">Nigerian Data Protection (NDPA) Act (2023), </span>  
-                        the <span className="font-[450]">Cybercrimes (Prohibition, Prevention) Act 2015</span> (as amended), and other applicable 
-                        international standards.
+                        Framework</span> for Mobile Money Services, the <span className="font-[450]">Nigeria Data Protection (NDPA) Act (2023), </span>  
+                        <span className="font-[450]">Cybercrime (Prohibition, Prevention, Etc) Act 2015 with amendment act 2024.</span> 
+                        {/* (as amended), and other applicable international standards. */}
                     </p>
                 </div>
 
@@ -191,7 +191,8 @@ const MobileTerms = () => {
                         3.2. You must immediately notify Tatum Bank of any unauthorized access, loss of device, or breach of security.
                     </p>
                     <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-                        3.3. Tatum Bank reserves the right to suspend or terminate your account if fraudulent activity is suspected, in line with CBN guidelines on fraud prevention.
+                        3.3. Tatum Bank reserves the right with or without your notice and authority to suspend or terminate your account if fraudulent
+                        activity is suspected or in compliance with the CBN guidelines on fraud prevention, order of court or any statutory agency.
                     </p>
                 </div>
 
@@ -220,8 +221,8 @@ const MobileTerms = () => {
                     </p>
                     <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
                         5.1. Your use of the App is subject to our Privacy Policy, which outlines how we collect, 
-                        use/process, and protect your data in compliance with the Nigeria Data Protection Act (NDPA), 
-                        2023 and CBN guidelines on data protection. 
+                        use/process, and protect your data in compliance with the <span className="font-[450]">Nigeria Data Protection Act (NDPA), 
+                        2023</span> and CBN guidelines on data protection. 
                     </p>
                     <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
                         5.2. By using the App, you consent to the collection and processing of your data as described 
@@ -323,8 +324,8 @@ const MobileTerms = () => {
                     </p>
                     <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
                         11.2. Any disputes arising from the use of the App which cannot be resolved between 
-                        the customer and bank shall be resolved through arbitration under the Arbitration and 
-                        Mediation Act 2023 or through the Consumer Protection Department of CBN. 
+                        the customer and bank shall be resolved through arbitration under the Mediation and 
+                        Arbitration Act 2023 or through the Consumer Protection Department of CBN. 
                     </p>
                 </div>
 

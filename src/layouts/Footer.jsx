@@ -261,7 +261,7 @@ const Footer = () => {
                   className="font-grava text-[#002244] underline hover:no-underline text-[14px] whitespace-nowrap cursor-pointer"
                   onClick={() => {navigate("/help"); window.scrollTo(0,0); handleClose()}} 
                 >
-                  Help Center
+                  Help Centre
                 </p>
                 <p 
                   className="font-grava text-[#002244] underline hover:no-underline text-[14px] whitespace-nowrap cursor-pointer"
