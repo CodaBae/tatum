@@ -272,19 +272,25 @@ const Terms = () => {
 
         <div className="flex flex-col gap-[40px] lg:flex-1 ">
           <div ref={introductionRef} className="flex gap-4 flex-col">
-            <div className="flex flex-col">
-
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
+              1. Introduction
+            </p>
+            <div className="flex flex-col gap-5">
               <p className="font-[350] leading-[25px] lm:leading-[150%] text-[18px]  text-[#002244] tracking-[0.01em] font-grava">
-                Welcome to Tatum Bank Limited website (<span className="font-[500]">“Tatum Bank” or
-                “The Bank”</span>). By accessing or using this website (the <span className="font-[500]">"Site"</span>),
-
-                you agree to comply with and be bound by the terms and
-                conditions (the <span className="font-[450]">"Terms"</span>) contained herein. Please read these
-                Terms and our Privacy Policy carefully. Our Privacy policy
-                explains how we collect, use, and protect your personal
-                information. <span className="block mt-4"> The website is built to enable us communicate,
-                share information and offer our products and services as well as
-                interact with our customers and general users. </span>
+                1.1. These Terms and Conditions (<span className="font-[500]">“Terms” </span>) 
+                govern your use of Tatum Bank’s Application (<span className="font-[500]">"App"</span>).
+                By downloading, accessing, or using the App, you agree to be unconditionally bound by these Terms
+                and Conditions. If you do not agree, do not use the App.
+              </p>
+              <p className="font-[350] leading-[25px] lm:leading-[150%] text-[18px]  text-[#002244] tracking-[0.01em] font-grava"> 
+                1.2. The App is provided by Tatum Bank, a licensed financial institution regulated by the 
+                Central Bank of Nigeria (CBN) and other relevant authorities.
+              </p> 
+              <p className="font-[350] leading-[25px] lm:leading-[150%] text-[18px]  text-[#002244] tracking-[0.01em] font-grava">
+                1.3. These Terms and Conditions comply with Nigerian laws, 
+                including <span className="font-[450]">the CBN Regulatory Framework </span> for Mobile Money Services, 
+                the <span className="font-[450]">Nigerian Data Protection (NDPA) Act (2023)</span>, the <span className="font-[450]">Cybercrimes (Prohibition, Prevention) Act</span> 2015 
+                (as amended), and other applicable international standards.
               </p>
             </div>
           </div>
@@ -292,156 +298,180 @@ const Terms = () => {
           <div ref={userRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              1. User Conduct
+              2. Eligibility
             </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                2.1. To use the App, you must:  
+              </p>
+              <ul className="list-none ml-5 font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                <li>- Be at least 18 years old or the legal age of maturity in your jurisdiction.</li>
+                <li>- Have a valid account with Tatum Bank or be willing to open  one on this App. </li>
+                <li>
+                  - Provide accurate and complete information during registration/Account Opening, including your 
+                  Bank Verification Number (BVN), National Identity Number (NIN), Proof of Address and any other 
+                  document as required by CBN regulations.
+                </li>
+              </ul>
+            </div>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              By using this website, users accept that they will utilize the
-              site solely for lawful purpose. Any attempt to gain unauthorized
-              access to our systems, alter, damage, delete or modify the website
-              content or communications, interfere with or disrupt the Site’s
-              functionality, or illegally introduce or modify data, post or
-              transmit harmful, abusive, defamatory, or otherwise objectionable
-              content is strictly prohibited and may constitute a criminal
-              offence.
+              2.2. By using the App, you have confirmed that you meet these eligibility requirements.  
             </p>
+              
           </div>
 
           <div ref={acceptanceRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              2. Acceptance of Terms and Updates
+              3. Account Registration and Security
+            </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                3.1. You are responsible for: 
+              </p>
+              <ul className="list-none ml-5 font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                <li>
+                  - The maintenance of the <span className="font-[450]">confidentiality</span> of your login credentials 
+                  (e.g., username, password, Personal Identification Number (PIN), One Time Password (OTP)).
+                </li>
+                <li>- All activities that occur under your account. </li>
+              </ul>
+            </div>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              3.2. You must immediately notify Tatum Bank of any unauthorized access, 
+              loss of device, or breach of security.
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              By accessing this Site, you confirm that you have read,
-              understood, and agree to these Terms and any additional terms and
-              conditions referenced herein. <span className="block mt-4">The Bank reserves the right to
-              update or modify these Terms at any time without prior notice. The
-              latest version will be posted on the Site with the "Effective
-              Date" updated accordingly. Continued use of the Site constitutes
-              acceptance of the revised Terms.</span>
+              3.3. Tatum Bank reserves the right to suspend or terminate your account if 
+              fraudulent activity is suspected, in line with CBN guidelines on fraud prevention. 
             </p>
           </div>
 
           <div ref={serviceRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              3. Services Provided
+              4. Permitted Use
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              The Site is intended to provide information about The Bank, its
-              products and services. It may also include features such as online
-              account management, application forms and other banking-related
-              tools. Specific terms and condition for products and services
-              offered on the site shall be indicated in the relevant
-              documentation for such products and services. Access to the
-              website is free of charge. This does not include service provider
-              internet access charges or such related charges which shall be
-              borne by the user as charged by the relevant service provider.
+              4.1. The App is intended for personal and non-commercial use only. 
             </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                4.2. You agree not to: 
+              </p>
+              <ul className="list-none ml-5 font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                <li>
+                  - Use the App for illegal, fraudulent or unauthorized purposes, including money laundering, 
+                  terrorism financing, or other financial crimes as prohibited by CBN regulations.
+                </li>
+                <li>- Reverse engineer, decompile, or attempt to extract the source code of the App.</li>
+                <li>- Transmit viruses, malware, or any harmful code through the App.</li>
+              </ul>
+            </div>
           </div>
 
           <div ref={eligibilityRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              4. Eligibility
+              5. Privacy and Data Protection
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              This Site is intended for use by individuals who are 18 years or
-              older and legally capable of entering binding agreements. By using
-              this Site, you confirm that you are not a minor and you meet these
-              criteria. As per our Privacy policy, we do not intentionally
-              collect, use, or share information that could reasonably be used
-              to identify children without prior parental/guardian consent
-              consistent with applicable laws.
+              5.1. Your use of the App is subject to our Privacy Policy, which outlines how we collect, 
+              use/process, and protect your data in compliance with the Nigeria Data Protection Act (NDPA), 
+              2023 and CBN guidelines on data protection.
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              5.2. By using the App, you consent to the collection and processing of your data as 
+              described in the Privacy Policy.
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              5.3. We may share your information with third parties only as necessary 
+              to provide services, comply with CBN regulations, or as required by law.  
             </p>
           </div>
-
 
           </div>
           <div className="flex flex-col gap-4">
               <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-                5. Intellectual Property
+                6. Intellectual Property
               </p>
               <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-                All content on this Site, including text, graphics, logos, images,
-                and software, is the property of Tatum Bank or its licensors and
-                is protected by copyright, trademark, and other intellectual
-                property laws. It is prohibited to reproduce, distribute, or use
-                any content without prior written permission by The Bank. Any
-                violation shall be regarded as infringement on our rights and
-                offenders may be prosecuted.
+                6.1. All intellectual property rights in the App, including but not limited to trademarks, 
+                logos, and software patents, are owned by Tatum Bank or its licensors.
               </p>
-
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                6.2. You are granted a limited, non-exclusive, non-transferable license to use the App 
+                for its intended purpose.
+              </p>
           </div>
 
           <div ref={contentRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              6. User-Generated Content
+              7. Transactions and Liability
             </p>
-            <div className=" font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
-
-              By submitting any content, including but not limited to
-              comments, feedback, or suggestions, to the website, you grant
-              the Bank a non-exclusive, royalty-free and perpetual license to
-              use, reproduce, modify and distribute such content.
-              <span className="block">
-                You represent and warrant that you have necessary rights and
-                permissions to submit such content and that it does not infringe
-                the rights of others.
-              </span>
+            <p className=" font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
+              7.1. You are responsible for all transactions conducted through your account.  
+            </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                7.2. Tatum Bank is not liable and shall not be sanctioned for:   
+              </p>
+              <ul className="list-none ml-5 font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                <li>
+                  - Losses arising from unauthorized transactions due to your negligence 
+                  (e.g., sharing login credentials).
+                </li>
+                <li>- Delays or failures caused by third-party services (e.g., network providers).</li>
+              </ul>
             </div>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              7.3. You must report any unauthorized transactions within 24 hours of discovery, 
+              as required by CBN guidelines on electronic payments.    
+            </p>
           </div>
 
           <div ref={partyRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              7. Third-Party Links
+              8. Fees
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              The Site may contain links to third-party websites or services.
-              Tatum Bank is not responsible for the content, policies, or
-              practices of third-party sites and does not endorse them.
+             8.1. The use of the App may be subject to charges as contained in the transaction Fees 
+             displayed during your transactions, which complies with CBN regulations on transparency and disclosure.
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+             8.2. Tatum Bank reserves the right to modify fees with prior notice to customers in line with CBN 
+             requirements.
             </p>
           </div>
 
           <div ref={disclaimerRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              8. Disclaimer
+              9. Termination
             </p>
-            <div className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
-
-              The bank, its employees, agents, directors expressly disclaim
-              all warranties, express or implied, as to suitability and
-              fitness for a particular purpose for all products, services or
-              content offered on the website. Also, the bank does not warrant
-              that the website or any website linked to or from it will be
-              free of interruption, delay, failure, error, or omission.
-              <span className="block">
-                Tatum Bank shall not be held liable for any damages arising from
-                your use of the content, product or services presented on this
-                website.
-              </span>
-            </div>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
+              9.1. Tatum Bank may suspend or terminate your access to the App at any time for 
+              violation of these Terms and Conditions, suspected fraud, criminal activities or 
+              non-compliance with CBN regulations. 
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] gap-4 flex flex-col">
+              9.2. You may terminate your use of the App by uninstalling it.  
+            </p>
           </div>
 
           <div ref={limitationRef} className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              9. Limitation of Liability
+              10. Amendments to Terms
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              To the maximum extent permitted by law, Tatum Bank shall not be
-              liable for any indirect, incidental, or consequential damages
-              arising from your use of the Site.
+              10.1. Tatum Bank reserves the right to modify these Terms at any time to comply with 
+              CBN regulations or other legal requirements. Any modification shall be reflected on the App.
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              10.2. Continued use of the App after changes constitutes your acceptance of the revised Terms. 
             </p>
           </div>
 
@@ -450,48 +480,77 @@ const Terms = () => {
             className="flex gap-4 flex-col ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              10. Indemnification
+              11. Governing Law and Dispute Resolution
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              You agree to indemnify and hold harmless Tatum Bank, its
-              employees, agents, directors and affiliates from any claims,
-              damages, or expenses arising from your use of the Site or
-              violation of these Terms.
+              11.1. These Terms and Conditions are governed by the laws of the Federal Republic of Nigeria 
+              and the regulations of the Central Bank of Nigeria (CBN) and other relevant laws.  
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              11.2. Any disputes arising from the use of the App which cannot be resolved between the customer and 
+              bank shall be resolved through arbitration under the Arbitration and Mediation Act 2023 or through the 
+              Consumer Protection Department of CBN.  
             </p>
           </div>
 
-          {/* <div ref={lawRef} className="flex gap-4 flex-col ">
-            <p className="font-medium text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              11. Governing Law
+          <div ref={lawRef} className="flex gap-4 flex-col ">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
+              12. Limitation of Liability
             </p>
-
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-
-              These Terms are governed by the laws of the Federal Republic of
-              Nigeria. Any disputes arising from the use of this Site shall be
-              resolved in the Nigerian courts.
+              12.1. Tatum Bank shall not be liable for any indirect, incidental, or consequential damages 
+              arising from the use of the App.
             </p>
-          </div> */}
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              12.2. Tatum Bank's total liability to you for any claim (direct or indirect) shall not exceed 
+              the total fees paid by you for using the App for the particular transaction that incurred loss. 
+            </p>
+          </div>
 
           <div ref={contactRef} className="flex flex-col gap-4 ">
 
             <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
-              11. CONTACT US
+              13. Indemnification
             </p>
             <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
-              For any questions or concerns about these Terms, please contact us
-              at: Tatum Bank Limited
+              13.1. You agree to indemnify and hold Tatum Bank harmless from any claims, damages, or 
+              losses (direct or indirect) arising from your use of the App or violation of these Terms. 
             </p>
-            <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px] flex flex-col gap-3">
-
-              <li>Address: Plot 1088, Cadastral Zone AO1, Area 3, Garki FCT Abuja</li>
-              <li>Phone Number: 07000077770</li>
-              <li>
-                Email: <span className="underline">Info@tatumbank.com</span>
-              </li>
-            </ul>
           </div>
+
+          <div  className="flex flex-col gap-4 ">
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
+              14. Force Majeure
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              14.1. Tatum Bank shall not be liable for any failure or delay in performance due to events 
+              beyond its control, including but not limited to natural disasters, war, or government restrictions.
+            </p>
+          </div>
+
+          <div  className="flex flex-col gap-4 ">
+
+            <p className="font-[500] leading-[25px] lm:leading-[30px] text-[20px]  text-[#002244] tracking-[0.01em] font-grava">
+              15. Consumer Protection
+            </p>
+            <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+              15.1. In line with CBN’s Consumer Protection Framework, Tatum Bank is committed to ensuring fair treatment, 
+              transparency, and prompt resolution of customer complaints. 
+            </p>
+            <div className="flex flex-col gap-1">
+              <p className="font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                15.2. If you have any complaints, please contact us at:    
+              </p>
+              <ul className="list-none font-grava font-[350] leading-[25px] lm:leading-[150%] tracking-[0.01em] text-[#002244] text-base lg:text-[18px]">
+                <li>Email: Customercare@tatumbank.com</li>
+                <li>Phone: 07000077770</li>
+                <li>Address: Plot 1088, Cadastral Zone AO1, Kaura Namoda Street, Area 3 Garki, Abuja.</li>
+                <li>Website: <span className="underline cursor-pointer">www.tatumbank.com</span></li>
+              </ul>
+            </div>
+          </div>
+
+
         </div>
       </div>
     

@@ -28,6 +28,7 @@ import InternetBanking from "../pages/Internet";
 import CookiePolicy from "../pages/Cookies";
 import MobileTerms from "../pages/MobileTerms";
 import AccountPersonalSavings from "../pages/Personal/component/AccountPersonalSavings";
+import AML from "../pages/AML";
 // import CookiePolicy from "../pages/Cookies/Cook";
 
 // Create NotFound (404) and Unauthorized (401) components
@@ -169,9 +170,12 @@ export default function Routers() {
         <Route path="/mobile/terms" element={<MobileTerms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
+        <Route path="/aml" element={<AML />} />
+
         
         {/* Unauthorized route */}
         <Route path="unauthorized" element={<Unauthorized />} />
+
 
         <Route path="forbidden-directory" element={<ForbiddenDirectoryBrowsing />} />
 
