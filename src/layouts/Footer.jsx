@@ -245,7 +245,13 @@ const Footer = () => {
                 <p className="font-grava text-[#002244] text-[14px] whitespace-nowrap">
                   Whistle blower
                 </p>
-                <p className="font-grava text-[#002244] text-[14px] whitespace-nowrap">
+                <p 
+                  className="font-grava text-[#002244] underline hover:no-underline text-[14px] whitespace-nowrap cursor-pointer"
+                  onClick={() => navigate("/aml", {
+                      state: { section: "aml" },
+                    }, window.scrollTo(0, 0)
+                  )}
+                >
                   Anti-Money Laundering
                 </p>
               </div>

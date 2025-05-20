@@ -28,6 +28,7 @@ import InternetBanking from "../pages/Internet";
 import CookiePolicy from "../pages/Cookies";
 import MobileTerms from "../pages/MobileTerms";
 import AccountPersonalSavings from "../pages/Personal/component/AccountPersonalSavings";
+import AML from "../pages/AML";
 // import CookiePolicy from "../pages/Cookies/Cook";
 
 
@@ -62,6 +63,7 @@ export default function Routers() {
         <Route path="/mobile/terms" element={<MobileTerms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
+        <Route path="/aml" element={<AML />} />
 
       </Route>
     </Routes>
