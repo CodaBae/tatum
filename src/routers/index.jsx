@@ -170,7 +170,6 @@ export default function Routers() {
         <Route path="/mobile/terms" element={<MobileTerms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sitemap" element={<Sitemap />} />
-
         <Route path="/aml" element={<AML />} />
 
         
