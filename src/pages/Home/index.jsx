@@ -1712,7 +1712,6 @@ const handleTouchEnd = () => {
 
               <p className="text-[14px] lg:text-base font-grava font-[350] text-[#002244]">
                 Simply enter your location and find our closest Client Centres on the
-
                 map.
               </p>
             </div>
@@ -1763,7 +1762,7 @@ const handleTouchEnd = () => {
               </p>
               <p className="text-sm lg:text-base font-grava font-[300] text-[#002244]">
                 No internet? No problem. Access your account, check balances, 
-                and perform essential transactions using our simple *365#. 
+                and perform essential transactions using our unique USSD code. 
                 It is quick, secure, and reliable.
               </p>
             </div>
@@ -1946,7 +1945,7 @@ const handleTouchEnd = () => {
               <p className="text-[16px] lg:text-base leading-6 font-grava font-[400] text-[#002244]">
 
                 No internet? No problem. Access your account, check balances, 
-                and perform essential transactions using our simple *365#. 
+                and perform essential transactions using our unique USSD code. 
                 It is quick, secure, and reliable.
               </p>
             </div>
